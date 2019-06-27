@@ -1,0 +1,88 @@
+#$Header: /home/pros/xray/lib/doc/RCS/dgi6.hlp,v 11.0 1997/11/06 16:22:30 prosb Exp $
+#$Log: dgi6.hlp,v $
+#Revision 11.0  1997/11/06 16:22:30  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:24  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:34:54  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:18:40  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:00:01  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:03  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:08:16  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:32  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:34:55  pros
+#General Release 1.0
+#
+.help dgi6 Jan89 PROS_Library
+NAME
+.in 4
+dgi6 - convert DG 6-byte integer to host double
+.sp
+.in -4
+USAGE
+.in 4
+dval = dgi6(ibuf)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	ibuf		any type	data element containing 3 DG shorts
+
+Output Arguments:
+	none
+
+Return Value:
+	dval		double		SPP double in host format
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function dgi6 takes a 6-byte integer in DG data format and returns
+a 8-byte real (SPP double) in host format.  Because SPP (and Fortran)
+pass data by reference, the DG data can be stored in any data type, and
+in either an array or a scalar.
+
+Unlike dgi2 and dgi4, there is no SPP library primitive that can be used
+to convert an array of DG 6-byte integers to host double format more
+efficiently.
+
+This routine is not normally used, except to convert certain values in the
+Einstein universal header that are stored in 6-byte integer format.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. Convert a DG 6-byte integer to host format.
+.in 8
+.nf
+double	d
+short	dgbuf[60]		# short is 1/4 the size as a double
+double	dgi6()
+
+# convert the 2nd 6-byte integer
+d = dgi6(dgbuf[4])
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+dgi2, dgi4, dgr4, dgr8

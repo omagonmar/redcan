@@ -1,0 +1,36 @@
+#$Header: /home/pros/xray/xspatial/RCS/fixsaoreg.par,v 11.0 1997/11/06 16:31:49 prosb Exp $
+#$Log: fixsaoreg.par,v $
+#Revision 11.0  1997/11/06 16:31:49  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:35:26  prosb
+#General Release 2.4
+#
+#Revision 8.1  1995/10/10  07:45:27  wendy
+#Updating release date
+#
+#Revision 8.0  1994/06/27  14:55:16  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:30:27  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:09:27  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:01  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:33:05  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/23  16:41:27  dennis
+#Initial version
+#
+#
+#  Parameters for the fixsaoreg task
+#
+regions_input,s,a,"",,,"regions file to convert"
+regions_output,s,a,"",,,"output regions file with coordinates transformed"
+clobber,b,h,n,,,"delete old copy of output file"
+display,i,h,1,0,5,"display level"

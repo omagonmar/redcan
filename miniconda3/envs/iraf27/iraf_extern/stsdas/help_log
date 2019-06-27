@@ -1,0 +1,112 @@
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default dumb]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+PATH: /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stsdas/
+
+Make helpdb for package stsdas
+  1            root (stsdas$lib/root.hd): 1 help modules
+  2      rootstsdas (stsdas$lib/rootstsdas.hd): 1 help modules
+  3          stsdas (stsdas$stsdas.hd): 12 help modules
+  4        analysis (stsdas$pkg/analysis/analysis.hd): 9 help modules
+  5          dither (stsdas$pkg/analysis/dither/dither.hd): 28 help modules
+  5         fitting (stsdas$pkg/analysis/fitting/fitting.hd): 21 help modules
+  5         fourier (stsdas$pkg/analysis/fourier/fourier.hd): 13 help modules
+  5            gasp (stsdas$pkg/analysis/gasp/gasp.hd): 13 help modules
+  5        isophote (stsdas$pkg/analysis/isophote/isophote.hd): 13 help modules
+  5         nebular (stsdas$pkg/analysis/nebular/nebular.hd): 11 help modules
+  5         restore (stsdas$pkg/analysis/restore/restore.hd): 11 help modules
+  5        slitless (stsdas$pkg/analysis/slitless/slitless.hd): 2 help modules
+  6             axe (stsdas$pkg/analysis/slitless/axe/axe.hd): 17 help modules
+  6          axesim (stsdas$pkg/analysis/slitless/axe/axesim.hd): 5 help modules
+  5      statistics (stsdas$pkg/analysis/statistics/statistics.hd): 11 help modules
+  4         contrib (stsdas$pkg/contrib/contrib.hd): 6 help modules
+  5        redshift (stsdas$pkg/contrib/redshift/redshift.hd): 2 help modules
+  5        spfitpkg (stsdas$pkg/contrib/spfitpkg/spfitpkg.hd): 4 help modules
+  5             vla (stsdas$pkg/contrib/vla/vla.hd): 3 help modules
+  4        graphics (stsdas$pkg/graphics/graphics.hd): 2 help modules
+  5        sdisplay (stsdas$pkg/graphics/sdisplay/sdisplay.hd): 9 help modules
+  5          stplot (stsdas$pkg/graphics/stplot/stplot.hd): 20 help modules
+  4       hst_calib (stsdas$pkg/hst_calib/hst_calib.hd): 12 help modules
+		    (cannot access `stsdas$pkg/hst_calib/acs/acs.hd')
+  5          ctools (stsdas$pkg/hst_calib/ctools/ctools.hd): 37 help modules
+  5             foc (stsdas$pkg/hst_calib/foc/foc.hd): 3 help modules
+  6        focprism (stsdas$pkg/hst_calib/foc/focprism/focprism.hd): 3 help modules
+  5             fos (stsdas$pkg/hst_calib/fos/fos.hd): 20 help modules
+  6      spec_polar (stsdas$pkg/hst_calib/fos/spec_polar/spec_polar.hd): 9 help modules
+  5             hrs (stsdas$pkg/hst_calib/hrs/hrs.hd): 12 help modules
+  5          hstcos (stsdas$pkg/hst_calib/hstcos/hstcos.hd): 3 help modules
+  5          nicmos (stsdas$pkg/hst_calib/nicmos/nicmos.hd): 22 help modules
+  5       paperprod (stsdas$pkg/hst_calib/paperprod/paperprod.hd): 1 help modules
+  5            stis (stsdas$pkg/hst_calib/stis/stis.hd): 28 help modules
+  5         synphot (stsdas$pkg/hst_calib/synphot/synphot.hd): 24 help modules
+  6      simulators (stsdas$pkg/hst_calib/synphot/simulators/simulators.hd): 4 help modules
+		    (cannot access `stsdas$pkg/hst_calib/wfc3/wfc3.hd')
+  5            wfpc (stsdas$pkg/hst_calib/wfpc/wfpc.hd): 25 help modules
+  6         w_calib (stsdas$pkg/hst_calib/wfpc/w_calib/w_calib.hd): 7 help modules
+  4         playpen (stsdas$pkg/playpen/playpen.hd): 11 help modules
+		    (cannot access `stsdas$pkg/sobsolete/sobsolete.hd')
+  4         toolbox (stsdas$pkg/toolbox/toolbox.hd): 4 help modules
+  5        convfile (stsdas$pkg/toolbox/convfile/convfile.hd): 3 help modules
+  5         headers (stsdas$pkg/toolbox/headers/headers.hd): 7 help modules
+  5        imgtools (stsdas$pkg/toolbox/imgtools/imgtools.hd): 24 help modules
+  6         mstools (stsdas$pkg/toolbox/imgtools/mstools/mstools.hd): 11 help modules
+  5           tools (stsdas$pkg/toolbox/tools/tools.hd): 15 help modules
+  0                 (_index): 44 help modules
+
+Total of 543 help modules in 44 packages, file size 72840 bytes
+
+Make apropos.db for package stsdas
+  1            root (stsdas$lib/root.hd): 1 help modules
+  2      rootstsdas (stsdas$lib/rootstsdas.hd): 1 help modules
+  3          stsdas (stsdas$stsdas.hd): 12 help modules
+  4        analysis (stsdas$pkg/analysis/analysis.hd): 9 help modules
+  5          dither (stsdas$pkg/analysis/dither/dither.hd): 28 help modules
+  5         fitting (stsdas$pkg/analysis/fitting/fitting.hd): 21 help modules
+  5         fourier (stsdas$pkg/analysis/fourier/fourier.hd): 13 help modules
+  5            gasp (stsdas$pkg/analysis/gasp/gasp.hd): 13 help modules
+  5        isophote (stsdas$pkg/analysis/isophote/isophote.hd): 13 help modules
+  5         nebular (stsdas$pkg/analysis/nebular/nebular.hd): 11 help modules
+  5         restore (stsdas$pkg/analysis/restore/restore.hd): 11 help modules
+  5        slitless (stsdas$pkg/analysis/slitless/slitless.hd): 2 help modules
+  6             axe (stsdas$pkg/analysis/slitless/axe/axe.hd): 17 help modules
+  6          axesim (stsdas$pkg/analysis/slitless/axe/axesim.hd): 5 help modules
+  5      statistics (stsdas$pkg/analysis/statistics/statistics.hd): 11 help modules
+  4         contrib (stsdas$pkg/contrib/contrib.hd): 6 help modules
+  5        redshift (stsdas$pkg/contrib/redshift/redshift.hd): 2 help modules
+  5        spfitpkg (stsdas$pkg/contrib/spfitpkg/spfitpkg.hd): 4 help modules
+  5             vla (stsdas$pkg/contrib/vla/vla.hd): 3 help modules
+  4        graphics (stsdas$pkg/graphics/graphics.hd): 2 help modules
+  5        sdisplay (stsdas$pkg/graphics/sdisplay/sdisplay.hd): 9 help modules
+  5          stplot (stsdas$pkg/graphics/stplot/stplot.hd): 20 help modules
+  4       hst_calib (stsdas$pkg/hst_calib/hst_calib.hd): 12 help modules
+		    (cannot access 'stsdas$pkg/hst_calib/acs/acs.hd')
+  5          ctools (stsdas$pkg/hst_calib/ctools/ctools.hd): 37 help modules
+  5             foc (stsdas$pkg/hst_calib/foc/foc.hd): 3 help modules
+  6        focprism (stsdas$pkg/hst_calib/foc/focprism/focprism.hd): 3 help modules
+  5             fos (stsdas$pkg/hst_calib/fos/fos.hd): 20 help modules
+  6      spec_polar (stsdas$pkg/hst_calib/fos/spec_polar/spec_polar.hd): 9 help modules
+  5             hrs (stsdas$pkg/hst_calib/hrs/hrs.hd): 12 help modules
+  5          hstcos (stsdas$pkg/hst_calib/hstcos/hstcos.hd): 3 help modules
+  5          nicmos (stsdas$pkg/hst_calib/nicmos/nicmos.hd): 22 help modules
+  5       paperprod (stsdas$pkg/hst_calib/paperprod/paperprod.hd): 1 help modules
+  5            stis (stsdas$pkg/hst_calib/stis/stis.hd): 28 help modules
+  5         synphot (stsdas$pkg/hst_calib/synphot/synphot.hd): 24 help modules
+  6      simulators (stsdas$pkg/hst_calib/synphot/simulators/simulators.hd): 4 help modules
+		    (cannot access 'stsdas$pkg/hst_calib/wfc3/wfc3.hd')
+  5            wfpc (stsdas$pkg/hst_calib/wfpc/wfpc.hd): 25 help modules
+  6         w_calib (stsdas$pkg/hst_calib/wfpc/w_calib/w_calib.hd): 7 help modules
+  4         playpen (stsdas$pkg/playpen/playpen.hd): 11 help modules
+		    (cannot access 'stsdas$pkg/sobsolete/sobsolete.hd')
+  4         toolbox (stsdas$pkg/toolbox/toolbox.hd): 4 help modules
+  5        convfile (stsdas$pkg/toolbox/convfile/convfile.hd): 3 help modules
+  5         headers (stsdas$pkg/toolbox/headers/headers.hd): 7 help modules
+  5        imgtools (stsdas$pkg/toolbox/imgtools/imgtools.hd): 24 help modules
+  6         mstools (stsdas$pkg/toolbox/imgtools/mstools/mstools.hd): 11 help modules
+  5           tools (stsdas$pkg/toolbox/tools/tools.hd): 15 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+

@@ -1,0 +1,31 @@
+{
+  "requirements": {
+    "build": [
+      "binutils_impl_linux-64 2.28.1 h04c84fa_2",
+      "binutils_linux-64 7.2.0 hc67e822_12",
+      "gcc_impl_linux-64 7.2.0 hc5ce805_2",
+      "gcc_linux-64 7.2.0 hd763dfe_12",
+      "gxx_impl_linux-64 7.2.0 hd3faf3d_2",
+      "gxx_linux-64 7.2.0 h41d9e3f_12",
+      "libgcc-ng 7.2.0 h7cc24e2_2",
+      "libstdcxx-ng 7.2.0 h7a57d05_2"
+    ],
+    "run": [
+      "libgcc-ng 7.2.0.*",
+      "libstdcxx-ng 7.2.0.*"
+    ]
+  },
+  "build": {
+    "run_exports": [
+      "icu >=58.2,<59.0a0"
+    ]
+  },
+  "source": {
+    "fn": "icu4c-58_2-src.tgz",
+    "url": "http://download.icu-project.org/files/icu4c/58.2/icu4c-58_2-src.tgz",
+    "sha256": "2b0a4410153a9b20de0e20c7d8b66049a72aef244b53683d0d7521371683da0c"
+  },
+  "extra": {
+    "copy_test_source_files": true
+  }
+}

@@ -1,0 +1,4 @@
+#!/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin/python
+# EASY-INSTALL-SCRIPT: 'pyraf==2.1.15','pyraf'
+__requires__ = 'pyraf==2.1.15'
+__import__('pkg_resources').run_script('pyraf==2.1.15', 'pyraf')

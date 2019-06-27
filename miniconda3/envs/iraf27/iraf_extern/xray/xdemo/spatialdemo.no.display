@@ -1,0 +1,259 @@
+\O=NOAO/IRAF V2.8EXPORT ginevra@cfa252.harvard.edu Mon 16:27:00 08-Jan-90
+\T=gterm
+\G=gterm
+\n\{%8000
+                    PROS Spatial Analysis Tasks
+Tasks in the PROS XRAY spatial package will be demonstrated
+by analyzing an Einstein IPC observation of the SNR CTB 109.\}\n
+\{%500
+        [Spatial Analysis on CTB 109]\}\n
+cd\simdir\n
+\{%500
+        [Load the relevant packages first.]\}\n
+images\n
+tv\n
+noao\n
+proto\n
+xray\n
+xplot\n
+xdataio\n
+##xlocal\n
+##einobsolete\n
+ximages\n
+xspatial\n
+tables\n
+\{%500
+        [Set standard graphics.]\}\n
+#if(envget("TERM")=="xterm"){\n
+#reset\sstdgraph=xterm\n
+#}\n
+#;\n
+#if(envget("TERM")=="sun"){\n
+# reset\sstdgraph=gterm\n
+#}\n
+#;\n
+show\sstdgraph\n
+\{%500
+        [Clear all tasks]\}\n
+unlearn\smakevig\n
+unlearn\simcalc\n
+unlearn\simcopy\n
+unlearn\simcnts\n
+unlearn\simsmooth\n
+unlearn\svigdata\n
+unlearn\stcalc\n
+unlearn\simcont\n
+unlearn\simcompress\n
+unlearn\stvmark\n
+unlearn\ssgraph\n
+unlearn\spltpar\n
+#unlearn\sdisplay\n
+unlearn\sdel\n
+unlearn\simdel\n
+\{%500
+        [Delete files made in previous run of the demo.]\}\n
+imdel\sdemo_vigs*.imh\n
+imdel\sdemo_sn*.imh\n
+imdel\sdemosnr*.imh\n
+imdel\sdemo_cent*.imh\n
+imdel\sdemo_sma*.imh\n
+del\sdemosnr*\n
+del\sdemo_snr*\n
+delete\sdemo_pixcen*\n
+#\{%500
+        [Displaying the original qpoe file.]\}\n
+#display\sxmag=2\symag=2\szrange-\szscale-\sz1=0\sz2=4\n
+#xdata$snr\n
+#\n
+\{%500
+        [Compressing image by factor of 2 and subtracting the bkg map.]\}\n
+imcalc\s"demosnr.imh\s=\sxdata$snr.qp[pi=2:10,bl=2]\s-\sxdata$snr_bbk.imh"\n
+#\{%500
+        #[Displaying the background subtracted image.]\}\n
+#display\sxmag=2\symag=2\szrange-\szscale-\sz1=0\sz2=4\n
+#demosnr\n
+#\n
+\{%500
+        [Calculating error array for the subtracted data.]\}\n
+imcopy\n
+xdata$snr.qp[pi=2:10,bl=2]\n
+demosnr_err.imh\n
+#\{%500
+        #[Displaying the exposure mask.]\}\n
+#display\sxmag=2\symag=2\n
+#xdata$snr_exp.pl\n
+#1\n
+\{%500
+        [Radial Surface Brightness Profile of the Field]\}\n
+#\{%500
+        #[Displaying the annuli for the profile.]\}\n
+#print\s252\s256\s>\sdemo_pixcenter\n
+#\n
+#display\sxmag=2\symag=2\szrange-\szscale-\sz1=0\sz2=4\s\n
+#demosnr\n
+#\n
+#tvmark\s1\scoords=demo_pixcenter\smark=circle\sradii="3.75,7.50,11.25,15.00,
+#18.75,22.50,26.25,30.00,33.75,37.50"
+#\s\s\s\scolor=206\n
+#tvmark\s1\scoords=demo_pixcenter\smark=circle\sradii="41.25,45.00,
+#48.75,52.50,56.25,60.00"
+#\s\s\s\scolor=206\n
+\{%500
+         [Radial distribution in annuli.]\}\n
+imcnts\serr="demosnr_err"\sexpo=xdata$snr_exp.pl\sexpthr=95.0\n
+demosnr\n
+a\s252\s256\s0\s60\sn=16\n
+0\n
+demosnr\n
+\{%500
+         [Calculate distances in arcsec.]\}\n
+tcalc\s"demosnr_cnt"\s"radius"\s"rad1*16+30"\n
+\{%500
+         [Plotting the radial profile.]\}\n
+sgraph\s"demosnr_cnt\sradius\scnt/pix"\spoint=yes\sxlabel="r\s(arcsec)"\syl\
+    abel="cnt/pix"\slogy=yes\smarker="cross"\sszmarker=0.01\sround=yes\sti\
+    tle="Radial\sdistribution"\n
+\{%500
+         [Applying vignetting correctio.n]\}\n
+\{%500
+         [Creating the vignetting mask.]\}\n
+makevig\n
+demosnr\n
+demosnr\n
+1.5\n
+\{%500
+         [Applying it to the data.]\}\n
+vigdata\n
+demosnr.imh\n
+demo_vigsnr.imh\n
+demosnr_vig.pl\n
+0.00\n
+demosnr_err.imh\n
+demo_vigsnr_err.imh\n
+\{%500
+         [Radial surface brightness distribution after vignetting.]\}\n
+imcnts\serr="demo_vigsnr_err"\sexpo="xdata$snr_exp.pl"\sexpthr=95.0\n
+demo_vigsnr\n
+\n
+\n
+demo_snrvig\nt
+\{%500
+         [Calculate distances in arcsec.]\}\n
+tcalc\s"demo_snrvig_cnt"\s"radius"\s"rad1*16+30"\n
+\{%500
+         [Plotting the vignetting-corrected radial profile.]\}\n
+sgraph\s"demo_snrvig_cnt\sradius\scnt/pix"\sappend=yes\n
+\{%800
+         [Comparing the profiles in the outer parts.]\}\n
+\{%500
+         [Without the vignetting correction:]\}\n
+sgraph\s"demosnr_cnt\sradius\scnt/pix"\sxlabel="r\s(arcs)"\syl\
+    abel="ct/px"\slogy=yes\stitle="Rad\sdist"\swl=250.\swr=1000.\swb\
+    =0.5\swt=1\serraxis=2\serrcolumn="err/pix"\n
+\{%500
+         [With the vignetting correction:]\}\n
+sgraph\s"demo_snrvig_cnt\sradius\scnt/pix"\sappend=yes\n
+\{%500
+         [Radial profile in the eastern and western halves.]\}\n
+\{%500
+         [Using the original data and background - First the eastern one:]\}\n
+imcnts\s\serr="demosnr_err"\sadd=no\s\n
+\sxdata$snr[pi=2:10,bl=2]\n
+a\s252\s256\s0\s60\sn=16\s&\spie\s252\s256\s0\s180\n
+\sxdata$snr_bbk\n
+a\s252\s256\s0\s60\sn=16\s&\spie\s252\s256\s0\s180\n
+demo_snreast\n
+\{%500
+         [Then the western one:]\}\n
+imcnts\n
+\sxdata$snr[pi=2:10,bl=2]\n
+a\s252\s256\s0\s60\sn=16\s&\spie\s252\s256\s180\s0\n
+\sxdata$snr_bbk\n
+a\s252\s256\s0\s60\sn=16\s&\spie\s252\s256\s0\s180\n
+demo_snrwest\n
+\{%500
+        [Calculate distances in arcsec.]\}\n
+tcalc\s"demo_snreast_cnt"\s"radius"\s"rad1*16+30"\n
+tcalc\s"demo_snrwest_cnt"\s"radius"\s"rad1*16+30"\n
+\{%800
+        [Comparing the profiles in the outer parts.]\}\n
+\{%500
+        [The eastern one:]\}\n
+sgraph\s"demo_snreast_cnt\sradius\scnt/pix"\spoint=yes\sxla\
+    bel="r\s(arcsec)"\sylabel="cnt/pix"\slogy=yes\smarker="cross"\sszm\
+    arker=0.01\sround=yes\swb=0.1\swt=100\stitle="Ra
+    dial\sdistribution\sin\sE\sand\sW\shalves"\n
+\n
+\{%500
+        [The western one:]\}\n
+sgraph\s"demo_snrwest_cnt\sradius\scnt/pix"\sappend=yes\n
+\n
+\{%500
+        [Smoothing the data.]\}\n
+\{%500
+        [Compress the image and select the central 136x136.]\}\n
+imcompress\serror="demosnr_err"\souterror="demo_small_err"\n
+demosnr\n
+demo_small\n
+2\n
+imcopy\n
+demo_small[61:196,61:196]\n
+demo_center\n
+#\{%500
+        #[Displaying the compressed image.]\}\n
+#display\sfill=yes\szscale-\szrange-\sz1=0\sz2=18\n
+#demo_center\n
+#\n
+\{%500
+        [Smoothing the compressed image.]\}\n
+imsmooth\n
+demo_center\n
+demo_center\n
+gauss\n
+1.5\n
+#\{%500
+        #[Displaying the smoothed image.]\}\n
+#display\sfill=yes\szscale-\szrange-\sz1=0\sz2=18\n
+#demo_center_smo\n
+#\n
+\{%500
+        [Contouring the results - isointensity]\}\n
+imcont\sgclose-\n
+demo_center_smo\n
+sky\n
+peak\n
+log\s2,80,10\n
+q01+&\r\{%8000\}
+#reset\sstdgraph="imdr"\n
+\n
+\{%5000
+        [Overlay the contour on the image]\}\n
+#imcont\smajor_grid-\slabout-\sgclose+\sperim-\sscale_\
+    #device="imdr"\n
+#demo_center_smo\n
+#sky\n
+#peak\n
+#log\s2,80,10\n
+#\{%500
+#        [Reset standard graphics]\}\n
+#if(envget("TERM")=="xterm"){\n
+#reset\sstdgraph=xterm\n
+#}\n
+#;\n
+#if(envget("TERM")=="sun"){\n
+#reset\sstdgraph=gterm\n
+#}\n
+#;\n
+#show\sstdgraph\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n

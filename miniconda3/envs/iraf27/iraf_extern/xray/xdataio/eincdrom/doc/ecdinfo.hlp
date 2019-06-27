@@ -1,0 +1,288 @@
+#$Log: ecdinfo.hlp,v $
+#Revision 11.0  1997/11/06 16:36:38  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:01:01  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:23:59  prosb
+#General Release 2.3.1
+#
+#Revision 1.5  94/05/12  17:20:05  prosb
+#Slightly modified help file.
+#
+#Revision 1.4  94/05/06  17:50:34  prosb
+#A few more minor changes...
+#
+#Revision 1.3  94/05/06  16:30:06  prosb
+#Made another minor change in help file.
+#
+#Revision 1.2  94/05/06  16:17:27  prosb
+#Made minor changes to help file.
+#
+#Revision 1.1  94/05/04  17:37:47  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/doc/RCS/ecdinfo.hlp,v 11.0 1997/11/06 16:36:38 prosb Exp $
+.help ecdinfo June94 xray.xdataio.eincdrom
+.ih
+NAME
+ecdinfo -- display information about a specific Einstein dataset.
+.ih
+USAGE
+ecdinfo specifier inst datatype
+.ih
+DESCRIPTION
+\fIecdinfo\fR allows the user to display information about data from any
+Einstein dataset.  For most datasets, this information includes the
+field center, the sequence title, and the livetime of the
+sequence.  The information is displayed to the screen and to the
+hidden parameters.
+
+This task prompts the user for only the parameters which are needed.
+For instance, if the user uses "H1734S03.XPA" for the specifier, then
+the instrument (hri) and datatype (event list) are already known.
+
+.ih
+PARAMETERS
+.ls specifier = ""    prompt="FITS filename OR sequence number"
+
+This specifies the requested data.  It can be in the form of a
+FITS filename (i.e. "s0512s42.f3d" or "i0423n15.upa"), or it can
+be a sequence number (i.e. "9004" or "H1043").
+
+The possible FITS extensions are .xi* (for IPC or HRI image files), .xp* 
+(for IPC or HRI event files), .f3d (for IPC slew data), and  .up*
+(for IPC unscreened data).
+
+.le
+.ls inst = ""         prompt="Einstein instrument (ipc|hri)"
+
+The instrument (ipc or hri) to get information for.  The user
+will not be prompted for this parameter if the instrument is
+contained in the specifier. 
+
+.le
+.ls datatype = ""     prompt="Datatype (event|image|slew|unscreened)"
+
+The type of data (event, image, slew, or unscreened) to get 
+information for.  Again, the user
+will not be prompted for this parameter if the data type can be
+deduced from the specifier.  
+
+Note that there is no slew or unscreened data available for HRI.
+
+.le
+.ls (is_valid = ) [boolean] [OUTPUT PARAMETER]
+
+This parameter is set to "yes" if the requested data exists.  
+
+.le
+.ls (seq = ) [string] [OUTPUT PARAMETER]
+
+The sequence associated with the requested data, such as "i9004" or
+"h1043".  This parameter is set to "none" for IPC slew data.
+
+.le
+.ls (fits_root = ) [string] [OUTPUT PARAMETER]
+
+The root of the FITS file name for this sequence, such as "i0423n15"
+or "s0449n84".
+
+.le
+.ls (fits_ext = ) [char] [OUTPUT PARAMETER]
+
+The extension letter of the FITS file name, such as "a", "b", "c",
+etc.  For instance, IPC sequence 6839 has the extension "b" for its
+FITS files.   This parameter is set to " " for IPC slew data, since
+all slew data have the identical extension.
+
+.le
+.ls (ra = ) [float] [OUTPUT PARAMETER]
+
+The RA associated with this data set, in degrees.
+
+.le
+.ls (dec = ) [char] [OUTPUT PARAMETER]
+
+The DEC associated with this data set, in degrees.
+
+.le
+.ls (hour = ) [string] [OUTPUT PARAMETER]
+
+The hour associated with the dataset, e.g., "03h" or "21h". 
+This value should correspond to the RA of the sequence.
+
+
+.le
+.ls (dir = ) [string] [OUTPUT PARAMETER]
+
+The directory which should contain the CDROM holding the data for
+this sequence.  See the eincdpar parameter file for a complete
+list of CDROM directories.
+
+The main data on each CDROM is stored in the subdirectory data/##h,
+where ##h is the hour of the data.  For example, the IPC event 
+sequence i8102 might have its CDROM in the directory dir="ipcevt4$".
+If so, its main data is in the directory "ipcevt4$data/22h/".
+
+.le
+.ls (evt_off = ) [float] [OUTPUT PARAMETER]
+
+The number of seconds which should be added to every photon
+arrival time and TGR records in the event file.  This is only
+non-zero for HRI event data.  The values come from a table
+HRI.timing.Erratum available by anonymous ftp at sao-ftp:
+
+"All absolute event times on the HRI Event List CD-ROMs
+(Jan 1992) are slightly incorrect. Relative times within a sequence
+are not affected. The following table gives the correct
+value of the header card XS-TBASE (time of sequence
+start in seconds since 1978 Jan 0.0 UTC) and the number
+of seconds, DT, to be added to all event and TGR times in
+the FITS files (this number is a constant for a given
+sequence)."
+
+
+.le
+.ls (livetime = ) [float] [OUTPUT PARAMETER]
+
+The livetime associated with the data. See the section below on HRI livetime.
+
+This parameter is zero for
+IPC slew data since there is no livetime information.
+
+.le
+.ls (title = ) [string] [OUTPUT PARAMETER]
+
+The title of the sequence.
+
+.le
+.ls (eincdpar = "") [pset]
+
+The name of the file containing the eincdrom package wide parameters.  If
+the name is empty (""), then the parameters will be obtained from the
+eincdpar task.
+
+.le
+.ls (display = 1) [int]
+
+The display level.  A setting of 0 should output no display, while
+settings above 3 are only useful for debugging.
+
+.le
+
+.ih
+EXAMPLES
+
+1. Use \fIecdinfo\fR to retrieve information on the event file
+for IPC sequence 8102 (xdata$snr.qp).
+
+.nf
+ei> ecdinfo
+FITS filename OR sequence number: i8102
+Datatype (event|image|slew|unscreened): event
+
+FITS root: i2258n58, extension: a, sequence 8102.
+
+Title: I08102 CTB 109 (POSSIBLE UNKNOWN SNR W/COMPACT SOURCE).
+
+Ra=22:58:55.7, Dec=58:36:47.6, livetime: 4255.77 seconds.
+
+This sequence should be on the CDROM in the directory ipcevt4$.
+ei> lpar ecdinfo
+    specifier = "i8102"         FITS filename OR sequence number
+         inst = "ipc"           Einstein instrument
+     datatype = "event"         Datatype
+    (is_valid = yes)            Was the requested specifier & inst & datatype va
+         (seq = "i8102")        Sequence number
+   (fits_root = "i2258n58")     FITS root
+    (fits_ext = "a")            FITS extension (i.e. 'a', 'b', etc.)
+          (ra = 344.7319)       RA of sequence (in degrees)
+         (dec = 58.61323)       DEC of sequence (in degrees)
+        (hour = "22h")          Sequence hour
+         (dir = "ipcevt4$")     Directory containing the CD with sequence data
+     (evt_off = 0.)             Event time offset correction
+    (livetime = 4255.7734375)   Livetime of sequence
+       (title = "I08102 CTB 109 (POSSIBLE UNKNOWN SNR W/COMPACT SOURCE)") Sequen
+    (eincdpar = "")             Eincdrom package parameters
+     (display = 1)              display level
+        (mode = "ql")           
+.fi
+
+2. Use \fIecdinfo\fR to retrieve information on the unscreened
+version of IPC sequence 8102.
+
+.nf
+ei> ecdinfo
+FITS filename OR sequence number: i2258n58.upa
+
+FITS root: i2258n58, extension: a, sequence 8102.
+
+Title: I08102 CTB 109 (POSSIBLE UNKNOWN SNR W/COMPACT SOURCE).
+
+Ra=22:58:55.7, Dec=58:36:47.5, livetime: 7503.87 seconds.
+
+This sequence should be on the CDROM in the directory ipcu18$.
+.fi
+.ih
+HRI LIVETIMES
+
+The document deadtime.asc (located on the HRI image and HRIEVT CDROMs)
+gives deadtime corrections for most of the HRI sequences.  However, 
+there are 105 HRI sequences for which there is no dead-time correction
+information available.  For these sequences, the parameter "livetime" 
+contains the on-time instead.  The sequences are as follows:
+
+.nf
+2	3	7	12	15	401	474	*631	*632
+*633	*647	651	*708	*710	714	717	718	*719
+783	*818	*819	*820	821	*822	823	*824	*826
+*935	*937	940	*941	*943	*945	973	975	1031
+1036	1061	1806	2111	*2843	*2844	*2845	2906	3047
+*3364	*3502	3503	*4276	4364	4486	4859	4860	4862
+4873	5249	5747	5750	5755	5917	6299	6544	6546
+*6621	*6622	*6623	*6624	*6626	*6627	*6628	*6629	*6630
+*6631	*6632	*6720	*6761	*6762	*6763	*6764	*6765	*6766
+*6767	*6768	*6769	*6770	6814	7691	7717	7926	7927
+7981	*8338	*8342	8476	*8934	9262	*9537	*9538	10276
+10316	*10367	*10649	10757	10760	10777
+.fi
+
+(The starred sequences are OGS sequences.)
+
+There are also five sequences whose on-time differed from what was
+expected in the deadtime.asc file.  These sequences are as follows:
+
+.nf
+     seq      on-time in HRI FITS   deadtime.asc    DTC
+
+     282	  75568.69	      75609.6      1.035
+     349	   2804.16	      12831.4      1.019
+     981	    149.44	       3280.3      1.017
+    6335	   2404.80	      28939.5      1.026
+   10139	  25569.58	      24907.2      1.044
+.fi
+
+For these five sequences, we calculated the livetime by multiplying
+the dead-time correction from the deadtime.asc file by the on-time
+found in the HRI FITS file.
+
+.ih
+BUGS
+
+There are a few FITS files with RA and DEC values which do not match the
+FITS name or hour.  For example, see IPC event sequence 8760.
+
+.ih
+TIME REQUIREMENTS
+This task typically takes under 5 seconds to run on a SPARCstation.
+
+.ih
+SEE ALSO
+See \fIecd2pros\fR to convert FITS files on the Einstein CDROMs into
+PROS format.
+
+See \fIexplain_eincdrom\fR for more information on the
+data on the CDROMs.  
+.endhelp

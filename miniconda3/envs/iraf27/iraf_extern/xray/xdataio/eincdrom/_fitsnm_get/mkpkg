@@ -1,0 +1,41 @@
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:36:49  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:01:22  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:24:35  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:45:15  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  17:12:15  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/04/13  09:38:42  prosb
+#Initial revision
+#
+#Revision 1.1  93/04/13  09:33:10  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/_fitsnm_get/RCS/mkpkg,v 11.0 1997/11/06 16:36:49 prosb Exp $
+#
+# Make the _fitsnm_get task.
+#
+
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+        fitsnm_get.x    <iraf.h> "../source/dataset.h" "../source/ecd_err.h"
+	seq2fitsnm.x    <iraf.h> "../source/dataset.h" "../source/ecd_err.h"
+        index.x         <iraf.h> "../source/dataset.h" "../source/ecd_err.h"
+        ;
+
+
+
+

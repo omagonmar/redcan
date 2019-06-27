@@ -1,0 +1,7 @@
+# Help definitions for SQIID itself
+
+sqiid         men= sqiid.men,
+              hlp= ..,
+              sys= sqiid.hlp,
+              pkg= sqiid.hd,
+              src= sqiid.cl

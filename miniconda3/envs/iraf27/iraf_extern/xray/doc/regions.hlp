@@ -1,0 +1,206 @@
+.help regions Oct92 xray
+.ih
+NAME
+regions -- description of spatial region filtering
+
+.ih
+USAGE
+This document contains a summary of the user interface for spatial
+region filtering for IRAF/PROS analysis.
+
+.ih
+REGION MASKS
+Spatial  filtering under  the  IRAF/PROS is accomplished   by means of
+\fBregion masks\fR.  A region mask is an IRAF PLIO mask in which each
+mask value corresponds either to a single  geometric  shape, or to two
+or more geometric shapes  combined according to  the rules  of boolean
+algebra.   A region mask  can be created and saved  on disk using  the
+\fBplcreate\fR task, or can  be created as  a temporary in-memory mask
+by an individual task, for use only during execution of that task.
+
+.ih
+REGION EXPRESSIONS
+An    ASCII region  descriptor  consists   of  one or  more  \fBregion
+expressions\fR, hereafter called \fBregions\fR, separated by new-lines
+or semi-colons. (Of course, new-lines can only be used when the region
+descriptor is stored  in  a file -  see below.   Regions  are normally
+separated by semi-colons when a region descriptor is  input as an IRAF
+parameter.)  Each    region consists  of   one  or   more \fBgeometric
+shapes\fR combined using standard boolean operation.  Several types of
+shapes  are  supported,   including  circles, boxes,   rotated  boxes,
+ellipses, annuli,      single    points,  pie slices,  and   arbitrary
+straight-line polygons.  The shape defined on each line of a region
+description is assigned the same mask value.  ( This does NOT apply 
+to accelerators since they actually expand to multiple lines.)
+
+Each  region has a  unique  mask  value in the  PLIO  mask. PLIO masks
+usually allow  <= 32767 mask  values, allowing a  very large number of
+separately valued regions in a single mask.
+
+When a region mask is  created (either in  memory in an analysis task,
+or as a disk file using plcreate), the  PLIO  mask values begin with 1
+and increase with each successive region. If a pixel is covered by two
+different regions, it is given the mask  value of the "higher" region,
+that is, successive regions overwrite  previous regions in  the  mask.
+In  this way, an   individual pixel is  covered  by one  and  only one
+region.  This means that one must sometimes be careful about the order
+in which regions are defined.  If region  N  is fully contained within
+region M,  then N  should  be defined   after M, or   else it will  be
+"covered up" by the latter.
+
+NOTE:  Comment lines are allowed if they are proceeded by a '#'.
+.tp 18
+
+.ih
+GEOMETRIC SHAPES     
+( see also HELP reggeometry )
+Several   geometric shapes are  used to   describe  regions.  The valid
+shapes are:
+.nf
+
+shape:		arguments:
+-----		---------
+
+ANNULUS		xcenter ycenter inner_radius outer_radius (outer_radius) ...
+ANNULUS		xcenter ycenter inner_radius outer_radius (n=<number>)
+BOX		xcenter ycenter xwidth yheight (optional angle)
+CIRCLE		xcenter ycenter radius
+ELLIPSE		xcenter ycenter xwidth yheight angle
+FIELD		none
+PIE		xcenter ycenter angle1 angle2 (angle3) (angle4) (angle5) ...
+PIE		xcenter ycenter angle1 angle2 (n=<number>)
+POINT		x1 y1 x2 y2 ... xn yn
+POLYGON		x1 y1 x2 y2 ... xn yn
+ROTBOX		xcenter ycenter xwidth yheight angle
+.fi
+
+All  arguments   are real values;  integer  values   are automatically
+converted  to real where  necessary.   All angles  are in degrees  and
+specify angles that run counter-clockwise from the positive y-axis.
+
+.ih
+ALGEBRA	
+(see also HELP regalgebra)
+The shapes defined in each line can be combined together, and shapes
+can be excluded from the cumulative mask.
+
+.nf
+EXCLUSION	
+Some shapes can be globally excluded from all the region specifiers in
+a given file.
+
+operator	arguments:
+--------	-----------
+  -		Exclude the region expression following the '-' sign
+		from ALL regions specified in this file
+
+COMBINATION
+Regions on a single line can be combined with the following operators.
+
+Symbol		Operation	Use
+--------	---------	---
+
+  !  		not		Exclude this shape from this region
+  &  		and		Include only the overlap of these shapes
+  ^  		exclusive or	Include both shapes except their overlap
+  |  		inclusive or	Include all of both shapes
+.fi
+
+.ih
+COORDINATES		
+(see also HELP regcoords )
+The input values to each shape can be specified in several coordinate
+systems.  
+
+.nf
+LOGICAL		Local coordinates relative to pixel numbering 
+		of the input file
+
+PHYSICAL	PHYSICAL coordinates relative to the original 
+		pixel numbering system of the reference file.  
+		Unchanged with BLOCK and SECTIONS
+
+[EQUATORIAL] J<equinox>		World coordinates 
+[EQUATORIAL] B<equinox>
+ECLIPTIC  [<equinox>]
+GALACTIC
+SUPERGALACTIC
+.fi
+
+(Square brackets indicate an optional keyword or argument.  Replace
+"<equinox>" with the appropriate real value.)
+
+If no coordinate system is specified, logical is assumed.  PHYSICAL or WORLD
+(e.g., J2000.) is preferred and most general.  The coordinate system
+specifier should appear at the beginning of the region description, on a
+separate line (in a file), or followed by a semicolon; e.g.,
+
+.nf
+	PHYSICAL; CIRCLE 6500 9320 200
+.fi
+
+The use of celestial input units AUTOMATICALLY implies WORLD coordinates.  
+E.g., if the world coordinate system of the reference image is J2000, then
+
+.nf
+	circle 10:10:0 20:22:0 3'
+.fi
+
+is equivalent to
+
+.nf
+	J2000; circle 10:10:0 20:22:0 3'
+.fi
+
+.nf
+UNITS
+	10	-- ten pixels
+	10'	-- ten minutes of arc
+	10"	-- ten seconds of arc
+	10d	-- ten degrees
+	0.5r	-- point five radians
+	10:0	-- ten hours ( 0 minutes, no seconds )
+
+.fi
+Note that by using units as described above, you may mix coordinate
+systems within a region specifier; e.g.,
+
+.nf
+	physical; circle 6500 9320 3'
+.fi
+
+.ih
+TIME REQUIREMENTS
+The time required to make a mask is proportional to the number
+of separate regions being created.  It can take a minute or more if
+many regions are involved.  For such cases, it is recommended that
+\fIplcreate\fR be used to make a binary PL mask from the ASCII region
+descriptor, if the mask is going to be input into a task more than
+once.
+
+.ih
+BUGS
+There is a limit to the number of separate regions that can be
+created in a single mask.  We are looking into how to raise that
+limit.
+
+There is an ambiguity in the definition of PIE regions concerning
+the center pixel and whether it is included or excluded.
+
+SAOIMAGE does NOT support PIE, nor anything other than LOGICAL ( or TV)
+coordinates.
+.ih
+SEE ALSO
+.nf
+See also more detailed HELP in
+	HELP reggeometry
+	HELP regalgebra
+	HELP regcoords
+
+.fi
+See the IRAF PLIO documentation for more information about PLIO.
+
+See the COORDS help for a description of how pixels around the edge
+of a region that are partially in regions are included or excluded 
+from the mask.
+.endhelp

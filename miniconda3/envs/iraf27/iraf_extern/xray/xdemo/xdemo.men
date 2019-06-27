@@ -1,0 +1,5 @@
+     gspectral - playback demo of xray spectral analysis with line graphics
+       gtiming - playback demo of xray timing analysis with line graphics
+   spatialdemo - playback demo of xray spatial analysis with image display
+  spectraldemo - playback demo of xray spectral analysis with image display
+    timingdemo - playback demo of xray timing analysis with image display

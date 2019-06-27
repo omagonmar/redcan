@@ -1,0 +1,14 @@
+{
+  "arch": "x86_64",
+  "build": "h1bed415_0",
+  "build_number": 0,
+  "depends": [
+    "libgcc-ng >=7.2.0"
+  ],
+  "license": "ISC",
+  "name": "libsodium",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1522217356801,
+  "version": "1.0.16"
+}

@@ -1,0 +1,3 @@
+------>wfits.h.9.21.1999.workOK
+------> copy wfits.h from IRAF2.11.3, dataio/fits/wfits.h
+        -and change LEN_DATE to LEN_DATE2

@@ -1,0 +1,196 @@
+\input skeleton.tex
+
+\def\version{\it Version 1.0 --- 1/26/89}
+\def\chapter{\it Timing Analysis}
+
+\baselineskip 24pt
+
+\pageno=1001  % force no pagenumber by making pagenumber >999
+\count100=\pageno
+
+\font\bigfont = cmr10 scaled 1440
+\bigfont
+
+\centerline{}
+\vskip 2.truein
+\centerline{ROSAT Project Working Document of Science Specifications for the}
+\centerline{Post Reduction Off-line Software (PROS)}
+\centerline{Timing Analysis}
+\vskip 24pt
+\centerline{\version}
+\vskip 2.5truein
+\hbox{Prepared by: \hfil}
+\vskip 24pt
+\centerline{Smithsonian Astrophysical Observatory}
+\centerline{High Energy Astrophysics Division}
+\vfill\eject
+
+\pageno=1001  % force no pagenumber by making pagenumber >999
+\count100=\pageno
+
+\centerline{}
+\vskip 3.truein
+This document describes algorithms for the
+timing analysis package of the ROSAT/IRAF Post Reduction Off-line
+Software (the PROS). Jeffrey McClintock coordinated the science
+requirements for the PROS timing analysis, and he and other
+scientists at SAO and GSFC wrote these specifications (see `science
+contacts' for individual chapters).
+These algorithms go beyond a basic analysis system, and exceed
+the capabilities of the SAO {\it Einstein} general-user timing
+programs.  A subset of these algorithms are being implemented
+for ROSAT by Janet DePonte and Maureen Conroy.  This is
+a `working document' which is under frequent revision.  Please check
+with Diana Worrall that you have the latest version, and inform her of
+errors.
+\blankline
+Note that version numbers and dates heading even-numbered pages refer
+to the last date on which the content of the corresponding
+chapter was significantly modified.
+
+\vfill\eject
+
+
+\baselineskip 18.pt
+
+\pageno=-1
+\count100=\pageno
+
+\rm
+
+\def\leaderfill{\leaders\hbox to 1em{\hss.\hss}\hfill}
+\centerline{}\vskip 24pt
+\bigslant
+\centerline{Table of Contents}
+\rm
+
+
+\vskip 18pt
+\line{I. Light Curves \leaderfill 1}
+\line{ \quad 1 Overview \leaderfill 1}
+\line{ \quad 2 Make a light curve - bin data \leaderfill 1}
+\line{ \quad 3 Specific Examples of Plot/List files \leaderfill 2}
+\line{ \quad 4 Notes \leaderfill 4}
+\line{II. Periodogram Analysis \leaderfill 5}
+\line{ \quad 1 Overview \leaderfill 5}
+\line{ \quad 2 Input Data \leaderfill 5}
+\line{ \quad 3 Input Options \leaderfill 5}
+\line{ \quad 4 Output Data \leaderfill 5}
+\line{ \quad 5 Output Display \leaderfill 5}
+\line{ \quad 6 Full Description \leaderfill 5}
+\line{ \quad 7 Summary \leaderfill 8}
+\line{ \quad 8 References \leaderfill 9}
+\line{III. Correlation Analysis \leaderfill 10}
+\line{ \quad 1 Overview \leaderfill 10}
+\line{ \quad 2 Input Data \leaderfill 10}
+\line{ \quad 3 Input Options \leaderfill 10}
+\line{ \quad 4 Output Data \leaderfill 10}
+\line{ \quad 5 Output Display \leaderfill 10}
+\line{ \quad 6 Full Description \leaderfill 10}
+\line{ \quad 7 References \leaderfill 12}
+\line{IV. Folding and Period Searches \leaderfill 13}
+\line{ \quad 1 Overview \leaderfill 13}
+\line{ \quad 2 Folding Data \leaderfill 13}
+\line{ \quad 3 Period Search using epoch folding \leaderfill 14}
+\line{ \quad 4 The Rayleigh test \leaderfill 14}
+\line{ \quad 5 Required Output \leaderfill 15}
+\line{ \quad 6 References \leaderfill 15}
+\line{V. Period Searching via truncated Fourier series \leaderfill 16}
+\line{ \quad 1 Overview \leaderfill 16}
+\line{ \quad 2 Input Data \leaderfill 16}
+\line{ \quad 3 Output Data \leaderfill 17}
+\line{ \quad 4 Choice of period/frequency steps \leaderfill 18}
+\line{ \quad 5 References \leaderfill 18}
+\line{VI. Random Deviations \leaderfill 19}
+\line{ \quad 1 Overview \leaderfill 19}
+\line{ \quad 2 Full Description: BINVAL (Number vs. arrival time) \leaderfill 19}
+\line{ \quad 3 Full Description: ARRIVL (Interval distribution) \leaderfill 20}
+\line{ \quad 4 References \leaderfill 21}
+\line{ \quad 5 Appendix: Detection of random fluctuations including data gaps \leaderfill 22}
+\line{VII. QPO Analysis \leaderfill 24}
+\line{ \quad 1 Overview \leaderfill 24}
+\line{ \quad 2 Leiden QPO Software \leaderfill 25}
+\line{ \quad 3 A possible outline for the ROSAT QPO Software \leaderfill 27}
+\line{VIII. Shotnoise Analysis \leaderfill 35}
+\line{ \quad 1 Introduction \leaderfill 35}
+\line{ \quad 2 The Basic Idea of the Analysis Method \leaderfill 35}
+\line{ \quad 3 Complications and the Actual Method: The Recipe \leaderfill 36}
+\line{ \quad 4 Case for a large number of bins \leaderfill 38}
+\line{ \quad 5 Error Analysis \leaderfill 38}
+\line{ \quad 6 Simulating Binned Shot Noise with an Exponential Profile \leaderfill 38}
+\line{ \quad 7 Limitations of the ``shot'' model analysis \leaderfill 41}
+\line{ \quad 8 References \leaderfill 41}
+\line{ \quad 9 Flow Chart for Shot Noise Analysis \leaderfill 43}
+\line{IX. Flare Monitor \leaderfill 44}
+\line{ \quad 1 Overview \leaderfill 44}
+\line{ \quad 2 Input Data \leaderfill 44}
+\line{ \quad 3 Procedure \leaderfill 44}
+\line{ \quad 4 Output \leaderfill 45}
+\line{ \quad 5 ``De-gapping'' \leaderfill 45}
+\line{ \quad 6 Notes \leaderfill 45}
+\line{X. Fractal/Attractor Dimension Time Series Analysis \leaderfill 47}
+\line{ \quad 1 Overview \leaderfill 47}
+\line{ \quad 2 Basic Idea \leaderfill 47}
+\line{ \quad 3 The Method \leaderfill 47}
+\line{ \quad 4 Why the Algorithm Works \leaderfill 49}
+\line{ \quad 5 Notes \leaderfill 49}
+\line{ \quad 6 References \leaderfill 50}
+
+\vfill\eject
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                     D.M.W.           January 1988               %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This document uses macros defined in skeleton.tex.               %
+%                                                                 %
+%      Automatic numbering of sections goes as follows:           %
+%               titles:  \@{title}                                %
+%            subtitles:  \**subsections (item form)               %
+%         subsubtitles:  \??subsubsections (itemitem form)        %
+%                                                                 %
+% For unnumbered lists following \** use:                         %
+%                   {\list                                        %
+%                                                                 %
+%                   My first in list; Note that blank lines are   %
+%                                                                 %
+%                   My second in list;   important                %
+%                                                                 %
+%                   }                                             %
+%                                                                 %
+% For unnumbered lists following \?? use:                         %
+%                   {\listlist                                    %
+%                                                                 %
+%                   same idea as above                            %
+%                                                                 %
+%                   }                                             %
+%                                                                 %
+%Equations in display mode ($$   $$) should lie outside lists and %
+%                                             listlists.          %
+% Tables need to \moveright 2\parindent or \moveright 3\parindent %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\baselineskip 12.pt
+\pageno=1
+\count100=\pageno
+\input ltcurv.tex
+\startcount
+\input period.tex
+\startcount
+\input correlate.tex
+\startcount
+\input fold.tex
+\startcount
+\input fourier.tex
+\startcount
+\input random.tex
+\startcount
+\input qpo.tex
+\startcount
+\input shot.tex
+\startcount
+\input flaremon.tex
+\startcount
+\input fractal.tex
+\vfill\eject\end

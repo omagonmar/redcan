@@ -1,0 +1,48 @@
+.help selectpars Jan91 finder
+.ih
+NAME
+selectpars -- pset containing registration source selection criteria
+.ih
+USAGE
+selectpars
+.ih
+PARAMETERS
+.ls explicit = ""
+An optional expression that will override all of the remaining
+parameters below.  This may be any explicit boolean expression (of
+whatever complexity) to be evaluated for each table entry.
+.le
+.ls disjunction = no
+Inclusively OR the four expressions below?  If \fIdisjunction\fR = no,
+the expressions will be ANDed together instead.  Only logically complete
+expressions will be evaluated.
+.le
+.ls column1 = "PLATE_ID", column2 = "CLASS", column3 = "", column4 = ""
+The names for selection columns 1, 2, 3, or 4.  Defaults are provided
+that reference the PLATE_ID and CLASS columns of the HST GSC.
+.le
+.ls boolop1 = "==", boolop2 = "==", boolop3 = "", boolop4 = ""
+The boolean operators for columns 1, 2, 3, or 4.  Defaults are provided
+for the first two columns.
+.le
+.ls value1 = "", value2 = "0", value3 = "", value4 = ""
+The selection criteria for columns 1, 2, 3, or 4.  Note that a default
+value is only supplied for the second column, by default the GSC CLASS
+column.  CLASS = 0 is appropriate for GSC sources that are flagged as
+being stellar.  No default is supplied for the PLATE_ID since this will
+vary with the field and the user's preference.
+.le
+.ih
+DESCRIPTION
+The SELECTPARS pset is used to maintain the criteria for selecting the
+desired subset of catalog sources.  Typical criteria include each
+source's defined CLASS (stellar versus non-stellar) and the single
+PLATE_ID from which the ensemble of sources is to be chosen.  The
+individual criteria can either be ORed or ANDed together using the
+\fIdisjunction\fR parameter.  More complicated expressions can be typed
+in explicitly using the \fIexplicit\fR parameter.  If \fIexplicit\fR is
+non-null (or blank), the remaining parameters will be overridden.
+.ih
+SEE ALSO
+tpeak, tastrom, tselect
+.endhelp

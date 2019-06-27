@@ -1,0 +1,48 @@
+Revisions for Mar91
+
+1.  Fixed bug in toe2qp that had swapped PI and PHA  			9/5/90
+
+2.  Fixed bug in qpoe_cards used by fits2qp (qpoe.cards?) that 
+was still writing some 'old' style header words ( X_ ) 
+instead of new_style ( XS- )  						9/17/90
+
+3.  Fixed bug in img2qp that had overwritten PI with PHA  		10/15/90
+
+4.  Fixed /PROS/XRAY/XRAY/QPOE_CARDS to have the correct qpoe
+header parameter names, since unrecognized parameter names do NOT
+default to the proper data type, in fact defaulted to ASCII, which
+caused ASCII values in qpoe header for"
+
+        ON-TIME
+        LIVE-TIME
+        DET-ANGLE
+
+and several others.  These symptoms looked like mysterious
+48, 49 or 50 values for many of these parameters.			11/15/90
+
+
+5.  Fixed /PROS/XRAY/LIB/PROS/gti.x to set the inherit flag for
+the GTIREC qpoe records so that QPCOPY/TIMSORT/QPSORT etc would not
+lose these files.
+
+6.  Fixed RARR2FITS for problems in the VAX specific code.  Only
+affects VAX performance.						12/5/90
+
+7.  Fixed datarep for all VAX specific code.
+
+8.  Added ROSAT support in spectral,spatial, xray and rosat.
+
+9.  Updated the QPOE header for ROSAT.  This included changing 
+some of the units in the detector coordinates section of the header.
+
+10.  Improvements to IMCONTOUR
+
+11.  Fixes to timing.fft, period.
+
+12.  Added new FITS keywords to the ROSAT QPOE files.
+
+13.  Fixed einstein.xpr2qp to automatically do BLT records for IPC.
+
+14.  Added TSI records to the QPOE definition
+
+

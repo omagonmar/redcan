@@ -1,0 +1,588 @@
+# 
+
+1.  /pros/xray/xspatial/imcnts/imcnts.x				DS 7/16/93
+    /pros/xray/xspatial/imcnts/imcntsubs.x
+Corrected error of taking background or background error file names that 
+begin with numbers, as constant values.
+
+2.  /pros/xray/xtiming/timlib/fld_phots.x			JD 7/19/93
+Corrected t_exp routine in response to a hotseat question from Dennis Leahy.
+The exposure being assigned to bins with a period on the same order as the
+size of the gti's was fixed to recognize the correct number of bins needing
+exposure time.
+
+3. /pros/xray/xplot/imcontour/imc_clevels.x        		JD 7/20/93
+Computed contour levels often missed the lowest level specified by the user.  
+The routines imc_log & imc_linear were corrected to account for precision 
+errors in lower_limit calculations.
+
+4. /pros/xray/xtiming/  chiplot.cl, fftplot.cl fldplot.cl,      JD 7/20/93
+                        ftpplot.cl, ltcplot.cl
+Updated the plot tasks to determine default input filenames when the root is 
+specified. (response to bug 284)
+
+5. /pros/xray/xdataio/  rfits2pros.cl, rarc2pros.cl		DS 7/26/93
+   /pros/xray/xinstall/ cale_fits2qp.cl, calr_fits2qp.cl, 
+                        fits2snr.cl, rh_fits2pros.cl, rp_fits2pros.cl
+Updated fits2qp calling sequences for RDF.
+
+6. /pros/xray/xlocal/einbb/expmask/expexpand.x			DVS 7/29/93
+
+Fixed bug in expmask which incorrectly shifted final exposure mask to 
+the left 6 pixels.  (Bug # 658)
+
+7. /pros/xray/xlocal/einbb/eincdrom/qp_get.cl			DVS 7/29/93
+   /pros/xray/xlocal/einbb/eincdrom/doc/qp_get.hlp
+
+Modified qp_get.cl to run qpaddaux after running fits2qp on IPC and HRI
+events.  This will create TSI records from the TGR records in the qpoe
+file.
+
+8. /pros/xray/xplot/doc/pspc_hrcolor.hlp			DS 8/2/93
+Gave correct attribution to Carlo Izzo.  (We had said Tomaso Belloni.)
+
+9.  /pros/xray/xdataio/rfits2pros.cl				MC 8/17/93
+Correct the calling sequence parameters and upgrade the buffer sizes
+
+10.  /pros/xray/xproto/qpappend/qpappend.x			MC 8/17/93
+Fix the buffer-length argument for sprintf to avoid 'no write permission
+on string'
+
+11. /pros/xray/xlocal/einbb/eincdrom/qp_get.par		        DVS 8/23/93
+    /pros/xray/xlocal/einbb/eincdrom/doc/qp_get.hlp
+Modified the default setting of qp_mkindex from "no" to "yes", since Einstein
+CDROMs so far only contain fits files which are position sorted.
+
+12. /pros/xray/xlocal/einbb/sdfspec.par			        DVS 8/25/93
+Modified parameter file so that automatic parameters come before hidden 
+parameters.  (Enhancement # 390.)
+
+13. /pros/xray/xlocal/einbb/doc/xpr2qp.hlp			DVS 8/25/93
+    /pros/xray/xspatial/doc/makevig.hlp
+Modified BUGS in xpr2qp help file to report bug that xpr2qp does not create
+deffilt information.  Included workaround in xpr2qp help file.  Also
+updated makevig help file to report that Einstein vignetting values
+beyond 30' are to be "used with extreme caution".  
+(Enhancements # 652  & 596.)	
+
+14. /pros/xray/lib/regions/rgop.x				DS 8/30/93
+    /pros/xray/lib/regions/mkpkg
+Added a call to pl_compress() from rg_flush(), to keep obsolete scanlines 
+from clogging up memory when making large complex masks.  (Bug 253)
+Also added (in mkpkg) rgop.o's dependence on <plio.h> and rgop.com.  The 
+dependencies aren't new, they were just missing.
+
+15. /pros/xray/xlocal/einbb/eincdrom/_fits_find/fitsnm2hour.x  DVS 8/30/93
+Modified error message received when user types in "i####" instead of
+"####" for the sequence number (where "####" is any sequence number").
+
+16.  /pros/xray/xspatial/detect/detmkreg/detmkreg.x		MC 9/1/93
+Moved the 'ck_none' routine BEFORE the rootname routine
+and fixed an erroneous 'have_bpos' conditional typo
+to 'have_mch'
+
+17. /pros/xray/lib/ext.h					DS 8/23/93
+    /pros/xray/lib/pros/fnames.x
+Changed extension for fit's chi-square table file from EXT_CHI to EXT_CSQ,
+to avoid naming collision with period's EXT_CHI file.
+Also created new extensions EXT_OAH, EXT_BOA, EXT_BAL in preparation for
+xspectral's use of RDF.
+
+18. /pros/xray/lib/ext.h					DS 9/2/93
+    /pros/xray/lib/pros/fnames.x
+Changed EXT_OAH and EXT_BOA to EXT_SOH and EXT_BOH, respectively, 
+to show their parallelism.
+
+19. /pros/xray/xspectral/source/obsparse.yy			DS 9/3/93
+Added subinstrument parameter to call to inst_ctoi().
+
+20. /pros/xray/lib/pros/onesigma.x				JD 9/14/93
+Added lib to determine error on counts using FAP spec.
+Updated to have the lib work on an array.
+
+21.  /pros/xray/xtiming/timcor/calc_bary			JD 9/14/93
+a) updated to work on new RDF format, rev0 files are converted to 
+   RDF before calling this task is a higher level macro... calc_bary.
+b) updated to delete duplicate ephemenris records & write warning,
+c) updated to declare arrays in memory,
+d) renamed calc_bary to _clc_bary.
+
+22.  /pros/xray/xtiming/timcor/calc_bary.cl			JD 9/14/93
+     /pros/xray/xtiming/timcor/upephrdf/*.x
+     /pros/xray/xtiming/timcor/utmjd/*.x
+Macro to convert Rev0 FITS ephemeris files in MPE or US data formats to RDF 
+format.  Only columns effecting calc_bary are updated. MJDINT & MJDFRAC are 
+added to the table (by utmjd task), and the Satellite vector column names are 
+changed to new RDF names (using table tasks).  Original calc_bary is then
+called (_clc_bary) on the reformated data (or input rdf if input was not rev0).
+
+23.  /pros/xray/xproto/rdfrall.cl				JD 9/20/93
+     /pros/xray/xproto/mkhkscr/*.x 
+     /pros/xray/xproto/data/htsiqlm.tab
+Macro and code to make an ALL QPOE from the RDF _bas.fits file.  The hk
+filter is made generically (using htsiqlm.tab) so that it can work for
+other instruments.  MKHKSCR make a hk filter from a qlim extension.
+
+24.  /pros/xray/xspectral/source/dstables.x			DS 9/24/93
+     /pros/xray/xspectral/source/obsparse.yy
+     /pros/xray/xspectral/source/bal_plot.x
+     /pros/xray/xspectral/qpspec/qpspec.x
+     /pros/xray/xspectral/qpspec/do_ds.x
+Changed spectral library and tasks to accommodate new file formats (RDF).
+
+25.  /pros/xray/xspectral/upspecrdf.par				DS 9/24/93
+     /pros/xray/xspectral/x_xspectral.x
+     /pros/xray/xspectral/mkpkg
+     /pros/xray/xspectral/upspecrdf	* new directory *
+     /pros/xray/xspectral/upspecrdf/upspecrdf.x
+     /pros/xray/xspectral/upspecrdf/mkpkg
+New task upspecrdf to convert pre-RDF spectral data files to RDF.
+
+26.  /pros/xray/xspectral/source/mkpkg				DS 9/24/93
+     /pros/xray/xspectral/qpspec/mkpkg
+Corrected dependencies, to include header files included by <spectral.h>.
+
+27.  /pros/xray/xlocal/einbb/sdfspec/sdfspec.x			DS 9/27/93
+     /pros/xray/xlocal/einbb/sdfspec/sdfsubs.x
+     /pros/xray/xlocal/einbb/sdfspec.par
+Upgraded for compatibility with RDF.
+
+28.  /pros/xray/xlocal/einbb/sdfspec/mkpkg			DS 9/27/93
+Corrected dependencies, to include header files included by <spectral.h>.
+(Continuation of 26.)
+
+29.  /pros/xray/xspectral/qpspec.par				DS 9/28/93
+Changed prompts to reflect multiple output files (in RDF).
+
+30.  /pros/xray/xlocal/einbb/eincdrom/qp_get.cl			DVS 9/30/93
+     /pros/xray/xlocal/einbb/eincdrom/qp_get.par
+     /pros/xray/xlocal/einbb/eincdrom/doc/qp_get.hlp
+Modified qp_get to use new qpoe cards designed for IPCEVT fits files
+when running fits2qp.
+
+31.  /pros/xray/lib/pros/xhead.x				MC 9/30/93
+     /pros/xray/lib/qpoe.h
+New RDF header keywords.
+
+32.  /pros/xray/lib/pros/xhead.x				DS 9/30/93
+     /pros/xray/lib/qpoe.h
+     /pros/xray/xspectral/source/dstables.x
+     /pros/xray/xspectral/upspecrdf/upspecrdf.x
+Use new header parameter FORMAT (field QP_FORMAT) instead of REVISION 
+(QP_REVISION) to recognize pre-RDF files.  (The value of REVISION propagates 
+to new files derived from old ones, but FORMAT will indicate the new format.)
+
+33.  /pros/xray/xspatial/doc/prfroshri.hlp			DS 10/1/93
+Corrected typo in a centroid coordinate.
+
+34.  /pros/xray/xdataio/xdataio.men			 	DVS 10/4/93
+     /pros/xray/xdataio/xdataio.hd	
+     /pros/xray/xdataio/xdataio.cl	
+     /pros/xray/xdataio/mkpkg
+     /pros/xray/xlocal/einbb/einbb.hd
+     /pros/xray/xlocal/einbb/einbb.cl
+     /pros/xray/xlocal/einbb/mkpkg
+     /pros/xray/lib/zzsetenv.def
+     added /pros/xray/xdataio/eincdrom/ directory
+    (removed /pros/xray/xlocal/einbb/eincdrom/ directory)
+Moved eincdrom package from einbb to xdataio.
+
+35.  /pros/xray/xspectral/qpspec/bn_routines.x			DS 10/15/93
+     /pros/xray/xspatial/imcnts/imcntsubs.x
+Changed computation of estimated errors, to use one_sigma() 
+(see Revision #20).
+
+36.  /pros/xray/xspectral/source/modparse.yy			DS 10/15/93
+     /pros/xray/xspectral/source/modlex.x
+Changed canonical format of numeric values to include 3 decimal places
+instead of 2.  (Fixes bugs 269, 701)
+
+37.  /pros/xray/xspatial/vigmodel.cl				DS 10/15/93
+     /pros/xray/xspatial/vigdata.cl
+Changed errimage and errvignimage parameters from auto to hidden.
+(Fixes bugs 282, 666)
+
+38.  /pros/xray/xspatial/vigdata.cl				DS 10/18/93
+Gave back_frac a default value ("0.00"), to keep it from sending a bad 
+string to imcalc.  (Fixes bug 283)
+
+39.  /pros/xray/lib/pros/times.x				MC 9/8/93
+			qpwcs.x
+Free some memory/close some structures
+
+40.  /pros/xray/lib/pros/xhead.x				MC 10/5/93
+     /pros/xray/lib/pros/headstr.x (new routine)
+	Update for REV0 + RDF keywords
+
+41.  /pros/xray/lib/pros/tsi.x					MC 10/5/93
+			/tgr.x
+			/blt.x
+			/gti/x
+Update for REV0 + RDF formats, and to make totally general from
+KEYWORD format statement
+
+42.  /pros/xray/lib/pros/eventdef.x				MC 10/5/93
+			 miistruct.x
+	Update for 'byte' format and for non-aligned
+record lengths  (preparation for RDF)
+
+43.  /pros/xray/xdataio/qpoeipc.cards				MC 10/5/93
+			ext.cards
+			wcspspc.cards
+			wcshri.cards
+	Update for RDF keyword names
+
+44.  /pros/xray/xdataio/fits2qp/fits2qp.x			10/5/93
+			      ft_addaux.x
+			      ft_addev.x
+			      ft_addparam.x
+	Update for RDF including non-aligned extensions.  Force
+OPAQUE arrays to be written in individual record buffers to allow
+QPAPPEND to work.  Add cases to calculate QPOE keywords from
+new RDF FITS keywords.
+
+45.  /pros/xray/lib/pros/time.x					MC 10/5/93
+     /pros/xray/xtiming/timplot/timgraph.x
+	Update mjd conversion routines to work from QPHEAD
+and not read specific KEYWORD names directly
+
+46.  /pros/xray/lib/pros/qpx_addf.x.x				MC 10/21/93
+			 xhead.x
+			 xarea.x
+			 xhist.x
+			 xmask.x
+	Add PROS fix for IRAF/QPOE buf - qpx_addf.x
+
+47.  /pros/xray/ximages/imcreate/imcreate.x			MC 10/21/93
+     /pros/xray/lib/pros/fnames.x
+	Add routine to (ck_comma) to replace commas
+with a space - the recognised delimiter
+
+48.  /pros/xray/ximages/qphedit/qphedit.x			MC 10/21/93
+	If no ".qp" specified, try to add this extension
+and test for QPOE File.  Also, fix the CONFIRM message
+to appear when SUCCESSFUL (not when UNSUCCESSFUL!)
+
+49.  /pros/xray/xdataio/rarc2pros.cl				MC 10/5/93
+	Fix bug with CLOBBER parameter not being passed to all tasks
+
+50. /pros/xray/xtiming/timlib/tim_cntrate.x, persubs.x		JD 10/25/93
+	Added one_sigma error calc to timing code.
+
+51. /pros/xray/xplot/imcontour/imc_clevels.x			JD 10/25/93
+	removed debug statement that was left after previous
+	contour level fix. 
+
+52. /pros/xray/xspatial/detect/ldetect.cl			JD 10/25/93
+	added 'mlsnr_thresh' parameter so that lpeaks and
+	bepos could have separate snr thresholds.
+
+53. /pros/xray/xspectral/source/bal_histo.x			DVS 10/26/93
+	modified bal_histo routine to convert the BLT records
+	back into old Einstein conventions, if needed.
+
+54. /pros/xray/lib/pros/bal.x					DVS 10/28/93
+    /pros/xray/lib/qpcreate/blt2qp.x
+	modified blt records to add BLT_FORMAT and BLT_QUALITY.
+	The code should now read in and write out BLT records from
+	new and old IPC Einstein files.
+
+55. /pros/xray/xspectral/source/photon_plot.h			DS 10/22/93
+                                dstables.x
+                                obsparse.yy
+                                dsdisp.x
+                                dsebounds.x
+                                photon_task.x
+                                single_fit.x
+                                def.h		[new]
+                                hepc1.h		[new]
+                                lepc1.h		[new]
+                                def_fold.x	[new]
+                                hepc1_fold.x	[new]
+                                lepc1_fold.x	[new]
+                                mkpkg
+                         qpspec/bn_routines.x
+                                do_ds.x
+                                get_inst_pars.x
+                                mkpkg
+                         upspecrdf/upspecrdf.x
+                                   mkpkg
+                         qpspec.par
+                         counts_plot.par
+                         pkgpars.par
+               lib/spectral.h
+Integrated Allan Hornstrup's HEPC1 and LEPC1 instruments into the package.  
+Replaced hard-coded offaxis angles with values read for the instrument.  
+Corrected and updated dependencies in mkpkg files.
+
+56. /pros/xray/xspectral/source/dstables.x			DS 10/29/93
+                         qpspec/do_ds.x
+                         upspecrdf/upspecrdf.x
+Corrected offaxis angle units conversion:  use QP_INPXX, not QP_CDELT1, 
+and take absolute value.
+
+57.  /pros/xray/xspatial/detect/bepos/bsubs.x			JD 11/1/93
+     /pros/xray/xspatial/data/prfcoeffs.tab
+
+Updated bepos to read header keywords using the qpoe struct after 
+a call to imhead.  Updated prf lookup table to include 'new' instrument
+names used in RDF.
+
+58.  /pros/xray/xplot/_gproj.cl					JD 11/1/93
+
+Updated sgraph parameters (xexamine uses this task to to draw the projection)
+They changed in last STSDAS release.
+
+59.  /pros/xray/lib/pros/xmask.x				DS 11/1/93
+Put out slashes instead of newlines and spaces instead of tabs in the 
+XS-MSK## header card derived from a PLIO mask header.
+
+60.  /pros/xray/xspectral/source/photon_plot.x			DS 11/1/93
+Replaced 2 sprintf() calls that would cause an error termination if given 
+long model strings.  strcat() truncates, protecting against the abort.  
+(Fixes bug 276.)
+
+61.  /pros/xray/xspectral/qpspec.par				DS 11/2/93
+Provided default value of 0.0 for avg_mvr.  (Enhancement #720)
+
+62.  /pros/xray/xspectral/qpspec/bn_routines.x			DS 11/2/93
+     /pros/xray/xspectral/qpspec/vign_correct.x
+     /pros/xray/xlocal/einbb/sdfspec/sdfsubs.x
+In sdfspec, changed computation of estimated errors, to use one_sigma().  
+In qpspec and sdfspec, made background contribution to error 0.0 if no 
+background.  In qpspec, made charged particle contribution to errors 0.0 
+if no charged particle counting.
+
+
+63.  /pros/xray/xtiming/calc_bary.cl				JD 11/3/93
+     /pros/xray/xtiming/timcor/calc_bary.x
+Fixed file naming defaults.  ALso added a couple of extensions
+to ext.h and fnames.x.
+
+64.  /pros/xray/xtiming/fftplot					JD 11/3/93
+Made 'normpower' default x-axis for fft plot.  (enhancement #672)
+
+65.  /pros/xray/xspectral/qpspec.par				DS 11/4/93
+Undo #61 (restore avg_mvr to having no default value).
+
+66.  /pros/xray/xspectral/pkgpars.par				DS 11/12/93
+Corrected default values for ros_pspc_pxx and ros_pspc_pxy.
+Corrected omission of analogous parameters for Rosat HRI, HEPC1, and LEPC1.
+
+67.  /pros/xray/xspectral/qpspec/get_inst_pars.x		DS 11/12/93
+Corrected comments concerning the QP_INPXX field.
+
+68.  /pros/xray/xspectral/upspecrdf/upspecrdf.x			DS 11/15/93
+     /pros/xray/xspectral/upspecrdf.par
+     /pros/xray/xspectral/mkpkg
+Added routine ds_getoahan(), called by upspecrdf, to get correct degrees per 
+instrument pixel and offaxis angles.
+
+69.  /pros/xray/xlocal/einbb/sdfspec.x				DVS 11/19/93
+Changed call to bal_histo to pass in ontime instead of livetime.  
+
+70.  /pros/xray/xspectral/upspecrdf/upspecrdf.x			DS 11/19/93
+Corrected failure to put all qpspec-specific header parameters in 
+auxiliary files.
+
+71.  /pros/xray/xspectral/downspecrdf/downspecrdf.x	[new]	DS 11/19/93
+     /pros/xray/xspectral/downspecrdf/mkpkg		[new]
+     /pros/xray/xspectral/downspecrdf.par		[new]
+     /pros/xray/xspectral/x_xspectral.x
+     /pros/xray/xspectral/mkpkg
+     /pros/xray/xspectral/xspectral.cl
+New temporary task downspecrdf to create a pre-RDF-style _obs.tab file from 
+an RDF _obs.tab file and its auxiliary file(s), to permit submitting qpspec 
+RDF output to xspec until xspec can handle RDF.
+
+72.  /pros/xray/lib/qpoe.h					MC 11/22/93
+     /pros/xray/lib/pros/xhead.x
+	Added remaining 'TIME COORD' header keywords to QPOE and
+to XHEAD - also added OBJECT so that it gets propagated into derived TABLES.
+
+73.  /pros/xray/xspatial/errcreate				MC 11/22/93
+	Added new ERRCREATE task
+
+74. /pros/xray/ximages/qphedit/ximio.x				MC 11/22/93
+	Fixed the 'boolean' option to recognise the correct
+yes/no strings and encode as booleans in QPOE files
+
+75.  /pros/xray/xdataio/rarc2pros.cl				MC 11/22/93
+	Update for changed archive HRI filenames
+
+76.  /pros/xray/xdataio/upqpoerdf				MC 11/22/93
+	(new task - replaces upqpoe210)
+
+77. /pros/xray/xspectral/xspectral.hd				MC 11/22/93
+	Fixed 'src' definitions (from Kristin)
+
+78.  /pros/xray/xray_motd					MC 11/22/93
+     /pros/xray/ximages/qpcopy.par
+	Updated messages/parameters
+
+79.  /pros/xray/xtiming/ltcurv/ltcurv.x				JD 11/22/93
+	Added time column to ltcurv.
+
+80.  /pros/xray/xtiming/timlib/fld_phots.x			JD 11/22/93
+	Made fix to exposure binning routine, t_exp
+
+81.  /pros/xray/xspectral/doc/bal_timing.hlp			DVS 11/24/93
+	Revised help file for bal_timing (prosbug # 603)
+
+82.  /pros/xray/xspatial/data/einvignfits.tab			DVS 11/24/93
+     /pros/xray/xspatial/makevig.par
+     /pros/xray/xspatial/doc/makevig.hlp
+     /pros/xray/xdemo/spatialdemo
+	Revised vignetting fits for Einstein IPC energy values
+	2.5 KeV and above.  Revised makevig parameter file and
+	help file to allow use of these higher values.
+
+83.  /pros/xray/xplot/imcontour/imc_rddata.x			JD 11/27/93
+	updated code properly handle negative DEC at 00 degrees.
+        (prosbug #656)
+
+84.  /pros/xray/xproto/mkhkscr/*.x				JD 11/27/93
+	replaced code for compatibility with RFITS 1_6 (new qlm
+	format for HRI & PSPC)
+
+85.  /pros/xray/xspatial/immodel/imsmooth.x			DS 11/29/93
+     /pros/xray/xspatial/imsmooth.par
+Removed option to estimate errors from data.  Now to create an error image 
+the user must provide an array of squared errors.
+
+86.  /pros/xray/xlocal/einbb/sdfspec/sdfspec.x			DVS 12/2/93
+     /pros/xray/xlocal/einbb/sdfspec/sdfsubs.x
+     /pros/xray/xlocal/einbb/sdfspec.par
+     /pros/xray/xlocal/einbb/doc/sdfspec.hlp
+Revised sdfspec code to read in new hidden parameter to determine whether
+to use Poisson or Gaussian statistics in generating error calculations.
+
+87.  /pros/xray/xspatial/imcnts/imcnts.x			DS 10/25/93
+Made imcnts put a standard header on the output table file.
+[Forgot to check this in at the time of the change.]
+
+88.  /pros/xray/xspectral/source/pspc_fold.x			DS 12/2/93
+Corrected logic error that made pspc_energy() accept any value for nbounds
+instead of just PSPC_CHANNELS + 1 or PSPC_PITCH + 1.
+
+89.  /pros/xray/xspectral/qpspec/vign_correct.x			DS 12/2/93
+     /pros/xray/xspectral/data/ros_pi_offar	[new file]
+     /pros/xray/xspectral/qpspec.par
+Corrected vignetting correction computation, doing it in PI space instead
+of in energy space.
+
+90.  /pros/xray/xspectral/qpspec/bn_routines.x			DS 12/2/93
+     /pros/xray/xspatial/imcnts/imcnts.x
+     /pros/xray/xspatial/imcnts/imcntsubs.x
+Added poisserr, to select Poisson or Gaussian error estimation from data.
+
+91.  /pros/xray/xspectral/data/ros_pi_offar.ieee  [new name]	DS 12/3/93
+     /pros/xray/xspectral/qpspec.par
+Renamed ros_pi_offar.ieee, from ros_pi_offar, for consistency with names 
+of other spectral data files.
+
+92.  /pros/xray/xspectral/downspecrdf/downspecrdf.x		DS 12/3/93
+Added header parameter SUBINST, changed LIVETIME from double back to real,
+changed FILTER from text back to int.
+
+93.  /pros/xray/xspectral/downspecrdf/downspecrdf.x		DS 12/3/93
+Undid part of previous change:  SUBINST was already being put out, and the
+change I made made it incorrect sometimes.
+
+94.  /pros/xray/xspectral/source/dstables.x			DS 12/3/93
+     /pros/xray/xspectral/source/dsdisp.x
+Added units to column headings, and corrected title of cts_tot column.
+Changed screen display to match new column headings in _obs.tab file.
+
+95.  /pros/xray/xspectral/downspecrdf/downspecrdf.x		DS 12/3/93
+Restored what I undid in 93, but in a form that preserves a value if the 
+RDF file provides one, else takes one from the QP_SUBINST header field.
+
+96.  /pros/xray/lib/pros/xmask.x				DS 12/3/93
+Backed out change 59; it created some problems, so we'll have to redo it.
+
+97.  /pros/xray/xspectral/downspecrdf/downspecrdf.x		DS 12/6/93
+Display output (pre-RDF) table file name.
+
+98.  /pros/xray/lib/pros/xmask.x				DS 12/7/93
+     /pros/xray/lib/pros/tbhead.x
+     /pros/xray/xtiming/timlib/tim_addmsk.x
+Restored change 59, correcting the problems of reading the resulting string. 
+(Also, now '\\' replaces '\n', to allow for directory paths.)
+
+99.  /pros/xray/xspectral/source/dstables.x			DS 12/7/93
+     /pros/xray/xspectral/source/dsdisp.x
+"net" and "neterr" restored as column headings and in screen display 
+(instead of "counts" and "stat_err").
+
+100. /pros/xray/lib/regions/regparse.yy				DS 12/7/93
+Fixed the bug that DVS diagnosed, of leaving a couple of files open.
+
+101.	/pros/xray/xplot/pspc_hrcolor.x				MC 12/03/93
+Add user specified PI bands for 3 colors
+
+102.	/pros/xray/xdataio/qpappend.x				MC 12/15/93
+Fix qpappend to discard TSI records if record formats do
+not match for all input files
+
+103.  /pros/xray/xdataio/fits2qp/fits2qp.h			MC 12/8/93
+				ft_nxtext.x
+				ft_ratfits.x
+Add addition TLMIN/MAX keywords to data structure and use
+TLMAX to set QPOE dimensions if AXLEN keywords not present
+
+104.  /pros/xray/xdataio/qp2fits/qp2fits.x                      MC 12/3/93
+Updated to use 'generic' extension header reader
+
+105.  /pros/xray/xdataio/im2bin                                 MC 12/15/93
+Moved from XLOCAL because used by installation scripts
+
+106.  /pros/xray/xdataio/upimgrdf                               MC 12/3/93
+Added new task
+ 
+107. /pros/xray/xdataio/rfits2pros.cl                           MC 12/3/93
+                        _rfits2pros0.cl
+                        _rdffits2pros.cl
+                        _errmsg.cl
+Made REV0 rfits2pros a subscript and added new RDF
+script.  Encoded an error message script, when   
+the entire script was too long for the CL    
+~
+108. /pros/xray/xspectral/qpspec.par				MC 12/15/93
+Change default value for timenorm=yes.
+	Changed back to original timenorm=no			MC 12/16/93
+after further consultation
+
+109. /pros/xray/xspectral/downspecrdf/downspecrdf.x		DS 12/10/93
+Made downspecrdf accept files without FORMAT kaywords.
+
+110.  /pros/xray/xplot/imcontour/imcontour.x, imc_rddata.x      JD 12/17/93
+Fixed 'dec' reading from ascii file, freed some space that
+wasn't being freed, added check for '+' in ascii file.
+
+111. /pros/xray/xtiming/fft/input_bins.x			MC 12/7/93
+/pros/xray/xtiming/fft/
+Add new ERRLIB to call.  Also FIT output data columns,
+CTRT and NET were interchanged! And be sure BKNORM gets
+initialized (to 1.0).
+
+112. /pros/xray/xtiming/fft/get_distrib.x			MC 11/10/93
+Output the PWRCUT header parameter in NORMALIZED units
+
+113. /pros/xray/xspectral/source/dstables.x			DS 12/17/93
+     /pros/xray/xspectral/source/mkpkg
+     /pros/xray/xspectral/downspecrdf/downspecrdf.x
+     /pros/xray/xspectral/downspecrdf/mkpkg
+Enabled fit (etc.) and downspecrdf to process FITS release tape spectral 
+table files as well as qpspec output files.
+
+114. /pros/xray/xspectral/source/dstables.x			DS 12/20/93
+     /pros/xray/xspectral/source/intermed.x
+     /pros/xray/xspectral/source/mkpkg
+Added "respfile" header parameter to _prd.tab and _int.tab files produced 
+by fit.  It gives the name of the response matrix file used.
+
+115. /pros/xray/xspectral/source/dstables.x			DVS 12/21/93
+Modified ds_getbal and ds_putbal to write out (and read in) table
+entries as fractions of time, while using them internally as 
+percentages.  Affects Einstein files only.

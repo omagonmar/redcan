@@ -1,0 +1,92 @@
+# $Header: /home/pros/xray/xspectral/doc/RCS/dofitplot.hlp,v 11.0 1997/11/06 16:41:15 prosb Exp $
+# $Log: dofitplot.hlp,v $
+# Revision 11.0  1997/11/06 16:41:15  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:28:13  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:53  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:52:55  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:47:30  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/04/01  09:18:52  orszak
+#jso - made energy index clearer
+#,
+#
+#Revision 5.0  92/10/29  22:42:20  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:27:10  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/04/22  11:47:36  prosb
+#Changed date.
+#
+#Revision 3.1  92/03/20  11:14:15  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:16  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/08/01  18:22:39  prosb
+#Initial revision
+#
+#
+.help dofitplot Apr92 xray.xspectral
+.ih
+NAME
+dofitplot  -- An IRAF script that runs fit and count_plot on an
+observed spectrum
+.ih    
+USAGE
+dofitplot observed model print_table print_plot
+.ih    
+DESCRIPTION
+
+This task computes the best predicted fit to the observed data
+spectrum using fit and then plots the best fit predicted and observed
+spectrum using count_plot.
+.ih    
+PARAMETERS
+.ls observed = ""       observed spectrum [root_obs.tab]
+
+The file name of the observed data sets on which the fit is to be
+performed. Normally these files have a "_obs.tab" extension.  This
+extension need not be input explicitly.  (See fit.)
+.le
+.ls model = ""          spectral model descriptor
+
+The ASCII model descriptor. (See fit.)
+.le
+.ls print_table  = "no"  [boolean]
+
+Generate hardcopy of spectral table.
+.le
+.ls print_plot  = "no"  [boolean]
+
+Generate hardcopy of plot.
+.le
+.ih    
+EXAMPLES
+
+The following example finds the best fit to the observed data set
+"snr" for a power law model with energy index in the range (3.0:8.0), and
+plots the observed and predicted spectral.  No hard copies will be
+printed for either the table or the plot.
+    
+            xs> dofitplot "snr" "abs(21:23)*pow(3.0:8.0)" no no
+
+.ih
+TIME REQUIREMENTS
+
+Execution time is dependent upon the number of "free" parameters
+defined for the fit.
+.ih    
+SEE ALSO
+fit, counts_plot

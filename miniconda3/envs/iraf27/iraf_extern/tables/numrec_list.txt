@@ -1,0 +1,10 @@
+lib/stxtools/lubksb.f
+lib/stxtools/lubksd.f
+lib/stxtools/ludcmd.x
+lib/stxtools/ludcmp.x
+lib/tbtables/cfitsio/eval.y
+lib/tbtables/cfitsio/eval_y.c
+pkg/ttools/trebin/tucspl.f
+pkg/ttools/trebin/tuhunt.f
+pkg/ttools/trebin/tuiep3.f
+pkg/ttools/trebin/tuispl.f

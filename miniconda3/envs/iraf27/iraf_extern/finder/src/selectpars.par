@@ -1,0 +1,18 @@
+column1,s,h,"plate_id",,,"Name for selection column 1"
+boolop1,s,h,"==",,,"Boolean operator for column 1"
+value1,s,h,"",,,"Corresponding value\n"
+
+column2,s,h,"class",,,"Name for column 2"
+boolop2,s,h,"==",,,"Boolean operator"
+value2,s,h,"0",,,"Value\n"
+
+column3,s,h,"",,,"Name for column 3"
+boolop3,s,h,"",,,"Boolean operator"
+value3,s,h,"",,,"Value\n"
+
+column4,s,h,"",,,"Name for column 4"
+boolop4,s,h,"",,,"Boolean operator"
+value4,s,h,"",,,"Value\n"
+
+disjunction,b,h,no,,,"OR (vs. AND) the expressions?\n"
+explicit,s,h,"",,,"Overriding expression\n"

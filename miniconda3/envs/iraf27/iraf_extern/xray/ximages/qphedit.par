@@ -1,0 +1,40 @@
+#$Header: /home/pros/xray/ximages/RCS/qphedit.par,v 11.0 1997/11/06 16:29:08 prosb Exp $
+#$Log: qphedit.par,v $
+#Revision 11.0  1997/11/06 16:29:08  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:32:44  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:42:17  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/15  15:41:53  janet
+#jd - changed to qpoe from images since it works on qpoes.
+#
+#Revision 7.0  93/12/27  18:25:52  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:03:56  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:26:16  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:14:35  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:15:29  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:24:11  pros
+#General Release 1.0
+#
+qpoe,s,a,,,,qpoe(s) to be edited
+fields,s,a,,,,fields to be edited
+value,s,a,,,,value expression
+add,b,h,no,,,add rather than edit fields
+delete,b,h,no,,,delete rather than edit fields
+verify,b,h,yes,,,verify each edit operation
+show,b,h,yes,,,print record of each edit operation
+update,b,h,yes,,,enable updating of the image header

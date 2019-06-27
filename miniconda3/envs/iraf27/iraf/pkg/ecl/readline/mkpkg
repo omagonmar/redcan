@@ -1,0 +1,16 @@
+# Make the GNU Readline/History libraries
+
+$call libs
+$exit
+
+libs:
+	$ifnfile (../libreadline.a)
+		!./mkpkg_readline.sh
+	$endif
+	;
+
+clean:
+	!make clean
+	!rm Makefile spool
+	;
+

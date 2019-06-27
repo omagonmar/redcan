@@ -1,0 +1,16 @@
+setup.cfg
+setup.py
+src/_combinemodule.c
+stsci/__init__.py
+stsci.image.egg-info/PKG-INFO
+stsci.image.egg-info/SOURCES.txt
+stsci.image.egg-info/dependency_links.txt
+stsci.image.egg-info/namespace_packages.txt
+stsci.image.egg-info/not-zip-safe
+stsci.image.egg-info/requires.txt
+stsci.image.egg-info/top_level.txt
+stsci/image/__init__.py
+stsci/image/_image.py
+stsci/image/combine.py
+stsci/image/numcombine.py
+stsci/image/version.py

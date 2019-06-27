@@ -1,0 +1,39 @@
+.help esosetinst Mar01 esowfi
+.ih
+NAME
+esosetinst -- set instrument parameters
+.ih
+SYNOPSIS
+ESOSETINST runs a user defined script to setup the instrument parameters
+for the package.  The default is a standard script supplied with the
+package.
+.ih
+USAGE	
+esosetinst
+.ih
+PARAMETERS
+.ls script = "esodb$esowfi.cl"
+A simple script to be executed.  This script typically set default parameters.
+.le
+.ih
+DESCRIPTION
+ESOSETINST runs a user defined script to setup the instrument parameters
+for the package.  The default is a standard script supplied with the
+package.
+.ih
+EXAMPLES
+1. Use the default instrument setup script.
+
+.nf
+    cl> esosetinst
+.fi
+
+.ih
+REVISIONS
+.ls ESOSETINST - ESOWFI: V1.3 March 6, 2001
+First release.
+.le
+.ih
+SEE ALSO
+mscred package documentation
+.endhelp

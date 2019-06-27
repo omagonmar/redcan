@@ -1,0 +1,78 @@
+
+       ---  Release Notes for SAO/PROS Patch 2.5.y2k -- Feb 2002 ---
+-------------------------------------------------------------------------
+COMMENTS BY DEH: 
+
+With IRAF 2.11.3 (1999Dec) some functionality of PROS was broken,
+producing an error message of ERROR: No write permission on file
+(String_File) primarily for dataio tools.  This problem was fixed with
+the IRAF patch 2.11.3b (2000Sep). We regret the length of time it has
+taken to get PROS patched, but our resources are now reduced to 'as
+time permits'.  Please note that this has been a volunteer effort at
+SAO, as we no longer support PROS.
+
+
+I) Setting up to use the XRAY package :
+
+   required packages for Sun :
+      IRAF V2.11.3b or later
+        (iraf.noao.edu)
+      TABLES 2.2 or higher
+        (stsci.edu)
+
+   optional packages:
+      EUV (cea-ftp.cea.berkeley.edu)
+
+   >>> Users must rerun the "mkiraf" task and answer 'yes' to the  <<<
+   >>> 're-initialize uparm?' option before running.               <<<
+
+
+
+II) Summary of changes made in this release (PROS 2.5.y2k) :
+
+  ********* NEW TASKS **********
+
+   <package.task> - <description>
+
+	xray.xspatial.offaxisprf
+
+	For the pspc, a new script to provide a reasonable approximation 
+	of the off-axis PRF.
+
+  ********* BUGFIXES AND ENHANCEMENTS *************
+
+   <package.task> - <description>
+
+	xray.xdataio
+	No more y2k bugs
+
+	xray.xplot.ximtool
+		Option to use ds9.  Users should set the region format
+		to iraf (via pulldown menu).
+	xray.xdataio.qp2fits
+		Now writes times in double precision (thanks to code
+		changes by Phil Hodge).
+
+
+III) Other Information
+
+  A. PROS User's Guide (PUG)  ( revised June 1998 )
+
+
+    Latex and/or postscript files are available via anonymous ftp:
+        sao-ftp.harvard.edu; from subdirectory /pub/pros/PUG.
+    The WWW version can be accessed with URL:
+         http://hea-www.harvard.edu/PROS/pros.html
+
+  B. Cross-referencing information
+
+	We recommend using either "references" or "xapropos" to look
+    for information on given keywords, e.g., "references prf" or
+    "xapropos prf" (xapropos requires the CTIO package to be loaded).
+
+    ***********************************************************************
+    Internet - rsdc@cfa.harvard.edu    RSDC    MS-3
+                                       Center for Astrophysics
+                                       60 Garden St. Cambridge MA 02138 USA
+                                       tel: (617) 495-7134  FAX: 495-7356
+    ***********************************************************************

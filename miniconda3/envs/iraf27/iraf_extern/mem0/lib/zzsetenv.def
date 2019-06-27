@@ -1,0 +1,7 @@
+# Global environment definitions for the MEM0 package, version C.
+
+set	mem0lib	= "mem0$lib/"
+set	mem0src	= "mem0$src/"
+set	mem0bin	= "mem0$bin(arch)/"
+
+keep

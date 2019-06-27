@@ -1,0 +1,30 @@
+# $Header: /home/pros/xray/xtiming/vartst/RCS/mkpkg,v 11.0 1997/11/06 16:45:23 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:45:23  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:35:24  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:43:08  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:03:40  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:59:56  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/05/20  10:18:41  janet
+#Initial revision
+#
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+	vartst.x <qpset.h> <qpoe.h> <ext.h> "vartst.h"
+	var_subs.x <error.h> <tbset.h> <qpoe.h> <qpset.h> "vartst.h"
+	;

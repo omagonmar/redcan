@@ -1,0 +1,26 @@
+# Create tar file excluding caldirs.
+
+cd ..
+
+# Set bpm links to V2.11
+echo Set bpm links to V2.11
+cd noao/CCDMosaThin1
+rm CAL0208 CAL9903
+ln -s CAL0208V211 CAL0208
+ln -s CAL9903V211 CAL9903
+cd ../Mosaic2
+rm CAL0010
+ln -s CAL0010V211 CAL0010
+cd ../..
+
+tar cfX - bin/caldirs noao | compress > mscdbV211.tar.Z
+
+# Set bpm links to V2.12
+echo Reset bpm links to V2.12
+cd noao/CCDMosaThin1
+rm CAL0208 CAL9903
+ln -s CAL0208V212 CAL0208
+ln -s CAL9903V212 CAL9903
+cd ../Mosaic2
+rm CAL0010
+ln -s CAL0010V212 CAL0010

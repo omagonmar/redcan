@@ -1,0 +1,196 @@
+#$Header: /home/pros/xray/lib/doc/RCS/msk_pmopen.hlp,v 11.0 1997/11/06 16:23:05 prosb Exp $
+#$Log: msk_pmopen.hlp,v $
+#Revision 11.0  1997/11/06 16:23:05  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:07  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:04  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:53  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:21  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:05  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:10:19  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:52  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:43  pros
+#General Release 1.0
+#
+.help msk_pmopen Apr89 PROS_Library
+NAME
+.in 4
+msk_pmopen - combine region and exposure into a mask (using a reference image)
+.sp
+.in -4
+USAGE
+.in 4
+pm = msk_pmopen(region, expname, thresh, im, title)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	region		char		region descriptor
+	expname		char		exposure file name
+	thresh		real		exposure threshold
+	im		pointer		reference image
+
+Output Arguments:
+	title				pointer to plio header string
+
+Return Value:
+	pm		pointer		pm handle
+
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function msk_pmopen opens a region mask and/or an exposure mask,
+and combines the two into a final mask.  The first input argument
+is the region descriptor, which can be the null string.  The second
+input argument is the exposure mask file name, which can be "NONE"
+is no exposure correction is to be done.  The third input argument is the
+exposure threshold (0 <= thresh <= 100).  The fourth input argument is
+a reference image handle, from which the routine gets the dimensions
+of the mask.
+
+The return argument is the pm handle of this combined mask. This pm handle
+can be used in any PMIO call.  It is often used in conjunction with an
+image handle to perform masked image I/O (by means of the mio_openo call -
+see example).
+
+The function first creates a pixel mask from the region descriptor
+using the standard rg_pmcreate call. If the exposure file name is "NONE",
+the function simply returns the pm handle from this call.  Otherwise,
+the exposure mask file is combined with the region mask into a final mask.
+This is done by storing only those pixels that are both in the region mask
+and above the specified threshold of the exposure mask.  The resulting
+mask has the same region id's for each region as the original region
+mask, but only parts of regions above the exposure threshold are saved.
+The pm handle of this final mask is returned by the function.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how msk_pmopen is used in conjunction with
+other msk routines such as msk_disp and msk_g2sr.  This code, adapted from
+imdisp, displays an image, filtering through a region mask and an exposure
+mask.
+.in 8
+.nf
+include <imhdr.h>
+include <pmset.h>
+
+include "../../lib/ext.h"
+
+# display image data as real values
+procedure imdispr()
+
+char	imname[SZ_FNAME]	# image name
+char	regname[SZ_LINE]	# region specifier 
+char	expname[SZ_FNAME]	# exposure mask
+int	xdim, ydim		# dimensionality of image
+int	nrows, ncols		# rows and cols to display
+real	thresh			# exposure threshold
+pointer	buf			# buffer pointer
+pointer	im			# image handle
+pointer	pm			# pixel list handle
+pointer	mp			# mask handle
+pointer	sp			# stack pointer
+pointer	title			# pointer to region summary
+
+int	clgeti()		# get int param
+real	clgetr()		# get real param
+bool	strne()			# string compare
+pointer	immap()			# open an image
+pointer	msk_pmopen()		# open a region and/or exp. mask
+pointer	mio_openo()		# open a pixel mask for MIO
+
+begin
+  # title must be set to zero
+  title = 0
+
+  # get image name, region descriptor, and output mask name
+  call clgstr("image", imname, SZ_FNAME)
+  call clgstr("region", regname, SZ_FNAME)
+  call clgstr("exp", expname, SZ_FNAME)
+  call rootname(imname, expname, EXT_EXPOSURE, SZ_FNAME)
+  if( strne(expname, "NONE") ){
+	thresh = clgetr("expthresh")
+	if( thresh < 0.0 )
+	    call error(1, "exposure threshold must be >=0")
+  }
+  else
+	thresh = -1.0
+  # get the number of rows and cols the user wants displayed
+  ncols = clgeti("ncols")
+  nrows = clgeti("nrows")
+
+  # open the image
+  im = immap(imname, READ_ONLY, 0)
+  # open the region and/or exposure
+  pm = msk_pmopen(regname, expname, thresh, im, title)
+  # open the final mask for mio I/O
+  mp = mio_openo(pm, im)
+
+  # get dimensionality and make sure we have a 2D buffer
+  if( IM_NDIM(im) <= 2 ){
+	xdim = IM_LEN(im, 1)
+	ydim = IM_LEN(im, 2)
+  }
+  else
+	call error(1, "image dimensions must be <= 2")  
+
+  # display the regions
+  call msk_disp("", imname, Memc[title])
+
+  # allocate space for the data
+  call calloc(buf, ncols * nrows, TY_REAL)
+  # accumulate the data
+  call msk_g2sr(mp, Memr[buf], xdim, ydim, ncols, nrows)
+  # display the data
+  call dispbufr(Memr[buf], ncols, nrows)
+
+  # print final cr
+  call printf("\n")
+
+  # close MIO file
+  call mio_close(mp)
+  # close pixel mask
+  call pm_close(pm)
+  # close image
+  call imunmap(im)
+
+  # free up space
+  call mfree(buf, TY_REAL)
+  call mfree(title, TY_CHAR)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+The pointer to the title summary must be set to zero in the calling routine,
+and must be freed at the end.
+.in -4
+.sp
+SEE ALSO
+.in4
+mskg2s (which fills a 2-D buffer through a mask), msk_counts (which
+determines the counts and area within regions), msk_disp (which displays
+regions).
+
+

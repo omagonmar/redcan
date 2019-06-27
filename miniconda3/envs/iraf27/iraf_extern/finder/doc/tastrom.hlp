@@ -1,0 +1,55 @@
+.help tastrom Jun97 finder
+.ih
+NAME
+tastrom -- perform a plate solution given a table of coordinates
+.ih
+USAGE
+tastrom input
+.ih
+PARAMETERS
+.ls input
+The name of the input table that contains the catalog (equitorial) and
+plate (cartesian) coordinates.
+.le
+.ls rootname = ""
+An optional root name for the output files.  If \fIrootname\fR is left
+blank, the \fIinput\fR parameter will be used to supply the output root
+name.  These files will be named <rootname>.out (a summary file, normally
+what you want) and <rootname>.ast (a more verbose file).  In addition, the
+generated input file for the ASTROM foreign task will be retained, named
+<rootname>.in.
+.le
+.ls equinox
+The report equinox.
+.le
+.ls geometry = "ASTR"
+.le
+.ls ra_tan
+The right ascension of the tangent point.
+.le
+.ls dec_tan
+The declination of the tangent point.
+.le
+.ls tequinox
+The equinox of the tangent coordinates.
+.le
+.ls silent = yes
+Silently overwrite ASTROM input and output files that may have been
+previously created by the task?
+.le
+.ls catpars = ""
+The catalog description pset.
+.le
+.ih
+DESCRIPTION
+TASTROM is a script frontend for the ASTROM foreign task.  The script
+serves to extract and format the information that ASTROM needs from the
+\fIinput\fR table.  Three output files are generated, a summary file
+named <rootname>.out, a verbose file named <rootname>.ast, and the
+formatted input file for ASTROM named <rootname>.in.  The rootname
+will either be provided by the \fIrootname\fR parameter, or by the
+\fIinput\fR parameter if \fIrootname\fR is blank.
+.ih
+SEE ALSO
+Starlink ASTROM documentation, stsdas.gasp
+.endhelp

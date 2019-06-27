@@ -1,0 +1,58 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/locket-0.2.0-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/locket-0.2.0-py2.7.egg-info",
+    "lib/python2.7/site-packages/locket/__init__.py",
+    "lib/python2.7/site-packages/locket/__init__.pyc"
+  ],
+  "fn": "locket-0.2.0-py27_1.tar.bz2",
+  "license": "BSD 2-Clause",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/locket-0.2.0-py27_1",
+    "type": 1
+  },
+  "md5": "df1ff91d7dd746e8a254d0f0196ca785",
+  "name": "locket",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/locket-0.2.0-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/locket-0.2.0-py2.7.egg-info",
+        "path_type": "hardlink",
+        "sha256": "b34ecb7d8a844cf4c743c8bca7fd9a36a037083744459ae35435b620743a0b25",
+        "sha256_in_prefix": "b34ecb7d8a844cf4c743c8bca7fd9a36a037083744459ae35435b620743a0b25",
+        "size_in_bytes": 2717
+      },
+      {
+        "_path": "lib/python2.7/site-packages/locket/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "11a9cb824dd8beb48b1b7e4338bdc219184863e5cbefa7be4b9039d1a45293f0",
+        "sha256_in_prefix": "11a9cb824dd8beb48b1b7e4338bdc219184863e5cbefa7be4b9039d1a45293f0",
+        "size_in_bytes": 4384
+      },
+      {
+        "_path": "lib/python2.7/site-packages/locket/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "b7c8245f4df6248f982bc4612b3c0110f77062f85567821328144c90012ad6da",
+        "sha256_in_prefix": "b7c8245f4df6248f982bc4612b3c0110f77062f85567821328144c90012ad6da",
+        "size_in_bytes": 6557
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 8197,
+  "subdir": "linux-64",
+  "timestamp": 1530741752827,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/locket-0.2.0-py27_1.tar.bz2",
+  "version": "0.2.0"
+}

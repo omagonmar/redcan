@@ -1,0 +1,114 @@
+# Keyword translations.
+imagetyp		obstype
+amp			imageid
+subset			filter
+
+# Translations for OBSTYPE keyword.
+'dome flat'		flat
+'sky flat'		flat
+'projector flat'	flat
+
+# Extension name translations to IMAGEID.
+im1			1
+im2			2
+im3			3
+im4			4
+im5			5
+im6			6
+im7			7
+im8			8
+im9			9
+im10			10
+im11			11
+im12			12
+im13			13
+im14			14
+im15			15
+im16			16
+
+# Default values for for real-time display.
+
+det1		detsec	   [1:1024,1:4096]
+det2		detsec	[1025:2048,1:4096]
+det3		detsec	[2049:3072,1:4096]
+det4		detsec	[3073:4096,1:4096]
+det5		detsec	[4097:5120,1:4096]
+det6		detsec	[5121:6144,1:4096]
+det7		detsec	[6145:7168,1:4096]
+det8		detsec	[7169:8192,1:4096]
+det9		detsec	   [1:1024,4097:8192]
+det10		detsec	[1025:2048,4097:8192]
+det11		detsec	[2049:3072,4097:8192]
+det12		detsec	[3073:4096,4097:8192]
+det13		detsec	[4097:5120,4097:8192]
+det14		detsec	[5121:6144,4097:8192]
+det15		detsec	[6145:7168,4097:8192]
+det16		detsec	[7169:8192,4097:8192]
+
+dat1		datasec	[25:1048,1:4096]
+dat2		datasec	[65:1088,1:4096]
+dat3		datasec	[25:1048,1:4096]
+dat4		datasec	[65:1088,1:4096]
+dat5		datasec	[25:1048,1:4096]
+dat6		datasec	[65:1088,1:4096]
+dat7		datasec	[25:1048,1:4096]
+dat8		datasec	[65:1088,1:4096]
+dat9		datasec	[25:1048,1:4096]
+dat10		datasec	[65:1088,1:4096]
+dat11		datasec	[25:1048,1:4096]
+dat12		datasec	[65:1088,1:4096]
+dat13		datasec	[25:1048,1:4096]
+dat14		datasec	[65:1088,1:4096]
+dat15		datasec	[25:1048,1:4096]
+dat16		datasec	[65:1088,1:4096]
+
+bias1		biassec	[1049:1112,1:4096]
+bias2		biassec	     [1:64,1:4096]
+bias3		biassec	[1049:1112,1:4096]
+bias4		biassec	     [1:64,1:4096]
+bias5		biassec	[1049:1112,1:4096]
+bias6		biassec	     [1:64,1:4096]
+bias7		biassec	[1049:1112,1:4096]
+bias8		biassec	     [1:64,1:4096]
+bias9		biassec	[1049:1112,1:4096]
+bias10		biassec	     [1:64,1:4096]
+bias11		biassec	[1049:1112,1:4096]
+bias12		biassec	     [1:64,1:4096]
+bias13		biassec	[1049:1112,1:4096]
+bias14		biassec	     [1:64,1:4096]
+bias15		biassec	[1049:1112,1:4096]
+bias16		biassec	     [1:64,1:4096]
+
+size1		rawsize "1112 4096"
+size2		rawsize "1112 4096"
+size3		rawsize "1112 4096"
+size4		rawsize "1112 4096"
+size5		rawsize "1112 4096"
+size6		rawsize "1112 4096"
+size7		rawsize "1112 4096"
+size8		rawsize "1112 4096"
+size9		rawsize "1112 4096"
+size10		rawsize "1112 4096"
+size11		rawsize "1112 4096"
+size12		rawsize "1112 4096"
+size13		rawsize "1112 4096"
+size14		rawsize "1112 4096"
+size15		rawsize "1112 4096"
+size16		rawsize "1112 4096"
+
+ccd1		ccdname "SITe #98173FABR14-02 (NOAO 26)"
+ccd2		ccdname "SITe #98173FABR14-02 (NOAO 26)"
+ccd3		ccdname "SITe #98164FACR10-02 (NOAO 21)"
+ccd4		ccdname "SITe #98164FACR10-02 (NOAO 21)"
+ccd5		ccdname "SITe #98261FACR06-02 (NOAO 28)"
+ccd6		ccdname "SITe #98261FACR06-02 (NOAO 28)"
+ccd7		ccdname "SITe #98261FABR18-02 (NOAO 27)"
+ccd8		ccdname "SITe #98261FABR18-02 (NOAO 27)"
+ccd9		ccdname "SITe #98261FACR09-01 (NOAO 29)"
+ccd10		ccdname "SITe #98261FACR09-01 (NOAO 29)"
+ccd11		ccdname "SITe #98173FABR10-02 (NOAO 25)"
+ccd12		ccdname "SITe #98173FABR10-02 (NOAO 25)"
+ccd13		ccdname "SITe #98421FABR07-02 (NOAO 31)"
+ccd14		ccdname "SITe #98421FABR07-02 (NOAO 31)"
+ccd15		ccdname "SITe #98202FABR03-02 (NOAO 22)"
+ccd16		ccdname "SITe #98202FABR03-02 (NOAO 22)"

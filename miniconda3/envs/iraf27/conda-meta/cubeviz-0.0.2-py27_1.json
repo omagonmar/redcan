@@ -1,0 +1,634 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "asdf",
+    "asteval",
+    "astropy",
+    "glue-core >=0.12.0",
+    "numpy",
+    "pytest",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/cubeviz-0.0.2-py27_1",
+  "features": "",
+  "files": [
+    "bin/cubeviz",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/cubeviz/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/_astropy_init.py",
+    "lib/python2.7/site-packages/cubeviz/_astropy_init.pyc",
+    "lib/python2.7/site-packages/cubeviz/conftest.py",
+    "lib/python2.7/site-packages/cubeviz/conftest.pyc",
+    "lib/python2.7/site-packages/cubeviz/controls/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/controls/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/controls/overlay.py",
+    "lib/python2.7/site-packages/cubeviz/controls/overlay.pyc",
+    "lib/python2.7/site-packages/cubeviz/controls/slice.py",
+    "lib/python2.7/site-packages/cubeviz/controls/slice.pyc",
+    "lib/python2.7/site-packages/cubeviz/cubeviz.py",
+    "lib/python2.7/site-packages/cubeviz/cubeviz.pyc",
+    "lib/python2.7/site-packages/cubeviz/data/README.rst",
+    "lib/python2.7/site-packages/cubeviz/data_factories/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/data_factories/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/data_factories/jwst.py",
+    "lib/python2.7/site-packages/cubeviz/data_factories/jwst.pyc",
+    "lib/python2.7/site-packages/cubeviz/data_factories/kmos.py",
+    "lib/python2.7/site-packages/cubeviz/data_factories/kmos.pyc",
+    "lib/python2.7/site-packages/cubeviz/data_factories/manga.py",
+    "lib/python2.7/site-packages/cubeviz/data_factories/manga.pyc",
+    "lib/python2.7/site-packages/cubeviz/extern/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/extern/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/image_viewer.py",
+    "lib/python2.7/site-packages/cubeviz/image_viewer.pyc",
+    "lib/python2.7/site-packages/cubeviz/layout.py",
+    "lib/python2.7/site-packages/cubeviz/layout.pyc",
+    "lib/python2.7/site-packages/cubeviz/layout.ui",
+    "lib/python2.7/site-packages/cubeviz/listener.py",
+    "lib/python2.7/site-packages/cubeviz/listener.pyc",
+    "lib/python2.7/site-packages/cubeviz/setup_package.py",
+    "lib/python2.7/site-packages/cubeviz/setup_package.pyc",
+    "lib/python2.7/site-packages/cubeviz/startup.py",
+    "lib/python2.7/site-packages/cubeviz/startup.pyc",
+    "lib/python2.7/site-packages/cubeviz/tests/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/tests/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/tests/coveragerc",
+    "lib/python2.7/site-packages/cubeviz/tests/setup_package.py",
+    "lib/python2.7/site-packages/cubeviz/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/cubeviz/toolbar.py",
+    "lib/python2.7/site-packages/cubeviz/toolbar.pyc",
+    "lib/python2.7/site-packages/cubeviz/tools/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/tools/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/tools/arithmetic_gui.py",
+    "lib/python2.7/site-packages/cubeviz/tools/arithmetic_gui.pyc",
+    "lib/python2.7/site-packages/cubeviz/tools/moment_maps.py",
+    "lib/python2.7/site-packages/cubeviz/tools/moment_maps.pyc",
+    "lib/python2.7/site-packages/cubeviz/tools/qt_spectral_cube.py",
+    "lib/python2.7/site-packages/cubeviz/tools/qt_spectral_cube.pyc",
+    "lib/python2.7/site-packages/cubeviz/tools/smoothing.py",
+    "lib/python2.7/site-packages/cubeviz/tools/smoothing.pyc",
+    "lib/python2.7/site-packages/cubeviz/utils/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/utils/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/utils/tests/__init__.py",
+    "lib/python2.7/site-packages/cubeviz/utils/tests/__init__.pyc",
+    "lib/python2.7/site-packages/cubeviz/version.py",
+    "lib/python2.7/site-packages/cubeviz/version.pyc",
+    "var/cache/fontconfig/0251a5afa6ac727a1e32b7d4d4aa7cf0-le64.cache-7",
+    "var/cache/fontconfig/12b26b760a24f8b4feb03ad48a333a72-le64.cache-7",
+    "var/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le64.cache-7",
+    "var/cache/fontconfig/74717c444f6fd72454fa9c9c0ee01ca7-le64.cache-7",
+    "var/cache/fontconfig/87f5e051180a7a75f16eb6fe7dbd3749-le64.cache-7",
+    "var/cache/fontconfig/b67b32625a2bb51b023d3814a918f351-le64.cache-7",
+    "var/cache/fontconfig/b79f3aaa7d385a141ab53ec885cc22a8-le64.cache-7"
+  ],
+  "fn": "cubeviz-0.0.2-py27_1.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/cubeviz-0.0.2-py27_1",
+    "type": 1
+  },
+  "md5": "8f3a25bfb202a9a7d6f1eac5473004d4",
+  "name": "cubeviz",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/cubeviz-0.0.2-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/cubeviz",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "e92f19596441e99305ce6df8b1c2bfa85236e78c7ea84a1cfa9cedcece3f2902",
+        "sha256_in_prefix": "f7b723691327a0080a47b7311a621edd49fbef24bfa960420803dffa5290b78d",
+        "size_in_bytes": 401
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "798d4b931a7d7d700e6a956928f5cf63031198dda95b341cb7c1ae51c1802a1f",
+        "sha256_in_prefix": "798d4b931a7d7d700e6a956928f5cf63031198dda95b341cb7c1ae51c1802a1f",
+        "size_in_bytes": 768
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "fc5fb26045be743fefbcb1e9f74ef195c209ffe728c36df57c5e215e7f65a5c5",
+        "sha256_in_prefix": "fc5fb26045be743fefbcb1e9f74ef195c209ffe728c36df57c5e215e7f65a5c5",
+        "size_in_bytes": 5854
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "af90e77e91f74f1528c8337e616785ede5becada2afe6e0cf119a4d7c6fee983",
+        "sha256_in_prefix": "af90e77e91f74f1528c8337e616785ede5becada2afe6e0cf119a4d7c6fee983",
+        "size_in_bytes": 94
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "0788a92544b773c30131f209dac531f8cd8a2bffa5a97d4aca334fbff979f9e7",
+        "sha256_in_prefix": "0788a92544b773c30131f209dac531f8cd8a2bffa5a97d4aca334fbff979f9e7",
+        "size_in_bytes": 61
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz-0.0.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "7fe4139d47f0e38f2b8e013e2e9945104256f65b4782d5c46278e05cfb2b929b",
+        "sha256_in_prefix": "7fe4139d47f0e38f2b8e013e2e9945104256f65b4782d5c46278e05cfb2b929b",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8af3dbd0b609052bfe5403bce82591798f830f2dc3d47b4adec8074758e9eaf9",
+        "sha256_in_prefix": "8af3dbd0b609052bfe5403bce82591798f830f2dc3d47b4adec8074758e9eaf9",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "48d46fa22dbeb113e671fafdabff4ae5222a43bc4de9940c1417e3d7b127df52",
+        "sha256_in_prefix": "48d46fa22dbeb113e671fafdabff4ae5222a43bc4de9940c1417e3d7b127df52",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/_astropy_init.py",
+        "path_type": "hardlink",
+        "sha256": "4816111043979ad6f7b7fc9d274635b51b507907921330e617ef132153436d25",
+        "sha256_in_prefix": "4816111043979ad6f7b7fc9d274635b51b507907921330e617ef132153436d25",
+        "size_in_bytes": 5345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/_astropy_init.pyc",
+        "path_type": "hardlink",
+        "sha256": "f5d91d4d56677b7a7027317c29209eed73ede25799f43989faf93327ec857ed8",
+        "sha256_in_prefix": "f5d91d4d56677b7a7027317c29209eed73ede25799f43989faf93327ec857ed8",
+        "size_in_bytes": 5225
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "3e7259f51f3fc327b6ed049d3a75c7440af9fb332222c952f0e58bb57f32d93e",
+        "sha256_in_prefix": "3e7259f51f3fc327b6ed049d3a75c7440af9fb332222c952f0e58bb57f32d93e",
+        "size_in_bytes": 1959
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "64f857dc8c075f812d2524b0abfbd0c121540bed94a25513fd1c69fd0a6eeddf",
+        "sha256_in_prefix": "64f857dc8c075f812d2524b0abfbd0c121540bed94a25513fd1c69fd0a6eeddf",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/controls/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/controls/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "be1bfd27fe9aeff76870980f188ef3e8975fd8dc9464a086e4991d68aaedb622",
+        "sha256_in_prefix": "be1bfd27fe9aeff76870980f188ef3e8975fd8dc9464a086e4991d68aaedb622",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/controls/overlay.py",
+        "path_type": "hardlink",
+        "sha256": "98ac12a5c834aff3f24074ed09d61a762b438cf66af8ae87d971471804fbd4ed",
+        "sha256_in_prefix": "98ac12a5c834aff3f24074ed09d61a762b438cf66af8ae87d971471804fbd4ed",
+        "size_in_bytes": 4572
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/controls/overlay.pyc",
+        "path_type": "hardlink",
+        "sha256": "d69cb4e5921e2c844939b1e5787edc1f8d30f58327d3671523127901689160d7",
+        "sha256_in_prefix": "d69cb4e5921e2c844939b1e5787edc1f8d30f58327d3671523127901689160d7",
+        "size_in_bytes": 4929
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/controls/slice.py",
+        "path_type": "hardlink",
+        "sha256": "444f944d8fe2a911874c29462a46eac96939a458565e86a7c153e440f0e177fb",
+        "sha256_in_prefix": "444f944d8fe2a911874c29462a46eac96939a458565e86a7c153e440f0e177fb",
+        "size_in_bytes": 6469
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/controls/slice.pyc",
+        "path_type": "hardlink",
+        "sha256": "d26e5b528b50b967e45bd0e77d6d1bdd0ad6d53f96be36c0d31e2af65e1e66ad",
+        "sha256_in_prefix": "d26e5b528b50b967e45bd0e77d6d1bdd0ad6d53f96be36c0d31e2af65e1e66ad",
+        "size_in_bytes": 5624
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/cubeviz.py",
+        "path_type": "hardlink",
+        "sha256": "541afbc852782729dddc763821f5d1f3a5490af16b69457a2bb6e67e04fdf03e",
+        "sha256_in_prefix": "541afbc852782729dddc763821f5d1f3a5490af16b69457a2bb6e67e04fdf03e",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/cubeviz.pyc",
+        "path_type": "hardlink",
+        "sha256": "cb13a97d3367632d1507ad263101fbbc11fa3e5a58b46709476108c60dce8194",
+        "sha256_in_prefix": "cb13a97d3367632d1507ad263101fbbc11fa3e5a58b46709476108c60dce8194",
+        "size_in_bytes": 997
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data/README.rst",
+        "path_type": "hardlink",
+        "sha256": "bc2774cecddfcf25db28469f913eb60e96cc4ad269b1a6ab7ce8352f2e47bbda",
+        "sha256_in_prefix": "bc2774cecddfcf25db28469f913eb60e96cc4ad269b1a6ab7ce8352f2e47bbda",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fec07f4870555c7ff2ce27b0a28554c01656aef5f06e004835cbd3dc6fa1464c",
+        "sha256_in_prefix": "fec07f4870555c7ff2ce27b0a28554c01656aef5f06e004835cbd3dc6fa1464c",
+        "size_in_bytes": 180
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "1f0274434a94dcdf45f471b926b3910e0bad50c2287e66c9492797ad17460cd9",
+        "sha256_in_prefix": "1f0274434a94dcdf45f471b926b3910e0bad50c2287e66c9492797ad17460cd9",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/jwst.py",
+        "path_type": "hardlink",
+        "sha256": "9445d7dd2029ed0414c880c171c1cb6bb65602cfa7ad0ecb602e428ca347e8d2",
+        "sha256_in_prefix": "9445d7dd2029ed0414c880c171c1cb6bb65602cfa7ad0ecb602e428ca347e8d2",
+        "size_in_bytes": 4104
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/jwst.pyc",
+        "path_type": "hardlink",
+        "sha256": "c2d7c4db13c3311f966c24dcfe1a82536856da0bf436aa37b8a2c0c951e831ad",
+        "sha256_in_prefix": "c2d7c4db13c3311f966c24dcfe1a82536856da0bf436aa37b8a2c0c951e831ad",
+        "size_in_bytes": 3930
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/kmos.py",
+        "path_type": "hardlink",
+        "sha256": "8c76b2d7a8341b8f0ecaf11e5f88e3974dea775c939f18220916c6d3d7abee89",
+        "sha256_in_prefix": "8c76b2d7a8341b8f0ecaf11e5f88e3974dea775c939f18220916c6d3d7abee89",
+        "size_in_bytes": 1329
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/kmos.pyc",
+        "path_type": "hardlink",
+        "sha256": "f25f347d63cb26d29803cabf0164b59e6abcdbcb65b375171d43144fcfa6f11c",
+        "sha256_in_prefix": "f25f347d63cb26d29803cabf0164b59e6abcdbcb65b375171d43144fcfa6f11c",
+        "size_in_bytes": 1935
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/manga.py",
+        "path_type": "hardlink",
+        "sha256": "96a9dea6901b5286cd6a25f67b4a7407a49d31277e5942bd654529ea418df31e",
+        "sha256_in_prefix": "96a9dea6901b5286cd6a25f67b4a7407a49d31277e5942bd654529ea418df31e",
+        "size_in_bytes": 1273
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/data_factories/manga.pyc",
+        "path_type": "hardlink",
+        "sha256": "074eb2d1af84e3ac0b45c647bf9e89659b3209d962d2230df431539f385eb4cf",
+        "sha256_in_prefix": "074eb2d1af84e3ac0b45c647bf9e89659b3209d962d2230df431539f385eb4cf",
+        "size_in_bytes": 1874
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/extern/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "556c17b90fe131e95546c45b1504eb94a11a8028bdaf2bb8587315d2468011b7",
+        "sha256_in_prefix": "556c17b90fe131e95546c45b1504eb94a11a8028bdaf2bb8587315d2468011b7",
+        "size_in_bytes": 397
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/extern/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "d03df0927eee08196ff8db234d8ba5e7fe1ea3a43df3785ae6cde54dbce42e06",
+        "sha256_in_prefix": "d03df0927eee08196ff8db234d8ba5e7fe1ea3a43df3785ae6cde54dbce42e06",
+        "size_in_bytes": 514
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/image_viewer.py",
+        "path_type": "hardlink",
+        "sha256": "f7139973c353de9160ed6efaec98ea0552d5de8aa39f8de444d174875cd39cce",
+        "sha256_in_prefix": "f7139973c353de9160ed6efaec98ea0552d5de8aa39f8de444d174875cd39cce",
+        "size_in_bytes": 8817
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/image_viewer.pyc",
+        "path_type": "hardlink",
+        "sha256": "ca2c0f6f84dc6e5c7b15aeca03bce60433abe713d7139d04cf40076c92f10df9",
+        "sha256_in_prefix": "ca2c0f6f84dc6e5c7b15aeca03bce60433abe713d7139d04cf40076c92f10df9",
+        "size_in_bytes": 9794
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/layout.py",
+        "path_type": "hardlink",
+        "sha256": "670f2dba6ac2f6dbd0610ba05f5c39f747309ae225857a93d9204b5e1a440db5",
+        "sha256_in_prefix": "670f2dba6ac2f6dbd0610ba05f5c39f747309ae225857a93d9204b5e1a440db5",
+        "size_in_bytes": 14609
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/layout.pyc",
+        "path_type": "hardlink",
+        "sha256": "3e914dacb509436a4bb699836c102e49656d789de02571f9b83bd04bd5f125f2",
+        "sha256_in_prefix": "3e914dacb509436a4bb699836c102e49656d789de02571f9b83bd04bd5f125f2",
+        "size_in_bytes": 15723
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/layout.ui",
+        "path_type": "hardlink",
+        "sha256": "8109aaf2c2e8fb64696a4379ae031f195d135ee6ea79c3146b8607ddf8ebf243",
+        "sha256_in_prefix": "8109aaf2c2e8fb64696a4379ae031f195d135ee6ea79c3146b8607ddf8ebf243",
+        "size_in_bytes": 18179
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/listener.py",
+        "path_type": "hardlink",
+        "sha256": "a158db64d7f58fe156d93321c3be2fe782886423e14005e79032febbe638f009",
+        "sha256_in_prefix": "a158db64d7f58fe156d93321c3be2fe782886423e14005e79032febbe638f009",
+        "size_in_bytes": 3465
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/listener.pyc",
+        "path_type": "hardlink",
+        "sha256": "2bdc0d137dcc3e4b1f1784cdcf79cbcc743d8910dc3347cac070ad88ece1500c",
+        "sha256_in_prefix": "2bdc0d137dcc3e4b1f1784cdcf79cbcc743d8910dc3347cac070ad88ece1500c",
+        "size_in_bytes": 3952
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "747fa43cf100c1b15fab185e6e977bfe784dbe90ac7748d906e3e4852de547c3",
+        "sha256_in_prefix": "747fa43cf100c1b15fab185e6e977bfe784dbe90ac7748d906e3e4852de547c3",
+        "size_in_bytes": 127
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "62bf4e001e59b630cec6e213173bbbe002e7065d8a952346af0142c5741c44ed",
+        "sha256_in_prefix": "62bf4e001e59b630cec6e213173bbbe002e7065d8a952346af0142c5741c44ed",
+        "size_in_bytes": 378
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/startup.py",
+        "path_type": "hardlink",
+        "sha256": "e4b1fb3b21c37c569c3e517a929ae5d03b88493adb2e93d0f4d2a96e0920a8ba",
+        "sha256_in_prefix": "e4b1fb3b21c37c569c3e517a929ae5d03b88493adb2e93d0f4d2a96e0920a8ba",
+        "size_in_bytes": 276
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/startup.pyc",
+        "path_type": "hardlink",
+        "sha256": "37fe6f4632470e7736e5af8dd80d02d9094afd27a91dcec573146a3d3c5ecbfc",
+        "sha256_in_prefix": "37fe6f4632470e7736e5af8dd80d02d9094afd27a91dcec573146a3d3c5ecbfc",
+        "size_in_bytes": 654
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "sha256_in_prefix": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad2496719d5ca4206473994821c636727518ee71fef840af4073635820b66ec8",
+        "sha256_in_prefix": "ad2496719d5ca4206473994821c636727518ee71fef840af4073635820b66ec8",
+        "size_in_bytes": 237
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tests/coveragerc",
+        "path_type": "hardlink",
+        "sha256": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "sha256_in_prefix": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "size_in_bytes": 768
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "4edb97bb4e527c60952b79f80347a0d81e01ed558f41d3334f3fb131c797f5bd",
+        "sha256_in_prefix": "4edb97bb4e527c60952b79f80347a0d81e01ed558f41d3334f3fb131c797f5bd",
+        "size_in_bytes": 96
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "5b2193355901463b96499bcf9d7f213ffb73ca7d83e3dfb6a4aa3b6d97974a2c",
+        "sha256_in_prefix": "5b2193355901463b96499bcf9d7f213ffb73ca7d83e3dfb6a4aa3b6d97974a2c",
+        "size_in_bytes": 423
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/toolbar.py",
+        "path_type": "hardlink",
+        "sha256": "7641c66ff2ce34f0291ba89e587144f99733eaabade62a5d65f8e0de8a67f013",
+        "sha256_in_prefix": "7641c66ff2ce34f0291ba89e587144f99733eaabade62a5d65f8e0de8a67f013",
+        "size_in_bytes": 959
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/toolbar.pyc",
+        "path_type": "hardlink",
+        "sha256": "0f4203c8d523f507fce0e63d987b494bd44bc7f30ed81221dca61425cacb37c5",
+        "sha256_in_prefix": "0f4203c8d523f507fce0e63d987b494bd44bc7f30ed81221dca61425cacb37c5",
+        "size_in_bytes": 1461
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ca4a951e07b61262034cc39df7a8760f218768cfe0a69ff02b3dcad4c9596627",
+        "sha256_in_prefix": "ca4a951e07b61262034cc39df7a8760f218768cfe0a69ff02b3dcad4c9596627",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "fdd6c18eaa542237d9eba56645857e32504fef72f40a6fbc0981736ce3b6239a",
+        "sha256_in_prefix": "fdd6c18eaa542237d9eba56645857e32504fef72f40a6fbc0981736ce3b6239a",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/arithmetic_gui.py",
+        "path_type": "hardlink",
+        "sha256": "72e769e83159cd9cffc5340d9fa129b89d2176076064ca7bc5efb21963944365",
+        "sha256_in_prefix": "72e769e83159cd9cffc5340d9fa129b89d2176076064ca7bc5efb21963944365",
+        "size_in_bytes": 6658
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/arithmetic_gui.pyc",
+        "path_type": "hardlink",
+        "sha256": "a0ae2de7500af7e6e2d96b0098b6c0e0c954f61f99381c8fe7e318f476fa7524",
+        "sha256_in_prefix": "a0ae2de7500af7e6e2d96b0098b6c0e0c954f61f99381c8fe7e318f476fa7524",
+        "size_in_bytes": 5497
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/moment_maps.py",
+        "path_type": "hardlink",
+        "sha256": "07ce104f54b98b1b839e4996db194f578104eb5afa9b05f71fbbc78a261234af",
+        "sha256_in_prefix": "07ce104f54b98b1b839e4996db194f578104eb5afa9b05f71fbbc78a261234af",
+        "size_in_bytes": 4071
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/moment_maps.pyc",
+        "path_type": "hardlink",
+        "sha256": "013fc00c4a49cae8be6eb61cf2f3dab68fe9e466bf93f81073904573ae29f6f8",
+        "sha256_in_prefix": "013fc00c4a49cae8be6eb61cf2f3dab68fe9e466bf93f81073904573ae29f6f8",
+        "size_in_bytes": 4210
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/qt_spectral_cube.py",
+        "path_type": "hardlink",
+        "sha256": "bd0de46a454e80af3eeb3f92b354067c3aa6c652762e1bb8efaba73b8be60645",
+        "sha256_in_prefix": "bd0de46a454e80af3eeb3f92b354067c3aa6c652762e1bb8efaba73b8be60645",
+        "size_in_bytes": 10059
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/qt_spectral_cube.pyc",
+        "path_type": "hardlink",
+        "sha256": "713fa1a32eea36f2b3c677b6bb83c92d192cc431813e0874da2dd57091af1f72",
+        "sha256_in_prefix": "713fa1a32eea36f2b3c677b6bb83c92d192cc431813e0874da2dd57091af1f72",
+        "size_in_bytes": 8984
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/smoothing.py",
+        "path_type": "hardlink",
+        "sha256": "ac2f3514d2c97ae799eb29332790a6e4de629ee05e37cca80ffe8cc77274adac",
+        "sha256_in_prefix": "ac2f3514d2c97ae799eb29332790a6e4de629ee05e37cca80ffe8cc77274adac",
+        "size_in_bytes": 26065
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/tools/smoothing.pyc",
+        "path_type": "hardlink",
+        "sha256": "b5a0534c2562249c8e66b788985e1fa6377c4afee6630628f1b6e2c30f067bdf",
+        "sha256_in_prefix": "b5a0534c2562249c8e66b788985e1fa6377c4afee6630628f1b6e2c30f067bdf",
+        "size_in_bytes": 24226
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "821d2adabc354142edb7cbecf4a6f473e27a489e777ca7c29637a2923e2cf0b4",
+        "sha256_in_prefix": "821d2adabc354142edb7cbecf4a6f473e27a489e777ca7c29637a2923e2cf0b4",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/utils/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "2e7d763eefd9d6191a2de2bf65acbb2be04400e080948c2581df13b9c0d446e5",
+        "sha256_in_prefix": "2e7d763eefd9d6191a2de2bf65acbb2be04400e080948c2581df13b9c0d446e5",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/utils/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/utils/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "7c49d5db574f5264d70aa88c9b70decba4d0e8858085b13875c8b09ae407770e",
+        "sha256_in_prefix": "7c49d5db574f5264d70aa88c9b70decba4d0e8858085b13875c8b09ae407770e",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/version.py",
+        "path_type": "hardlink",
+        "sha256": "3b9d5cb10d505506e6cd67dc586a6a2b35a7c4e5ad4b587b22e38ac2ae2bed62",
+        "sha256_in_prefix": "3b9d5cb10d505506e6cd67dc586a6a2b35a7c4e5ad4b587b22e38ac2ae2bed62",
+        "size_in_bytes": 6958
+      },
+      {
+        "_path": "lib/python2.7/site-packages/cubeviz/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "4e663b6b2fae84ebaeed9cabf8f0f7f71e4b1b69687969a037caa7106a81e7b0",
+        "sha256_in_prefix": "4e663b6b2fae84ebaeed9cabf8f0f7f71e4b1b69687969a037caa7106a81e7b0",
+        "size_in_bytes": 5892
+      },
+      {
+        "_path": "var/cache/fontconfig/0251a5afa6ac727a1e32b7d4d4aa7cf0-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "deba906b72628167e97f562ad507afc2828f482713505b4149fbfd5a837d24ba",
+        "sha256_in_prefix": "deba906b72628167e97f562ad507afc2828f482713505b4149fbfd5a837d24ba",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "var/cache/fontconfig/12b26b760a24f8b4feb03ad48a333a72-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "2434f81f01f44af985bfa260af7d0da5f1ceb9605a9ee10dbd14d6934820569b",
+        "sha256_in_prefix": "2434f81f01f44af985bfa260af7d0da5f1ceb9605a9ee10dbd14d6934820569b",
+        "size_in_bytes": 42896
+      },
+      {
+        "_path": "var/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "42dab5f0fcda7006b913b9706bb8435172abbf1a692c4c496b24b12d2a3d6419",
+        "sha256_in_prefix": "42dab5f0fcda7006b913b9706bb8435172abbf1a692c4c496b24b12d2a3d6419",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "var/cache/fontconfig/74717c444f6fd72454fa9c9c0ee01ca7-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "a73307f6b34f7bee59f2aeadabb47d8eb4eee9c2722c664c2bcc931272018c42",
+        "sha256_in_prefix": "a73307f6b34f7bee59f2aeadabb47d8eb4eee9c2722c664c2bcc931272018c42",
+        "size_in_bytes": 94928
+      },
+      {
+        "_path": "var/cache/fontconfig/87f5e051180a7a75f16eb6fe7dbd3749-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "576412198ba96bfaa998392b666792f7b32f490f95a4734f34319df8e943ee4a",
+        "sha256_in_prefix": "576412198ba96bfaa998392b666792f7b32f490f95a4734f34319df8e943ee4a",
+        "size_in_bytes": 15784
+      },
+      {
+        "_path": "var/cache/fontconfig/b67b32625a2bb51b023d3814a918f351-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "096a770a6e021c367e484f3c6acb06f5c6d486ae0453d66743ff65a841c18e37",
+        "sha256_in_prefix": "096a770a6e021c367e484f3c6acb06f5c6d486ae0453d66743ff65a841c18e37",
+        "size_in_bytes": 18656
+      },
+      {
+        "_path": "var/cache/fontconfig/b79f3aaa7d385a141ab53ec885cc22a8-le64.cache-7",
+        "path_type": "hardlink",
+        "sha256": "8f4424e34f8a7fcc8df842a73c303d0aaf412dcd7478e92b07f5e7c851c1b690",
+        "sha256_in_prefix": "8f4424e34f8a7fcc8df842a73c303d0aaf412dcd7478e92b07f5e7c851c1b690",
+        "size_in_bytes": 44448
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 72684,
+  "subdir": "linux-64",
+  "timestamp": 1518647982342,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/cubeviz-0.0.2-py27_1.tar.bz2",
+  "version": "0.0.2"
+}

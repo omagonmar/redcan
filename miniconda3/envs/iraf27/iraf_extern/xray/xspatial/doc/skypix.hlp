@@ -1,0 +1,279 @@
+#$Header: /home/pros/xray/xspatial/doc/RCS/skypix.hlp,v 11.0 1997/11/06 16:30:01 prosb Exp $
+#$Log: skypix.hlp,v $
+#Revision 11.0  1997/11/06 16:30:01  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:46:51  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:57:00  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:29:12  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:11:27  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:29:04  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/21  16:00:07  mo
+#MC	10/21/92	Update the examples
+#
+#Revision 4.1  92/09/09  09:12:52  mo
+#MC	9/9/92		Change default units from degrees to hours
+#
+#Revision 4.0  92/04/27  14:35:19  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/04/23  16:40:53  janet
+#updated for apr 92 release.
+#
+#Revision 3.1  92/04/10  11:48:58  prosb
+#Added examples for pixel-RA,Dec conversion.
+#
+#Revision 3.0  91/08/02  01:27:14  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/03  15:29:21  prosb
+#xray.xspatial   7/3/91
+#
+#Revision 2.0  91/03/06  23:22:50  pros
+#General Release 1.0
+#
+.help skypix Oct92 xray.xspatial
+.ih
+NAME
+skypix -- convert and precess astronomical coordinate systems
+.ih
+USAGE
+skypix isystem osystem ifile
+.ih
+DESCRIPTION
+Skypix transforms a list of coordinates from one coordinate system to
+another.  The EQUATORIAL keyword is optional as the actual system is
+specified by the type of epoch.  For Julian epochs FK5 is assumed and
+for Besselain epochs FK4.
+.ih
+PARAMETERS
+.ls isystem, osystem = "J2000"	prompt = input, output coordinate system 
+ 
+Input/Output coordinate systems.  Specified with the following syntax:
+.nf
+
+<imagefile>	-- Image pixels.
+
+[Equatorial] Jxxxx.xx
+		-- FK5 system with Julian equinox.
+[Equatorial] Bxxxx.xx[@xxxx.xx]
+		-- FK4 system with Besselian equinox and
+		   optional Bessalian observation epoch.
+
+Ecliptic xxxx	-- Ecliptic system with equinox
+Galactic	-- Galactic system
+SuperGalactic	-- SuperGalactic system
+
+Image		-- Pseudo system.  If one of the coordinate
+		   systems (input or output) is a reference
+		   image the other may be specified as Image.
+		   The sky system of the image will be used
+		   for this system.  This can be used to convert
+	 	   between world and physical coordinates,
+			e.g.  degrees -> pixels or
+		  	      pixels -> degrees
+
+
+.fi
+.le
+.ls ifile = "STDIN"		prompt = input file list
+
+Comma separated list of the input files to be read.  STDIN is allowed
+(Remember to use ^D end of file for STDIN).
+.le
+.ls (ofile = "STDOUT") [string]
+
+Name of the output file to be created.
+.le
+.ls (iformat,oformat = "hours") [string]
+ 
+The units of the output coordinate list (degrees, hours, radians). If the 
+coordinate system is specified to be a reference image the units are taken 
+to be pixels.
+.le
+.ls (clobber = yes) [boolean]
+
+Boolean flag specifying whether or not the output coordinate list file
+can be overwritten, if it already exists.
+.le
+.ls (display = 1) [int]
+
+Display level print out flag.  
+.nf
+	0 -- print only the converted coordinates
+	1 -- print parsed conversion specification to STDERR
+	2 -- print  both input  and converted  coordinates in
+	     output  file  and  short  informative  header to
+	     output (but not STDOUT).
+	3 -- show coordinate conversions as they are done.
+	4 -- show units conversions.
+.fi
+.le
+.ls (istring = "NONE") [string]
+
+Input string + formatting spec.
+.le
+.ls (ostring = "NONE") [string]
+
+Output string + formatting spec.
+.le 
+.ih
+EXAMPLES
+
+Examples of coordinate system specification.
+.nf
+
+	xdata$snr.qp			# xdata$snr.qp pixels
+	EQUATORIAL J2000		# FK5 equinox 2000
+	J2010.9				# FK5 equinox 2010.9
+	B1950				# FK4 equinox 1950
+
+.fi
+Execution Examples:
+
+1. Transform a source position in the xdata$snr.qp file to J2000
+coordinates ( xdata$snr.qp is in B1950 coordinates, observed in 1980 )
+The RA and Dec ("22:08:41.56 45:44:49.6") were
+typed in as standard input (STDIN).  Typing "^D" ended the standard
+input.
+
+.nf
+xs> skypix
+input cooordinate system (xdata$snr.qp): 
+output cooordinate system (J2000): 
+input file list (STDIN): 
+
+Converting from xdata$snr.qp is 
+                TANGENT 512. 513. -0.002222222 0.002222222 = 
+                22:58:55.66 58:36:47.5 0.
+                   EQUATORIAL B1950.   in pixels
+             to    EQUATORIAL J2000.   in hours
+
+
+(Terminate interactive list with <cntl>-D)
+22:08:41.56 45:44:49.6
+  23:09:12.7          57:49:47.6        
+<cntl-d>
+xs>
+
+    
+    2.  Transform  the  list  of  Eoscat  sources  from  their FK5 J2000
+    positions to their FK4 B1950 positions.   The  input  file  has  the
+    positions  listed in radians.  The output will be sent to STDOUT and
+    will be formatted in hours minutes seconds, degrees minutes  seconds
+    units.
+    
+    cl>skypix iformat=rad oformat=hours
+    input coordinate system : J2000
+    output coordinate system : B1950
+    input file list (STDIN): /Eoscat/2000R 
+    
+    Converting from    EQUATORIAL J2000.00 in radians
+                 to    EQUATORIAL B1950.00 in hours
+    
+      0:00:36.00       21:41:59.93
+      0:02:18.00      -42:12:59.76
+      0:02:24.00      -30:50:59.62
+      0:03:12.00       72:29:59.59
+      ...
+    
+    
+    3.  Transform  the  galactic coordinate to RA and Dec 
+    showing the steps used to complete  the  transformation.   Here  the
+    input  coordinate  is  read  from  STDIN  and  the  output  typed to
+    STDOUT.  The value of display causes the steps  to  be  printed  and
+    the  input coordinates to be echoed.  The pixels are referenced from
+    the world coordinate system of the image xdata$snr.qp
+    
+    xs> skypix iformat=degrees display=4
+    input cooordinate system (galactic): 
+    output cooordinate system (xdata$snr.qp): 
+    input file list (STDIN): 
+
+    Converting from               GALACTIC in degrees
+             to xdata$snr.qp is 
+                TANGENT 512. 513. -0.002222222 0.002222222 = 
+                22:58:55.66 58:36:47.5 0.
+                   EQUATORIAL B1950.   in pixels
+
+
+    (Terminate interactive list with <cntl>-D)
+    109.1 -.99
+    Convert Galactic to B1950FK4
+    Convert sky coordinates to image pixels
+      109.1               -0.99               500.7361            516.321
+<cntl-d>
+
+xs> wcscoords
+IRAF reference image (xdata$rp110590.qp[bl=30]): xdata$snr.qp
+  Menu for coordinate conversion 
+  1 = world   -> physical 
+  2 = world   -> tv       
+  3 = world   -> logical  
+  4 = physical-> logical  
+  5 = physical-> world    
+  6 = physical-> tv       
+  7 = tv      -> physical 
+  8 = tv      -> world    
+  9 = tv      -> logical  
+  10= logical -> physical 
+  11= logical -> world    
+  12= logical -> tv       
+code for conversion type (0:12) (12): 5
+input coordinate list (STDIN): 
+
+Converting from xdata$snr.qp is 
+                TANGENT 512. 513. -0.002222222 0.002222222 = 
+                22:58:55.66 58:36:47.5 0.
+                   EQUATORIAL B1950.   in pixels
+             to xdata$snr.qp is 
+                TANGENT 512. 513. -0.002222222 0.002222222 = 
+                22:58:55.66 58:36:47.5 0.
+                   EQUATORIAL B1950.   in hours
+
+
+(Terminate interactive list with <cntl>-D)
+500.7361 516.321  
+Convert image pixels to sky coordinates
+  500.7361            516.321             22:59:07.2          58:37:14.0        
+<cntl-d>
+xs>
+ 
+.fi
+.ih
+TIME REQUIREMENTS
+The time requirements for this tasks are negligible.
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on precess (\fIhelp precess\fR) for a description of the precess 
+task.
+
+Documentation on IRAF WCS coordinate conversions (\fIhelp wcscoords\fR) for
+a decription of the coordinate conversions within IRAF.
+
+See also \fIhelp rimcursor\fR, 
+
+\fIhelp tvlabel\fR, and 
+
+\fIhelp xexamine\fR
+and \fIhelp 
+
+wcslab\fR
+
+MWCS help file (\fImwcs$MWCS.hlp fi+\fR) for a description of the Mini-WCS 
+(World Coordinate System) Interface.
+
+
+.endhelp

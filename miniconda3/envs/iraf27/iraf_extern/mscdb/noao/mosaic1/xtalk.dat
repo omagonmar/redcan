@@ -1,0 +1,11 @@
+# Crosstalk correction file for NOAO Engineering Mosaic
+
+im1     im2     0.000329
+im2
+im3     im4     0.000611
+im4
+im5
+im6     im5     0.000384
+im7
+im8     im7     0.000152
+

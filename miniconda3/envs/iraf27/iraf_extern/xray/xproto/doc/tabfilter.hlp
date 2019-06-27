@@ -1,0 +1,378 @@
+# Copyright (c) 1993 The Regents of the University of California
+# H+
+# 	Title	:  dqselect.hlp
+# 	Author	:  akeith
+# 	Date	:  04/24/92
+# 	Synopsis:  
+# 	Keywords:
+# 		@(#) dqselect.hlp  04/24/92 UCB SSL CEA EGOCS
+# 	Revisions:
+# 	mm/dd/yy   name		description
+# 	11/02/92   akeith	oops, the clear command doesn't exist anymore, so I got rid of it.
+# 	11/02/92   akeith	changed completely
+# 	07/27/92   annem	Correct syntax to conform with xray package.
+# 	06/30/92   lgauvin	fixed spelling mistakes, and format problems
+# 	06/22/92   annem	First rewrite under 1.0
+# 	05/05/92   lgauvin	fixed some typos
+# 	04/30/92   lgauvin	fixed the eu to the euv
+# 	04/30/92   lgauvin	fixed gareth's problem spots
+# 	04/30/92   lgauvin	put in an example
+# 	04/30/92   lgauvin	fixed a format mistake
+# 	04/30/92   akeith	expanded on some of the command explainations.
+# 	04/30/92   lgauvin	fixed spelling mistakes
+# 	04/30/92   akeith	added text
+# 	04/28/92   lgauvin	nothing much
+# 	04/27/92   lgauvin	don't ask
+# 	04/27/92   akeith	rough draft writeup.
+# 	04/24/92   lgauvin	test
+# 	04/24/92   lgauvin	fixed header
+# 	04/24/92   akeith	date and time created 92/04/24 13:04:16 by akeith
+# H-
+# 
+#
+.help tabfilter May 93 xray.xproto
+.ih
+NAME
+tabfilter - An interactive data quality selection and display task for
+ST tables.
+.ih
+USAGE
+tabfilter tables
+.ih
+PARAMETERS
+.ls tables  
+List of ST tables used for display and data quality selection.
+Table names may be specified using wildcards such
+as table[1-7], which loads all existing ST tables from table1.tab to table7.tab.
+.le
+.ls limits = ""
+An optional ST table containing hi/low limits for any number of monitors.
+.le
+.ls gap = 5
+Allowed number of missing nominal time intervals before considering the gap in
+reported data as a day gap. A nominal time interval
+is defined for each table from the difference of the first two values
+of the time column unless specified in the ST table by the header keyword
+\fBDELTIME\fR.
+.le
+.ls imode = "line"
+Initial interactive mode, either \fBgcur\fR or \fBline\fR mode.
+.le
+.ls device = "stdgraph"
+Output graphics device: one of \fBstdgraph\fR, \fBstdplot\fR,  \fBstdvdm\fR,
+or device name.
+.le
+.ih
+DESCRIPTION
+
+Tabfilter is a macro task that calls the task dqselect in the 
+euv.euvred package.  It is available in xproto for convenience
+to Xray Users.
+
+This task is a data quality selection task allowing the user to
+interactively display time dependent data stored in ST tables
+and create time filters according to user-supplied limits.
+Once the ST tables are loaded by tabfilter, a variety of commands
+are available to the user to display and utilize the information
+contain within the ST tables.
+
+Tabfilter will work with any ST table, though at this
+point it is best adapted for indexed ST tables containing a monotonically
+increasing index or time column. The indexed ST table has a few
+features which are taken advantage of by tabfilter.
+
+.ls o
+Each ST table must have an index or time column to represent the
+independent data set for the subsequent columns of the ST table.
+Tabfilter assumes that the first column of the ST table
+serves as the index column, unless the index column name is
+specified by the ST table header keyword \fBTIME\fR.
+All other columns of the ST table are considered monitors that are
+dependents of the index/time column.
+.le
+
+.ls o
+Tabfilter assumes the existence of a nominal time interval
+for each ST table. The time interval is derived from the first two
+values of the index/time column unless the numerical value
+is specified by the ST table header keyword \fBDELTIME\fR.
+.le
+
+.ls o
+Data which should be treated as rates can also be indicated within
+an indexed ST table using the \fBRATE000\fR header keyword. Such columns
+will have their values divided by the nominal time interval to
+produce rate values.
+.le
+
+Using indexed ST tables allows tabfilter to display each of the columns
+correctly.
+
+Tabfilter's main purpose is to assist in data quality selection.
+This consist of generating good time filters on the basis of data
+quality. Where a monitor describes the
+quality of data recorded by an instrument, limits can be set when
+data quality is suspect. Based on these limits, filters can be generated
+for use in filtering out the poor quality data produce by the instrument.
+
+To take a specific example, consider an instrument which is kept track
+of by various monitors. Each monitor reports its value at regular time
+intervals and is stored in a column of an indexed ST table.
+Here the time that each value is reported acts as the index column.
+If a monitor conveys the state of the  health, then
+certain values of the monitor define the borders of a healthy
+instrument.
+These values define the \fBlimits\fR for which the monitor
+indicates the instrument is in good health.
+The corresponding times for which the monitor values are within
+the limits are called \fBgood times\fR. By generating start and
+end times for all the good time intervals, a time filter is created
+which can be used to filter out questionable data reported by the
+instrument. Tabfilter has a variety of commands designed to help generate
+good time filters. The command \fBedit\fR is designed to set limits. The
+command \fBgtgen\fR is designed to generate good time intervals from
+those limits.
+
+In addition to the concepts of monitors, limits and good times, there
+is the concept of \fBday gaps\fR. Even though a monitor may report on a
+regular bases, it may not report at all during extended periods of time.
+These times are considered \fBday gaps\fR and can be recognized by tabfilter
+in terms of the number of regular intervals the monitor did not report.
+This number can be set using the tabfilter command \fBgap\fR.
+
+Below is a list of the valid tabfilter commands each with its own description.
+
+.ih
+COMMANDS
+
+.ls display <monitor_name>
+
+Display plots the named monitor against the time column of the
+corresponding ST
+table. In those cases where the number of rows of the ST table exceeds
+what can be displayed by the graphics device, a sampling of the data is
+plotted representing every N'th point of the real data.
+Up to four monitors may be displayed
+at any one time with repeated calls to display.
+.le
+
+.ls hide <monitor_name>
+
+Removes the specified monitor from the display. If the monitor name is 
+given as \fBall\fR, the screen will be cleared of all monitors.
+.le
+
+.ls mode <imode>
+
+Mode changes the input mode to either \fBline\fR, for typing commands in
+a text window  or \fBgcur\fR for using the cursor in a graphics
+display. In \fBgcur\fR mode, each command is executed as a colon command.
+For example, \fB:mode line\fR would return the input mode back to the text
+window.
+.le
+
+.ls list <table_name>
+
+Lists the column names of the named ST table.
+.le
+
+.ls window
+
+Window is an interactive command allowing the user to resize the selected
+window. As an interactive command, the window command must be quit by issuing
+a \fBq\fR command. This returns the user to the current input mode.
+When more then one window is displayed, a window must be selected
+by placing the graphics cursor over the desired window and pressing a key
+or mouse button. All subsequent window commands will be directed toward
+the selected window. The following window commands are available.
+
+.nf
+	a     Autoscale x and y axes
+    *   b     Set bottom edge of window
+    *   c     Center window at cursor position
+	d     Shift window down
+    *   e     Expand window
+	f     Flip x axis
+	g     Flip y axis
+    *   j     Set left edge of window
+    *   k     Set right edge of window
+	l     Shift window left
+	m     Autoscale x axis
+	n     Autoscale y axis
+    *   p     Pan x and y axes about cursor
+	r     Shift window right
+    *   t     Set top edge of window
+        q     quit
+	u     Shift window up
+    *   y     Zoom y axis about cursor
+    *   z     Zoom x and y axes about cursor
+.fi
+
+  * Uses the cursor position at the time the command is issued.
+.le
+
+.ls gap <gap_number>
+
+Gap sets the allowed integer number of missing nominal time intervals
+before considering the gap in reported data as a day gap.
+A nominal time interval is defined for each table from the
+difference of the first two values of the time column unless
+specified in the ST table by the header keyword \fBDELTIME\fR.
+In either case, a day gap is an extended period of time in which
+no information is reported. Setting the gap number allows the
+user to define what is meant by an extended period of time. Day
+gaps are identified in plotted monitors as gaps between connected
+line segments. Day gaps are also excluded time intervals in the
+generation of good time filters.
+.le
+
+.ls edit <monitor_name>
+
+Edits the specified monitor's limits. Once this command is given, tabfilter
+enters \fBgcur\fR mode and waits for 
+two graphics cursor entries, for the new upper and lower limits. 
+The limits may be entered in either order. Both cursor commands and/or
+colon commands of the form:
+
+		:y limit_value
+
+are excepted. The cursor x-position is not used.
+Any combination of the two entry methods is allowed. 
+.le
+
+.ls delete <monitor_name>
+
+Deletes a monitor's limits. However, if \fBgtgen\fR was previously executed,
+the previously computed good times still exist. In order to remove the
+good times produced by with these limits, \fBgtnew\fR should be executed.
+.le
+
+.ls limsave <table>
+
+Saves the current limits in an ST table which consists of three columns,
+name, low and high. The name column holds the monitor name, low holds the
+low limit value and high the high limit value.
+.le
+
+.ls limload <table>
+
+Loads an existing ST table containing limits that is of the same format as
+those produced by the \fBlimsave\fR command.
+.le
+
+.ls showlim <monitor>
+
+Show the limit markers of the displayed monitor.
+.le
+
+.ls hidelim <monitor>
+
+Hide the limit markers of the displayed monitor.
+.le
+
+.ls gtnew
+
+Clears the list of good times intervals.
+.le
+
+.ls gtgen
+
+Generates \fBgood time\fR intervals. For each monitor for which limits have been
+defined, \fBgtgen\fR generates a set of good time intervals. The set of
+good time intervals are defined by start and end times where the values
+of the monitor are within the set limits. Each value in the current column
+is tested to be within the defined limits. If two successive values go from
+being outside the limits to within the limits, the time of the second value
+defines a start time of a new good time interval. On the other hand, if
+two successive values go from being within the limits to outside the limits,
+then the time of the first value defines the end
+time of the current good time interval.
+
+Once this set of intervals is defined, the intersection between this set and
+the compliment of the set of \fBday gap\fR intervals is taken.
+The day gap intervals are defined using the time difference between two
+consecutive times. If the difference is greater then the nominal time interval
+multiplied by the number of allowed gaps set by the command \fBgap\fR, the two
+times are considered the beginning and ending times for a day gap.
+
+The interval set for each monitor is then intersected with each other to
+produce a single set of good time intervals.
+.le
+
+.ls gtsave <table>
+
+Save internally stored good time intervals to an ST table.
+The ST table has a start time column, \fBstime\fR and an
+end time column, \fBetime\fR. Each row consists of a single
+good time interval.
+.le
+
+.ls gtload <table>
+
+Loads an ST table containing good time intervals of the same
+format as those saved by \fBgtsave\fR.
+.le
+
+.ls filter <qpoe_file> <filter_name>
+
+Stores a filter in the named qpoe file under the filter name.
+The filter is stored as a qpoe macro of the form (1023.34:1090.60,
+2178.43:2218.75). One restriction made by qpoe is the length of the
+macro can be no longer then 8192. Therefore, if the macro is greater then
+this length, tabfilter will not create the filter and will print
+a warning message to the user.
+.le
+
+.ls redraw
+
+Clears the screen.
+.le
+
+.ls help <command>
+
+Produces a short help message on the specified command.
+If no command name is given, prints a short summary of all commands.
+.le
+
+.ih
+HINTS
+
+.ls o
+Repeated calls to \fBdisplay\fR will display more then one plot, each in
+its own window.
+.le
+
+.ls o
+\fBGtgen\fR stores the resulting good time intervals within memory which may
+slow down the performance of tabfilter. Once the set of good time intervals
+have served their usefulness, the use of \fBgtnew\fR will elevate the pressure on
+the memory.
+.le
+
+.ls o
+For each execution of \fBgtgen\fR,
+the intersection is taken between the resulting set good time intervals and 
+the previously generated or loaded set of good time intervals.
+If no good time intervals have been loaded with \fBgtload\fR, it is
+to the users advantage clear any previously generated set of good times
+generated with \fBgtgen\fR with a call to \fBgtnew\fR.
+.le
+
+.ih
+EXAMPLES
+This task displays the ST tables in a graphical form and therefore
+the example that follows is very basic.  The user is strongly encouraged
+to simply experiment with the task in order to learn how to use it.
+
+1.  Display EUV ST tables using the tabfilter.  The ST tables (1-7)
+are in the current working directory and there is no limits table:
+
+.nf
+
+    eu> tabfilter tables=tables[1-7].tab
+
+.fi 
+.ih
+SEE ALSO
+dqselect, splot
+.endhelp

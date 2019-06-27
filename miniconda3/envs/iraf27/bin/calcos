@@ -1,0 +1,4 @@
+#!/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin/python
+# EASY-INSTALL-SCRIPT: 'calcos==3.3.5','calcos'
+__requires__ = 'calcos==3.3.5'
+__import__('pkg_resources').run_script('calcos==3.3.5', 'calcos')

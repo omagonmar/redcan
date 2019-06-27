@@ -1,0 +1,211 @@
+#$Header: /home/pros/xray/lib/doc/RCS/put_imhistory.hlp,v 11.0 1997/11/06 16:23:09 prosb Exp $
+#$Log: put_imhistory.hlp,v $
+#Revision 11.0  1997/11/06 16:23:09  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:12  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:10  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:20:00  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:29  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:12  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:10:31  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:54  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:48  pros
+#General Release 1.0
+#
+.help put_imhistory Apr89 PROS_Library
+NAME
+.in 4
+put_imhistory -  add an "x_hist" history record in an image (imh) file
+.sp
+.in -4
+USAGE
+.in 4
+call put_imhistory(im, task, hist, label)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	im		pointer		image handle
+	task		string		name of task causing change in qpoe
+	hist		string		history string
+	label		string		label for history record
+
+Output Arguments:
+	none
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine put_imhistory add a record of "x_hist" history information to
+an image (imh) file.  The history record is also written to the standard IRAF
+history parameter. The first input argument is a image handle, returned by
+immap. The second input argument is the name of the task that caused a change in
+the image file.  The third argument is a description of the action taking
+place. The fourth argument is a string that specifies a label for the
+history record. A history record need not (and usually does not) have a label.
+
+History information is stored in the header of qpoe and imh files in parameters
+with the names "x_hist<nn>", where <nn> is a number from 1 to 99. (This naming
+convention allows all history records to be unique to 8 characters, as is
+required by current IRAF and FITS conventions.)  History records are added
+successively using put_qphistory or put_imhistory. This is done automatically
+by xray tasks that create images or qpoe files, but can also be done manually
+using the xhadd task in other cases (such as imcopy or imcalc).
+
+A history record typically contains the name of the task that was executed to
+create a change in the file, and a description of the task's action:
+.nf
+
+	task: input_file (params and aux. files) -> output_file
+
+.fi
+For example, consider imcompress, which compresses an image. This task adds
+history records such as:
+.nf
+
+	xhist02 = 'imcompress: foo (compress=4) -> foo4'
+
+.fi
+where, in the given case, the image foo is compressed using a block factor of
+four.
+
+Note, however, that the task input argument need not contain an
+actual task name, and the history need not describe a change to the file,
+since these two values are merely concatenated to create a history record.
+One can therefore write comments into history records. For example:
+.nf
+
+	xhist03 = 'Warning: this file can be hazardous to your health'
+
+.fi
+If a null task string is input, the string "(no task)" is put into the
+history record.  Similarly, if a null hist string is input, the string
+"(no history)" is put into the history record.
+
+History records can be labelled.  The "label" argument
+of put_qphistory specified a tag that is applied to a history record.
+If the label is one of the recognized "special" labels,
+a cross reference parameter is created, if necessary, and updated with 
+the number of that history record. The currently recognized special labels
+are: "vignetting", "exposure", "background", "bkgd", and "user", and the
+cross-reference parameters corresponding to them are:
+"x_vign", "x_exp", "x_bkgd", "x_bkgd", and "x_user".  If a label is not
+recognized as one of these special ones, the history record is still
+labelled, but no corresponding cross-reference parameter is created.
+
+The special labelling is used in two ways.  First of all, disp_qphistory
+and disp_imhistory will selectively display specially labelled history records,
+if requested. For example, suppose the following history records are defined:
+.nf
+
+xhist01 = 'xpr2qp: small.xpr (small.hdr, small.tgr, no aspect file) -> small.qp'
+xhist02 = 'qpcopy: small.qp[pi=(0:5)] (circle 640 513 100) -> goo.qp'
+xhist03 = '*user* (no task): goo only contains photons from sdf source #2'
+
+.fi
+If the input label string to disp_<qp im>history is "history" or NULL,
+all records will be displayed, whereas if the label string is "user"
+(or any abbreviation), only history record #3 will be displayed.
+
+Secondly, note that if a particular type of label has not been added to any
+history record, that cross-reference parameter will not exist.  Thus applications
+tasks need only check for existence of a parameter (using qp_accessf or 
+imaccessf) to see if a special type of correction (e.g. exposure correction
+or vignetting correction, etc.) has been performed on the image.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how put_imhistory is used in conjunction
+with disp_imhistory. Adapted from xhadd, the task adds a history record to
+a file and displays the history.
+.in 8
+.nf
+#
+# XHADD - add a history comment to an image or qpoe file
+#
+
+include "../../lib/qpoe.h"
+include "../../lib/ext.h"
+
+procedure t_xhadd()
+
+char	ifile[SZ_FNAME]			# input file
+char	type[SZ_LINE]			# type of history
+char	task[SZ_LINE]			# task name
+char	hist[SZ_LINE]			# history line
+int	display				# display level
+int	clgeti()			# get cl int
+pointer	fd				# input handle
+int	imaccess()			# check for image existence
+pointer	immap()				# open an image file
+int	qp_access()			# check for qpoe existence
+pointer	qp_open()			# open a qpoe file
+
+begin
+	# get parameters
+	call clgstr("image", ifile, SZ_FNAME)
+	call clgstr("type", type, SZ_FNAME)
+	call clgstr("task", task, SZ_FNAME)
+	call clgstr("history", hist, SZ_LINE)
+	display = clgeti("display")
+	# check for a qpoe file
+	if( qp_access(ifile, 0) == YES ){
+	    # open the qpoe file
+	    fd = qp_open(ifile, READ_WRITE, NULL)
+	    # add the history record
+	    call put_qphistory(fd, task, hist, type)
+	    # display, if necessary
+	    if( display ==1 )
+	        call disp_qphistory(fd, type)
+	    else if( display >1 )
+		call disp_qphistory(fd, "")
+	    # close the qpoe file
+	    call qp_close(fd)
+	}
+	# check for a non-qpoe image file
+	else if( imaccess(ifile, 0, 0) == YES ){
+	    # open the image file
+	    fd = immap(ifile, READ_WRITE, NULL)
+	    # add the history record
+	    call put_imhistory(fd, task, hist, type)
+	    # display, if necessary
+	    if( display ==1 )
+	        call disp_imhistory(fd, type)
+	    else if( display >1 )
+		call disp_imhistory(fd, "")
+	    # close the image file
+	    call imunmap(fd)
+	}
+	# oh well ...
+	else
+	    call error(1, "input qpoe or image file not found")
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+.in -4
+.sp
+SEE ALSO
+.in4
+put_qphistory, put_qphistory, disp_imhistory

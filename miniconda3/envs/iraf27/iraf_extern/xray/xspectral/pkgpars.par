@@ -1,0 +1,234 @@
+#$Header: /home/pros/xray/xspectral/RCS/pkgpars.par,v 11.0 1997/11/06 16:43:47 prosb Exp $
+#$Log: pkgpars.par,v $
+#Revision 11.0  1997/11/06 16:43:47  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:27:49  prosb
+#General Release 2.4
+#
+#Revision 8.1  1995/10/10  07:45:50  wendy
+#Updating release date
+#
+#Revision 8.0  1994/06/27  17:28:12  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:59:19  prosb
+#General Release 2.3
+#
+#Revision 6.4  93/11/12  15:25:44  dennis
+#Corrected default values for ros_pspc_pxx and ros_pspc_pxy.
+#Corrected omission of analogous parameters for Rosat HRI, HEPC1, and LEPC1.
+#
+#Revision 6.3  93/11/05  10:27:58  mo
+#MC	11/5/93		SODART parameter values changes
+#
+#Revision 6.2  93/10/22  20:43:55  dennis
+#Added parameters for DSRI's HEPC1, LEPC1, and default instruments.
+#
+#Revision 6.1  93/08/23  19:01:07  dennis
+#Changed extension for chi-square table file from _chi.tab to _csq.tab, 
+#to avoid naming collision with period's _chi.tab file.
+#
+#Revision 6.0  93/05/24  16:46:41  prosb
+#General Release 2.2
+#
+#Revision 5.3  93/01/20  11:47:21  mo
+#MC	1/20/93		Update to dtmat_36, offar2_6 and pspc channels
+#			3:34
+#
+#Revision 5.2  92/12/14  12:14:42  mo
+#MC	12/14/92	Default back to dtmat_6, due to ROSAT status
+#			report # 41, warning of errors in dtmat_31
+#
+#Revision 5.1  92/12/04  10:50:21  orszak
+#jso - changed the dtmat file to dtmat_31.ieee
+#
+#Revision 5.0  92/10/29  22:47:21  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/07  11:44:41  prosb
+#jso - added a parameter to define the directory for the raymond files.
+#
+#Revision 4.1  92/07/09  11:22:46  prosb
+#jso/mc - changes for the patch 2.0.1.  the pspc default changes were
+#         changed on recommendation of MPE.  the ros_hri_dtmat_15 was
+#         changed so that it works.  the live time corrections were changed
+#         so that corrections are are less then one and when the live time
+#         is calculated it is less then the good time.  these are only
+#         instrument defaults and do not override what is in qpoe file.
+#
+#Revision 4.0  92/04/27  15:26:15  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.6  92/04/24  15:03:17  mo
+#MC	4/24/92		Remove the 15 channel HRI matrix
+#
+#Revision 3.5  92/04/23  17:59:04  mo
+#MC	4/24/92		Remove the HRI 15 channel response file
+#			Not yet ready for prime time
+#
+#Revision 3.4  92/04/15  15:30:25  prosb
+#jso - opps filter is spelled out
+#
+#Revision 3.3  92/04/15  15:25:24  prosb
+#jso - changed the default files for PSPC fitting.
+#
+#Revision 3.2  92/04/03  17:12:50  orszak
+#jso - changes needed for new ROSAT HRI fitting
+#
+#Revision 3.1  91/10/09  15:45:35  orszak
+#jso - change the live time corrections for rosat pspc and hri.
+#      rick and belinda agreed that pspc should be 1.00, 
+#      and larry okayed change of hri to 1.00 but said that this
+#      should be taken from qpoe header.
+#
+#Revision 3.0  91/08/02  01:52:54  prosb
+#General Release 1.1
+#
+#Revision 1.6  91/07/29  11:16:31  prosb
+#jso - correcting of ROSAT radii
+#
+#Revision 1.5  91/07/26  10:11:54  prosb
+#jso - moving the model.hlp file, which is queried by a question mark at
+#      the models prompt, to the doc directory.
+#
+#Revision 1.4  91/07/22  12:55:02  orszak
+#jso - let the public get a chi file.
+#
+#Revision 1.3  91/07/21  16:11:44  mo
+#MC	7/21/91		Changed the rosat filter parameter file name
+#			from filte.ieee -> filter.ieee 
+#			for compatibility with new versions.
+#
+#Revision 1.2  91/07/19  15:44:34  orszak
+#jso - spelling correction
+#
+#Revision 1.1  91/07/16  11:11:00  wendy
+#Initial revision
+#
+#
+#
+#  Parameters for the spectral package
+
+# file information
+observed,s,a,"",,,"observed spectrum [root_obs.tab]"
+model,s,a,"",,,model descriptor or ? for help
+predicted,s,h,"new",,,"predicted preference(nothing|new|append)"
+clobber,b,h,yes,,,"clobber already existing predicted file?"
+chisquare,s,h,".",,,"root name for output file [root_csq.tab]"
+intermediate,s,h,".",,,"root name for output file [root_int.tab]"
+prd_dir,s,h,"",,,"output directory for predicted data files"
+
+# model-specific information
+absorption_type,s,h,"morrison",,,"absorption(morrison mccammon|brown gould)"
+m_and_m_absorption_file,s,h,"xspectraldata$m_m.absorption",,,absorption tables
+b_and_g_absorption_file,s,h,"xspectraldata$b_g.absorption",,,absorption tables
+raymond_directory,s,h,"xspectraldata$",,,directory containing raymond tables
+delta,r,h,3.0,,,"delta"
+norm_delta,r,h,3.5,,,"normalization delta"
+em_delta,r,h,3.5,,,"emission measure delta"
+intrinsic_delta,r,h,4.0,,,"intrinsic nH delta"
+galactic_delta,r,h,4.0,,,"galactic nH delta"
+redshift_delta,r,h,4.0,,,"redshift delta"
+model_help,s,h,"xspectral$doc/model.hlp",,,"help file for models"
+
+# mission-specific information
+#
+# einstein ipc
+#
+spatial_prf_sigmas,s,h,xspectraldata$spatial_prf_sigmas,,,spatial PRF sigmas
+bal_steps,i,h,85,,,Number of BAL tables
+bal_start,r,h,9.0,,,Starting BAL value in tables
+bal_inc,r,h,0.2,,,BAL increment between tables
+bal_epsilon,r,h,0.001,,,Allowed epsilon from table BAL
+psgni,s,h,"xspectraldata$psgni.table",,,"psgni table"
+dgni,s,h,"xspectraldata$dgni.table",,,"dgni table"
+arcfrac,r,h,0.10,0.0,1.0,arcing fraction
+area_data,s,h,"xspectraldata$area.data",,,telescope mirror area data
+ein_ipc_channels,s,h,"3:11",,,"default ipc channels"
+ein_ipc_radius,r,h,3.0,,,"IPC point source radius"
+ein_ipc_ltcor,r,h,0.96,,,"IPC live time correction factor"
+ein_ipc_syserr,s,h,"0.03",,,"IPC systematic error"
+
+# einstein hri
+#
+ein_hri_channels,s,h,"1",,,"default hri channels"
+ein_hri_area,s,h,"xspectraldata$hriarea.3.txt",,,"hri effective area file"
+ein_hri_coma,s,h,"xspectraldata$hricoma.txt",,,"hri coma & scattering file"
+ein_hri_radius,r,h,0.3,,,"HRI point source radius"
+ein_hri_ltcor,r,h,0.95,,,"HRI live time correction factor"
+ein_hri_syserr,s,h,"0.0",,,"HRI systematic error"
+
+# einstein mpc
+#
+mpc_response_datafile,s,h,"xspectraldata$mpc.rsp",,,"MPC response datafile"
+ein_mpc_channels,s,h,"1:8",,,"default mpc channels"
+
+# rosat mission
+#
+ros_hri_channels,s,h,"1",,,"default Rosat hri channels"
+ros_hri_syserr,s,h,"0.0",,,"Rosat HRI systematic error"
+ros_hri_radius,r,h,0.3,,,"Rosat HRI point source radius"
+ros_hri_ltcor,r,h,1.00,,,"Rosat HRI live time correction factor"
+ros_hri_pxx,r,h,0.0001666667,,,"Rosat HRI degrees per instrument x pixel"
+ros_hri_pxy,r,h,0.0001666667,,,"Rosat HRI degrees per instrument y pixel"
+ros_hri_dtmat_1,s,h,"xspectraldata$hri_dtmat_1.ieee",,,"ROSAT HRI detector response"
+ros_hri_dtmat_15,s,h,"xspectraldata$not_yet_available",,,"ROSAT HRI detector response"
+ros_hri_eff_area,s,h,"xspectraldata$hri_eff_area.ieee",,,"ROSAT HRI efective area (on axis)"
+ros_pspc_channels,s,h,"3:34",,,"default pspc channels"
+ros_pspc_syserr,s,h,"0.0",,,"Rosat PSPC systematic error"
+ros_pspc_radius,r,h,2.0,,,"PSPC point source radius"
+ros_pspc_ltcor,r,h,1.00,,,"PSPC live time correction factor"
+ros_pspc_pxx,r,h,0.0002595021,,,"PSPC degrees per instrument x pixel"
+ros_pspc_pxy,r,h,0.0002595021,,,"PSPC degrees per instrument y pixel"
+
+ros_dtmat,s,h,"xspectraldata$dtmat_36.ieee",,,"PSPC detector response"
+ros_egrid,s,h,"xspectraldata$egrid.ieee",,,"PSPC detector response bins"
+ros_offar,s,h,"xspectraldata$offar2_6.ieee",,,"PSPC offaxis histogram co-efficients"
+ros_filte,s,h,"xspectraldata$filter2_5.ieee",,,"PSPC filter area"
+
+
+# Default. 
+def_dtmat,s,h,"",,,"def detector response"
+def_egrid,s,h,"",,,"def detector response bins"
+def_offar,s,h,"",,,"def offaxis histogram co-efficients"
+def_filte,s,h,"",,,"def filter area"
+
+default_channels,s,h,"",,,"default channels"
+def_low_energy,r,h,2.0,,,"def instr low energy"
+def_high_energy,r,h,30,,,"def instr high energy"
+
+# HEPC - DSRI detector on SRG observatory
+# New version of 931103, allan
+srg_hepc1_syserr,s,h,"0.0",,,"SRG HEPC1 systematic error"
+srg_hepc1_radius,r,h,2.0,,,"HEPC1 point source radius"
+srg_hepc1_ltcor,r,h,1.00,,,"HEPC1 live time correction factor"
+srg_hepc1_pxx,r,h,,,,"HEPC1 degrees per instrument x pixel"
+srg_hepc1_pxy,r,h,,,,"HEPC1 degrees per instrument y pixel"
+srg_hepc1_dtmat,s,h,"xspectraldata$hepc1_mc.rmdat",,,"hepc1 response"
+srg_hepc1_egrid,s,h,"xspectraldata$hepc1_mc.egr",,,"hepc1 response bins"
+srg_hepc1_offar,s,h,"xspectraldata$sodart1.ofa",,,"hepc1 offaxis histogram co-efficients"
+srg_hepc1_filte,s,h,"xspectraldata$hepc1.window",,,"hepc1 window transmission"
+
+srg_hepc1_channels,s,h,"1:128",,,"hepc1 channels"
+srg_hepc1_low_energy,r,h,2.0,,,"hepc1 low energy"
+srg_hepc1_high_energy,r,h,30,,,"hepc1 high energy"
+
+# New version of 931005, allan
+srg_lepc1_syserr,s,h,"0.0",,,"SRG LEPC1 systematic error"
+srg_lepc1_radius,r,h,2.0,,,"LEPC1 point source radius"
+srg_lepc1_ltcor,r,h,1.00,,,"LEPC1 live time correction factor"
+srg_lepc1_pxx,r,h,,,,"LEPC1 degrees per instrument x pixel"
+srg_lepc1_pxy,r,h,,,,"LEPC1 degrees per instrument y pixel"
+srg_lepc1_dtmat,s,h,"xspectraldata$lepc1_mc.rmdat",,,"lepc1 response"
+srg_lepc1_egrid,s,h,"xspectraldata$lepc1_mc.egr",,,"lepc1 response bins"
+srg_lepc1_offar,s,h,"xspectraldata$sodart1.ofa",,,"lepc1 offaxis histogram co-efficients"
+srg_lepc1_filte,s,h,"xspectraldata$lepc1.window",,,"lepc1 window transmission"
+srg_lepc1_channels,s,h,"1:128",,,"lepc1 channels"
+srg_lepc1_low_energy,r,h,0.2,,,"lepc1 low energy"
+srg_lepc1_high_energy,r,h,8.,,,"lepc1 high energy"
+
+
+# Other parameters
+#
+helium_to_hydrogen,r,h,0.085,,,"Helium to Hydrogen abundance" 

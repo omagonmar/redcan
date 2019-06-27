@@ -1,0 +1,36 @@
+# $Header: /home/pros/xray/xplot/xexamine/RCS/mkpkg,v 11.0 1997/11/06 16:38:39 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:38:39  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:26:00  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:24:43  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:49:57  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:42:40  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:38:47  prosb
+#General Release 2.1
+#
+#Revision 1.1  92/09/30  12:17:18  janet
+#Initial revision
+#
+#
+# Make control package.
+ 
+$checkout libpkg.a ../
+$update libpkg.a 
+$checkin libpkg.a ../
+$exit
+
+libpkg.a:
+        xexamine.x <ctype.h> <ext.h> <mach.h> <fset.h> "xexamine.h"
+        xesubs.x <gset.h> <imhdr.h> <ctype.h> <ext.h> <mach.h> <fset.h> <rosat.h> <qpoe.h> "xexamine.h"
+        xesetup.x <coords.h> <error.h> <gset.h> <imhdr.h> <rosat.h> <qpoe.h> "xexamine.h"
+        ;

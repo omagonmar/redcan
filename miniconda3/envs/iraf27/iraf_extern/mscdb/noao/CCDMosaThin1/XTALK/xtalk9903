@@ -1,0 +1,10 @@
+# Crosstalk correction file for NOAO CCDMosaThin1.
+
+im1	im2	0.00116
+im2
+im3	im4	0.00289
+im4
+im5
+im6	im5	0.00153
+im7
+im8	im7	0.00062

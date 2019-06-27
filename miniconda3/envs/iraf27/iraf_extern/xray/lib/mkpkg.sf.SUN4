@@ -1,0 +1,16 @@
+# Mkpkg special file list for Sun/IRAF, Sun-4.
+
+# All files needing special processing for the local host operating system,
+# e.g., to permit host dependent optimization or to work around compiler bugs,
+# should be listed here.
+
+# Files optimized for the local host system.
+# -----------------------------------------
+
+# (no such files at present for the VMS VAX/Fortran compiler).
+
+# Files requiring special compilation due to host compiler bugs.
+# -------------------------------------------------------------
+
+# (no such files at present for the VMS VAX/Fortran compiler).
+

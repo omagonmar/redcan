@@ -1,0 +1,66 @@
+#$Header:
+#$Log:
+#
+.help snrmap Dec93 xray.xspatial.detect
+.ih
+NAME
+snrmap -- Generate a net counts signal-to-noise map at sub-cell resolution 
+.ih
+USAGE
+snrmap image snrimg 
+.ih
+DESCRIPTION
+
+SNRMAP generates an image of net counts signal-to-noise at detect sub-cell
+resolution from an input image of raw counts at the same resolution (the
+output of cellmap).   
+
+.ih
+PARAMETERS
+.ls image = ""       	prompt = Input xray image 
+
+Required Input Image at detect subcell resolution.  Output of CELLMAP.
+.le
+.ls snrimg = ""       	prompt = Output snrmap image [root_snr.imh]
+
+Required Output filename.  SNR image map at detect subcell resolution.
+Input to LPEAKS.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output Table file can be
+overwritten, if it already exists.
+
+.ih
+EXAMPLES
+1.  Generate a signal-to-noise ratio map data at detect
+    sub-cell resolution.
+
+.nf
+
+de> snrmap
+Input xray image : harlac12
+Output snrmap image [root_snr.imh]: .
+
+Convolving 3x3 cells
+
+Convolving 5x5 cells
+
+Calculating Snrmap with equation:
+
+snrmap=(1.7777*cell3-frame)/((1.7777**2*cell3+oframe)**0.5)
+
+Writing Snrmap Image:
+./harlac12_snr.imh
+.fi
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation giving an overview of the detect package and run order of
+tasks. (\fIhelp using_detect\fR)
+
+Documentation on the detect algorithms and philosophy along with 
+limitations in (\fIhelp explain_detect\fR).
+.endhelp
+

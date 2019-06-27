@@ -1,0 +1,2190 @@
+!clear;date
+[H[2JFri May 18 13:34:33 EDT 1990
+-------------- LIB/TBTABLES ----------------
+warning: library `libtbtables.a' not found
+xc -c -c -F -g -q -p xray tbbadf.x tbbaln.x tbbeqd.x tbbftp.x tbbnll.x tbbptf.x tbbtyp.x tbcadd.x tbcchg.x tbcdef.x tbcfmt.x tbcfnd.x tbcftg.x tbcftl.x tbcftp.x tbcgt.x tbcigi.x tbcigt.x tbcinf.x tbcnam.x tbcnit.x tbcnum.x tbcpt.x tbcrcd.x tbctpe.x tbcwcd.x tbdsav.x tbegp.x tbegt.x tbeoff.x tbepp.x tbept.x tbhad.x tbhanp.x tbhcal.x tbhdel.x tbhfkr.x tbhfkw.x tbhgnp.x tbhgt.x tbhisc.x tbhkeq.x tbhpnp.x tbhpt.x tbhrpr.x tbhwpr.x tbpset.x tbpsta.x tbrchg.x tbrcpy.x tbrcsc.x tbrdel.x tbrgt.x tbrnll.x tbrpt.x
+tbbadf.x:
+   tbbadf:
+tbbaln.x:
+   tbbaln:
+tbbeqd.x:
+   tbbeqd:
+tbbftp.x:
+   tbbftp:
+tbbnll.x:
+   tbbnll:
+tbbptf.x:
+   tbbptf:
+tbbtyp.x:
+   tbbtyp:
+tbcadd.x:
+   tbcadd:
+tbcchg.x:
+   tbcchg:
+tbcdef.x:
+   tbcdef:
+tbcfmt.x:
+   tbcfmt:
+tbcfnd.x:
+   tbcfnd:
+tbcftg.x:
+   tbcftg:
+tbcftl.x:
+   tbcftl:
+tbcftp.x:
+   tbcftp:
+tbcgt.x:
+   tbcgtb:
+   tbcgtd:
+   tbcgti:
+   tbcgtr:
+   tbcgtt:
+tbcigi.x:
+   tbcigi:
+tbcigt.x:
+   tbcigt:
+tbcinf.x:
+   tbcinf:
+tbcnam.x:
+   tbcnam:
+tbcnit.x:
+   tbcnit:
+tbcnum.x:
+   tbcnum:
+tbcpt.x:
+   tbcptb:
+   tbcptd:
+   tbcpti:
+   tbcptr:
+   tbcptt:
+tbcrcd.x:
+   tbcrcd:
+tbctpe.x:
+   tbctpe:
+tbcwcd.x:
+   tbcwcd:
+tbdsav.x:
+   tbdsav:
+   tbdres:
+   tbdfre:
+tbegp.x:
+   tbegpb:
+   tbegpd:
+   tbegpi:
+   tbegpr:
+   tbegpt:
+tbegt.x:
+   tbegtb:
+   tbegtd:
+   tbegti:
+   tbegtr:
+   tbegtt:
+tbeoff.x:
+   tbeoff:
+tbepp.x:
+   tbeppb:
+   tbeppd:
+   tbeppi:
+   tbeppr:
+   tbeppt:
+tbept.x:
+   tbeptb:
+   tbeptd:
+   tbepti:
+   tbeptr:
+   tbeptt:
+tbhad.x:
+   tbhadb:
+   tbhadd:
+   tbhadi:
+   tbhadr:
+   tbhadt:
+tbhanp.x:
+   tbhanp:
+tbhcal.x:
+   tbhcal:
+tbhdel.x:
+   tbhdel:
+tbhfkr.x:
+   tbhfkr:
+tbhfkw.x:
+   tbhfkw:
+tbhgnp.x:
+   tbhgnp:
+tbhgt.x:
+   tbhgtb:
+   tbhgtd:
+   tbhgti:
+   tbhgtr:
+   tbhgtt:
+tbhisc.x:
+   tbhisc:
+tbhkeq.x:
+   tbhkeq:
+tbhpnp.x:
+   tbhpnp:
+tbhpt.x:
+   tbhptb:
+   tbhptd:
+   tbhpti:
+   tbhptr:
+   tbhptt:
+tbhrpr.x:
+   tbhrpr:
+tbhwpr.x:
+   tbhwpr:
+tbpset.x:
+   tbpset:
+tbpsta.x:
+   tbpsta:
+tbrchg.x:
+   tbrchg:
+tbrcpy.x:
+   tbrcpy:
+tbrcsc.x:
+   tbrcsc:
+tbrdel.x:
+   tbrdel:
+tbrgt.x:
+   tbrgtb:
+   tbrgtd:
+   tbrgti:
+   tbrgtr:
+   tbrgtt:
+tbrnll.x:
+   tbrnll:
+tbrpt.x:
+   tbrptb:
+   tbrptd:
+   tbrpti:
+   tbrptr:
+   tbrptt:
+tbbadf.f:
+tbbadf.f:
+	tbbadf:
+tbbaln.f:
+tbbaln.f:
+	tbbaln:
+tbbeqd.f:
+tbbeqd.f:
+	tbbeqd:
+tbbftp.f:
+tbbftp.f:
+	tbbftp:
+tbbnll.f:
+tbbnll.f:
+	tbbnll:
+tbbptf.f:
+tbbptf.f:
+	tbbptf:
+tbbtyp.f:
+tbbtyp.f:
+	tbbtyp:
+tbcadd.f:
+tbcadd.f:
+	tbcadd:
+tbcchg.f:
+tbcchg.f:
+	tbcchg:
+tbcdef.f:
+tbcdef.f:
+	tbcdef:
+tbcfmt.f:
+tbcfmt.f:
+	tbcfmt:
+tbcfnd.f:
+tbcfnd.f:
+	tbcfnd:
+tbcftg.f:
+tbcftg.f:
+	tbcftg:
+tbcftl.f:
+tbcftl.f:
+	tbcftl:
+tbcftp.f:
+tbcftp.f:
+	tbcftp:
+tbcgt.f:
+tbcgt.f:
+	tbcgtb:
+	tbcgtd:
+	tbcgti:
+	tbcgtr:
+	tbcgtt:
+tbcigi.f:
+tbcigi.f:
+	tbcigi:
+tbcigt.f:
+tbcigt.f:
+	tbcigt:
+tbcinf.f:
+tbcinf.f:
+	tbcinf:
+tbcnam.f:
+tbcnam.f:
+	tbcnam:
+tbcnit.f:
+tbcnit.f:
+	tbcnit:
+tbcnum.f:
+tbcnum.f:
+	tbcnum:
+tbcpt.f:
+tbcpt.f:
+	tbcptb:
+	tbcptd:
+	tbcpti:
+	tbcptr:
+	tbcptt:
+tbcrcd.f:
+tbcrcd.f:
+	tbcrcd:
+tbctpe.f:
+tbctpe.f:
+	tbctpe:
+tbcwcd.f:
+tbcwcd.f:
+	tbcwcd:
+tbdsav.f:
+tbdsav.f:
+	tbdsav:
+	tbdres:
+	tbdfre:
+tbegp.f:
+tbegp.f:
+	tbegpb:
+	tbegpd:
+	tbegpi:
+	tbegpr:
+	tbegpt:
+tbegt.f:
+tbegt.f:
+	tbegtb:
+	tbegtd:
+	tbegti:
+	tbegtr:
+	tbegtt:
+tbeoff.f:
+tbeoff.f:
+	tbeoff:
+tbepp.f:
+tbepp.f:
+	tbeppb:
+	tbeppd:
+	tbeppi:
+	tbeppr:
+	tbeppt:
+tbept.f:
+tbept.f:
+	tbeptb:
+	tbeptd:
+	tbepti:
+	tbeptr:
+	tbeptt:
+tbhad.f:
+tbhad.f:
+	tbhadb:
+	tbhadd:
+	tbhadi:
+	tbhadr:
+	tbhadt:
+tbhanp.f:
+tbhanp.f:
+	tbhanp:
+tbhcal.f:
+tbhcal.f:
+	tbhcal:
+tbhdel.f:
+tbhdel.f:
+	tbhdel:
+tbhfkr.f:
+tbhfkr.f:
+	tbhfkr:
+tbhfkw.f:
+tbhfkw.f:
+	tbhfkw:
+tbhgnp.f:
+tbhgnp.f:
+	tbhgnp:
+tbhgt.f:
+tbhgt.f:
+	tbhgtb:
+	tbhgtd:
+	tbhgti:
+	tbhgtr:
+	tbhgtt:
+tbhisc.f:
+tbhisc.f:
+	tbhisc:
+tbhkeq.f:
+tbhkeq.f:
+	tbhkeq:
+tbhpnp.f:
+tbhpnp.f:
+	tbhpnp:
+tbhpt.f:
+tbhpt.f:
+	tbhptb:
+	tbhptd:
+	tbhpti:
+	tbhptr:
+	tbhptt:
+tbhrpr.f:
+tbhrpr.f:
+	tbhrpr:
+tbhwpr.f:
+tbhwpr.f:
+	tbhwpr:
+tbpset.f:
+tbpset.f:
+	tbpset:
+tbpsta.f:
+tbpsta.f:
+	tbpsta:
+tbrchg.f:
+tbrchg.f:
+	tbrchg:
+tbrcpy.f:
+tbrcpy.f:
+	tbrcpy:
+tbrcsc.f:
+tbrcsc.f:
+	tbrcsc:
+tbrdel.f:
+tbrdel.f:
+	tbrdel:
+tbrgt.f:
+tbrgt.f:
+	tbrgtb:
+	tbrgtd:
+	tbrgti:
+	tbrgtr:
+	tbrgtt:
+tbrnll.f:
+tbrnll.f:
+	tbrnll:
+tbrpt.f:
+tbrpt.f:
+	tbrptb:
+	tbrptd:
+	tbrpti:
+	tbrptr:
+	tbrptt:
+xc -c -c -F -g -q -p xray tbrsft.x tbrswp.x tbrudf.x tbtacc.x tbtbod.x tbtchs.x tbtclo.x tbtcpy.x tbtcre.x tbtdel.x tbtext.x tbtflu.x tbtfst.x tbtnam.x tbtopn.x tbtren.x tbtrsi.x tbtscd.x tbtscu.x tbtszd.x tbtwer.x tbtwsi.x tbwopn.x tbxcg.x tbxclo.x tbxcp.x tbxncn.x tbxnew.x tbxnll.x tbxoff.x tbxrg.x tbxrp.x tbxscp.x tbxsft.x tbxsiz.x tbxudf.x tbxwnc.x tbxwsk.x tbycg.x tbyclo.x tbycp.x tbyncn.x tbynew.x tbynll.x tbyoff.x tbyrg.x tbyrp.x tbyscn.x tbyscp.x tbysft.x tbysiz.x tbytsz.x tbyudf.x tbywnc.x
+tbrsft.x:
+   tbrsft:
+tbrswp.x:
+   tbrswp:
+tbrudf.x:
+   tbrudf:
+tbtacc.x:
+   tbtacc:
+tbtbod.x:
+   tbtbod:
+tbtchs.x:
+   tbtchs:
+tbtclo.x:
+   tbtclo:
+tbtcpy.x:
+   tbtcpy:
+tbtcre.x:
+   tbtcre:
+tbtdel.x:
+   tbtdel:
+tbtext.x:
+   tbtext:
+tbtflu.x:
+   tbtflu:
+tbtfst.x:
+   tbtfst:
+tbtnam.x:
+   tbtnam:
+tbtopn.x:
+   tbtopn:
+tbtren.x:
+   tbtren:
+tbtrsi.x:
+   tbtrsi:
+tbtscd.x:
+   tbtscd:
+tbtscu.x:
+   tbtscu:
+tbtszd.x:
+   tbtszd:
+tbtwer.x:
+   tbtwer:
+tbtwsi.x:
+   tbtwsi:
+tbwopn.x:
+   tbwopn:
+tbxcg.x:
+   tbxcgb:
+   tbxcgd:
+   tbxcgi:
+   tbxcgr:
+   tbxcgt:
+tbxclo.x:
+   tbxclo:
+tbxcp.x:
+   tbxcpb:
+   tbxcpd:
+   tbxcpi:
+   tbxcpr:
+   tbxcpt:
+tbxncn.x:
+   tbxncn:
+tbxnew.x:
+   tbxnew:
+tbxnll.x:
+   tbxnll:
+tbxoff.x:
+   tbxoff:
+tbxrg.x:
+   tbxrgb:
+   tbxrgd:
+   tbxrgi:
+   tbxrgr:
+   tbxrgt:
+tbxrp.x:
+   tbxrpb:
+   tbxrpd:
+   tbxrpi:
+   tbxrpr:
+   tbxrpt:
+   tbbcpy:
+tbxscp.x:
+   tbxscp:
+tbxsft.x:
+   tbxsft:
+tbxsiz.x:
+   tbxsiz:
+tbxudf.x:
+   tbxudf:
+tbxwnc.x:
+   tbxwnc:
+tbxwsk.x:
+   tbxwsk:
+tbycg.x:
+   tbycgb:
+   tbycgd:
+   tbycgi:
+   tbycgr:
+   tbycgt:
+tbyclo.x:
+   tbyclo:
+tbycp.x:
+   tbycpb:
+   tbycpd:
+   tbycpi:
+   tbycpr:
+   tbycpt:
+tbyncn.x:
+   tbyncn:
+tbynew.x:
+   tbynew:
+tbynll.x:
+   tbynll:
+tbyoff.x:
+   tbyoff:
+tbyrg.x:
+   tbyrgb:
+   tbyrgd:
+   tbyrgi:
+   tbyrgr:
+   tbyrgt:
+tbyrp.x:
+   tbyrpb:
+   tbyrpd:
+   tbyrpi:
+   tbyrpr:
+   tbyrpt:
+tbyscn.x:
+   tbyscn:
+tbyscp.x:
+   tbyscp:
+tbysft.x:
+   tbysft:
+tbysiz.x:
+   tbysiz:
+tbytsz.x:
+   tbytsz:
+tbyudf.x:
+   tbyudf:
+tbywnc.x:
+   tbywnc:
+tbrsft.f:
+tbrsft.f:
+	tbrsft:
+tbrswp.f:
+tbrswp.f:
+	tbrswp:
+tbrudf.f:
+tbrudf.f:
+	tbrudf:
+tbtacc.f:
+tbtacc.f:
+	tbtacc:
+tbtbod.f:
+tbtbod.f:
+	tbtbod:
+tbtchs.f:
+tbtchs.f:
+	tbtchs:
+tbtclo.f:
+tbtclo.f:
+	tbtclo:
+tbtcpy.f:
+tbtcpy.f:
+	tbtcpy:
+tbtcre.f:
+tbtcre.f:
+	tbtcre:
+tbtdel.f:
+tbtdel.f:
+	tbtdel:
+tbtext.f:
+tbtext.f:
+	tbtext:
+tbtflu.f:
+tbtflu.f:
+	tbtflu:
+tbtfst.f:
+tbtfst.f:
+	tbtfst:
+tbtnam.f:
+tbtnam.f:
+	tbtnam:
+tbtopn.f:
+tbtopn.f:
+	tbtopn:
+tbtren.f:
+tbtren.f:
+	tbtren:
+tbtrsi.f:
+tbtrsi.f:
+	tbtrsi:
+tbtscd.f:
+tbtscd.f:
+	tbtscd:
+tbtscu.f:
+tbtscu.f:
+	tbtscu:
+tbtszd.f:
+tbtszd.f:
+	tbtszd:
+tbtwer.f:
+tbtwer.f:
+	tbtwer:
+tbtwsi.f:
+tbtwsi.f:
+	tbtwsi:
+tbwopn.f:
+tbwopn.f:
+	tbwopn:
+tbxcg.f:
+tbxcg.f:
+	tbxcgb:
+	tbxcgd:
+	tbxcgi:
+	tbxcgr:
+	tbxcgt:
+tbxclo.f:
+tbxclo.f:
+	tbxclo:
+tbxcp.f:
+tbxcp.f:
+	tbxcpb:
+	tbxcpd:
+	tbxcpi:
+	tbxcpr:
+	tbxcpt:
+tbxncn.f:
+tbxncn.f:
+	tbxncn:
+tbxnew.f:
+tbxnew.f:
+	tbxnew:
+tbxnll.f:
+tbxnll.f:
+	tbxnll:
+tbxoff.f:
+tbxoff.f:
+	tbxoff:
+tbxrg.f:
+tbxrg.f:
+	tbxrgb:
+	tbxrgd:
+	tbxrgi:
+	tbxrgr:
+	tbxrgt:
+tbxrp.f:
+tbxrp.f:
+	tbxrpb:
+	tbxrpd:
+	tbxrpi:
+	tbxrpr:
+	tbxrpt:
+	tbbcpy:
+tbxscp.f:
+tbxscp.f:
+	tbxscp:
+tbxsft.f:
+tbxsft.f:
+	tbxsft:
+tbxsiz.f:
+tbxsiz.f:
+	tbxsiz:
+tbxudf.f:
+tbxudf.f:
+	tbxudf:
+tbxwnc.f:
+tbxwnc.f:
+	tbxwnc:
+tbxwsk.f:
+tbxwsk.f:
+	tbxwsk:
+tbycg.f:
+tbycg.f:
+	tbycgb:
+	tbycgd:
+	tbycgi:
+	tbycgr:
+	tbycgt:
+tbyclo.f:
+tbyclo.f:
+	tbyclo:
+tbycp.f:
+tbycp.f:
+	tbycpb:
+	tbycpd:
+	tbycpi:
+	tbycpr:
+	tbycpt:
+tbyncn.f:
+tbyncn.f:
+	tbyncn:
+tbynew.f:
+tbynew.f:
+	tbynew:
+tbynll.f:
+tbynll.f:
+	tbynll:
+tbyoff.f:
+tbyoff.f:
+	tbyoff:
+tbyrg.f:
+tbyrg.f:
+	tbyrgb:
+	tbyrgd:
+	tbyrgi:
+	tbyrgr:
+	tbyrgt:
+tbyrp.f:
+tbyrp.f:
+	tbyrpb:
+	tbyrpd:
+	tbyrpi:
+	tbyrpr:
+	tbyrpt:
+tbyscn.f:
+tbyscn.f:
+	tbyscn:
+tbyscp.f:
+tbyscp.f:
+	tbyscp:
+tbysft.f:
+tbysft.f:
+	tbysft:
+tbysiz.f:
+tbysiz.f:
+	tbysiz:
+tbytsz.f:
+tbytsz.f:
+	tbytsz:
+tbyudf.f:
+tbyudf.f:
+	tbyudf:
+tbywnc.f:
+tbywnc.f:
+	tbywnc:
+ar r /pros/xray/lib/libtbtables.a tbbadf.o tbbaln.o tbbeqd.o tbbftp.o tbbnll.o tbbptf.o tbbtyp.o tbcadd.o tbcchg.o tbcdef.o tbcfmt.o tbcfnd.o tbcftg.o tbcftl.o tbcftp.o tbcgt.o tbcigi.o tbcigt.o tbcinf.o tbcnam.o tbcnit.o tbcnum.o tbcpt.o tbcrcd.o tbctpe.o tbcwcd.o tbdsav.o tbegp.o tbegt.o tbeoff.o tbepp.o tbept.o tbhad.o tbhanp.o tbhcal.o tbhdel.o tbhfkr.o tbhfkw.o tbhgnp.o tbhgt.o tbhisc.o tbhkeq.o tbhpnp.o tbhpt.o tbhrpr.o tbhwpr.o tbpset.o tbpsta.o tbrchg.o tbrcpy.o tbrcsc.o tbrdel.o tbrgt.o tbrnll.o
+ar: creating /pros/xray/lib/libtbtables.a
+ar r /pros/xray/lib/libtbtables.a tbrpt.o tbrsft.o tbrswp.o tbrudf.o tbtacc.o tbtbod.o tbtchs.o tbtclo.o tbtcpy.o tbtcre.o tbtdel.o tbtext.o tbtflu.o tbtfst.o tbtnam.o tbtopn.o tbtren.o tbtrsi.o tbtscd.o tbtscu.o tbtszd.o tbtwer.o tbtwsi.o tbwopn.o tbxcg.o tbxclo.o tbxcp.o tbxncn.o tbxnew.o tbxnll.o tbxoff.o tbxrg.o tbxrp.o tbxscp.o tbxsft.o tbxsiz.o tbxudf.o tbxwnc.o tbxwsk.o tbycg.o tbyclo.o tbycp.o tbyncn.o tbynew.o tbynll.o tbyoff.o tbyrg.o tbyrp.o tbyscn.o tbyscp.o tbysft.o tbysiz.o tbytsz.o tbyudf.o
+ar r /pros/xray/lib/libtbtables.a tbywnc.o
+ranlib libtbtables.a
+Updated 109 files in libtbtables.a
+-------------- LIB/COORDS ----------------
+check out file `libpros.a = /pros/xray/lib/libpros.a'
+warning: library `libpros.a' not found
+xc -c -c -F -g -q -p xray precess.x coord_eq.f coord_ec.f coord_gal.f mat_arith.f mat_vec.f misc.f
+precess.x:
+   precess:
+coord_eq.f:
+coord_eq.f:
+	cdmb2j:
+	cdmj2b:
+	cdb2j:
+	cdj2b:
+	dpmot:
+	cprecb:
+	cprecj:
+	cprecm:
+	addetrms:
+	getetrms:
+	subetrms:
+coord_ec.f:
+coord_ec.f:
+	cre2j:
+	crj2e:
+	cdj2e:
+	cde2j:
+	ecmat:
+coord_gal.f:
+coord_gal.f:
+	cdb2g:
+	cdj2g:
+	cdg2j:
+	cdg2b:
+	cdg2s:
+	cds2g:
+mat_arith.f:
+mat_arith.f:
+	irmod:
+	rrmod:
+	drmod:
+	intup:
+	frac:
+	dfrac:
+	sexin:
+	sexout:
+	dsexin:
+	dsexout:
+	sexfin:
+	sexfout:
+	dsexfin:
+	dsexfout:
+	radin:
+	radout:
+	dradin:
+	dradout:
+	dcirc1r:
+	dcircr:
+	circ1r:
+	circr:
+	dcirc1:
+	dcirc:
+	circ1:
+	circ:
+	round:
+	qrlap:
+	qdrlap:
+	qclip:
+	qdclip:
+	order:
+	dorder:
+mat_vec.f:
+mat_vec.f:
+	ddot:
+	dnorm:
+	dcross:
+	dvec:
+	dpolar:
+	dpolarll:
+	dunitll:
+	dpolarllr:
+	dunitllr:
+	dpolar6:
+	dvec6:
+	dprex:
+	dpostx:
+	dmmult:
+	dmaxmod:
+	dvcopy:
+	dvzero:
+	dvadd:
+	dvcmult:
+	dvunit:
+	rdot:
+	norm:
+	cross:
+	vec:
+	polar:
+	polarll:
+	unitll:
+	polarllr:
+	unitllr:
+	polar6:
+	vec6:
+	prex:
+	postx:
+	mmult:
+	rmaxmod:
+	vcopy:
+	vzero:
+	vadd:
+	vcmult:
+	vunit:
+misc.f:
+misc.f:
+	caltje:
+	caltbe:
+	calbe:
+	cal_je:
+	cal_jc:
+	argd:
+	dargd:
+	error:
+precess.f:
+	preces:
+"precess.f", line 152: Warning: alignment of "ciepoh" may cause performance degradation
+ar r /pros/xray/lib/coords/libpros.a precess.o coord_eq.o coord_ec.o coord_gal.o mat_arith.o mat_vec.o misc.o
+ar: creating /pros/xray/lib/coords/libpros.a
+ranlib libpros.a
+Updated 7 files in libpros.a
+check file `libpros.a' into `..'
+-------------- LIB/PROS ----------------
+check out file `libpros.a = /pros/xray/lib/libpros.a'
+xc -c -c -F -g -q -p xray arcsec.x asp.x cvt.x dg.x bal.x dispbufs.x dispbufi.x dispbufl.x dispbufr.x dispbufd.x dispbufx.x dispqphead.x error.x evsize.x fits_cards.x fits_params.x fits_wpixels.x fitsput.x fnames.x getimblk.x getplims.x gti.x miistruct.x missions.x mskcnts.x mskdisp.x mskg2ss.x mskg2si.x mskg2sl.x mskg2sr.x mskg2sd.x mskg2sx.x mskopen.x newimcopy.x plhead.x qpevent.x qpmask.x qpwcs.x rota.x skypix.x tbhead.x tgr.x time.x times.x tsh.x vax.x xarea.x xcmask.x xhead.x xhist.x xmask.x
+arcsec.x:
+   arcsec_m2:
+   arcsec_ct:
+   arcsec_qp:
+   arcsec_qpio:
+   arcsec_im:
+asp.x:
+   asp_apply:
+   asp_deapply:
+   asp_invmatrix:
+   asp_onlyrot:
+   asp_tranrot:
+   asp_transmatx:
+   asp_rotcoords:
+   asp_appbs:
+cvt.x:
+   cvti2:
+   cvti4:
+   cvtr4:
+   cvtr8:
+   cvti6:
+dg.x:
+   dgi2:
+   dgi4:
+   dgpieces:
+   dgr4:
+   dgr8:
+   dgi6:
+   i6r8:
+bal.x:
+   get_qpbal:
+   put_qpbal:
+   disp_qpbal:
+dispbufs.x:
+   dispbufs:
+dispbufi.x:
+   dispbufi:
+dispbufl.x:
+   dispbufl:
+dispbufr.x:
+   dispbufr:
+dispbufd.x:
+   dispbufd:
+dispbufx.x:
+   dispbufx:
+dispqphead.x:
+   disp_qphead:
+error.x:
+   errstr:
+   errors:
+   errori:
+   errorl:
+   errorr:
+   errord:
+   errorx:
+evsize.x:
+   get_evsize:
+   get_datasize:
+   get_datatyp:
+fits_cards.x:
+   wft_standard_card:
+   wft_option_card:
+   wft_history_card:
+   wft_unknown_card:
+   tab_standard_card:
+   tab_column_card:
+   chgfmt:
+   wft_last_card:
+fits_params.x:
+   wft_encodeb:
+   wft_encodei:
+   wft_encodel:
+   wft_encoder:
+   wft_encoded:
+   wft_encode_axis:
+   wft_encodec:
+   wft_encode_blank:
+   wft_encode_date:
+   wft_fits_card:
+fits_wpixels.x:
+   wft_init_write_pixels:
+fitsput.x:
+   fts_putb:
+   fts_puti:
+   fts_putr:
+   fts_putd:
+   fts_putc:
+fnames.x:
+   rootname:
+   clobbername:
+   finalname:
+   chngextname:
+   addextname:
+   fn_fullextname:
+   fn_fillext:
+   fn_getexttype:
+   abbrev:
+   tempname:
+   outname:
+getimblk.x:
+   get_imblk:
+getplims.x:
+   get_plims:
+gti.x:
+   get_qpgti:
+   put_qpgti:
+   disp_qpgti:
+miistruct.x:
+   miistruct:
+missions.x:
+   mis_itoc:
+   inst_itoc:
+   mis_ctoi:
+   inst_ctoi:
+mskcnts.x:
+   msk_cnts:
+mskdisp.x:
+   msk_disp:
+mskg2ss.x:
+   msk_g2ss:
+mskg2si.x:
+   msk_g2si:
+mskg2sl.x:
+   msk_g2sl:
+mskg2sr.x:
+   msk_g2sr:
+mskg2sd.x:
+   msk_g2sd:
+mskg2sx.x:
+   msk_g2sx:
+mskopen.x:
+   msk_pmopen:
+   msk_imopen:
+   msk_qpopen:
+   msk_plopen:
+   msk_open:
+newimcopy.x:
+   new_imcopy:
+plhead.x:
+   enc_plhead:
+   dec_plhead:
+   disp_plhead:
+   enc_plnote:
+   dec_plnote:
+qpevent.x:
+   disp_qpevent:
+qpmask.x:
+   set_qpmask:
+qpwcs.x:
+   put_qpwcs:
+   put_imwcs:
+   enc_ctype:
+   get_qpwcs:
+   get_iowcs:
+   dec_ctype:
+   get_imwcs:
+rota.x:
+   rota_m2:
+   rota_ct:
+   rota_qp:
+   rota_qpio:
+   rota_im:
+skypix.x:
+   skypix_qp:
+   skypix_qpio:
+   skypix_im:
+   pixsky_qp:
+   pixsky_qpio:
+   pixsky_im:
+tbhead.x:
+   put_tbh:
+tgr.x:
+   get_qptgr:
+   put_qptgr:
+   disp_qptgr:
+   tgr_notes:
+   good_qptgr:
+time.x:
+   sclk_to_ut:
+   mutjd:
+   mjdut:
+   get_qprefclk:
+   calc_qpmjdtime:
+times.x:
+   get_goodtimes:
+tsh.x:
+   get_qptsh:
+   put_qptsh:
+   disp_qptsh:
+   get_tgroup:
+vax.x:
+   vaxi2:
+   vaxi4:
+   vaxpieces:
+   vaxr4:
+   vaxr8:
+   vaxi6:
+xarea.x:
+   put_qparea:
+   get_qparea:
+xcmask.x:
+   update_qpcomposite:
+   disp_qpcomposite:
+xhead.x:
+   is_qphead:
+   is_imhead:
+   is_xhead:
+   get_qphead:
+   put_qphead:
+   wqph0:
+   wqphwcs:
+   wqph1:
+   wqph2:
+   wqph3:
+   wqph4:
+   wqph5:
+   x_geti:
+   x_getr:
+   x_getd:
+   x_gstr:
+   x_accessf:
+   x_addf:
+   x_puti:
+   x_putr:
+   x_putd:
+   x_pstr:
+   xfitsname:
+xhist.x:
+   put_qphistory:
+   put_imhistory:
+   put_history:
+   disp_qphistory:
+   disp_imhistory:
+   disp_history:
+   disp_sphistory:
+   disp_allhistory:
+   xhlookup:
+xmask.x:
+   put_qpmask:
+   put_immask:
+   put_mask:
+   disp_qpmask:
+   disp_immask:
+   disp_mask:
+arcsec.f:
+arcsec.f:
+	arcse2:
+	arcset:
+	arcsep:
+	arcseo:
+	arcsem:
+asp.f:
+asp.f:
+	aspapy:
+	aspdey:
+	aspinx:
+	aspont:
+	asptrt:
+	asptrx:
+	aspros:
+	aspaps:
+cvt.f:
+cvt.f:
+	cvti2:
+	cvti4:
+	cvtr4:
+	cvtr8:
+	cvti6:
+dg.f:
+dg.f:
+	dgi2:
+	dgi4:
+	dgpies:
+	dgr4:
+	dgr8:
+	dgi6:
+	i6r8:
+bal.f:
+bal.f:
+	getqpl:
+	putqpl:
+	dispql:
+dispbufs.f:
+dispbufs.f:
+	dispbs:
+dispbufi.f:
+dispbufi.f:
+	dispbi:
+dispbufl.f:
+dispbufl.f:
+	dispbl:
+dispbufr.f:
+dispbufr.f:
+	dispbr:
+dispbufd.f:
+dispbufd.f:
+	dispbd:
+dispbufx.f:
+dispbufx.f:
+	dispbx:
+dispqphead.f:
+dispqphead.f:
+	dispqd:
+       entry 	dispid:
+error.f:
+error.f:
+	errstr:
+	errors:
+	errori:
+	errorl:
+	errorr:
+	errord:
+	errorx:
+evsize.f:
+evsize.f:
+	geteve:
+	getdae:
+	getdap:
+fits_cards.f:
+fits_cards.f:
+	wftstd:
+	wftopd:
+	wfthid:
+	wftund:
+	tabstd:
+	tabcod:
+	chgfmt:
+	wftlad:
+fits_params.f:
+fits_params.f:
+	wftenb:
+	wfteni:
+	wftenl:
+	wftenr:
+	wftend:
+	wftens:
+	wftenc:
+	wftenk:
+	wftene:
+	wftfid:
+fits_wpixels.f:
+fits_wpixels.f:
+	wftins:
+       entry 	wftwrs:
+       entry 	wftwrd:
+fitsput.f:
+fitsput.f:
+	ftspub:
+	ftspui:
+	ftspur:
+	ftspud:
+	ftspuc:
+fnames.f:
+fnames.f:
+	rootne:
+	clobbe:
+	finale:
+	chngee:
+	addexe:
+	fnfule:
+	fnfilt:
+	fngete:
+	abbrev:
+	tempne:
+	outnae:
+getimblk.f:
+getimblk.f:
+	getimk:
+getplims.f:
+getplims.f:
+	getpls:
+gti.f:
+gti.f:
+	getqpi:
+	putqpi:
+	dispqi:
+miistruct.f:
+miistruct.f:
+	miistt:
+       entry 	miiust:
+missions.f:
+missions.f:
+	misitc:
+	instic:
+	miscti:
+	instci:
+mskcnts.f:
+mskcnts.f:
+	mskcns:
+mskdisp.f:
+mskdisp.f:
+	mskdip:
+mskg2ss.f:
+mskg2ss.f:
+	mskg2s:
+mskg2si.f:
+mskg2si.f:
+	mskg2i:
+mskg2sl.f:
+mskg2sl.f:
+	mskg2l:
+mskg2sr.f:
+mskg2sr.f:
+	mskg2r:
+mskg2sd.f:
+mskg2sd.f:
+	mskg2d:
+mskg2sx.f:
+mskg2sx.f:
+	mskg2x:
+mskopen.f:
+mskopen.f:
+	mskpmn:
+	mskimn:
+	mskqpn:
+	mskpln:
+	mskopn:
+newimcopy.f:
+newimcopy.f:
+	newimy:
+plhead.f:
+plhead.f:
+	encpld:
+	decpld:
+	disppd:
+	encple:
+	decple:
+qpevent.f:
+qpevent.f:
+	dispqt:
+qpmask.f:
+qpmask.f:
+	setqpk:
+qpwcs.f:
+qpwcs.f:
+	putqps:
+	putims:
+	enccte:
+	getqps:
+	getios:
+	deccte:
+	getims:
+rota.f:
+rota.f:
+	rotam2:
+	rotact:
+	rotaqp:
+	rotaqo:
+	rotaim:
+skypix.f:
+skypix.f:
+	skypip:
+	skypio:
+	skypim:
+	pixskp:
+	pixsko:
+	pixskm:
+tbhead.f:
+tbhead.f:
+	puttbh:
+tgr.f:
+tgr.f:
+	getqpr:
+	putqpr:
+	dispqr:
+	tgrnos:
+	goodqr:
+time.f:
+time.f:
+	sclktt:
+	mutjd:
+	mjdut:
+	getqpk:
+       entry 	getimk:
+       entry 	gettbk:
+	calcqe:
+       entry 	calcie:
+       entry 	calcte:
+times.f:
+times.f:
+	getgos:
+tsh.f:
+tsh.f:
+	getqph:
+	putqph:
+	dispqh:
+	gettgp:
+vax.f:
+vax.f:
+	vaxi2:
+	vaxi4:
+	vaxpis:
+	vaxr4:
+	vaxr8:
+	vaxi6:
+xarea.f:
+xarea.f:
+	putqpa:
+	getqpa:
+xcmask.f:
+xcmask.f:
+	update:
+	dispqe:
+xhead.f:
+xhead.f:
+	isqphd:
+	isimhd:
+	isxhed:
+	getqpd:
+       entry 	getimd:
+       entry 	gettbd:
+	putqpd:
+       entry 	putimd:
+       entry 	puta3d:
+       entry 	puttbd:
+	wqph0:
+	wqphws:
+	wqph1:
+	wqph2:
+	wqph3:
+	wqph4:
+	wqph5:
+	xgeti:
+	xgetr:
+	xgetd:
+	xgstr:
+	xaccef:
+	xaddf:
+	xputi:
+	xputr:
+	xputd:
+	xpstr:
+	xfitse:
+xhist.f:
+xhist.f:
+	putqpy:
+	putimy:
+	puthiy:
+	dispqy:
+	dispiy:
+	disphy:
+	dispsy:
+	dispay:
+	xhloop:
+xmask.f:
+xmask.f:
+	putqpk:
+	putimk:
+	putmak:
+	dispqk:
+	dispik:
+	dispmk:
+ar r /pros/xray/lib/pros/libpros.a arcsec.o asp.o cvt.o dg.o bal.o dispbufs.o dispbufi.o dispbufl.o dispbufr.o dispbufd.o dispbufx.o dispqphead.o error.o evsize.o fits_cards.o fits_params.o fits_wpixels.o fitsput.o fnames.o getimblk.o getplims.o gti.o miistruct.o missions.o mskcnts.o mskdisp.o mskg2ss.o mskg2si.o mskg2sl.o mskg2sr.o mskg2sd.o mskg2sx.o mskopen.o newimcopy.o plhead.o qpevent.o qpmask.o qpwcs.o rota.o skypix.o tbhead.o tgr.o time.o times.o tsh.o vax.o xarea.o xcmask.o xhead.o xhist.o xmask.o
+ranlib libpros.a
+Updated 51 files in libpros.a
+check file `libpros.a' into `..'
+-------------- LIB/QPCREATE ----------------
+check out file `libpros.a = /pros/xray/lib/libpros.a'
+xc -c -c -F -g -q -p xray qpcaddaux.x qpcreate.x qpcdb.x qpcdefs.x qpcdriver.x qpcerr.x qpcev.x qpchead.x qpcirecs.x qpcisqpoe.x qpcmemory.x qpcmovelen.x qpcopen.x qpcsizeparam.x qpcsortparam.x qpcroundup.x qpcsort.x qpctime.x qpcwrite.x reg2qp.x blt2qp.x tgr2qp.x uhead2qp.x rhead2qp.x tsh2qp.x gti2qp.x a3d.x a3dev.x
+qpcaddaux.x:
+   qpcaddaux:
+   qpc_delf:
+qpcreate.x:
+   qp_create:
+qpcdb.x:
+   qpc_type:
+   qpc_setsort:
+   ddb:
+qpcdefs.x:
+   def_alloc:
+   def_free:
+   def_getparam:
+   def_open:
+   def_close:
+   def_get:
+   def_finale:
+   def_noput:
+qpcdriver.x:
+   qpc_alloc:
+   qpc_free:
+   qpc_load:
+   qpc_evload:
+   qpc_auxload:
+   qpc_parload:
+   qpc_histload:
+   qpc_finaleload:
+   qpc_sortload:
+   qpc_loadcheck:
+   qpc_check:
+qpcerr.x:
+   qpc_missingproc:
+qpcev.x:
+   qpc_opnev:
+   qpc_clsev:
+   qpc_evsize:
+qpchead.x:
+   qpc_wrheadqp:
+   qpc_version:
+qpcirecs.x:
+   qpc_irecs:
+qpcisqpoe.x:
+   qpc_isqpoe:
+qpcmemory.x:
+   qpc_memory:
+qpcmovelen.x:
+   qpc_movelen:
+qpcopen.x:
+   qpc_creqp:
+   qpc_copyqp:
+   qpc_closeqp:
+qpcsizeparam.x:
+   qpc_sizeparam:
+   a3d_sizeparam:
+qpcsortparam.x:
+   qpc_sortparam:
+   a3d_sortparam:
+qpcroundup.x:
+   qpc_roundup:
+qpcsort.x:
+   qpc_sorttype:
+   qpc_oldsort:
+   qpc_cmp:
+   qpc_pcmp:
+   qpc_tcmp:
+qpctime.x:
+   qpc_time:
+qpcwrite.x:
+   qpc_write:
+   qpc_nosort:
+   qpc_sort:
+   qpc_flush:
+   qpc_merge:
+   qpc_min:
+reg2qp.x:
+   reg_open:
+   reg_close:
+   reg_get:
+blt2qp.x:
+   blt_open:
+   blt_close:
+   blt_get:
+   blt_put:
+tgr2qp.x:
+   tgr_open:
+   tgr_close:
+   tgr_get:
+   tgr_put:
+uhead2qp.x:
+   uhd_open:
+   uhd_close:
+   uhd_get:
+   uhd_checkhead:
+rhead2qp.x:
+   rhd_open:
+   rhd_close:
+   rhd_get:
+tsh2qp.x:
+   tsh_open:
+   tsh_close:
+   tsh_get:
+   tsh_put:
+gti2qp.x:
+   gti_open:
+   gti_close:
+   gti_get:
+   gti_put:
+a3d.x:
+   a3d_init:
+   a3d_main_header:
+   a3d_main_end:
+   a3d_table_header:
+   a3d_table_entry:
+   a3d_table_end:
+   a3d_write_data:
+   a3d_write:
+   a3d_flush:
+a3dev.x:
+   a3d_initev:
+   a3d_colev:
+   a3d_qpev:
+   a3d_unknownev:
+   a3d_putev:
+qpcaddaux.f:
+qpcaddaux.f:
+	qpcadx:
+	qpcdef:
+qpcreate.f:
+qpcreate.f:
+	qpcree:
+       entry 	a3dcre:
+qpcdb.f:
+qpcdb.f:
+	qpctye:
+	qpcset:
+	ddb:
+qpcdefs.f:
+qpcdefs.f:
+	defalc:
+	deffre:
+	defgem:
+	defopn:
+	defcle:
+	defget:
+	deffie:
+	defnot:
+qpcdriver.f:
+qpcdriver.f:
+	qpcalc:
+	qpcfre:
+	qpclod:
+	qpcevd:
+       entry 	qpchdd:
+	qpcaud:
+	qpcpad:
+	qpchid:
+	qpcfid:
+	qpcsod:
+	qpclok:
+	qpcchk:
+qpcerr.f:
+qpcerr.f:
+	qpcmic:
+qpcev.f:
+qpcev.f:
+	qpcopv:
+	qpcclv:
+	qpceve:
+qpchead.f:
+qpchead.f:
+	qpcwrp:
+	qpcven:
+qpcirecs.f:
+qpcirecs.f:
+	qpcirs:
+qpcisqpoe.f:
+qpcisqpoe.f:
+	qpcise:
+qpcmemory.f:
+qpcmemory.f:
+	qpcmey:
+qpcmovelen.f:
+qpcmovelen.f:
+	qpcmon:
+qpcopen.f:
+qpcopen.f:
+	qpccrp:
+	qpccop:
+	qpcclp:
+qpcsizeparam.f:
+qpcsizeparam.f:
+	qpcsim:
+	a3dsim:
+qpcsortparam.f:
+qpcsortparam.f:
+	qpcsom:
+	a3dsom:
+qpcroundup.f:
+qpcroundup.f:
+	qpcrop:
+qpcsort.f:
+qpcsort.f:
+	qpcsoe:
+	qpcolt:
+	qpccmp:
+	qpcpcp:
+	qpctcp:
+qpctime.f:
+qpctime.f:
+	qpctie:
+qpcwrite.f:
+qpcwrite.f:
+	qpcwre:
+	qpcnot:
+	qpcsot:
+	qpcflh:
+	qpcmee:
+	qpcmin:
+reg2qp.f:
+reg2qp.f:
+	regopn:
+	regcle:
+	regget:
+blt2qp.f:
+blt2qp.f:
+	bltopn:
+	bltcle:
+	bltget:
+	bltput:
+tgr2qp.f:
+tgr2qp.f:
+	tgropn:
+	tgrcle:
+	tgrget:
+	tgrput:
+uhead2qp.f:
+uhead2qp.f:
+	uhdopn:
+	uhdcle:
+	uhdget:
+	uhdchd:
+rhead2qp.f:
+rhead2qp.f:
+	rhdopn:
+	rhdcle:
+	rhdget:
+tsh2qp.f:
+tsh2qp.f:
+	tshopn:
+	tshcle:
+	tshget:
+	tshput:
+gti2qp.f:
+gti2qp.f:
+	gtiopn:
+	gticle:
+	gtiget:
+	gtiput:
+a3d.f:
+a3d.f:
+	a3dint:
+	a3dmar:
+	a3dmad:
+	a3dtar:
+	a3dtay:
+	a3dtad:
+	a3dwra:
+	a3dwre:
+	a3dflh:
+a3dev.f:
+a3dev.f:
+	a3dinv:
+	a3dcov:
+	a3dqpv:
+	a3dunv:
+	a3dpuv:
+ar r /pros/xray/lib/qpcreate/libpros.a qpcaddaux.o qpcreate.o qpcdb.o qpcdefs.o qpcdriver.o qpcerr.o qpcev.o qpchead.o qpcirecs.o qpcisqpoe.o qpcmemory.o qpcmovelen.o qpcopen.o qpcsizeparam.o qpcsortparam.o qpcroundup.o qpcsort.o qpctime.o qpcwrite.o reg2qp.o blt2qp.o tgr2qp.o uhead2qp.o rhead2qp.o tsh2qp.o gti2qp.o a3d.o a3dev.o
+ranlib libpros.a
+Updated 28 files in libpros.a
+check file `libpros.a' into `..'
+-------------- LIB/REGIONS ----------------
+check out file `libpros.a = /pros/xray/lib/libpros.a'
+xc -c -c -F -g -q -p xray rgop.x rgannulus.x rgbox.x rgcircle.x rgellipse.x rgfield.x rgpie.x rgpoint.x rgpolygon.x rgrotbox.x rgsymmetry.x rgpldisp.x rgpmdisp.x rgplpi.x rgcreate.x rgmask.x rgareas.x regparse.x regacts.x regcpu.x regparse2.x regnotes.x rgftype.x rgpllims.x rgcoords.x
+rgop.x:
+   rg_init:
+   rg_new:
+   rg_add:
+   rg_not:
+   rg_merge:
+   rg_flush:
+   rg_opcode:
+   dbcom:
+rgannulus.x:
+   rg_annulus:
+rgbox.x:
+   rg_box:
+rgcircle.x:
+   rg_circle:
+rgellipse.x:
+   rg_ellipse:
+   rg_quadeq:
+rgfield.x:
+   rg_field:
+rgpie.x:
+   rg_pie:
+   corner_vertex:
+   pie_intercept:
+rgpoint.x:
+   rg_point:
+rgpolygon.x:
+   rg_polygon:
+   rgs_segment:
+   rgs_mark:
+   rgs_line:
+rgrotbox.x:
+   rg_rotbox:
+rgsymmetry.x:
+   rg_exit_sym:
+   rg_enter_sym:
+rgpldisp.x:
+   rg_pldisp:
+   rg_lndisp:
+   rg_lnlabel:
+   rg_digits:
+rgpmdisp.x:
+   rg_pmdisp:
+   rg_pmvallims:
+rgplpi.x:
+   rg_plpi:
+rgcreate.x:
+   rg_plcreate:
+   rg_pmcreate:
+   rg_imcreate:
+   rg_qpcreate:
+   rg_create:
+   rg_plfile:
+   rg_summaryadd:
+   rg_plstrip:
+   wcstype:
+rgmask.x:
+   rg_pmmask:
+   rg_pmonemask:
+   rg_pmtwomask:
+   rg_pmcopy:
+   rg_pmset:
+   rg_plmask:
+   rg_plonemask:
+   rg_pltwomask:
+   rg_plcopy:
+   rg_plset:
+   rg_clip:
+   rg_stencil:
+   rg_addrange:
+   dbrnge:
+rgareas.x:
+   rg_areas:
+   rgln_areas:
+regparse.x:
+   rg_parse:
+   rg_parser:
+   rg_lex:
+   rg_reset:
+   rg_none:
+   rg_defshapes:
+   rg_yyparse:
+regacts.x:
+   rg_register:
+   rg_unop:
+   rg_binop:
+   rg_newop:
+   rg_endexpr:
+   rg_region:
+   rg_startarglist:
+   rg_addarg:
+   rg_newfile:
+   rg_pushfd:
+   rg_popfd:
+   rg_install:
+   rg_lookup:
+   rg_gname:
+   rg_gop:
+   rg_abbrev:
+   rg_isfile:
+   rg_isn:
+   rg_saveexpr:
+   rg_addop:
+   rg_addparen:
+   rg_nullcomma:
+   rg_error:
+   rgdisp:
+   rg_ckcount:
+regcpu.x:
+   rg_execute:
+   rg_exe1:
+   rg_compile0:
+   rg_compile1:
+   rg_compile2:
+   rg_compile3:
+   rg_compile4:
+   rg_savecpu:
+   rg_recallcpu:
+   rg_time:
+   rg_cpu:
+regparse2.x:
+   rg2_parse:
+   rg2_stuff:
+   rg2_free:
+   rg2_yyparse:
+regnotes.x:
+   rg_imnotes:
+   rg_anote:
+   rg_anote1:
+rgftype.x:
+   rg_ftype:
+rgpllims.x:
+   rg_pllims:
+   rg_plvallims:
+   rg_vlims:
+   rg_xlims:
+rgcoords.x:
+   rg_setcoord:
+   rg_setequix:
+   rg_coords:
+   rg_ansize:
+   rg_xtodeg:
+rgop.f:
+rgop.f:
+	rginit:
+	rgnew:
+	rgadd:
+	rgnot:
+	rgmere:
+	rgfluh:
+	rgopce:
+	dbcom:
+rgannulus.f:
+rgannulus.f:
+	rganns:
+rgbox.f:
+rgbox.f:
+	rgbox:
+rgcircle.f:
+rgcircle.f:
+	rgcire:
+rgellipse.f:
+rgellipse.f:
+	rgelle:
+	rgquaq:
+rgfield.f:
+rgfield.f:
+	rgfied:
+rgpie.f:
+rgpie.f:
+	rgpie:
+	cornex:
+	pieint:
+rgpoint.f:
+rgpoint.f:
+	rgpoit:
+rgpolygon.f:
+rgpolygon.f:
+	rgpoln:
+	rgsset:
+	rgsmak:
+	rgslie:
+rgrotbox.f:
+rgrotbox.f:
+	rgrotx:
+rgsymmetry.f:
+rgsymmetry.f:
+	rgexim:
+	rgentm:
+rgpldisp.f:
+rgpldisp.f:
+	rgpldp:
+	rglndp:
+	rglnll:
+	rgdigs:
+rgpmdisp.f:
+rgpmdisp.f:
+	rgpmdp:
+	rgpmvs:
+rgplpi.f:
+rgplpi.f:
+	rgplpi:
+rgcreate.f:
+rgcreate.f:
+	rgplce:
+"rgcreate.f", line 26: Warning: alignment of "rgimex" may cause performance degradation
+"rgcreate.f", line 26: Warning: alignment of "rgimeh" may cause performance degradation
+	rgpmce:
+"rgcreate.f", line 61: Warning: alignment of "rgimex" may cause performance degradation
+"rgcreate.f", line 61: Warning: alignment of "rgimeh" may cause performance degradation
+	rgimce:
+"rgcreate.f", line 102: Warning: alignment of "rgimex" may cause performance degradation
+"rgcreate.f", line 102: Warning: alignment of "rgimeh" may cause performance degradation
+	rgqpce:
+"rgcreate.f", line 146: Warning: alignment of "rgimex" may cause performance degradation
+"rgcreate.f", line 146: Warning: alignment of "rgimeh" may cause performance degradation
+	rgcree:
+"rgcreate.f", line 243: Warning: alignment of "rgimex" may cause performance degradation
+"rgcreate.f", line 243: Warning: alignment of "rgimeh" may cause performance degradation
+	rgplfe:
+	rgsumd:
+	rgplsp:
+	wcstye:
+rgmask.f:
+rgmask.f:
+	rgpmmk:
+	rgpmok:
+	rgpmtk:
+	rgpmcy:
+	rgpmst:
+	rgplmk:
+	rgplok:
+	rgpltk:
+	rgplcy:
+	rgplst:
+	rgclip:
+	rgstel:
+	rgadde:
+	dbrnge:
+rgareas.f:
+rgareas.f:
+	rgares:
+	rglnas:
+regparse.f:
+regparse.f:
+	rgpare:
+	rgparr:
+"regparse.f", line 135: Warning: alignment of "rgimex" may cause performance degradation
+"regparse.f", line 135: Warning: alignment of "rgimeh" may cause performance degradation
+	rglex:
+	rgrest:
+	rgnone:
+	rgdefs:
+	rgyype:
+regacts.f:
+regacts.f:
+	rgregr:
+	rgunop:
+	rgbinp:
+	rgnewp:
+	rgendr:
+	rgregn:
+	rgstat:
+	rgaddg:
+	rgnewe:
+	rgpusd:
+	rgpopd:
+	rginsl:
+	rgloop:
+	rggnae:
+	rggop:
+	rgabbv:
+	rgisfe:
+	rgisn:
+	rgsavr:
+	rgaddp:
+	rgaddn:
+	rgnula:
+	rgerrr:
+	rgdisp:
+	rgckct:
+regcpu.f:
+regcpu.f:
+	rgexee:
+	rgexe1:
+	rgcom0:
+	rgcom1:
+	rgcom2:
+	rgcom3:
+	rgcom4:
+	rgsavu:
+	rgrecu:
+	rgtime:
+	rgcpu:
+regparse2.f:
+regparse2.f:
+	rg2pae:
+	rg2stf:
+	rg2fre:
+	rg2yye:
+regnotes.f:
+regnotes.f:
+	rgimns:
+"regnotes.f", line 34: Warning: alignment of "rgimex" may cause performance degradation
+"regnotes.f", line 34: Warning: alignment of "rgimeh" may cause performance degradation
+	rganoe:
+	rgano1:
+rgftype.f:
+rgftype.f:
+	rgftye:
+rgpllims.f:
+rgpllims.f:
+	rgplls:
+	rgplvs:
+	rgvlis:
+	rgxlis:
+rgcoords.f:
+rgcoords.f:
+	rgsetd:
+"rgcoords.f", line 75: Warning: alignment of "rgimex" may cause performance degradation
+"rgcoords.f", line 75: Warning: alignment of "rgimeh" may cause performance degradation
+	rgsetx:
+"rgcoords.f", line 155: Warning: alignment of "rgimex" may cause performance degradation
+"rgcoords.f", line 155: Warning: alignment of "rgimeh" may cause performance degradation
+	rgcoos:
+"rgcoords.f", line 245: Warning: alignment of "rgimex" may cause performance degradation
+"rgcoords.f", line 245: Warning: alignment of "rgimeh" may cause performance degradation
+	rganse:
+"rgcoords.f", line 309: Warning: alignment of "rgimex" may cause performance degradation
+"rgcoords.f", line 309: Warning: alignment of "rgimeh" may cause performance degradation
+	rgxtog:
+ar r /pros/xray/lib/regions/libpros.a rgop.o rgannulus.o rgbox.o rgcircle.o rgellipse.o rgfield.o rgpie.o rgpoint.o rgpolygon.o rgrotbox.o rgsymmetry.o rgpldisp.o rgpmdisp.o rgplpi.o rgcreate.o rgmask.o rgareas.o regparse.o regacts.o regcpu.o regparse2.o regnotes.o rgftype.o rgpllims.o rgcoords.o
+ranlib libpros.a
+Updated 25 files in libpros.a
+check file `libpros.a' into `..'
+-------------- LIB/SCAN ----------------
+check out file `libscan.a = /pros/xray/lib/libscan.a'
+warning: library `libscan.a' not found
+xc -c -c -F -g -q -p xray slcall.x slopen.x scadd.x sccircle.x scdebug.x scdisp.x scget.x scmerge.x scop.x scopen.x scpaint.x scplio.x scpoint.x scpool.x scrotbox.x
+slcall.x:
+   sl_circle:
+   sl_point:
+   sl_rotbox:
+   sl_apply:
+   sl_disp:
+   sl_pl:
+   sl_pm:
+   sl_verify:
+slopen.x:
+   sl_open:
+   sl_close:
+   sl_reset:
+scadd.x:
+   sc_add:
+sccircle.x:
+   sc_circle:
+   sc_exit_sym:
+   sc_enter_sym:
+scdebug.x:
+   sc_verify:
+   sc_check:
+   sc_error:
+   sc_list:
+   sc_debug:
+scdisp.x:
+   sc_disp:
+   sc_oneline:
+   sc_digits:
+   sc_dispparams:
+scget.x:
+   sc_glri:
+   sc_glpl:
+   sc_vallims:
+scmerge.x:
+   sc_merge:
+scop.x:
+   sc_op:
+   sc_imop:
+scopen.x:
+   sc_open:
+   sc_close:
+   sc_repool:
+scpaint.x:
+   sc_paint:
+scplio.x:
+   sc_sltopm:
+   sc_sltopl:
+scpoint.x:
+   sc_point:
+scpool.x:
+   sc_getedge:
+   sc_freeedge:
+   sc_newedge:
+   sc_fillpool:
+   sc_freepool:
+scrotbox.x:
+   sc_rotbox:
+   sc_setslope:
+slcall.f:
+slcall.f:
+	slcire:
+	slpoit:
+	slrotx:
+	slappy:
+	sldisp:
+	slpl:
+	slpm:
+	slvery:
+slopen.f:
+slopen.f:
+	slopen:
+	slcloe:
+	slrest:
+scadd.f:
+scadd.f:
+	scadd:
+sccircle.f:
+sccircle.f:
+	sccire:
+	scexim:
+	scentm:
+scdebug.f:
+scdebug.f:
+	scvery:
+	scchek:
+	scerrr:
+	sclist:
+	scdebg:
+scdisp.f:
+scdisp.f:
+	scdisp:
+	sconee:
+	scdigs:
+	scdiss:
+scget.f:
+scget.f:
+	scglri:
+	scglpl:
+	scvals:
+scmerge.f:
+scmerge.f:
+	scmere:
+scop.f:
+scop.f:
+	scop:
+	scimop:
+scopen.f:
+scopen.f:
+	scopen:
+	sccloe:
+	screpl:
+scpaint.f:
+scpaint.f:
+	scpait:
+scplio.f:
+scplio.f:
+	scsltm:
+	scsltl:
+scpoint.f:
+scpoint.f:
+	scpoit:
+scpool.f:
+scpool.f:
+	scgete:
+	scfree:
+	scnewe:
+	scfill:
+	scfrel:
+scrotbox.f:
+scrotbox.f:
+	scrotx:
+	scsete:
+ar r /pros/xray/lib/scan/libscan.a slcall.o slopen.o scadd.o sccircle.o scdebug.o scdisp.o scget.o scmerge.o scop.o scopen.o scpaint.o scplio.o scpoint.o scpool.o scrotbox.o
+ar: creating /pros/xray/lib/scan/libscan.a
+ranlib libscan.a
+Updated 15 files in libscan.a
+check file `libscan.a' into `..'
+-------------- LIB/FFT ----------------
+check out file `libfft.a = /pros/xray/lib/libfft.a'
+warning: library `libfft.a' not found
+xc -c -c -F -g -q -p xray for2d.f btrvd.f dft2d.f fxrld.f dft2r.f
+for2d.f:
+for2d.f:
+	for2d:
+btrvd.f:
+btrvd.f:
+	btrvd:
+dft2d.f:
+dft2d.f:
+	dft2d:
+fxrld.f:
+fxrld.f:
+	fxrld:
+dft2r.f:
+dft2r.f:
+	dft2r:
+ar r /pros/xray/lib/fft/libfft.a for2d.o btrvd.o dft2d.o fxrld.o dft2r.o
+ar: creating /pros/xray/lib/fft/libfft.a
+ranlib libfft.a
+Updated 5 files in libfft.a
+check file `libfft.a' into `..'

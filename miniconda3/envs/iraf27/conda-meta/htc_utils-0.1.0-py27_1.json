@@ -1,0 +1,80 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/htc_utils-0.1.0-py27_1",
+  "features": "",
+  "files": [
+    "bin/condor_batch",
+    "bin/condor_split",
+    "bin/condor_wrap",
+    "lib/python2.7/site-packages/htc_utils-0.1.0-py2.7.egg",
+    "lib/python2.7/site-packages/htc_utils.pth"
+  ],
+  "fn": "htc_utils-0.1.0-py27_1.tar.bz2",
+  "license": "GPL",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/htc_utils-0.1.0-py27_1",
+    "type": 1
+  },
+  "md5": "eea3b209f911359a59bb233ab6e8a27e",
+  "name": "htc_utils",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/htc_utils-0.1.0-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/condor_batch",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "77b1904a25f192c1e191755ebc0f6e503082f8e59ee34da7e33aad90d7dc06cf",
+        "sha256_in_prefix": "ad786507d22a2ef428c2716021d9c214680e5e3c15b87f915920af24ac53caf2",
+        "size_in_bytes": 212
+      },
+      {
+        "_path": "bin/condor_split",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "b0e6aab94c1672730643b2b9d0b17c9789fbf9e4b83deab96463fdddfd449f93",
+        "sha256_in_prefix": "503f435712b833cc088716dbccc3e198c3dc836c6952d913b562cef8bfd880c3",
+        "size_in_bytes": 212
+      },
+      {
+        "_path": "bin/condor_wrap",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "3fc1aa68b634d30d13634ef6f2d80992779282c6e3045fc5de479b4a74bb774d",
+        "sha256_in_prefix": "6152edc1dfe193a7b4400d9e3bbbbbb2498cedf2800032242e9e25cc00a54fa5",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "lib/python2.7/site-packages/htc_utils-0.1.0-py2.7.egg",
+        "path_type": "hardlink",
+        "sha256": "471af6f265e6df65f33c6c607d210b384e6f833ec604db03995eb4823aeed3a5",
+        "sha256_in_prefix": "471af6f265e6df65f33c6c607d210b384e6f833ec604db03995eb4823aeed3a5",
+        "size_in_bytes": 26627
+      },
+      {
+        "_path": "lib/python2.7/site-packages/htc_utils.pth",
+        "path_type": "hardlink",
+        "sha256": "e00f64f155c3a868084edd5083c70bcead5fc98b707a308b39771e079cccaeed",
+        "sha256_in_prefix": "e00f64f155c3a868084edd5083c70bcead5fc98b707a308b39771e079cccaeed",
+        "size_in_bytes": 28
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 29346,
+  "subdir": "linux-64",
+  "timestamp": 1518645481463,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/htc_utils-0.1.0-py27_1.tar.bz2",
+  "version": "0.1.0"
+}

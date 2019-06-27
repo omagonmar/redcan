@@ -1,0 +1,115 @@
+       ---  Release Notes for SAO/PROS Patch 2.5.1 -- March 98 ---
+-------------------------------------------------------------------------
+COMMENTS BY DEH: 17 MAR 98
+
+I) Setting up to use the XRAY package :
+
+   required packages for Sun :
+      IRAF V2.11 
+        (iraf.noao.edu)
+      TABLES 2.0 Beta or higher
+        (stsci.edu)
+      PROS 2.5
+        (sao-ftp.harvard.edu)
+
+   required packages for DEC UNIX on ALPHA :
+      DUNX/IRAF V2.11
+        (iraf.noao.edu)
+      TABLES 2.0
+        (stsci.edu)
+      PROS2.5
+        (sao-ftp.harvard.edu)
+
+   optional packages:
+      EUV (cea-ftp.cea.berkeley.edu)
+
+   >>> Users must rerun the "mkiraf" task and answer 'yes' to the  <<<
+   >>> 're-initialize uparm?' option before running.               <<<
+
+
+
+II) Summary of changes made in this release (PROS 2.5.1) :
+
+  ********* NEW TASKS **********
+
+   <package.task> - <description>
+
+   xproto.marx2qpoe -  
+      A new task uses FIT2QP to convert the MARX EVENT FITS
+      into  a QPOE file. The output QPOE is spatially sorted 
+      with key_y as the primary key and key_x as the secondary 
+      key.  See H&P#23 and the help file for details.  NB: MARX
+      is the AXAF simulator.
+
+   xproto.xexamine_r -  
+      This task is a slight modification of xexamine. In addition to all
+      the features in xexamine(xplot), it now works for QPOE files 
+      which are not square.  However, the blocking factor for both
+      dimensions has to be the same.  See the help file for details. 
+
+
+  ********* BUGFIXES AND ENHANCEMENTS *************
+
+   <package.task> - <description>
+
+   xproto.imdetect
+        - Fixed the bug that crashed imdetect when run on image files. 
+	  (ref. H&P#23)
+        - Removed "implicit  "a-z"" in some fortran code which
+          caused compiling problems on Alpha.
+
+   xspatial.detect.lpeak
+        - Fixed the bug that caused two rows of detect 
+          cells to be ignored along one edge, whilst the 
+          other edge was not ignored.  (ref. H&P#23)
+
+   xdataio.fits2qp 
+        - Added two more index keys to QPOE for ASC
+          (AXAF Science Center) data.
+
+  ********* FOR DEC UNIX ON ALPHA  ***************
+   The executable files and the binary data are released for 
+   the Alpha users.
+
+
+III) Other Information
+
+  A. PROS User's Guide (PUG)  ( revised on 5 December 1996, see hp#20)
+	NB: an update is planned for spring 1998.
+
+    Latex and/or postscript files are available via anonymous ftp:
+        sao-ftp.harvard.edu; from subdirectory /pub/pros/PUG.
+    The WWW version can be accessed with URL:
+         http://hea-www.harvard.edu/PROS/pros.html
+
+  B. Cross-referencing information
+
+    We are continually trying to improve the cross-referencing information
+    in PROS.  We recommend using either "references" or "xapropos" to look
+    for information on given keywords, e.g., "references prf" or
+    "xapropos prf" (xapropos requires the CTIO package to be loaded).
+
+  C. Hints & Pointers
+
+    As the provider of the PROS software package ("xray" in IRAF), the
+    ROSAT Science Data Center (RSDC) at SAO distributes HINTS & POINTERS
+    to PROS Users via email.  When we find answers to often asked
+    questions, or when we have implemented new software solutions to
+    longstanding problems, we will send this information directly to our
+    users.  These messages will also be available via anonymous ftp*, but
+    to receive the email version, you should register with us. If your
+    username is the one associated with your site registration, you are
+    already registered for "HINTS & POINTERS", but we encourage other
+    users (even at the same sites) to register.
+
+    Mailings will be sent as the need arises, perhaps every month or so.
+    If you would like to suggest items for future issues of H&P or add
+    your name to our distribution list, please contact us at the following
+    address:
+
+    ***********************************************************************
+    Internet - rsdc@cfa.harvard.edu    RSDC    MS-3
+                                       Center for Astrophysics
+                                       60 Garden St. Cambridge MA 02138 USA
+                                       tel: (617) 495-7134  FAX: 495-7356
+    ***********************************************************************

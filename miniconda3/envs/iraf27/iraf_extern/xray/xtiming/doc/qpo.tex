@@ -1,0 +1,672 @@
+%\input /pros/doc/scidoc/skeleton.tex
+\def\version{\it Rev.~1.0 - 4/14/86}
+\def\chapter{\it Timing Analysis: QPO Analysis}
+%\chapterhead{Science Specifications for the PROS}
+%\chapterhead{Timing Analysis: QPO Analysis}
+\chapterhead{VII.~QPO Analysis}
+
+
+\@{Overview}
+
+\noindent
+{\it Science Contact}:  J. Grindlay/K. Arnaud (GSFC)
+
+The QPO analysis system for ROSAT should include the following general
+features which are incorporated in the EXOSAT system:
+
+\**{Pre-Analysis Processing:  Barycentric-corrected photon arrival times}:
+
+{\list
+
+Before binning photon arrival times for subsequent QPO analysis,
+photon arrival times should first be corrected to the solar system
+barycenter.  Although the frequency drift in QPOs would minimize the
+need for these corrections, very short-period ($\sim 1-2$~msec) QPOs
+(though not yet detected) could be adversely affected unless
+barycentric corrections were applied.
+
+For sources with known (or suspected) binary periods, arrival times
+should be corrected for the binary orbit.
+
+}
+
+\**{General Analysis Method}
+
+{\list
+
+The general analysis scheme to be used is to do a power spectrum (FFT)
+on segments of binned data (detected rates in a given energy band) and
+to then analyze the power spectrum for departure from the flat
+response expected for white noise.
+
+The QPOs are expected as (relatively) broad excesses in the power
+spectrum about a centroid frequency, which may vary with source flux.
+Thus the entire power spectral analysis must be possible to carry out
+as a function of source intensity. Data should be selected in
+contiguous segments (to avoid gaps in FFTs) in count rate intervals
+which can be specified by the user.
+
+In addition to a QPO peak in the power spectrum, the analysis should
+also search for ``red noise'', or excess power at low frequencies.
+Here it will be important to minimize or eliminate any other sources
+of relatively long-time scale variations --- e.g., changing aspect
+yielding possibly changing gains and therefore response in the IPC,
+etc.  Although potential other sources of red noise are in principle
+easy to calibrate out (on other sources in the field, for crowded
+fields, or with calibrations on bright but ``steady'' sources such as
+bright coronal sources), it should be remembered that both the QPOs
+and red noise power are expected at only the few percent level of total
+power.
+
+}
+
+\**{Algorithms to be used}:
+
+{\list 
+
+Standard FFTs should be used, with the usual caveat that data be
+selected from intervals without gaps.  The ROSAT system will break up
+the data into segments of uniform length (2.56 sec, typically),
+perform an FFT on each and add the resultant power spectra.  The
+expected statistical distribution of power in the summed spectra is
+derived (or should be derived) using the formalism of Leahey et al.,
+1983, {\it Ap.J.}, {\bf 266}, 160.  However this formalism strictly
+speaking only gives the confidence level expected for power in a
+single bin of the power spectrum (as expected for coherent pulsations)
+and not for a broad peak expected in QPOs.  It may be that the EXOSAT
+analysis system takes this differences into account, though I suspect
+that power spectra plots are presented with the ``usual'' power
+density scale.  Modifications to the Leahey et al. analysis are
+presented by Mereghetti and Grindlay 1986, ({\it Ap.J.}, in press)
+which deal with both the significance of QPOs in a power spectrum and
+the effects of a (generally) unknown binary period on the resulting
+sensitivity for both pulsations and QPOs.  These methods can be
+incorporated in the EXOSAT software system.
+
+Although the above considerations are appropriate to the EXOSAT
+software, there are other aspects of the ROSAT system to be
+considered:
+
+}
+
+\**{Special Considerations for Imaging Data}:
+
+{\list
+
+In addition to aspect changes and possible differential gain effects
+in the IPC (or HRI --- e.g., gap-map effects) which should be
+considered, data selection criteria should be developed which will not
+have been included in the EXOSAT (ME detector) system.  QPOs are
+probably energy dependent (though not always predominately ``hard''
+component variations) and so the radial selection of source photons
+will be important.  Also, the imaging data will allow for the
+separation of source vs. scattered halo components (not resolvable
+with the EXOSAT ME, of course) so that the pulsed fractions may well
+depend on radial binning of the data.  Thus in addition to
+pre-selecting data in particular count-rate intervals, it may also be
+necessary to select data with differing radial binnings.
+
+Since the effective area of ROSAT is significantly smaller than the ME
+on EXOSAT, detection of QPOs will likely be marginal (at best) for
+many sources.  This is further enhanced by the large low energy
+absorption for the brightest bulge/QPO sources such as GX5-1.  The
+relatively narrow bandwidth of ROSAT will thus be a problem for all
+but those bulge sources with the lowest interstellar absorption.
+However, for precisely these sources the opportunity to do a much
+\underbar{more} sensitive search for soft x-ray ($<2$~keV) QPOs than
+could the ME on EXOSAT is exciting.  It may be that ROSAT could even
+distinguish disk oscillations (soft) from blobs falling on the neutron
+star (as in the beat frequency model), so that a QPO analysis
+capability for ROSAT is still very much in order.
+
+}
+
+\@{Leiden QPO Software}
+
+The following is a description of the Leiden EXOSAT software and, in particular, the
+program QPANA which does the QPO analysis.  QPANA is run after a
+program called FUDGE which is a general timing analysis package.  One
+option in FUDGE is to divide the data into short time intervals and
+take the FT of each.  The data are from user-specified PHA channels.
+The FTs and the fluxes are output in 2-D direct access files.  These
+files are the input for QPANA.  The functions performed by QPANA are
+listed below.
+
+\item{1.} Plot FT or ACF of total data.
+\item{2.} Plot power density histogram of total data (actually first 7
+bins of FT are ignored).  The histogram is of (power $\times$ \# FTS
+summed).  This is compared to a function:
+
+$$f(I) = (\chi^{2}_{dof}(I)-\chi^{2}_{dof}(I+1))\times N$$
+
+\item{}where I=NINT(power $\times$ \# FTS summed), dof = 2 $\times$ \# FTs
+summed, and $N$ is the number of histogram bins.
+\item{3.} Plot intensity (ct/sec) vs. time for total data.
+\item{4.} Plot FTs or ACFs for a user-specified number of equal flux
+intervals between the minimum and maximum flux in the total data.
+\item{5.} Create a 2-D image of FT or ACF vs. flux. Start, stop and
+stepsize for FT/ACF bins are user-specified as is the number of equal
+flux intervals between maximum and minimum flux in the total data.
+\item{6.} Plot FT or ACF for user-specified flux interval.
+\item{7.} Plot FT or ACF for user-specified number of equal time
+intervals between the start and stop times.
+\item{8.} Create 2-D image of FT or ACF vs. time (`sonargram').
+Start, stop and stepsize of FT/ACF bins are user-specified as is the
+number of equal time intervals between the total data start and stop
+times.
+\item{9.} Plot FT or ACF for user-specified time interval.
+\item{10.} Plot intensity vs. time for user-specified number of equal
+time intervals.
+
+
+Convolution with a Gaussian is allowed for 1, 4, 6, 7, and 9.
+
+A fit to the function:
+
+$$f(x) =
+c+c_{1}\tau_{1}e^{-\tau_{1}x}+c_{2}x^{-\tau_{2}}+c_{3}{\lambda/2\pi\over
+((x-\nu_{0})^{2}+(\lambda/2)^{2})}$$
+
+can be performed for 1, 4, 6, 7, and 9 (before Gaussian convolution
+although rebinning of data is allowed).
+
+1 also allows a search for peaks in a single FT.  Each FT is read
+individually from the input data and for user-specified limits on the
+bins tested a number:
+
+$$P = \exp(-FT_{I}/{\rm total}_{I})$$
+
+is calculated and data is written out if $P$ is less than some
+user-specified value. $FT_I$ is the $i^{th}$ bin of the individual $FT$
+and total$_i$ is the $i^{th}$ bin of the sum of all the FTs in the
+input data.
+
+1, 4, 5, 6, 7, 8, and 9 allow an integration of the total FT over a
+user-specified frequency range (`red noise integration').  The
+quantity printed out is:
+
+$${\rm Redpow} = {1\over N}(\nu_{u}-\nu_{l})\sum FT$$
+
+where the sum is over $\nu_{l}\leq\nu\leq\nu_{u}$ and is over N bins.
+The error is given as:
+
+$${\rm Rederr} = {2\over \sqrt{(N\times N_{FT})}}(\nu_{u}-\nu_{l})$$
+
+where $N_{FT}$ is the number of FTs summed.
+
+It is clear from the way the program is put together that it has
+accreted most of these functions as users have realized that they need
+them.  Below are listed the functions in a more coherent fashion.
+
+
+\item{(a).}Plot FT/ACF for user-specified time/flux intervals.  Options to fit
+to some function; convolve with a Gaussian before plotting; and
+integrate red noise.
+
+\item{(b).}Create 2-D image of FT/ACF vs. time/flux.  User has option of
+specifying binning on both axes.
+
+\item{(c).}Plot power density histogram for user-specified time/flux
+intervals.  Option of plotting theoretical histogram for particular
+model of noise.
+
+\item{(d).}Plot intensity in user-specified time interval.
+
+\item{(e).}Search FT for peaks in user-specified time/flux intervals and
+user-specified FT bins.
+
+A useful extension is to have the option of a third input file which
+would consist of one number of each individual FT in the first input
+file.  Then function a) could include an additional selection on
+the basis of the value of the number in the third input file.  An
+obvious example would be to read in a hardness ratio which would
+enable the FTs of different spectral states to be compared.
+
+\@{A Possible Outline for the ROSAT QPO Software}
+
+Here are preliminary notes on a system for QPO analysis.  Presumably
+there will be overlap with the rest of the timing package.
+
+\**Procedures definitions:
+
+
+\item{0)}~~CHOOSE\_OPTION
+\itemitem{}Get option from user.
+
+\item{1)}~~GET\_DATA (i: none; o: input\_data)
+\itemitem{}Read in data.
+
+\item{\phantom{2)}}~~CREATE\_FTS (i: input\_data; o: ft\_data)
+\itemitem{}Create a set of FTs from the input data.
+
+\item{\phantom{2)}}~~SUM\_FTS (i: ft\_data; o: summed\_ft\_data)
+\itemitem{}Sum a subset of the available FTs.
+
+\item{\phantom{2)}}~~PLOT\_INTENSITY (i: input\_data; o: none)
+\itemitem{}Plot lightcurve.
+
+\item{\phantom{2)}}~~PLOT\_FT (i: summed\_ft\_data; o: none)
+\itemitem{}Plot summed FT/ACF data.
+
+\item{\phantom{2)}}~~CREATE\_MAP (i:  ft\_data; o: ft\_map)
+\itemitem{}Create 2-D map of FT/ACF vs. flux/time.
+
+\item{\phantom{2)}}~~PEAK\_SEARCH (i: ft\_data, summed\_ft\_data; o:
+none)
+\itemitem{}Search for peaks in summed FT data.
+
+\item{\phantom{2)}}~~PLOT\_PDS (i: summed\_ft\_data; o: none)
+\itemitem{}Plot PDS of summed data.
+
+\item{\phantom{2)}}~~MODEL\_FT (i: none; o: model\_data)
+\itemitem{}Define a model to describe the FT/ACF/PDS.
+
+\item{\phantom{2)}}~~FIT\_FT (i: model\_data, summed\_ft\_data; o:
+model\_data)
+\itemitem{}Do a min-$\chi^{2}$ fit of model to FT.
+
+\item{\phantom{2)}}~~SMOOTH\_FT (i: summed\_ft\_data; o:
+summed\_ft\_data)
+\itemitem{}Convolve a Gaussian with the FT to smooth.
+
+\item{\phantom{2)}}~~INTEGRATE\_FT (i: summed\_ft\_data; o: none)
+\itemitem{}Integrate the FT over some frequency range.
+
+
+\**Data package definitions
+
+{\list
+
+INPUT\_DATA:  Input from observation editor.  2-D array of flux for
+PHA channel and time.
+
+FT\_DATA:  Set of FTS created by user.  2-D array of FT for frequency
+and index; 2-D array of flux for PHA and index; 1-D array of start
+time for index; 1-D array of stop time for index.
+
+SUMMED\_FT\_DATA:  FT created by summing subset of FT\_DATA.  1-D
+array of FT for frequency.
+
+FT\_MAP: Map created from FT\_DATA.  2-D array of FT for frequency and
+flux/time.
+
+MODEL\_DATA:  Model type, definition of parameters, values of
+parameters, other values TBD to aid in $\chi^{2}$ fitting.
+
+}
+
+
+\**{Detailed Description of Procedures:}
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&CHOOSE\_OPTION \cr
+& \cr
+FUNCTION PURPOSE:&Prompts user for an option to be performed. \cr
+& \cr
+INPUT DATA:&None. \cr
+& \cr
+INPUT OPTIONS:&None. \cr
+& \cr
+OUTPUT DATA:&Number signifying option selected and rest of string
+input by user after command has been parsed off. \cr
+& \cr
+OUTPUT DISPLAY:&None. \cr
+& \cr
+FULL DESCRIPTION:&Simple interface with user. User should be able to
+specify options with as few letters as possible. ? or help should give
+list of available options and brief description. \cr
+& \cr
+NOTES:&Presumably a function like this will be in most routines so it
+should be possible to write a generic function.  Note that the user
+can type in qualifiers for the command and these will be passed back
+to the main program in the form of a character string. \cr  }
+
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&GET\_DATA \cr
+& \cr
+FUNCTION PURPOSE:&Reads in timing data to be analyzed. \cr
+& \cr
+INPUT DATA:&Read as 2-D array from file created by observation editor. \cr
+& \cr
+INPUT OPTIONS:&Filename to be read. \cr
+& \cr
+OUTPUT DATA:&INPUT\_DATA package. \cr
+& \cr
+OUTPUT DISPLAY:&None \cr
+& \cr
+FULL DESCRIPTION:&Either gets filename from character string passed
+from CHOOSE\_OPTION or prompts user for filename.  Read data into 2-D
+array of flux for PHA bin and time bin. \cr
+& \cr
+NOTES:&Assuming that the observation editor will produce arrays
+rather than photon lists (which would be preferable for timing
+purposes). \cr  }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&CREATE\_FTS \cr
+& \cr
+FUNCTION PURPOSE:&Creates a set of FTS for user-defined time intervals
+and PHA bins. \cr
+& \cr
+INPUT DATA:&INPUT\_DATA package \cr
+& \cr
+INPUT OPTIONS:&PHA bins to be used.  Time intervals to be used. \cr
+& \cr
+OUTPUT DATA:&FT\_DATA package. \cr
+& \cr
+OUTPUT DISPLAY:&None. \cr
+& \cr
+FULL DESCRIPTION:&A set of FTs are produced using the standard FFT
+routines.  The FFTs are placed in a 2-D array whose first index is the
+frequency and whose second is a counter used to label the FT.  The
+start and stop times used to create each FT are placed in two 1-D
+arrays whose index is the counter described above.  Finally, the
+summed flux in each PHA bin for the time interval for each FT is
+placed in a 2-D array whose first index is PHA bin and whose second
+index is the FT counter. \cr
+& \cr
+NOTES:&The main difficulty here will be to find an efficient way of
+allowing the user to specify the time intervals to be used. \cr }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&SUM\_FTS \cr
+& \cr
+FUNCTION PURPOSE:&Sums a subset of the FTs in the FT\_DATA package to
+give one FT. \cr
+& \cr
+INPUT DATA:&FT\_DATA package. \cr
+& \cr
+INPUT OPTIONS:&FTs to be used.  Can be specified by : counter number;
+time interval; or flux interval (in some set of PHA bins). \cr
+& \cr
+OUTPUT DATA:&SUMMED\_FT\_DATA package. \cr
+& \cr
+OUTPUT DISPLAY:& None. \cr
+& \cr
+FULL DESCRIPTION:&Sum the 2-D FT array over the counter numbers
+required to give a 1-D array whose index is frequency.  If FTs to be
+used are specified in terms of a time interval then the 1-D start and
+stop time arrays are used to determine the counter numbers to be
+summed.  If a flux interval is used then the 2-D summed flux array is
+used. \cr
+& \cr
+NOTES:&As with CREATE\_FTS the main difficulty here will be to find an
+efficient way of allowing the user to specify the FTs to be summed.
+\cr }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&PLOT\_INTENSITY \cr
+& \cr
+FUNCTION PURPOSE:&Plots a lightcurve (flux vs. time). \cr
+& \cr
+INPUT DATA:&INPUT\_DATA package \cr
+& \cr
+INPUT OPTIONS:&PHA bins to be used.  Time interval to be plotted and
+temporal binsize. \cr
+& \cr
+OUTPUT DATA:&None \cr
+& \cr
+OUTPUT DISPLAY:&Plot of flux (y-axis) vs. time \cr
+& \cr
+FULL DESCRIPTION:&Counts are summed over the PHA bins specified by the
+user and accumulated in the temporal bins.  Error bars should also be
+plotted based on counting statistics (should another array be included
+in INPUT\_DATA to take errors --- data may have been background
+subtracted). \cr
+& \cr
+NOTES:&Not clear that this procedure should be here --- it is not
+really part of QPO analysis. \cr }
+ 
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&PLOT\_FT \cr
+& \cr
+FUNCTION PURPOSE:&Plots summed FT or ACF data. \cr
+& \cr
+INPUT DATA:& SUMMED\_FT\_DATA package \cr
+& \cr
+INPUT OPTIONS:&Frequency interval to be plotted and frequency binsize
+(default is binsize of data). \cr
+& \cr
+OUTPUT DATA:& none. \cr
+& \cr
+OUTPUT DISPLAY:&Plot of FT/ACF (y-axis) vs. frequency \cr
+& \cr
+FULL DESCRIPTION:&The FT is binned up if required.  If the ACF is
+specified then it is calculated from unbinned data and then binned up
+if required. \cr
+& \cr
+NOTES:& None. \cr  }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&CREATE\_MAP \cr
+& \cr
+FUNCTION PURPOSE:&Creates a 2-D map of FT/ACF for frequency and
+flux/time. \cr
+& \cr
+INPUT DATA:&FT\_DATA package \cr
+& \cr
+INPUT OPTIONS:&Whether FT or ACF.  Range and binsize for frequency.
+Whether flux or time.  Range and binsize for whichever is chosen. \cr
+& \cr
+OUTPUT DATA:&FT\_MAP \cr
+& \cr
+OUTPUT DISPLAY:&None \cr
+& \cr
+FULL DESCRIPTION:&Accumulate 2-D map array in whatever format is used
+for image processing. Flux and time binning is done in a similar
+manner to SUM\_FTS. \cr
+& \cr
+NOTES:&Ideally the output map should have a header describing
+observation and specifying range and binsize for both axes. \cr  }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&PEAK\_SEARCH \cr
+& \cr
+FUNCTION PURPOSE:&Searches a FTs for a peak. \cr
+& \cr
+INPUT DATA:&FT\_DATA and SUMMED\_FT\_DATA packages. \cr
+& \cr
+INPUT OPTIONS:&Frequency range to be searched and significance level
+to be used in flagging peaks. \cr
+& \cr
+OUTPUT DATA:&List of peaks : size and frequency. \cr
+& \cr
+OUTPUT DISPLAY:&Plot of FT with position of peaks marked ? \cr
+& \cr
+FULL DESCRIPTION:&Define a quantity P by: \cr
+&P(J) = exp (-FT(I,J)/Total (I)) \cr
+&where FT(I,J) is the Ith bin of the Jth FT and Total(I) is the Ith
+bin of the summed FT. \cr
+& \cr
+NOTES:& \cr }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&PLOT\_PDS \cr
+& \cr
+FUNCTION PURPOSE:&Plots the power density spectrum \cr
+& \cr
+INPUT DATA:&SUMMED\_FT\_DATA package \cr
+& \cr
+INPUT OPTIONS:&Frequency range and binning. \cr
+& \cr
+OUTPUT DATA:& None. \cr
+& \cr
+OUTPUT DISPLAY:&Plot of PDS (y-axis) vs. frequency. \cr
+& \cr
+FULL DESCRIPTION:&Calculate PDS from FT and bin up. \cr
+& \cr
+NOTES:& \cr }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&MODEL\_FT \cr
+& \cr
+FUNCTION PURPOSE:&Defines a model that will be used with FT/ACF/PDS
+data. \cr
+& \cr
+INPUT DATA:&None \cr
+& \cr
+INPUT OPTIONS:&Model type and parameter values (and other values
+TBD). \cr
+& \cr
+OUTPUT DATA:&MODEL\_DATA package \cr
+& \cr
+OUTPUT DISPLAY:&None. \cr
+& \cr
+FULL DESCRIPTION:&Models include: \cr
+&f(X) = c(0) + c(1)G(1)exp(-G(1)X) + c(2)X$^{-G(2)}$ + c(3)
+(L/2pi)/((X-nu(0))$^{2}$+(L/2)$^{2}$) \cr
+&and others TBD \cr
+& \cr
+NOTES:& \cr  }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&FIT\_FT \cr
+& \cr
+FUNCTION PURPOSE:&Fit model to FT data. \cr
+& \cr
+INPUT DATA:&SUMMED\_FT\_DATA and MODEL\_DATA packages. \cr
+& \cr
+INPUT OPTIONS:&Frequency range over which fit is to be performed. \cr
+& \cr
+OUTPUT DATA:&MODEL\_DATA package. \cr
+& \cr
+OUTPUT DISPLAY:&Data on fit as it proceeds and plot of FT and best fit
+model. \cr
+& \cr
+FULL DESCRIPTION:&See spectral fitting specs for detailed explanation
+of min-$\chi^{2}$ fitting. \cr
+& \cr
+NOTES:&Should be possible to use same code as for spectral fitting
+(and fitting models to surface brightness profiles ...) \cr  }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&SMOOTH\_FT \cr
+& \cr
+FUNCTION PURPOSE:&Smooth the FT with a Gaussian. \cr
+& \cr
+INPUT DATA:&SUMMED\_FT\_DATA package. \cr
+& \cr
+INPUT OPTIONS:&Width of Gaussian to be used. \cr
+& \cr
+OUTPUT DATA:&SUMMED\_FT\_DATA package. \cr
+& \cr
+OUTPUT DISPLAY:& None. \cr
+& \cr
+FULL DESCRIPTION:&Use standard 1-D Gaussian convolution. \cr
+& \cr
+Notes:&None. \cr }
+
+\vskip 12pt
+
+\hrule
+
+\vskip 12pt
+
+\halign{\qquad\qquad #\hfil&\vtop{\parindent=0pt\hsize=4.0in
+\hangindent.5em\strut#\strut} \cr
+FUNCTION NAME:&INTEGRATE\_FT \cr
+& \cr
+FUNCTION PURPOSE:&Integrate the FT over a specified frequency range.
+\cr
+& \cr
+INPUT DATA:&SUMMED\_FT\_DATA package. \cr
+& \cr
+INPUT OPTIONS:&Frequency range to be used. \cr
+& \cr
+OUTPUT DATA:&None. \cr
+& \cr
+OUTPUT DISPLAY:&Result of integration. \cr
+& \cr
+FULL DESCRIPTION:&Sum bins of FT within user-specified frequency
+range.  Handling of any bins partly with range TBD. \cr
+& \cr
+NOTES:&None. \cr }
+
+\vskip 12pt
+
+\hrule
+
+\vfill\eject
+
+

@@ -1,0 +1,165 @@
+warning: library `libpkg.a' not found
+check out file `salign.x = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ucsclris/src/support/salign.x'
+check out file `flex_fit.x = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ucsclris/src/support/flex_fit.x'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ucsclris etc.x futil.x lris_util.x maskalign.x xbox.x mboxfind.x simulator.x mapmask.x fabmask.x gen_igi.x mshift.x l2process.x l4process.x salign.x flex_fit.x
+etc.x:
+   bksp_strcat:
+   hdr_mulr:
+futil.x:
+   get_lsqf1:
+   get_0lsqf1:
+   vsum1:
+   vsum2:
+   vsum3:
+   dsum1:
+   dsum2:
+   dsum3:
+   get_lsqf2:
+   get_0lsqf2:
+   get_lsqf0:
+   g_elim:
+lris_util.x:
+   atm_geom:
+   dewar_elev:
+   chk_elev:
+maskalign.x:
+   t_maskalign:
+   maskalign:
+   get_0lsqf0:
+   get_nearest:
+   plot_res2d:
+xbox.x:
+   t_xbox:
+mboxfind.x:
+   t_mboxfind:
+   box_center:
+   saw_xcorr:
+   box_graph:
+   flex_corr:
+simulator.x:
+   t_simulator:
+   focpl_graph:
+   focpl_layout:
+   selector:
+   sel_rank:
+mapmask.x:
+   t_mapmask:
+   ccd_map:
+   def_ccd_map:
+   rad_refract:
+   fp_coord:
+   lris_coord:
+   map_sort:
+   slit_adjust:
+   re_orderr:
+   re_orderi:
+   ndxsortr:
+   rndxswitch:
+fabmask.x:
+   t_fabmask:
+   punchmask:
+   millmask:
+   r3sort:
+   r2sortd:
+gen_igi.x:
+   t_gen_igi:
+mshift.x:
+   t_mshift:
+   mshift:
+l2process.x:
+   t_l2process:
+l4process.x:
+   t_l4process:
+   amp_parse:
+   get_datasec:
+salign.x:
+   t_salign:
+flex_fit.x:
+   t_flex_fit:
+etc.f:
+   bkspst:
+   hdrmur:
+futil.f:
+   getls1:
+   get0l1:
+   vsum1:
+   vsum2:
+   vsum3:
+   dsum1:
+   dsum2:
+   dsum3:
+   getls2:
+   get0l2:
+   getls0:
+   gelim:
+lris_util.f:
+   atmgem:
+   dewarv:
+   chkelv:
+maskalign.f:
+   tmaskn:
+   maskan:
+   get0l0:
+   getnet:
+   plotrd:
+xbox.f:
+   txbox:
+mboxfind.f:
+   tmboxd:
+   boxcer:
+   sawxcr:
+   boxgrh:
+   flexcr:
+simulator.f:
+   tsimur:
+   focplh:
+   focplt:
+   selecr:
+   selrak:
+mapmask.f:
+   tmapmk:
+   ccdmap:
+   defccp:
+   radret:
+   fpcood:
+   lriscd:
+   mapsot:
+   slitat:
+   reordr:
+   reordi:
+   ndxsor:
+   rndxsh:
+fabmask.f:
+   tfabmk:
+   punchk:
+   millmk:
+   r3sort:
+   r2sord:
+gen_igi.f:
+   tgenii:
+mshift.f:
+   tmshit:
+   mshift:
+l2process.f:
+   tl2prs:
+l4process.f:
+   tl4prs:
+   amppae:
+   getdac:
+salign.f:
+   tsalin:
+flex_fit.f:
+   tflext:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ucsclris/src/libpkg.a etc.o futil.o lris_util.o maskalign.o xbox.o mboxfind.o simulator.o mapmask.o fabmask.o gen_igi.o mshift.o l2process.o l4process.o salign.o flex_fit.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ucsclris/src/libpkg.a
+check file `salign.x' into `'
+check file `flex_fit.x' into `'
+ranlib libpkg.a
+Updated 15 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ucsclris x_ucsclris.x
+x_ucsclris.x:
+   sys_runtask:
+x_ucsclris.f:
+   sysruk:
+xc -Nz -p ucsclris x_ucsclris.o libpkg.a -lxtools -liminterp -lsurfit -lgsurfit -lcurfit -o xx_ucsclris.e
+move `xx_ucsclris.e' to `ucsclrisbin$x_ucsclris.e'

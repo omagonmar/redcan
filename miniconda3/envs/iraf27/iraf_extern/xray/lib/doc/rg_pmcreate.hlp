@@ -1,0 +1,160 @@
+#$Header: /home/pros/xray/lib/doc/RCS/rg_pmcreate.hlp,v 11.0 1997/11/06 16:23:20 prosb Exp $
+#$Log: rg_pmcreate.hlp,v $
+#Revision 11.0  1997/11/06 16:23:20  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:27  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:31  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:20:25  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:54  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:31  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:11:08  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:48:00  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:36:04  pros
+#General Release 1.0
+#
+.help rg_pmcreate Jan89 REGIONS_Library
+NAME
+.in 4
+rg_pmcreate - create a mask from a region descriptor
+.sp
+.in -4
+USAGE
+.in 4
+pm = rg_pmcreate(region, im, title)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	region		char		region descriptor
+	im		pointer		reference image
+
+Output Arguments:
+	title				pointer to region summary
+
+Return Value:
+	pm		pointer		pm handle
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function rg_pmcreate create a pm mask from a region descriptor.
+The region descriptor is an ASCII string containg zero or more regions.
+A PLIO mask is created from these regions which can be used in any
+subsequent PMIO call.
+If the region descriptor is null, rg_pmcreate will create a mask containing
+the entire field.
+
+The title is an ASCII string containing a summary of the regions that
+make up the mask.  It can be saved along with the mask in a file using
+the PLIO routine pm_savef.  If the title pointer is non-zero, the region
+information is appended to the string.  This means that one must set
+the title pointer to zero in most cases, or else there is the chance that
+the string will contain garbage.
+
+The input reference image is used primarily to get the dimensions of the mask
+to create.  The pm handle of the mask is returned by the function.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how rg_pldisp is used in conjunction with
+other routines such as rg_pmcreate.  This code, adapted from pmcreate, creates
+and displays a region mask.
+.in 8
+.nf
+include	<imhdr.h>
+include <error.h>
+include <pmset.h>
+
+include "../../lib/ext.h"
+include "xspatial.h"
+
+procedure pmcreate()
+
+char	pmname[SZ_PATHNAME]		# name of output PMIO file
+char	imname[SZ_PATHNAME]		# name of reference image
+char	region[SZ_PATHNAME]		# region descriptor
+char	tempname[SZ_PATHNAME]		# temp mask name
+bool	clobber				# clobber old mask
+bool	disp				# display mask
+int	ncols				# columns to display
+int	nrows				# rows to display
+pointer	im				# reference image pointer
+pointer	pm				# pixel mask pointer
+pointer	title				# region summary
+int	clgeti()			# get int param
+pointer	immap()				# open an image
+pointer	rg_pmcreate()			# create pixel mask
+bool	clgetb()			# get boolean
+bool	streq()				# string compare
+
+begin
+	# init some variables
+	title = 0
+	# get the parameters
+	call clgstr ("region", region, SZ_PATHNAME)
+	call clgstr ("image", imname, SZ_PATHNAME)
+	call clgstr ("mask", pmname, SZ_PATHNAME)
+	clobber = clgetb ("clobber")
+	disp = clgetb ("display")
+	if( disp )
+	{
+	    ncols = clgeti("ncols")
+	    nrows = clgeti("nrows")
+	}
+	# must have a reference image
+	if( streq(imname, "") )
+	    call error(1, "requires an image file as reference")
+	# get the pmname
+	call rootname(imname, pmname, EXT_PL, SZ_PATHNAME)
+	# must have a valid pmname
+	if( streq(pmname, "NONE") )
+	    call error(1, "requires a mask file name")
+	# check for already-existing file
+	call clobbername(pmname, tempname, clobber, SZ_PATHNAME)
+	# open the reference image
+	im = immap(imname, READ_ONLY, 0)
+	# create the PMIO file
+	pm =  rg_pmcreate(region, im, title)
+	# display if necessary
+	if( disp )
+	    call rg_pldisp(pm, ncols, nrows, 0, 0, 0, 0)
+	# save mask in a file
+	call pm_savef(pm, tempname, Memc[title], 0)
+	# close the reference image
+	call imunmap(im)
+	# close the pixel mask
+	call pm_close(pm)
+	# rename mask file, if necessary
+	call finalname(tempname, pmname)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+The pointer to the title summary must be set to zero in the calling routine.
+.in -4
+.sp
+SEE ALSO
+.in4
+regions (a description of the ASCII region descriptor, in the spatial
+doc directory), rg_plcreate, rg_pldisp, rg_pmvallims

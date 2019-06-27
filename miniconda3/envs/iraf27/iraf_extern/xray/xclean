@@ -1,0 +1,9 @@
+#!/bin/csh
+
+if( "$1" == "" ) then
+  set CMD = "rm -i"
+else
+  set CMD = "$1"
+endif
+find . \( -name '*~' -o -name '*-old' -o -name '#*' -o -name core \) -exec ${CMD} {} \;
+

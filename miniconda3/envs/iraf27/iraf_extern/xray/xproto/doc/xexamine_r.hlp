@@ -1,0 +1,94 @@
+.help xexamine_r Mar98 xray.xproto
+.ih
+NAME
+xexamine_r -- Examine a QPOE using the image display
+
+.ih
+USAGE
+xexamine_r qpoe
+.ih
+DESCRIPTION
+
+        \fIxexamine_r\fR loads a QPOE file into the image display, and
+allows the user to redisplay and examine the data through interactive 
+cursor commands.  In addition to all the features in xplot.xexamine,
+this task also works for the QPOE which has different dimensions of x 
+and y axes. Refer to the xexamine help file for the usages.
+
+.nf
+(Note: This task is under development and requires to load the 
+       package XPLOT.)
+.fi
+.ih
+PARAMETERS
+.nf
+Same as xexamine. See its help file.
+.fi
+.ih
+EXAMPLES
+
+.nf
+       xp> xexamine_r
+       Input Qpoe ( ): hSt.qp
+
+        << Note!! User specified Blocking and Image Sections are ignored >>
+
+
+       graph dimension: 512 x 512
+       bkden=0.0000000
+
+       detector: arcsec/pix = 3600.0, len_x = 49152, len_y = 4096
+
+       display: arcsec/pix = 345600.0, len = 512, block = 96
+
+
+                       Xexamine Key Menu:
+        -------------------------------------------------------------------
+        The following Keys must be entered in the Saoimage window:
+          
+        a   = Expand & display qpoe by auto-expand increment 
+        b   = Block & auto-expand factor query
+        c   = Cursor Coordinate query [hh:mm:ss.s dd:mm:ss.s, degs, pixels]
+        d   = Display Qpoe centered at Cursor
+        p   = Overlay Projection onto Display
+        r   = Redisplay original Qpoe
+        s   = Local Source detect
+        u   = Undo; return to previous display
+          
+        ?   = Menu display
+        q   = QUIT
+
+        The following commands must be entered in the IRAF window:
+
+        : a <#> = change auto-expand factor (i.e. : a 4) 
+        : b <#> = change block factor (i.e. : b 16) 
+        : c <#> = change detect cell size (i.e. : c 12) 
+        -------------------------------------------------------------------
+
+       Displaying: = hSt.qp[bl=96][1:512,1:42]
+       z1=0. z2=135.
+
+      ... continue session choosing cursor commands from above list !!
+.fi
+.ih
+BUGS
+.nf
+XEXAMINE_R with the 's' option uses BKDEN to compute the background 
+density.  The default region is a circle at the field center with 
+radius 7.5 arcmin.  When the average counts in this area is large 
+(e.g. 140 counts/sq_arcmin as was the case for the center of the 
+Virgo cluster in a 202 ksec observation), the error message
+'floating point overflow' will occur because of BKDEN taking e to 
+the power of 140.  The workaround is to skip BKDEN by setting the 
+parameter 'xexamine_r.bkden' larger than zero.  A reasonable value 
+for the background density can be estimated by choosing your own 
+region and using 'imcnts'.
+.fi
+.ih
+SEE ALSO
+.nf
+    xexamine       - The originale task which examines a square QPOE.
+    explain_detect - describes algorithms used in BKDEN. 
+.fi
+
+.endhelp

@@ -1,0 +1,41 @@
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p xdimsum maskinterp.x t_avshift.x mptools.x
+maskinterp.x:
+   t_maskinterp:
+t_avshift.x:
+   t_avshift:
+mptools.x:
+   mp_open:
+   mp_pmmap:
+   mp_immap:
+   mp_section:
+   mp_mpcopy:
+   mp_miopen:
+   mp_samesize:
+   mp_invert:
+   mp_copy:
+maskinterp.f:
+   tmaskp:
+t_avshift.f:
+   tavsht:
+mptools.f:
+   mpopen:
+   mppmmp:
+   mpimmp:
+   mpsecn:
+   mpmpcy:
+   mpmion:
+   mpsame:
+   mpinvt:
+   mpcopy:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/xdimsum/src/libpkg.a maskinterp.o t_avshift.o mptools.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/xdimsum/src/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p xdimsum x_xdimsum.x
+x_xdimsum.x:
+   sys_runtask:
+x_xdimsum.f:
+   sysruk:
+xc -Nz -p xdimsum   x_xdimsum.o libpkg.a -lxtools -o xx_xdimsum.e
+move `xx_xdimsum.e' to `xdimsumbin$x_xdimsum.e'

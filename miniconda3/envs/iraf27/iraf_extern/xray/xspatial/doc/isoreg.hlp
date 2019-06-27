@@ -1,0 +1,190 @@
+#$Header: /home/pros/xray/xspatial/doc/RCS/isoreg.hlp,v 11.0 1997/11/06 16:29:52 prosb Exp $
+#$Log: isoreg.hlp,v $
+#Revision 11.0  1997/11/06 16:29:52  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:37:35  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:56:40  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:28:53  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:11:05  prosb
+#General Release 2.2
+#
+#Revision 5.2  93/05/21  08:47:40  janet
+#added bug warning for image sections.
+#
+#Revision 5.1  93/03/18  13:58:46  janet
+#typo in example fixed.
+#
+#Revision 5.0  92/10/29  21:28:48  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:34:53  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/23  16:40:30  janet
+#*** empty log message ***
+#
+#Revision 1.1  92/02/14  11:39:30  janet
+#Initial revision
+#
+#
+.help isoreg April92 xray.xspatial
+.ih
+NAME
+isoreg -- create a mask file by applying intensity levels to image data
+.ih
+USAGE
+isoreg in_image out_mask levels
+.ih
+DESCRIPTION
+ISOREG applies intensity levels to an image and creates an output mask
+file with intensity regions.  A mapping between the intensity levels and
+mask region ids are displayed.  Intensity levels such as the contour
+levels determined in task Imcontour/Tvimcontour are a good application
+for this task.  The contour levels (i.e. 6.4860,9.8309,14.9009,22.5855,
+34.2333,51.8880) are mapped to mask regions (i.e. 1,2,3,4,5,6) and
+saved in the output pl file.
+
+.ih
+PARAMETERS
+.ls in_image = ""       prompt = Input image filename
+
+Name of the input image file to be read.
+.le
+.ls out_mask = "" 	prompt = Output Isoregions mask file [root_iso.pl]
+
+Name of output pl mask file to be written.
+.le
+.ls levels = "" 	prompt = Intensity Levels
+
+List of intensity levels.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output Table file can be
+overwritten, if it already exists.
+.le
+.ls (display = 2) [int]
+
+Display info to screen.  Integer of range 0-5.  The higher the number
+the more verbose the display.
+.ih
+EXAMPLES
+1.  Apply intensity levels to an image.
+
+.nf
+        xs> isoreg myimage.imh mymask.pl "2 4 8 16 32"
+
+        Mask Id / Intensity Level Pairs:
+        --------------------------------
+           1       2.000
+           2       4.000
+           3       8.000
+           4       16.000
+           5       32.000
+
+        Writing to Output file:  mymask.pl
+
+.fi
+
+2. Apply intensity contour levels to a smoothed image file.  First run
+   imcontour, followed by isoreg, and finally sum the counts in each region 
+   with imcnts.
+
+.nf
+        xp> imcontour
+        IRAF image filename (snr_smo.imh):
+        Grid type (sky|pixel) (sky):
+        Contour Units (pixel|peak|sigma) (peak):
+        Contour Levels (log 10 80 5):
+
+        Input Image Size is 128 x 128 Pixels
+
+        Determined Contour Levels:
+        (6.4860,9.8309,14.9009,22.5855,34.2333,51.8880)
+
+        Plot Device is stdgraph & Scale Device is stdplot
+
+        xs> isoreg
+        Input image filename : snr_smo.imh
+        Output Isoregions mask file [root_iso.pl]: .
+        Intensity Levels: 6.4860,9.8309,14.9009,22.5855,34.2333,51.8880
+
+        Mask Id / Intensity Level Pairs:
+        --------------------------------
+           1       6.486
+           2       9.831
+           3       14.901
+           4       22.586
+           5       34.233
+           6       51.888
+
+        Writing to Output file:  ./snr_iso.pl
+
+        xs> imcnts
+        source image file : snr_smo.imh
+        source region descriptor : snr_iso.pl
+        background image file or cts/pixel (0):
+        root name for output file [root_cnt.tab] (.):
+
+        SOURCE/nimage:          snr_smo.imh
+        mask_name:      in memory
+        mask_type:      region
+        ref_file:       none
+        xdim:           128
+        ydim:           128
+        scale:          none
+        regions:        FIELD
+        no exposure correction
+
+        constant bkgd:  0.0000 counts/sq. pixel
+
+        user normalization: 1.00
+        time normalization: 1.00
+        final normalization: 1.00
+
+        SOURCE DATA:
+        REGION          COUNTS          PIXELS
+        1               8047            1038
+        2               3107            265
+        3               1263            73
+        4               1043            37
+        5               1367            32
+        6               940             16
+
+        BKGD-SUBTRACTED DATA:
+        REG   COUNTS     ERROR      BKGD       PIXELS   CNT/PIX    ERR/PIX
+        1     8047.23    89.7063    0.00       1038     7.7526     0.0864
+        2     3107.55    55.7454    0.00       265      11.7266    0.2104
+        3     1263.64    35.5477    0.00       73       17.3101    0.4870
+        4     1043.23    32.2991    0.00       37       28.1954    0.8729
+        5     1367.82    36.9841    0.00       32       42.7444    1.1558
+        6     940.46     30.6669    0.00       16       58.7786    1.9167
+        Creating table output file: ./snr_cnt.tab
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+Isoreg does not work on and image with a section (i.e. foo.imh[1:100,1:100]).
+Use task imcopy to copy the image with the section into a new image before
+running Isoreg.
+.ih
+SEE ALSO
+Documentation on imcontour (\fIhelp imcontour \fR) for a
+description of contouring an IRAF image/qpoe  file.
+
+Documentation on tvimcontour (\fIhelp tvimcontour \fR) for a
+description of contouring an IRAF image/qpoe file to an imtool window.
+
+Documentation on imcnts (\fIhelp imcnts \fR) for a
+description of getting counts from mask regions.
+.endhelp
+

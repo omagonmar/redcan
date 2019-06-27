@@ -1,0 +1,94 @@
+# $Header: /home/pros/xray/xdataio/RCS/qpoe.cards,v 11.0 1997/11/06 16:36:00 prosb Exp $
+#
+# Function:	qpoe.cards
+# Purpose:	Definition of FITS qpoe header cards -> qpoe header parameters
+# Uses:		used by program fits2qp
+# Notes:	Modified:  MC	9/16/90	For accurate header names so that
+#			                fits2qp correctly creates a qpoe header
+#
+
+# Known Pros Cards
+#
+# See fits.cards for a tidbit of documentation.
+##
+
+EVENT		.		TY_CHAR		1000
+TELESCOP	.		TY_CHAR		1001
+INSTRUME	.		TY_CHAR		1001
+EQUINOX		.		TY_REAL		1001
+RADECSYS	.		TY_CHAR		1001
+# these are handled properly in wcs.cards
+#CRVAL1		.		TY_REAL		1001
+#CRVAL2		.		TY_REAL		1001
+#CRPIX1		.		TY_REAL		1001
+#CRPIX2		.		TY_REAL		1001
+#CDELT1		.		TY_REAL		1001
+#CDELT2		.		TY_REAL		1001
+#CROTA2		.		TY_REAL		1001
+#CTYPE1		.		TY_REAL		1001
+#CTYPE2		.		TY_REAL		1001
+MJD-OBS		.		TY_REAL		1001
+DATE_OBS	.		TY_CHAR		1001
+TIME_OBS	.		TY_CHAR		1001
+DATE_END	.		TY_CHAR		1001
+TIME_END	.		TY_CHAR		1001
+
+BARYTIME	.		TY_BOOL		1001
+TSTART          .               TY_DOUBLE       1001
+TSTOP           .               TY_DOUBLE       1001
+
+# these are not really up to date with the real names!!
+XS-OBSID	.		TY_CHAR		1001
+XS-SUBIN	.		TY_INT		1001
+XS-OBSV 	.		TY_INT		1001
+XS-CNTRY	.		TY_CHAR		1001
+XS-FILTR	.		TY_INT		1001
+XS-MODE		.		TY_INT		1001
+XS-DANG 	.		TY_REAL		1001
+PANO1	 	.		TY_REAL		1001
+XS-MJDRD	.		TY_INT		1001
+MJDREFI		.		TY_INT		1001
+XS-MJDRF	.		TY_DOUBLE	1001
+MJDREFF		.		TY_DOUBLE	1001
+XS-EVREF	.		TY_INT		1001
+XS-TBASE	.		TY_DOUBLE	1001
+XS-ONTI 	.		TY_DOUBLE	1001
+ONTIME  	.		TY_DOUBLE	1001
+XS-LIVTI	.		TY_DOUBLE	1001
+LIVETIME	.		TY_DOUBLE	1001
+DTCOR		.		TY_REAL		1001
+XS-DTCOR	.		TY_REAL		1001
+XS-BKDEN	.		TY_REAL		1001
+XS-MINLT	.		TY_REAL		1001
+XS-MAXLT	.		TY_REAL		1001
+XS-XAOPT	.		TY_REAL		1001
+XS-YAOPT	.		TY_REAL		1001
+XS-XAOFF	.		TY_REAL		1001
+XS-YAOFF	.		TY_REAL		1001
+XS-RAROT	.		TY_REAL		1001
+XS-XARMS	.		TY_REAL		1001
+XS-YARMS	.		TY_REAL		1001
+XS-RARMS	.		TY_REAL		1001
+XS-RAPT		.		TY_REAL		1001
+RA_NOM		.		TY_REAL		1001
+XS-DECPT	.		TY_REAL		1001
+DEC_NOM		.		TY_REAL		1001
+XS-XPT		.		TY_INT		1001
+XS-YPT		.		TY_INT		1001
+XS-XDET		.		TY_INT		1001
+XS-YDET		.		TY_INT		1001
+XS-FOV		.		TY_REAL		1001
+XS-INPIX	.		TY_REAL		1001
+XS-INPXX	.		TY_REAL		1001
+XS-INPXY	.		TY_REAL		1001
+XS-XDOPT	.		TY_REAL		1001
+XS-YDOPT	.		TY_REAL		1001
+XS-CHANS	.		TY_INT		1001
+XS-SORT		.		TY_CHAR		1001
+XS-SIZE		.		TY_CHAR		1001
+XS-EVENT	.		TY_CHAR		1001
+NAXLEN		.		TY_INT		2001	
+AXLEN1		.		TY_INT		2002	
+AXLEN2		.		TY_INT		2003	
+REVISION	.		TY_INT		2004   
+FORMAT		.		TY_INT		2005   

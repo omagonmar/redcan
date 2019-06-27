@@ -1,0 +1,66 @@
+#$Header: /home/pros/xray/lib/scan/RCS/mkpkg,v 11.0 1997/11/06 16:23:27 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:23:27  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:37  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:44  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:20:39  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:02:08  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:43  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:11:33  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  91/08/02  09:54:57  mo
+#MC	8/2/91		Updated for new package structure
+#
+#Revision 2.0  91/03/07  00:17:47  pros
+#General Release 1.0
+#
+# Make the scan library
+
+update:
+$checkout libscan.a ..
+$update   libscan.a
+$checkin  libscan.a ..
+$exit
+
+libscan.a:
+	slcall.x <slset.h> <imhdr.h>
+	slopen.x <slset.h>
+	scadd.x <scset.h>
+	sccircle.x <scset.h>
+	scdebug.x <scset.h>
+	scdisp.x <scset.h>
+	scget.x <scset.h> <plset.h>
+	scmerge.x <scset.h>
+	scop.x <scset.h>
+	scopen.x <scset.h>
+	scpaint.x <scset.h>
+	scplio.x <scset.h> <pmset.h>
+	scpoint.x <scset.h>
+	scpool.x <scset.h>
+	scrotbox.x <scset.h>
+	;
+
+
+
+test:
+	$omake	sctest.x scset.h
+        $link	sctest.o ../libscan.a
+	;
+
+try:
+	$omake	sltry.x scset.h
+        $link	sltry.o ../libscan.a ../libregions.a
+	;

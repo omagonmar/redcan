@@ -1,0 +1,34 @@
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default dumb]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+PATH: /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/
+
+Make helpdb for package stecf
+  1            root (stecf$lib/root.hd): 1 help modules
+  2       rootstecf (stecf$lib/rootstecf.hd): 6 help modules
+  3       driztools (stecf$driztools/driztools.hd): 2 help modules
+  3           impol (stecf$impol/impol.hd): 5 help modules
+  3           imres (stecf$imres/imres.hd): 3 help modules
+		    (cannot access `stecf$nictools/nictools.hd')
+  3         specres (stecf$specres/specres.hd): 3 help modules
+  3           stecf (stecf$stecf.hd): 13 help modules
+  0                 (_index): 7 help modules
+
+Total of 40 help modules in 7 packages, file size 7218 bytes
+
+Make apropos.db for package stecf
+  1            root (stecf$lib/root.hd): 1 help modules
+  2       rootstecf (stecf$lib/rootstecf.hd): 6 help modules
+  3       driztools (stecf$driztools/driztools.hd): 2 help modules
+  3           impol (stecf$impol/impol.hd): 5 help modules
+  3           imres (stecf$imres/imres.hd): 3 help modules
+		    (cannot access 'stecf$nictools/nictools.hd')
+  3         specres (stecf$specres/specres.hd): 3 help modules
+  3           stecf (stecf$stecf.hd): 13 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+

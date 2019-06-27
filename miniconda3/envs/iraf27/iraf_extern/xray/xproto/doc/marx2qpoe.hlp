@@ -1,0 +1,162 @@
+.help marx2qpoe Feb98 xray.xproto
+.ih
+NAME
+marx2qpoe -- convert MARX EVENT FITS to a QPOE file.
+.ih
+USAGE
+marx2qpoe  inp_fits  out_qpoe  DetectorType  key_x  key_y
+.ih 
+DESCRIPTION
+
+\fImarx2qpoe\fR uses the PROS task FITS2QP to convert the MARX EVENT 
+FITS into a QPOE file. The output QPOE is spatially sorted with 
+key_y as the primary key and key_x as the secondary key. The task is 
+still under development and the tests were done for the fits files 
+created from marx2fits/version2.0. 
+
+.nf
+Notes:
+   1. MARX is the AXAF simulator tool and 'marx2fits' (included 
+      in the MARX suite) produces a fits file with a photon event 
+      table.
+
+   2. The sizes for the four detectors :
+
+                     axlen           key_
+                     _____           ___________
+          ACIS-I     1024            chipx,chipy
+                     8192            tdetx,tdety
+           
+          ACIS-S     1024            chipx,chipy
+                     6144x1024       tdetx,tdety 
+                     
+          HRC-I      16384           chipx,chipy
+                     16384           tdetx,tdety
+           
+          HRC-S      16384x4096      chipx,chipy
+                     49152x4096      tdetx,tdety
+
+   3. HRC-I :
+         Chipx, chipy are the same as tdetx, tdety.  It appears 
+         that to recover the correct sky orientation, the image 
+         must be viewed from 'behind' with an additional rotation 
+         of 45 degrees.  The choice of TDET for HRC was a request 
+         from the HRC instrument team. The problem is that we
+         really need DETX, DETY (focal plane coords) and MARX 
+         doesn't calculate them yet.  The 'back to front' is 
+         because HRC-I is wired up such that its native telemetry 
+         coordinate axes are a left handed system.
+ 
+      HRC-S and ACIS-S :
+         'xexamine' requires a square array; but you can use 
+         xproto.xexamine_r, or xplot.xdisplay with suitable blocking 
+         factors and, as required, a [ccdid=n] filter.
+          e.g. xdisplay "filename.qp[bl=32,ccdid=2][x1:x2,y1:y2]"
+
+.fi
+.ih
+PARAMETERS
+.ls  inp_fits =                    input fits filename 
+.le
+.ls  out_qpoe =                    output qpoe filename
+.le
+.ls  DetectorType=                 (1)ASC-I (2)ASC-S (3)HRC-I (4)HRC-S 
+
+Select the detector with a number from 1 to 4.
+.le
+.ls  key_x =                       index key for x coordinate
+
+(key_x,key_y) can be (chipx,chipy), (tdetx,tdety), (detx,dety) or (x,y)
+.nf 
+
+NB:  in marx2fits (vs 2.0), only chipx, chipy, and tdetx, tdety 
+     are non-zero.
+.fi
+.le
+.ls  key_y =                       index key for y coordinate 
+
+(key_x,key_y) can be (chipx,chipy), (tdetx,tdety), (detx,dety) or (x,y)
+.nf
+
+NB:  in marx2fits (vs 2.0), only chipx, chipy, and tdetx, tdety 
+     are non-zero.
+.fi
+.le
+
+.ls (axlen1 = 1024) [int]         dimension of qpoe axis #1
+
+The dimension of the first qpoe axis.  This parameter is used only if
+(key_x,key_y) is not in (chipx,chipy) or (tdetx,tdety).
+.le
+.ls (axlen2 = 1024) [int]         dimension of qpoe axis #2
+
+The dimension of the second qpoe axis.  This parameter is used only if
+(key_x,key_y) is not in (chipx,chipy) or (tdetx,tdety).
+.le
+.ls (display = 1) [int]           display level.
+.le
+.ls (clobber = no) [boolean]      Okay to delete existing file?
+
+If file overwrite errors occur, try manually deleting existing files
+(use IRAF "imdel" for "imh" files).
+.le
+.ls (DeleteInterm= yes) [boolean] Okay to delete intermediate file? 
+.le
+.ls (fits_cards = "xdataio$fits.cards") [string]
+
+The name  of the fits parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (qpoe_cards = "xdataio$qpoexrcf.cards") [string]
+
+The name  of the qpoe parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (ext_cards = "xdataio$ext.cards") [string]
+
+The name  of the ext parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (wcs_cards = "xdataio$wcsmarx.cards") [string]
+
+The name  of the wcs parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (qp_pagesize = 16384) [int]    page size for qpoe file 
+
+Page size for the qpoe file.  This parameter is internal to
+qpoe and should not normally be changed.
+.le
+.ls (qp_bucketlen= 32767) [int]    bucket length for qpoe file 
+
+Bucket length for the qpoe file. This parameter is internal to
+qpoe and should not normally be changed.
+.le
+.ih
+EXAMPLES
+
+ 1. Convert the MARX EVENT FITS for HRC-S to the PROS QPOE format.
+.nf
+
+xd> marx2qpoe
+input fits filename: hrcS_evts.fits
+output qpoe filename: test.qp
+Detector Type: (1)ASC-I (2)ASC-S (3)HRC-I (4)HRC-S   (1:4) (1): 4
+index key for x coordinate (chipx): 
+index key for y coordinate (chipy): 
+char strings not yet implemented - skipping
+Writing output QPOE file: ttiimmx.qp
+
+ttiimmx.qp (; no exp.) -> test.qp
+Creating QPOE output file: test.qp
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+
+HINTS & POINTERS for PROS Users (#23).
+
+.endhelp

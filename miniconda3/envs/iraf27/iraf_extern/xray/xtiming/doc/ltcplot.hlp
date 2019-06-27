@@ -1,0 +1,181 @@
+#Header$
+#Log$
+#
+.help ltcplot Dec93 xray.xtiming
+.ih
+NAME
+ltcplot - Graph a Light-curve Table
+.ih
+USAGE
+ltcplot table
+.ih
+DESCRIPTION
+\fILTCPLOT\fR graphs the output file created from running task 
+\fILTCURV\fR.  LTCPLOT has default parameters set to plot a histogram 
+of 'Count Rate (cts/sec) vs. Time (secs)' with error bars.  The input is 
+the root_ltc.tab file.  Further customizations effecting titles, axes labels
+and tics, and plotting data subsets are available to the user.  The iraf
+IGS plot commands are available to the user to further expand, zoom, and 
+query the plot.
+
+.ih
+PARAMETERS
+.ls table =             prompt = Input Table File
+
+Table file to be plotted.
+.le
+.ls outplt =            prompt = Plot output file
+
+Filename of output plot.  Required when parameter hdcopy is \fIyes\fR.
+This file is left in the user's directory after termination of this
+task.  It can be reprinted using the STPLOT package SGIKERN task.
+.le
+.ls (column = "ctrt")    	
+
+Column name of plot data.  The name must be input as it appears in the
+table.  The data corresponding  to  the  column  name  is read from the 
+table file and plotted.
+.le
+.ls (plot_type = "histo") [string]
+
+Type of plot, either \fIhisto\fR or \fIbar\fR.  If plot_type is
+"histo" a histogram of the column data will be plotted.  If the
+plot_type is "bar" the column data will be plotted as horizontal
+bars. Default is set to \fIhisto\fR.
+.le
+.ls (ecolumn = "err") [string]
+
+Column name of error data to be plotted.  This is an option only if
+plot_type is "histo" and will appear as error bars on the graph.
+Ecolumn is the name of the error data associated with the column.
+The name must be input as it appears in the input table.
+.le
+.ls (plot_title = "Light Curve :") [string]
+
+Title for plot.
+.le
+.ls (x_title = "Time (seconds)"") [string]
+
+Title for X-axis.
+.le
+.ls (y_title = "Count Rate (cts/sec)") [string]
+
+Title for Y-axis.
+.le
+.ls (hdcopy = no) [boolean]
+
+\fIyes\fR prints a hardcopy of the plot to the printer and \fIno\fR
+displays the plot on the screen.  Default is set to \fIno\fR.
+.le
+.ls (gclose = no) [boolean]
+
+\fINo\fR leaves task in graphics window - type 'q' to quit.
+\fIYes\fR closes plot and returns to the cl.  Default is set to
+\fIno\fR.
+.le
+.ls (num_plots = 1) [int]
+
+Number of plot windows in which to display the data.  Data will be
+evenly divided among the specified number of windows.
+.le
+.ls (x_units = "seconds") [string]
+
+X-axis label.  Default is \fIseconds\fR.  Header parameters must be 
+present for \fIseconds\fR to work.  x_units will default to
+\fIbin\fR if header parameters are missing.
+.le
+.ls (x_tics = 4.) [real]
+
+Number of tic labels on x-axis.  This is the approximate number of tics and
+corresponding labels along the x-axis.  The task chooses evenly spaced round
+numbers for labels and thus the actual number of labels may not be exactly
+that which was chosen.
+.le
+.ls (y_tics = 4.) [real]
+
+Number of tic labels on y-axis.  This is the approximate number of tics and
+corresponding labels along the y-axis.  The task chooses evenly spaced round
+numbers for labels and thus the actual number of labels may not be exactly
+that which was chosen.
+.le
+.ls (label_size = 0.75) [real]
+
+Plotting Header and axis labels format size.  This is the size of the labels
+for the plot header and X & Y axis labels.  The format is set to a reasonable
+size.  Adjust this value by 1/10's to change the size of the labels.
+.le
+.ls (tlabel_size = 0.5) [real]
+
+Strip plot tic label format size.  This is the size of the labels
+on the axis tic marks.  Small adjustments to this value dramaticly affect
+the size.  This value should be decreased slightly (by 1/10's) when the
+number of plots is large and the labels run into adjoining plot windows.
+.le
+.ls (x_range = "auto") [string]
+
+Either \fIauto\fR which will plot entire file length or a \fIRange\fR
+consisting of a min and max.
+.le
+.ls (y_range = "auto") [string]
+
+Either \fIauto\fR which will plot all histogram values or a \fIRange\fR
+consisting of a min and max.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the plot file can be overwritten if
+it already exists (i.e. postscript plot file).  Does not apply to window
+graphics.  Used when \fIhardcopy\fR equals \fIyes\fR.
+.le
+.ls (cursor = "") [string]
+
+Stores cursor commands taken in interactive graphics mode.
+
+.le
+.ih
+EXAMPLES
+1. Plot a histogram of the count rate of light curve table snr_ltc.tab.
+The input file is the complete data set of xdata$snr.qp, and from this plot
+one can discern the 3 good time intervals and the gaps in the data set.
+.nf
+
+        xt> ltcplot
+        Input Table File: snr_ltc
+
+.fi
+2. Plot the histogram as in example 1 but with more tic marks on the X-axis.
+.nf
+
+	xt> ltcplot.x_tics=8
+	xt> ltcplot
+	Input Table File: snr_ltc
+.fi
+3.  Plot a histogram of the count rate of light curve table snr3_ltc.tab.
+Divide plotting area so that the data is shown over 5 strip plots.  Don't
+plot the error bars.
+.nf
+
+        xt> ltcplot num_plots=5 ecolumn=""
+        Input Table File: snr3_ltc
+
+.fi
+4. As in example 2 only in command line format.
+.nf
+
+	xt> ltcplot "snr3_ltc" num_plots=5 ecolumn=""
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+    Documentation on making a light curve (help ltcurv) 
+
+    Documentation on graphing timing tables (help timplot)
+
+    Documentation on graphics cursor commands (help cursors)
+
+.endhelp
+

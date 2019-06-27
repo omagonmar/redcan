@@ -1,0 +1,203 @@
+.help xexamine Mar98 xray.xplot
+.ih
+NAME
+xexamine -- Examine a Qpoe using the image display
+
+.ih
+USAGE
+xexamine qpoe
+.ih
+DESCRIPTION
+
+        \fIXexamine\fR loads a Qpoe file into the image display, and
+allows the user to redisplay and examine the data through interactive
+cursor commands.  For example, the user can redisplay the data centered at
+a point, resample the data at a given block factor, auto-expand the data
+by an expand factor increment, read back a cursor position in celestial
+coordinates, and overlay a projection onto the display,
+
+        The 's' (source position determination) key has been added recently
+and it will determine the maximum liklihood position using the cursor readback
+as input.  The source information is displayed on the screen (no file
+information is saved).  The parameter 'cellsize' should be set to the
+approximate size of the source in arcseconds.  The user should refer to the
+\fIBEPOS\fR documentation for more information on detect.
+.nf
+
+Note(1/98): The QPOE must be a square for this task. If not, then use 
+            xexamine_r (XPROTO) instead. 
+.fi
+.ih
+PARAMETERS
+.ls qpoe = ""         prompt = Input Qpoe
+
+Qpoe to be loaded.  User specified Blocking and Image Sections are ignored,
+but other filters are preserved (i.e. pha, time).
+.le
+.ls (auto = 2) [int]
+
+Default auto-block factor.  Can be changed in program with ':' command.
+.le
+.ls (cellsize = 30) [int]
+
+Default detect cell size in arcseconds.  Can be changed in program
+with ':' command.
+.le
+.ls (bkden = 0.0) [int]
+
+Override bkgd density (cts/arcmin**2).  When 0.0 (default) the background
+density is determined by the bkden task at the region specified below.
+If this param is set, the User specified bkden is used in source detection.
+.le
+.ls (t_xdisplay = "xdisplay(image='$1')") [string]
+
+Xdisplay task macro definition.  The user will inherit customizations made
+to their xray.xplot.xdisplay parameters when displaying with xexamine.
+.le
+.ls (t_proj = "_gproj(image='$1')" ) [string]
+
+Graph Projection task macro definition.
+.le
+.ls (t_bkden = "bkden(image='$1', region="circle 128 128 7.5'")" )  [string]
+
+Background density task macro definition.  For use in Maximum liklihood calc.
+.le
+.ls (t_bpos = "bepos(qpoe='$1',rough_fname='$2',
+             bepos_tab='$3',bkden=bkden.value, display=10)" ) [string]
+
+Maximum liklihood position determination task macro definition.
+.le
+.ls (display = 2) [int]
+
+Display level.  0=none, 2=Useful info, including an initial menu display,
+4=log of key commands and tv coords, 5=debugging purposes.
+.le
+.ls (graphics = "stdimage") [string]
+
+Graphics display device.
+
+
+.ih
+CURSOR COMMANDS
+
+There are 2 types of commands;  Keyboard commands and Colon commands.
+
+For Keyboard commands, type the desired letter when cursor is on the
+image dispay, no CR necessary.
+
+Keyboard commands include:
+
+.nf
+        a   = Expand & display qpoe by auto-expand increment
+        b   = Block & auto-expand factor displayed
+        c   = Cursor Coordinate query [hh:mm:ss.s dd:mm:ss.s, degs, pixels]
+        d   = Display Qpoe centered at Cursor
+        p   = Overlay Projection onto Display
+        s   = Source position determination (maximum liklihood method)
+        r   = Redisplay original Qpoe
+        u   = Undo; return to previous display
+
+        ?   = Menu display
+        q   = QUIT
+
+
+        --------------------------- NOTE ---------------------------
+        | Running Xexamine disables commands a user has available  |
+        | in from their TV window. After 'quiting' Xexamine the    |
+        | TV window commands are again enabled.  		   |
+        | (i.e. SAOimage keyboard commands 's', 'e', etc.)         |
+        --------------------------- NOTE ---------------------------
+.fi
+
+For colon commands, the colon must be typed in the  graphics window.
+The colon will appear in the IRAF window, and the rest of the command
+must be typed in the IRAF window.
+
+Colon Commands Include:
+
+.nf
+        : b <#> = change block factor (i.e. : b 16)
+        : a <#> = change auto-expand factor (i.e. : a 4)
+        : c <#> = change detect cell size (i.e. : c 24)
+
+.fi
+
+A readback of the new factor are displayed if they are received by the task.
+!! Caution: colon commands must be typed slowly.!!  i.e.
+
+.nf
+        : b 4
+
+        New Block = 4
+
+        : a 8
+
+        New Auto Block factor = 8
+
+        : c 12
+
+        New Cellsize = 12
+.fi
+.ih
+EXAMPLES
+
+.nf
+        xp> xexamine
+        Input Qpoe ( ): xdata$rp110590.qp[pha=7:40]
+
+        << Note!! User specified Blocking and Image Sections are ignored >>
+
+        graph dimension: 512 x 512
+
+        detector: as/pix = 0.5, len = 15360
+
+        display: as/pix = 15.0, len = 512, bl = 30
+
+
+                        Xexamine Key Menu:
+        -------------------------------------------------------------------
+        a   = Expand & display qpoe by auto-expand increment
+        b   = Block & auto-expand factor query
+        c   = Cursor Coordinate query [hh:mm:ss.s dd:mm:ss.s, degs, pixels]
+        d   = Display Qpoe centered at Cursor
+        p   = Overlay Projection onto Display
+        r   = Redisplay original Qpoe
+        s   = Source position determination (maximum liklihood method)
+        u   = Undo; return to previous display
+
+        ?   = Menu display
+        q   = QUIT
+
+        : b <#> = change block factor (i.e. : b 16)
+        : a <#> = change auto-expand factor (i.e. : a 4)
+        : c <#> = change detect cell size (i.e. : c 24)
+        -------------------------------------------------------------------
+
+        Displaying: = xdata$rp110590.qp[pha=7:40,bl=30][1:512,1:512]
+        z1 = 0., z2 = 827.
+
+        ... continue session choosing cursor commands from above list !!
+
+.fi
+.ih
+BUGS
+XEXAMINE with the 's' option uses BKDEN to compute the background
+density.  The default region is a circle at the field center with
+radius 7.5 arcmin.  When the average counts in this area is large
+(e.g. 140 counts/sq_arcmin as was the case for the center of the
+Virgo cluster in a 202 ksec observation), the error message
+'floating point overflow' will occur because of BKDEN taking e to
+the power of 140.  The workaround is to skip BKDEN by setting the
+parameter 'xexamine.bkden' larger than zero.  A reasonable value
+for the background density can be estimated by choosing your own
+region and using 'imcnts'.
+.ih
+SEE ALSO
+.nf
+    imexamine      - for examining images
+    explain_detect - regarding maximum-liklihood source determination
+    xexamine_r     - for qpoe which is not square
+    explain_detect - describes algorithms used in BKDEN.
+.fi
+
+.endhelp

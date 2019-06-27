@@ -1,0 +1,59 @@
+##############################################################
+##             RedCan needs the following software:         ##
+##                  (25 September 2013)                     ##
+##                  O. Gonzalez-Martin                      ##
+##                                                          ##
+##     - Gemini 1.11.1                                      ##
+##     - login.cl of IRAF at your home directory            ##
+##     - wcstools (no version restriction detected)         ##
+##     - python                                             ##
+##     - idl                                                ##
+##     - tcsh/csh                                           ##
+##     - IRAF2.14 or IRAF2.15                               ##
+##     - PyRAF                                              ##
+##         >> If IRAF2.15 PyRAF v1.11 is mandatory          ##
+##                                                          ##
+##      This procedure will check these dependences         ##
+##     giving a list of needed changes of versions          ##
+##      or new installations.                               ##
+##                                                          ##
+##############################################################
+Started...  Thu Sep 26 10:51:06 WEST 2013
+ 
+#### 1. Computer: 32- or 64-bits?...
+Computer using: 64
+ 
+#### 2. Trying to find IRAF...
+GOOD: IRAF found!
+ 
+#### 3. Checking IRAF version...
+GOOD: IRAF v2.15
+ 
+#### 4. Trying to find PyRAF...
+GOOD: PYRAF found.
+ 
+#### 5. Checking PyRAF version...
+GOOD: PyRAF v1.11
+ 
+#### 6. Trying to find Gemini package...
+GOOD: Gemini found.
+ 
+#### 7. Checking Gemini version...
+GOOD: Gemini v1.11
+ 
+#### 8. Trying to find login.cl in your home...
+GOOD: login.cl found at: /Users/omaira/login.cl
+ 
+#### 9. Trying to find WCSTOOLS...
+GOOD: WCSTOOLS found.
+ 
+#### 10. Trying to find Python...
+GOOD: Python found.
+ 
+#### 11. Trying to find csh/tcsh...
+GOOD: TCSH found.
+GOOD: CSH found.
+ 
+#### 12. Trying to find IDL...
+GOOD: IDL found.
+Finished...  Thu Sep 26 10:51:09 WEST 2013

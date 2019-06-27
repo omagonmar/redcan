@@ -1,0 +1,152 @@
+# $Header: /home/pros/xray/xspatial/doc/RCS/wcscoords.hlp,v 11.0 1997/11/06 16:30:05 prosb Exp $
+# $Log: wcscoords.hlp,v $
+# Revision 11.0  1997/11/06 16:30:05  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:46:58  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:57:09  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:29:22  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:11:38  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/21  18:40:14  mo
+#MC	fix typo in name
+#
+#Revision 5.0  92/10/29  21:29:12  prosb
+#General Release 2.1
+#
+#Revision 1.1  92/10/21  16:00:33  mo
+#Initial revision
+#
+#
+.help wcscoords Oct92 xray.xspatial
+.ih
+NAME
+wcscoords -- Use WCS to convert between IRAF coordinate systems
+.ih
+USAGE
+wcscoords image convtype ilist
+.ih
+DESCRIPTION
+wcscoords transforms a list of coordinates from one coordinate system to
+another.  It uses the IRAF WCS information and converts between
+tv, logical, physical and world coordinates.
+.ih
+PARAMETERS
+.ls image  = "" 	prompt = reference image file defining the WCS
+ 
+.le
+.ls convtype = 		prompt = code for type of conversion.  
+
+The codes for types of conversion are defined as follows:
+.nf
+	     	1 = world   -> physical 
+    		2 = world   -> tv       
+		3 = world   -> logical  
+		4 = physical-> logical  
+		5 = physical-> world   
+		6 = physical-> tv     
+		7 = tv      -> physical 
+		8 = tv      -> world   
+		9 = tv      -> logical
+		10= logical -> physical
+		11= logical -> world  
+		12= logical -> tv       
+.fi
+The logical, physical and world coordinate systems are defined in the
+document mwcs$MWCS.hlp.  The TV coordinate system is what is used
+by the IRAF/IMTOOL facility.  It is therefore needed in region files
+that are to be read into SAOIMAGE.
+.le
+.ls ifile = "STDIN"		prompt = input file list
+
+Comma separated list of the input files to be read.  STDIN is allowed
+(Remember to use ^D end of file for STDIN).
+.le
+.ls (ofile = "STDOUT") [string]
+
+Name of the output file to be created.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output coordinate list file
+can be overwritten, if it already exists.
+.le
+.ls (display = 3) [int]
+
+Display level print out flag.  
+.nf
+	0 -- print only the converted coordinates
+	1 -- print parsed conversion specification to STDERR
+	2 -- print  both input  and converted  coordinates in
+	     output  file  and  short  informative  header to
+	     output (but not STDOUT).
+	3 -- show coordinate conversions as they are done.
+	4 -- show units conversions.
+.fi
+Display level of 0 is best when an output file is being generated
+and the only a coordinate list is desired.
+.le
+.ih
+EXAMPLES
+
+1. Transform a position in RA and Dec to a pixel position in a
+particular image.  The RA and Dec ("22:08:41.56 45:44:49.6") were
+typed in as standard input (STDIN).  Typing "^D" ended the standard
+input.
+
+.nf
+xs> wcscoords "xdata$rp110590.qp[bl=30]" 3
+input file list (STDIN):
+
+Converting from    EQUATORIAL J2000.   in hours
+             to xdata$rp110590.qp[bl=30] is
+              TANGENT 256. 256. -0.004166667 0.004166667 = 332.0239 45.51389 0.
+                   EQUATORIAL J2000.   in pixels
+
+22:08:41.56 45:44:49.6
+  230.9993            311.997
+xs>
+.fi
+
+2. Transform a pixel position (7020, 7830) in an image to RA and Dec.
+Standard input is used as in the example above to input the pixels.
+Because the "oformat" parameter is left at its default, the output
+will be in decimal degrees.
+
+.nf
+xs> wcscoords "xdata$rp110590.qp" 5
+input file list (STDIN):
+
+Converting from xdata$rp110590.qp is
+            TANGENT 7680. 7680. -1.388889E-4 1.388889E-4 = 332.0239 45.51389 0.
+                   EQUATORIAL J2000.   in pixels
+             to    EQUATORIAL J2000.   in degrees
+
+7020 7830
+  332.1548            45.53465
+xs>
+.fi
+
+.ih
+TIME REQUIREMENTS
+The time requirements for this tasks are negligible.
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on precess (\fIhelp precess\fR) for a description of the precess 
+task.
+
+
+MWCS help file (\fImwcs$MWCS.hlp fi+\fR) for a description of the Mini-WCS 
+(World Coordinate System) Interface.
+
+SKYPIX helap file (\fIhelp skypix)
+.endhelp

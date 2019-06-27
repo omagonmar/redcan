@@ -1,0 +1,8 @@
+# Keyword translations.
+imagetyp		obstype
+amp			imageid
+subset			filter
+
+# Translations for OBSTYPE keyword.
+'dome flat'		flat
+'sky flat'		flat

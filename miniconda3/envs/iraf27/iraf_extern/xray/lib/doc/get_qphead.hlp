@@ -1,0 +1,235 @@
+#$Header: /home/pros/xray/lib/doc/RCS/get_qphead.hlp,v 11.0 1997/11/06 16:22:52 prosb Exp $
+#$Log: get_qphead.hlp,v $
+#Revision 11.0  1997/11/06 16:22:52  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:53  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:40  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:27  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:00:55  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:42  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:35  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:45  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:27  pros
+#General Release 1.0
+#
+.help get_qphead Jan89 PROS_Library
+NAME
+.in 4
+get_qphead - read the X-ray information from a qpoe header
+.sp
+.in -4
+USAGE
+.in 4
+call get_qphead(qp, qphead)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	qp		pointer		qpoe handle
+
+Output Arguments:
+	qphead		pointer		pointer to qpoe header
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine get_qphead reads header information from a qpoe file.
+The input argument is a qpoe handle, returned by qp_open.
+The output argument is a pointer to a struct whose record structure is defined
+in xray/lib/qpoe.h.  The routine allocates space for this header struct, and
+reads the qpoe header information into it.  The information can be changed,
+and then written back to the qpoe file using put_qphead.  The header
+can be displayed using the disp_qphead routine.
+It is the user's responsibility to free the header space at the completion
+of the task (see below).
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how get_qphead is used in conjunction with
+get_qphead.  It also shows how to use routines such as
+get_qptgr and disp_qptgr, as well as the QPOE I/O routines in general.
+Adapted from qpdisp, the task opens a qpoe file and displays the event,
+header, and tgr information.
+.in 8
+.nf
+include <qpset.h>
+include <qpioset.h>
+
+include "../../lib/qpoe.h"
+include "../../lib/ext.h"
+include "../../lib/plhead.h"
+
+define SZ_EXPR 1024
+define LEN_EVBUF 1024
+
+procedure qpdisp()
+
+char	poefile[SZ_FNAME]	# name of data file + event list
+char	poeroot[SZ_FNAME]	# root data file name
+char	region[SZ_LINE]		# region descriptor
+char	expname[SZ_FNAME]	# exposure file name
+char	table[SZ_FNAME]		# table name
+char	temp[SZ_FNAME]		# temp table name
+char	evlist[SZ_EXPR]		# event list specification
+
+int	i			# loop counter
+int	mval			# mask value returned by qpio_getevent
+int	nev			# number of events returned by qpio_getevent
+int	total      		# total photons
+int	ntgr			# number of tgr records
+int	evsize			# qpoe event size: large, med, small
+int	csize			# size of display for composite mask
+
+real	thresh			# exposure threshold
+
+pointer	qp			# qpoe handle
+pointer io			# event list handle
+pointer	pl			# pixel list handle
+pointer	qphead			# qpoe header pointer
+pointer	qptgr			# qpoe tgr pointer
+pointer	evl[LEN_EVBUF]		# event list buffer
+pointer	ev			# current event pointer
+pointer	title			# region title from rg_pmcreate
+
+bool	doheader		# display header?
+bool	doevents		# display events?
+bool	dotgr			# display tgr recs?
+
+bool	streq()			# string compare
+bool	strne()			# string compare
+bool	clgetb()		# get boolean
+int	qpio_getevents()	# get qpoe events
+real	clgetr()		# get real cl param
+pointer	qp_open()		# open a qpoe file
+pointer	qpio_open()		# open a qpio event list
+
+begin
+	# get parameters
+	call clgstr("qpoe", poefile, SZ_FNAME)
+	call clgstr("region",region, SZ_FNAME)
+	call clgstr("exp", expname, SZ_FNAME)
+	call rootname(poefile, expname, EXT_EXPOSURE, SZ_FNAME)
+	if( strne(expname, "NONE") ){
+	    thresh = clgetr("expthresh")
+	    if( thresh < 0.0 )
+	        call error(1, "exposure threshold must be >=0")
+	}
+	else
+	    thresh = -1.0
+	doevents = clgetb("events")
+	doheader = clgetb("header")
+	dotgr = clgetb("tgr")
+
+	# separate poefile into a root file and an event list spec
+	call qpparse(poefile, poeroot, SZ_PATHNAME, evlist, SZ_EXPR)
+
+	# open the qpoe file
+	qp = qp_open(poeroot, READ_ONLY, NULL)
+
+	# get qpoe event size
+	call get_evsize(qp, evsize)
+	if( evsize ==0 )
+	    call error(1, "unknown event structure for qpoe file")
+
+	# read qpoe header
+        call get_qphead(qp, qphead)
+
+	# display header, if necessary
+	if( doheader )
+	    call disp_qphead(qphead)
+
+	# display tgr, if necessary
+	if( dotgr ){
+	    call get_qptgr(qp, qptgr, ntgr)
+	    call disp_qptgr(qptgr, ntgr, QP_INST(qphead))
+	}
+
+	# display events, if necessary
+	if( doevents ){
+
+	# open the event list
+	io = qpio_open(qp, evlist, READ_ONLY)
+
+	# reset the event mask
+	call set_qpmask(qp, io, region, expname, thresh, pl, title)
+
+	# display the header
+	call msk_disp("qpdisp mask", poefile, Memc[title])
+
+	# print out a nice header
+	switch(evsize){
+	case SMALL_QPOE:
+	    call printf(SMALL_QPEVENT_HEADER)
+	case MEDIUM_QPOE:
+	    call printf(MEDIUM_QPEVENT_HEADER)
+	case LARGE_QPOE:
+	    call printf(LARGE_QPEVENT_HEADER)
+	case REGION_QPOE:
+	    call printf(REGION_QPEVENT_HEADER)
+	}
+
+	# get all photons through the region mask	
+	total = 0
+	while (qpio_getevents (io, evl, mval, LEN_EVBUF, nev) != EOF) {
+	    # display this batch of photons
+	    do i = 1, nev {
+		ev = evl[i]
+		# print out photon information
+		call disp_qpevent(ev, evsize)
+	    }
+	    # inc the total
+	    total = total + nev
+	}
+	# print out total number of photons
+	call printf("\ntotal:\t%d\n")
+	call pargl(total)
+
+	# close the event list and pl
+	call pl_close(pl)
+	call qpio_close(io)
+
+	}	# if( doevents ) ...
+
+	# close the qpoe file
+	call qp_close(qp)
+
+	# and free all space
+	call mfree(title, TY_CHAR)
+	call mfree(qphead, TY_STRUCT)
+	if( dotgr )
+	    call mfree(qptgr, TY_STRUCT)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+The pointer to the title summary must be set to zero in the calling routine.
+
+It is questionable whether it is a good idea for the routine to allocate
+header space, since the user must still free the space.
+.in -4
+.sp
+SEE ALSO
+.in4
+qpoe.h (which defines the struct into which qpoe header is read),
+get_qphead, put_qphead, get_qptgr, disp_qptgr.

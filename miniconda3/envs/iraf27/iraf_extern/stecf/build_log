@@ -1,0 +1,317 @@
+/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf
+report: STECF
+system is already configured for linux
+!date
+Fri Mar 29 18:10:29 CLST 2019
+===================  IMRES  =======================
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables cplucy.f seeing.f apomask.f fftetc.f
+cplucy.f:
+   cplucy:
+   mulc:
+   divide:
+   total:
+   writab:
+   mulim:
+   addim:
+   resinf:
+   zapneg:
+   getstr:
+   fgauss:
+   copyim:
+   smooth:
+   convls:
+   expsfs:
+   coreal:
+   getof:
+   bcorr:
+   ctest:
+   plim:
+   gtdpsb:
+   psfblk:
+   prfcon:
+   arstat:
+seeing.f:
+   seeing:
+   seefft:
+   quad:
+apomask.f:
+   apomak:
+   circle:
+fftetc.f:
+   dfill:
+   dconv:
+   dfourt:
+   dircon:
+   sircon:
+   filcon:
+   silcon:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/imres/src/libpkg.a cplucy.o seeing.o apomask.o fftetc.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/imres/src/libpkg.a
+ranlib libpkg.a
+Updated 4 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables x_imres.x
+x_imres.x:
+   sys_runtask:
+x_imres.f:
+   sysruk:
+xc -Nz -p tables -p stsdas -p tables x_imres.o libpkg.a -liraf77  -liminterp -o xx_imres.e
+move `xx_imres.e' to `../../bin/x_imres.e'
+===================  SPECRES =======================
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables nplucy.f spelib.f spepsf.f splfit.f timtem.x
+timtem.x:
+   timotp:
+   timxtp:
+   timctp:
+nplucy.f:
+   nplucy:
+   popnpl:
+   nlucy:
+   iterlam:
+spelib.f:
+   wavcre:
+   poilim:
+   tcoput:
+   out2t1:
+   lisnam:
+   namnum:
+   chanum:
+   mkxycen:
+   zaptot:
+   zapneg:
+   total:
+   mulc:
+   psfparn:
+   profpar:
+   psfcentn:
+   psfcent:
+   centcen:
+   gauspos:
+   curfitg:
+   functg:
+   gchisq:
+   gderiv:
+   psfblky:
+   shifty:
+   poicenn:
+   poiceni:
+   psfker:
+   poscorn:
+   poscorr:
+   gausfin:
+   backmn:
+   backcc:
+   mdian1:
+   sort:
+   centpos:
+   curfits:
+   functn:
+   fchisq:
+   fderiv:
+   matinv:
+   corel:
+   fluestn:
+   fluest:
+   psfmany:
+   effpsf:
+   effpsfa:
+   trans:
+   prflb:
+   gaussf:
+   nordev:
+   ran1:
+   fmtchka:
+   divid1:
+   divida:
+   intgpts:
+   projy:
+   dfill:
+   dconv:
+   dfourt:
+   dircon:
+   sircon:
+   filcon:
+   silcon:
+spepsf.f:
+   spepsf:
+   pwavchk:
+   wavind:
+   intocub:
+   psfpro:
+   outocub:
+   sliext:
+   psf1d:
+   check0:
+   psf1d2:
+   quad2d:
+   qgausx:
+   g:
+   qgausy:
+   f:
+   func:
+   y1:
+   y2:
+   splie2:
+   spline:
+   splin2:
+   splint:
+splfit.f:
+   splfit:
+   popspl:
+   splucy:
+   iterspec:
+   iterspat:
+timtem.f:
+   timotp:
+   timxtp:
+   timctp:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/specres/src/libpkg.a nplucy.o spelib.o spepsf.o splfit.o timtem.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/specres/src/libpkg.a
+ranlib libpkg.a
+Updated 5 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables x_specres.x
+x_specres.x:
+   sys_runtask:
+x_specres.f:
+   sysruk:
+xc -Nz -p tables -p stsdas -p tables x_specres.o libpkg.a -liraf77 -luttables -ltbtables -liminterp -o xx_specres.e
+move `xx_specres.e' to `../../bin/x_specres.e'
+===================  DRIZTOOLS  ======================
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables timtem.x steep.f satmask.f
+timtem.x:
+   timotp:
+   timxtp:
+   timctp:
+steep.f:
+   steep:
+   zaplin:
+satmask.f:
+   satmak:
+timtem.f:
+   timotp:
+   timxtp:
+   timctp:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/driztools/src/libpkg.a timtem.o steep.o satmask.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/driztools/src/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables x_driztools.x
+x_driztools.x:
+   sys_runtask:
+x_driztools.f:
+   sysruk:
+xc -Nz -p tables -p stsdas -p tables x_driztools.o libpkg.a -liraf77 -liminterp -o xx_driztools.e
+move `xx_driztools.e' to `../../bin/x_driztools.e'
+===================  IMPOL ======================
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables polimd.f polime.f polimf.f polimg.f polimh.f timtem.x impollib.f
+timtem.x:
+   timotp:
+   timxtp:
+   timctp:
+polimd.f:
+   polimd:
+   plotpopa:
+polime.f:
+   polime:
+   polmod:
+   paline:
+   popacomb:
+polimf.f:
+   polimf:
+   polanf:
+   crmeane:
+   meanare:
+polimg.f:
+   polimg:
+   instset:
+   get_acs:
+   get_foc:
+   get_nicmos:
+   get_wfpc2:
+   get_special:
+   read_tabpol:
+   syseffic:
+   outocub:
+   nammak:
+   ceval:
+   headupd:
+   siminst:
+   inscor:
+   pol_sig:
+polimh.f:
+   polimh:
+   read_ostab:
+   tsetup:
+   polanh:
+   aperos:
+   ssigit:
+   meaner:
+impollib.f:
+   insthead:
+   set_acs:
+   set_foc:
+   set_nicmos:
+   set_wfpc2:
+   set_special:
+   intocub:
+   read_poltab:
+   poleffic:
+   sysmatrix:
+   matrix_pol:
+   matrix_polrot:
+   matrix_mirpol:
+   matrix_parot:
+   matrix_prod4:
+   matrix_mult:
+   effchk:
+   sort2:
+   polcalf:
+   polnormf:
+   lusetup:
+   solviqu3:
+   ludcmp:
+   lubksb:
+   covar3:
+   solviqu4:
+   maxcurve:
+   curfit:
+   functn:
+   fderiv:
+   fchisq:
+   matinv:
+   debias:
+   bessi0:
+   bessi1:
+   inspol:
+   ppasig:
+   thromb:
+   trapzd:
+   polint:
+   func:
+   erf:
+   nordev:
+   ran1:
+   sindd:
+   cosdd:
+   sinrd:
+   cosrd:
+timtem.f:
+   timotp:
+   timxtp:
+   timctp:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/impol/src/libpkg.a polimd.o polime.o polimf.o polimg.o polimh.o timtem.o impollib.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/stecf/impol/src/libpkg.a
+ranlib libpkg.a
+Updated 7 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p tables -p stsdas -p tables x_impol.x
+x_impol.x:
+   sys_runtask:
+x_impol.f:
+   sysruk:
+xc -Nz -p tables -p stsdas -p tables x_impol.o libpkg.a -liraf77 -luttables -ltbtables -liminterp -o xx_impol.e
+move `xx_impol.e' to `../../bin/x_impol.e'
+!date
+Fri Mar 29 18:10:37 CLST 2019

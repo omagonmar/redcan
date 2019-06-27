@@ -1,0 +1,4 @@
+#!/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin/python
+# EASY-INSTALL-SCRIPT: 'htc-utils==0.1.0','condor_batch'
+__requires__ = 'htc-utils==0.1.0'
+__import__('pkg_resources').run_script('htc-utils==0.1.0', 'condor_batch')

@@ -1,0 +1,65 @@
+check out file `libnfe.a = /tmp/nf/bin.linux/libnfe.a'
+Library libnfe.a is up to date
+check file `libnfe.a' into `nfebin$'
+check out file `libacecat.a = /tmp/nf/bin.linux/libacecat.a'
+Library libacecat.a is up to date
+check file `libacecat.a' into `nfebin$'
+Library libpkg.a is up to date
+Object x_aceproto.o is up to date
+xc -Nz -p nfextern -p noao x_aceproto.o libpkg.a          -lacecat -ltbtables -lxtools -o xx_aceproto.e
+move `xx_aceproto.e' to `nfebin$x_aceproto.e'
+Subdirectory src//ace/stf is up to date
+Library libpkg.a is up to date
+Object x_ace.o is up to date
+xc -Nz -p nfextern -p noao x_ace.o libpkg.a -lacecat -lnfe -ltbtables -lds -lgsurfit          -lcurfit -lxtools -liminterp -lnlfit -lslalib -o xx_ace.e
+move `xx_ace.e' to `nfebin$x_ace.e'
+copy `aceall' to `nfebin$aceall'
+copy aceall to /tmp/nf/bin.linux/aceall
+copy `acecatalog' to `nfebin$acecatalog'
+copy acecatalog to /tmp/nf/bin.linux/acecatalog
+copy `acediff' to `nfebin$acediff'
+copy acediff to /tmp/nf/bin.linux/acediff
+copy `aceevaluate' to `nfebin$aceevaluate'
+copy aceevaluate to /tmp/nf/bin.linux/aceevaluate
+copy `acesegment' to `nfebin$acesegment'
+copy acesegment to /tmp/nf/bin.linux/acesegment
+Library libpkg.a is up to date
+Object x_proctool.o is up to date
+xc -Nz -p nfextern -p noao x_proctool.o libpkg.a -lnfe -lasttools -lxtools -lcurfit  -liminterp -o xx_proctool.e
+move `xx_proctool.e' to `nfebin$x_proctool.e'
+Library libpkg.a is up to date
+Object x_combine.o is up to date
+xc -Nz -p nfextern -p noao x_combine.o libpkg.a -lnfe -limc -lxtools -lcurfit -lsurfit -lgsurfit -liminterp -lnlfit -lslalib -lncar -lgks -o xx_combine.e
+move `xx_combine.e' to `nfebin$x_combine.e'
+Subdirectory src//msctools/curfit is up to date
+Subdirectory src//msctools/imsurfit is up to date
+Library libpkg.a is up to date
+Subdirectory src//msctools/mscdisplay/src is up to date
+Library libpkg.a is up to date
+Library libpkg.a is up to date
+Object x_mscdisplay.o is up to date
+xc -Nz -p nfextern -p noao x_mscdisplay.o src/starfocus/libpkg.a libpkg.a     -lnfe -lds -lxtools -lcurfit -lgsurfit -lnlfit -liminterp -lncar -lgks -lllsq -o xx_mscdisplay.e
+Library libpkg.a is up to date
+Object x_mscexam.o is up to date
+xc -Nz -p nfextern -p noao x_mscexam.o src/imexam/libpkg.a libpkg.a ../libpkg.a     -lslalib -lnfe -lds -lxtools -lcurfit -lgsurfit -lnlfit -liminterp -lncar -lgks -lllsq -o xx_mscexam.e
+move `xx_mscdisplay.e' to `nfebin$x_mscdisplay.e'
+move `xx_mscexam.e' to `nfebin$x_mscexam.e'
+Subdirectory src//msctools/mscfinder/select is up to date
+Library libpkg.a is up to date
+Object x_finder.o is up to date
+xc -Nz -p nfextern -p noao x_finder.o libpkg.a -ltbtables -lxtools -o xx_finder.e
+move `xx_finder.e' to `nfebin$x_finder.e'
+Subdirectory src//msctools/curfit is up to date
+Subdirectory src//msctools/imsurfit is up to date
+Library libpkg.a is up to date
+Object x_msctools.o is up to date
+xc -Nz -p nfextern -p noao  x_msctools.o libpkg.a -lnfe -lxtools -lcurfit      -lgsurfit -lslalib -lsurfit -liminterp -o xx_msctools.e
+move `xx_msctools.e' to `nfebin$x_msctools.e'
+Library libpkg.a is up to date
+Object x_dimsum.o is up to date
+xc -Nz -p nfextern -p noao   x_dimsum.o libpkg.a -lxtools -o xx_dimsum.e
+move `xx_dimsum.e' to `nfebin$x_dimsum.e'
+Library libpkg.a is up to date
+Object x_imedit.o is up to date
+xc -Nz -p nfextern -p noao x_imedit.o libpkg.a -liminterp -lncar -lgks -lds -lxtools -lgsurfit -lnlfit -lcurfit -lllsq -o xx_imedit.e
+move `xx_imedit.e' to `nfebin$x_imedit.e'

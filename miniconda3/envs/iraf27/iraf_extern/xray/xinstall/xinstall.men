@@ -1,0 +1,9 @@
+	drep2cal - task to install spectral & spatial calibration files
+	fits2bin - task to install spectral calibration files from fits
+      fits2ephem - task to install scc_to_utc & jdleap calibration files
+	fits2snr - task to install xdemo files
+    rh_fits2pros - task to install HRI RDF sample data
+    rp_fits2pros - task to install PSPC RDF sample data
+    cale_fits2qp - convert fits to qpoe for Einstein data
+    calr_fits2qp - convert fits to qpoe for Rosat data
+    calr_qp2fits - convert qpoe to fits for Rosat data

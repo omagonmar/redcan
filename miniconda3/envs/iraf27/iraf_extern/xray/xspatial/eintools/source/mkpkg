@@ -1,0 +1,30 @@
+# $Header: /home/pros/xray/xspatial/eintools/source/RCS/mkpkg,v 11.0 1997/11/06 16:31:35 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:31:35  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:49:46  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/08/04  14:14:06  dvs
+#Initial revision
+#
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+
+$checkout libpkg.a ../
+$update   libpkg.a
+$checkin  libpkg.a ../
+$exit
+
+libpkg.a:
+	asp.x    	<qpoe.h> <qpc.h> "asp.h" "array.h"
+	bin.x		"array.h" "et_err.h"
+	bkmap.x		<qpoe.h> "band.h" "pirange.h" "../tables/bkfac.h"
+	im_geo.x	<math.h> <imhdr.h> "../geotran/geotran.h" "et_err.h"
+	index.x		
+	pirange.x   	<missions.h> "et_err.h" "array.h" "pirange.h"
+        ;

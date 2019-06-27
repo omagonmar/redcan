@@ -1,0 +1,12 @@
+fixfiles,f,a,,,,List of bad regions file(s)
+refimages,f,a,"",,,List of template image(s)
+masks,f,a,"",,,List of sky mask image(s) to be created
+defshape,s,h,circle,|point|circle|rectangle|,,Default region geometry
+defradius,i,h,5,,,Default radius in pixels
+defwidth,i,h,11,,,Default rectangle width in pixels
+defheight,i,h,11,,,Default rectangle height in pixels
+ncols,i,h,1024,,,Default number of columns for the sky mask
+nlines,i,h,1024,,,Default number of lines for the sky mask
+badvalue,i,h,1,0,1,Mask value assigned to the bad regions
+goodvalue,i,h,0,0,1,Mask value assigned to the background
+verbose,b,h,yes,,,Print messages about the progress of the task

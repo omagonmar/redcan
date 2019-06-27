@@ -1,0 +1,13 @@
+# XTCOEFF: NOAO/IRAF V2.13-BETA akunder@ctiow8.ctio.noao.edu Mon 13:33:59 08-Mar-2010
+#             Images         Victim Bkg         Source Bkg        Victim Mask
+#       obj1034.fits        Line median        Line median                   
+#       obj1035.fits        Line median        Line median                   
+
+im1	im2	 0.001227 (0.000006, 222.9)
+im2	im1	 0.000611 (0.000004, 158.5)
+im3	im4	 0.001658 (0.000002, 820.5)
+im4	im3	 0.000050 (0.000003, 15.4)
+im5	im6	 0.000297 (0.000002, 122.7)
+im6	im5	 0.001571 (0.000019, 82.1)
+im7	im8	 0.001019 (0.000004, 262.2)
+im8	im7	 0.000929 (0.000004, 219.6)

@@ -1,0 +1,45 @@
+# $Header: /home/pros/xray/xspatial/fixsaoreg/RCS/mkpkg,v 11.0 1997/11/06 16:33:26 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:33:26  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:56:05  prosb
+# General Release 2.4
+#
+# Revision 8.0  1994/06/27  15:16:32  prosb
+# General Release 2.3.1
+#
+# Revision 7.0  93/12/27  18:37:27  prosb
+# General Release 2.3
+# 
+# Revision 6.0  93/05/24  16:22:14  prosb
+# General Release 2.2
+# 
+# Revision 5.1  93/05/03  18:56:52  dennis
+# Added dependencies of fixsaoreg.o on <regions.h> and of cscan_saoreg.o 
+# on <regparse.h> and <regions/regparse.com>
+# 
+# Revision 5.0  92/10/29  21:35:38  prosb
+# General Release 2.1
+# 
+# Revision 4.0  92/04/27  14:45:44  prosb
+# General Release 2.0:  April 1992
+# 
+#
+
+#
+# mkpkg for fixsaoreg directory of xspatial
+#
+
+update:
+ 
+
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+	fixsaoreg.x	<error.h> <ctype.h> <regions.h>
+	cscan_saoreg.x  <ctype.h> <regparse.h> <regions.h> <error.h> <printf.h> <regions/regparse.com>
+	;

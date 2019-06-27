@@ -1,0 +1,27 @@
+imagetyp	obstype
+amp		imageid
+subset		filter
+
+'dome flat'	flat
+'sky flat'	flat
+'proj flat'	flat
+
+detim1          detsec  [1:1024,1:4096]
+detim2          detsec  [1025:2048,1:4096]
+detim3          detsec  [2049:3072,1:4096]
+detim4          detsec  [3073:4096,1:4096]
+
+datim1          datasec [1:1056,1:4096]
+datim2          datasec [1:1056,1:4096]
+datim3          datasec [1:1056,1:4096]
+datim4          datasec [1:1056,1:4096]
+
+trmim1		trim	32
+trmim2		trim	32
+trmim3		trim	32
+trmim4		trim	32
+
+biasim1         biassec 0
+biasim2         biassec 0
+biasim3         biassec 0
+biasim4         biassec 0

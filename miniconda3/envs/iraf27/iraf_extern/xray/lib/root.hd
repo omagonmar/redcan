@@ -1,0 +1,37 @@
+#$Header: /home/pros/xray/lib/RCS/root.hd,v 11.0 1997/11/06 16:25:34 prosb Exp $
+#$Log: root.hd,v $
+#Revision 11.0  1997/11/06 16:25:34  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:25:40  prosb
+#General Release 2.4
+#
+#Revision 8.1  1994/09/07  09:04:37  janet
+#*** empty log message ***
+#
+#Revision 8.0  94/06/27  13:43:23  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:22:21  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  15:37:11  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:23:15  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:07:10  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:46:52  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:04:00  pros
+#General Release 1.0
+#
+# Root help directory for the XRAY packages.  This dummy package is necessary
+# in order to have `xray' appear as a module in some package, so that the user
+# can type "help xray" (with the `xray' given as a task).
+
+_xray		pkg = xray$lib/rootxray.hd

@@ -1,0 +1,757 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "numpy",
+    "python 2.7*",
+    "stsci.tools"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stwcs-1.3.2-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/stwcs/__init__.py",
+    "lib/python2.7/site-packages/stwcs/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/distortion/__init__.py",
+    "lib/python2.7/site-packages/stwcs/distortion/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/distortion/coeff_converter.py",
+    "lib/python2.7/site-packages/stwcs/distortion/coeff_converter.pyc",
+    "lib/python2.7/site-packages/stwcs/distortion/models.py",
+    "lib/python2.7/site-packages/stwcs/distortion/models.pyc",
+    "lib/python2.7/site-packages/stwcs/distortion/mutil.py",
+    "lib/python2.7/site-packages/stwcs/distortion/mutil.pyc",
+    "lib/python2.7/site-packages/stwcs/distortion/utils.py",
+    "lib/python2.7/site-packages/stwcs/distortion/utils.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/__init__.py",
+    "lib/python2.7/site-packages/stwcs/gui/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/apply_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/apply_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/archive_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/archive_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/attach_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/attach_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/delete_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/delete_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/extract_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/extract_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/headerlet_summary.py",
+    "lib/python2.7/site-packages/stwcs/gui/headerlet_summary.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/restore_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/restore_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/updatewcs.py",
+    "lib/python2.7/site-packages/stwcs/gui/updatewcs.pyc",
+    "lib/python2.7/site-packages/stwcs/gui/write_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/gui/write_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/tests/__init__.py",
+    "lib/python2.7/site-packages/stwcs/tests/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/tests/data/__init__.py",
+    "lib/python2.7/site-packages/stwcs/tests/data/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/tests/test_altwcs.py",
+    "lib/python2.7/site-packages/stwcs/tests/test_altwcs.pyc",
+    "lib/python2.7/site-packages/stwcs/tests/test_headerlet.py",
+    "lib/python2.7/site-packages/stwcs/tests/test_headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/tests/test_hstwcs.py",
+    "lib/python2.7/site-packages/stwcs/tests/test_hstwcs.pyc",
+    "lib/python2.7/site-packages/stwcs/tests/test_updatewcs.py",
+    "lib/python2.7/site-packages/stwcs/tests/test_updatewcs.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/__init__.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/apply_corrections.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/apply_corrections.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/corrections.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/corrections.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/det2im.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/det2im.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/makewcs.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/makewcs.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/npol.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/npol.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/utils.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/utils.pyc",
+    "lib/python2.7/site-packages/stwcs/updatewcs/wfpc2_dgeo.py",
+    "lib/python2.7/site-packages/stwcs/updatewcs/wfpc2_dgeo.pyc",
+    "lib/python2.7/site-packages/stwcs/version.py",
+    "lib/python2.7/site-packages/stwcs/version.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/__init__.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/__init__.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/altwcs.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/altwcs.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/convertwcs.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/convertwcs.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/getinput.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/getinput.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/headerlet.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/headerlet.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/hstwcs.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/hstwcs.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/instruments.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/instruments.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/mappings.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/mappings.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/mosaic.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/mosaic.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/wcscorr.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/wcscorr.pyc",
+    "lib/python2.7/site-packages/stwcs/wcsutil/wcsdiff.py",
+    "lib/python2.7/site-packages/stwcs/wcsutil/wcsdiff.pyc"
+  ],
+  "fn": "stwcs-1.3.2-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stwcs-1.3.2-py27_0",
+    "type": 1
+  },
+  "md5": "e2f3f11bfdb31a4f6a8ee1a2a66dbedf",
+  "name": "stwcs",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stwcs-1.3.2-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "3cff03b1616850afd8547554a929fb70d38783cf4b6108058db40b9bf61a0bc0",
+        "sha256_in_prefix": "3cff03b1616850afd8547554a929fb70d38783cf4b6108058db40b9bf61a0bc0",
+        "size_in_bytes": 561
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "8304385041df34087cac77d490b013fdf356ceffb90bafb32ce144692657d54a",
+        "sha256_in_prefix": "8304385041df34087cac77d490b013fdf356ceffb90bafb32ce144692657d54a",
+        "size_in_bytes": 1341
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "36e8c03f8fd390d5ab9c8fd4f2192a96ae0e4cd38672b648b9e1a94838cfca68",
+        "sha256_in_prefix": "36e8c03f8fd390d5ab9c8fd4f2192a96ae0e4cd38672b648b9e1a94838cfca68",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs-1.3.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ee51ccb388f9f7f00029c196c714e9fa1207e6abdf586dcd1bbc579054c18cbc",
+        "sha256_in_prefix": "ee51ccb388f9f7f00029c196c714e9fa1207e6abdf586dcd1bbc579054c18cbc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b899ae3258acd3aeea3ce60f2db93007c95f7ba1dbc275127816fd9cb9b269eb",
+        "sha256_in_prefix": "b899ae3258acd3aeea3ce60f2db93007c95f7ba1dbc275127816fd9cb9b269eb",
+        "size_in_bytes": 948
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "fddb4d636e58cfad2e599e0cb34af1812f44ae08a8ab987ed23e146dac622c0c",
+        "sha256_in_prefix": "fddb4d636e58cfad2e599e0cb34af1812f44ae08a8ab987ed23e146dac622c0c",
+        "size_in_bytes": 1280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "aaeed6051a52c989ee39cf7df458ddc8eb7032c109e7c0fff2dde319f32654a2",
+        "sha256_in_prefix": "aaeed6051a52c989ee39cf7df458ddc8eb7032c109e7c0fff2dde319f32654a2",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/coeff_converter.py",
+        "path_type": "hardlink",
+        "sha256": "be2328dbc62c71ceab97b97de10c783ef3cf3f238380f10308eb5ca5160b0ab1",
+        "sha256_in_prefix": "be2328dbc62c71ceab97b97de10c783ef3cf3f238380f10308eb5ca5160b0ab1",
+        "size_in_bytes": 4631
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/coeff_converter.pyc",
+        "path_type": "hardlink",
+        "sha256": "6c2bc4398ad70e62985cf4509f868107bb152a51dade3fe2b27d24b3543ece77",
+        "sha256_in_prefix": "6c2bc4398ad70e62985cf4509f868107bb152a51dade3fe2b27d24b3543ece77",
+        "size_in_bytes": 3579
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/models.py",
+        "path_type": "hardlink",
+        "sha256": "5095a08bdfc31060c210bfc2c4c27585621d0a5d110e1ab7715429f4cbbc3aef",
+        "sha256_in_prefix": "5095a08bdfc31060c210bfc2c4c27585621d0a5d110e1ab7715429f4cbbc3aef",
+        "size_in_bytes": 11540
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/models.pyc",
+        "path_type": "hardlink",
+        "sha256": "5049a2d8f214d8e40dce4eabbdd27b9f8265179c7a1197d5d4089be3889ad8c2",
+        "sha256_in_prefix": "5049a2d8f214d8e40dce4eabbdd27b9f8265179c7a1197d5d4089be3889ad8c2",
+        "size_in_bytes": 10779
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/mutil.py",
+        "path_type": "hardlink",
+        "sha256": "a637b8d081bd631b4eabcb5f3b43669dd81b33c0bbcf63d713ea44812223ff69",
+        "sha256_in_prefix": "a637b8d081bd631b4eabcb5f3b43669dd81b33c0bbcf63d713ea44812223ff69",
+        "size_in_bytes": 24501
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/mutil.pyc",
+        "path_type": "hardlink",
+        "sha256": "562358ccd129bb61422e6fd66e11c237fe240e4c7288b7d08cae4b4aed633dd3",
+        "sha256_in_prefix": "562358ccd129bb61422e6fd66e11c237fe240e4c7288b7d08cae4b4aed633dd3",
+        "size_in_bytes": 17190
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/utils.py",
+        "path_type": "hardlink",
+        "sha256": "bb397c58feb590a50de4254c56a9e1141208fc04ded80d61b4289d87b16c8baa",
+        "sha256_in_prefix": "bb397c58feb590a50de4254c56a9e1141208fc04ded80d61b4289d87b16c8baa",
+        "size_in_bytes": 9697
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/distortion/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0233540268ded634880c0ee095a445f7282c030b52a0d3ae0dfb6698242bb52",
+        "sha256_in_prefix": "d0233540268ded634880c0ee095a445f7282c030b52a0d3ae0dfb6698242bb52",
+        "size_in_bytes": 9169
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "58f3596c8be700e34f48b55f357b74b5fe10b0b6256c34c0d8dbda99f3c9e28e",
+        "sha256_in_prefix": "58f3596c8be700e34f48b55f357b74b5fe10b0b6256c34c0d8dbda99f3c9e28e",
+        "size_in_bytes": 544
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "464d18c20d16aa9da41bc616b1fa65b92908c524792015ca2d80fe03df6aaddc",
+        "sha256_in_prefix": "464d18c20d16aa9da41bc616b1fa65b92908c524792015ca2d80fe03df6aaddc",
+        "size_in_bytes": 861
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/apply_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "1f3e7a709081f181d157c39a6086933c76468d180699a01fad3114bb90c4639a",
+        "sha256_in_prefix": "1f3e7a709081f181d157c39a6086933c76468d180699a01fad3114bb90c4639a",
+        "size_in_bytes": 2471
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/apply_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "98ae1579c2ff530008cefadfe26b9d5b23b600c4a85ec59059258abed9f18a0c",
+        "sha256_in_prefix": "98ae1579c2ff530008cefadfe26b9d5b23b600c4a85ec59059258abed9f18a0c",
+        "size_in_bytes": 2010
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/archive_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "43e4c813525f781d576cd14c3ac1b3616e5462c94d6993955c4139dd9854af91",
+        "sha256_in_prefix": "43e4c813525f781d576cd14c3ac1b3616e5462c94d6993955c4139dd9854af91",
+        "size_in_bytes": 2500
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/archive_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "a7d41224232a934e6a8515e50c40267c464b0ee4c065abb5a842063daeb6e567",
+        "sha256_in_prefix": "a7d41224232a934e6a8515e50c40267c464b0ee4c065abb5a842063daeb6e567",
+        "size_in_bytes": 2290
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/attach_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "283d7e8ef6a934856af5b717516de31947e09e37b40c6953c99a2b3e365a27c1",
+        "sha256_in_prefix": "283d7e8ef6a934856af5b717516de31947e09e37b40c6953c99a2b3e365a27c1",
+        "size_in_bytes": 1230
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/attach_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "7036ea8223f293d7e5e96d056bb8141b56e4a793e9259c2554361d9700cf00c9",
+        "sha256_in_prefix": "7036ea8223f293d7e5e96d056bb8141b56e4a793e9259c2554361d9700cf00c9",
+        "size_in_bytes": 1652
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/delete_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "de2c62fae912386cb7b8115a2f189ed84f7361959ae4d0de66766ed2a5ab7794",
+        "sha256_in_prefix": "de2c62fae912386cb7b8115a2f189ed84f7361959ae4d0de66766ed2a5ab7794",
+        "size_in_bytes": 2019
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/delete_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "45ea6b89933554345f4927bdfb650a10264a1a527c8ab4586658101838edd0ea",
+        "sha256_in_prefix": "45ea6b89933554345f4927bdfb650a10264a1a527c8ab4586658101838edd0ea",
+        "size_in_bytes": 2106
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/extract_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "c233fdefac7b7b037ad874824771e45fe32b6a106adf6f3b9de3831133f0a2df",
+        "sha256_in_prefix": "c233fdefac7b7b037ad874824771e45fe32b6a106adf6f3b9de3831133f0a2df",
+        "size_in_bytes": 2009
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/extract_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "54e3a2a8184a9914083989400914b909ae358db5f6fdcd8cf02b9c5e29bc678b",
+        "sha256_in_prefix": "54e3a2a8184a9914083989400914b909ae358db5f6fdcd8cf02b9c5e29bc678b",
+        "size_in_bytes": 2026
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/headerlet_summary.py",
+        "path_type": "hardlink",
+        "sha256": "ddeb1f8c339d0ebc11ec156cd30a7291fc1be703d275fca564fed60febe12501",
+        "sha256_in_prefix": "ddeb1f8c339d0ebc11ec156cd30a7291fc1be703d275fca564fed60febe12501",
+        "size_in_bytes": 1737
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/headerlet_summary.pyc",
+        "path_type": "hardlink",
+        "sha256": "4309a4041f20a2ee826e946a5157f7d67704f0051d0808bf948f1ff04d190c12",
+        "sha256_in_prefix": "4309a4041f20a2ee826e946a5157f7d67704f0051d0808bf948f1ff04d190c12",
+        "size_in_bytes": 1786
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/restore_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "732f16bd162b08ca180341b96cb12ddee0a488148b341930b1b01b7a95c2256b",
+        "sha256_in_prefix": "732f16bd162b08ca180341b96cb12ddee0a488148b341930b1b01b7a95c2256b",
+        "size_in_bytes": 2133
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/restore_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "0532739f376af4bd3959e88a94144e7b69034827d572d567b71ca446d19c17ad",
+        "sha256_in_prefix": "0532739f376af4bd3959e88a94144e7b69034827d572d567b71ca446d19c17ad",
+        "size_in_bytes": 1856
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/updatewcs.py",
+        "path_type": "hardlink",
+        "sha256": "19f4b237dd1e5aa5f46af3708781fa38ce0f0b0a44295d0a21f1cf3bbb84b2cb",
+        "sha256_in_prefix": "19f4b237dd1e5aa5f46af3708781fa38ce0f0b0a44295d0a21f1cf3bbb84b2cb",
+        "size_in_bytes": 3472
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/updatewcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "28373a1fdf82b77c21d3570f87fd21fbf231e826f78d81c1ad3ec870bb16864a",
+        "sha256_in_prefix": "28373a1fdf82b77c21d3570f87fd21fbf231e826f78d81c1ad3ec870bb16864a",
+        "size_in_bytes": 2504
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/write_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "e4482c3eae846f8aa42c6d3704a2105dd294fb5f7e266018f85311113524ec32",
+        "sha256_in_prefix": "e4482c3eae846f8aa42c6d3704a2105dd294fb5f7e266018f85311113524ec32",
+        "size_in_bytes": 2928
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/gui/write_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "8dd9b3c3c6a7da8253ce7335d36121226853b4e34432905ed55e1bfdfbdf6db3",
+        "sha256_in_prefix": "8dd9b3c3c6a7da8253ce7335d36121226853b4e34432905ed55e1bfdfbdf6db3",
+        "size_in_bytes": 2679
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "71227f8ce5a74bbb95d0412a0a9686396ec764e6674ba39bc00d1cc986709cb7",
+        "sha256_in_prefix": "71227f8ce5a74bbb95d0412a0a9686396ec764e6674ba39bc00d1cc986709cb7",
+        "size_in_bytes": 16
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "351220562145bc9a2f78fe9b35f90b21724c04afe74f2637b6c9de231ba2fe34",
+        "sha256_in_prefix": "351220562145bc9a2f78fe9b35f90b21724c04afe74f2637b6c9de231ba2fe34",
+        "size_in_bytes": 160
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/data/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/data/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "64295b952d978f6a5dc73ae30a6dbfe3075d55a575a60852cc4876e9b6e078ca",
+        "sha256_in_prefix": "64295b952d978f6a5dc73ae30a6dbfe3075d55a575a60852cc4876e9b6e078ca",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_altwcs.py",
+        "path_type": "hardlink",
+        "sha256": "cbe743c6ae649c8496c98bc4b3ba131955544cf3595d336ce1485db0bdee3b73",
+        "sha256_in_prefix": "cbe743c6ae649c8496c98bc4b3ba131955544cf3595d336ce1485db0bdee3b73",
+        "size_in_bytes": 6907
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_altwcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "c4529781ca15e2134557a4031e3ef20b68c07e8772334751dbdd64b745c335e2",
+        "sha256_in_prefix": "c4529781ca15e2134557a4031e3ef20b68c07e8772334751dbdd64b745c335e2",
+        "size_in_bytes": 8610
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "12f7aedd5b673153d7c9a32d73ac55d879d910a2e9590a99d8c6bfea74eabb07",
+        "sha256_in_prefix": "12f7aedd5b673153d7c9a32d73ac55d879d910a2e9590a99d8c6bfea74eabb07",
+        "size_in_bytes": 11467
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "740306cb8358e48a26c6e37c4ed1d6aaa23b250e0de1d1b1b831d186456cbf7d",
+        "sha256_in_prefix": "740306cb8358e48a26c6e37c4ed1d6aaa23b250e0de1d1b1b831d186456cbf7d",
+        "size_in_bytes": 10926
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_hstwcs.py",
+        "path_type": "hardlink",
+        "sha256": "e31149888de00d1299cab2da0d51bf7ce87ae96b875e1ef3a5562f38aa87d25c",
+        "sha256_in_prefix": "e31149888de00d1299cab2da0d51bf7ce87ae96b875e1ef3a5562f38aa87d25c",
+        "size_in_bytes": 505
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_hstwcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "e8e6d1bbfad54c8986f899b1f075f597d1167a8b1e8478d81f22d48e04715e88",
+        "sha256_in_prefix": "e8e6d1bbfad54c8986f899b1f075f597d1167a8b1e8478d81f22d48e04715e88",
+        "size_in_bytes": 907
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_updatewcs.py",
+        "path_type": "hardlink",
+        "sha256": "9926ad7ffb856906a3c180f28521c63b0f25f74e8b94e34ba4ee31978b1d66e9",
+        "sha256_in_prefix": "9926ad7ffb856906a3c180f28521c63b0f25f74e8b94e34ba4ee31978b1d66e9",
+        "size_in_bytes": 13523
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/tests/test_updatewcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "c1748afbd3e67f7a88de025239bff415f2d80a9655423cea4368175ab31c14af",
+        "sha256_in_prefix": "c1748afbd3e67f7a88de025239bff415f2d80a9655423cea4368175ab31c14af",
+        "size_in_bytes": 14298
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "104d10b00cc6b333157864726ccfefb747a2b1c3922273afc6ec3c74a6882703",
+        "sha256_in_prefix": "104d10b00cc6b333157864726ccfefb747a2b1c3922273afc6ec3c74a6882703",
+        "size_in_bytes": 14792
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2b5bdd58f1b87f7009c4d3db59450468fcc0cd7638d2651ee91c5b58074a469",
+        "sha256_in_prefix": "b2b5bdd58f1b87f7009c4d3db59450468fcc0cd7638d2651ee91c5b58074a469",
+        "size_in_bytes": 12655
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/apply_corrections.py",
+        "path_type": "hardlink",
+        "sha256": "d4d36b52c62a381414a5725551594d6c7f567078887040cc0abc38e8112a432a",
+        "sha256_in_prefix": "d4d36b52c62a381414a5725551594d6c7f567078887040cc0abc38e8112a432a",
+        "size_in_bytes": 9877
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/apply_corrections.pyc",
+        "path_type": "hardlink",
+        "sha256": "7cb5b4bfac22c47aedd0ad37c1a3c0faf5e86d8f6bebd96cd50383d92c02c7cb",
+        "sha256_in_prefix": "7cb5b4bfac22c47aedd0ad37c1a3c0faf5e86d8f6bebd96cd50383d92c02c7cb",
+        "size_in_bytes": 8143
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/corrections.py",
+        "path_type": "hardlink",
+        "sha256": "a3645f99376a29a889326a8dc8c9ced4feeb05b0edec42cf7738778386067e62",
+        "sha256_in_prefix": "a3645f99376a29a889326a8dc8c9ced4feeb05b0edec42cf7738778386067e62",
+        "size_in_bytes": 14470
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/corrections.pyc",
+        "path_type": "hardlink",
+        "sha256": "d84df3970ffa2dd9b2239356be5655df14e052b22347fb1928d7bd925d5cb9e2",
+        "sha256_in_prefix": "d84df3970ffa2dd9b2239356be5655df14e052b22347fb1928d7bd925d5cb9e2",
+        "size_in_bytes": 12891
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/det2im.py",
+        "path_type": "hardlink",
+        "sha256": "65b22ec9f86b67e1254514eec2602fdde4049fa332bd95a43facf5b71c076586",
+        "sha256_in_prefix": "65b22ec9f86b67e1254514eec2602fdde4049fa332bd95a43facf5b71c076586",
+        "size_in_bytes": 11791
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/det2im.pyc",
+        "path_type": "hardlink",
+        "sha256": "eee544bde5135829f79b3e2eda43f70b0b09754ea6674ac7c804952f7688c8cd",
+        "sha256_in_prefix": "eee544bde5135829f79b3e2eda43f70b0b09754ea6674ac7c804952f7688c8cd",
+        "size_in_bytes": 10024
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/makewcs.py",
+        "path_type": "hardlink",
+        "sha256": "565571913bc60ce39e84b491882787d0eed46b048c06a8d266b38a8acee10838",
+        "sha256_in_prefix": "565571913bc60ce39e84b491882787d0eed46b048c06a8d266b38a8acee10838",
+        "size_in_bytes": 10737
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/makewcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "7f49c41e5bb195005b9d3871c0fa4d162b24e44609da341fca137e9d9464f649",
+        "sha256_in_prefix": "7f49c41e5bb195005b9d3871c0fa4d162b24e44609da341fca137e9d9464f649",
+        "size_in_bytes": 9474
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/npol.py",
+        "path_type": "hardlink",
+        "sha256": "6c8399d19b5f1965d1ee9d04f586094d52c1fcc71202c80f1a2e3ae3f30ab081",
+        "sha256_in_prefix": "6c8399d19b5f1965d1ee9d04f586094d52c1fcc71202c80f1a2e3ae3f30ab081",
+        "size_in_bytes": 13327
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/npol.pyc",
+        "path_type": "hardlink",
+        "sha256": "5e15d73abb63ee49225d7d0ff90dab23cc1bfeb79731c5d8075716e762a32b05",
+        "sha256_in_prefix": "5e15d73abb63ee49225d7d0ff90dab23cc1bfeb79731c5d8075716e762a32b05",
+        "size_in_bytes": 11729
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/utils.py",
+        "path_type": "hardlink",
+        "sha256": "0c01af89911b2321e29b994adc6103b9d552eaa7ce30027282c2ccff33db7b59",
+        "sha256_in_prefix": "0c01af89911b2321e29b994adc6103b9d552eaa7ce30027282c2ccff33db7b59",
+        "size_in_bytes": 7874
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "0877a27143a49f053f89dc58458a313df5e845738db10fd9496e3ccb268b6a0c",
+        "sha256_in_prefix": "0877a27143a49f053f89dc58458a313df5e845738db10fd9496e3ccb268b6a0c",
+        "size_in_bytes": 8042
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/wfpc2_dgeo.py",
+        "path_type": "hardlink",
+        "sha256": "52e08c7edda1254124de80ac56381f822ed5025246d26d5ea0bc19ecc12d6666",
+        "sha256_in_prefix": "52e08c7edda1254124de80ac56381f822ed5025246d26d5ea0bc19ecc12d6666",
+        "size_in_bytes": 4757
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/updatewcs/wfpc2_dgeo.pyc",
+        "path_type": "hardlink",
+        "sha256": "67dd66be49ca5b160ec099663037d347aa69a0a222ea4e788b6cbf19de336c40",
+        "sha256_in_prefix": "67dd66be49ca5b160ec099663037d347aa69a0a222ea4e788b6cbf19de336c40",
+        "size_in_bytes": 5235
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/version.py",
+        "path_type": "hardlink",
+        "sha256": "0794e863fcbac2f324cdbb846cb278e21b13612485a14f7fdc685966a1b91fb6",
+        "sha256_in_prefix": "0794e863fcbac2f324cdbb846cb278e21b13612485a14f7fdc685966a1b91fb6",
+        "size_in_bytes": 781
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "4d096841099ea9223478d9b9ef2aea80d610eeaa62eae2dc279a5ddfe2924934",
+        "sha256_in_prefix": "4d096841099ea9223478d9b9ef2aea80d610eeaa62eae2dc279a5ddfe2924934",
+        "size_in_bytes": 757
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9b0c04c826ea069eaea3cb0f8f916f0b85da45303867f29fa49e2b176c412bad",
+        "sha256_in_prefix": "9b0c04c826ea069eaea3cb0f8f916f0b85da45303867f29fa49e2b176c412bad",
+        "size_in_bytes": 960
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "6fe83c1a11c33d8a34e52791785cd614e268098f429aa7bb101b5c1901119c80",
+        "sha256_in_prefix": "6fe83c1a11c33d8a34e52791785cd614e268098f429aa7bb101b5c1901119c80",
+        "size_in_bytes": 1342
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/altwcs.py",
+        "path_type": "hardlink",
+        "sha256": "22893943356391bfbdb73b93d5868b9a40738601ceb0621baffcb44060449f92",
+        "sha256_in_prefix": "22893943356391bfbdb73b93d5868b9a40738601ceb0621baffcb44060449f92",
+        "size_in_bytes": 25331
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/altwcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "b6cf09142aff743d75b012d210be44fa9a84388b8d7c70f0d3eddf91b3ce22a7",
+        "sha256_in_prefix": "b6cf09142aff743d75b012d210be44fa9a84388b8d7c70f0d3eddf91b3ce22a7",
+        "size_in_bytes": 23906
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/convertwcs.py",
+        "path_type": "hardlink",
+        "sha256": "420c61e9e608f2e5797850b344de27cfe8770ec65c377ef8c582ae4a8df2d9de",
+        "sha256_in_prefix": "420c61e9e608f2e5797850b344de27cfe8770ec65c377ef8c582ae4a8df2d9de",
+        "size_in_bytes": 3694
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/convertwcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "b59290f1f73b5b907e1e54f9492ae93b8c9250591249d630ff3d9ad9f3a20606",
+        "sha256_in_prefix": "b59290f1f73b5b907e1e54f9492ae93b8c9250591249d630ff3d9ad9f3a20606",
+        "size_in_bytes": 3370
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/getinput.py",
+        "path_type": "hardlink",
+        "sha256": "6524bc94a326b367072bd93b57274bf37c2334ec9722173515081f44673c02ad",
+        "sha256_in_prefix": "6524bc94a326b367072bd93b57274bf37c2334ec9722173515081f44673c02ad",
+        "size_in_bytes": 1999
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/getinput.pyc",
+        "path_type": "hardlink",
+        "sha256": "552fa41d124cd8bbc538da8a48c7cff63c8a37ce3cfe6b17b51ffbd87100992e",
+        "sha256_in_prefix": "552fa41d124cd8bbc538da8a48c7cff63c8a37ce3cfe6b17b51ffbd87100992e",
+        "size_in_bytes": 1905
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/headerlet.py",
+        "path_type": "hardlink",
+        "sha256": "b6fa032cd0df7fb522ff92f582da32926237e9cb11898728650ceba1834bd385",
+        "sha256_in_prefix": "b6fa032cd0df7fb522ff92f582da32926237e9cb11898728650ceba1834bd385",
+        "size_in_bytes": 106284
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/headerlet.pyc",
+        "path_type": "hardlink",
+        "sha256": "c3e2be5c43b05541b9856e308d4e430a893b89332f6897aa260803fe7585e798",
+        "sha256_in_prefix": "c3e2be5c43b05541b9856e308d4e430a893b89332f6897aa260803fe7585e798",
+        "size_in_bytes": 87060
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/hstwcs.py",
+        "path_type": "hardlink",
+        "sha256": "9095d8b8ff7cd29e29959affcf7c9d6d652cd0018dcb1579e0e97553ec294e63",
+        "sha256_in_prefix": "9095d8b8ff7cd29e29959affcf7c9d6d652cd0018dcb1579e0e97553ec294e63",
+        "size_in_bytes": 41394
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/hstwcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2e236d58a04df05e6d320137c29a95314d91626713708af40c9819f068adbc7",
+        "sha256_in_prefix": "b2e236d58a04df05e6d320137c29a95314d91626713708af40c9819f068adbc7",
+        "size_in_bytes": 35216
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/instruments.py",
+        "path_type": "hardlink",
+        "sha256": "5a645917e7aa113b4358575db4018b225a0d92786e97639268bf40f2fae7e8f3",
+        "sha256_in_prefix": "5a645917e7aa113b4358575db4018b225a0d92786e97639268bf40f2fae7e8f3",
+        "size_in_bytes": 8694
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/instruments.pyc",
+        "path_type": "hardlink",
+        "sha256": "c21b8bacb1ee0b22f41c485b078587788b3d2bb0e612935029d809ffe06aa8f3",
+        "sha256_in_prefix": "c21b8bacb1ee0b22f41c485b078587788b3d2bb0e612935029d809ffe06aa8f3",
+        "size_in_bytes": 15146
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/mappings.py",
+        "path_type": "hardlink",
+        "sha256": "026b01540dad911dc79b18b88044a6a871e0f19bc30079cca4cd04d47c8c86af",
+        "sha256_in_prefix": "026b01540dad911dc79b18b88044a6a871e0f19bc30079cca4cd04d47c8c86af",
+        "size_in_bytes": 1117
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/mappings.pyc",
+        "path_type": "hardlink",
+        "sha256": "cea6e5b7288504328ff1b383a024c54772a6fd889c248996ef2a1bb1b267be52",
+        "sha256_in_prefix": "cea6e5b7288504328ff1b383a024c54772a6fd889c248996ef2a1bb1b267be52",
+        "size_in_bytes": 888
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/mosaic.py",
+        "path_type": "hardlink",
+        "sha256": "19063716dd74de2f05a90c943c1a24634cf91887c2f0ecff27978994c2fa338d",
+        "sha256_in_prefix": "19063716dd74de2f05a90c943c1a24634cf91887c2f0ecff27978994c2fa338d",
+        "size_in_bytes": 7116
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/mosaic.pyc",
+        "path_type": "hardlink",
+        "sha256": "3184a3bba5051b37c7c253a5e3849011eb2659fb278b4bd896835484f7e8c9c1",
+        "sha256_in_prefix": "3184a3bba5051b37c7c253a5e3849011eb2659fb278b4bd896835484f7e8c9c1",
+        "size_in_bytes": 7394
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/wcscorr.py",
+        "path_type": "hardlink",
+        "sha256": "abc89c3feea4e438d5206b7decc16449f8389f17bd060a876c311f6a326cac31",
+        "sha256_in_prefix": "abc89c3feea4e438d5206b7decc16449f8389f17bd060a876c311f6a326cac31",
+        "size_in_bytes": 26673
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/wcscorr.pyc",
+        "path_type": "hardlink",
+        "sha256": "984e469737652becc857467eb0282e82dc1d4194fd52713a258d78becbf41a1d",
+        "sha256_in_prefix": "984e469737652becc857467eb0282e82dc1d4194fd52713a258d78becbf41a1d",
+        "size_in_bytes": 18144
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/wcsdiff.py",
+        "path_type": "hardlink",
+        "sha256": "30d4a23b6710ea64e38c8a7ea87a2195b10468672ad05b91130309613f2d79b1",
+        "sha256_in_prefix": "30d4a23b6710ea64e38c8a7ea87a2195b10468672ad05b91130309613f2d79b1",
+        "size_in_bytes": 6006
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stwcs/wcsutil/wcsdiff.pyc",
+        "path_type": "hardlink",
+        "sha256": "680702cc50f070e256d7a3659797253611443ad13a8d7952edc454873fd1af5a",
+        "sha256_in_prefix": "680702cc50f070e256d7a3659797253611443ad13a8d7952edc454873fd1af5a",
+        "size_in_bytes": 5135
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 159943,
+  "subdir": "linux-64",
+  "timestamp": 1499302765000,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stwcs-1.3.2-py27_0.tar.bz2",
+  "version": "1.3.2"
+}

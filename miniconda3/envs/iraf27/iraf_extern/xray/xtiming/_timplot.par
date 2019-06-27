@@ -1,0 +1,50 @@
+#$Header: /home/pros/xray/xtiming/RCS/_timplot.par,v 11.0 1997/11/06 16:45:19 prosb Exp $
+#$Log: _timplot.par,v $
+#Revision 11.0  1997/11/06 16:45:19  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:32:12  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:36:58  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:03:54  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:54:17  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  23:06:19  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:29:36  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/23  17:59:06  janet
+#update param defaults.
+#
+#Revision 2.0  91/03/06  22:31:49  pros
+#General Release 1.0
+#
+#
+#  TIMPLT.PAR 
+#  timing plot task parameters
+#
+table,s,a,,,,"Input Table File"
+column,s,a,,,,"Plot data column name"
+ecolumn,s,h,"",,,"Error column name"
+plot_type,s,h,"histo","histo|bar",,"Plot type - histo|bar"
+num_plots,r,h,1,,,"number of plots"
+plot_title,s,h,"",,,"plot title"
+x_units,s,h,"bin",,,"xaxis units"
+x_title,s,h,"",,,"x axis label"
+x_tics,r,h,4,,,"num x tics"
+x_range,s,h,"auto",,,"x_range - auto|input limits" 
+y_title,s,h,"",,,"y axis label"
+y_tics,r,h,3,,,"num y tics"
+y_range,s,h,"auto",,,"y_range - auto|input limits"
+label_size,r,h,.75,,,"labels size"
+tlabel_size,r,h,.5,,,"tic size"
+gclose,b,h,yes,,,"close graph windo"
+cursor,*gcur,h,"",,,Graphics cursor input

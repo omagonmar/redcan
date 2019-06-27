@@ -1,0 +1,136 @@
+#$Header: /pros/xray/ximages/doc/RCS/imreplicate.hlp,v 3.0 91/08/02 01:16:01 pro
+sb Rel $
+#$Log: imreplicate.hlp,v $
+#Revision 11.0  1997/11/06 16:25:50  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:13  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:43:11  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/08  11:27:40  prosb
+#Brought help file up to date.
+#
+#Revision 7.0  93/12/27  18:23:04  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:04:48  prosb
+#General Release 2.2
+#
+#Revision 5.2  93/04/29  17:20:21  mo
+#MC	4/29/93		Update the 'see also' section and ERROR defaults
+#
+#Revision 5.1  92/12/01  11:15:59  prosb
+#minor editing
+#
+#Revision 5.0  92/10/29  21:23:46  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:15:48  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/23  17:37:59  janet
+#error and outerror are hidden now, updated examples.
+#
+#Revision 3.0  91/08/02  01:16:01  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/09  15:16:31  bent
+#xray.ximages   7/9/91
+#
+#Revision 2.0  91/03/06  23:51:32  pros
+#General Release 1.0
+#
+.help imreplicate Jun94 xray.ximages
+.ih
+NAME
+imreplicate -- expand the 1st two dimensions of an N-dimensional IRAF
+image by replication.
+.ih
+USAGE
+imreplicate  image  outimage  rfactor
+.ih
+DESCRIPTION
+IMREPLICATE expands an IRAF image by replicating each pixel n (an
+integer) times. The image is replicated spatially in the first 2
+dimensions.  The task first runs over the image and is then optionally
+repeated for an associated error image.
+
+If an image of dimension (128,128,3) is replicated by a factor of 2,
+then the output image is of dimension (256,256,3) and the total number
+of counts in the image increases by a factor of 4.  The value of each
+pixel in the 2-d portion of the input image is now saved in
+consecutive 2x2 boxes in the output image.
+.ih
+PARAMETERS
+.ls image =                     prompt = Input Image name
+
+Name of the input image file to be read.
+.le
+.ls outimage =                  prompt = Output Image name
+
+Name of the output image file to be created.
+.le
+
+.ls rfactor =                   prompt = Replication Factor (a pos. integer)
+
+The factor by which the image will be expanded.
+.le
+.ls (error = "NONE") [string]
+
+Name of the input error image file to be read.  An input of NONE will skip
+the error file.
+.le
+.ls (outerror = "NONE") [string]
+
+Name of the output error image to be created.   This must be set if the above
+error image name is not "NONE".
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output IRAF image file can be
+overwritten, if it already exists.
+.le
+.ih
+EXAMPLES
+1. Imreplicate a qpoe file and error image by 2.
+.nf
+
+        xi> imreplicate error="i6757_err.imh" outerror="efoo"
+	Input Image name: i6757.qp
+	Output Image name: foo
+	Replication Factor (1:): 2
+	Replicating Image i6757.qp by factor of 2
+	Writing to output file foo.imh
+	Replicating Error i6757_err.imh by factor of 2
+	Writing to output file efoo
+
+.fi
+Outputs an image and error file made by replicating each pixel into a
+2x2 area in the output file.
+
+2. Imreplicate a 128x128x3 image by 4.
+.nf
+
+        xi> imreplicate
+	Input Image name: foo
+	Output Image name: goo
+	Replication Factor (1:): 4
+	Replicating Image foo by factor of 4
+	Writing to output file goo.imh
+
+.fi
+Outputs 512x512x3 image with each pixel in the 2-d portion of foo
+replicated into a 4x4 area in goo.
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+BUGS
+.ih
+SEE ALSO
+See also the IRAF task \fIhelp magnify\fR for a more sophisticated option.
+.endhelp

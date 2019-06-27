@@ -1,0 +1,254 @@
+# $Header: /home/pros/xray/xspatial/detect/doc/RCS/bepos.hlp,v 11.0 1997/11/06 16:32:22 prosb Exp $
+# $Log: bepos.hlp,v $
+# Revision 11.0  1997/11/06 16:32:22  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:51:36  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:13:55  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:34:10  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  13:10:49  janet
+#l
+#
+#Revision 6.0  93/05/24  16:19:20  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/13  12:10:44  janet
+#jd - updates for PROS 2.2 release.
+#
+#Revision 5.0  92/10/29  21:32:39  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/23  15:32:03  janet
+#pros 2.1 updates
+#
+#
+.help bepos Dec93 xray.xspatial.detect
+.ih
+NAME
+bepos --  determine the source position from a rough position list
+.ih
+USAGE
+bepos qpoe rough_fname bepos_tab bkden
+.ih
+DESCRIPTION
+
+    BEPOS determines the maximum liklihood position for each peak identified 
+by LPEAKS, using the original qpoe file. Signal-to-noise ratios in detect 
+cells centered on the final positions are computed and positions with snr's 
+greater than the user-defined threshold are identified as sources.
+
+   The algorithm uses the liklihood ratio parameter technique (cf. preprint 
+by w. cash, and memos by s. murray, ssm-102-78 ans ssm-103-78).  The method
+was used for the Einstein IPC and ROSAT HRI and given in detail in SAO 
+Special Report 393 by Harnden, Fabricant, Harris, and Schwarz.
+
+	previous task to run:  LPEAKS, BKDEN
+	
+
+.ih
+PARAMETERS
+.ls qpoe = ""       prompt = Input qpoe file
+
+Name of the input qpoe file.  If ROSAT PSPC or Eintein IPC, PI bands must 
+be respecified with the input qpoe filename. (ex. rp110590.qp[pi=52:201],
+if CELLMAP was run on the hard band)
+
+.nf
+	ROSAT PSPC:	soft band =  [pi=11:41]
+			hard band =  [pi=52:201]
+			broad band = [pi=11:235]
+
+	Einstein IPC:   soft band =  [pi=2:4]
+                	hard band =  [pi=5:10]
+                	broad band = [pi=2:10]
+.fi
+
+.le
+.ls rough_fname = ""       prompt = input rough pos table
+
+Required input filename.  The file may be specified by supplying the 
+rootname and a "_ruf.tab" will be appended.  Each row in the table 
+represents 1 peak position as determined by LPEAKS.  BEPOS reads the
+following table columns of the input file:
+.nf
+	x ------- x pixel position in physical coordinates      
+	y ------- y pixel position in physical coordinates
+	cellx --- x detect cell size in arc-seconds
+	celly --- y detect cell size in arc-seconds
+.fi
+.le
+.ls bepos_tab = ""         prompt = output bepos table file
+
+Required output filename.  The file is written in table format. The
+file may be specified by supplying the rootname and a "_pos.tab" will
+be appended.  Each row in the table represent 1 source.  The column 
+titles and definition appear in the table header and are as follows:
+.nf
+
+	ra -------- right ascension in degrees
+	dec ------- declination in degrees 
+	x --------- x pixel position in physical coordinates      
+	y --------- y pixel position in physical coordinates
+        srccnts --- source strength (source counts only) in assumed point 
+                    source. eq:
+                    alpha = integral of the PSF over the detect cell
+		    beta = integral of the PSF over the detect cell +
+                           background cell
+		    srcnts = ((16/9)cellcnts - framecnts)/
+                              ((25/9)alpha - beta)
+        bkcnts ---- background counts in the detect cell. eq:
+                      bkcnts = (alpha(cellcnts+framecnts) - Beta(cellcnts)) /
+			       ((25/9)Alpha - Beta)
+	cellcnts -- counts at final position in a detect cell size box
+	framecnts - bkdensity normalized to a detect cell size box 
+	pconf ----- position error in pixels at 90% confidence
+	snr ------- signal-to-noise ratio 
+                    C = cellcnts
+                    T = cellcnts + bkcnts
+                    SNR = ((25/9)*C - T ) / (sqrt(16/9**2-1)*C + T)
+	cellx ----- x detect cell size in arc-seconds
+	celly ----- y detect cell size in arc-seconds
+	fsflag ---- false source probability flag:
+		    1 means observed photon distribution is consistent
+		      with gaussian PRF for a point source
+		    0 means observed photon distribution is inconsistent
+		      with gaussian PRF for a point source
+.fi
+.le
+.ls bkden = ""         prompt = Intensity Levels
+
+mean background density in counts/square arcminute. (computed by task 
+BKDEN and written to this parameter as the default value by BKDEN.) 
+.le
+.ls (prf_sigma = 0.0)  [real] 
+
+PRF Sigma of the field in arcseconds. When 0.0, the PRF sigma is computed by 
+keying on Telescope, instrument (from input header) & bepos.energy in a PRF 
+lookup table (bepos.prf_table) and using the coefficients that are returned 
+to compute the PRF. 
+.le
+.ls (energy = 0.0)  [real] 
+
+Energy (KeV), key look up in PRF coefficients table,  coeffs are used to
+compute the Point Response Function Sigma.
+.le
+.ls (prf_table = "xspatialdata$prfcoeffs.tab")  [string]
+
+PRF coefficients table.  Entries for ROSAT PSPC/HRI & Einstein IPC/HRI.
+Lookup based on value of bepos.energy.  Returns coefficients assiciated
+with a default lookup when energy = 0.0; returns coefficients closest to
+the energy when exact match is not found.  
+.le
+.ls (snr_thresh = 3.0) [real]
+
+Minimum SNR threshold.  Sources with computed SNR's below this threshold
+are rejected.
+.le
+.ls (display = 2) [int]
+
+Display info to screen.  Integer of range 0-5.  The higher the number
+more verbose the display.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output Table file can be
+overwritten, if it already exists.
+.le
+.ls (max_iter = 50) [int]
+
+Maximum iterations for convergence to best position.
+.le
+.ls (max_conf_iterations = 20) [int]
+
+Maximum iterations for confidence error calculations.
+.le
+.ls (num_conf_lev = 2) [int]
+
+Number of confidence levels that confidence errors are determined for
+below.
+.le
+.ls (conf_68 = 2.3) [real]
+
+The 68 percent confidence level for minimum c-statistic calculation.
+.le
+.ls (conf_90 = 4.61) [real]
+
+The 90 percent confidence level for minimum c-statistic calculation.
+.le
+.ls (refine_limit = 45. ) [real]
+
+Pixel limit between LPEAKS and BEPOS position.  When the difference between
+the 2 positions is greater that this limit the source is thrown out.
+.le
+.ls (optimum_radius= 1.8) [real]
+
+Optimum radius sigma.  Once the value of sigma has been determined, the 
+maximum likelihood position is determined from events in a circular region 
+of radius ROPT*sigma, where ROPT is this parameter (OPT_RADIUS_SIGMA).
+This region is calculated once for each input position to this task. 
+
+.le
+.ls (c_conv_epsilon = 1.0) [real]
+
+Convergence minimum for c-statistic
+.le
+.ls (s_conv_epsilon = 1.0) [real]
+
+Convergence minimum for source
+.le
+.ls (cenx_keywd = "CRPIX1" )  [string]
+
+X center header keyword for off-axis angle calculation
+.le
+.ls (ceny_keywd = "CRPIX2" )  [string]
+
+Y center header keyword for off-axis angle calculation
+.le
+.ih
+EXAMPLES
+1.  
+
+.nf
+de> bepos 
+
+*** PI bands must be Respecified with input QPOE ***
+
+Input qpoe file: xdata$rh110267.qp
+Field background density in cts/arcmin**2 (0.001): 12.8558464
+Input rough pos table: harlac24_ruf.tab
+Output bepos table file: .
+
+Input Qpoe: xdata$rh110267.qp
+bkden = 12.8558464 (cts/sq arc-min), 0.0008928 (cts/sq pixel)
+
+
+2 Rough Position(s) Input
+
+ src#      ra            dec       physx    physy  cellcnts framecnts snr
+---------------------------------------------------------------------------
+   1    22:08:38.4    45:31:24.2   2380.1   2829.1      95      67     5.3
+   2    22:08:41.4    45:44:33.4   2323.5   4407.7    1506     394    31.8
+
+Writing 2 Sources to Output file:  ./harlac24_pos.tab
+.fi
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on running ldetect (a detect task which runs the 5 detect
+tasks in sequence). (\fIhelp ldetect\fR)
+
+Documentation on the detect algorithms and philosophy along with limitations
+in (\fIhelp explain_detect\fR).
+
+Documentation giving an overview of the detect package and run order of
+tasks. (\fIhelp using_detect\fR)
+
+.endhelp
+

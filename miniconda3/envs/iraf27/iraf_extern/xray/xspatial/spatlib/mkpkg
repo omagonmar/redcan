@@ -1,0 +1,23 @@
+# $Header: /home/pros/xray/xspatial/spatlib/RCS/mkpkg,v 11.0 1997/11/06 16:31:43 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:31:43  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:49:52  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/09/07  17:32:36  janet
+#Initial revision
+#
+#
+#	make the timing package library
+#
+update:
+$checkout libspatial.a ../
+$update   libspatial.a
+$checkin  libspatial.a ../
+$exit
+
+libspatial.a:
+	prftsubs.x
+	;

@@ -1,0 +1,259 @@
+#JDS (12/19/97) - added a 'see also' item.
+#JDS (10/97) - Initial revision.
+#
+#Qpappend has been modified to give the user the ability to omit
+#the TSI information from multiple files thereby having more control over
+#preventing large file sizes.
+#
+.help qpappend_ftsi Oct97 xray.xdataio
+.ih
+NAME
+qpappend_ftsi --  Append a list of input qpoes to produce a single
+qpoe file with the option to copy only the TSI records from the first file.
+.ih
+USAGE
+qpappend_ftsi input_list region  qpoe  eventdef 
+.ih
+DESCRIPTION
+\fIqpappend_ftsi\fR reads a list of input qpoe files (including filters)
+and produces a single output qpoe file which contains all of the events.
+It is the same task as 'qpappend' except that an option exists to keep
+the temporal status intervals (TSI) records from the first file only 
+instead of concatenating all the TSI records.  This option is useful
+if complex manipulations of segments of a single qpoe file are desired.  
+'Qpappend' will concatenate multiple copies of the same TSI list, leading 
+to unweildy headers.  The DEFFILT (good time intervals) are MERGED.  
+History is preserved and additional history records added for the append.
+.nf
+        ONTIME will be the sum of the ONTIMES
+        DTCOR will be the ONTIME weighted DTCORS
+        MJD-OBS,DATE-OBS,TIME-OBS will be the minimum of the input values
+**      MJD-END,DATE-END,TIME-END will be zero.
+**      DANG will be the first file DANG, but all DANGS will
+        be preserved in DANG1,DANG2,...
+**      (Not yet implemented 5/21/93)
+.fi
+
+The folowing header keywords MUST match
+.nf
+        TELESCOPE
+	INSTRUMENT
+	DIMENSION
+	AXLEN1
+	AXLEN2
+	NAXES
+	WCSDIM 
+        CTYPE1,2 
+	CDELT1,2 
+	EQUINOX
+	RADECSYS 
+        XS-FILTR 
+        XS-MJDRD,XS-MJDRF 
+.fi
+        If these values do NOT match for an input file, that file
+        will be skipped with a WARNING message
+ 
+ 
+All other header keyword will be taken from the first reference file.
+
+Any type of filtering can be applied to the input qpoe file, including
+region filtering.  In addition, the size of the output event record
+can be different from the size of the input event record.  (Of course,
+usually one makes the output record equal to or smaller than the
+input.  If the output record size is made greater than the input
+record, a warning is issued and the "extra" part of the record is
+undefined.)
+
+Users who wish to append barycenter-corrected qpoe files 
+should run qpappend before apply_bary,
+since the latter task changes the values of the header keywords
+XS-MJDRD and XS-MJDRF. See 'help apply_bary' for further details.
+.ih
+PARAMETERS
+.ls qpoe_list = ""	prompt = input qpoe file list 
+
+The input qpoe MUST be a file list with '@' prefix.  The file must be 
+an ASCII list containing QPOE file names.  Qpoe filters can be applied using 
+the bracket notation to filter the input photons.
+.nf
+	e.g.	@app.lst
+.fi
+.le
+.ls region = ""		prompt = region descriptor
+
+The region descriptor.  If null is input, the entire field is copied
+(subject to the qpoe filters specified with the input file name).
+Otherwise only those photons are copied which pass the spatial region
+filter.
+.le
+.ls qpoe = ""		prompt = output qpoe file name
+
+The output qpoe file name.  The file must have a ".qp" extension,
+but may be specified with or without the extension.  The output file
+can be the same as the input file.
+.le
+.ls eventdef = ""       prompt = event definition
+
+The event definition of the output QPOE file.  If the user enters the
+empty string, "", the event definition will be copied from the input
+QPOE file.  See 'help qpoe' for information on modifying the event
+definition.
+.le
+.ls dotsi = 0 [int]
+
+An option to avoid the generation of excessively large files.
+For dotsi=0, the TSI records from the first file listed will be
+included in the qpoe file. For dotsi=1, a complete
+TSI record is appended to the final qpoe file.
+.le
+.ls (exposure = "NONE") [string]
+
+The PLIO mask containing exposure information for the specified source
+image.  If the null string is input, the name will be the same root as
+the source image file with a "_exp.pl" extension.  If "NONE" is input,
+no exposure filtering is performed.
+.le
+.ls (expthresh = 0.) [real]
+
+The percentage of total exposure required for a given source pixel to
+pass the exposure filter, (if an exposure mask is present).  For
+example, if expthresh is 50.0, then only pixels whose exposure time is
+>= 50% will be used.  An exposure threshold of 0% allows all photons
+to pass the exposure filter.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file can be overwritten,
+if it already exists.
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A display level
+of 1 generates a display of header information.
+.le
+.ls (sort = yes) [boolean]
+
+Flag if events are to be sorted.  If true, the type of sort is determined
+by the \fIsorttype\fR parameter.
+.le
+.ls (sorttype = "position") [string]
+
+The type of sort to perform.  This string consists of a list of event
+element names that specifies the order in which to sort the event
+record.  For example, "y x time" will sort on the "y" element as the
+primary key, the "x" element as the secondary key, and "time" as the
+tertiary key.  If sorting is not to be performed, this parameter can
+be used as a string that will go into the x_sort qpoe param to
+indicate the type of sorting of the events. For example, if the events
+are already sorted by time, and are not to be resorted, one can set
+\fIsort\fR to false and \fIsorttype\fR to "time", and the qpoe file
+will be indistinguishable from one whose events were sorted by time.
+.le
+.ls (sortsize = 1000000) [int]
+
+The number of bytes that are to be sorted at a time.  This allows
+users to tailor the task to the amount of available memory.  If there
+is a lot of memory available, \fIsortsize\fR should be set large
+enough so that the task will do an in-core sort.  (This requires
+knowing the approximate number of events and the byte size of each
+event.)  If only a small amount of memory is available, use a smaller
+number.  In this case, several core loads will be sorted and written
+to temp files, which are then merged.
+.le
+.ls (qp_internals = yes) [boolean]
+
+Boolean flag controlling whether the internal qpoe parameters (see
+below) are prompted for, or whether they are defaulted to internally
+hardwired values.  This parameter is not usually changed by the user.
+(Prompting is normally turned off during stand-alone debugging only.)
+.ls (qp_pagesize = 1024) [int]
+
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_bucketlen = 2048) [int]
+
+Bucket length for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_blockfact = 1) [int]
+
+The default block factor for IMIO.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_mkindex = yes) [boolean]
+
+Boolean flag that an index should be made for the qpoe file.
+This parameter is internal to qpoe and should not normally be changed.
+.le
+.ls (qp_key = "") [string]
+
+Key on which to make the qpoe index.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_debug = 0) [int]
+
+Debug level for qpoe internals.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ih
+EXAMPLES
+1.  Merge together the two observational pieces of AR LAC to form
+a single MERGED file.  This is obviously a contrived example, but
+can be used for testing.
+   In many instances the 'xref' and 'yref' offsets will appear slightly
+different (if qplintran was run previously), but the program will 
+proceed .
+.nf
+	xp> page merge.lst
+	xdata$rp110590.qp[time=(1606720.00:1607484.00)]
+	xdata$rp110590.qp[time=(1611613.00:1612817.00)]
+
+	xp> qpappend_ftsi @merge.lst "" merge.qp large
+	ref file:   RA: 22:08:05.7360 Dec: 45:30:50.0040 Roll: 0.0000
+
+	file # 2  RA: 22:08:05.7360 Dec: 45:30:50.0040 Roll: 0.0000
+	offsets(arcsec):  RA: 0.0000 Dec: 0.0000 Roll: 0.0000
+	file # 2  xref: 7681.0000 yref: 7681.0000 
+	offsets(pixels):  xoff: 0.0000 yoff: 0.0000 
+
+	Opening file #1 : xdata$rp110590.qp[time=(1606720.00:1607484.00)] 
+	file: 1 xdata$rp110590.qp[time=(1606720.00:1607484.00)] events: 12967 times: 764.0
+	file: 2 xdata$rp110590.qp[time=(1611613.00:1612817.00)] events: 17644 times: 1204.0
+
+	@merge.lst (; 2 files, no exp.) -> merge.qp
+	Creating QPOE output file: merge.qp
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on the \fI help qpappend\fR task for a description of 
+the original qpoe utility which creates a resultant qpoe file with a
+complete TSI record.
+
+Documentation on the \fI help qplintran\fR task for a description
+of how to adjust the registration of a pair of QPOE files.
+
+Documentation on the \fI help qpwcsedit\fR task for a description
+of how to alter invalid WCS parameters.
+
+Documentation on the \fI help qphedit\fR task for a description
+of how to alter any other QPOE header parameters, that may be 
+causing rejection of the MERGE.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on qpoe filtering (\fIhelp qpoe\fR) for a description of
+the qpoe filter user interface.
+
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp
+

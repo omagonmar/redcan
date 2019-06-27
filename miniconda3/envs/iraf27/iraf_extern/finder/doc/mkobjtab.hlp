@@ -1,0 +1,48 @@
+.help mkobjtab Jun97 finder
+.ih
+NAME
+mkobjtab -- convert objects on input to catalog sources on output
+.ih
+USAGE
+mkobjtab input output
+.ih
+PARAMETERS
+.ls input
+The name of the input table that should contain centered and fit
+object coordinates.
+.le
+.ls output
+The output table containing those objects as new catalog sources.
+.le
+.ls region = 0
+Region number for new entries.
+.le
+.ls plate = "NONE"
+Plate name for new entries.
+.le
+.ls cdfile = "finder$lib/cdfile.gsc"
+The column definition file that serves as a template for the new table.
+.le
+.ih
+DESCRIPTION
+The FINDER package allows a grid of secondary positional standards to be
+established.  This allows transfering a plate solution from one image to
+another (typically smaller, deeper and/or a different bandpass).  The
+MKOBJTAB task supports this by translating the previously measured and
+fitted program objects from the input table into catalog sources in the
+output table.  This output table can then be used as the catalog for
+running tfinder on the second image.
+
+The \FIregion\fR and \fIplate\fR parameters allow specifying these
+fields for all sources that will be added to the new table.  Either of
+these could be used to distinguish between two or more different samples
+of positional standards, for instance to allow comparison between
+different reference systems or fits.
+
+The \fIcdfile\fR parameter specifies the tables package column
+definition file that is used to format the new catalog table.  Modify
+the default value, "finder$lib/cdfile.gsc", at your own risk.
+.ih
+SEE ALSO
+mkgsctab, catpars gscfind, cdrfits, tfinder
+.endhelp

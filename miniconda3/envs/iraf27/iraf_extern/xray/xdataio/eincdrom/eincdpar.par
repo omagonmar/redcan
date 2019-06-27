@@ -1,0 +1,90 @@
+#$Log: eincdpar.par,v $
+#Revision 11.0  1997/11/06 16:37:12  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:00:46  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:23:31  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/05/06  16:54:26  prosb
+#Added parameters for ecdinfo; made qp_get/fits_get pars semi-obsolete.
+#
+#Revision 7.0  93/12/27  18:45:52  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  17:11:02  prosb
+#General Release 2.2
+#
+#Revision 1.4  93/04/18  17:07:49  prosb
+#For some unknown reason, hri event cd 1 no longer contains the index
+#file.  We change the hri event index parameter to default to the
+#second hri event cd.
+#
+#Revision 1.3  93/04/18  16:17:57  prosb
+#Added eoscat and hriimg datasets to pset.
+#Added index files to pset.
+#
+#Revision 1.2  93/04/13  11:41:21  prosb
+#dvs - changed descriptions of the eincdpar parameters
+#
+#Revision 1.1  93/04/13  09:45:12  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/RCS/eincdpar.par,v 11.0 1997/11/06 16:37:12 prosb Exp $
+#
+# This is the parameter file for the eincdrom PSET.
+#
+ipcevt1,s,h,"ipcevt1$",,,"Einstein ipc event cd 1 directory"
+ipcevt2,s,h,"ipcevt2$",,,"Einstein ipc event cd 2 directory"
+ipcevt3,s,h,"ipcevt3$",,,"Einstein ipc event cd 3 directory"
+ipcevt4,s,h,"ipcevt4$",,,"Einstein ipc event cd 4 directory"
+
+hrievt1,s,h,"hrievt1$",,,"Einstein hri event cd 1 directory"
+hrievt2,s,h,"hrievt2$",,,"Einstein hri event cd 2 directory"
+
+eoscat1,s,h,"eoscat1$",,,"EOSCAT cd 1 directory"
+eoscat2,s,h,"eoscat2$",,,"EOSCAT cd 2 directory"
+eoscat3,s,h,"eoscat3$",,,"EOSCAT cd 3 directory"
+
+hriimg1,s,h,"hriimg1$",,,"Einstein hri image cd 1 directory"
+hriimg2,s,h,"hriimg2$",,,"Einstein hri image cd 2 directory"
+
+slewcd,s,h,"slewcd$",,,"Einstein slew survey cd directory"
+
+ipcu1,s,h,"ipcu1$",,,"Einstein IPC unscreened cd 1 directory"
+ipcu2,s,h,"ipcu2$",,,"Einstein IPC unscreened cd 2 directory"
+ipcu3,s,h,"ipcu3$",,,"Einstein IPC unscreened cd 3 directory"
+ipcu4,s,h,"ipcu4$",,,"Einstein IPC unscreened cd 4 directory"
+ipcu5,s,h,"ipcu5$",,,"Einstein IPC unscreened cd 5 directory"
+ipcu6,s,h,"ipcu6$",,,"Einstein IPC unscreened cd 6 directory"
+ipcu7,s,h,"ipcu7$",,,"Einstein IPC unscreened cd 7 directory"
+ipcu8,s,h,"ipcu8$",,,"Einstein IPC unscreened cd 8 directory"
+ipcu9,s,h,"ipcu9$",,,"Einstein IPC unscreened cd 9 directory"
+ipcu10,s,h,"ipcu10$",,,"Einstein IPC unscreened cd 10 directory"
+ipcu11,s,h,"ipcu11$",,,"Einstein IPC unscreened cd 11 directory"
+ipcu12,s,h,"ipcu12$",,,"Einstein IPC unscreened cd 12 directory"
+ipcu13,s,h,"ipcu13$",,,"Einstein IPC unscreened cd 13 directory"
+ipcu14,s,h,"ipcu14$",,,"Einstein IPC unscreened cd 14 directory"
+ipcu15,s,h,"ipcu15$",,,"Einstein IPC unscreened cd 15 directory"
+ipcu16,s,h,"ipcu16$",,,"Einstein IPC unscreened cd 16 directory"
+ipcu17,s,h,"ipcu17$",,,"Einstein IPC unscreened cd 17 directory"
+ipcu18,s,h,"ipcu18$",,,"Einstein IPC unscreened cd 18 directory"
+
+ipcevt_info,s,h,"eincdromdata$ipcevt_info.tab",,,"IPCEVT info table"
+hrievt_info,s,h,"eincdromdata$hrievt_info.tab",,,"HRIEVT info table"
+eoscat_info,s,h,"eincdromdata$eoscat_info.tab",,,"EOSCAT info table"
+hriimg_info,s,h,"eincdromdata$hriimg_info.tab",,,"HRIIMG info table"
+slew_info,s,h,"eincdromdata$slew_info.tab",,,"SLEW info table"
+ipcu_info,s,h,"eincdromdata$ipcu_info.tab",,,"IPCU info table"
+
+
+
+# NOTE: All the index parameters are only used for the obsolete
+# tasks qp_get and fits_get.
+#
+ipcevtindex,s,h,"ipcevt1$lists/unix/seqnindx.asc",,,"Einstein ipc event cd index file"
+hrievtindex,s,h,"hrievt2$lists/unix/seqnindx.asc",,,"Einstein hri event cd index file"
+eoscatindex,s,h,"eoscat2$lists/unix/seqnindx.asc",,,"EOSCAT cd index file"
+hriimgindex,s,h,"hriimg1$lists/unix/seqnindx.asc",,,"Einstein hri image cd index file"

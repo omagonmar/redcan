@@ -1,0 +1,32 @@
+.help mkgscindex Jun97 finder
+.ih
+NAME
+mkgscindex -- unpack a GSC FITS format index into a table
+.ih
+USAGE
+mkgscindex cdfile index
+.ih
+PARAMETERS
+.ls cdfile = "/cdrom0/tables/regions.tbl"
+Input FITS file containing the HST Guide Star Catalog index information.
+.le
+.ls index = "finder$lib/index"
+Output GSC index table.
+.le
+.ls header = yes
+Preserve the table header as a "hhh" image header?
+.le
+.ih
+DESCRIPTION
+The MKGSCINDEX task is used to unpack the original FITS format HST Guide
+Star Catalog index into a IRAF table format.  This must be done on a
+host by host basis since the IRAF table format is machine dependent.
+Direct FITS support will be offered by the table package at some point,
+but this is not yet available.
+
+MKGSCINDEX need typically only be run once as part of the installation
+process for the FINDER package.
+.ih
+SEE ALSO
+STScI HST GSC documentation, gscfind
+.endhelp

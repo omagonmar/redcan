@@ -1,0 +1,1306 @@
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio getentry.x getradii.x hdr.x icntr.x lfit.f peaks.x rngfit.f simul.f t_avgvel.x t_findsky.x t_fitring.x t_icntr.x t_mkcube.x t_mkshift.x t_normalize.x t_ringpars.x t_velocity.x t_zeropt.x
+getentry.x:
+   get_next_entry:
+   rst_get_entry:
+getradii.x:
+   get_radii:
+hdr.x:
+   ids_hdri:
+   ids_hdrr:
+   get_hdrr:
+   ids_addi:
+   ids_addr:
+   ids_sex:
+   ids_adds:
+icntr.x:
+   mpcntr:
+   rowsum:
+   colsum:
+peaks.x:
+   find_peaks:
+   find_local_maxima:
+   is_local_max:
+   find_threshold:
+   find_isolated:
+   find_nmax:
+   compare:
+t_avgvel.x:
+   t_avgvel:
+   print_results:
+   extrr_hdr:
+   velgraph:
+t_findsky.x:
+   t_findsky:
+   blksky:
+   calcsig:
+t_fitring.x:
+   t_fitring:
+   copy_good:
+   ring_input:
+   show_fit:
+t_icntr.x:
+   t_icntr:
+   process_images:
+t_mkcube.x:
+   t_mkcube:
+   hdr_update:
+t_mkshift.x:
+   t_mkshift:
+   gcoords:
+   deltas:
+   load_table:
+   mkdelta:
+   mkimscript:
+   unwhite:
+t_normalize.x:
+   t_normalize:
+t_ringpars.x:
+   t_ringpars:
+   pkcntr:
+   getcenter:
+   colavg:
+   getlz:
+   ring_plot:
+   guser:
+t_velocity.x:
+   t_velocity:
+   block:
+   extr_hdr:
+   gaussfit:
+   velplot:
+   velinit:
+   olam_range:
+   lam_range:
+t_zeropt.x:
+   t_zeropt:
+   lambda0:
+lfit.f:
+   lfit:
+rngfit.f:
+   rngfit:
+   rngft0:
+simul.f:
+   simul:
+getentry.f:
+   getney:
+   rstgey:
+getradii.f:
+   getrai:
+hdr.f:
+   idshdi:
+   idshdr:
+   gethdr:
+   idsadi:
+   idsadr:
+   idssex:
+   idsads:
+icntr.f:
+   mpcntr:
+   rowsum:
+   colsum:
+peaks.f:
+   findps:
+   findla:
+   islocx:
+   findtd:
+   findid:
+   findnx:
+   compae:
+t_avgvel.f:
+   tavgvl:
+   prints:
+   extrrr:
+   velgrh:
+t_findsky.f:
+   tfindy:
+   blksky:
+   calcsg:
+t_fitring.f:
+   tfitrg:
+   copygd:
+   ringit:
+   showft:
+t_icntr.f:
+   ticntr:
+   proces:
+t_mkcube.f:
+   tmkcue:
+   hdrupe:
+t_mkshift.f:
+   tmksht:
+   gcoors:
+   deltas:
+   loadte:
+   mkdela:
+   mkimst:
+   unwhie:
+t_normalize.f:
+   tnorme:
+t_ringpars.f:
+   trings:
+   pkcntr:
+   getcer:
+   colavg:
+   getlz:
+   ringpt:
+   guser:
+t_velocity.f:
+   tveloy:
+   block:
+   extrhr:
+   gausst:
+   velplt:
+   velint:
+   olamre:
+   lamrae:
+t_zeropt.f:
+   tzerot:
+   lambd0:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/fabry/libpkg.a getentry.o getradii.o hdr.o icntr.o lfit.o peaks.o rngfit.o simul.o t_avgvel.o t_findsky.o t_fitring.o t_icntr.o t_mkcube.o t_mkshift.o t_normalize.o t_ringpars.o t_velocity.o t_zeropt.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/fabry/libpkg.a
+ranlib libpkg.a
+Updated 18 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio x_fabry.x
+x_fabry.x:
+   sys_runtask:
+x_fabry.f:
+   sysruk:
+xc -Nz -p ctio x_fabry.o libpkg.a -lxtools -o xx_fabry.e
+move `xx_fabry.e' to `pkgbin$x_fabry.e'
+purge directory `pkgbin$'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio comrebin.x debug.x edit.x expscale.x idsm_keywrds.x lam2pix.x load_hdr.x plot.x rebin.x setdef.x sort.x spcombine.x struct.x t_spcombine.x
+comrebin.x:
+   rebin_spectra:
+   rebin_adjust:
+   rebin_spectrum:
+debug.x:
+   debug_in:
+   debug_out:
+   dump_in:
+   dump_out:
+edit.x:
+   edit_spectrum:
+   default_ranges:
+   get_range:
+   fudge_line:
+   shift_horiz:
+   shift_vert:
+expscale.x:
+   exp_scale:
+idsm_keywrds.x:
+   store_keywords:
+   ids_addi:
+   ids_addr:
+   ids_sex:
+lam2pix.x:
+   lambda_to_pixel2:
+load_hdr.x:
+   load_ids_hdr:
+   ids_hdri:
+   ids_hdrr:
+   get_hdrr:
+   init_ids_values:
+plot.x:
+   plot_spectra:
+   plot_spectrum:
+rebin.x:
+   resum:
+   pixel_parts:
+   reinterp:
+setdef.x:
+   set_defaults:
+sort.x:
+   sort_hdrs:
+spcombine.x:
+   combine_spectra:
+   combine_spectrum:
+struct.x:
+   init_inspec:
+   init_outspec:
+   copy_inspec:
+   copy_outspec:
+t_spcombine.x:
+   t_spcombine:
+   write_spectra:
+comrebin.f:
+   rebina:
+   rebint:
+   rebinm:
+debug.f:
+   debugn:
+   debugt:
+   dumpin:
+   dumpot:
+edit.f:
+   editsm:
+   defaus:
+   getrae:
+   fudgee:
+   shiftz:
+   shiftt:
+expscale.f:
+   expsce:
+idsm_keywrds.f:
+   stores:
+   idsadi:
+   idsadr:
+   idssex:
+lam2pix.f:
+   lambd2:
+load_hdr.f:
+   loadir:
+   idshdi:
+   idshdr:
+   gethdr:
+   initis:
+plot.f:
+   plotsa:
+   plotsm:
+rebin.f:
+   resum:
+   pixels:
+   reintp:
+setdef.f:
+   setdes:
+sort.f:
+   sorths:
+spcombine.f:
+   combia:
+   combim:
+struct.f:
+   initic:
+   initoc:
+   copyic:
+   copyoc:
+t_spcombine.f:
+   tspcoe:
+   writea:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/spcombine/libpkg.a comrebin.o debug.o edit.o expscale.o idsm_keywrds.o lam2pix.o load_hdr.o plot.o rebin.o setdef.o sort.o spcombine.o struct.o t_spcombine.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/spcombine/libpkg.a
+ranlib libpkg.a
+Updated 14 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio x_spcombine.x
+x_spcombine.x:
+   sys_runtask:
+x_spcombine.f:
+   sysruk:
+xc -Nz -p ctio x_spcombine.o libpkg.a -lxtools -liminterp -o xx_spcombine.e
+move `xx_spcombine.e' to `pkgbin$x_spcombine.e'
+purge directory `pkgbin$'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio helpdir.x t_apropos.x t_mkapropos.x
+helpdir.x:
+   hd_open:
+   hd_close:
+   hd_putldiry:
+   hd_putmodule:
+   hd_getc:
+   hd_peekc:
+   hd_putstr:
+   hd_sort_modules:
+   hd_findmod:
+   hd_getname:
+   hd_getldir:
+t_apropos.x:
+   t_apropos:
+   apropos:
+t_mkapropos.x:
+   t_mkapopos:
+   app_compile:
+   app_men:
+helpdir.f:
+   hdopen:
+   hdcloe:
+   hdputy:
+   hdpute:
+   hdgetc:
+   hdpeec:
+   hdputr:
+   hdsors:
+   hdfind:
+   hdgete:
+   hdgetr:
+t_apropos.f:
+   tapros:
+   aprops:
+t_mkapropos.f:
+   tmkaps:
+   appcoe:
+   appmen:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a helpdir.o t_apropos.o t_mkapropos.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_bin2iraf.x
+t_bin2iraf.x:
+   t_bin2iraf:
+   bin2iraf:
+t_bin2iraf.f:
+   tbin2f:
+   bin2if:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_bin2iraf.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio bitstat.x t_bitstat.x
+bitstat.x:
+   bst_lines:
+   bst_linei:
+   bst_linel:
+t_bitstat.x:
+   t_bitstat:
+   bst_image:
+   bst_npix:
+   bst_pixtype:
+bitstat.f:
+   bstlis:
+   bstlii:
+   bstlil:
+t_bitstat.f:
+   tbitst:
+   bstime:
+   bstnpx:
+   bstpie:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a bitstat.o t_bitstat.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_chpixfile.x
+t_chpixfile.x:
+   t_chpixfile:
+   chp_proc:
+   chp_parse2:
+   chp_parse3:
+t_chpixfile.f:
+   tchpie:
+   chpprc:
+   chppa2:
+   chppa3:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_chpixfile.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_colselect.x
+t_colselect.x:
+   t_colselect:
+   col_xtract:
+   col_precord:
+t_colselect.f:
+   tcolst:
+   colxtt:
+   colprd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_colselect.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_compairmass.x
+t_compairmass.x:
+   t_compairmass:
+t_compairmass.f:
+   tcomps:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_compairmass.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_coords.x
+t_coords.x:
+   t_coords:
+   coords:
+   coo_read:
+   coo_sle3:
+   coo_conv:
+t_coords.f:
+   tcoors:
+   coords:
+   coored:
+   coosl3:
+   coocov:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_coords.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio curevald.x curevalr.x t_cureval.x
+curevald.x:
+   cev_procd:
+   cev_curfoutd:
+   cev_minmaxd:
+   cev_evald:
+curevalr.x:
+   cev_procr:
+   cev_curfoutr:
+   cev_minmaxr:
+   cev_evalr:
+t_cureval.x:
+   t_cureval:
+curevald.f:
+   cevprd:
+   cevcud:
+   cevmid:
+   cevevd:
+curevalr.f:
+   cevprr:
+   cevcur:
+   cevmir:
+   cevevr:
+t_cureval.f:
+   tcurel:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a curevald.o curevalr.o t_cureval.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio fits_dheader.x fits_disp.x fits_rpixels.x print.x read_formats.x t_dfits.x
+fits_dheader.x:
+   rft_disp_header:
+   print_card:
+fits_disp.x:
+   rft_disp_fitz:
+fits_rpixels.x:
+   rft_init_read_pixels:
+   rft_getbuf:
+print.x:
+   print_string:
+   print_titles:
+read_formats.x:
+   read_formats:
+   check_format:
+t_dfits.x:
+   t_dfits:
+fits_dheader.f:
+   rftdir:
+   printd:
+fits_disp.f:
+   rftdiz:
+fits_rpixels.f:
+   rftins:
+       entry    rftres:
+   rftgef:
+print.f:
+   printg:
+   prints:
+read_formats.f:
+   readfs:
+   checkt:
+t_dfits.f:
+   tdfits:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a fits_dheader.o fits_disp.o fits_rpixels.o print.o read_formats.o t_dfits.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_eqwidths.x
+t_eqwidths.x:
+   t_eqwidths:
+   eqw_proc:
+   eqw_flux:
+   eqw_bands:
+   eqw_radial:
+t_eqwidths.f:
+   teqwis:
+   eqwprc:
+   eqwflx:
+   eqwbas:
+   eqwral:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_eqwidths.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_fft1d.x
+t_fft1d.x:
+   t_fft1d:
+   fft1_text:
+   fft1_image:
+t_fft1d.f:
+   tfft1d:
+   fft1tt:
+   fft1ie:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_fft1d.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio fccode.x fcerror.x fcevald.x fcevalr.x fcfiles.x fcgetline.x fclexer.x fcparse.x fcparser.x fcproc.x fcreadexp.x fcvopsd.x fcvopsr.x t_filecalc.x
+fccode.x:
+   fc_calloc:
+   fc_cfree:
+   fc_cinit:
+   fc_cend:
+   fc_cgen:
+   fc_ccount:
+   fc_cgetcode:
+   fc_cgeti:
+   fc_cgetr:
+   fc_cgetd:
+   fc_cputi:
+   fc_cputr:
+   fc_cputd:
+   fc_cgstr:
+   fc_cpstr:
+   fc_cdump:
+fcerror.x:
+   fc_error:
+fcevald.x:
+   fc_evald:
+fcevalr.x:
+   fc_evalr:
+fcfiles.x:
+   fc_falloc:
+   fc_ffree:
+   fc_finit:
+   fc_fputfile:
+   fc_fgetlines:
+   fc_fdata:
+   fc_fdump:
+fcgetline.x:
+   fc_rgetline:
+   fc_getline:
+   fc_trimline:
+fclexer.x:
+   fc_lexer:
+fcparse.x:
+   fc_parse:
+fcparser.x:
+   yyparse:
+fcproc.x:
+   fc_proc:
+   fc_user:
+fcreadexp.x:
+   fc_readexp:
+fcvopsd.x:
+   fc_vmind:
+   fc_vmaxd:
+   fc_vavgd:
+   fc_vmedd:
+   fc_vmoded:
+   fc_vsigmad:
+fcvopsr.x:
+   fc_vminr:
+   fc_vmaxr:
+   fc_vavgr:
+   fc_vmedr:
+   fc_vmoder:
+   fc_vsigmar:
+t_filecalc.x:
+   t_filecalc:
+fccode.f:
+   fccalc:
+   fccfre:
+   fccint:
+   fccend:
+   fccgen:
+   fcccot:
+   fccgee:
+   fccgei:
+   fccger:
+   fccged:
+   fccpui:
+   fccpur:
+   fccpud:
+   fccgsr:
+   fccpsr:
+   fccdup:
+fcerror.f:
+   fcerrr:
+fcevald.f:
+   fcevad:
+fcevalr.f:
+   fcevar:
+fcfiles.f:
+   fcfalc:
+   fcffre:
+   fcfint:
+   fcfpue:
+   fcfges:
+   fcfdaa:
+   fcfdup:
+fcgetline.f:
+   fcrgee:
+   fcgete:
+   fctrie:
+fclexer.f:
+   fclexr:
+fcparse.f:
+   fcpare:
+fcparser.f:
+   fcparr:
+fcproc.f:
+   fcproc:
+   fcuser:
+fcreadexp.f:
+   fcreap:
+fcvopsd.f:
+   fcvmid:
+   fcvmad:
+   fcvavd:
+   fcvmed:
+   fcvmod:
+   fcvsid:
+fcvopsr.f:
+   fcvmir:
+   fcvmar:
+   fcvavr:
+   fcvmer:
+   fcvmor:
+   fcvsir:
+t_filecalc.f:
+   tfilec:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a fccode.o fcerror.o fcevald.o fcevalr.o fcfiles.o fcgetline.o fclexer.o fcparse.o fcparser.o fcproc.o fcreadexp.o fcvopsd.o fcvopsr.o t_filecalc.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_findfiles.x
+t_findfiles.x:
+   t_findfiles:
+t_findfiles.f:
+   tfinds:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_findfiles.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio ftravgd.x ftravgr.x ftrfitd.x ftrfitr.x ftroutd.x ftroutr.x ftrsortd.x ftrsortr.x t_fitrad.x
+ftravgd.x:
+   ftr_averaged:
+   ftr_meand:
+   ftr_zmediand:
+   ftr_moded:
+ftravgr.x:
+   ftr_averager:
+   ftr_meanr:
+   ftr_zmedianr:
+   ftr_moder:
+ftrfitd.x:
+   ftr_fitd:
+ftrfitr.x:
+   ftr_fitr:
+ftroutd.x:
+   ftr_outputd:
+   ftr_linesetd:
+   ftr_colsetd:
+ftroutr.x:
+   ftr_outputr:
+   ftr_linesetr:
+   ftr_colsetr:
+ftrsortd.x:
+   ftr_sortd:
+   ftr_cmpd:
+ftrsortr.x:
+   ftr_sortr:
+   ftr_cmpr:
+t_fitrad.x:
+   t_fitrad:
+ftravgd.f:
+   ftravd:
+   ftrmed:
+   ftrzmd:
+   ftrmod:
+ftravgr.f:
+   ftravr:
+   ftrmer:
+   ftrzmr:
+   ftrmor:
+ftrfitd.f:
+   ftrfid:
+ftrfitr.f:
+   ftrfir:
+ftroutd.f:
+   ftroud:
+   ftrlid:
+   ftrcod:
+ftroutr.f:
+   ftrour:
+   ftrlir:
+   ftrcor:
+ftrsortd.f:
+   ftrsod:
+   ftrcmd:
+ftrsortr.f:
+   ftrsor:
+   ftrcmr:
+t_fitrad.f:
+   tfitrd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a ftravgd.o ftravgr.o ftrfitd.o ftrfitr.o ftroutd.o ftroutr.o ftrsortd.o ftrsortr.o t_fitrad.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio cad.x t_gki2cad.x
+cad.x:
+   cad_open:
+   cad_close:
+   cad_layer:
+   cad_startsec:
+   cad_endsec:
+   cad_comment:
+   cad_polyline:
+   cad_txset:
+   cad_text:
+   cad_errchk:
+   cdp_eof:
+   cdp_coord:
+   cdp_layer:
+t_gki2cad.x:
+   t_gki2cad:
+   cad_decode:
+cad.f:
+   cadopn:
+   cadcle:
+   cadlar:
+   cadstc:
+   cadenc:
+   cadcot:
+   cadpoe:
+   cadtxt:
+   cadtet:
+   caderk:
+   cdpeof:
+   cdpcod:
+   cdplar:
+t_gki2cad.f:
+   tgki2d:
+   caddee:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a cad.o t_gki2cad.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio helio.f imdata.x t_helio.x
+imdata.x:
+   imdata:
+t_helio.x:
+   t_helio:
+helio.f:
+   heljd:
+imdata.f:
+   imdata:
+t_helio.f:
+   thelio:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a helio.o imdata.o t_helio.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_imcreate.x
+t_imcreate.x:
+   t_imcreate:
+t_imcreate.f:
+   timcre:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_imcreate.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio immcosbell.x immgraph.x t_immatch.x
+immcosbell.x:
+   imm_cosbellr:
+   imm_cosbellx:
+immgraph.x:
+   imm_graph:
+   imm_colon:
+t_immatch.x:
+   t_immatch:
+   imm_project:
+   imm_substract:
+   imm_correlate:
+   imm_adjust:
+   imm_centroid:
+immcosbell.f:
+   immcor:
+   immcox:
+immgraph.f:
+   immgrh:
+   immcon:
+t_immatch.f:
+   timmah:
+   immprt:
+   immsut:
+   immcoe:
+   immadt:
+   immced:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a immcosbell.o immgraph.o t_immatch.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_imsort.x
+t_imsort.x:
+   t_imsort:
+   ims_print:
+   ims_compare:
+t_imsort.f:
+   timsot:
+   imsprt:
+   imscoe:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_imsort.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_imspace.x
+t_imspace.x:
+   t_imspace:
+   imsp_size:
+t_imspace.f:
+   timspe:
+   imspse:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_imspace.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_imtest.x
+t_imtest.x:
+   t_imtest:
+   imts_headers:
+   imts_pixels:
+t_imtest.f:
+   timtet:
+   imtshs:
+   imtsps:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_imtest.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio iraf2bin.x t_iraf2bin.x
+iraf2bin.x:
+   i2b_procs:
+   i2b_proci:
+   i2b_procl:
+   i2b_procr:
+   i2b_procd:
+t_iraf2bin.x:
+   t_iraf2bin:
+   i2b_header:
+iraf2bin.f:
+   i2bprs:
+   i2bpri:
+   i2bprl:
+   i2bprr:
+   i2bprd:
+t_iraf2bin.f:
+   tirafn:
+   i2bher:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a iraf2bin.o t_iraf2bin.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_irlincor.x
+t_irlincor.x:
+   t_irlincor:
+   irl_correct:
+   irl_imcopy:
+t_irlincor.f:
+   tirlir:
+   irlcot:
+   irlimy:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_irlincor.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_lambda.x
+t_lambda.x:
+   t_lambda:
+t_lambda.f:
+   tlamba:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_lambda.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio mctalloc.x mctclearc.x mctcleard.x mctcleari.x mctclearl.x mctclearp.x mctclearr.x mctclears.x mctclearx.x mctcopy.x mctfree.x mctgetbuf.x mctgetrow.x mctgetc.x mctgetd.x mctgeti.x mctgetl.x mctgetp.x mctgetr.x mctgets.x mctgetx.x mctindef.x mctmaxcol.x mctmaxrow.x mctncols.x mctnrows.x mctputc.x mctputd.x mctputi.x mctputl.x mctputp.x mctputr.x mctputs.x mctputx.x mctreset.x mctrestore.x mctrew.x mctsave.x mctsgetc.x mctsgetd.x mctsgeti.x mctsgetl.x mctsgetp.x mctsgetr.x mctsgets.x mctsgetx.x mctsputc.x mctsputd.x mctsputi.x mctsputl.x mctsputp.x mctsputr.x mctsputs.x mctsputx.x mctshrink.x mcttype.x
+mctalloc.x:
+   mct_alloc:
+mctclearc.x:
+   mct_clearc:
+mctcleard.x:
+   mct_cleard:
+mctcleari.x:
+   mct_cleari:
+mctclearl.x:
+   mct_clearl:
+mctclearp.x:
+   mct_clearp:
+mctclearr.x:
+   mct_clearr:
+mctclears.x:
+   mct_clears:
+mctclearx.x:
+   mct_clearx:
+mctcopy.x:
+   mct_copy:
+mctfree.x:
+   mct_free:
+mctgetbuf.x:
+   mct_getbuf:
+mctgetrow.x:
+   mct_getrow:
+mctgetc.x:
+   mct_getc:
+mctgetd.x:
+   mct_getd:
+mctgeti.x:
+   mct_geti:
+mctgetl.x:
+   mct_getl:
+mctgetp.x:
+   mct_getp:
+mctgetr.x:
+   mct_getr:
+mctgets.x:
+   mct_gets:
+mctgetx.x:
+   mct_getx:
+mctindef.x:
+   mct_indef:
+mctmaxcol.x:
+   mct_maxcol:
+mctmaxrow.x:
+   mct_maxrow:
+mctncols.x:
+   mct_ncols:
+mctnrows.x:
+   mct_nrows:
+mctputc.x:
+   mct_putc:
+mctputd.x:
+   mct_putd:
+mctputi.x:
+   mct_puti:
+mctputl.x:
+   mct_putl:
+mctputp.x:
+   mct_putp:
+mctputr.x:
+   mct_putr:
+mctputs.x:
+   mct_puts:
+mctputx.x:
+   mct_putx:
+mctreset.x:
+   mct_reset:
+mctrestore.x:
+   mct_restore:
+mctrew.x:
+   mct_rew:
+mctsave.x:
+   mct_save:
+mctsgetc.x:
+   mct_sgetc:
+mctsgetd.x:
+   mct_sgetd:
+mctsgeti.x:
+   mct_sgeti:
+mctsgetl.x:
+   mct_sgetl:
+mctsgetp.x:
+   mct_sgetp:
+mctsgetr.x:
+   mct_sgetr:
+mctsgets.x:
+   mct_sgets:
+mctsgetx.x:
+   mct_sgetx:
+mctsputc.x:
+   mct_sputc:
+mctsputd.x:
+   mct_sputd:
+mctsputi.x:
+   mct_sputi:
+mctsputl.x:
+   mct_sputl:
+mctsputp.x:
+   mct_sputp:
+mctsputr.x:
+   mct_sputr:
+mctsputs.x:
+   mct_sputs:
+mctsputx.x:
+   mct_sputx:
+mctshrink.x:
+   mct_shrink:
+mcttype.x:
+   mct_type:
+mctalloc.f:
+   mctalc:
+mctclearc.f:
+   mctclc:
+mctcleard.f:
+   mctcld:
+mctcleari.f:
+   mctcli:
+mctclearl.f:
+   mctcll:
+mctclearp.f:
+   mctclp:
+mctclearr.f:
+   mctclr:
+mctclears.f:
+   mctcls:
+mctclearx.f:
+   mctclx:
+mctcopy.f:
+   mctcoy:
+mctfree.f:
+   mctfre:
+mctgetbuf.f:
+   mctgef:
+mctgetrow.f:
+   mctgew:
+mctgetc.f:
+   mctgec:
+mctgetd.f:
+   mctged:
+mctgeti.f:
+   mctgei:
+mctgetl.f:
+   mctgel:
+mctgetp.f:
+   mctgep:
+mctgetr.f:
+   mctger:
+mctgets.f:
+   mctges:
+mctgetx.f:
+   mctgex:
+mctindef.f:
+   mctinf:
+mctmaxcol.f:
+   mctmal:
+mctmaxrow.f:
+   mctmaw:
+mctncols.f:
+   mctncs:
+mctnrows.f:
+   mctnrs:
+mctputc.f:
+   mctpuc:
+mctputd.f:
+   mctpud:
+mctputi.f:
+   mctpui:
+mctputl.f:
+   mctpul:
+mctputp.f:
+   mctpup:
+mctputr.f:
+   mctpur:
+mctputs.f:
+   mctpus:
+mctputx.f:
+   mctpux:
+mctreset.f:
+   mctret:
+mctrestore.f:
+   mctree:
+mctrew.f:
+   mctrew:
+mctsave.f:
+   mctsae:
+mctsgetc.f:
+   mctsgc:
+mctsgetd.f:
+   mctsgd:
+mctsgeti.f:
+   mctsgi:
+mctsgetl.f:
+   mctsgl:
+mctsgetp.f:
+   mctsgp:
+mctsgetr.f:
+   mctsgr:
+mctsgets.f:
+   mctsgs:
+mctsgetx.f:
+   mctsgx:
+mctsputc.f:
+   mctspc:
+mctsputd.f:
+   mctspd:
+mctsputi.f:
+   mctspi:
+mctsputl.f:
+   mctspl:
+mctsputp.f:
+   mctspp:
+mctsputr.f:
+   mctspr:
+mctsputs.f:
+   mctsps:
+mctsputx.f:
+   mctspx:
+mctshrink.f:
+   mctshk:
+mcttype.f:
+   mcttye:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a mctalloc.o mctclearc.o mctcleard.o mctcleari.o mctclearl.o mctclearp.o mctclearr.o mctclears.o mctclearx.o mctcopy.o mctfree.o mctgetbuf.o mctgetrow.o mctgetc.o mctgetd.o mctgeti.o mctgetl.o mctgetp.o mctgetr.o mctgets.o mctgetx.o mctindef.o mctmaxcol.o mctmaxrow.o mctncols.o mctnrows.o mctputc.o mctputd.o mctputi.o mctputl.o mctputp.o mctputr.o mctputs.o mctputx.o mctreset.o mctrestore.o mctrew.o mctsave.o mctsgetc.o mctsgetd.o mctsgeti.o mctsgetl.o mctsgetp.o mctsgetr.o mctsgets.o mctsgetx.o mctsputc.o mctsputd.o mctsputi.o mctsputl.o mctsputp.o mctsputr.o mctsputs.o mctsputx.o mctshrink.o mcttype.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio bsearch.x addflux.x confnu.x directory.x dtgastr.x fft1d.x format.x julian.x puttime.x sort.x strext.x strins.x strrep.x strsubs.x strwht.x strwrd.x wairmass.x
+bsearch.x:
+   bsearchc:
+   bsearchs:
+   bsearchi:
+   bsearchl:
+   bsearchr:
+   bsearchd:
+addflux.x:
+   add_flux:
+confnu.x:
+   confnu:
+directory.x:
+   drt_open:
+   drt_close:
+   drt_gfname:
+dtgastr.x:
+   dtgastr:
+fft1d.x:
+   fft1_init:
+   fft1_realloc:
+   fft1_clear:
+   fft1_free:
+   fft1_rew:
+   fft1_get:
+   fft1_put:
+   fft1_size:
+   fft1_fft:
+   fft1_chk:
+   fft1_dump:
+format.x:
+   fmt_printf:
+   fmt_eprintf:
+   fmt_fprintf:
+   fmt_format:
+   fmt_escape:
+julian.x:
+   julian:
+puttime.x:
+   put_time:
+sort.x:
+   srt_init:
+   srt_free:
+   srt_get:
+   srt_put:
+   srt_head:
+   srt_tail:
+   srt_nget:
+   srt_nput:
+   srt_ptr:
+   srt_sort:
+strext.x:
+   strext:
+strins.x:
+   strins:
+strrep.x:
+   strrep:
+strsubs.x:
+   strsubs:
+strwht.x:
+   strwht:
+strwrd.x:
+   strwrd:
+wairmass.x:
+   im_wairmass:
+   wairmass:
+bsearch.f:
+   bsearc:
+   bsears:
+   bseari:
+   bsearl:
+   bsearr:
+   bseard:
+addflux.f:
+   addflx:
+confnu.f:
+   confnu:
+directory.f:
+   drtopn:
+   drtcle:
+   drtgfe:
+dtgastr.f:
+   dtgasr:
+fft1d.f:
+   fft1it:
+   fft1rc:
+   fft1cr:
+   fft1fe:
+   fft1rw:
+   fft1gt:
+   fft1pt:
+   fft1se:
+   fft1ft:
+   fft1ck:
+   fft1dp:
+format.f:
+   fmtprf:
+   fmtepf:
+   fmtfpf:
+   fmtfot:
+   fmtese:
+julian.f:
+   julian:
+puttime.f:
+   puttie:
+sort.f:
+   srtint:
+   srtfre:
+   srtget:
+   srtput:
+   srthed:
+   srttal:
+   srtngt:
+   srtnpt:
+   srtptr:
+   srtsot:
+strext.f:
+   strext:
+strins.f:
+   strins:
+strrep.f:
+   strrep:
+strsubs.f:
+   strsus:
+strwht.f:
+   strwht:
+strwrd.f:
+   strwrd:
+wairmass.f:
+   imwais:
+   wairms:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a bsearch.o addflux.o confnu.o directory.o dtgastr.o fft1d.o format.o julian.o puttime.o sort.o strext.o strins.o strrep.o strsubs.o strwht.o strwrd.o wairmass.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_magavg.x t_magband.x
+t_magavg.x:
+   t_magavg:
+   mav_read:
+   mav_rdata:
+   mav_write:
+   mav_indef:
+   mav_average:
+   mav_compare:
+t_magband.x:
+   t_magband:
+   mag_table:
+   mag_title:
+t_magavg.f:
+   tmagag:
+   mavred:
+   mavrda:
+   mavwre:
+   mavinf:
+   mavave:
+   mavcoe:
+t_magband.f:
+   tmagbd:
+   magtae:
+   magtie:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_magavg.o t_magband.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_mapkeyword.x
+t_mapkeyword.x:
+   t_mapkeyword:
+   mpk_get:
+   mpk_proc:
+t_mapkeyword.f:
+   tmapkd:
+   mpkget:
+   mpkprc:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_mapkeyword.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_mjoin.x
+t_mjoin.x:
+   t_mjoin:
+   mjn_match:
+   mjn_get:
+   mjn_mjoin:
+   mjn_nomatch:
+   mjn_join:
+t_mjoin.f:
+   tmjoin:
+   mjnmah:
+   mjnget:
+   mjnmjn:
+   mjnnoh:
+   mjnjon:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_mjoin.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio pixselect.x t_pixselect.x
+pixselect.x:
+   pixselects:
+   pixselecti:
+   pixselectl:
+   pixselectr:
+   pixselectd:
+   pixselectx:
+t_pixselect.x:
+   t_pixselect:
+pixselect.f:
+   pixses:
+   pixsei:
+   pixsel:
+   pixser:
+   pixsed:
+   pixsex:
+t_pixselect.f:
+   tpixst:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a pixselect.o t_pixselect.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio photom.f radius2.f t_sphot.x value.f xysetup.f
+t_sphot.x:
+   t_sphot:
+   sphot:
+   sphot1:
+   photometry:
+   xyerror:
+   photerror:
+photom.f:
+   photom:
+radius2.f:
+   radiu2:
+value.f:
+   value:
+xysetup.f:
+   xysetp:
+t_sphot.f:
+   tsphot:
+   sphot:
+   sphot1:
+   photoy:
+   xyerrr:
+   photer:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a photom.o radius2.o t_sphot.o value.o xysetup.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_statspec.x
+t_statspec.x:
+   t_statspec:
+t_statspec.f:
+   tstatc:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_statspec.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio t_wairmass.x
+t_wairmass.x:
+   t_wairmass:
+   wrm_gethdr:
+t_wairmass.f:
+   twairs:
+   wrmger:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/ctio/src/libpkg.a t_wairmass.o
+ranlib libpkg.a
+Updated 147 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p ctio x_ctio.x
+x_ctio.x:
+   sys_runtask:
+x_ctio.f:
+   sysruk:
+xc -Nz -p ctio x_ctio.o libpkg.a -lxtools -lcurfit -liminterp -o xx_ctio.e
+move `xx_ctio.e' to `pkgbin$x_ctio.e'
+purge directory `pkgbin$'

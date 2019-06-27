@@ -1,0 +1,17 @@
+	catpars -- Catalog column description pset
+        cdrfits -- Read FITS tables from the GSC CDroms
+       disppars -- Image display parameters for TFINDER and DSSFINDER
+      dssfinder -- Tfinder tailored for Digital Sky Survey images
+      finderlog -- Generate log file from Tfinder format table
+        gscfind -- Search the GSC index for sources within a field
+     hydrahints -- Phil's hints for Hydra users
+     mkgscindex -- Regenerate machine dependent GSC CD index from FITS index
+       mkgsctab -- Make a pseudo-GSC coordinate table from a text coord list
+       mkobjtab -- Convert objects in input table to catalog sources in output
+        objlist -- Print a text list of the object coordinates
+     selectpars -- Source selection criteria pset
+        tastrom -- Script frontend for ASTROM foreign task
+         tfield -- Extract sources within a field from a list of tables
+        tfinder -- Search the catalog - predict, center and fit the coords
+          tpeak -- Interactively center table sources (called by tfinder)
+        tpltsol -- Perform plate solution from measured Guide Stars using ccmap

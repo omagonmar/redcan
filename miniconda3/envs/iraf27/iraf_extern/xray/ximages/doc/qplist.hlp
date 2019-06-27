@@ -1,0 +1,307 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/qplist.hlp,v 11.0 1997/11/06 16:25:54 prosb Exp $
+#$Log: qplist.hlp,v $
+#Revision 11.0  1997/11/06 16:25:54  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:23  prosb
+#General Release 2.4
+#
+Revision 8.1  1994/08/04  11:10:53  dvs
+Added reference to Einstein TSI to tsi parameter.
+
+Revision 8.0  94/06/27  14:43:28  prosb
+General Release 2.3.1
+
+Revision 7.1  94/06/08  11:27:56  prosb
+Brought help file up to date.
+
+Revision 7.0  93/12/27  18:23:21  prosb
+General Release 2.3
+
+Revision 6.0  93/05/24  16:05:06  prosb
+General Release 2.2
+
+Revision 5.2  92/12/01  11:37:03  prosb
+minor edit
+
+Revision 5.1  92/11/30  17:12:36  mo
+MC	11/30/92		Add the new display level info for the header
+
+Revision 5.0  92/10/29  21:24:05  prosb
+General Release 2.1
+
+Revision 4.1  92/10/08  09:50:04  mo
+MC	10/8/92		Added new parameters.
+
+Revision 4.0  92/04/27  14:16:23  prosb
+General Release 2.0:  April 1992
+
+Revision 3.0  91/08/02  01:16:06  prosb
+General Release 1.1
+
+Revision 2.1  91/07/12  12:15:55  prosb
+xray.ximages   7/12/91
+
+Revision 2.0  91/03/06  23:37:26  pros
+General Release 1.0
+
+.help qplist Jun94 xray.ximages
+.ih
+NAME
+qplist -- display QPOE photon events in the specified regions
+.ih
+USAGE
+qplist qpoe
+.ih
+DESCRIPTION
+\fIqplist\fR lists the photons records in the specified source
+regions. The x, y, time, pha, pi, dx, and dy values for each photon
+are displayed.  In addition, if a table file is specified, then the
+records are written out in STScI table format to the named file. The
+columns of the table file are X, Y, TIME, PHA, PI, DX, and DY.
+.ih
+PARAMETERS
+.ls qpoe = ""		prompt = QPOE file
+
+The qpoe data file, with optional filter expression.
+.le
+.ls (region = "") [string]
+
+The region descriptor.  If null is input, the entire field is displayed
+(subject to the qpoe filters specified with the input file name). Otherwise
+only those photons are displayed which pass the spatial region filter.
+.le
+.ls (firstevent = "1") [int]
+
+The first event record to print.
+.le
+.ls (lastevent = "-1") [int]
+
+The last event record to print.  Positive values represent actual event
+numbers.  Order is determined by the internal QPOE structure and 'sorttype'.
+The value '-1' will print all events until End of File.
+.le
+.ls (elements = "") [string]
+
+The event record elements to display.  This string consists of a list
+of event element names, e.g., "time x y".  The event elements will be
+displayed in the order in which they are described in the string.  In
+the null string is input, all elements of the event record are
+displayed.
+.le
+.ls (exposure = "NONE") [string]
+
+The PLIO mask containing exposure information for the specified
+image. If the null string is input,  the name will be the
+same root as the image file with a "_exp.pl" extension.
+If "NONE" is input (the default), no exposure filtering is performed.
+.le
+.ls (expthresh = 0.) [real]
+
+The percentage of total exposure required for a given pixel to pass the
+exposure filter, (if an exposure mask is present).  For example, if expthresh
+is 50.0, then only pixels whose exposure time is >= 50% will be used.  An
+exposure threshold of 0% allows all photons to pass the exposure filter.
+.le
+.ls (events = yes) [boolean]
+
+Boolean flag specifying whether the event records are displayed.  This
+would be turned off, for example, if one wants to display only the header
+information (see below).
+.le
+.ls (header = no) [boolean]
+
+Boolean flag specifying whether the QPOE header is displayed.
+.le
+.ls (history = no) [boolean]
+
+Boolean flag specifying whether the X-ray history is displayed.
+.le
+.ls (tgr = no) [boolean]
+
+Boolean flag specifying whether the Einstein Timing Gap Record (TGR) 
+information is displayed.
+.le
+.ls (blt = no) [boolean]
+
+Boolean flag specifying whether the Einstein Bal Live Times(BLT) information 
+is displayed.
+.le
+.ls (gti = no) [boolean]
+
+Boolean flag specifying whether the dynamic Good Time Interval information 
+is displayed.  This is stored in the QPOE 'deffilt' header parameter.
+.le
+.ls (oldgti_name = "GTI") [string]
+
+The name of the extension within the QPOE containing the
+standard 'good time intervals' for pre-RDF QPOE files.
+.le
+.ls (allgti_name = "ALLGTI") [string]
+
+The name of the extensions within the QPOE containing the 'good time
+intervals' corresponding to ALL the events (standard+rejected) in
+RDF QPOE files.
+.le
+.ls (stdgti_name = "STDGTI") [string]
+
+The name of the extensions within the QPOE containing the 'good time
+intervals' corresponding to the STANDARD events for RDF QPOE files.
+.le
+.ls (oldgti_bool = no) [boolean]
+
+Boolean flag specifying whether the old archival good time interval
+records are displayed.
+.le
+.ls (allgti_bool = no) [boolean]
+
+Boolean flag specifying whether the 'all' archival good time interval
+records are displayed.
+.le
+.ls (stdgti_bool = no) [boolean]
+
+Boolean flag specifying whether the 'standard' archival good time interval
+records are displayed.
+.le
+.ls (tsi = no) [boolean]
+
+Boolean flag specifying whether the ROSAT or EINSTEIN TSI information is 
+displayed. 
+.le
+.ls (mask_headers = no) [boolean]
+
+Boolean flag specifying whether the plio headers that went into the saved
+composite mask should be displayed.
+.le
+.ls (composite_ma = no) [boolean]
+
+Boolean flag specifying whether the saved composite mask should be displayed.
+This mask is updated every time a qpoe file is copied, rotated, etc. through
+a spatial region mask.  The composite mask is the logical "and" of all of the
+region masks used to filter the qpoe file.
+.le
+.ls (disp_mode = "zoom") [string]
+
+Specify area of composite mask to display. \fIFull\fR specifies that the
+entire mask area be displayed.  The word \fIzoom\fR specifies that only the
+area of the mask with non-zero values be displayed.  In this case, pllist
+computes the smallest subsection which includes all non-zero mask values.
+Any subsection can be specified by giving four integers, separated by spaces,
+in the format x1 x2 y1 y2.  The three modes can be mixed in one spcification.
+If 0 is given for x1 or y1 in a subsection specification, the \fIzoom\fR
+limits are applied to that axis.  If -1 is given for x1 or y1 in a subsection
+specification, the \fIfull\fR field of that axis will be used for the display.
+When 0 or -1 is used as the x1 or y1 value, the corresponding x2 or y2 entry
+is not used, but an integer value must be given.  The keyword names can be
+abbreviated in the specification.
+.le
+.ls (ncols = 80) [int]
+
+The number of columns to display.  The composite mask is sub-sampled to display
+the required number of columns.
+.le
+.ls (nrows = 30) [int]
+
+The number of rows to display.  The composite mask is sub-sampled to display
+the required number of rows.
+.le
+.ls (table = "NONE") [string]
+
+Name of the STScI table file to create. If the null string is input,
+the table file name defaults to the root of the qpoe file with a "_qls.tab"
+extension.  The extension can be omitted in the specification.
+If the string "NONE" is input (the default), no table file is created.
+.le
+.ls (display = 1) [int]
+
+Display value that determines if a screen display is performed.
+Normally, display is a positive value to indicate that screen display
+is to be performed.  If display ==0, no screen display is output. This
+is useful when creating a table, since the screen display will slow
+down the task considerably.
+For header information (header=yes), values of display greater than 1
+will give more detailed header information, with level=3 providing
+all the available info.
+.le
+.ls (clobber = no) [boolean
+
+Boolean flag specifying whether or not the table file can be overwritten,
+if it already exists.
+.le
+.ih
+EXAMPLES
+1. Display the events of i296 contained in a circle centered at 511,511,
+with radius 2. No exposure masking is to be done. Create a table file
+named i296_qls.tab containing the event information. Display the header and
+history, as well as the events.
+.nf
+
+cl> qplist i296 region="circle(511,511,2)" events+ header+ history+ table=""
+
+                       QPOE Header
+
+                 [ header information ]
+
+                       X-ray History
+
+                 [ history information ]
+
+qplist mask
+image:          i296
+mask_name:      in memory
+mask_type:      region
+ref_file:       none
+xdim:           1024
+ydim:           1024
+scale:          none
+regions:        CIRCLE (511. 511. 2.)
+no exposure correction
+
+     x     y   pha    pi             time  rawx  rawy  detx  detystatus
+   510   510     7     5    62064301.2407   584   581   512   509     0
+   511   510    10    12    30460812.5449   585   579   511   511     0
+   512   510     7     6    61979614.0317   587   574   510   515     0
+   512   510     8     6    62070202.7576   586   579   511   511     0
+   510   511    10    12    30467087.0292   583   580   512   510     0
+   510   511     8     6    62070197.1739   583   581   513   509     0
+   510   511     6     5    62068060.0337   583   581   513   509     0
+   511   511     7     5    62017642.2711   584   579   512   511     0
+   511   511    11     9    61977629.7838   585   576   512   513     0
+   511   511    12    10    61988956.3873   585   575   512   514     0
+   511   511     5     4    62068083.9655   583   581   513   510     0
+   511   511     8     7    62018728.7181   585   578   512   512     0
+   512   511     7     5    62018432.6541   585   577   512   513     0
+   512   511     7     9    30465157.0848   585   578   511   512     0
+   512   511     5     3    62017672.1565   584   578   512   513     0
+   512   511     9     7    62028310.1949   586   576   511   514     0
+   512   511     3     2    62064085.1020   583   582   512   511     0
+   511   512     8     6    61982821.3642   582   570   514   518     0
+   511   512     9     7    62028870.5760   583   577   513   513     0
+   512   512     5     4    62019338.9145   584   577   512   514     0
+
+total:  20
+
+The table file for this example could be displayed using tprint:
+
+cl> tprint i296_qls prparam+
+.fi
+.ih
+TIME REQUIREMENTS
+The time required depends on the speed of the filter I/O, and is proportional
+to the number of photons being filtered.
+.ih
+BUGS
+.ih
+SEE ALSO
+See the documentation on region filtering (\fIhelp regions\fR)
+for a description of the spatial filter user interface.
+
+See the documentation on QPOE filtering (\fIhelp qpoe\fR)
+for a description of the QPOE filter user interface.
+
+See the documentation on file extensions (\fIhelp extensions\fR)
+for a description of PROS file extensions.
+
+See the documentation on coordinates (\fIhelp coords\fR)
+for a description of PROS coordinate conventions.
+.endhelp

@@ -1,0 +1,52 @@
+#$Header: /home/pros/xray/ximages/RCS/qpsort.par,v 11.0 1997/11/06 16:29:18 prosb Exp $
+#$Log: qpsort.par,v $
+#Revision 11.0  1997/11/06 16:29:18  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:32:51  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:42:29  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:26:04  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  17:47:36  mo
+#MC	12/22/93	Update defaults
+#
+#Revision 6.0  93/05/24  16:04:09  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:26:23  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:14:48  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:15:31  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:24:16  pros
+#General Release 1.0
+#
+#
+#  Parameters for the qptime task
+#
+input_qpoe,s,a,"",,,"input qpoe file name"
+region,s,a,"",,,"region descriptor"
+exposure,s,h,"NONE",,,"exposure mask"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion"
+qpoe,s,a,"",,,"output qpoe file name"
+eventdef,s,a,"",,,"event definition"
+clobber,b,h,n,,,"delete old copy of output file"
+display,i,h,1,0,1,"0=no disp, >0=header"
+sorttype,s,a,"position",,,"type of sort"
+sortsize,i,h,1000000,,,"bytes to alloc. per sort"
+qp_internals,b,h,yes,,,"prompt for qpoe internals?"
+qp_pagesize,i,h,2048,,,"page size for qpoe file"
+qp_bucketlen,i,h,4096,,,"bucket length for qpoe file"
+qp_blockfactor,i,h,1,,,"block factor for imio"
+qp_mkindex,b,h,y,,,"make an index on y, x"
+qp_key,s,h,"",,,"key on which to make index"
+qp_debug,i,h,0,,,"qpoe debug level"

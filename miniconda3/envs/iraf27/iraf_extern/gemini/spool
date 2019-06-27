@@ -1,0 +1,1335 @@
+!ln -sf ../bin/libgemini.a libgemini.a
+!ln -sf ../bin/libpdainterp.a libpdainterp.a
+!ln -sf ../bin/libmefio.a libmefio.a
+!ln -sf ../bin/libdbc.a libdbc.a
+!ln -sf ../bin/libgslalib.a libgslalib.a
+!ln -sf ../bin/libirafdb.a libirafdb.a
+warning: library `libgemini.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil gwhitespace.x imname.x text.x numeric.x strtools.x
+gwhitespace.x:
+   g_whitespace:
+imname.x:
+   gin_gfext:
+   gin_gsuf:
+   gin_groot:
+   gin_afext:
+   gin_psuf:
+   gin_ismef:
+   gin_make:
+   gin_multype:
+   gin_valid:
+text.x:
+   gte_blankpar:
+   gte_isblank:
+   gte_unpad:
+   gte_indict:
+numeric.x:
+   gnu_equalr:
+strtools.x:
+   g_isDecimal:
+   g_isInteger:
+   g_isReal:
+   g_isExpNumber:
+   g_dectest:
+   g_isHex:
+   g_isOctal:
+gwhitespace.f:
+   gwhite:
+imname.f:
+   gingft:
+   gingsf:
+   gingrt:
+   ginaft:
+   ginpsf:
+   ginisf:
+   ginmae:
+   ginmue:
+   ginvad:
+text.f:
+   gteblr:
+   gteisk:
+   gteund:
+   gteint:
+numeric.f:
+   gnueqr:
+strtools.f:
+   gisdel:
+   gisinr:
+   gisrel:
+   gisexr:
+   gdectt:
+   gishex:
+   gisocl:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libgemini.a  gwhitespace.o imname.o text.o numeric.o strtools.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libgemini.a
+ranlib ../bin/libgemini.a
+Updated 5 files in libgemini.a
+warning: library `libpdainterp.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil pda_dsqf.f pda_idbvip.f pda_jdbvip.f pda_idcldp.f pda_idlctn.f pda_idpdrv.f pda_idptip.f pda_jdptip.f pda_idtang.f pda_idxchg.f pda_side2.f pda_side.f pda_spdt.f
+pda_dsqf.f:
+   pda_dsqf:
+pda_idbvip.f:
+   idbvip:
+pda_jdbvip.f:
+   jdbvip:
+pda_idcldp.f:
+   pda_idcldp:
+pda_idlctn.f:
+   pda_idlctn:
+pda_idpdrv.f:
+   pda_idpdrv:
+pda_idptip.f:
+   pda_idptip:
+pda_jdptip.f:
+   pda_jdptip:
+pda_idtang.f:
+   pda_idtang:
+pda_idxchg.f:
+   pda_idxchg:
+pda_side2.f:
+   pda_side2:
+pda_side.f:
+   pda_side:
+pda_spdt.f:
+   pda_spdt:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libpdainterp.a  pda_dsqf.o pda_idbvip.o pda_jdbvip.o pda_idcldp.o pda_idlctn.o pda_idpdrv.o pda_idptip.o pda_jdptip.o pda_idtang.o pda_idxchg.o pda_side2.o pda_side.o pda_spdt.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libpdainterp.a
+ranlib ../bin/libpdainterp.a
+Updated 13 files in libpdainterp.a
+warning: library `libmefio.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil mefiocorrelate.x gdcorrelate.x mefioiter.x mefiomap.x mefioutil.x mefiodata.x mefioheader.x mefioimcopy.x gdpropagate.x mefiostruct.x
+mefiocorrelate.x:
+   fmrelate:
+   fmfree:
+gdcorrelate.x:
+   gdrelate:
+mefioiter.x:
+   megetep:
+   megbnv:
+   memaxver:
+   meindbnv:
+   countbn:
+   mehct:
+   mesetiter:
+   megnep:
+   megntep:
+   idecr:
+   iincr:
+mefiomap.x:
+   memap:
+   meepunmap:
+   meepfunmap:
+   meunmap:
+   meprint:
+   megphu:
+mefioutil.x:
+   me_errreport:
+   me_error:
+   log_init:
+   log_close:
+   task_error:
+   log_info:
+   log_warn:
+   log_err:
+   i2dmalloc:
+   i2dfree:
+   i2dset:
+   i2dget:
+   i2dprint:
+   parymalloc:
+   iset:
+   iget:
+   paryset:
+   paryget:
+   paryget2:
+   paryget3:
+   iaryget:
+   iaryset:
+   pset:
+   pget:
+   memdump:
+   printop:
+   mefexists:
+   encmp:
+   mtstamp:
+   setNEXTEND:
+mefiodata.x:
+   imgnlb:
+   impnlb:
+   megftype:
+   megetb:
+   megets:
+   megeti:
+   megetl:
+   megetr:
+   megetd:
+   mignls:
+   mipnls:
+   migl1s:
+   mipl1s:
+   migl2s:
+   mipl2s:
+   migl3s:
+   mipl3s:
+   mignli:
+   mipnli:
+   migl1i:
+   mipl1i:
+   migl2i:
+   mipl2i:
+   migl3i:
+   mipl3i:
+   mignll:
+   mipnll:
+   migl1l:
+   mipl1l:
+   migl2l:
+   mipl2l:
+   migl3l:
+   mipl3l:
+   mignlr:
+   mipnlr:
+   migl1r:
+   mipl1r:
+   migl2r:
+   mipl2r:
+   migl3r:
+   mipl3r:
+   mignld:
+   mipnld:
+   migl1d:
+   mipl1d:
+   migl2d:
+   mipl2d:
+   migl3d:
+   mipl3d:
+mefioheader.x:
+   meaheads:
+   meaheadi:
+   meaheadl:
+   meaheadr:
+   meaheadd:
+   mepheads:
+   mepheadi:
+   mepheadl:
+   mepheadr:
+   mepheadd:
+   megheads:
+   megheadi:
+   megheadl:
+   megheadr:
+   megheadd:
+   meahstr:
+   mephstr:
+   meghstr:
+mefioimcopy.x:
+   mimcopy:
+gdpropagate.x:
+   gdpropagate:
+mefiostruct.x:
+   mesnumexts:
+   i2ddims:
+mefiocorrelate.f:
+   fmrele:
+   fmfree:
+gdcorrelate.f:
+   gdrele:
+mefioiter.f:
+   megetp:
+   megbnv:
+   memaxr:
+   meindv:
+   countn:
+   mehct:
+   mesetr:
+   megnep:
+   megntp:
+   idecr:
+   iincr:
+mefiomap.f:
+   memap:
+   meepup:
+   meepfp:
+   meunmp:
+   meprit:
+   megphu:
+mefioutil.f:
+   meerrt:
+   meerrr:
+   logint:
+   logcle:
+   tasker:
+   logino:
+   logwan:
+   logerr:
+   i2dmac:
+   i2dfre:
+   i2dset:
+   i2dget:
+   i2dprt:
+   parymc:
+   iset:
+   iget:
+   paryst:
+   parygt:
+   paryg2:
+   paryg3:
+   iarygt:
+   iaryst:
+   pset:
+   pget:
+   memdup:
+   printp:
+   mefexs:
+   encmp:
+   mtstap:
+   setned:
+mefiodata.f:
+   imgnlb:
+   impnlb:
+   megfte:
+   megetb:
+   megets:
+   megeti:
+   megetl:
+   megetr:
+   megetd:
+   mignls:
+   mipnls:
+   migl1s:
+   mipl1s:
+   migl2s:
+   mipl2s:
+   migl3s:
+   mipl3s:
+   mignli:
+   mipnli:
+   migl1i:
+   mipl1i:
+   migl2i:
+   mipl2i:
+   migl3i:
+   mipl3i:
+   mignll:
+   mipnll:
+   migl1l:
+   mipl1l:
+   migl2l:
+   mipl2l:
+   migl3l:
+   mipl3l:
+   mignlr:
+   mipnlr:
+   migl1r:
+   mipl1r:
+   migl2r:
+   mipl2r:
+   migl3r:
+   mipl3r:
+   mignld:
+   mipnld:
+   migl1d:
+   mipl1d:
+   migl2d:
+   mipl2d:
+   migl3d:
+   mipl3d:
+mefioheader.f:
+   meahes:
+   meahei:
+   meahel:
+   meaher:
+   meahed:
+   mephes:
+   mephei:
+   mephel:
+   mepher:
+   mephed:
+   meghes:
+   meghei:
+   meghel:
+   megher:
+   meghed:
+   meahsr:
+   mephsr:
+   meghsr:
+mefioimcopy.f:
+   mimcoy:
+gdpropagate.f:
+   gdproe:
+mefiostruct.f:
+   mesnus:
+   i2ddis:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libmefio.a  mefiocorrelate.o gdcorrelate.o mefioiter.o mefiomap.o mefioutil.o mefiodata.o mefioheader.o mefioimcopy.o gdpropagate.o mefiostruct.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libmefio.a
+ranlib ../bin/libmefio.a
+Updated 10 files in libmefio.a
+warning: library `libdbc.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil imakbc.x imakdc.x imakic.x imaklc.x imakrc.x imaksc.x imastrc.x imdcom.x imgcom.x impcom.x impkbc.x impkdc.x impkic.x impklc.x impkrc.x impksc.x impstrc.x
+imakbc.x:
+   imakbc:
+imakdc.x:
+   imakdc:
+imakic.x:
+   imakic:
+imaklc.x:
+   imaklc:
+imakrc.x:
+   imakrc:
+imaksc.x:
+   imaksc:
+imastrc.x:
+   imastrc:
+imdcom.x:
+   imdcom:
+imgcom.x:
+   imgcom:
+impcom.x:
+   impcom:
+impkbc.x:
+   impkbc:
+impkdc.x:
+   impkdc:
+impkic.x:
+   impkic:
+impklc.x:
+   impklc:
+impkrc.x:
+   impkrc:
+impksc.x:
+   impksc:
+impstrc.x:
+   impstrc:
+imakbc.f:
+   imakbc:
+imakdc.f:
+   imakdc:
+imakic.f:
+   imakic:
+imaklc.f:
+   imaklc:
+imakrc.f:
+   imakrc:
+imaksc.f:
+   imaksc:
+imastrc.f:
+   imastc:
+imdcom.f:
+   imdcom:
+imgcom.f:
+   imgcom:
+impcom.f:
+   impcom:
+impkbc.f:
+   impkbc:
+impkdc.f:
+   impkdc:
+impkic.f:
+   impkic:
+impklc.f:
+   impklc:
+impkrc.f:
+   impkrc:
+impksc.f:
+   impksc:
+impstrc.f:
+   impstc:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libdbc.a  imakbc.o imakdc.o imakic.o imaklc.o imakrc.o imaksc.o imastrc.o imdcom.o imgcom.o impcom.o impkbc.o impkdc.o impkic.o impklc.o impkrc.o impksc.o impstrc.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libdbc.a
+ranlib ../bin/libdbc.a
+Updated 17 files in libdbc.a
+warning: library `libgslalib.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil atms.f atmt.f drange.f pa.f refro.f
+atms.f:
+   slatms:
+atmt.f:
+   slatmt:
+drange.f:
+   slda1p:
+pa.f:
+   slpa:
+refro.f:
+   slrfro:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libgslalib.a  atms.o atmt.o drange.o pa.o refro.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libgslalib.a
+ranlib ../bin/libgslalib.a
+Updated 5 files in libgslalib.a
+warning: library `libirafdb.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil apalloc.x apcveval.x apdb.x apio.x appars.x idcenter.x iddb.x idfitdata.x idgdata.x idinit.x idlabel.x idlinelist.x idmap.x idnewfeature.x idnoextn.x idpeak.x peaks.x
+apalloc.x:
+   ap_alloc:
+   ap_free:
+apcveval.x:
+   ap_cveval:
+apdb.x:
+   ap_dbwrite:
+   ap_dbread:
+   ap_dbaccess:
+apio.x:
+   ap_log:
+   ap_gopen:
+   ap_gclose:
+   ap_popen:
+   ap_pclose:
+appars.x:
+   apopset:
+   apcpset:
+   apgstr:
+   apgetb:
+   apgeti:
+   apgetr:
+   apgimr:
+   apgwrd:
+   apginterp:
+   appstr:
+   apputb:
+   apputi:
+   apputr:
+idcenter.x:
+   id_center:
+iddb.x:
+   id_dbread:
+   id_dbsave:
+   id_dbread_rec:
+   id_dbwrite:
+   id_dbcheck:
+   id_dbsection:
+idfitdata.x:
+   id_fitdata:
+   id_fitfeatures:
+   id_fitpt:
+   fit_to_pix:
+idgdata.x:
+   id_gdata:
+idinit.x:
+   id_init:
+   id_free:
+   id_free1:
+   id_saveid:
+   id_getid:
+   id_saveap:
+   id_getap:
+   id_sid:
+   id_gid:
+idlabel.x:
+   id_label:
+idlinelist.x:
+   id_mapll:
+   id_unmapll:
+   id_unitsll:
+   id_match:
+   id_linelist:
+   id_compare:
+idmap.x:
+   id_map:
+   id_maphdr:
+   id_section:
+idnewfeature.x:
+   id_newfeature:
+idnoextn.x:
+   id_noextn:
+idpeak.x:
+   id_peak:
+   id_peaks:
+   id_upeaks:
+peaks.x:
+   find_peaks:
+   find_upeaks:
+   find_ipeaks:
+   find_local_maxima:
+   is_local_max:
+   find_threshold:
+   find_isolated:
+   find_nmax:
+   find_unmax:
+   compare:
+apalloc.f:
+   apallc:
+   apfree:
+apcveval.f:
+   apcvel:
+apdb.f:
+   apdbwe:
+   apdbrd:
+   apdbas:
+apio.f:
+   aplog:
+   apgopn:
+   apgcle:
+   appopn:
+   appcle:
+appars.f:
+   apopst:
+   apcpst:
+   apgstr:
+   apgetb:
+   apgeti:
+   apgetr:
+   apgimr:
+   apgwrd:
+   apginp:
+   appstr:
+   apputb:
+   apputi:
+   apputr:
+idcenter.f:
+   idcenr:
+iddb.f:
+   iddbrd:
+   iddbse:
+   iddbrc:
+   iddbwe:
+   iddbck:
+   iddbsn:
+idfitdata.f:
+   idfita:
+   idfits:
+   idfitt:
+   fittox:
+idgdata.f:
+   idgdaa:
+idinit.f:
+   idinit:
+   idfree:
+   idfre1:
+   idsavd:
+   idgetd:
+   idsavp:
+   idgetp:
+   idsid:
+   idgid:
+idlabel.f:
+   idlabl:
+idlinelist.f:
+   idmapl:
+   idunml:
+   idunil:
+   idmath:
+   idlint:
+   idcome:
+idmap.f:
+   idmap:
+   idmapr:
+   idsecn:
+idnewfeature.f:
+   idnewe:
+idnoextn.f:
+   idnoen:
+idpeak.f:
+   idpeak:
+   idpeas:
+   idupes:
+peaks.f:
+   findps:
+   findus:
+   findis:
+   findla:
+   islocx:
+   findtd:
+   findid:
+   findnx:
+   findux:
+   compae:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libirafdb.a  apalloc.o apcveval.o apdb.o apio.o appars.o idcenter.o iddb.o idfitdata.o idgdata.o idinit.o idlabel.o idlinelist.o idmap.o idnewfeature.o idnoextn.o idpeak.o peaks.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/lib/../bin/libirafdb.a
+ranlib ../bin/libirafdb.a
+Updated 17 files in libirafdb.a
+warning: library `libpkg.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil t_gfcube.x t_gfunexwl.x
+t_gfcube.x:
+   t_gfcube:
+   getmap:
+   setdim:
+   calcxydim:
+   getpointenv:
+   getspecwcs:
+   getunit:
+   calcdispoff:
+   recon:
+   fscale:
+   getllim:
+   writecube:
+   printlog:
+t_gfunexwl.x:
+   t_gfunexwl:
+   new_block:
+   parsesec:
+   parseints:
+   setdim2d:
+t_gfcube.f:
+   tgfcue:
+   getmap:
+   setdim:
+   calcxm:
+   getpov:
+   getsps:
+   getunt:
+   calcdf:
+   recon:
+   fscale:
+   getllm:
+   writee:
+   printg:
+t_gfunexwl.f:
+   tgfunl:
+   newblk:
+   parsec:
+   parses:
+   setdid:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gmos/libpkg.a  t_gfcube.o t_gfunexwl.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gmos/libpkg.a
+ranlib libpkg.a
+Updated 2 files in libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil x_gmos.x
+x_gmos.x:
+   sys_runtask:
+x_gmos.f:
+   sysruk:
+xc -Nz -p gemini -p noao -p tables -p fitsutil x_gmos.o libpkg.a -lgemini -ltbtables -lpdainterp -lirafdb -lxtools -lsmw -lgslalib -lgsurfit -lcurfit -liminterp -o xx_gmos.e
+move `xx_gmos.e' to `gembin$x_gmos.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil t_peakhelper.x
+t_peakhelper.x:
+   t_peakhelper:
+   triangles:
+t_peakhelper.f:
+   tpeakr:
+   trians:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gnirs/libpkg.a  t_peakhelper.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gnirs/libpkg.a
+ranlib libpkg.a
+Updated 1 files in libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil x_gnirs.x
+x_gnirs.x:
+   sys_runtask:
+x_gnirs.f:
+   sysruk:
+xc -Nz -p gemini -p noao -p tables -p fitsutil x_gnirs.o libpkg.a  -o xx_gnirs.e
+move `xx_gnirs.e' to `gembin$x_gnirs.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil dicstr.x gargcomma.x imexplode.x imxdelete.x imxhas.x imxset.x keywordlist.x regexreplace.x sscan.x resetscan.x freescan.x scanc.x
+dicstr.x:
+   gt_dicstr:
+gargcomma.x:
+   gt_gargcomma:
+imexplode.x:
+   imx_alloc:
+   imx_copy_string:
+   imx_copy:
+   imx_free:
+   imx_condense:
+   imx_full_file:
+   imx_explod:
+   imx_path_split:
+   imx_parse_params:
+   imx_abrevn:
+   imx_intcat:
+   imx_mef_open:
+   imx_mef_file:
+   imx_imio_open:
+   imx_debug:
+   imx_detail:
+   imx_rdhdr_gn:
+   imx_rdhdr:
+imxdelete.x:
+   imx_d_path:
+   imx_d_file:
+   imx_d_extension:
+   imx_d_clindex:
+   imx_d_extname:
+   imx_d_extver:
+   imx_d_ikparams:
+   imx_d_any_ikparams:
+   imx_d_any_extension:
+   imx_d_section:
+imxhas.x:
+   imx_h_path:
+   imx_h_extension:
+   imx_h_clindex:
+   imx_h_clsize:
+   imx_h_extname:
+   imx_h_extver:
+   imx_h_ikparams:
+   imx_h_any_ikparams:
+   imx_h_any_extension:
+   imx_h_section:
+imxset.x:
+   imx_s_path:
+   imx_s_file:
+   imx_s_extension:
+   imx_s_clindex:
+   imx_s_clsize:
+   imx_s_extname:
+   imx_s_extver:
+   imx_s_ikparams:
+   imx_s_section:
+keywordlist.x:
+   gt_keyword_list:
+regexreplace.x:
+   gt_regex_replace:
+   gt_parse_replace:
+   gt_apply_replace:
+sscan.x:
+   gt_sscan:
+resetscan.x:
+   gt_reset_scan:
+freescan.x:
+   gt_free_scan:
+scanc.x:
+   gt_scanc:
+dicstr.f:
+   gtdicr:
+gargcomma.f:
+   gtgara:
+imexplode.f:
+   imxalc:
+   imxcog:
+   imxcoy:
+   imxfre:
+   imxcoe:
+   imxfue:
+   imxexd:
+   imxpat:
+   imxpas:
+   imxabn:
+   imxint:
+   imxmen:
+   imxmee:
+   imximn:
+   imxdeg:
+   imxdel:
+   imxrdn:
+   imxrdr:
+imxdelete.f:
+   imxdph:
+   imxdfe:
+   imxden:
+   imxdcx:
+   imxdee:
+   imxder:
+   imxdis:
+   imxdas:
+   imxdan:
+   imxdsn:
+imxhas.f:
+   imxhph:
+   imxhen:
+   imxhcx:
+   imxhce:
+   imxhee:
+   imxher:
+   imxhis:
+   imxhas:
+   imxhan:
+   imxhsn:
+imxset.f:
+   imxsph:
+   imxsfe:
+   imxsen:
+   imxscx:
+   imxsce:
+   imxsee:
+   imxser:
+   imxsis:
+   imxssn:
+keywordlist.f:
+   gtkeyt:
+regexreplace.f:
+   gtrege:
+   gtpare:
+   gtappe:
+sscan.f:
+   gtsscn:
+resetscan.f:
+   gtresn:
+freescan.f:
+   gtfren:
+scanc.f:
+   gtscac:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a  dicstr.o gargcomma.o imexplode.o imxdelete.o imxhas.o imxset.o keywordlist.o regexreplace.o sscan.o resetscan.o freescan.o scanc.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil gfload.x gfwcs.x gf.x
+gfload.x:
+   gf_load:
+gfwcs.x:
+   gfwcs_open:
+   gfwcs_out:
+   gfstackwcs_open:
+   gfstack_out:
+   gfwcs_close:
+   gfwcs_pixel:
+   gfwcs_geom:
+   gfw_open:
+   gfw_out:
+   gfwcs_sf:
+   gfwcs_gwtermd:
+gf.x:
+   gf_open:
+   gf_out:
+   gf_close:
+   gf_pixel:
+   gf_geom:
+   gf_define:
+   gf_list:
+gfload.f:
+   gfload:
+gfwcs.f:
+   gfwcsn:
+   gfwcst:
+   gfstan:
+   gfstat:
+   gfwcse:
+   gfwcsl:
+   gfwcsm:
+   gfwopn:
+   gfwout:
+   gfwcsf:
+   gfwcsd:
+gf.f:
+   gfopen:
+   gfout:
+   gfcloe:
+   gfpixl:
+   gfgeom:
+   gfdefe:
+   gflist:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a gfload.o gfwcs.o gf.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil tc1d.x tc2d.x tcweights.x transcube.x t_transcube.x
+tc1d.x:
+   tc_1dnearest:
+   tc_1dwt:
+   tc_1ddriz:
+   tc_1ddp:
+tc2d.x:
+   tc_2dnearest:
+   tc_2dwt:
+   tc_2ddriz:
+   tc_2ddp:
+tcweights.x:
+   tc_weights:
+   tc_free:
+   tc_rectangle:
+   tc_interp:
+transcube.x:
+   transcube:
+   transcube_list:
+t_transcube.x:
+   t_transcube:
+tc1d.f:
+   tc1dnt:
+   tc1dwt:
+   tc1ddz:
+   tc1ddp:
+tc2d.f:
+   tc2dnt:
+   tc2dwt:
+   tc2ddz:
+   tc2ddp:
+tcweights.f:
+   tcweis:
+   tcfree:
+   tcrece:
+   tcintp:
+transcube.f:
+   transe:
+   transt:
+t_transcube.f:
+   ttrane:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a tc1d.o tc2d.o tcweights.o transcube.o t_transcube.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil gemexappend.x gemexchkout.x gemexexpand.x gemexfilter.x gemexomit.x gemexverify.x gemtemplate.x t_gemextn.x
+gemexappend.x:
+   gx_append:
+   gx_append_index:
+   gx_append_name_ver:
+gemexchkout.x:
+   gx_check_and_out:
+gemexexpand.x:
+   gx_expand:
+   gx_range_defined:
+   gx_list_defined:
+gemexfilter.x:
+   gx_filter:
+   gx_in_range:
+   gx_has_match:
+gemexomit.x:
+   gx_omit_comps:
+gemexverify.x:
+   gx_verify:
+   gx_auto_verify:
+   gx_im_verify:
+   gx_test_map:
+   gx_im_absent:
+   gx_im_exists:
+   gx_any_mef:
+   gx_verify_mef:
+   gx_any_write:
+   gx_ex_verify:
+   gx_ex_absent:
+   gx_ex_empty:
+   gx_ex_exists:
+   gx_ex_xtension:
+   gx_read_xtension:
+gemtemplate.x:
+   gemtopen:
+   gemtgetim:
+   gemtclose:
+   gemtrew:
+t_gemextn.x:
+   t_gemextn:
+   gt_log_error:
+   gxn_alloc:
+   gxn_free:
+   gx_open_null:
+   gx_parse_check:
+   gx_check_depends:
+   gx_inconsistent:
+   gx_contains:
+   gx_loop_over_inputs:
+   gx_raise_fail:
+   gx_raise_fail_imx:
+   gx_report_fail:
+gemexappend.f:
+   gxappd:
+   gxappx:
+   gxappr:
+gemexchkout.f:
+   gxchet:
+gemexexpand.f:
+   gxexpd:
+   gxrand:
+   gxlisd:
+gemexfilter.f:
+   gxfilr:
+   gxinre:
+   gxhash:
+gemexomit.f:
+   gxomis:
+gemexverify.f:
+   gxvery:
+   gxauty:
+   gximvy:
+   gxtesp:
+   gximat:
+   gximes:
+   gxanyf:
+   gxverf:
+   gxanye:
+   gxexvy:
+   gxexat:
+   gxexey:
+   gxexes:
+   gxexxn:
+   gxrean:
+gemtemplate.f:
+   gemton:
+   gemtgm:
+   gemtce:
+   gemtrw:
+t_gemextn.f:
+   tgemen:
+   gtlogr:
+   gxnalc:
+   gxnfre:
+   gxopel:
+   gxpark:
+   gxches:
+   gxinct:
+   gxcons:
+   gxloos:
+   gxrail:
+   gxraix:
+   gxrepl:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a gemexappend.o gemexchkout.o gemexexpand.o gemexfilter.o gemexomit.o gemexverify.o gemtemplate.o t_gemextn.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil glclose.x glchk.x glopen.x glprs.x glrblk.x glwrite.x glogparam.x gsplitstr.x gemerrmsg.x glmem.x gloginit.x glogclose.x glogprint.x glogopen.x glogfix.x t_glclose.x t_glextract.x t_glinit.x t_glprint.x t_glfix.x
+glclose.x:
+   gl_close:
+glchk.x:
+   blkchk:
+   lvlchk:
+   taskchk:
+   timechk:
+glopen.x:
+   gl_open:
+glprs.x:
+   prs_blk:
+   prs_time:
+glrblk.x:
+   glr_blk:
+glwrite.x:
+   glw_str:
+   glw_err:
+   glw_file:
+   glw_fork:
+   glw_param:
+   glw_stat:
+   glw_tag:
+   glw_title:
+   glw_vis:
+   glw_warn:
+glogparam.x:
+   glogpstring:
+   glogpi:
+   glogpb:
+   glogpr:
+   glogpc:
+   glogps:
+   glogpl:
+   glogpd:
+   glogpx:
+gsplitstr.x:
+   g_splitstr:
+gemerrmsg.x:
+   gemerrmsg:
+glmem.x:
+   glalloc:
+   glfree:
+   opalloc:
+   opfree:
+   slalloc:
+   slfree:
+gloginit.x:
+   gloginit:
+glogclose.x:
+   glogclose:
+glogprint.x:
+   glogprint:
+glogopen.x:
+   glogopen:
+glogfix.x:
+   glogfix:
+t_glclose.x:
+   t_glclose:
+t_glextract.x:
+   t_glextract:
+   bufcpyc:
+   printlast:
+t_glinit.x:
+   t_glinit:
+t_glprint.x:
+   t_glprint:
+t_glfix.x:
+   t_glfix:
+glclose.f:
+   glcloe:
+glchk.f:
+   blkchk:
+   lvlchk:
+   taskck:
+   timeck:
+glopen.f:
+   glopen:
+glprs.f:
+   prsblk:
+   prstie:
+glrblk.f:
+   glrblk:
+glwrite.f:
+   glwstr:
+   glwerr:
+   glwfie:
+   glwfok:
+   glwpam:
+   glwstt:
+   glwtag:
+   glwtie:
+   glwvis:
+   glwwan:
+glogparam.f:
+   glogpg:
+   glogpi:
+   glogpb:
+   glogpr:
+   glogpc:
+   glogps:
+   glogpl:
+   glogpd:
+   glogpx:
+gsplitstr.f:
+   gsplir:
+gemerrmsg.f:
+   gemerg:
+glmem.f:
+   glallc:
+   glfree:
+   opallc:
+   opfree:
+   slallc:
+   slfree:
+gloginit.f:
+   glogit:
+glogclose.f:
+   glogce:
+glogprint.f:
+   glogpt:
+glogopen.f:
+   glogon:
+glogfix.f:
+   glogfx:
+t_glclose.f:
+   tglcle:
+t_glextract.f:
+   tglext:
+   bufcpc:
+   printt:
+t_glinit.f:
+   tglint:
+t_glprint.f:
+   tglprt:
+t_glfix.f:
+   tglfix:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a glclose.o glchk.o glopen.o glprs.o glrblk.o glwrite.o glogparam.o gsplitstr.o gemerrmsg.o glmem.o gloginit.o glogclose.o glogprint.o glogopen.o glogfix.o t_glclose.o t_glextract.o t_glinit.o t_glprint.o t_glfix.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil t_cnvtsec.x t_gisnumber.x
+t_cnvtsec.x:
+   t_cnvtsec:
+t_gisnumber.x:
+   t_gisnumber:
+t_cnvtsec.f:
+   tcnvtc:
+t_gisnumber.f:
+   tgisnr:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a t_cnvtsec.o t_gisnumber.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil t_ldisplay.x
+t_ldisplay.x:
+   t_ldisplay:
+   initval:
+   addpath:
+   qu2:
+   readdata:
+   displhex:
+   twopick:
+   binvalue:
+   sumrange:
+   fixx:
+   img_setup:
+   hexag:
+   fliphex:
+   pit:
+   swop:
+   closest:
+   drawhex:
+   replot:
+   rt_crfile:
+   getimage:
+   mktitle:
+   usercoord:
+   sshift:
+   id_section:
+   sshift1:
+t_ldisplay.f:
+   tldisy:
+   initvl:
+   addpah:
+   qu2:
+   readda:
+   displx:
+   twopik:
+   binvae:
+   sumrae:
+   fixx:
+   imgsep:
+   hexag:
+   fliphx:
+   pit:
+   swop:
+   closet:
+   drawhx:
+   replot:
+   rtcrfe:
+   getime:
+   mktite:
+   usercd:
+   sshift:
+   idsecn:
+   sshif1:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a t_ldisplay.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/libpkg.a
+warning: library `libgexpr.a' not found
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil gettok.x t_gemexpr.x mimexpr.x mimexpr_sup.x
+gettok.x:
+   gt_expandtext:
+   gt_expand:
+   gt_open:
+   gt_opentext:
+   gt_gettok:
+   gt_ungettok:
+   gt_rawtok:
+   gt_nexttok:
+   gt_close:
+   gt_arglist:
+t_gemexpr.x:
+   t_gemarith:
+   t_gemexpr:
+   w_gemexpr:
+   createDQexpr:
+   sciexpr_process:
+   expr_process:
+   ie_optypes:
+   mkfullopname:
+   allwhite:
+mimexpr.x:
+   t_mimexpr:
+   ie_getop:
+   ie_fcn:
+   ie_getexprdb:
+   ie_puttok:
+mimexpr_sup.x:
+   ie_expandtext:
+   ie_getops:
+   ie_gsym:
+gettok.f:
+   gtexpt:
+   gtexpd:
+   gtopen:
+   gtopet:
+   gtgetk:
+   gtungk:
+   gtrawk:
+   gtnexk:
+   gtcloe:
+   gtargt:
+t_gemexpr.f:
+   tgemah:
+   tgemer:
+   wgemer:
+   creatr:
+   sciexs:
+   exprps:
+   ieopts:
+   mkfule:
+   allwhe:
+mimexpr.f:
+   tmimer:
+   iegetp:
+   iefcn:
+   iegetb:
+   ieputk:
+mimexpr_sup.f:
+   ieexpt:
+   iegets:
+   iegsym:
+libtool -a -T -o /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/pkg/gemexpr/libgexpr.a  gettok.o t_gemexpr.o mimexpr.o mimexpr_sup.o
+ranlib /astro/iraf/osx-64/local/iraf/extern/gemini_v114/gemtools/pkg/gemexpr/libgexpr.a
+ranlib libgexpr.a
+Updated 4 files in libgexpr.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil x_gemexpr.x
+x_gemexpr.x:
+   sys_runtask:
+x_gemexpr.f:
+   sysruk:
+xc -Nz -p gemini -p noao -p tables -p fitsutil x_gemexpr.o libgexpr.a -lmefio ../../libpkg.a   -ldbc -lmef -lgemini -lxtools -o x_gemexpr.e
+move `x_gemexpr.e' to `gembin$x_gemexpr.e'
+Subdirectory gemtools/pkg is up to date
+ranlib libpkg.a
+Updated 51 files in libpkg.a
+xc -c -w -/I/astro/iraf/osx-64/anaconda2_4.2.0/envs/baseline/iraf/include -p gemini -p noao -p tables -p fitsutil x_gemtools.x
+x_gemtools.x:
+   sys_runtask:
+x_gemtools.f:
+   sysruk:
+xc -Nz -p gemini -p noao -p tables -p fitsutil x_gemtools.o libpkg.a -lxtools -lmef -lgemini -lsmw -lgsurfit -liminterp -o xx_gemtools.e
+move `xx_gemtools.e' to `gembin$x_gemtools.e'

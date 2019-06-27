@@ -1,0 +1,88 @@
+#$Header: /home/pros/xray/xproto/doc/RCS/evalvg.hlp,v 11.0 1997/11/06 16:39:02 prosb Exp $ 
+#$Log: evalvg.hlp,v $
+#Revision 11.0  1997/11/06 16:39:02  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:26:52  prosb
+#General Release 2.4
+#
+#Revision 1.1  1994/09/07  17:52:48  janet
+#Initial revision
+#
+#
+.help evalvg July94 xray.xproto
+.ih
+NAME
+evalvg - Calculate EST & SES angles from ephemeris data 
+.ih
+USAGE
+evalvg  root_name otb_name 
+.ih
+DESCRIPTION
+\fIEVALVG\fR computes the earth_satellite_target angle (EST) and the 
+sun_earth_satellite (SES) angle and produces an output table with the
+time history of these two angles.
+
+Both the ephemeris table and the obi table are read to provide information 
+about objects positions and Julian day during the observation.  Only the 
+file root is required as input.  Both file names (_eph.tab,_obi.tab) are 
+derived from the root by the code.   The files must be in the same directory.  
+
+Currently this task runs on RDF data only.  If REV0 data is input, 
+an error message will be displayed on the screen and the task aborted.
+
+The output table contains four columns: sc_time, est_angle, ses_angle, 
+obi_num.
+.ih
+PARAMETERS
+.ls tab_root =""       	prompt = Input table root name (_eph.tab,_obi.tab) 
+
+Required input file root name for the RDF ephemeris table (_eph.tab) 
+and the obi table (obi.tab).  Ephemeris table contains objects positions 
+for all obi's and obi table has Julian day during mission for each obi. 
+.le
+.ls otb_name =""        prompt = output table file name 
+
+Required Output filename. The file is written in table format. The
+name may be specified by supplying the rootname and "_ang.tab" 
+extension will be appended.  For example input "vgtest" becomes
+"vgtest_ang.tab".  Each row in the table represents 1 bin of folded
+data. The column titles and definitions are as follows:
+.nf
+
+	sc_time   ----- start time of the bin in space craft time 
+	est_angle ----- earth_satellite_target angle 
+	ses_angle ----- satellite_earth_sun angle 
+        obi_num   ----- obi number 
+
+.fi
+Table header is also created which is same as obi table.
+.le
+.ls (display = 1) [int]
+
+The display level.  A few of the parameters and computed time
+intervals are displayed to the user for those who like to see that
+things are happening.  Input 0 for no output, 1 for output filename and 5
+for the maximum level.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output table can be overwritten
+if it already exists.
+.le
+.ih
+EXAMPLES
+
+.fi
+1. Read RDF tables and create a file "vgtest_ang.tab" 
+.nf
+
+	xp> evalvg 
+        Input table root name: rh110267n00 
+        output orbit angles table name:  vgtest
+
+	Creating output file: vgtest_ang.tab
+
+.fi
+
+.endhelp

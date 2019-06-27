@@ -1,0 +1,87 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/downspecrdf.hlp,v 11.0 1997/11/06 16:41:15 prosb Exp $
+#$Log: downspecrdf.hlp,v $
+#Revision 11.0  1997/11/06 16:41:15  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:14  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:55  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:52:57  prosb
+#General Release 2.3
+#
+#Revision 1.1  93/12/22  18:09:47  mo
+#Initial revision
+#
+#
+.help downspecrdf Dec93 xray.xspectral
+.ih
+NAME
+downspecrdf -- convert RDF spectral table files to pre-RDF, for XSPEC
+.ih
+USAGE
+downspecrdf fnlist_buffer
+.ih
+DESCRIPTION
+
+\fIdownspecrdf\fR takes a list of root names for RDF spectral table files 
+(_obs.tab, sp###.tab) to convert.  Collecting data from the observed spectra 
+files and any auxiliary files (_soh.tab, _boh.tab, _oah.tab, _bal.tab), it 
+creates a new file, with an extension of _prdf_obs.tab, in a pre-RDF style.  
+The new file is suitable for processing by XSPEC.
+.ih
+PARAMETERS
+
+.ls fnlist_buffer = ""
+		prompt = list of root names for files to convert [root_obs.tab]
+
+The file(s) to convert.  You may list multiple data sets, using commas to 
+separate the names; e.g., "foo1, foo2, foo3".  (Note that the required 
+separator is a comma, not a semicolon; this contrasts with usage in some 
+other tasks in the spectral package.)  You may also specify multiple files by 
+using a pattern instead of a file name; e.g., "*_obs" will select all the 
+files in the current directory whose names end in "_obs.tab" (or in "_obs").  
+You may also direct the program to get the names of files to update from 
+another file, by preceding the name of the list file with '@'; e.g., 
+"@list_file".
+
+Normally the "main" dataset files have an extension of "_obs.tab".  You need 
+not include the extension on any file name that follows this convention.  
+Also, as illustrated above, an ending of "_obs" is sufficient to imply a file 
+whose name ends in "_obs.tab".  (Be careful, though, about implied extensions 
+added to file names generated from patterns; you may not get the file name 
+that you expect.)
+
+\fIdownspecrdf\fR will also recognize file names ending in "_sp###.tab" 
+(where each '#' is a digit) as RDF observed spectra table files, and will 
+correctly seek the corresponding "_oah.tab" files.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not to overwrite an existing _prdf_obs.tab 
+file.
+.le
+.ls (display = 1) [int]
+
+The level of output display.  A value of 0 will generate no display.
+A value of 1 or greater will display header information as well as the
+spectra.
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ih
+TIME REQUIREMENTS
+
+On a SPARCstation 1 with a light load, \fIdownspecrdf\fR may take 
+10-20 seconds to create a _prdf_obs.tab file from an RDF observed spectra 
+file and its auxiliary file(s).
+.ih
+SEE ALSO
+
+pkgpars
+.endhelp

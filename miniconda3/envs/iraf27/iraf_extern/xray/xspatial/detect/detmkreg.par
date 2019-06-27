@@ -1,0 +1,36 @@
+# $Header: /home/pros/xray/xspatial/detect/RCS/detmkreg.par,v 11.0 1997/11/06 16:32:40 prosb Exp $
+# $Log: detmkreg.par,v $
+# Revision 11.0  1997/11/06 16:32:40  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:50:16  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:11:40  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:35:02  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:13:15  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/13  11:43:01  janet
+#jd - added mch_tab parameter to accomodate addition to task.
+#
+#Revision 5.0  92/10/29  21:33:33  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/07  11:54:37  janet
+#detmkreg par file
+#
+#
+#  Parameters for the lpeaks task
+#
+image,s,a,"",,,"Input Reference Image"
+lpeaks_tab,s,a,"",,,"Input lpeaks table [root_ruf.tab]"
+bepos_tab,s,a,"",,,"Input bepos table [root_(pos|unq).tab]"
+mch_tab,s,a,"",,,"Input lmatch table [root_mch.tab]"
+reg_file,s,a,"",,,"Output Ascii Region File [root.reg]"
+display,i,h,1,,,"Display Level"
+clobber,b,h,n,,,"OK to Clobber exisiting output file?"

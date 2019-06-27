@@ -1,0 +1,152 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/upspecrdf.hlp,v 11.0 1997/11/06 16:41:29 prosb Exp $
+#$Log: upspecrdf.hlp,v $
+#Revision 11.0  1997/11/06 16:41:29  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:41  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:29:34  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/17  18:47:50  wendy
+#Pre-Release check-in.
+#
+#Revision 7.0  93/12/27  18:53:31  prosb
+#General Release 2.3
+#
+#Revision 1.1  93/12/22  18:09:58  mo
+#Initial revision
+#
+#
+.help upspecrdf Jun94 xray.xspectral
+.ih
+NAME
+upspecrdf -- upgrade pre-RDF observed spectra files to RDF
+.ih
+USAGE
+upspecrdf fnlist_buffer
+.ih
+DESCRIPTION
+
+\fIupspecrdf\fR takes a list of root names for pre-RDF observed spectra 
+files to update, and updates each one in place, also creating auxiliary files 
+as needed.  Auxiliary files will contain source and background offaxis 
+histograms, or a BAL histogram.
+.ih
+PARAMETERS
+
+.ls fnlist_buffer = ""
+		prompt = list of root names for files to update [root_obs.tab]
+
+The file(s) to reformat.  You may list multiple data sets, using commas to 
+separate the names; e.g., "foo1, foo2, foo3".  (Note that the required 
+separator is a comma, not a semicolon; this contrasts with usage in some 
+other tasks in the spectral package.)  You may also specify multiple files by 
+using a pattern instead of a file name; e.g., "*_obs" will select all the 
+files in the current directory whose names end in "_obs.tab" (or in "_obs").  
+You may also direct the program to get the names of files to update from 
+another file, by preceding the name of the list file with '@'; e.g., 
+"@list_file".
+
+Normally the dataset files have an extension of "_obs.tab".  You need not 
+include the extension on any file name that follows this convention.  Also, 
+as illustrated above, an ending of "_obs" is sufficient to imply a file 
+whose name ends in "_obs.tab".  (Be careful, though, about implied extensions 
+added to file names generated from patterns; you may not get the file name 
+that you expect.)
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not to overwrite any auxiliary files, if 
+they already exist.  Remember that the original observed spectrum ("_obs.tab" 
+or equivalent) file will be overwritten, even if clobber is no.
+.le
+.ls (display = 1) [int]
+
+The level of output display.  A value of 0 will generate no display.
+A value of 1 or greater will display header information as well as the
+spectra.
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ih
+FULL DESCRIPTION
+
+Observed spectra files are produced by qpspec and are read by fit and by other 
+modeling programs.  With RDF, the organization and labeling of some of the 
+data have changed.  \fIupspecrdf\fR converts old-format observed spectra files 
+to RDF.  These are the changes to each observed spectra file:
+.nf
+
+	- The names of some columns in the observed spectra file 
+	  change:
+
+		old names	new names
+		---------	---------
+		lo_energy	e_lo
+		hi_energy	e_hi
+		source		cts_tot
+		bkgd		ccts_bkg
+		net		net
+		neterr		neterr
+
+	- Two header parameters have new names:
+
+		old names	new names
+		---------	---------
+		LIVECORR	DTCOR
+		SEQNO		OBS_ID
+
+	- There are many new header parameters.  Two of them, 
+	  REVISION and FORMAT, are new with RDF.  Files output by 
+	  upspecrdf will have REVISION equal to 0, meaning that the 
+	  originating FITS file was pre-RDF; and FORMAT will be 
+	  equal to 1, meaning that this file is in RDF.  The other 
+	  new header parameters are old standard ones for QPOE files, 
+	  but ones that qpspec didn't put out in the past.  (Because 
+	  a file input to upspecrdf doesn't have these parameters, 
+	  most of their values will be zero (meaningless) in the 
+	  resultant files.  An exception is XS-INPXX, which will 
+	  show the correct scaling from degrees to instrument 
+	  pixels.)
+
+	- Offaxis histograms are put into separate 2-column table 
+	  files, one file each for source and background offaxis 
+	  histograms.  Their extensions are "_soh.tab" and "_boh.tab", 
+	  respectively.  The first column of each file, labeled 
+	  "off_ax_rad", contains the inner radii, in arcminutes, of 
+	  annuli centered on the optical axis.  The second column, 
+	  labeled "frac_time", contains the fractions of events 
+	  falling in the several annuli.  Each offaxis histogram 
+	  file is produced even if there are no offaxis histogram 
+	  data available for it; in that case the table will be 
+	  empty, but the file will have a complete header.  The 
+	  offaxis histogram files have the same header parameters as 
+	  the upgraded observed spectra file (except that they have 
+	  a few extra (meaningless) COMMENT lines at the end).  The 
+	  old offaxis histogram header paramaters are removed from 
+	  the observed spectra file.
+
+	- For Einstein IPC data, the BAL histogram is in a separate 
+	  2-column table file, instead of in header parameters of 
+	  the observed spectra file.  The header of the BAL histogram 
+	  file contains everything that is in the header of the 
+	  observed spectra file, plus some additional parameters 
+	  that summarize the histogram.  Those additional parameters 
+	  are the BAL-specific ones that in the past have been in 
+	  the observed spectra file header.
+.fi
+.ih
+TIME REQUIREMENTS
+
+On a SPARCstation 1 with a light load, \fIupspecrdf\fR may take about 
+20 seconds to upgrade a file and make its auxiliary files.
+.ih
+SEE ALSO
+
+pkgpars
+.endhelp

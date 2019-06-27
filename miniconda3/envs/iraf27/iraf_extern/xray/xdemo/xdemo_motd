@@ -1,0 +1,19 @@
+	 []----------------------------------------------------[]
+         []         Welcome to the xray- package demos         []
+         []             (October 97   Version 2.5)             []
+	 []----------------------------------------------------[]
+
+    The 3 demos spectraldemo, timingdemo and spatialdemo  will
+          run on workstations supporting multiplane image display.
+              YOU MUST HAVE AN IMAGE DISPLAY WINDOW OPEN
+		( e.g.  IMTOOL or SAOIMAGE )
+
+     The 2 demos gtiming and gspectral will run on terminals only
+             supporting line graphics.
+
+     All 5 demos require that you have the `tables' package added
+                       to your IRAF installation.
+
+    Type 'bye' to exit this package.  The following commands are defined:
+    --------------------------------  -----------------------------------
+

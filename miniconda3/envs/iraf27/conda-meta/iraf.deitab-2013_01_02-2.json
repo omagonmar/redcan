@@ -1,0 +1,341 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR",
+    "iraf.tables"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.deitab-2013_01_02-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.deitab-post-link.sh",
+    "bin/.iraf.deitab-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/deitab/README",
+    "iraf_extern/deitab/bin",
+    "iraf_extern/deitab/bin.linux/x_deitab.e",
+    "iraf_extern/deitab/build_log",
+    "iraf_extern/deitab/conda_build.sh",
+    "iraf_extern/deitab/deitab.cl",
+    "iraf_extern/deitab/deitab.hd",
+    "iraf_extern/deitab/deitab.men",
+    "iraf_extern/deitab/deitab.par",
+    "iraf_extern/deitab/doc/installation.hlp",
+    "iraf_extern/deitab/doc/txndimage.hlp",
+    "iraf_extern/deitab/help_log",
+    "iraf_extern/deitab/lib/_package.hd",
+    "iraf_extern/deitab/lib/apropos.db",
+    "iraf_extern/deitab/lib/helpdb.mip",
+    "iraf_extern/deitab/lib/mkpkg.inc",
+    "iraf_extern/deitab/lib/root.hd",
+    "iraf_extern/deitab/lib/rootpackage.hd",
+    "iraf_extern/deitab/lib/strip",
+    "iraf_extern/deitab/lib/zzsetenv.def",
+    "iraf_extern/deitab/mkpkg",
+    "iraf_extern/deitab/src/Revisions",
+    "iraf_extern/deitab/src/dcdeimos.cl",
+    "iraf_extern/deitab/src/libpkg.a",
+    "iraf_extern/deitab/src/mkpkg",
+    "iraf_extern/deitab/src/t_txndimage.x",
+    "iraf_extern/deitab/src/txdeimos.cl",
+    "iraf_extern/deitab/src/txndimage.par",
+    "iraf_extern/deitab/src/whatfile.h",
+    "iraf_extern/deitab/src/x_deitab.o",
+    "iraf_extern/deitab/src/x_deitab.x",
+    "iraf_extern/deitab/ur_extern.pkg",
+    "iraf_extern/deitab/ur_mkpkg_patterns"
+  ],
+  "fn": "iraf.deitab-2013_01_02-2.tar.bz2",
+  "license": "IRAF MIT/X11 variant",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.deitab-2013_01_02-2",
+    "type": 1
+  },
+  "md5": "e79ca0f6319fd46ff4a34fc7d6852ab2",
+  "name": "iraf.deitab",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.deitab-2013_01_02-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.deitab-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "ca93783792ca37e4bf83822bb35e77a96802b2d1ace46f30fe4db5357211e487",
+        "sha256_in_prefix": "ca93783792ca37e4bf83822bb35e77a96802b2d1ace46f30fe4db5357211e487",
+        "size_in_bytes": 114
+      },
+      {
+        "_path": "bin/.iraf.deitab-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "99975506df1a7c8641270bfdf57f8f5fcb7063dff3cc8873b668cb49e000e334",
+        "sha256_in_prefix": "99975506df1a7c8641270bfdf57f8f5fcb7063dff3cc8873b668cb49e000e334",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "cdd02c4e98667c61ac04c5903b9b3b480675afb1f8ad61da19ecf644ee35f679",
+        "sha256_in_prefix": "cdd02c4e98667c61ac04c5903b9b3b480675afb1f8ad61da19ecf644ee35f679",
+        "size_in_bytes": 2348
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "2c46fdf8e889a99965bd101b5d40178ebcf43a5c5ea8872226e87107079750e9",
+        "sha256_in_prefix": "2c46fdf8e889a99965bd101b5d40178ebcf43a5c5ea8872226e87107079750e9",
+        "size_in_bytes": 8285
+      },
+      {
+        "_path": "iraf_extern/deitab/README",
+        "path_type": "hardlink",
+        "sha256": "8f1fd3c208d789785b21c60647422298733110375b0db37e9b909f9450735023",
+        "sha256_in_prefix": "8f1fd3c208d789785b21c60647422298733110375b0db37e9b909f9450735023",
+        "size_in_bytes": 7890
+      },
+      {
+        "_path": "iraf_extern/deitab/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/deitab/bin.linux/x_deitab.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.deitab_1553890849668/_h_env_pl",
+        "sha256": "ee489ee2ae2a5e4e82c165245155cec97837a5d33163d291a1946cf31f162a6e",
+        "sha256_in_prefix": "a19e4eef324f523d388d6c45da95a40b5857b83530e9720ce54e3bf1da833021",
+        "size_in_bytes": 6577938
+      },
+      {
+        "_path": "iraf_extern/deitab/build_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "da5171c52162a21d5b21a38299e8d3744dc50fc3566f0bdc1c32d9fcff76cc26",
+        "sha256_in_prefix": "82d09a6e091d9c9a53a9736fb5742a91f6212ab3cfa665b2151d5aa50a68627e",
+        "size_in_bytes": 740
+      },
+      {
+        "_path": "iraf_extern/deitab/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "7b0e7d032d8392e44783f796ac34b3aa4fb9f415578f0492c024076eba53963a",
+        "sha256_in_prefix": "58e3f63709b23155ec83cfbc253ae604675322a2349546e76bbff90bdfdf601e",
+        "size_in_bytes": 2400
+      },
+      {
+        "_path": "iraf_extern/deitab/deitab.cl",
+        "path_type": "hardlink",
+        "sha256": "0fca4b73921d66eac677e7aa82608d4621a8fd0c10b61e7dc3d2ba50ad77eeff",
+        "sha256_in_prefix": "0fca4b73921d66eac677e7aa82608d4621a8fd0c10b61e7dc3d2ba50ad77eeff",
+        "size_in_bytes": 298
+      },
+      {
+        "_path": "iraf_extern/deitab/deitab.hd",
+        "path_type": "hardlink",
+        "sha256": "b3a27c51eb1b258a16a5d4000b9a355faf6209f1a5a2e8e49d9e52a20a518ad9",
+        "sha256_in_prefix": "b3a27c51eb1b258a16a5d4000b9a355faf6209f1a5a2e8e49d9e52a20a518ad9",
+        "size_in_bytes": 140
+      },
+      {
+        "_path": "iraf_extern/deitab/deitab.men",
+        "path_type": "hardlink",
+        "sha256": "c1904fabc3f2b61cafdf148613b13f775664773f4be17abcfc763f8a737d1e2a",
+        "sha256_in_prefix": "c1904fabc3f2b61cafdf148613b13f775664773f4be17abcfc763f8a737d1e2a",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "iraf_extern/deitab/deitab.par",
+        "path_type": "hardlink",
+        "sha256": "a70bb6f6074c37b14787a2a682532c8c44a5457cc49b9382791a5c4c30272187",
+        "sha256_in_prefix": "a70bb6f6074c37b14787a2a682532c8c44a5457cc49b9382791a5c4c30272187",
+        "size_in_bytes": 389
+      },
+      {
+        "_path": "iraf_extern/deitab/doc/installation.hlp",
+        "path_type": "hardlink",
+        "sha256": "d21e449443ce537648e1a1b7dc24304572fb3582601d19b58bccdada1b9bd338",
+        "sha256_in_prefix": "d21e449443ce537648e1a1b7dc24304572fb3582601d19b58bccdada1b9bd338",
+        "size_in_bytes": 7157
+      },
+      {
+        "_path": "iraf_extern/deitab/doc/txndimage.hlp",
+        "path_type": "hardlink",
+        "sha256": "cc165354080fc314112fc4cdf8a4c81b297f9f8df3da43b2d5fda2f662766aa6",
+        "sha256_in_prefix": "cc165354080fc314112fc4cdf8a4c81b297f9f8df3da43b2d5fda2f662766aa6",
+        "size_in_bytes": 4039
+      },
+      {
+        "_path": "iraf_extern/deitab/help_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "cf30fe2c5df15a3126f5ca50d0acfcc15d774673201fce8ac6bcae09ac0ab484",
+        "sha256_in_prefix": "141adb250a2a7e11b6feadf527fc3d127aa1048855b4499454f87f4569dba062",
+        "size_in_bytes": 944
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/_package.hd",
+        "path_type": "hardlink",
+        "sha256": "d3f4c58f1e312505b2301384223d2aa095f608b30fc736ce5c4cf295fd50b0de",
+        "sha256_in_prefix": "d3f4c58f1e312505b2301384223d2aa095f608b30fc736ce5c4cf295fd50b0de",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/apropos.db",
+        "path_type": "hardlink",
+        "sha256": "392adb7d561ec6c07c967a725d0efb0dee8df36fbc428b585a83ff8b77914371",
+        "sha256_in_prefix": "392adb7d561ec6c07c967a725d0efb0dee8df36fbc428b585a83ff8b77914371",
+        "size_in_bytes": 235
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/helpdb.mip",
+        "path_type": "hardlink",
+        "sha256": "3a1ce9ced9c43e73765f912e920344144e1c1c12276c6d7500a041367761a5b2",
+        "sha256_in_prefix": "3a1ce9ced9c43e73765f912e920344144e1c1c12276c6d7500a041367761a5b2",
+        "size_in_bytes": 2892
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "f8f702ae088508815de658f01b32ba35b9a331491a4881947f347dd41006ea0e",
+        "sha256_in_prefix": "f8f702ae088508815de658f01b32ba35b9a331491a4881947f347dd41006ea0e",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/root.hd",
+        "path_type": "hardlink",
+        "sha256": "9049c6f75b2714e33b7de97e287955955232ecf2075844b68a7fd145e5c554af",
+        "sha256_in_prefix": "9049c6f75b2714e33b7de97e287955955232ecf2075844b68a7fd145e5c554af",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/rootpackage.hd",
+        "path_type": "hardlink",
+        "sha256": "859e48ddeb4b1f79fead211e89f3641eaa4416fc7095fb71f10eda8db360e5ae",
+        "sha256_in_prefix": "859e48ddeb4b1f79fead211e89f3641eaa4416fc7095fb71f10eda8db360e5ae",
+        "size_in_bytes": 260
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/strip",
+        "path_type": "hardlink",
+        "sha256": "88c3fdbda86fbf20414c51a3fb4a0c05c0386d974aafa66183a6e1d2936992cb",
+        "sha256_in_prefix": "88c3fdbda86fbf20414c51a3fb4a0c05c0386d974aafa66183a6e1d2936992cb",
+        "size_in_bytes": 182
+      },
+      {
+        "_path": "iraf_extern/deitab/lib/zzsetenv.def",
+        "path_type": "hardlink",
+        "sha256": "240736caf9f4e533cd8fd16153e04286dda6ea4f41398ecf7fb69b0e32b5ae31",
+        "sha256_in_prefix": "240736caf9f4e533cd8fd16153e04286dda6ea4f41398ecf7fb69b0e32b5ae31",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "iraf_extern/deitab/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "01479432b288bd00fdd1cd263972bc9233a501a3cdc0dc143d27d5ea74c56956",
+        "sha256_in_prefix": "01479432b288bd00fdd1cd263972bc9233a501a3cdc0dc143d27d5ea74c56956",
+        "size_in_bytes": 6881
+      },
+      {
+        "_path": "iraf_extern/deitab/src/Revisions",
+        "path_type": "hardlink",
+        "sha256": "1ef57424feb7e46c39240bbe6764a512abe58b188b2898c5812bca0b301adad8",
+        "sha256_in_prefix": "1ef57424feb7e46c39240bbe6764a512abe58b188b2898c5812bca0b301adad8",
+        "size_in_bytes": 603
+      },
+      {
+        "_path": "iraf_extern/deitab/src/dcdeimos.cl",
+        "path_type": "hardlink",
+        "sha256": "a4ad7c776abec477193432566cb3974ac96ae94560c12ec2c0c189f9c28f1bd8",
+        "sha256_in_prefix": "a4ad7c776abec477193432566cb3974ac96ae94560c12ec2c0c189f9c28f1bd8",
+        "size_in_bytes": 1948
+      },
+      {
+        "_path": "iraf_extern/deitab/src/libpkg.a",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.deitab_1553890849668/_h_env_pl",
+        "sha256": "49e262f577f3d997019d53721baeadefdd6787f12aa2a206dee66852e075ae29",
+        "sha256_in_prefix": "a6139355f56c7f79a28f0b063cac8e3d888377159343767e8a7eb1aa9f8f1f45",
+        "size_in_bytes": 32484
+      },
+      {
+        "_path": "iraf_extern/deitab/src/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "17895c811545e61b671b85f54c262929c0599dc6befca699966d6ab9690d1816",
+        "sha256_in_prefix": "17895c811545e61b671b85f54c262929c0599dc6befca699966d6ab9690d1816",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "iraf_extern/deitab/src/t_txndimage.x",
+        "path_type": "hardlink",
+        "sha256": "ff4df3e42992f6094e49d39347d9367247e8d238565863f3404905d514e07e7e",
+        "sha256_in_prefix": "ff4df3e42992f6094e49d39347d9367247e8d238565863f3404905d514e07e7e",
+        "size_in_bytes": 12836
+      },
+      {
+        "_path": "iraf_extern/deitab/src/txdeimos.cl",
+        "path_type": "hardlink",
+        "sha256": "376feb16bfe7748455aacfb74c56a2a2464f5243d220ae48a878c0cf23eb3068",
+        "sha256_in_prefix": "376feb16bfe7748455aacfb74c56a2a2464f5243d220ae48a878c0cf23eb3068",
+        "size_in_bytes": 1829
+      },
+      {
+        "_path": "iraf_extern/deitab/src/txndimage.par",
+        "path_type": "hardlink",
+        "sha256": "18140531f6430bfb467d0af6a6cb9947dc16f76713d2c01000d2a72c8086af07",
+        "sha256_in_prefix": "18140531f6430bfb467d0af6a6cb9947dc16f76713d2c01000d2a72c8086af07",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "iraf_extern/deitab/src/whatfile.h",
+        "path_type": "hardlink",
+        "sha256": "ff471800cbb2e494a68bdd2376ab5effbc05b81fd44f29f709e994bb7654ddee",
+        "sha256_in_prefix": "ff471800cbb2e494a68bdd2376ab5effbc05b81fd44f29f709e994bb7654ddee",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "iraf_extern/deitab/src/x_deitab.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.deitab_1553890849668/_h_env_pl",
+        "sha256": "0c3c8496c4e5971c569ef59baa5a0e5bc250838196e248e86b5db5dadfa401b8",
+        "sha256_in_prefix": "ac9dc8043e2a825a04286c82ac987de250c64ca5d5b9607b206dd201b557e250",
+        "size_in_bytes": 8004
+      },
+      {
+        "_path": "iraf_extern/deitab/src/x_deitab.x",
+        "path_type": "hardlink",
+        "sha256": "1afb0e6c4af8eb282e93858e2c8650aa98799074bf4539ccf9576feac4345ae0",
+        "sha256_in_prefix": "1afb0e6c4af8eb282e93858e2c8650aa98799074bf4539ccf9576feac4345ae0",
+        "size_in_bytes": 29
+      },
+      {
+        "_path": "iraf_extern/deitab/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "00417f490b42ee9f83ef654b7681e7d9a8435f2115f54b4c0f0aec872719d48a",
+        "sha256_in_prefix": "00417f490b42ee9f83ef654b7681e7d9a8435f2115f54b4c0f0aec872719d48a",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "iraf_extern/deitab/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 2158439,
+  "subdir": "linux-64",
+  "timestamp": 1553890963263,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.deitab-2013_01_02-2.tar.bz2",
+  "version": "2013_01_02"
+}

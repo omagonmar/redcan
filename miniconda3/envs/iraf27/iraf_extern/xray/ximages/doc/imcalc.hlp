@@ -1,0 +1,565 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/imcalc.hlp,v 11.0 1997/11/06 16:25:46 prosb Exp $
+#$Log: imcalc.hlp,v $
+#Revision 11.0  1997/11/06 16:25:46  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:07  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:42:58  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/08  11:26:55  prosb
+#Brought help file up to date.
+#
+#Revision 7.0  93/12/27  18:22:52  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:04:35  prosb
+#General Release 2.2
+#
+#Revision 5.3  93/05/07  10:17:38  mo
+#MC	5/8/93		Make the QUOTES for filenames starting with
+#			DIGITS obvious at beginning of file.
+#
+#Revision 5.2  93/01/22  10:32:38  mo
+#MC	1/22/92		Removed resriction that only 'imh' files can be output.
+#
+#Revision 5.1  92/12/01  11:12:54  prosb
+#minor editing
+#
+#Revision 5.0  92/10/29  21:23:37  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:15:31  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  91/11/25  15:06:32  mo
+#MC	11/25/91	Updated for new package structure
+#
+#Revision 3.0  91/08/02  01:15:57  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/07/17  17:09:40  mo
+#Initial revision
+#
+#Revision 2.1  91/05/08  09:09:29  pros
+#added paragraph explaining that output images containing "."
+#in their file name must explicitly specify ".imh" as an extension
+#to avoid misinterpretation of the file name as an unknown image type.
+#
+#Revision 2.0  91/03/06  23:34:29  pros
+#General Release 1.0
+#
+.help imcalc Jun94 xray.ximages
+.ih
+NAME
+imcalc -- image calculator
+.ih
+USAGE
+imcalc input
+.ih
+DESCRIPTION
+The Imcalc image calculator provides the basic functionality of an
+image calculator without trying to solve the harder problems, e.g.,
+simple arithmetic functions like addition, multiplication, etc.  Very
+large image lines, built in transpose capability, user supplied
+functions, bad pixels, consolidation of image headers, option to
+operate in world coordinates, and so on, are not handled by imcalc.
+.ih
+PARAMETERS
+.ls input = ""	prompt = input file ('-' for STDIN) or imcalc commands
+
+The input parameter controls the command mode into which imcalc is
+placed.  Several options can be entered as values for the input
+parameter. If an imcalc expression is input (e.g., "foo = foo1 / foo2
++ 100"), the image calculator will execute that expression and then
+exit.  The input string should be enclosed in quotes if placed on the
+command line.  A file containing one or more imcalc expressions can
+also be input, in which case these expressions are executed and the
+image calculator is exited.  Finally, if the symbol "-" is given, the
+image calculator enters interactive mode, taking input from STDIN
+(normally the keyboard), until "bye", "quit", or "exit" is entered.
+.le
+.ls (clobber = no) [boolean]
+
+This boolean flag tells whether output images can overwrite existing images,
+in the case where images (but not image sections) are specified as output.
+If set to "yes", output images will silently overwrite existing images,
+otherwise an error is generated.  The flag has no effect when image sections
+are specified as output.  In that case, the image must exist.
+.le
+.ls (zero = 0.) [real]
+
+The value to use in place of a divide by 0.  This same value will also
+be used in place of the square root of a non-positive number, and in place
+of the log of a non-positive number.
+.le
+.ls (debug = 0) [int]
+
+Debugging information is normally used only by the developers. For users,
+the debug level is normally set to 0, and no debugging output is provided.
+Setting the debug level to 1 will print out the op codes of the compiled
+meta-code as well as some timing information.  Higher levels of debug printout
+are output for higher values of the debug variable.  At a debug level >= 10,
+xyacc debugging information is printed out.  This is the highest level of
+output available.
+
+.ih
+FULL DESCRIPTION
+.ih
+Imcalc Statements 
+
+Input to the image calculator consists of a sequence of one or more
+statements which are parsed and executed by the calculator. Statements
+are case sensitive and may be separated by a new-line or by a
+semi-colon.  Spaces are ignored.  The "#" character is the comment
+character; the rest of a line (up to a new-line or semi-colon) after
+this character is ignored.
+
+Two types of statements are supported: the print statement and the
+assignment statement. The first statement displays values, while the
+second statement creates a new image or edits an old image.  Both
+statements evaluate expressions consisting of any combination of
+arithmetic or boolean operations, or function calls.  Operands can be
+images or image sections of data types \fBshort\fR, \fBint\fR,
+\fBlong\fR, \fBreal\fR, \fBdouble\fR, or \fBcomplex\fR, or numeric
+constants (real or integer).  Expressions may be of mixed data type,
+in which case automatic type coercion is performed. However, operands
+of bitwise logical operators are always coerced to long if the data
+type of the operand is real, double, or complex.
+.ih
+Image Operands
+
+The output image file (on the left-hand side of an expression) must be
+an IRAF image file (except type QPOE).  If no image extension is present, 
+".imh" is assumed as the default.  Note that this means that output file 
+names containing a "." character as part of the root must specify the IMAGE 
+extension desired, e.g. .imh, .hhh, .pl.  Otherwise, imcalc will detect an 
+unknown "extension" (i.e., the last part of the file name) and will signal 
+an error.
+
+At least one image file must be given on the right-hand side of any
+imcalc expression. The image file names should be placed in quotes if
+the file name contains characters such as "/", "+", "-", etc.  Also, file
+specifications that BEGIN with a path must be enclosed in quotes.  This is
+because the imcalc parser, being a spaceless parser, will interpret
+the '/' seperator as a division.  For example:
+.nf
+
+	foo = dir/test1 + dir/test2
+
+.fi
+will be interpreted as two divisions and an addition, rather than one
+addition.  The spaces are ignored so that the lack of spaces (as in
+"dir/test1") does not indicate a file. This expression should be
+entered as:
+.nf
+
+	foo = "dir/test1" + "dir/test2"
+
+.fi
+For similar reasons, quotes must be placed around file names that begin
+with digits.
+
+If two or more image operands are in an expression, then for each
+dimension in one image, the length of the dimension of the other must
+be the same or 1.  Images with different number of dimensions allowed
+because the image with the smaller number of dimensions acts as if it
+had extra dimensions of length 1.  However, images with different
+length dimensions cannot be operated on in the same expression.  The
+image sub-section specification should be used to coerce the lengths
+to be the same.
+
+If a vector (i.e., an image with length 1 in one or more of its
+dimensions) and an image are used in an expression, the vector is
+rewound to beginning of the file when its EOF is reached.  This means
+that vectors will operate repeatedly on arrays.  If an M x 1 vector A
+is added to an M x N array B, the vector will be added to each of the
+n lines of the array.  Similarly, if an M x N "vector" is combined in
+an expression with an M x N x P array, the operation happens M times
+per line for N lines, and this repeats P times. For example, if a 10 x
+10 array is multiplied by a 1 x 10 vector, each pixel in line i of the
+2-D array is multiplied by the i'th value of the 1-D array.  If a 10 x
+10 array is divided by a 10 x 1 vector, each line of the 2-D array is
+divided by the 1-D vector (i.e., the i'th pixel in each line of the
+2-D array is divided by the i'th pixel in the line).  This rule holds
+true for arrays and vectors of dimension greater than two.  For
+example, if a 1024 x 512 vector A is multiplied by a 1024 x 512 x 16
+array B, the multiplication will be over 512 lines of B (and over the
+1024 pixels in each line), and then A will be rewound, and the
+multiplication repeats over the second 512 lines.  This will happen 16
+times.
+
+Another way of looking at this same situation is to say that if two
+images are in an expression and the length of one or more of one of
+the image's dimensions is 1, the values of that image are conceptually
+extended to fill the "compressed" dimension.  For example, if an M x N
+array is being added to a 1 x N vector with values (v(1), v(2), ...
+v(i) ... v(N)), the vector is effectively turned into an M x N array
+such that, for a given line i, the value of each pixel in that line is
+v(i). In the above example, each pixel in line i of the M x N array is
+added to v(i) from the 1 x N vector. Note also that higher dimensional
+"vectors" are extended: a 1024 x 512 x 16 image operand can be put in
+an expression with a 1024 x 512 "vector" operand, for example.  Each
+pixel (i,j,k) in a line of the 3-D image will operate on the (i,j)
+pixel of the 2-D image.
+.ih
+The Print Statement
+
+The value of any expression can be displayed with the print statement:
+.nf
+
+	 print <expression>
+
+.fi
+If the expression is a constant, a single value is displayed.
+The image calculator acts like a regular calculator in this case.
+If the expression involves image data, the expression is evaluated and
+displayed for each line.  Printing an image data expression is usually
+done only for debugging purposes.
+.ih
+Assignment Statements
+
+The assignment statement has the form:
+.nf
+
+	<image> = <expression>
+
+.fi
+The left hand side of an assignment statement may be either the name of a
+new image to be written, or a section of an existing image.  In the case of
+a new image, the data type of the image is the same as that of
+the expression on the right-hand side of the assignment statement.  In the
+case of an image section, the right-hand side expression is coerced to the
+data type of the already existing image on the left.
+
+The right hand side of an assignment statement can be any expression, but
+must involve at least one image (so that the dimensions of the output image
+can be determined).  To create an empty image the same size as another image,
+the \fIzero\fR function can be used.
+
+The header parameters from the first non-vector image on the right hand
+side of the expression are copied to the output image.  Thus, in the
+expression:
+.nf
+
+		im = v * (im1 + 1m2)
+
+.fi
+where im, im1, and im2 are 2-D images and v is a 1-D vector, the header
+parameters from im1 are copied into im.  In addition, the history parameter
+is updated with the imcalc command.  In the case mentioned above, the
+history record will be:
+.nf
+
+		imcalc: im = v * im1 + 1m2
+
+.fi
+Note that the previous history is overwritten.
+.ih
+Operators
+
+The usual arithmetic, logical, and bitwise logical operators are
+provided, as well the conditional expression operator '?', used to
+express operations that are conditional upon the value of individual
+pixels.  In particular, the following operators are supported (in
+order of decreasing precedence):
+.nf
+
+	Operator				Associativity
+
+	()					left to right
+	!! (logical not)			right to left
+	! (bitwise not) - (unary minus)		right to left
+	** (raise to power)			left to right
+	*  /					left to right
+	+  -					left to right
+	<  <=  >  >=				left to right
+	== !=					left to right
+	&  (bitwise and)			left to right
+	^  (bitwise exclusive or)		left to right
+	|  (bitwise inclusive or)		left to right
+	&& (logical and)			left to right
+	|| (logical or)				left to right
+	?: (C-style conditional)		right to left
+	=					right to left
+
+.fi
+The "?:" operator requires some explanation.  The syntax for this
+operator follows that of the C-style conditional expression:
+.nf
+
+	e1 ? e2 : e3
+
+.fi
+where e1, e2, and e3 are all image expressions.  The e1 expression is
+evaluated first.  If e1 is true (non-zero) for a given pixel in an image
+line, then e2 is evaluated for that pixel.  Otherwise e3 is evaluated.
+Thus this is a shorthand way of providing an "if-else" clause of the form:
+.nf
+
+	if( e1 )
+	    e2
+	else
+	    e3
+
+For example, the expression:
+
+	foo = foo1 < 0 ? 0 : foo1
+
+.fi
+means that each pixel in the output file foo will contain either a 0
+(if the input file foo1 was negative) or else it will contain the value of
+foo1 itself.
+
+This operator can be used to avoid divide by 0 errors in imcalc.  For
+example:
+.nf
+
+	foo = foo1 / (foo2==0.0) ? 10.0E38 : foo2
+
+.fi
+means that the value of each output pixel in foo is either foo1/foo2 or else,
+if the denominator foo2 is 0, a very large number.
+.ih
+Intrinsic Functions
+
+A range of conventional Fortran style intrinsic functions are
+provided, applicable to either scalars or vectors.  These functions
+take a scalar or vector as input and return a scalar or vector result.
+All functions are generic (i.e.  can take any silrdx data type),
+except \fIconjg\fR, \fIaimag\fR, and \fIareal\fR, which operate only
+on complex data.  In addition, the \fItrig\fR, \fIlog\fR, \fIlog10\fR,
+and \fIsqrt\fR functions convert complex data types to double before
+performing the operation.
+
+Input to the trigonometric functions is in radians.  The \fIatan\fR
+function accepts either one or two arguments.  The \fImin\fR and
+\fImax\fR functions accept any number of arguments; scalar and vector
+arguments may be mixed in the same call.
+
+The following functions are supported:
+.nf
+
+	Function   Description
+
+	abs	   absolute value
+	acos	   arc cos (output in radians)
+	aimag	   imaginary part of a complex number (complex only)
+	areal	   real part of a complex number (complex only)
+	asin	   arc sin (output in radians)
+	atan	   arc tangent (output in radians, one or two args)
+	complex	   change data type to complex
+	conjg	   conjugate of a complex number (complex only)
+	cos	   cosine (input in radians)
+	double	   change data type to double real
+	exp	   exponential (e**x)
+	int	   change data type to int
+	log	   natural log
+	log10	   log base 10
+	max	   maximum (variable number of arguments)
+	min	   minimum (variable number of arguments)
+	mod	   modulus
+	nint	   nearest integer
+	real	   change data type to real
+	sin	   sine (input in radians)
+	sqrt	   square root
+	tan	   tangent (input in radians)
+	zero	   zero a line of data
+
+.fi
+.ih
+Projections
+
+A number of special projection functions are provided.  These
+projections work on one or more vectors, but not on scalars.  If
+called with a single vector argument, these functions return a scalar
+result computed by projection along the vector.  The result of using a
+projection on an M x N array is therefore a 1 x N vector.  (** THE
+FOLLOWING IS NOT IMPLEMENTED ** If called with N vector arguments (N >
+1), the functions return a vector result computed by projection across
+the N vectors.)
+
+The following projections are supported:
+.nf
+
+	Projection	Description
+
+	avg		mean or average of a vector
+	med		median value of a vector
+	low		lowest value in a vector
+	high		highest value in a vector
+	sum		sum of the elements of a vector
+	len		length of a vector
+
+.fi
+.ih
+Principles of Operation
+
+The image calculator operates by compiling and executing input
+statements entered as a string in the argument list or read from a
+file or the standard input.  Each input statement is compiled into a
+sequence of virtual machine instructions, producing a program segment
+as output.  If compilation is successful the program segment is
+executed.  Each input statement is compiled as a loop over the lines
+in the output image; the body of the loop is executed once for each
+line written to the output image or image section.
+
+All i/o is line sequential, so there are no restrictions on the
+dimensionality of an image, other than the builtin limit of seven
+dimensions per image.  Upon program termination or error abort all
+images are closed and all storage is freed.  Any number of statements
+may be compiled and executed in sequence.
+
+The compile time actions of the parser include the opening of input
+and output imagefiles, register allocation, evaluation of compile time
+constant expressions, and generation of machine instructions.  Any
+register allocation etc.,required to equalize the datatypes of the two
+operands of a binary operator is carried out at compile time to avoid
+the need for type coercion (and dynamic memory allocation) in the
+runtime instructions.  Thus, instructions are always presented with
+operands of like datatype.
+
+If both operands to a binary operator are constants, the parser can
+directly compute the value of the resultant operand without generating
+any instructions.  In effect, invariant expressions are moved outside
+the inner loop.
+.ih
+Executing IRAF commands from within imcalc
+
+Any string preceded by the "!" escape character is shipped to the CL
+to be executed as a CL command.  For example:
+.nf
+
+	IMCALC> !help imcalc
+
+.fi
+will print out this help file.  The null string is currently a no_op;
+to execute a CL shell from within IMCALC, use:
+.nf
+
+	IMCALC> !cl
+
+(But why would you want to do this?)
+.fi
+.ih
+Exiting Imcalc
+To exit imcalc (in interactive mode), type "bye", "quit", "exit", or
+^D.
+
+.le
+.ih
+EXAMPLES
+In the examples below, assume all images are named by im<id><silrdx>,
+and are of dimension N x M. Vectors are named by
+vec<id><silrdx><dim1><dim2>.  Thus, imas is a short image, while
+vecar1m is a 1 x M real vector.  Also, in these examples, the result
+is always placed in the image foo, whose size and type are determined
+by the expression being evaluated, unless a section of foo is being
+edited.
+
+1) Add two real images, making the resulting image of type int:
+
+	IMC) foo = int(imar + imbr)
+
+1a) Perform the same operation from the command line:
+
+	imcalc "foo = int(imar + imbr)"
+
+2) Add a 1 x M vector to an N x M image
+
+	IMC) foo = imar + vecad1m
+
+3) Create a new image by taking of min of several input images.  Make
+the resulting image real.
+
+	IMC) foo = real(min(imas, imai, imal, imar, imad, imax))
+
+3a) Perform the same operation from the command line:
+
+	imcalc "foo = real(min(imas, imai, imal, imar, imad, imax))"
+
+4) Create a new image by setting all pixel values of an image less than 3
+to 0.
+
+	IMC) foo = imar < 3 ? 0 : imar
+
+5) Create a new array of same dimensions as an existing array, but with
+the constant value 100 and a different data type.
+
+	IMC) foo = int(zero(imar)) + 100
+
+6) Create an image with the constant value 1.0 throughout
+
+	IMC) foo = sin(imar)**2 + cos(imbd)**2.0
+
+7) Write into a sub-section of an image
+
+	IMC) foo[256:768,256:768] = imar[256:768,256:768]*10.0+0.5
+
+8) Create an vector with the average values along each line of the input image
+
+	IMC) foo = avg(imar)
+.ih
+TIME REQUIREMENTS
+On the Sun 3/60 workstation, the time required to add two 512x512
+images is approximately 1 minute.  Setting the debug level to >= 1
+will print out the itime at various points during compilation and
+execution of an expression, without affecting the processing time.
+.ih
+BUGS
+Because IRAF uses "/" as a directory character, there is some
+ambiguity in distinguishing directories from the divide operation.
+The divide operator should be separated by spaces from the operands in
+order to avoid confusion.  Also if an image file name contains the "/"
+character at the beginning of the path name, the name must be enclosed
+in double quotation marks.  This may be fixed in a future rev.
+
+Furthermore, although IRAF allows image names to begin with a numeral
+or to contain operators such as "+" and "-" (e.g. 1803+676), imcalc
+will get confused by such file names.  File names that begin with a
+numeral or contain operators should be quoted. (E.g., 'foo =
+"1803+676" / "1803+676lo"' is valid and will divide one image by
+another, but 'foo = 1803+676 / 1803+676lo' will attempt to perform two
+additions and a division.)
+
+Although one can change the working directory within the image
+calculator, using the "!" command, the directory search for images
+retains the old search list.  In particular, the value of the "current
+directory" is the original working directory and imcalc will not find
+images in the new directory without a path name.  One can access other
+files in the new directory, however.
+
+In interactive mode, ^C exits the image calculator.  Arithmetic traps
+(e.g. divide by zero and other floating point exceptions) also exit
+the image calculator.
+
+Real constants which are greater than -1.0 and less than 1.0 must have
+a leading 0 before the decimal point. That is, "0.5" is a legal real
+constant, while ".5" is not.
+
+IRAF IMIO has a feature in which the reading of a 1 x N array does not
+result in N 1-D buffers, but 1 N-D buffer.  This means that the image
+calculator sees a column of data as 1 N-D row, not as N 1-D rows.  It
+is therefore not possible to operate on a 1 x N column of data
+properly.
+
+The multi-arg projections, described in the design document, are not
+implemented.  Most of these are taken care of by other operations.
+Multi-arg high and low are the same as max and min, while sum is the
+same as adding and avg is the same as adding and dividing.  The mean
+projection is not supported by another operation, or series of
+operations.
+
+Some of the functions and operators do not work on arithmetic
+constants, and some work only on constants of certain types.  For
+example, !!, && , and ||, the logical NOT, AND, and OR, do not work on
+constants. The bitwise counterparts, !, &, | work only on integer,
+short, and long constants.  
+.ih
+SEE ALSO
+See the documentation "Design of the Prototype Image Calculator" in
+iraf$/pkg/images/imcalc for a complete description of the design of
+the image calculator.
+.endhelp

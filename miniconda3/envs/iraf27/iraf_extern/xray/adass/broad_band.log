@@ -1,0 +1,45 @@
+\O=NOAO/IRAF V2.10EXPORT prosb@cfa253.harvard.edu Fri 11:03:06 30-Oct-92
+\T=xterm
+\G=xtermr
+clear\n
+\{%5000
+
+        [An SAOimage window MUST be active for this demo]
+\}
+\{%5000
+
+        [Load the "xray" and "xplot" packages]
+\}\n
+xray\n
+xplot\n
+\{%5000
+
+        [Set scale parameters for task "xdisp"]
+\}
+xdisp.z1=0\n
+xdisp.z2=50\n
+xdisp.zrange=no\n
+\{%5000
+
+        [Display the image in the BROAD BAND, selecting a PI range
+	 of 7 to 240]
+\}
+xex\n
+in_demo$pks0438.qp[pi=(7:240)]\n
+\n
+\{%5000
+
+        [Display the image in the SOFT BAND, selecting a PI range
+         of 7 to 40]
+\}
+xex\n
+in_demo$pks0438.qp[pi=(7:40)]\n
+
+unlearn\sxdisp\n
+\{%5000
+
+        [Exit the "xray" and "xplot" packages]
+\}\n
+bye\n
+bye\n
+stty\sclear\slogin\n

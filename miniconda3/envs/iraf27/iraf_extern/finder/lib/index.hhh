@@ -1,0 +1,85 @@
+SIMPLE  =                    F /                                                
+BITPIX  =                   16 /                                                
+DATATYPE= 'INTEGER*2'          /                                                
+NAXIS   =                    0 /                                                
+GROUPS  =                    T /                                                
+GCOUNT  =                    1 /                                                
+PCOUNT  =                    0 /                                                
+PSIZE   =                    0 /                                                
+FILETYPE= 'REGIONS '           / Indicates file type                            
+DATE    = '01/06/89'           / Date of issue (dd/mm/yy)                       
+                                                                                
+COMMENT                          THE GUIDE STAR CATALOG                         
+COMMENT                                                                         
+COMMENT              An all-sky astrometric and photometric catalog             
+COMMENT              prepared for the operation of the Hubble Space             
+COMMENT                                Telescope.                               
+COMMENT                                                                         
+COMMENT              Copyright,  1989,  Association of Universities             
+COMMENT                      for Research in Astronomy, Inc.                    
+COMMENT                                                                         
+COMMENT This  file  contains data for one of the supporting tables for the Guide
+COMMENT Star Catalog (GSC).  Additional information on the GSC may be  found  in
+COMMENT accompanying  scientific  publications as well as in comments and tables
+COMMENT elsewhere on this set of volumes.                                       
+COMMENT                                                                         
+COMMENT The Guide Star Catalog (GSC) was prepared by the Space Telescope Science
+COMMENT Institute (ST ScI),  3700 San Martin Drive,  Baltimore,  MD 21218,  USA.
+COMMENT ST ScI  is  operated  by the Association of Universities for Research in
+COMMENT Astronomy, Inc. (AURA), under contract with the National Aeronautics and
+COMMENT Space Administration (NASA).                                            
+COMMENT                                                                         
+COMMENT                                                                         
+COMMENT                               File REGIONS                              
+COMMENT                    Definitions for the Small Regions                    
+COMMENT                                                                         
+COMMENT File  REGIONS  gives the vertices (in J2000 coordinates) for each of the
+COMMENT 9537 catalog regions.                                                   
+COMMENT                                                                         
+COMMENT The  requirement  for  efficient random access to small areas of the sky
+COMMENT (e.g., circles 0.5 to 1.0 degrees in  diameter)  underlies  the  adopted
+COMMENT catalog  organization,   which  divides  the  sky  into  large  regions,
+COMMENT approximately 7.5 deg in size, which  are  then  subdivided  into  small
+COMMENT regions  on  the basis of their expected individual stellar populations;
+COMMENT each small region corresponds to one file of the GSC. The parameters are
+COMMENT selected such that small regions nominally  contain  2000  objects;  and
+COMMENT since  the  regions are defined entirely by celestial geometry, any area
+COMMENT can be accessed by reference to a small number of  regions  identifiable
+COMMENT with simple logic. The details of this scheme are given in Paper III.   
+COMMENT                                                                         
+COMMENT The  declination  boundaries  of  the large regions are small circles of
+COMMENT right ascension taken at 7.5 deg intervals beginning at declination  +90
+COMMENT deg. Each of these declination bands is subdivided in right ascension by
+COMMENT segments  of  great  circles of declination spaced at intervals of 360/N
+COMMENT deg, where N is the nearest integer to 48/cos(DEC_0),  DEC_0  being  the
+COMMENT center of the declination band. There are 732 large regions in the GSC. 
+COMMENT                                                                         
+COMMENT Finally  each large region is divided into small regions by the segments
+COMMENT of N great circles of declination, uniformly spaced in right  ascension,
+COMMENT and  by  N  small  circles  of  right  ascension,  uniformly  spaced  in
+COMMENT declination.  The  values of N range from 2 near the galactic poles to 4
+COMMENT in the plane, and there are 9537 small regions in the GSC.              
+COMMENT                                                                         
+COMMENT Large  region  numbers  are  numbered  first  (most  rapidly)  by  right
+COMMENT acension, beginning with the regions whose southwest corner is at RA = 0
+COMMENT and DEC = 0,  then  proceeding  north by bands of declination, until the
+COMMENT polar zone is counted; then the process continues symmetrically  in  the
+COMMENT south,  beginning  at  the  northwest  corner  of the region at RA=0 and
+COMMENT DEC = 0.                                                                
+COMMENT                                                                         
+COMMENT Small  regions  are  numbered  in the same manner, except that the count
+COMMENT goes through all the small regions of a large region before proceding to
+COMMENT the small regions of the next large region.                             
+COMMENT                                                                         
+COMMENT The  right  ascension  and  declination limits of each of the 9537 small
+COMMENT regions, in J2000 coordinates, are given in this table.                 
+COMMENT                                                                         
+COMMENT The  user  is  cautioned  that, according to the nomenclature convention
+COMMENT explained in Paper III, maintenance procedures may result in  an  object
+COMMENT being  located  up  to  a  few  seconds  outside the tabulated geometric
+COMMENT boundaries of its regions; therefore, a commensurate expansion of search
+COMMENT areas  is  often  appropriate  in  determining the catalog regions to be
+COMMENT used.  However,  this  version  (1)  of  the  GSC  does  not contain any
+COMMENT occurances of overlapping region boundaries.                            
+                                                                                
+END                                                                             

@@ -1,0 +1,407 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR",
+    "iraf.stsdas"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.cirred-2007_12_13-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.cirred-post-link.sh",
+    "bin/.iraf.cirred-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/cirred/atmo_cor.cl",
+    "iraf_extern/cirred/bin",
+    "iraf_extern/cirred/bin.linux/calc_off.e",
+    "iraf_extern/cirred/bin.linux/fixbad.e",
+    "iraf_extern/cirred/bin.linux/fixfits.e",
+    "iraf_extern/cirred/build_log",
+    "iraf_extern/cirred/calc_off.f",
+    "iraf_extern/cirred/calc_off.o",
+    "iraf_extern/cirred/cirred.cl",
+    "iraf_extern/cirred/cirred.par",
+    "iraf_extern/cirred/cirred.tgz",
+    "iraf_extern/cirred/clearim.cl",
+    "iraf_extern/cirred/conda_build.sh",
+    "iraf_extern/cirred/do_ccmap.cl",
+    "iraf_extern/cirred/do_osiris.cl",
+    "iraf_extern/cirred/do_wcs.cl",
+    "iraf_extern/cirred/fixbad.f",
+    "iraf_extern/cirred/fixbad.o",
+    "iraf_extern/cirred/fixfits.f",
+    "iraf_extern/cirred/fixfits.o",
+    "iraf_extern/cirred/help_log",
+    "iraf_extern/cirred/install.html",
+    "iraf_extern/cirred/install.ir",
+    "iraf_extern/cirred/irdiff.cl",
+    "iraf_extern/cirred/libcfitsio32.a",
+    "iraf_extern/cirred/libcfitsio_lnx.a",
+    "iraf_extern/cirred/libcfitsio_lnx_141102.a",
+    "iraf_extern/cirred/libcfitsio_sol.a",
+    "iraf_extern/cirred/libcfitsio_sun.a",
+    "iraf_extern/cirred/maskbad.cl",
+    "iraf_extern/cirred/med.cl",
+    "iraf_extern/cirred/mkpkg",
+    "iraf_extern/cirred/osiris.cl",
+    "iraf_extern/cirred/shift_comb.cl",
+    "iraf_extern/cirred/sky_sub.cl",
+    "iraf_extern/cirred/spec_comb.cl",
+    "iraf_extern/cirred/ur_extern.pkg",
+    "iraf_extern/cirred/ur_manifest",
+    "iraf_extern/cirred/ur_mkhelp_cmd",
+    "iraf_extern/cirred/ur_mkpkg_cmd",
+    "iraf_extern/cirred/ur_mkpkg_patterns"
+  ],
+  "fn": "iraf.cirred-2007_12_13-2.tar.bz2",
+  "license": "IRAF MIT/X11 variant, US government notice",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.cirred-2007_12_13-2",
+    "type": 1
+  },
+  "md5": "fe3e261fbc21dc99e4bb252f4f536ce1",
+  "name": "iraf.cirred",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.cirred-2007_12_13-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.cirred-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "d315da597149362bb929d9afc7a1bcadfe873cd32a972d7fad87023a7aa5bf94",
+        "sha256_in_prefix": "d315da597149362bb929d9afc7a1bcadfe873cd32a972d7fad87023a7aa5bf94",
+        "size_in_bytes": 114
+      },
+      {
+        "_path": "bin/.iraf.cirred-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "65651a7fad0914832dee254d91f79e30f2af29a806a0c8e909fcc793a3d13073",
+        "sha256_in_prefix": "65651a7fad0914832dee254d91f79e30f2af29a806a0c8e909fcc793a3d13073",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "sha256_in_prefix": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "sha256_in_prefix": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/cirred/atmo_cor.cl",
+        "path_type": "hardlink",
+        "sha256": "8f7eb64fbc2a1e4296d0b7e3dfa97ffaa74ea3bc4f9aa89402ad7da56eab95d6",
+        "sha256_in_prefix": "8f7eb64fbc2a1e4296d0b7e3dfa97ffaa74ea3bc4f9aa89402ad7da56eab95d6",
+        "size_in_bytes": 5082
+      },
+      {
+        "_path": "iraf_extern/cirred/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/cirred/bin.linux/calc_off.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.cirred_1553890427371/_h_env_pl",
+        "sha256": "1afd6b5bcac7578730c9ec8b2f0c4d309021428a4311b337ea7e7c7215a570b7",
+        "sha256_in_prefix": "33703a03aa52f93a11776321643955ce25bcfdd2a751f7a03ae261a4acf3412d",
+        "size_in_bytes": 56840
+      },
+      {
+        "_path": "iraf_extern/cirred/bin.linux/fixbad.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.cirred_1553890427371/_h_env_pl",
+        "sha256": "185ec56d4cbddd1e3b96e60da641544e93c4a5275ea80d5e1bf325d2cca1e26b",
+        "sha256_in_prefix": "1750a0fd9f6cddd6370d19a3825f4c1b132e483d47ee853811695dc3cda6cd05",
+        "size_in_bytes": 674666
+      },
+      {
+        "_path": "iraf_extern/cirred/bin.linux/fixfits.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.cirred_1553890427371/_h_env_pl",
+        "sha256": "6154b8224568c1fc0a68b287c444d89ba356c8e19de7fc8ef7036c3a0a733143",
+        "sha256_in_prefix": "00ed57ebbbaf6a268557f3e75fde63a0cd6721c3a75fd9fef6f8eefe217f09e8",
+        "size_in_bytes": 1937914
+      },
+      {
+        "_path": "iraf_extern/cirred/build_log",
+        "path_type": "hardlink",
+        "sha256": "85c60bb6e942efcd64262fef43255709129019d5f5003325148f7972599a3a9a",
+        "sha256_in_prefix": "85c60bb6e942efcd64262fef43255709129019d5f5003325148f7972599a3a9a",
+        "size_in_bytes": 467
+      },
+      {
+        "_path": "iraf_extern/cirred/calc_off.f",
+        "path_type": "hardlink",
+        "sha256": "9c8732cbcec21925f5766cebabbbe42e2cb8fb7ac0d284ce9a85b260f73b1a9b",
+        "sha256_in_prefix": "9c8732cbcec21925f5766cebabbbe42e2cb8fb7ac0d284ce9a85b260f73b1a9b",
+        "size_in_bytes": 1006
+      },
+      {
+        "_path": "iraf_extern/cirred/calc_off.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.cirred_1553890427371/_h_env_pl",
+        "sha256": "0da19d6f650a79ec433693c042e36e317a40539e65d828aec091d5795db5cc86",
+        "sha256_in_prefix": "4d2817ac28debd060caf2bac108bcca2b715f5c2a8610da02726d9da596e70be",
+        "size_in_bytes": 7176
+      },
+      {
+        "_path": "iraf_extern/cirred/cirred.cl",
+        "path_type": "hardlink",
+        "sha256": "ac89506bc272d238f9257922a715ed5d4f756afe2e3da776eccb3ed24b7f9140",
+        "sha256_in_prefix": "ac89506bc272d238f9257922a715ed5d4f756afe2e3da776eccb3ed24b7f9140",
+        "size_in_bytes": 1027
+      },
+      {
+        "_path": "iraf_extern/cirred/cirred.par",
+        "path_type": "hardlink",
+        "sha256": "7693e2f25b2c251d6770147df4342fc04da366e5b8f7b90b2ef646546dd25940",
+        "sha256_in_prefix": "7693e2f25b2c251d6770147df4342fc04da366e5b8f7b90b2ef646546dd25940",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "iraf_extern/cirred/cirred.tgz",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "iraf_extern/cirred/clearim.cl",
+        "path_type": "hardlink",
+        "sha256": "606937948850019a0342516ea8b0ea3eed38c735348f1e047438f8e9a984bc49",
+        "sha256_in_prefix": "606937948850019a0342516ea8b0ea3eed38c735348f1e047438f8e9a984bc49",
+        "size_in_bytes": 469
+      },
+      {
+        "_path": "iraf_extern/cirred/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "052dae292a9d2314b036f0e55e8ffadba297a1daa06d5adf0224b43cf2ed0bcd",
+        "sha256_in_prefix": "76b2a224fc85bb41884b970d1428367d104bfd52f8a2b2bd351c31702c23b8c4",
+        "size_in_bytes": 2526
+      },
+      {
+        "_path": "iraf_extern/cirred/do_ccmap.cl",
+        "path_type": "hardlink",
+        "sha256": "384c375415087c0857895b5b12486daa239f9cffb31eac9fbf379008c11d3835",
+        "sha256_in_prefix": "384c375415087c0857895b5b12486daa239f9cffb31eac9fbf379008c11d3835",
+        "size_in_bytes": 913
+      },
+      {
+        "_path": "iraf_extern/cirred/do_osiris.cl",
+        "path_type": "hardlink",
+        "sha256": "ff36766f6e92bd49ad3cdf73fc41661dd6c7d119eb9d597643e22cf59ddeb0b2",
+        "sha256_in_prefix": "ff36766f6e92bd49ad3cdf73fc41661dd6c7d119eb9d597643e22cf59ddeb0b2",
+        "size_in_bytes": 2883
+      },
+      {
+        "_path": "iraf_extern/cirred/do_wcs.cl",
+        "path_type": "hardlink",
+        "sha256": "64291c906918e24559afbe98694e803600537ad55e6614029ed57142cff61bd9",
+        "sha256_in_prefix": "64291c906918e24559afbe98694e803600537ad55e6614029ed57142cff61bd9",
+        "size_in_bytes": 1871
+      },
+      {
+        "_path": "iraf_extern/cirred/fixbad.f",
+        "path_type": "hardlink",
+        "sha256": "42faf24a7680c6adc1e941ac0d3b832b0b81cedd0358d1acbb8b1e9dd3900baf",
+        "sha256_in_prefix": "42faf24a7680c6adc1e941ac0d3b832b0b81cedd0358d1acbb8b1e9dd3900baf",
+        "size_in_bytes": 12000
+      },
+      {
+        "_path": "iraf_extern/cirred/fixbad.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.cirred_1553890427371/_h_env_pl",
+        "sha256": "f02cbab42c64e77c144aa82509b0ff12cc9c7e67519e7c69bc8dba1469de310e",
+        "sha256_in_prefix": "fb2eb0cf5227dcfbd1064441b0f3a62c6eb024df5bb68a2718cdd5755075b77a",
+        "size_in_bytes": 25480
+      },
+      {
+        "_path": "iraf_extern/cirred/fixfits.f",
+        "path_type": "hardlink",
+        "sha256": "c4442f4c36041763ea774455c23b08b4c61c5331aef1203d51b0b68c895ece12",
+        "sha256_in_prefix": "c4442f4c36041763ea774455c23b08b4c61c5331aef1203d51b0b68c895ece12",
+        "size_in_bytes": 13919
+      },
+      {
+        "_path": "iraf_extern/cirred/fixfits.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.cirred_1553890427371/_h_env_pl",
+        "sha256": "75cf8ee43e2b95a61f106fc59f23f6c07bf5225592baf3d2170aad6de9defc2b",
+        "sha256_in_prefix": "518bc5bed25118ea4fedee3604bb6ba0aee0e5b57e697f70819dea534a0c4f38",
+        "size_in_bytes": 29728
+      },
+      {
+        "_path": "iraf_extern/cirred/help_log",
+        "path_type": "hardlink",
+        "sha256": "81ac5fc855b38d21732fe605bc929e7c1f7cc4441b222e59e89228806c24231c",
+        "sha256_in_prefix": "81ac5fc855b38d21732fe605bc929e7c1f7cc4441b222e59e89228806c24231c",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "iraf_extern/cirred/install.html",
+        "path_type": "hardlink",
+        "sha256": "ab8bb635d11ca42a6b5c8df4d9a7dff1721ba9d505a325be61043d3f4f5e60b4",
+        "sha256_in_prefix": "ab8bb635d11ca42a6b5c8df4d9a7dff1721ba9d505a325be61043d3f4f5e60b4",
+        "size_in_bytes": 2812
+      },
+      {
+        "_path": "iraf_extern/cirred/install.ir",
+        "path_type": "hardlink",
+        "sha256": "3669d91516167c703252984d5ca8b1e00a6f42a443dc9c153ff7e3bf746d8857",
+        "sha256_in_prefix": "3669d91516167c703252984d5ca8b1e00a6f42a443dc9c153ff7e3bf746d8857",
+        "size_in_bytes": 2669
+      },
+      {
+        "_path": "iraf_extern/cirred/irdiff.cl",
+        "path_type": "hardlink",
+        "sha256": "69fb9f2efd4094986185315c43b1f4ad5f7eb9bd5a3c6d3f5e695529c54d394f",
+        "sha256_in_prefix": "69fb9f2efd4094986185315c43b1f4ad5f7eb9bd5a3c6d3f5e695529c54d394f",
+        "size_in_bytes": 1540
+      },
+      {
+        "_path": "iraf_extern/cirred/libcfitsio32.a",
+        "path_type": "hardlink",
+        "sha256": "b2a06051b1e4f226c49c8569a3bc364eff82fd2d79b98150022b62986ebd9a14",
+        "sha256_in_prefix": "b2a06051b1e4f226c49c8569a3bc364eff82fd2d79b98150022b62986ebd9a14",
+        "size_in_bytes": 1972740
+      },
+      {
+        "_path": "iraf_extern/cirred/libcfitsio_lnx.a",
+        "path_type": "hardlink",
+        "sha256": "ed448726daa704f6e3ac1678354cf968b80c301b351dbb7a39f9abecc46ca8ad",
+        "sha256_in_prefix": "ed448726daa704f6e3ac1678354cf968b80c301b351dbb7a39f9abecc46ca8ad",
+        "size_in_bytes": 1403960
+      },
+      {
+        "_path": "iraf_extern/cirred/libcfitsio_lnx_141102.a",
+        "path_type": "hardlink",
+        "sha256": "7801fba681dfa87be4320de3f0fe2f87620b4375ff3e7921c972d3685f6082b5",
+        "sha256_in_prefix": "7801fba681dfa87be4320de3f0fe2f87620b4375ff3e7921c972d3685f6082b5",
+        "size_in_bytes": 1490324
+      },
+      {
+        "_path": "iraf_extern/cirred/libcfitsio_sol.a",
+        "path_type": "hardlink",
+        "sha256": "39b32278ee6caefd17e681e1391e2cf8ed7b3f1a0acbcae0f660974f2f7aecc7",
+        "sha256_in_prefix": "39b32278ee6caefd17e681e1391e2cf8ed7b3f1a0acbcae0f660974f2f7aecc7",
+        "size_in_bytes": 658124
+      },
+      {
+        "_path": "iraf_extern/cirred/libcfitsio_sun.a",
+        "path_type": "hardlink",
+        "sha256": "ea55eecff0645440c923bb7a97102d9d92d4a2e29b4f0a1a078e963cd931d7a8",
+        "sha256_in_prefix": "ea55eecff0645440c923bb7a97102d9d92d4a2e29b4f0a1a078e963cd931d7a8",
+        "size_in_bytes": 1200864
+      },
+      {
+        "_path": "iraf_extern/cirred/maskbad.cl",
+        "path_type": "hardlink",
+        "sha256": "3c50d1db982ea1872e4e0d756b9a714896ffe1289cf78da234429b45fb2887d6",
+        "sha256_in_prefix": "3c50d1db982ea1872e4e0d756b9a714896ffe1289cf78da234429b45fb2887d6",
+        "size_in_bytes": 4293
+      },
+      {
+        "_path": "iraf_extern/cirred/med.cl",
+        "path_type": "hardlink",
+        "sha256": "e79c240a6afd00f25b601e368c4f46718f1f473ba06082aa5a5a735f125131b2",
+        "sha256_in_prefix": "e79c240a6afd00f25b601e368c4f46718f1f473ba06082aa5a5a735f125131b2",
+        "size_in_bytes": 2915
+      },
+      {
+        "_path": "iraf_extern/cirred/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "806928376d869defdbd199d172bbd19b4afa20620881a6a4cfc90f8ad04a7460",
+        "sha256_in_prefix": "806928376d869defdbd199d172bbd19b4afa20620881a6a4cfc90f8ad04a7460",
+        "size_in_bytes": 4164
+      },
+      {
+        "_path": "iraf_extern/cirred/osiris.cl",
+        "path_type": "hardlink",
+        "sha256": "ad2c7c87ede01965857eceb59ebe08f2162e8bd3dbd53cc963d169f64cfeaf29",
+        "sha256_in_prefix": "ad2c7c87ede01965857eceb59ebe08f2162e8bd3dbd53cc963d169f64cfeaf29",
+        "size_in_bytes": 19848
+      },
+      {
+        "_path": "iraf_extern/cirred/shift_comb.cl",
+        "path_type": "hardlink",
+        "sha256": "2e4b9a9873ea08c6ff5b43e1f6c75816199acaa1536f0eedf5fe6456949160cf",
+        "sha256_in_prefix": "2e4b9a9873ea08c6ff5b43e1f6c75816199acaa1536f0eedf5fe6456949160cf",
+        "size_in_bytes": 12690
+      },
+      {
+        "_path": "iraf_extern/cirred/sky_sub.cl",
+        "path_type": "hardlink",
+        "sha256": "ce0851ad4bbad8862c32b5e4a60595657f99e5fdd68f6c8252647cda1061e98b",
+        "sha256_in_prefix": "ce0851ad4bbad8862c32b5e4a60595657f99e5fdd68f6c8252647cda1061e98b",
+        "size_in_bytes": 12022
+      },
+      {
+        "_path": "iraf_extern/cirred/spec_comb.cl",
+        "path_type": "hardlink",
+        "sha256": "27135f2ff6680ff25bd54b9ef25c1577ed4ee3793ea4a59c2edf39a6c9183e84",
+        "sha256_in_prefix": "27135f2ff6680ff25bd54b9ef25c1577ed4ee3793ea4a59c2edf39a6c9183e84",
+        "size_in_bytes": 4180
+      },
+      {
+        "_path": "iraf_extern/cirred/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "fc955bec33b8d73f430d87e8f123dc9b5e842537194ddb5cfc67d26971419a56",
+        "sha256_in_prefix": "fc955bec33b8d73f430d87e8f123dc9b5e842537194ddb5cfc67d26971419a56",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "iraf_extern/cirred/ur_manifest",
+        "path_type": "hardlink",
+        "sha256": "983863ad0836fa21f1ff2c689fd3e916e914cdba2f1e44b4943c9548628e6451",
+        "sha256_in_prefix": "983863ad0836fa21f1ff2c689fd3e916e914cdba2f1e44b4943c9548628e6451",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "iraf_extern/cirred/ur_mkhelp_cmd",
+        "path_type": "hardlink",
+        "sha256": "26a9b52fc55491716d3e9193be0665a9619cfd9a7d3f0e7cacfe019b66882b25",
+        "sha256_in_prefix": "26a9b52fc55491716d3e9193be0665a9619cfd9a7d3f0e7cacfe019b66882b25",
+        "size_in_bytes": 34
+      },
+      {
+        "_path": "iraf_extern/cirred/ur_mkpkg_cmd",
+        "path_type": "hardlink",
+        "sha256": "254ca482319279560cf94cbdcd4c00bf2f79eca31039940d668517fe749a525f",
+        "sha256_in_prefix": "254ca482319279560cf94cbdcd4c00bf2f79eca31039940d668517fe749a525f",
+        "size_in_bytes": 220
+      },
+      {
+        "_path": "iraf_extern/cirred/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "82f065344200fcca48ea3c2f17697d9b1ff32f9c63fdf03e5deb7c730277a898",
+        "sha256_in_prefix": "82f065344200fcca48ea3c2f17697d9b1ff32f9c63fdf03e5deb7c730277a898",
+        "size_in_bytes": 27
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 2659892,
+  "subdir": "linux-64",
+  "timestamp": 1553890512473,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.cirred-2007_12_13-2.tar.bz2",
+  "version": "2007_12_13"
+}

@@ -1,0 +1,13 @@
+# Help directory for the MEM0 package, version C
+
+$doc		= "mem0$src/doc/"
+
+mem0		hlp=mem0$mem0.men
+
+revisions       sys=mem0$src/Revisions
+
+imconv		hlp=doc$imconv.hlp,		src=mem0src$t_imconv.x
+immake		hlp=doc$immake.hlp,		src=mem0src$t_immake.x
+irfftes		hlp=doc$irfftes.hlp,		src=mem0src$t_irfftes.x
+irme0		hlp=doc$irme0.hlp,		src=mem0src$t_irme0.x
+pfactor		hlp=doc$pfactor.hlp,		src=mem0src$t_pfactor.x

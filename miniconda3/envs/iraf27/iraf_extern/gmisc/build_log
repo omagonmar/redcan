@@ -1,0 +1,523 @@
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc dcio.x dctable.x dispcor.x odropenp.x t_dispcor.x
+dcio.x:
+   dc_open:
+   dc_close:
+   dc_gms:
+   dc_gmsdb:
+   dc_refshft:
+   dc_gec:
+   dc_gecdb:
+   dc_ecms:
+dctable.x:
+   dc_table:
+   dc_getentry:
+dispcor.x:
+   dispcor:
+odropenp.x:
+   odr_openp:
+t_dispcor.x:
+   t_dispcor:
+   dc_ndspec:
+   dc_multispec:
+   dc_echelle:
+   dc_global1:
+   dc_global:
+   dc_wavelengths1:
+   dc_wavelengths:
+   dc_defaults:
+   dc_log:
+   dc_refspec:
+dcio.f:
+   dcopen:
+   dccloe:
+   dcgms:
+   dcgmsb:
+   dcreft:
+   dcgec:
+   dcgecb:
+   dcecms:
+dctable.f:
+   dctabe:
+   dcgety:
+dispcor.f:
+   dispcr:
+odropenp.f:
+   odropp:
+t_dispcor.f:
+   tdispr:
+   dcndsc:
+   dcmulc:
+   dceche:
+   dcglo1:
+   dcglol:
+   dcwav1:
+   dcwavs:
+   dcdefs:
+   dclog:
+   dcrefc:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a dcio.o dctable.o dispcor.o odropenp.o t_dispcor.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc icaclip.x icaverage.x iccclip.x icgdata.x icgrow.x icmedian.x icmm.x icomb.x icpclip.x icsclip.x icsigma.x icsort.x icstat.x xtimmap.x
+icaclip.x:
+   ic_aavsigclips:
+   ic_mavsigclips:
+   ic_aavsigclipi:
+   ic_mavsigclipi:
+   ic_aavsigclipr:
+   ic_mavsigclipr:
+   ic_aavsigclipd:
+   ic_mavsigclipd:
+icaverage.x:
+   ic_averages:
+   ic_averagei:
+   ic_averager:
+   ic_averaged:
+iccclip.x:
+   ic_accdclips:
+   ic_mccdclips:
+   ic_accdclipi:
+   ic_mccdclipi:
+   ic_accdclipr:
+   ic_mccdclipr:
+   ic_accdclipd:
+   ic_mccdclipd:
+icgdata.x:
+   ic_gdatas:
+   ic_gdatai:
+   ic_gdatar:
+   ic_gdatad:
+icgrow.x:
+   ic_grow:
+   ic_grows:
+   ic_growi:
+   ic_growr:
+   ic_growd:
+icmedian.x:
+   ic_medians:
+   ic_mediani:
+   ic_medianr:
+   ic_mediand:
+icmm.x:
+   ic_mms:
+   ic_mmi:
+   ic_mmr:
+   ic_mmd:
+icomb.x:
+   icombines:
+   ic_combines:
+   icombinei:
+   ic_combinei:
+   icombiner:
+   ic_combiner:
+   icombined:
+   ic_combined:
+icpclip.x:
+   ic_pclips:
+   ic_pclipi:
+   ic_pclipr:
+   ic_pclipd:
+icsclip.x:
+   ic_asigclips:
+   ic_msigclips:
+   ic_asigclipi:
+   ic_msigclipi:
+   ic_asigclipr:
+   ic_msigclipr:
+   ic_asigclipd:
+   ic_msigclipd:
+icsigma.x:
+   ic_sigmas:
+   ic_sigmai:
+   ic_sigmar:
+   ic_sigmad:
+icsort.x:
+   ic_sorts:
+   ic_2sorts:
+   ic_sorti:
+   ic_2sorti:
+   ic_sortr:
+   ic_2sortr:
+   ic_sortd:
+   ic_2sortd:
+icstat.x:
+   ic_stats:
+   ic_modes:
+   ic_stati:
+   ic_modei:
+   ic_statr:
+   ic_moder:
+   ic_statd:
+   ic_moded:
+xtimmap.x:
+   xt_immap:
+   xt_opix:
+   xt_cpix:
+   xt_imseti:
+   xt_imunmap:
+   xt_reindex:
+   xt_imgnls:
+   xt_imgnli:
+   xt_imgnlr:
+   xt_imgnld:
+icaclip.f:
+   icaavs:
+   icmavs:
+   icaavi:
+   icmavi:
+   icaavr:
+   icmavr:
+   icaavd:
+   icmavd:
+icaverage.f:
+   icaves:
+   icavei:
+   icaver:
+   icaved:
+iccclip.f:
+   icaccs:
+   icmccs:
+   icacci:
+   icmcci:
+   icaccr:
+   icmccr:
+   icaccd:
+   icmccd:
+icgdata.f:
+   icgdas:
+   icgdai:
+   icgdar:
+   icgdad:
+icgrow.f:
+   icgrow:
+   icgros:
+   icgroi:
+   icgror:
+   icgrod:
+icmedian.f:
+   icmeds:
+   icmedi:
+   icmedr:
+   icmedd:
+icmm.f:
+   icmms:
+   icmmi:
+   icmmr:
+   icmmd:
+icomb.f:
+   icombs:
+   iccoms:
+   icombi:
+   iccomi:
+   icombr:
+   iccomr:
+   icombd:
+   iccomd:
+icpclip.f:
+   icpcls:
+   icpcli:
+   icpclr:
+   icpcld:
+icsclip.f:
+   icasis:
+   icmsis:
+   icasii:
+   icmsii:
+   icasir:
+   icmsir:
+   icasid:
+   icmsid:
+icsigma.f:
+   icsigs:
+   icsigi:
+   icsigr:
+   icsigd:
+icsort.f:
+   icsors:
+   ic2sos:
+   icsori:
+   ic2soi:
+   icsorr:
+   ic2sor:
+   icsord:
+   ic2sod:
+icstat.f:
+   icstas:
+   icmods:
+   icstai:
+   icmodi:
+   icstar:
+   icmodr:
+   icstad:
+   icmodd:
+xtimmap.f:
+   xtimmp:
+   xtopix:
+   xtcpix:
+   xtimsi:
+   xtimup:
+   xtreix:
+   xtimgs:
+   xtimgi:
+   xtimgr:
+   xtimgd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a icaclip.o icaverage.o iccclip.o icgdata.o icgrow.o icmedian.o icmm.o icomb.o icpclip.o icsclip.o icsigma.o icsort.o icstat.o xtimmap.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc icemask.x icgscale.x ichdr.x icimstack.x iclog.x icmask.x icombine.x icpmmap.x icrmasks.x icscale.x icsection.x icsetout.x tymax.x xtprocid.x
+icemask.x:
+   ic_emask:
+   ic_einit:
+icgscale.x:
+   ic_gscale:
+ichdr.x:
+   ic_hdr:
+icimstack.x:
+   ic_imstack:
+iclog.x:
+   ic_log:
+icmask.x:
+   ic_mopen:
+   ic_mclose:
+   ic_mget:
+   ic_mget1:
+   ic_mclose1:
+icombine.x:
+   icombine:
+icpmmap.x:
+   ic_pmmap:
+icrmasks.x:
+   ic_rmasks:
+icscale.x:
+   ic_scale:
+icsection.x:
+   ic_section:
+icsetout.x:
+   ic_setout:
+tymax.x:
+   ty_max:
+xtprocid.x:
+   xt_procid:
+icemask.f:
+   icemak:
+   iceint:
+icgscale.f:
+   icgsce:
+ichdr.f:
+   ichdr:
+icimstack.f:
+   icimsk:
+iclog.f:
+   iclog:
+icmask.f:
+   icmopn:
+   icmcle:
+   icmget:
+   icmge1:
+   icmcl1:
+icombine.f:
+   icombe:
+icpmmap.f:
+   icpmmp:
+icrmasks.f:
+   icrmas:
+icscale.f:
+   icscae:
+icsection.f:
+   icsecn:
+icsetout.f:
+   icsett:
+tymax.f:
+   tymax:
+xtprocid.f:
+   xtprod:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a icemask.o icgscale.o ichdr.o icimstack.o iclog.o icmask.o icombine.o icpmmap.o icrmasks.o icscale.o icsection.o icsetout.o tymax.o xtprocid.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc t_scombine.x
+t_scombine.x:
+   t_scombine:
+   scb_gspec:
+   scb_fspec:
+   scb_rebin:
+   scb_bpm:
+   scb_output:
+   scb_default:
+   scb_imtgetim:
+   scb_combine:
+t_scombine.f:
+   tscome:
+   scbgsc:
+   scbfsc:
+   scbren:
+   scbbpm:
+   scbout:
+   scbdet:
+   scbimm:
+   scbcoe:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a t_scombine.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc getairm.x getcalib.x getextn.x t_standard.x
+getairm.x:
+   get_airm:
+   airmass:
+getcalib.x:
+   getcalib:
+   getbbcal:
+   freecalib:
+getextn.x:
+   get_extn:
+   de_ext_spec:
+   sum_spec:
+   pix_index:
+   ext_load:
+   ext_free:
+t_standard.x:
+   t_standard:
+   std_calib:
+   std_output:
+   std_flux:
+   std_addband:
+   std_delband:
+   std_graph:
+   std_gcalib:
+   std_units:
+getairm.f:
+   getaim:
+   airmas:
+getcalib.f:
+   getcab:
+   getbbl:
+   freecb:
+getextn.f:
+   getexn:
+   deextc:
+   sumspc:
+   pixinx:
+   extlod:
+   extfre:
+t_standard.f:
+   tstand:
+   stdcab:
+   stdout:
+   stdflx:
+   stdadd:
+   stdded:
+   stdgrh:
+   stdgcb:
+   stduns:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a getairm.o getcalib.o getextn.o t_standard.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc getcmd.x nhedit.x t_ldisplay.x t_skymask.x
+getcmd.x:
+   he_getcmdf:
+   he_ks_lex:
+   he_ks_gvalue:
+   he_ks_val:
+   he_ks_pm:
+   he_ksinit:
+nhedit.x:
+   t_nhedit:
+   he_doit:
+   he_editfield:
+   he_initfield:
+   he_addfield:
+   he_deletefield:
+   he_updatefield:
+   he_gval:
+   he_getop:
+   he_getfield:
+   he_getopsetimage:
+   he_encodeop:
+   he_pargstr:
+   he_cpstr:
+   he_pargstrc:
+   he_getpars:
+   he_setdef:
+   he_setpar:
+t_ldisplay.x:
+   t_ldisplay:
+   initval:
+   addpath:
+   qu2:
+   readdata:
+   displhex:
+   twopick:
+   binvalue:
+   sumrange:
+   fixx:
+   img_setup:
+   hexag:
+   fliphex:
+   pit:
+   swop:
+   closest:
+   drawhex:
+   replot:
+   rt_crfile:
+   getimage:
+   mktitle:
+   usercoord:
+   sshift:
+   id_section:
+   sshift1:
+t_skymask.x:
+   t_skymask:
+getcmd.f:
+   hegetf:
+   hekslx:
+   heksge:
+   heksvl:
+   hekspm:
+   heksit:
+nhedit.f:
+   tnhedt:
+   hedoit:
+   heedid:
+   heinid:
+   headdd:
+   hedeld:
+   heupdd:
+   hegval:
+   hegetp:
+   hegetd:
+   hegete:
+   heencp:
+   heparr:
+   hecpsr:
+   heparc:
+   hegets:
+   hesetf:
+   hesetr:
+t_ldisplay.f:
+   tldisy:
+   initvl:
+   addpah:
+   qu2:
+   readda:
+   displx:
+   twopik:
+   binvae:
+   sumrae:
+   fixx:
+   imgsep:
+   hexag:
+   fliphx:
+   pit:
+   swop:
+   closet:
+   drawhx:
+   replot:
+   rtcrfe:
+   getime:
+   mktite:
+   usercd:
+   sshift:
+   idsecn:
+   sshif1:
+t_skymask.f:
+   tskymk:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/gmisc/src/libpkg.a getcmd.o nhedit.o t_ldisplay.o t_skymask.o
+ranlib libpkg.a
+Updated 42 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p gmisc x_gmisc.x
+x_gmisc.x:
+   sys_runtask:
+x_gmisc.f:
+   sysruk:
+xc -Nz -p gmisc x_gmisc.o libpkg.a -lsmw -lxtools -liminterp -o xx_gmisc.e
+move `xx_gmisc.e' to `gmiscbin$x_gmisc.e'

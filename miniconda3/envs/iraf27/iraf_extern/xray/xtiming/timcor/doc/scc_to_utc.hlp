@@ -1,0 +1,51 @@
+#$Header:
+#$Log:
+.help scc_to_utc Apr92 xray.xtiming.timcor
+.ih
+NAME
+scc_to_utc -- convert from ROSAT space-craft clock to UTC
+.ih
+USAGE
+scc_to_utc time
+.ih
+DESCRIPTION
+\fIscc_to_utc\fR converts from ROSAT space-craft clock to coordinated 
+universal time.  The times are interpolated from a table that was derived 
+from a list of SCC and UTC times.  This task was ported from MIDAS/EXSAS.
+.ih
+PARAMETERS
+.ls  scc_time =                 prompt = input spacecraft clock time
+
+The input spacecraft clock time
+.le
+.ls  (tbl_fname = "xtimingdata$scc_to_utc.tab" ) [string]
+
+The table name containing the polynomial coefficents for the interpolation
+routine.  This table DOES NOT contain the original SCC and UTC data
+points.
+.le
+.ih
+EXAMPLES
+Convert SCC to UTC
+.nf
+
+cl> xray
+xr> xtiming
+xt> timcor
+ti> scc_to_utc 
+input spacecraft clock time: 10000000
+ 
+SCC->UTC conversion table is calibrated to SCC 221516606.8437
+ 
+SCC time = 10000000.0000000
+UTC time (integer part) 2448160  (real part) 0.12047967551274
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+.endhelp
+

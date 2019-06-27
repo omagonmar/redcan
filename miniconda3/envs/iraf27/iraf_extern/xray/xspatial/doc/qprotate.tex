@@ -1,0 +1,189 @@
+%\input skeleton.tex
+\def\version{Version 1.0 --- 12/22/88}
+\def\chapter{Spatial --- Rotation (dmw)}
+%\chapterhead{Spatial Rotation}
+\chapterhead{V.~Spatial Rotation}
+\@{Overview}
+
+Accuracy is lost whenever a binned array with multiple counts per
+pixel is rotated.  This is because the counts from a pixel must be
+re-distributed into several pixels using some average re-distribution
+function.  The most accurate way for the PROS to apply rotation is to rotate
+the photons in a QPOE file.  
+
+A rotation involves replacing the
+$X,Y$ values of each photon with $X',Y'$.
+A routine which does a `get-next-photon' operation could perform this
+operation as the photon value is read.  However, the current
+implementation
+of the IRAF spatial sections does not allow for rotation,
+so it will be necessary for a user to write a
+new QPOE file with the required rotation before running any of the 
+spatial package `im$\ldots$' tasks.
+
+
+The rotation of a QPOE file will involve replacing the
+$X,Y$ values of each photon with $X',Y'$, and re-sorting the result to
+give a new QPOE file. The rounding errors in converting the $X',Y'$
+values to integers (after performing real arithmetic) should be no great loss
+in precision since the original $X,Y$ integers are presumably at a
+precision slightly greater than the spatial accuracy of the detector.  However,
+if this rounding error is significant, we could `effectively' replicate
+the QPOE by some factor and then compress after the `real' arithmetic.
+
+
+The rotation of a QPOE file should be significantly faster than the
+rotation of a full-resolution ($8192 \times 8192$) array, since most
+full-resolution arrays will be sparse.  Furthermore, the edge-effect
+difficulties in array rotation do not apply.  Finally, our QPOE
+rotation task will be written to update the relevant header
+parameters.  This means that sky coordinate grids may be
+drawn correctly on a display of the resulting image.
+
+There are at least four reasons for which a user may wish to apply a rotation.
+
+\item{(1).}To change the roll angle of the data.  The user may wish to roll
+the image to the roll angle of another image, prior to application of
+image arithmetic or display.  Or, the user may just wish to roll so
+that the new roll angle is 0.0 degrees.  This will ensure that
+when the coordinate grid is overlayed on a display of the image, north
+is up.
+
+\item{(2).}To change the coordinate system of the image from epoch
+B1950.0
+to epoch J2000.0 or {\it vice versa}.  This is particularly relevant
+since Einstein QPOE files are aspect corrected to B1950.0, and
+ROSAT QPOE files will be aspect corrected to J2000.0.
+
+\item{(3).}To convert from celestial to galactic coordinates.
+
+\item{(4).}To reproject to a different tangent plane.
+
+The effect of (2) and (3) can be achieved by just updating header
+parameters, without modifying $X,Y$ values.  However, since the
+transformations produce a roll angle change, it is probable that the
+user will wish to apply a rotation at the same time to take out the
+change or match to another image.
+
+\@{Notation for relevant header parameters}
+
+Certain key words in the QPOE header are necessary for the operation
+of rotation.  The output QPOE file may end up with revised values for some of these
+keywords.  The notation used here will be the same as in the
+specification for the contour task.
+
+*** Our projections are all assumed to be TANGENT projections ***.
+
+The QPOE file will need some form of the
+following header parameters:
+
+\vbox{
+\halign{
+\qquad\qquad # \hfil & : # \hfill \cr
+$X_t$, $Y_t$ & Pixel coordinate position of the tangent direction; real\cr
+& \qquad\qquad (may be outside image range) \cr
+$\alpha_t$, $\delta_t$ & RA and declination of the tangent direction; \cr
+& \qquad\qquad real or double; decimal degrees assumed\cr
+$\Delta X_p$, $\Delta Y_p$ & $X$ and $Y$ direction plate scales; real\cr
+& \qquad\qquad decimal degrees per pixel assumed \cr
+Roll angle, $\beta$ & Defined as positive, increasing in \cr
+& \qquad\qquad counterclockwise direction between $\delta=90.0$ and \cr
+& \qquad\qquad the positive $y$ axis. \cr
+}
+}
+
+Note that these header quantities correspond to FITS header keywords
+CRPIX1, CRPIX2, CRVAL1, CRVAL2, CRDELT1, CRDELT2, and CROTA2, and it
+is probably desirable that we should keep the same names and
+conventions for these quantities in our QPOE and IRAF image files.
+
+There should also be a header word to signify that the type of the tangent
+axis is celestial.  This means that the FITS header key words
+CTYPE1 and CTYPE2 would be set to
+RA$---$TAN and DEC$--$TAN, respectively.  We will also have
+a setting for EQUINOX {\it i.e.}, 1950.0 or 2000.0).
+
+Note: The task(s) which rotate a QPOE should also allow a
+user-selected change of plate scale from $\Delta X_p, \Delta Y_p$ to
+$\Delta X_p', \Delta Y_p'$, with corresponding shifts in the $X$ and
+$Y$ values.  This would enable a user to scale two images so that 
+subsequent application of the plot package `implot' display task, for example,
+could allow the user to plot the two images aligned.
+
+\@{QPOE to QPOE with new roll angle}
+
+The user-input will be a new roll angle, $\beta'$.  The only change to
+the QPOE header is that $\beta'$ will replace $\beta$.
+
+The transformation of each photon position $X,Y$, to new position
+$X',Y'$ is as follows:
+
+$$X' = X_t + (X - X_t)\cos (\beta - \beta') -
+{\Delta Y_p \over \Delta X_p}(Y - Y_t)\sin (\beta - \beta')
+\qquad\qquad (1)$$
+
+$$Y' = Y_t + (Y - Y_t)\cos (\beta -\beta') + 
+{\Delta X_p \over \Delta Y_p}(X - X_t)\sin (\beta - \beta')
+\qquad\qquad (2)$$
+
+
+\@{QPOE to QPOE at changed epoch}
+
+The user input will be a request to change from the epoch in the
+header to the other possibility we provide \footnote\dag{At first we
+should probably
+just implement 1950.0 to 2000.0 and {\it vice versa}, since this can
+be done accurately.
+However, we could 
+also install software which will calculate approximately the coefficients of the
+rotation matrix for any user-selected date.  (See Page B19 of
+{\it The Astronomical Almanac} (1988).)}
+The updates to the QPOE header will be that the RA and declination of
+the
+tangent direction, $\alpha_t, \delta_t$, will change to the equivalent
+RA and declination in
+the new epoch, $\alpha_t', \delta_t'$.  Secondly, the rotation angle
+will be replaced by a new rotation angle $\beta' = \beta + \phi$.
+
+Our code must know how to calculate $\alpha_t', \delta_t'$ and
+$\phi$.
+Pages B42 and B43 of {\it The Astronomical Almanac} (1988), give the
+equations for calculating the new celestial coordinates.  (In their
+notation our $\alpha_t, \delta_t$ are $\alpha_o, \delta_o$, and
+our $\alpha_t', \delta_t'$ are $\alpha_1, \delta_1$.)  We need only take
+the top 3 by 3 quadrant of the matrix, since we probably don't need to
+provide the user a facility to input proper motion (at least for the
+time being).
+
+The value of $\phi$ can be determined by:
+
+$$\phi = {\rm ATAN2}~(\cos \delta_t' \sin (\alpha_t' - \alpha_t),
+\sin \delta_t' \cos \delta_t -
+\cos \delta_t' \sin \delta_t  \cos (\alpha_t' - \alpha_t))$$
+
+(It's possible that there is a sign problem, and the two terms in the
+ATAN2 function should be negative.) 
+
+In conjunction with changing the epoch, the user should have the
+option of specifying a new roll angle (and performing \S 3 above), or
+rotating back to the original roll angle.  For the latter case, the
+$X,Y$ value of
+every photon will be replaced by $X',Y'$, using $-\phi$ in place of
+$\beta - \beta'$ in equations (1) and (2), and the header value of
+roll angle will return to $\beta$.  
+
+\@{Conversion from celestial to galactic coordinates}
+
+TBD
+
+\@{Projection to new tangent plane direction}
+
+TBD
+
+\vfill\eject
+
+
+
+
+
+

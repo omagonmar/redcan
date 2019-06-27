@@ -1,0 +1,46 @@
+Michelle Specific Tasks:
+     mprepare - Prepare Michelle data for reduction with the MID-IR tasks
+        mview - Interactively inspect each frame in a Michelle file
+  mbackground - Perform statistics on frames in a Michelle file # NOT RELEASED
+ mcheckheader - Make Michelle headers GSA-compatible
+
+T-ReCS Specific Tasks:
+     tprepare - Prepare T-ReCS data for reduction with the MID-IR tasks
+        tview - Interactively inspect each frame in a T-ReCS file
+  tbackground - Perform statistics on frames in a T-ReCS file
+tcheckstructure - Check the structure of a T-ReCS file.
+
+Imaging:
+       miview - View MID-IR data frames that have been M/TPREPAREd
+ mibackground - Perform statistics on frames that have been M/TPREPAREd  # NOT RELEASED
+        mibpm - Create bad pixel mask	# NOT RELEASED
+      mistack - A straight coadd of nod images within a given data file
+       miflat - Derive flat field and bad pixel mask for MID-IR images
+   miregister - Register and coadd nod images within a given data file
+     mireduce - Reduce images from MID-IR instruments
+
+Spectroscopy:
+   mstelluric - Telluric correction using a blackbody 
+    msabsflux - Telluric correction and absolute calibration
+     msreduce - Wrapper routine for reduction of T-ReCS or Michelle spectra
+    msflatcor - Apply bias and flat corrections to Michelle spectra
+   msdefringe - Defringe T-ReCS or Michelle 1-D spectra
+      msslice - Extract spectral slices along the slit for T-ReCS or Michelle spectra
+
+Michelle Polarimetry:
+     mipsplit - Write polaritry waveplate images to series of simple FITS file
+     mipstack - Straight average of nod images. Michelle polarimetry
+    mipstokes - Calculate Stokes parameters for each nod pair
+     miptrans - Calculate Stokes parameters from a stacked polarimetry file 
+      mipsstk - Combine individual Stokes images from mipstokes into a 
+                single set of images
+
+Utilities:						(NOT RELEASED)
+       miutil - Package with various optional utilities (NOT RELEASED)
+   
+... and the GNIRS package
+
+Cookbooks:
+    midirinfo - Overview over the MIDIR package
+midirexamples - Print reduction examples to the screen
+

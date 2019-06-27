@@ -1,0 +1,295 @@
+# $Header: /home/pros/xray/xspatial/detect/doc/RCS/ldetect.hlp,v 11.0 1997/11/06 16:32:26 prosb Exp $
+# $Log: ldetect.hlp,v $
+# Revision 11.0  1997/11/06 16:32:26  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:51:50  prosb
+# General Release 2.4
+#
+#Revision 8.1  1995/07/11  19:25:07  prosb
+#JCC - Description of region parameter says BKDEN radius is in
+#      arc-sec. It's actually in arc-min. (fap)
+#
+#Revision 8.0  1994/06/27  15:14:10  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:34:25  prosb
+#General Release 2.3
+#
+#Revision 6.2  93/12/22  13:32:00  janet
+#*** empty log message ***
+#
+#Revision 6.1  93/12/22  13:19:46  janet
+#jd - added new param mlsnr_thresh.
+#
+#Revision 6.0  93/05/24  16:19:37  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/13  12:11:48  janet
+#jd - updates for PROS 2.2 release.
+#
+#Revision 5.0  92/10/29  21:32:53  prosb
+#General Release 2.1
+#
+#Revision 1.1  92/10/23  15:34:18  janet
+#Initial revision
+#
+#
+.help ldetect Dec93 xray.xspatial.detect
+.ih
+NAME
+ldetect --  determine source positions from an input qpoe 
+.ih
+USAGE
+ldetect qpoe tab cell_size eband
+.ih
+DESCRIPTION
+
+    LDETECT runs the detect tasks (CELLMAP, SNRMAP, LPEAKS, BKDEN, and BEPOS)
+for a single detect cell size and threshold.  Intermediate files are saved.
+An overview of the detect algorithms and implementation is available in the
+\fIEXPLAIN_DETECT\fR on-line documentation.
+
+.ih
+PARAMETERS
+.ls qpoe = ""       prompt = qpoe file
+
+Name of the input qpoe file.  
+.fi
+
+.le
+.ls tab = ""       prompt = Output table root
+
+Required output table root.  The is specified by supplying the 
+rootname and the intermediate files will use the root in their names.
+See helps for 'lpeaks' and 'bepos' for for a list of what's included
+in their tables.
+
+.le
+
+.ls rh_cellsize = ""            prompt = ROSAT HRI Cellsize in arcsecs -
+.nf
+                                 6 | 9 | 12 | 24 | 36 | 48
+.fi
+Cellsizes for ROSAT HRI qpoe.
+.le
+
+.ls rp_cellsize = ""            prompt = ROSAT PSPC Cellsize in arcsecs -
+.nf
+                                 30 [h/b]| 45 [s]| 60 [s/h/b]| 120 [s/h/b]
+.fi
+Cellsizes for ROSAT PSPC qpoe.
+.le
+
+.ls eh_cellsize = ""            prompt = Einstein HRI Cellsize in arcsecs -
+.nf
+                                 6 | 9 | 12 | 24 | 48
+.fi
+Cellsizes for Einstein HRI qpoe.
+.le
+
+.ls ei_cellsize = ""            prompt = Einstein IPC Cellsize in arcsecs -
+.nf
+                                  144 [h/b]| 240 [s]
+.fi
+Cellsizes for Einstein IPC qpoe.
+.le
+
+.ls eband = "broad"             prompt = Energy Band (soft|hard|broad)
+.le
+
+Energy band.  Prompted when instrument is PSPC or IPC.  Choice of Soft,
+hard, or broad.  The PI filter appropriate to the band choice is appended
+to the qpoe filename.  PI bands must be respecified when running BEPOS.
+.le
+.ls region = "default"  prompt=Region Descriptor from which to compute bkden
+
+Required Region from which the background density is computed.
+If "default" is specified,  a default region is defined.
+The default region is (circle img_cenx img_ceny radius), where
+radius is the specified bkden parameter below specified in arc-minutes.
+.le
+.ls (radius = 7.5) [real]
+
+circle radius for default background density region
+.le
+.ls (fluctuation = 1.0) [real]
+
+Acceptable Fluctuation, F above.
+.le
+.ls (max_bkiter = 3) [int]
+
+Maximum iterations for computing bkden.
+.le
+.ls (value = 0.0) [real]
+
+Output parameters.  It is the computed background density, from the
+last run of the task.
+.le
+.ls (snr_thresh = 2.75) [real]
+
+Minimum SNR threshold for local detect (lpeaks).  Sources with computed 
+SNR's below this threshold are thrown out.
+.le
+.ls (mlsnr_thresh - 3.0) [real]
+
+Minimum SNR threshold for Maximum likelihood determination (bepos).  Sources 
+with computed SNR's below this threshold are thrown out.
+
+.le
+.ls (prf_sigma = 0.0)  [real] 
+
+PRF  Sigma  of  the field in arcseconds. When 0.0, the PRF sigma
+is computed by  keying  on  Telescope,  instrument  (from  input
+header)  &  ldetect.energy in a PRF lookup table (ldetect.prf_table)
+and using the coefficients that  are  returned  to  compute  the
+PRF.
+.le
+.ls (energy = 0.0)  [real]  
+
+Energy (KeV), key look up in PRF coefficients table,  coeffs are used to
+compute the Sigma for a Gaussian Point Response Function.
+.le
+.ls (prf_table = "xspatialdata$prfcoeffs.tab")  [string] 
+
+PRF coefficients table.  Entries for ROSAT PSPC/HRI & Einstein IPC/HRI.
+Lookup based on value of bepos.energy.  Returns coefficients assiciated
+with a default lookup when energy = 0.0, returns coefficients closest to
+the energy when exact match is not found.  
+.le
+.ls (max_iter = 50) [int]
+
+Maximum iterations for convergence to best positions values.
+.le
+.ls (max_conf_iterations = 20) [int]
+
+Maximum iterations for confidence error calculations.
+.le
+.ls (num_conf_lev = 2) [int]
+
+Number of confidence levels that confidence errors are determined for
+below.
+.le
+.ls (conf_68 = 2.3) [real]
+
+The 68 percent confidence level for minimum c-statistic calculation.
+.le
+.ls (conf_90 = 4.61) [real]
+
+The 90 percent confidence level for minimum c-statistic calculation.
+.le
+.ls (refine_limit = 45. ) [real]
+
+Pixel limit between LPEAKS and BEPOS position.  When the difference between
+the 2 positions is greater that this limit the source is thrown out.
+.le
+.ls (optimum_radius = 1.8) [real]
+
+Factor in calculating the radius of the bin over which we will search for 
+the position.  (bin_radius = optimum_radius * src_sigma)
+.le
+.ls (c_conv_epsilon = 1.0)  [real]
+
+Convergence minimum for c-statistic
+.le
+.ls (s_conv_epsilon = 1.0)  [real]
+
+Convergence minimum for source
+.le
+.ls (cenx_keywd = "CRPIX1")  [string]
+
+X center header keyword for off-axis angle calculation
+.le
+.ls (ceny_keywd = "CRPIX2")  [string]
+
+Y center header keyword for off-axis angle calculation
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the output Table file can be
+overwritten, if it already exists.
+.le
+.ls (display = 2) [int]
+
+Display info to screen.  Integer of range 0-5.  The higher the number
+more verbose the display.
+.le
+.ih
+EXAMPLES
+1.  
+
+.nf
+xp> ldetect 
+qpoe file : xdata$rp110590.qp
+Output table root: parlac45
+ROSAT PSPC Cellsize in arcsecs - 30 [h/b]| 45 [s]| 60 [s/h/b]| 120 [s/h/b]: 45
+Energy Band (soft|hard|broad) (broad): soft
+
+... Running Cellmap ...
+
+xdata$rp110590.qp[bl=30,pi=11:41] -> parlac45.imh
+add parlac45.imh,cellsize = 45
+parlac45.imh updated
+xdata$rp110590.qp[pi=11:41]
+
+... Running Snrmap ...
+
+Convolving 3x3 cells
+
+Convolving 5x5 cells
+
+Calculating Snrmap with equation:
+
+snrmap=(1.7777*cell3-frame)/((1.7777**2*cell3+oframe)**0.5)
+
+Writing Snrmap Image:
+parlac45_snr.imh
+
+... Running Lpeaks ...
+
+src#  logx    logy     physx     physy    cellx/y     snr
+---------------------------------------------------------
+
+   1  233.00  260.00   6990.00   7800.00   45   45     3.527
+   2  232.00  312.00   6960.00   9360.00   45   45    17.798
+
+Writing to Output file:  parlac45_ruf.tab
+
+... Running Bkden ...
+
+Bkden region is circle 256.00 256.00 7.50'
+
+
+Bkden = 1.1024632 counts/arcmin**2
+
+... Running Bepos ...
+
+*** PI bands must be Respecified with input QPOE ***
+
+
+Input Qpoe: xdata$rp110590.qp[pi=11:41]
+bkden = 1.1024632 (cts/sq arc-min), 0.0000766 (cts/sq pixel)
+
+
+2 Rough Position(s) Input
+
+ src#      ra            dec       physx    physy  cellcnts framecnts snr
+---------------------------------------------------------------------------
+   1    22:08:38.3    45:31:50.5   6996.9   7802.5      32      18     3.4
+   2    22:08:41.4    45:44:49.5   6934.5   9360.6    2046    2086    16.8
+
+Writing 2 Sources to Output file:  parlac45_pos.tab
+.fi
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation giving an overview of the detect package and run order of
+tasks. (\fIhelp using_detect\fR)
+
+Documentation on the detect algorithms and philosophy along with limitations
+in (\fIhelp explain_detect\fR).
+
+Documentation Match Source task. (\fIhelp lmatchsrc\fR)
+.endhelp
+

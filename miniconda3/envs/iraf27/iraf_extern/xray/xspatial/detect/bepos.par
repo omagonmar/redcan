@@ -1,0 +1,79 @@
+#$Header: /home/pros/xray/xspatial/detect/RCS/bepos.par,v 11.0 1997/11/06 16:32:31 prosb Exp $
+#$Log: bepos.par,v $
+#Revision 11.0  1997/11/06 16:32:31  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:50:07  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:11:19  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:34:43  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:12:57  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/13  11:40:13  janet
+#changed display max to 10, 10 is for xexamine output.
+#
+#Revision 5.0  92/10/29  21:33:17  prosb
+#General Release 2.1
+#
+#Revision 4.5  92/10/23  09:43:44  janet
+#changed snr thresh to 3.0.
+#
+#Revision 4.4  92/10/19  14:13:20  janet
+#commented out snr coefficients from param list ... out of code too.
+#
+#Revision 4.3  92/10/13  12:54:49  janet
+#switched order of a couple of new params.
+#
+#Revision 4.2  92/10/07  11:18:26  janet
+#changed defaults for prf_table & snr_thresh.
+#
+#Revision 4.1  92/09/25  11:16:40  janet
+#added params energy, prf_sigma.
+#
+#Revision 4.0  92/04/27  14:37:39  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/23  18:06:56  janet
+#updated param names and prompts.
+#
+#Revision 3.0  91/08/02  01:19:43  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:52:26  pros
+#General Release 1.0
+#
+#
+#  Parameters for the imbepos task
+#
+qpoe,s,a,"",,,"Input qpoe file"
+rough_fname,s,a,"",,,"Input rough pos table"
+bepos_tab,s,a,"",,,"Output bepos table file"
+bkden,r,a,.00100,,,"Field background density in cts/arcmin**2"
+prf_sigma,r,h,0.0,,,"Prf sigma in arcsecs (0.0 for default calculation)"
+energy,r,h,0.0,,,"Energy (KeV) (0.0 for default coeffs)"
+prf_table,s,h,"xspatialdata$prfcoeffs.tab",,,"Prf coefficient table"
+snr_thresh,r,h,3.00,,,"Minimum SNR threshold"
+display,i,h,2,0,10,"Display level"
+clobber,b,h,no,,,"Clobber if file exists"
+max_iter,i,h,50,,,"Maxmum Postition search iterations"
+max_conf_iter,i,h,20,,,"Maximum confidence iterations"
+num_conf_levels,i,h,2,,,"Number of confidence levels"
+conf_68,r,h,2.3,,,"Confidence 68"
+conf_90,r,h,4.61,,,"Confidence 90"
+refine_limit,r,h,45.,,,"Refine limit"
+optimum_radius_sigma,r,h,1.8,,,"Optimum radius sigma"
+#num_snr_coeffs,i,h,3,,,"Number of snr coeffecients" 
+#snr_1_coeffs,r,h,-1.0,,,"First  snr coefficient"
+#snr_2_coeffs,r,h,0.0,,,"Second snr coefficient"
+#snr_3_coeffs,r,h,0.0,,,"Third  snr coefficient"
+#fine_snr_factor,r,h,1.0,,,"Fine snr factor"
+c_conv_epsilon,r,h,1.0,,,"Convergence epsilon c-statistic"
+s_conv_epsilon,r,h,1.0,,,"Converence epsilon src cnts"
+cenx_keywd,s,h,"CRPIX1",,,"X center hdr keyword for off-axis angle calc"
+ceny_keywd,s,h,"CRPIX2",,,"Y center hdr keyword for off-axis angle calc"

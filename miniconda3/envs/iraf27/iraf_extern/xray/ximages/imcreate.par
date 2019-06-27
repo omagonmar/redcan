@@ -1,0 +1,40 @@
+#$Header: /home/pros/xray/ximages/RCS/imcreate.par,v 11.0 1997/11/06 16:28:20 prosb Exp $
+#$Log: imcreate.par,v $
+#Revision 11.0  1997/11/06 16:28:20  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:32:30  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:41:52  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:25:27  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:03:31  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:25:53  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:13:49  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:15:13  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:48:48  pros
+#General Release 1.0
+#
+#  Parameters for the imcreate task
+
+output_image,s,a,"",,,"name of output image file"
+output_dims,s,a,"",,,"dimensions in output image file"
+output_datatype,s,a,"r",,,"data type of output image file"
+output_title,s,h,"",,,"title for header of output image file"
+input_value,s,a,"",,,"name of input file or a pixel value"
+input_datatype,s,a,"r",,,"data type of input file"
+input_headersize,i,a,0,,,"size of header of input file in SPP char"
+clobber,b,h,n,,,"delete old copy of output image file"
+

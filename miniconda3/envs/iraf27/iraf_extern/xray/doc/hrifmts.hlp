@@ -1,0 +1,179 @@
+.help hrifmts Dec93 xray
+.ih
+NAME
+
+hrifmts -- Selected RDF/Rev0 file comparisons for ROSAT HRI data
+.ih
+USAGE
+
+This document compares the file names and column names of selected
+ROSAT HRI data files.
+
+.ih
+DESCRIPTION
+
+.nf
+========================================================================
+HRI Aspect Data:
+----------------
+
+     RDF		        US  REV0		MPE REV 0
+------------------------------------------------------------------------
+   rh<seqid>_asp.tab           - NONE -                 - NONE -
+----------------------  ------------------------  ----------------------
+col_name   units        
+----------------------  
+TIME       (secs)   
+MJD_INT    (days)
+MJD_FRAC   (days)
+ASP_QUAL   (coded) 
+STT_QUAL   (coded)
+RA_SC      (deg)
+DEC_SC     (deg)              
+ROAN_SC    (deg)
+RA_ERR     (deg)             
+DEC_ERR    (deg)
+ROAN_ERR   (deg)    
+OBI_NUM    (none)
+----------------------  
+
+========================================================================
+HRI Ephemeris (orbit) data:
+---------------------------
+
+     RDF		        US  REV0		MPE REV 0
+------------------------------------------------------------------------
+rh<seqid>_eph.tab       rh<seqid>_eph.tab	  <seqid>_orbit.tab   
+----------------------  ------------------------  ----------------------
+col_name   units        col_name   units          col_name   units        
+----------------------  ------------------------  ----------------------
+MJD_INT    (days)	---	    ---		  ---         ---
+MJD_FRAC   (days)	---  	    ---		  ---         ---
+---	    ---  	IUT1_SO    (yymmdd) 	  DATE       (yymmdd)
+---	    ---		IUT2_SO    (seconds)	  DAYSEC     (sec)
+---	    ---		IUT3_SO    (.1 msec)      ---         ---
+---	    ---		SCTIME     (1/64 sec)     ---	      ---
+SUN_X      (none) 	ISUN_SOX   (1/1e8) 	  XSUN       (10**-8)
+SUN_Y      (none)       ISUN_SOY   (1/1e8) 	  YSUN       (10**-8)
+SUN_Z      (none) 	ISUN_SOZ   (1/1e8) 	  ZSUN       (10**-8)
+MOON_X     (none)       MOON_SOX   (1/1e8) 	  XMOON      (10**-8) 
+MOON_Y	   (none)  	MOON_SOY   (1/1e8) 	  YMOON      (10**-8) 
+MOON_Z     (none)  	MOON_SOZ   (1/1e8) 	  ZMOON      (10**-8) 
+SAT_X      (none) 	ISAT_SOX   (meter) 	  XSATELLITE (m)     
+SAT_Y      (none) 	ISAT_SOY   (meter) 	  YSATELLITE (m)
+SAT_Z      (none) 	ISAT_SOZ   (meter)  	  ZSATELLITE (m)      
+LON_EAST   (deg)        ILON_SO    (.1 arcsec) 	  LONGITUDE  (arcsec/10)
+LAT_NORT   (deg) 	ILAT_SO    (.1 arcsec)    LATITUDE   (m)
+ALT_SAT    (m)          IALT_SO    (meter)        ALTITUDE   (arcsec/10)
+GHA        (deg) 	IGHA_SO    (.1 arcsec)    HOURANGLE  (arcsec/10)
+AZIM_SAT   (deg)        IAZS_SO	   (.1 arcsec)    AZIMUTSAT  (m)
+ELEV_SAT   (deg)        IELS_SO    (.1 arcsec)    ELEVATION  (arcsec/10)
+SES_ANG    (deg)	---	    ---		  ---         ---
+EST_ANG    (deg)        ---         ---		  ---         ---
+DIS_GSTA   (m)  	IDIS_SO    (meter) 	  DISTSAT    (m)
+OBI_NUM    (none)	---         ---
+----------------------  ------------------------  ----------------------
+
+========================================================================
+HRI Event Rates: 
+-----------------
+
+     RDF		        US  REV0		MPE REV 0
+------------------------------------------------------------------------
+rh<seqid>_evr.tab               - NONE -          <seqid>_eventrates.tab
+----------------------  ------------------------  ----------------------
+col_name   units               			  col_name   units
+----------------------  			  ----------------------
+TIME       (s) 					  TIME       (sc_sec)
+SECONDARY  (count)       			  SS_VALID   (cts/sec) 
+PRIMARY    (count) 				  PS_VALID   (cts/sec)
+ACCEPTED   (count)				  ---         ---
+INVALID    (count)  				  SS_INVALID (cts/sec)   
+LIVT_COR   (none) 				  LTF_CORR   (none)         
+BACKLEV    (count)				  ---         ---
+VIEWGEOM   (none)				  ---	      ---
+ASPERR     (none)   				  ---	      ---
+MASKED_OUT (count)				  ---	      ---
+SAADA_RT   (count)				  ---	      ---
+SAADB_RT   (count)				  ---	      ---
+---	    ---					  SAAD       (cts/sec)
+---	    ---					  SAAD_IND   (none)
+OBI_NUM     ---					  ---         ---
+----------------------  			  ----------------------
+
+
+========================================================================
+HRI Field Sky Catalog table (SKY):
+----------------------------------
+
+     RDF		        US  REV0		MPE REV 0
+------------------------------------------------------------------------
+rh<seqid>_sky.tab       rh<seqid>_sky.tab	         - NONE -       
+----------------------  ------------------------  ----------------------
+col_name   units        col_name   units          
+----------------------  ------------------------  
+SRC        (none)       src        (count)              
+RA         (deg)	ra         (degrees)
+DEC        (deg) 	dec        (degrees)
+ID 	   (none) 	id 	   (none)
+OBJECT     (none) 	obj        (none)
+ACC_FLAG   (none) 	acc        (none)
+VMAG       (mag) 	vmag       (none)
+BMAG       (mag) 	bmag       (none)
+SP_MORPH   (none) 	spmor      (none)
+RUXVN      (none) 	ruxvn      (none)
+NUM_REFS   (none) 	ref        (none)
+DIST       (none) 	dist       (none)
+----------------------  ------------------------  
+
+
+========================================================================
+HRI Source Information table:
+-----------------------------
+
+     RDF		        US  REV0		MPE REV 0
+------------------------------------------------------------------------
+rh<seqid>_src.tab       rh<seqid>_src.tab	        - NONE - 
+----------------------  ------------------------  ----------------------
+col_name   units        col_name   units          
+----------------------  ------------------------  
+SDS_NUM    (none)       src        (count)      
+RA         (deg) 	ra         (degrees)
+DEC	   (deg) 	dec        (degrees)
+---	    ---		pos_err    (pixels)
+X          (pixel)      x	   (pixels)               
+Y          (pixel) 	y          (pixels)
+XY_ERR     (pixel)      pix_err    (pixels)       
+IM_X	   (pixel) 	im_x       (pixels)
+IM_Y       (pixel)      im_y	   (pixels)
+LEV1_X     (pixel)      ---         ---
+LEV1_Y     (pixel) 	---         ---
+OFFAX	   (arcmin) 	offax      (arc-minutes) 
+CIR_RAD    (arcsec)   	crad       (arc-seconds)
+GROSS_CTS  (count) 	ccts       (counts) 
+GROSS_ERR  (count) 	ccts_err   (counts)
+CIR_BKG	   (count) 	cbkg       (counts) 
+NET_RT     (count/ks) 	net/1000   (.001) 
+NET_RT_ERR (count/ks) 	net_err    (.001) 
+1KEV_QE    (none) 	qe         (none)    
+1KEV_VIG   (none) 	vign       (none)  
+1KEV_CSC   (none)       csc        (none) 
+X_SIZE     (arcsec) 	x_size	   (arc-seconds)
+Y_SIZE     (arcsec) 	y_size     (arc-seconds)         
+BOX_CTS	   (count) 	bcts       (counts) 
+THRESHOLD  (count)      thres      (counts) 
+SNR        (none) 	s/n	   (none)
+EPT        (s) 		ept        (seconds) 
+SRC_PROB   (none)	psn0       (none)     
+EPI        (none)       epi        (none) 
+X_EC       (pixel) 	xec	   (pixels)
+Y_EC       (pixel) 	yec        (pixels)     
+RAD_EC     (arcsec) 	rec        (none) 
+EC_CSC     (none)  	ecsc       (none) 
+SIZE_COR   (none) 	sizcor	   (none)
+SC_ERR 	   (none) 	sc_err     (none)
+VARY       (none)       ---         ---
+----------------------  ------------------------  
+
+.fi
+.endhelp

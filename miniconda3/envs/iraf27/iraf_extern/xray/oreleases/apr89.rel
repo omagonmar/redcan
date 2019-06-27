@@ -1,0 +1,240 @@
+							April 3, 1989
+
+	The April 1, 1988 build of the PROS has been installed in the
+experimental IRAFX system and resides in the iraf/irafx/local/tasks/xray
+directory.  The xray package is a sub-package of local, containing the
+sub-packages einstein, nimages, spatial, spectral, and timing.
+
+I) NEW PROS AND QPOE FEATURES
+
+	The PROS package now supports several QPOE event record sizes.
+This allows users to create smaller files in cases where not all of the
+event information is required.  For example, if one is going to perform only
+spatial analysis, without regard to photon arrival time, a considerable
+saving in disk space can be achieved by creating a qpoe file containing
+only x,y,pha, and pi information (for Einstein IPC) or x,y (for Einstein
+HRI).
+
+	The following qpoe event sizes are supported:
+
+	name:				event information:
+
+	peewee				x,y
+	small				x,y,pha,pi
+	medium				x,y,pha,pi,time
+	large				x,y,pha,pi,time,dx,dy
+	region				x,y,pha,pi,time,dx,dy,region
+	xlarge				x,y,pha,pi,time,dx,dy,s11,s12
+
+Tasks that create qpoe files (such as xpr2qp, img2qp, qpcopy, qprotate)
+all prompt for the event size.  Valid input is one of the above names
+(or an abbreviation). Tasks such as qpcopy or qprotate will create an output 
+qpoe file with event records of any size.  If a smaller event size is
+created from a larger one, the overall file size is reduced.  If a larger
+event size is created from a smaller one, the record is padded with nulls.
+The ratio of files sizes for the above files (disregarding the size of
+the header) is 1:2:4:8:8.
+
+	For example, it is recommended that img2qp (create a qpoe file
+from an Einstein image) create peewee files for HRI and small files for
+IPC.  Xpr2qp can create any event size up to large, depending on the
+expected application.  The region event size is used by the timing
+package to filter by region. The xlarge event size is for special
+applications, such as AXAF HRC data.
+
+	All photon arrival times in qpoe events now reference a base time,
+instead of the beginning of the observation. For Einstein data, event times
+are referenced to January 1, 1978.
+
+	History information is now added to all image and qpoe files created
+by the PROS.  The new task xhdisp displays this information, while a new task
+xhadd allows users to add a history record to a qpoe or image file. (Users
+might add a history line after using imcal, for example.)
+
+	The header of the qpoe file is now considerably enhanced.
+Besides the history, information concerning event size and type of
+sort (position or time) are now stored in the header.  When qpoe
+files are created by a task that filters through a region mask, the
+mask header is saved, and, in addition, a composite mask (i.e., the
+logical AND of all region masks used thus far on the data by calls
+to qpcopy, etc.) is saved in the header.  The mask information can be
+displayed using qpdisp.
+
+	The header of the PLIO mask file has also been enhanced to
+store information such as mask type (region or exposure), dimenstions,
+and reference file.  For exposure files, a scale factor is stored that
+is the conversion between mask values and live-time.
+
+II) NEW TASKS AND PACKAGES
+
+	The spatial package has been split into a spatial package and
+an einstein package.  The einstein package contains tasks, such as xpr2qp,
+img2qp, expmask, eos2tab, that convert einstein data to IRAF-usable formats
+(qpoe and tables).  The spatial package contains tasks that run on images
+(imcnts, imcontour, immodel. etc.) and qpoe files (qpdisp, qpcopy, etc.)
+without regard to the mission.
+
+	A prototype contour task (imcontour) has been added to the spatial
+package that contours an image onto a sky or pixel map. Source positions 
+can optionally be overlayed onto the graph.
+
+	A qpoe to qpoe rotation task (qprotate), and a qpoe to qpoe copying
+task (qpcopy) have been added to the spatial package.  To rotate (copy) a
+qpoe file to an imh file, use rotate (imcopy).
+
+	A prototype timing package has been created.  This package contains
+two tasks, qptime (which sorts a qpoe file by time) and ltcurv (which creates 
+a light curve from a time-sorted qpoe file).  The latter also plots a simple 
+light curve and writes a table file for use in more sophisticated graphs and 
+future timing tasks.
+
+III) MAJOR MODIFICATIONS TO EXISTING TASKS
+
+	Imcalc now allows the output image to inherit the header of the
+left-most image in the expression.  The IRAF history is updated with the
+imcalc command used to make the image.
+
+	Imcnts has enhanced functionality.  Several new columns have been
+added to the output, including normalized bkgd counts, error/pixel, and
+a notes string.
+
+	The imdisp task now optionally creates a table file.  In addition,
+the option now exists to flip or not flip the display (and table).
+
+	Immodel now has the option of creating an error array at the same
+time that the model array is created.
+
+	Plcreate and pmcreate have been combined into a single task (plcreate)
+and pldisp and pmdisp have also been combined into a single task (pldisp).
+Both plcreate and pldisp have expanded functionality and now will display
+subsections of the mask.
+
+	Qpdisp now has several options, including the option to display
+history.
+
+	The vignetting task vigmask has been updated.
+
+	A new script, vigncorr, has been created to apply the vignetting
+correction to an image and write the proper history line into the image
+as well.
+
+IV) EXISTING XRAY PACKAGES AND TASKS
+
+	The xray package contains the following sub-packages and tasks
+(* denotes a new task, + denotes major modifications to a task):
+
+package		tasks		description
+
+nimages
+		imcreate	create an IRAF array from a binary file
++		imcalc		image calculator for IRAF arrays
+		imcompress	compress an image through pixel summation
+		imreplicate	expand an image through pixel replication
+
+spatial
++	        imcnts		count photons (with bkgd subtraction) in
+				regions
++	        imdisp		display pixel values in regions
+*		imcontour	display a contour map of an image
+		improj		perform rectangular projections on an image
++	        imsmooth	smooth an image
+	        immodel		create a model array from a source list
++	        plcreate	create a pixel list from a region (no
+				reference image)
++	        pldisp		display a pixel list
+*		qpcopy		qcopy a qpoe file to another qpoe file
+*	        qpdisp		display information in a qpoe file
+*		qprotate	rotate a qpoe file to another qpoe file
+*		vigncorr	correct an image for vignetting
++	        vignmask	generate vignetting corrections in PMIO mask
+				format
+*		xhadd		add an X-ray history record to qpoe or image
+*		xhdisp		display X-ray history
+
+einstein
+	        eos2tab		make a source table from the Einstein Observ.
+				Source DBase
++	        expmask		convert an Einstein exposure map to a PMIO mask
+*		img2qp		convert Einstein image data to a QPOE file
++	        xpr2qp		convert Einstein XPR data to a QPOE file
+
+timing
+*		ltcurv		create a light curve (table) from a time-ordered
+				qpoe file
+*		qptime		sort a qpoe file by time
+
+spectral	<various>	see Diana W.
+
+
+	There are help pages for all tasks.  In addition, there is help for
+spatial filtering ("help regions"), PROS/IRAF coordinates ("help coords"),
+QPOE filtering ("help qpoe") and PROS file name conventions ("help extensions")
+in the xray package.
+
+V) SETTING UP TO USE THE XRAY PACKAGE
+
+	To run the new xray package, users must use the IRAFX version of IRAF.
+This is an experimental IRAF 2.7 with support for QPOE I/O.  To run IRAFX
+type "clx" instead of "cl".
+
+	Also, users who wish to perform QPOE filtering should add the
+following setenv command to their unix .login file:
+
+	setenv qmfiles /iraf/irafx/local/tasks/xray/QPDEFS
+
+This QPDEFS file defines various filter name aliases and sets QPOE defaults.
+
+	To use eos2tab, one must be given access to the eoscat data base.
+After permission is granted, the following entry must be placed in the unix
+.login file:
+
+	setenv ING_HOME	~ingres
+
+and ~ingres/bin must be included in the set path entry of your .cshrc file.
+Finally, ingnetdef must be run.  See Paul Grant for details.
+
+	Users should reset the parameter values of all xray tasks to their
+initial defaults if they were using the jan89 build.  See help on the iraf
+task "unlearn" for more information.
+
+VI) TEST DATA FILES
+
+	To gain some familiarity with the system, there are some Einstein
+data files available.  The directory /pros/einstein contains the necessary
+data files for the Einstein sequences:
+
+		i292, i296, i300, i574, h1043
+
+	The -.mhdr, -.tgr, -.xpr, and -.img files are input to the xpr2qp 
+or img2qp task to produce an IRAF qpoe file.  The -.exp file is input to
+the expmask task to produce the corresponding exposure mask.
+
+	The directory /pros/qpoe contains QPOE files for i296 and h1043. 
+In addition, the directory /pros/pix contains IRAF image files (.imh)
+for i296 and h1043. The h1043 image has been blocked at a block factor of 4,
+so that its dimensions are 1024 x 1024.
+
+VII) XIMAGE
+
+	A new version of ximage that fully supports region filtering now
+exists. This ximage has many new features and works with the IRAF tv.display
+task.  To run ximage in this mode, execute:
+
+		ximage -pros
+
+and then use tv.display, as with imtool.  See Mike VanHilst for more
+details and the new manual.
+
+VIII) KNOWN BUGS
+
+	Due to a bug in QPOE, xhadd cannot be used to add history to a
+qpoe file. This will be fixed in a future build.
+
+	The img2qp and xpr2qp tasks still can have trouble with memory.
+If these tasks run and seem to take an extremely long time (>10 minutes
+for 100000 photons) or give strange error messages ("can't delete file"),
+try using a smaller sortsize buffer.
+
+	We welcome comments, suggestions, and especially, bug reports.
+
+

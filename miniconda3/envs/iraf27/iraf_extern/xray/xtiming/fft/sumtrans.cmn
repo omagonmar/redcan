@@ -1,0 +1,6 @@
+pointer transform               # l: fft output transform 
+pointer stransform              # l: sum of fft output transform 
+pointer powerdist               # l: fft output power distribution
+common /sumptrs/transform,stransform,powerdist
+
+

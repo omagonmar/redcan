@@ -1,0 +1,484 @@
+.help irme0 Dec93 mem0 
+.ih
+NAME
+irme0 -- Perform deconvolution of an image by MEM
+.ih
+USAGE
+irme0 input psf model output rdnoise gain 
+.ih
+PARAMETERS
+.ls input
+Input degraded image to be deconvolved.
+.le
+.ls psf
+Input data file of the point spread function.
+.le
+.ls model
+Input model (prior) image used initially in the iteration.
+.le
+.ls output
+Output restored image.
+.le
+.ls rdnoise
+Readout noise in electrons.
+.le
+.ls gain
+A/D conversion constant, electrons/DN.
+.le
+.ls tp=0.0
+The total power (flux) of the image.
+Enter 0 for automatic calculation.
+.le
+.ls icf=""
+Input data file of the Intrinsic Correlation Function (ICF). 
+.le
+.ls sigma=0.0,0.0
+Sigmas of an elliptic Gaussian function used as ICF if no ICF file 
+is provided. Enter 0 for using another parameter fwhm 
+(full width at half maximum).
+.le
+.ls fwhm=0.0,0.0
+FWHMs of the Gaussian function (ICF).
+.le
+.ls hidden=no
+The restored hidden image may be convolved with ICF to get a
+visible image. Set hidden=yes to output the  hidden image, or
+use hidden=no to output the visible image.
+.le
+.ls aim=1.0
+A factor for setting the actual target chi-square value, namely,
+target chi-sq = Ndata * aim.
+.le
+.ls maxiter=100
+Prescribed maximum total number of iterations.
+.le
+.ls message=3
+For the verboseness of the output messages when running the task, 
+1 (least) - 3 (most).
+.nf
+  message=1: basic iteration summary only. 
+  message=2: plus input summary.
+  message=3: plus additional iteration summary.
+.fi
+The meanings of messages will be explained later.
+.le
+.ls m_update=1
+Model updating interval, i.e., the model is updated every m_update'th
+outer iteration.
+.le
+.ls damping=1.0
+The normalized (1.0 - 100.) damping factor used in the approximate
+Newton-Raphson method.
+.le
+.ls opt=3
+Optimal 1-D search of the maximum point of the objective function.
+.nf
+  opt=1: no (step=1.0).
+  opt=2: using quadratic inter/extrapolation.
+  opt=3: using quadratic extrapolation and cubic interpolation.
+.fi
+.le
+.ls a_sp=10.0
+Speed factor for renewing the Lagrange multiplier alpha for
+the data fit constraint.
+.le
+.ls a_rate=0.5
+Increase/decrease rate for a_sp, used when a_sp is too small/large 
+(alpha increases too slowly/fast).
+.le
+.ls b_sp=3.0
+Speed factor for renewing the Lagrange multiplier beta for
+the total power constraint.
+.le
+.ls tol=0.05,0.05,0.10
+Convergence tolerances for ME solution, data fit, and total power.
+.le
+.ih
+DESCRIPTION
+This is a task for 1-D or 2-D image restoration by MEM. In search of the
+maximum point of the objective function, the approximate Newton-Raphson method
+for optimization is used. Data fit and the total power are controlled by the
+Lagrange multipliers \fIalpha\fR and \fIbeta\fR, respectively, to meet the
+constraints. (See REFERENCES.)
+
+The program uses a double iteration scheme: the values of \fIalpha\fR and
+\fIbeta\fR are changed in the outer iteration, while the inner iteration 
+is for finding the ME solution for the particular \fIalpha\fR and \fIbeta\fR.
+ 
+The major revision in this version of program is the use of the
+model updating technique. (See the item \fImodel\fR and \fIm_update\fR,
+and REFERENCES.)
+	
+Choosing appropriate parameters is a rather difficult matter
+in running an MEM program. Every effort has been made for the user's
+comfort in running the task. However, some difficulties may still be
+encountered. Some suggestions and comments, and examples
+are given in the following.
+
+\fIImage sizes\fR
+
+The input degraded image, PSF, model image and ICF may have different 
+sizes. They need not be a power of two. The actual sizes of the arrays
+holding the images in the program are equal to the maximum of the 
+degraded image and PSF sizes. 
+The read-in areas of the model image and ICF,
+if provided by the user, will not exceed this maximum. 
+The output deconvolved image will have the same size as
+the input degraded image. Its pixel value datatype will be forced to be
+real.
+
+As the general guideline, keep the PSF, model
+image and ICF in the smallest sizes possible. Perform deconvolution only
+for the degraded image's area of interest. 
+But be aware of the edge effect. 9 real and 2 complex arrays
+are needed in the deconvolution procedure. So, for example,
+to process a 512x512 image, the required core memory is somewhat 
+more than 1.0*13=13MB.
+
+From the point of view of FFT speed, the array size 
+should be a power of two if possible.
+If this is impractical, then it must be avoided to use
+an array size (usually equal to the degraded image's size) having
+a large prime number factor. As a good example, on Sun 4/370
+a 128x128 FFT takes 0.42 second, while a 127x127 FFT
+takes 6.9 seconds. (A 512x512 FFT takes 8.7 seconds.)
+
+To assist the user in choosing the array size, three tasks are available:
+\fIfactor\fR in the package stsdas.analysis.fourier and \fIpfactor\fR 
+in the mem0 package used to factorize a natural number,
+and \fIirfftes\fR in the mem0 package used to determine the FFT speed. 
+
+\fIpsf\fR
+
+The PSF must be space-invariant. In the input file
+the peak of PSF need not be centered. The peak value or volume of PSF
+need not be normalized. The program takes care of this. 
+
+\fImodel\fR and \fIm_update\fR
+
+The user entered \fImodel\fR image (e.g., a filtered degraded image)
+will be used as the model initially in
+the iteration. If no \fImodel\fR image is entered, a flat model will be
+generated by the program for this purpose.
+In the first run of the task, the model is usually a flat
+image and simply enter a space.
+In the subsequent runs, the previous ME solutions should
+be used as the models.
+
+Once the task has started to run,
+the model will be updated automatically every \fIm_update\fR'th outer
+iteration. For default \fIm_update\fR=1, the model will be updated
+in every outer iteration, i.e., the ME solution found in the
+previous outer iteration for the particular alpha and beta will be
+used as the model to start a new iteration with a new alpha increased
+from zero. In this way the values of alpha in iterations are minimum,
+and therefore the approximation in solving for the image change in the
+Newton-Raphson method is most accurate.
+Consequently, convergence is fastest. Set \fIm_update\fR to a large
+number, say 9999, for no model updating.
+The advice is to always use the default value for the fastest convergence
+and least nonlinearity in photometry.
+
+
+\fIrdnoise\fR and \fIgain\fR
+
+The parameter \fIrdnoise\fR is the CCD readout noise in electrons, while
+\fIgain\fR is the A/D (analogue-to-digital unit) conversion constant or adu
+for calculating the Poisson noise variance in DNs.
+
+The default \fIrdnoise\fR=13.0 and \fIgain\fR=7.5 are for the WF/PC of the
+Hubble Space Telescope (from the instrument handbook) before the servicing
+mission. With FOC, \fIrdnoise\fR=0 and \fIgain\fR=1. (The program may not 
+restore FOC images correctly due to the improper noise model.)
+The noise level may be higher if estimated from the degraded image.
+
+\fItp\fR
+
+The total power of the image is conserved after deconvolution. 
+A non-zero \fItp\fR provided by the user
+will be used for the constraint. If its value is zero, the program will
+look for the keyword ME_TP in the \fImodel\fR image (if provided by the 
+user). The existence of this keyword indicates that \fImodel\fR is an ME
+image from the previous run of the task, and its value will be taken
+as \fItp\fR. In this way, a constant \fItp\fR will be used in 
+a step-by-step deconvolution of an image. 
+If the user proveded \fItp\fR is zero and no ME_TP is found,
+the total power of the input degraded image will be taken as \fItp\fR.
+In optical image deconvolution, normally the user doesn't have
+to take care about \fItp\fR.
+
+\fIicf, sigma, fwhm\fR and \fIhidden\fR
+
+The image formation is modeled like this:
+.nf
+   hidden image * ICF * PSF + noise = degraded image,
+.fi
+where * denotes 2-D convolution. The hidden image, for which the 
+entropy is defined, has no correlations between its pixels.
+The correlations between pixels in the so-called visible image,
+equal to hidden image * ICF, are introduced by convolving the hidden
+image with ICF. This visible image 
+is what we really see.
+
+ICF may be input from a data file.
+If no file is provided, an elliptic Gaussian function is generated as ICF.
+Its sigma, or FWHM in each dimension may be entered, 
+\fIsigma\fR=\fIfwhm\fR/sqrt(8ln2). In the first dimension, for example, 
+if \fIsigma[1]\fR=0, then \fIfwhm[1]\fR will be read in and \fIsigma[1]\fR
+will be calculated from \fIfwhm[1]\fR. 
+\fIsigma[2]\fR and \fIfwhm[2]\fR are treated in the same way.
+By default, \fIsigma[1]-[2]\fR and \fIfwhm[1]-[2]\fR are zero. 
+Then the hidden image is identical to the visible image.
+
+The result from deconvolution is a hidden image, which may be output if
+\fIhidden\fR=yes, or convolved with ICF to get the visible image
+before output if \fIhidden\fR=no.
+  
+\fIaim\fR
+
+The criterion for the final convergence of deconvolution is 
+.nf
+    (current) chi-square = Number of data points * \fIaim\fR.
+.fi
+The default \fIaim\fR = 1.0 is for using the "standard" critical value
+of chi-square. Setting \fIaim\fR < 1.0 to allow the iteration to go
+farther for "over fitting" the data.
+
+\fImaxiter\fR
+
+The maximum number of iterations is prescribed so that the task may 
+stop running before convergence to output an intermediate ME image.
+After \fImaxiter\fR iterations, if an ME solution
+for the final \fIalpha\fR and \fIbeta\fR has not been found, maximally
+extra 20 iterations are allowed. 
+ 
+The intermediate ME image (with \fIhidden\fR=yes or \fIsigma\fR and
+\fIfwhm\fR equal to zero) may be used as the model to run the task again.
+This procedure of step-by-step deconvolution may be repeated until 
+the deconvolution converges (the data and total power constraints are 
+satisfied). 
+
+As a matter of fact, this model updating mechanism is built in the
+source code (model updating). Therefore, with \fIm_update\fR=1
+and a large \fImaxiter\fR, you need not perform deconvolution
+manually in a step-by-step manner unless you want the image files
+of intermediate results.  
+
+\fIdamping\fR
+
+In the approximate Newton-Raphson method, the non-diagonal elements of the
+Hessian of the objective function are simply ignored. A compensation
+may be made by increasing the diagonal elements (damping). 
+However, this compensation is not straightforward. 
+By default, \fIdamping\fR = 1.0, meaning no compensation. Set 
+\fIdamping\fR = 100.0 for a full compensation. The advice is not to 
+change this default value unless you fully understand the algorithm.
+
+\fIopt\fR
+
+In search of the maximum point of the objective function,
+a full step(=1) is first taken in the direction
+determined by the Newton-Raphson method. This step may not be optimal.
+If \fIopt\fR=2, an optimal step is calculated and taken by 
+one-dimensional search using quadratic inter/extrapolation.
+Set \fIopt\fR=3 for using quadratic extrapolation and cubic interpolation.
+In either case, the step is limited to be not greater than 4.
+The advice is not to change the default unless you fully understand the
+algorithm.
+
+\fIa_sp\fR, \fIa_rate\fR and \fIb_sp\fR
+
+The Lagrange multiplier \fIalpha\fR increases in the iteration,
+starting with zero for the input or updated model.
+Its increase speed is controlled by the parameter
+\fIa_sp\fR, which may be set to 5 through 20 for reducing
+the data misfit at reasonable speed. 
+
+The parameter \fIa_sp\fR will be increased if the following two 
+conditions are satisfied: 
+(1) the numbers of inner iterations for 
+convergence are not greater than 2 successively for 5 times,
+and (2) the last increase of \fIa_sp\fR took place at least 5 
+outer iterations before.
+The rate of increase is controlled by \fIa_rate\fR:
+.nf
+    \fIa_sp\fR = \fIa_sp\fR / \fIa_rate\fR.
+.fi
+\fIa_rate\fR=0.5 by default. 
+
+\fIalpha\fR and \fIa_sp\fR are adjusted automatically so that at the
+beginning of each outer iteration, the normalized magnitude of the 
+initial gradient of the objective function falls in the range [0.10, 0.51]
+
+If \fIalpha\fR
+increases too fast (\fIa_sp\fR is too large), then for a particular 
+\fIalpha\fR a large number of iterations may be needed to find an ME solution.
+(This number, \fIinner_iter\fR, may be output if \fImessage\fR=3.) 
+If this happens,
+the current \fIalpha\fR and \fIa_sp\fR will be decreased when
+mod((current) \fIinner_iter\fR,8)=0. The rate of decrease 
+depends on the parameter \fIa_rate\fR:
+.nf
+    \fIa_sp\fR = \fIa_sp\fR * \fIa_rate\fR.
+.fi
+
+The parameter \fIb_sp\fR plays a similar role as \fIa_sp\fR.
+However, the constraint on the total power is 
+not as crucial as the one on data fit, so \fIb_sp\fR
+is set to a smaller value, being 3 by default. No parameter like 
+\fIa_rate\fR is needed for \fIbeta\fR and \fIb_sp\fR.
+
+\fItol\fR
+
+This array contains the convergence tolerances for ME solution, data fit and 
+the total power, respectively. 0.05, 0.05, and 0.10 are reasonable default
+values for them.
+
+\fImessage\fR
+
+Most output messages are self-explanatory or can be
+understood on the basis of the above description. Additional
+information is given in the following.
+
+\fIVol/max of ACF of combination of PSF and ICF\fR:
+
+This figure is an indication of how far the Hessian of the (half)
+chi-square deviates from a diagonal matrix, and therefore how difficult
+the deconvolution would be. A small value of it implies that the deconvolution
+can be done with ease.
+
+\fIinner_iter\fR:
+
+Totally 5 numbers of inner iterations are printed, the current one being
+outside while the 4 previous ones being inside the parentheses.
+The minus sign indicates that the parameter \fIa_sp\fR was increased
+recently.
+
+\fINormalized\fR:
+
+The Normalized current value of chi-square, i.e., chi-sq / Ndata.
+
+\fI|gradJ|/|1|\fR: 
+
+The normalized \fI|gradJ|\fR, i.e., the ratio between 
+the magnitudes of the gradient of the objective function
+and unit vector, used to indicate the degree of approximation to the
+ME solution. (This value is zero for an exact ME solution.) The 
+tolerance \fItol[1]\fR is displayed in parentheses.
+
+\fItest\fR: 
+
+The value 1.0 - cos<grad H2 - \fIbeta\fR * grad F, \fIalpha\fR * grad E>.
+This is an indication of the parallelism between the two vectors shown
+in the above. This value is zero for an exact ME solution.
+
+\fIAn ME image obtained\fR: 
+
+An ME solution has been obtained for 
+the final \fIalpha\fR and \fIbeta\fR, that is, the objective function
+has been maximized, \fI|gradJ|/|1|\fR <= \fItol[1]\fR. 
+
+\fICongratulations for convergence !!\fR: 
+
+The iteration has converged,
+i.e., the entropy has been maximized AND the data fit and total power
+constraints have been satisfied. 
+
+Some parameters and statistics about the restored image are written into
+the output image header file. All the cards written by the task
+are under the header "irme0 records:" and have a prefix \fIME_\fR.
+The meanings of the keywords are as follows.
+
+\fIME_NOISE\fR, \fIME_ADU\fR, \fIME_TP\fR, \fIME_SIGM1\fR, \fIME_SIGM2\fR,
+\fIME_FWHM1\fR, \fIME_FWHM2\fR: 
+parameters used for deconvolution.
+
+\fIME_HIDDN\fR: a hidden (or visible) image?
+
+\fIME_MEIMG\fR: an ME image?
+
+\fIME_CONVG\fR: a converged image?
+
+\fIME_NITER\fR: the number of iterations.
+
+\fIME_MAX\fR, \fIME_MIN\fR: the maximum and minimum values of the hidden
+image (not necessarily equal to those of the output image).
+.ih
+EXAMPLES
+Because quite a few parameters are needed for running the task, 
+some of which are hidden, we advise the user to edit the parameters before
+running the task. (This is also the only way to change the parameter arrays.)
+Nevertheless, we give the following examples in which parameters are
+entered on the command line.
+
+1. Perform deconvolution on a section of the WFC image r136 
+with the PSF psf136, using a flat model image and no ICF, outputting an 
+image named me136. The maximum iteration number is 100 by default.
+.nf
+
+  cl>irme0 r136[1:90,31:120] psf136 "" me136 13 7.5 
+
+.fi
+2. This example illustrates how to enter the noise parameters
+to perform deconvolution on an image g1 having only zero-mean Gaussian
+noise with rms value equal to 2.0 (DNs).
+.nf
+
+  cl>irme0 g1 psf "" output 2.0e30 1.0e30 
+
+Poisson noise variance = (pixel value) / 1.e30 ~= 0.0 (DN), and
+Gaussian noise rms = 2.e30 (electrons) = 2.e30 / 1.e30 = 2.0 (DNs). 
+
+.fi
+3. For a noiseless blurred image b1, deconvolution can be done perfectly
+in principle and the iteration can go indefinitely. Set aim to a small
+value and maxiter to a large value for this purpose.
+.nf
+
+  cl>irme0 b1 psf "" output 1.0e30 1.0e30 aim=1e-4 maxiter=1000
+.fi
+.ih
+TIME REQUIREMENTS
+Four FFTs are needed in one iteration. In the case where the image size is a
+power of two, the other math operations is equivalent
+roughly to 1.0 FFT in CPU time; otherwise the CPU time for the former
+is negligible. Thus, 
+the CPU time is estimated to be
+.nf
+
+  CPU time for an FFT * (4 ~ 5) * the number of iterations. 
+
+.fi
+As an example, for processing a 256x256 image on Sun 4/370,
+the CPU time for an FFT is about 2 seconds, so 100 iterations requires
+approximately 1000 seconds or 17 minutes. On VAX-8800, the required
+CPU time is roughly 2200 seconds or 37  minutes ( 4.4 seconds for 
+a 256x256 FFT).
+.ih
+BUGS
+The Newton-Raphson method is efficient in optimization. However,
+its exact implementation is impractical due to the large size of image.
+In the underlying algorithm for this task, the solution is to simply 
+ignore the non-diagonal elements of the PSF matrix in calculating the
+Hessian of chi-square so that the Hessian of the objective function
+becomes a diagonal one. In this way the change of the iterational image
+is easily calculated. 
+
+Although the model updating technique is used, this simplified version
+of the Newton-Raphson method may result in slow convergence when the PSF
+is very broad. A better approximation to the method is needed. 
+.ih
+REFERENCES
+Nailong Wu, SCARS/STSDAS, STScI.
+
+Restoration: Newsletter of STScI's Image Restoration Project,
+Summer 1993/Number 1.
+
+Nailong Wu, Model updating in MEM algorithm, presented at "The Restoration
+of HST Images and Spectra II" Workshop at STScI, Baltimore, Nov. 1993.
+
+Cornwell, T.J. and Evans, K.F., Astron. Astrophys., 143, 1985, pp.77-83. 
+.ih
+SEE ALSO
+wiener, lucy in stsdas.analysis.restore
+.endhelp

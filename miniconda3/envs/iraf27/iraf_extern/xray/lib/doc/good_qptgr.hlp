@@ -1,0 +1,142 @@
+#$Header: /home/pros/xray/lib/doc/RCS/good_qptgr.hlp,v 11.0 1997/11/06 16:22:56 prosb Exp $
+#$Log: good_qptgr.hlp,v $
+#Revision 11.0  1997/11/06 16:22:56  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:57  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:47  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:36  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:04  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:49  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:49  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:47  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:32  pros
+#General Release 1.0
+#
+.help good_qptgr Apr89 PROS_Library
+NAME
+.in 4
+good_qptgr - return a list of good time intervals from the tgr file
+.sp
+.in -4
+USAGE
+.in 4
+call good_qptgr(tptr, nrecs, inst, list, nlist, duration)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	tptr		pointer		pointer to tgr records
+	nrecs		int		number of tgr records
+	inst		int		Einstein instrument-type
+
+Output Arguments:
+	list		double pointer	list containing start/stop times
+	nlist		int		number of start/stop pairs in list
+	duration	double		total time in good intervals
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine good_qptgr reads an array of tgr records and returns a list
+of start and stop times for all good intervals.  Good intervals are defined
+as those tgr records for whom the high order bit of word TGR_STAT1 is not set.
+(See qpoe.h for tgr record structure.)
+
+The first input argument is a pointer to an array of tgr records, returned by
+get_qptgr.  The second argument is the number of tgr records retrieved, and
+is also returned by get_qptgr.  The third argument is the Einstein instrument
+type.  This is normally gotten from the qpoe header using get_qphead.
+The first output argument is a pointer to a list of double precision
+start and stop times.  The second output argument is the number of start/stop
+pairs in this list, so that the size of the list is nlist*2*SZ_DOUBLE.
+The final output argument is the total time found in the good intervals.
+Note that the routine allocates memory to hold the start/stop list using
+calloc.  This space must be freed by the application using mfree.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how good_qptgr is used in conjunction with
+other tgr routines.  The routine prints the start time, stop time, and
+duration of all good time intervals. Note that get_qphead (or an equivalent
+means) is required to determine the instrument type.
+.in 8
+.nf
+include "/pros/builds/apr89/lib/qpoe.h"
+
+procedure goodtgr()
+
+char poefile[SZ_FNAME]	# pointer to name of data file + event list
+int	i		# loop counter
+int	nlist		# number of good times
+int	ntgr		# number of tgr records
+double	duration	# total good time duration
+double	diff		# duration of current interval
+pointer	list		# list of good times
+pointer	qp		# qpoe handle
+pointer	qphead		# qpoe header pointer
+pointer	qptgr		# qpoe tgr pointer
+
+pointer	qp_open()	# open a qpoe file
+
+begin
+	# get parameters
+	call clgstr("qpoe", poefile, SZ_FNAME)
+	# open the qpoe file
+	qp = qp_open(poefile, READ_ONLY, NULL)
+	# read qpoe header
+        call get_qphead(qp, qphead)
+	# get tgr records
+	call get_qptgr(qp, qptgr, ntgr)
+	# get list of good time intervals
+	call good_qptgr(qptgr, ntgr, QP_INST(qphead), list, nlist, duration)
+	# print totals
+	call printf("%d good intervals with total duration %.2f\n")
+	call pargi(nlist)
+	call pargd(duration)
+	# display all good intervals
+	for(i=0; i<nlist; i=i+1){
+	    diff = Memd[list+(i*2+1)] - Memd[list+(i*2)]
+	    call printf("%.2f\t%.2f\t%.2f\n")
+	    call pargd(Memd[list+(i*2)])
+	    call pargd(diff)
+	    call pargd(Memd[list+(i*2+1)])
+	}
+	# close the qpoe file
+	call qp_close(qp)
+	# and free all space
+	call mfree(qphead, TY_STRUCT)
+	call mfree(qptgr, TY_STRUCT)
+	call mfree(list, TY_DOUBLE)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+It is questionable whether it is a good idea for the routine to allocate
+the space for the list, since the user must still free the space.
+.in -4
+.sp
+SEE ALSO
+.in4
+qpoe.h (which defines the struct into which tgr info is read),
+get_qphead, get_qptgr, disp_qptgr.

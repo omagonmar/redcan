@@ -1,0 +1,174 @@
+.help revisions Jun88 pkg.dataio
+.nf
+1.  IMCONTOUR parameter file updated.  Bad parameter definition         3/7/91 
+
+2.  RARR2FITS modified to recognise " " ( single space) as a blank
+string for the title to allow stand-alone operation.                    3/7/91
+ 
+3.  FITS2QP modified to fix auto-naming error, when manual filename
+doesn't already exist.                                                  3/8/91
+~
+4.  SPECTRAL models model_descriptor or ? for help (pow(0:1)*abs(19:22)): abs(20.5)*(ray(2.0,cosmic,
+100)+ray(0.01:0.9,0.1:0.7,cosmic,100))
+syntax error
+line: abs(20.5)*(ray(2.0,cosmic,100)+ray(0.01:0.9,0.1:0.7,cosmic,100)
+ERROR: couldn't create model stack
+
+	This appears to be a length problem  with the input, abbreviations
+will make it work:
+	c -> cosmic, etc.
+
+5.  Fixed problems with regions longer than 1024 characters.  Even though
+SZ_PLHEAD was increased to 8192, the IRAF %s format appears only to
+be valid for 1024 characters.  Many lib routines needed to be updated.
+One region routine was not dimensioning with SZ_PLHEAD, so
+this was a problem as well.						3/22/91
+
+6.  FITS2QP.  QPOE files created from FITS were writing all lower case
+parameter values.  QPOE from TOE use all upper case parameter values.
+Some library routines would fail on the lower case values, plus they
+are almost impossible to see.
+
+7.  QPCOPY.  Fixed library routines qpcsort and qpcreate so that 
+an index is made on a simple qpcopy, if the original file had
+an index.  This was failing due to lower-case header parameter values.
+and regions access would die without the index ( qpie_getevents
+probably still has a problem with non-indexed files. )
+									3/22/91
+
+8. SDFSPEC: change to help file and param file to correct mislabeled
+output file.  Print output file in routine.				3/22/91
+
+9. QPSPEC: change to default instrument types so that it actually works.
+This should not effect usual instruments.  Updates to qpspec.par,x,hlp
+									3/22/91
+
+10. BLACKBOX,TESTDATA:  RARR2FITS has been updated to record the	4/2/91
+proper scale and bias factor for PSPC image files.   Data processed
+before this data need a 'manual' correction for the background
+data of dividing by 1000.
+	In particular the released test data: xdata$ca110590_bk1,2,3.imh
+have this problem as well as the first run of SASS on the PCV data.
+
+11.  XPR2QP and XPR2FITS parameter files now default to datarep = 0.
+There were many bug reports by users of bad files.  If the datarep
+is wrong the IMAGE header is bad, specifically the floating point values.
+Symtoms - bad WCS ( RA,DEC) and bad ON-TIME.
+
+12. Fixed GRID_SEARCH so that it is possible to input negative temperatures.
+									4/3/91
+
+13. IMCONTOUR updated to handle bad contour level inputs.  Parser returns
+an error and takes a new input.  Before things got scrambled and the 2nd
+input was never properly handled and the task continued to complain about
+the 1st input.							     4/4/91
+
+14. IMCONTOUR updated to work on images with WCS info but not necessarily the
+Xray header as was previously required.  Came up to fix the task to work on
+IRAS images.								4/4/91
+
+15. LTCURV,FOLD,PERIOD all didn't subtract background when specified.  The 
+tasks didn't die, they just worked on the Source.  The dobkgd logical wasn't
+being used properly, the BKNORM parameter was never being read in, and in
+the case of period & fold the bk qp events wasn't getting opened.  This stuff
+got lost when the tasks were rewritten last fall ... they did work prior to
+the rewite.							     4/4/91
+
+16. FIT would not consistantly fit rosat data.  A bug that was trashing the 
+normalization when pspc data was folded has been fixed.			4/15/91
+
+17.  IMMODEL parameter file updated.  Missing the display definition    4/17/91
+
+18.  FIT and QPSPEC in SPECTRAL were updated to correctly read and write
+the PWPC filter parameter, so FILTER responses were properly applied	4/18/91
+
+19.  FIT was not correctly calculating the CHISQ normalisation
+in the case of no free parameters.                                      4/18/91
+
+20.  Default parameter for TIMSORT.qpi was changed from no to
+yes so that the mkindex parameter was EXPLICITLY set to no.
+Even though qpcreate correctly recognised a timsort as invalid
+for an index the resulting time-sorted QPOE files, did not
+have valid MIN, MAX values for event entries				5/16/91
+
+21. SPECTRAL								5/25/91
+{ Changes made in the lastest spectral development version:
+
+	1. Allowed all parameters, including fixed parameters to be
+	   linked.
+	2. Changed the model output that is placed into the _prd.tab
+	   file.  This is a spec change; the decision not to show
+	   links in the best model was wrong.
+	3. Corrected the line model output to have three arguements.
+	4. Allowed for multi-line model statements in the _prd.tab.
+	5. Forced axis parameters not to be linked.  This prevents an
+	   error message that enforces the same thing.
+	6. Corrected minimum log value, and changed trap for small
+	   values.
+	4. Corrected the "column exists" error in grid_search.  For two
+	   component models.
+	6. Change in the comparison of ascii input bals to the bal
+	   tables.
+	7. Changes dmm has made to the plotting	routines to fix the
+	   pen down problem in the graphics. 
+	8. I think this is the first incorporation of the low temperature
+	   kluge.
+	9. The iterations in the fit.par and grid_search.par were
+	   different, at 400 and 1000, respectively.  The help file
+	   for sayed 10000.  These are all now 1000.
+       10. Added width to parameters that can be put on an axis in
+	   grid_search; made two component axis prompt clearer.
+       11. Made the file request in plot_grid.par clearer.
+}
+
+22. IMCONTOUR							6/91
+       1.  Added precision to ra/dec in legend
+       2.  Updated scale input to take Y scale and x/y ratio
+       3.  Fixed bug in specified X axis scale 
+       4.  Fixed handling of negative degree srclist input
+       5.  Added check to Src positions before graphing so that extraneous 
+	   ??? don't get plotted when trying to access plot area not defined.
+
+23. XTIMING/TIMPLOT						7/91
+	1. Updated Plot headers 
+        2. Imbedded xaxis seconds labeling into code, setting min and max
+           x limits can now be specified in sdeconds and not just bins.
+
+24.  Restructure of XRAY package names				
+	Included automatic loading at package level of
+	TABLES ( or STSDAS ) utilities				7/91
+
+25. IMPROJ							7/91
+       Fixed bug in init_table routine that defined the format of the x/y
+       counts column as integer when it should have been real.  
+
+26. XTIMING/FFT
+	Added normalized power to all 3 output tables as well as
+complete headers.						7/91
+
+27. XDATAIO/FITS2QP
+	Yet another check to prevent the auto-naming feature for
+conflicting with the user-naming feature.			7/91
+
+
+28. XSPATIAL/MAKEVIG
+	Included the Quadratic functions for ROSAT vignetting
+in the code, so that user now only specifies the ENERGY and 
+the coefficients are calculated from the calibration info.	7/19/91
+
+29. XPLOT/IMCONTOUR						7/91
+	1. Added source marker options so that a char, a digit, or
+           a char and digit can mark a source on the graph.
+	2. Changed arcsecs_mm/pix_mm scale params to one param named
+           scale that takes on the units based on the map type (sky or pixel)
+	3. Added 'lin' as an abbreviation of 'linear' for specifying
+           contour levels.
+
+30. XPROTO/NEWIMCONTOUR						7/91
+	Replaced skymap code that plotted the sky based on the image 
+        center with new ST wcslab code that utilizes the WCS of the image.  
+        Retains all the new and old features of imcontour except that
+        it can't draw the sky on an image without a header.  Can draw 
+        rotated and subsectioned images.
+.endhelp
+

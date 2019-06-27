@@ -1,0 +1,459 @@
+#$Header: /home/pros/xray/xdataio/doc/RCS/fits2qp.hlp,v 11.2 1998/04/24 16:14:15 prosb Exp $
+#$Log: fits2qp.hlp,v $
+#Revision 11.2  1998/04/24 16:14:15  prosb
+#Patch Release 2.5.p1
+#
+#Revision 11.1  1998/03/26 21:17:35  prosb
+#JCC(3/98) - Add notes.
+#
+#Revision 11.0  1997/11/06 16:34:05  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:57:57  prosb
+#General Release 2.4
+#
+#Revision 8.2  1995/02/17  20:07:35  prosb
+#Fixed minor typo in hel pfile
+#
+#Revision 8.1  1994/10/21  13:52:15  dvs
+#Added new parameters to FITS2QP; added new SCALING section, and added
+#new bugs.
+#
+#Revision 8.0  94/06/27  15:19:07  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/15  15:55:14  janet
+#jd - pros 2.3.1 updates.
+#
+#Revision 7.0  93/12/27  18:38:12  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  10:04:32  janet
+#jd - updated for pros 2.3 release.
+#
+#Revision 6.0  93/05/24  16:23:54  prosb
+#General Release 2.2
+#
+#Revision 5.3  92/12/01  11:02:48  mo
+#MC	12/1/92		Add note to QPSORT the MPE output QPOE file
+#
+#Revision 5.2  92/11/25  12:11:48  mo
+#MC	11/25/92		Add corrections for FITS2QP parameter changes
+#
+#Revision 5.0  92/10/29  21:36:19  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/15  16:21:15  jmoran
+#JMORAN new MPE info
+#
+#Revision 4.0  92/04/27  15:00:58  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:12:26  prosb
+#General Release 1.1
+#
+#Revision 2.2  91/08/01  21:56:46  mo
+#MC	8/1/91		Update for new structure
+#
+#Revision 2.1  91/07/12  12:23:42  prosb
+#xray.xdataio   7/12/91
+#
+#Revision 2.0  91/03/06  23:37:10  pros
+#General Release 1.0
+#
+.help fits2qp Jun94 xray.xdataio
+.ih
+NAME
+fits2qp -- convert a FITS file (containing BINTABLE extensions)
+into an IRAF/PROS qpoe file
+.ih
+USAGE
+fits2qp fits qpoe
+.ih 
+DESCRIPTION
+\fIfits2qp\fR converts a FITS file into a PROS qpoe file.  The FITS files 
+are expected to conform to the OGIP standard for EVENT FITS files.  The  
+task also converts ASCII files created in the MPE archival format(only). 
+All parameters in the FITS file are added to the qpoe file.  The parameter 
+translation files (see below) specify name translations and actions triggered 
+by special parameters.  WCS (World coordinate system) parameters are used to 
+create qpoe WCS information.  The table specified as the event table (by the 
+event parameter in the FITS file) is converted into the main X-ray event 
+structure in the QPOE file.
+
+This task is a very general utility, but for any given FITS file it may 
+require a great deal of parameter optimization as well as translation
+files to produce the desired results.  For all ROSAT and EINSTEIN data,
+specialized scripts exist that have the correct parameter settings.
+(See the 'see also` section below.)
+
+The  task is sufficiently general that it will try to convert almost any 
+FITS file containing BINTABLE tables (Cotton's binary table extension). 
+If a standard OGIP FITS file is not used as input, several parameters 
+(naxes, axlen1, axlen2, events) must be set in the task in order to specify 
+which table contains the event records.  All other BINTABLE tables are 
+converted to qpoe opaque header arrays.
+
+The current implementation ignores all other types of FITS data, including
+images and ASCII tables, except ASCII files created in the MPE archival format.
+This may be changed in a future release.  For now we recommend the use of 
+the TABLES task \fIstrfits\fR to handle these other formats.  All data is 
+assumed to be in FITS machine independent format (IEEE format) and will be 
+converted into host format before being added to the QPOE file.
+.ih
+PARAMETERS
+.ls  fits = ""              prompt = input BINTABLE FITS file name
+
+The input FITS file name.
+.le
+.ls  qpoe = "tempqp"        prompt = output IRAF/PROS QPOE file name
+
+The output IRAF/PROS qpoe file name.  If OLDQPOENAME is set below
+this output file name will be superceded by the filename defined inside
+the FITS file using a RENAME at the end of the program.  If the null string 
+is input, the name will be the same root as the fits file with a ".qp"
+extension.  If a "." is used the name will be the same as the root input
+name WITHOUT the PATH. i.e. the output file will be in the current
+working directory.
+.le
+.ls (naxes = 0) [int]
+
+The number of axes that the qpoe file will contain.  This should be 2
+for the current implementation.  This parameter is only used if the
+FITS file does not contain the NAXES parameter, either in the main
+FITS header or in one of the BINTABLE headers.  For standard PROS FITS
+files, this value is stored in the FITS file.
+
+For MPE ASCII FITS files, set naxes = 2
+.le
+.ls (axlen1 = 0) [int]
+
+The dimension of the first qpoe axis.  This parameter is only used if
+the FITS file does not contain the AXLEN1 parameter, either in the
+main FITS header or in one of the BINTABLE headers, or the TLMAXnnn keywords
+for the default columns.  For standard PROS
+FITS files, this value is stored in the FITS file.
+
+.nf
+For MPE ASCII FITS files, this number will depend on the instrument:
+	PSPC: set axlen1 = 15360
+	HRI:  set axlen1 =  8192
+.fi
+.le
+.ls (axlen2 = 0) [int]
+
+The dimension of the second qpoe axis.  This parameter is only used if
+the FITS file does not contain the AXLEN2 parameter, either in the
+main FITS header or in one of the BINTABLE headers, or the TLMAXnnn keywords
+for the default columns.  For standard PROS
+FITS files, this value is stored in the FITS file.
+
+.nf
+For MPE ASCII FITS files, this number will depend on the instrument:
+        PSPC: set axlen1 = 15360
+        HRI:  set axlen1 =  8192
+.fi
+.le
+.ls (mpe_ascii_fits = no) [string]
+
+If the input file is an MPE ASCII FITS table, set this boolean to
+"yes", else leave it as "no"
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file can be
+overwritten, if it already exists.
+.le
+.ls (oldqpoename = yes) [boolean]
+
+Boolean flag to specify if the output file name should be generated
+automatically from the FITS keyword QPOENAME, overriding the
+output qpoe file name specified above by doing a RENAME at the
+end of the task.  In this case the OUTPUT filename above must
+be a 'dummy' name that will NOT conflict with the internal QPOENAME.
+.le
+.ls (display = 1) [int]
+
+The display level.  Not currently used.
+.le
+.ls (fits_cards = "xdataio$fits.cards") [string]
+
+The name  of the fits parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (qpoe_cards = "xdataio$qpoe.cards") [string]
+
+The name  of the qpoe parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (ext_cards = "xdataio$ext.cards") [string]
+
+The name  of the ext parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (wcs_cards = "xdataio$wcs.cards") [string]
+
+The name  of the wcs parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.nf
+
+NOTES: The following names are only for the ROSAT data :
+       "wcs.cards  wcshri.cards  wcspspc.cards  wcsipc1.cards"
+.fi
+.le
+.ls (old_events = "EVENTS") [string]
+
+The name of the BINTABLE in the FITs file containing the events.  
+.le
+.ls (std_events = "STDEVT") [string]
+
+The name of the BINTABLE in the FITs file containing the events.  It is
+the default name for the ROSAT standard event list in RDF format.
+.le
+.ls (rej_events = "REJEVT") [string]
+
+The name of the BINTABLE in the FITs file containing the rejected events.  It 
+is the default name for the ROSAT rejected events in RDF format.
+.le
+.ls (which_events = "old") [string]
+
+Which of the above 3 specified EVENT tables should be used to create  the main
+QPOE event list.
+.le
+.ls (oldgti_name = "GTI") [string]
+
+The name of the BINTABLE in the FITs file containing the
+standard 'good time intervals', corresponding to the EVENT list.  
+.le
+.ls (allgti_name = "ALLGTI") [string]
+
+The name of the BINTABLE in the FITs file containing the 'good time
+intervals' corresponding to ALL the events (standard+rejected).
+.le
+.ls (stdgti_name = "STDGTI") [string]
+
+The name of the BINTABLE in the FITs file containing the 'good time
+intervals' corresponding to the STANDARD events for ROSAT data in RDF format.  
+.le
+.ls (which_gti = "old") [string]
+
+Which of the above 3 specified GTI tables should be used to create the main
+QPOE gti list.
+.le
+.ls (scale = "yes") [boolean]
+
+Should the TSCAL and TZERO keywords be used to apply scaling to extension
+or event columns?  
+.le
+.ls (key_x = "x") [string]
+
+Name of the event keyword to use for the x-index of the QPOE file.  
+.le
+.ls (key_y = "y") [string]
+
+Name of the event keyword to use for the y-index of the QPOE file.  
+.le
+.ls (qp_internals = yes) [boolean]
+
+Boolean flag controlling whether the internal qpoe parameters (see below)
+are prompted for, or whether they are defaulted to internally hardwired
+values.  This parameter is not usually changed by the user.  (Prompting
+is normally turned off during stand-alone debugging only.)
+.le
+.ls (qp_pagesize = 2048) [int]
+
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_bucketlen = 4096) [int]
+
+Bucket length for the qpoe file.  This parameter is internal to qpoe
+and should not normally be changed.
+.le
+.ls (qp_blockfactor = 1) [int]
+
+Block factor for imio.   This parameter is internal to qpoe
+and should not normally be changed.
+.le
+.ls (qp_mkindex = no) [boolean]
+
+Boolean flag that an index should be made for the qpoe file.  
+This parameter cannot be set unless you KNOW for sure that the
+input FITS files has a correctly spatially sorted EVENT list.
+(This was true in ROSAT PRE-RDF US processing)
+.le
+.ls (qp_key = "") [int]
+
+Key on which to make the qpoe index.  This parameter is internal to
+qpoe and should not normally be changed.
+.le
+.ls (qp_debug = 0) [int]
+
+Debug level for qpoe internals.  This parameter is internal to qpoe
+and should not normally be changed.
+.le
+.ih
+EXAMPLES
+Convert a BINARY FITS file to a qpoe file.
+.nf
+
+cl> xray
+xr> xdataio
+xd> fits2qp foo.fits 
+output IRAF/PROS QPOE file name: . 
+Writing output QPOE file: ./foo.qp
+.fi
+.ih 
+PARAMETER FILE EXAMPLES
+
+The following are the proper parameters for MPE ASCII FITS files:
+.nf
+ 	For PSPC files - 
+
+         fits = "filename.fits" input FITS file name
+         qpoe = "."             output IRAF/PROS QPOE file name
+       (naxes = 2)              number of axes in qpoe file
+      (axlen1 = 15360)          dimension of qpoe axis #1
+      (axlen2 = 15360)          dimension of qpoe axis #2
+(mpe_ascii_fi = yes)            Is this an MPE ASCII FITS table?
+     (clobber = yes)            delete old copy of output file
+ (oldqpoename = no)             Use auto-naming from FITS QPOENAME card?
+     (display = 1)              display level
+  (fits_cards = "xdataio$fits.cards") definitions for FITS cards
+  (qpoe_cards = "xdataio$qpoe.cards") definitions for qpoe cards
+   (ext_cards = "xdataio$ext.cards") definitions for qpoe cards
+   (wcs_cards = "xdataio$wcs.cards") definitions for wcs cards
+  (old_events = "EVENTS")       old name of table containing event records
+  (std_events = "STDEVT")       name of table containing standard event records
+  (rej_events = "REJEVT")       name of table containing rejected event records
+(which_events = "old")          which event table name
+ (oldgti_name = "GTI")          Old FITS root for GTIs
+ (allgti_name = "ALLGTI")       Rationalized FITS root for all GTIs
+ (stdgti_name = "STDGTI")       Rationalized FITS root for standard GTIs
+   (which_gti = "standard")     GTIs for initial deffilt
+       (scale = yes)            apply TSCAL/TZERO scaling?
+       (key_x = "x")            index key for x coordinate QPOE events
+       (key_y = "y")            index key for y coordinate QPOE events
+(qp_internals = yes)            prompt for qpoe internals?
+ (qp_pagesize = 2048)           page size for qpoe file
+(qp_bucketlen = 4096)           bucket length for qpoe file
+(qp_blockfact = 1)              block factor for imio
+  (qp_mkindex = no)             make an index on y, x
+      (qp_key = "")             key on which to make index
+    (qp_debug = 0)              qpoe debug level
+        (mode = "ql")
+
+
+        For HRI files -
+
+         fits = "filename.fits" input FITS file name
+         qpoe = "."             output IRAF/PROS QPOE file name
+       (naxes = 2)              number of axes in qpoe file
+      (axlen1 = 8192)           dimension of qpoe axis #1
+      (axlen2 = 8192)           dimension of qpoe axis #2
+(mpe_ascii_fi = yes)            Is this an MPE ASCII FITS table?
+     (clobber = yes)            delete old copy of output file
+ (oldqpoename = no)             Use auto-naming from FITS QPOENAME card?
+     (display = 1)              display level
+  (fits_cards = "xdataio$fits.cards") definitions for FITS cards
+  (qpoe_cards = "xdataio$qpoe.cards") definitions for qpoe cards
+   (ext_cards = "xdataio$ext.cards") definitions for qpoe cards
+   (wcs_cards = "xdataio$wcs.cards") definitions for wcs cards
+  (old_events = "EVENTS")       old name of table containing event records
+  (std_events = "STDEVT")       name of table containing standard event records
+  (rej_events = "REJEVT")       name of table containing rejected event records
+(which_events = "old")          which event table name
+ (oldgti_name = "GTI")          Old FITS root for GTIs
+ (allgti_name = "ALLGTI")       Rationalized FITS root for all GTIs
+ (stdgti_name = "STDGTI")       Rationalized FITS root for standard GTIs
+   (which_gti = "old")
+  (fits_cards = "xdataio$fits.cards") definitions for FITS cards
+  (qpoe_cards = "xdataio$qpoe.cards") definitions for qpoe cards
+   (ext_cards = "xdataio$ext.cards") definitions for qpoe cards
+   (wcs_cards = "xdataio$wcs.cards") definitions for wcs cards
+(qp_internals = yes)            prompt for qpoe internals?
+ (qp_pagesize = 2048)           page size for qpoe file
+(qp_bucketlen = 4096)           bucket length for qpoe file
+(qp_blockfact = 1)              block factor for imio
+  (qp_mkindex = no)             make an index on y, x
+      (qp_key = "")             key on which to make index
+    (qp_debug = 0)              qpoe debug level
+        (mode = "ql")
+
+.fi
+
+.ih
+SCALING
+The header keywords TSCAL# and TZERO# are used to apply a scalar 
+transformation on a particular column in an extension.  For instance,
+the values TSCAL3=2.5 and TZERO3=-3.0 indicates that the third column
+should undergo the transformation new_value = (2.5*column_value)-3.0.
+This scaling is only performed if the parameter "scale" is set to yes.
+
+It is possible that these keywords will promote the column type.  The
+following describes when promotion occurs:
+
+.nf
+old column type          promotion?             
+---------------          -----------
+t (byte) or s (short)    Promotes to i (int) if one of TSCAL or TZERO 
+                         exists.  Promotes to r (real) if both exist.
+                         The x- and y-index keywords will not be pro-
+                         moted.
+
+i (int) or l (long)      Promotes to r (real) if both TSCAL and TZERO
+                         exist.  No promotion if only one exists.
+
+r (real), d (double),    No promotion.
+or x(complex)        
+.fi
+
+.ih
+TIME REQUIREMENTS
+This task takes approximately 5 minutes on a Sun-3 to convert a fits file
+containing 100,000 photons.  Luckily, it is run only once per image.
+.ih
+BUGS
+This task makes a single HEADER file from multiple input FITS/BINTABLE
+extensions.  Therefore not all the header information is
+preserved, especially COMMENTS and HISTORY.
+
+It is the intention that unknown header information is written to the
+QPOE file ONLY IF the header is the main header or the event header.
+However, this task only knows that the current header is the event
+header after it reaches the EXTNAME card.  Thus all unknown header
+keywords in the event header before the EXTNAME card are ignored.
+
+If the TSCAL or TZERO keywords are applied to either the x- or y-index
+keywords in the events extension, the keywords should not be promoted
+to be a floating point.  However, if the EXTNAME card appears after
+the TTYPE header card defining the x- or y-index, then the index type
+will be incorrectly promoted, causing FITS2QP to fail.  The workaround
+is to move the EXTNAME keyword earlier in the extension.
+
+This task requires a great many specialized parameter settings to
+configure it to convert various different types of FITS data files.
+For all 'standard' cases, e.g. ROSAT and EINSTEIN data files
+automatic scripts exist (see below)
+The default parameters have been selected to agree with ASCA
+FITS data files.
+
+When this task is run stand-alone, it is HIGHLY recommended that the
+\fIqpsort\fR task be run to produce a spatially sorted, INDEXED QPOE
+file, which is optimized for display, etc.
+.ih
+SEE ALSO
+\fI help rfits2pros\fR for an automated routine to convert ALL US/ROSAT
+data files from GO tapes. 
+
+\fI help rarc2pros\fR for an automated routine to convert ALL ROSAT
+archive data files.
+
+\fI help efits2qp\fR for an automated routine to convert EINSTEIN 
+FITS files into QPOE format.
+
+For MPE FITS files and any 'foreign' FITS files, QPSORT may need
+to be run on the resultant QPOE file, to produce a spatially
+sorted file and INDEX.  An IRAF bug may prevent the use of REGIONS
+with a QPOE file that has NOT been spatially sorted and indexed.
+.endhelp

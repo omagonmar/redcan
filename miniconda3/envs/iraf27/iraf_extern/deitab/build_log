@@ -1,0 +1,27 @@
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p deitab t_txndimage.x
+t_txndimage.x:
+   t_txndimage:
+   txndimage:
+   txisuff:
+   txicpy:
+   txihc:
+   txtb2im:
+t_txndimage.f:
+   ttxnde:
+   txndie:
+   txisuf:
+   txicpy:
+   txihc:
+   txtb2m:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/deitab/src/libpkg.a t_txndimage.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/deitab/src/libpkg.a
+ranlib libpkg.a
+Updated 1 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p deitab x_deitab.x
+x_deitab.x:
+   sys_runtask:
+x_deitab.f:
+   sysruk:
+xc -Nz -p deitab x_deitab.o libpkg.a -lxtools -ltbtables -o xx_deitab.e
+move `xx_deitab.e' to `deibin$x_deitab.e'

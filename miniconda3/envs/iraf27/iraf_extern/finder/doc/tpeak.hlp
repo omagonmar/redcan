@@ -1,0 +1,160 @@
+.help tpeak Oct90 finder
+.ih
+NAME
+TPEAK -- improve an STSDAS table of registration coordinates
+.ih
+USAGE
+tpeak image table
+.ih
+PARAMETERS
+.ls image
+The image to be registered.  The \fIinput\fR catalog table should have
+initial X,Y positions for (HST Guide Star Catalog) sources in this image.
+.le
+.ls table
+The input STSDAS \fItable\fR of catalog coordinates and predicted X,Y
+positions.
+.le
+.ls objects = ""
+An optional input list of program object X,Y coordinates and an integer
+ID field.  All three fields must be present.  Program objects do not
+participate in the subsequent plate solution using the TASTROM task,
+but may be centered, deleted, or otherwise handled by TPEAK.
+.le
+.ls catpars = ""
+The catalog description pset containing column information.
+.le
+.ls boxsize = 9
+The fullwidth of the centering box for the marginal centroiding
+algorithm.  TPEAK uses the IMCENTROID task for the centering.  Many
+parameters of IMCENTROID can be directly adjusted to modify the
+behavior of the centering algoritm.  The \fI:eparam\fR interactive
+colon command is provided to allow modifications while TPEAK is
+running.
+.le
+.ls reselect = no
+Apply the source selection criteria contained in the SELECTPARS pset
+when the task starts up?  If \fIreselect\fR = no, the initial values
+in the select flag column are applies.  The selection can be later
+applied by using the interactive \fI:eparam\fR command to edit the
+selectpars pset.  When eparam is exited the current values will be
+applied.
+.le
+.ls frame = 1
+The frame number in which to display the \fIimage\fR and mark the
+sources.
+.le
+.ls imcur = ""
+The image cursor.  This may be specified as a file in the normal way.
+.le
+.ls marker = "circle", omarker = "plus"
+The marker types used to indicate the catalog sources and their current
+(\fImarker\fR) or initial (\fIomarker\fR) positions.  The choices are:
+\fIpoint|circle|rectangle|plus|cross\fR.  TPEAK uses the TVMARK task for
+marking the display.  Many parameters of TVMARK can be directly
+adjusted to modify the appearance of the display.  The \fI:eparam\fR
+interactive colon command is provided to allow modifications while
+TPEAK is running.
+.le
+.ls goodcolor = "blue", badcolor = "red", objcolor = "green"
+The colors of the markers that indicate well centered (\fIgoodcolor\fR)
+sources, badly or uncentered (\fIbadcolor\fR) sources, or program
+objects (\fIobjcolor\fR).  The choices are:
+\fIblack|white|red|green|blue|yellow\fR.
+.le
+.ih
+DESCRIPTION
+.ih
+KEYSTROKES
+.nf
+			     TPEAK Commands
+
+			Cursor Keystroke Summary
+
+ a All source toggle			 k Center with one keystroke
+ b Redisplay only bad sources		 l Center with two keystrokes
+ c Recenter good sources		 o Overlay the raw coordinates
+ d Delete source(s)			 q Exit the task
+ f Fit and recenter (UNIMPLEMENTED)	 r Redisplay good and bad sources
+ g Redisplay only good sources		 u Undelete source(s)
+ i Initialize to the raw coordinates	 x Add an extra source
+ j Center from the catalog		 ? Get this help
+
+
+			Colon Command Summary
+
+	boxsize		badcolor	goodcolor	eparam
+	marker		omarker		show
+
+
+			Cursor Keystroke Commands
+
+ a  All source toggle for d/i/j/k/l/u keys.  Entering `a' before one of
+    these keystrokes will make the action apply either to all source for
+    d[elete] or u[ndelete], or to all currently uncentered (bad) sources
+    for i[nitialize] and the three centering keys:  `j', `k', or `l'.
+
+ b  Redisplay only the bad sources.
+ c  Recenter the list of sources with good positions.
+ d  Delete the source(s).
+ f  Fit the good source positions and recenter the bad sources.  (UNIMPLEMENTED)
+ g  Redisplay only the good sources.
+ i  Initialize the source(s) to their raw coordinates.
+
+ j  Center the source(s) at the catalog coordinates.
+ k  Center the source(s) shifted to the cursor, using one keystroke.
+ l  Center the source(s) shifted to the cursor, using two keystrokes.
+
+    The `l' key allows an initial source selection keystroke for
+    crowded fields.  The `k' key selects and shifts using only one
+    cursor position.  The `j' key only uses the cursor position for
+    selecting the source to be centered from the catalog position.
+
+ o  Overlay the raw coordinates using the omarker and the badcolor.
+ q  Exit the task.
+ r  Redisplay both the good and bad sources.
+ u  Undelete the source(s).
+ x  Add an extra source.
+ ?  Get this help.
+
+
+			Colon Commands
+
+Issue a command with an argument of the specified type to set the
+corresponding value, or with no argument to print the current setting.
+Commands and arguments may be abbreviated.
+
+ :boxsize	[int]	Centering box fullwidth
+ :badcolor	[str]	Color for bad positions
+ :goodcolor	[str]	Color for good positions
+ :marker	[str]	Marker for current positions
+ :omarker	[str]	Marker for initial positions
+
+Colors:   [black|white|red|green|blue|yellow]
+Markers:  [point|circle|cross|plus|rectangle]
+
+ :eparam	[task]	Edit parameters for DISPLAY, TVMARK, or IMCENTROID
+
+Various parameters from the three tasks may be adjusted to tweak the
+performance of TPEAK.  All the parameters of DISPLAY are adjustable
+(excluding the image name and frame number which are set by TPEAK) and
+most of the parameters of TVMARK are adjustable.  This allows control
+over the appearance of the display.  The IMCENTROID parameters can be
+tweaked to refine the centering algorithm.  One useful technique is to
+set tvmark.outimage before redisplaying the good (and/or bad) sources
+for the last time (reset tvmark.outimage before exiting the task).
+This provides a snapshot of the overlayed sources suitable for hardcopy.
+
+*:show		[file]	List information about the coordinates [to a file]
+
+* Unimplemented command!
+.fi
+.ih
+EXAMPLES
+.ih
+BUGS
+TPEAK is a prototype and bugs and misfeatures are bound to abound.
+.ih
+SEE ALSO
+The NOAO FINDER/ASTRO programs.  The STSDAS GASP package.
+.endhelp

@@ -1,0 +1,159 @@
+
+
+--------------------------------------------------------------------------
+Imcontour Testers Update:
+--------------------------------------------------------------------------
+
+	The prototype contour level interface to imcontour has been 
+completed and installed in the programmers clx version of iraf.  The Contour
+Level description and specification that is implemented along with a few 
+examples of the user interface follows.  
+
+	Currently the units = sigma is not yet implemeted.  Also when input-
+ing a value less than 1, such as .5, an input of "0.5" is accepted while ".5"
+is not.  I expect to fix this bug shortly and will inform you when it is done.
+
+	A copy of this memo is available in /pros/xray/doc/clevels.hlp.
+I plan to solve the issues addressed in the comments each of you have sent 
+me in the past few weeks next, along with any enhancements or fixes required
+from this latest update.  Give the contour level input a try, I'd appreciate 
+your feedback.  
+
+-janet
+
+
+--------------------------------------------------------------------------
+Description:
+--------------------------------------------------------------------------
+
+	The contour levels input into imcontour is flexible in that
+they can be entered with or without parenthesis or commas.  
+
+	Your choice of units are:
+	
+		pixel - values expressed in photons as stored in a pixel
+			position of the image
+		peak  - values expressed as a percentage of the maximum
+			number of photons at a pixel position in the image
+		sigma - values expressed in photons as stored in a pixel
+			position of an array that is the result of dividing 
+			the image by an associated error array.
+			(** not yet implemented **)
+
+	Your choice of levels input are:
+
+		- list of levels = (10.0, 20.0, 30.5, 40.0)
+
+		- linear function -> linear min max steps = linear 0 100 10   
+		
+		- log function -> log min max steps = log (1 100 10) 
+
+		- filename -> ascii file with contour levels expressed in
+			      one of the 3 forms above.  Task will open and 
+			      read contour level input from the file.
+
+		** in the above 3 examples I tried to show a few ways 
+		   of expressing input with & without parenthesis,
+		   commas, or decimal points (all values are input as real).
+
+
+--------------------------------------------------------------------------
+Contour Level Specifications:
+--------------------------------------------------------------------------
+units = pixels
+clevels =  L1, L2, L3, L4
+
+... contour at given levels
+--------------------------------
+units = peak
+clevels = L1, L2, L3, L4
+
+... contour at (L1/100.*max, L2/100. * max, L3/100.*max, L4/100.*max) 
+--------------------------------
+units = sigma 
+clevels = L1, L2, L3, L4, L5, L6
+
+... divide img arr by sqrt(err_arr) & contour at given levels
+--------------------------------
+********************************
+units = pixels
+clevels =  linear start stop steps
+
+... decrement=stop-start/steps
+    contour levels = (stop, stop-decrement, stop-2*decrement, ..., start)
+--------------------------------
+units = peak
+clevels = linear start stop steps
+
+... hi= max*(stop/100); lo=max*(start/100); decrement=(hi-lo)/steps
+    contour levels = (hi, hi-decrement, hi-2*decrement, ..., lo)
+--------------------------------
+units = sigma
+clevels = linear start stop steps
+
+... decrement = stop-start/steps;  divide img arr by sqrt(err_arr) 
+    contour levels = (stop, stop-decrement, stop-2*decrement, ..., start)
+--------------------------------
+********************************
+units = pixels
+clevels =  log start stop steps
+
+... hi=stop, lo=start, decrement=(log(hi)-log(lo)) / steps
+    
+    contour levels = 10**log(hi), 10**(log(hi)-incr), 
+		     10**(log(hi)-2*incr), ... 10**log(lo)
+--------------------------------
+units = peak
+clevels = log start stop steps
+
+... hi=max*(stop/100); lo=max(start/100); decrement=(log(hi)-log(lo))/steps
+    
+    contour levels = 10**log(hi), 10**(log(hi)-incr), 
+		     10**(log(hi)-2*incr), ... 10**log(lo)
+--------------------------------
+units = sigma
+clevels =  log start stop steps
+
+... divide img arr by sqrt(err_arr) 
+    hi=stop, lo=start, decrement=(log(hi)-log(lo)) / steps
+
+    contour levels = 10**log(hi), 10**(log(hi)-incr), 
+		     10**(log(hi)-2*incr), ... 10**log(lo)
+
+--------------------------------------------------------------------------
+Imcontour Examples:
+--------------------------------------------------------------------------
+
+cl> imcontour
+IRAF image filename: /pros/qpoe/i6757.qp[block=8]
+Units (pixel|peak|sigma): pixel
+Contour Levels: 5. 10. 20. 40. 80. 160. 320. 640.
+
+... Plots Contour map at given levels 
+--------------------------------------------------------------------------
+
+cl> imcontour
+IRAF image filename: /pros/qpoe/i6757.qp[block=8]
+Units (pixel|peak|sigma): peak
+Contour Levels: linear 10. 100. 5
+
+... max displayed as 4668, Plots Contour map with levels at 
+    4668.0, 3827.8, 2987.5, 2147.3, 1307.0, 466.8
+--------------------------------------------------------------------------
+
+cl> imcontour
+IRAF image filename: /pros/qpoe/i6757.qp[block=8]
+Units (pixel|peak|sigma): peak
+Contour Levels: log 0.5 100. 5
+
+... max displayed as 4668, Plots Contour map with levels at 
+    4668., 1617.8, 560.7, 194.0, 67.3, 23.3 
+    based on maximum value in the image which is 4668.
+--------------------------------------------------------------------------
+
+cl> imcontour
+IRAF image filename: /pros/qpoe/i6757.qp[block=8]
+Units (pixel|peak|sigma): pixel
+Contour Levels: lev.lis
+
+... Plots Contour map at levels listed in ascii file lev.lis 

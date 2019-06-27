@@ -1,0 +1,244 @@
+\O=NOAO/IRAF V2.8EXPORT dmw@cfa246.harvard.edu Mon 22:07:36 08-Jan-90
+\T=gterm34
+\G=gterm
+\n\{%8000
+                    PROS Timing Analysis
+Tasks in the PROS XRAY timing package will be demonstrated
+by analyzing the X-ray pulsar in the SNR CTB 109. \}\n
+cd\simdir\n
+\{%500
+        [First load the relevant packages.]\}\n
+noao\n
+proto\n
+xray\n
+ximages\n
+xtiming\n
+\{%500
+        [Now unlearn parameters for all tasks to be used.]\}\n
+unlearn\stprint\n
+unlearn\skeytab\n
+unlearn\sdelete\n
+unlearn\sfft\n
+unlearn\sfold\n
+unlearn\sltcurv\n
+unlearn\speriod\n
+unlearn\sltcplot\s\n
+unlearn\sfldplot\s\n
+unlearn\sfftplot\s\n
+unlearn\schiplot\s\n
+unlearn\stimsort\n
+\{%500
+        [Delete files made in previous run of the demo.]\}\n
+imdel\sdemo_*snr*.imh\n
+delete\sdemo_*snr*\n
+delete\sdemo_pixcen*\n
+\{%500
+        [Now we are ready to begin.]\}\n
+#\{%500
+        #[Timing Analysis for pulsar in CTB 109]\}\n
+#display\sxmag=2\symag=2\szrange-\szscale-\sz1=0\sz2=4\n
+#xdata$snr\n
+#1\n
+print\s502\s513\s>\sdemo_pixcent\n
+#\{%500
+        #[Choose on-source circle.]\}\n
+#tvmark\s1\scoords=demo_pixcent\smark=circle\sradii=24\scolor=206\n
+\{%500
+        [Time-sort the event list for CTB 109 ...]\}\n
+timsort\n
+"xdata$snr.qp"\n
+demo_snr_sti.qp\n
+"circle\s502\s513\s24"\n
+none\n
+\{%500
+        [Make a light curve for CTB 109 ...]\}\n
+ltcurv\n
+demo_snr_sti.qp\n
+none\n
+demo_snr_ltc.tab\n
+100\n
+\{%500
+        [Plot the light curve.]\}\n
+ltcplot\secolumn="err"\snum_plots=3\n
+demo_snr_ltc.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Timing Analysis Section 1 Data of CTB 109]\}\n
+\{%500
+        [Select and time-sort the Section 1 Data ...]\}\n
+timsort\n
+"xdata$snr.qp[time=(:79488898.01)]"\n
+demo_snr_sti1.qp\n
+"circle\s502\s513\s24"\n
+none\n
+\{%500
+        [Make a light curve with small bins for the Section 1 Data ...]\}\n
+ltcurv\n
+demo_snr_sti1.qp\n
+none\n
+demo_snr_ltc1.tab\n
+0\n
+.5\n
+\{%500
+        [Plot the light curve ...]\}\n
+ltcplot\sy_tics=2\snum_plots=10\n
+demo_snr_ltc1.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Run FFT on Section 1 Data ...]\}\n
+fft\sfftcoeff+\n
+demo_snr_ltc1.tab\n
+demo_snr_1\n
+src\n
+\{%500
+        [Plot the FFT Power Spectrum ...]\}\n
+fftplot\sy_range="1\s30"\n
+demo_snr_1_fft.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Run Period Search on Section 1 Data ...]\}\n
+period\n
+demo_snr_sti1.qp\n
+none\n
+demo_snr_per1\n
+3.47\n
+3.51\n
+.01\n
+16\n
+\{%500
+        [Plot the Chisq ...]\}\n
+chiplot\n
+demo_snr_per1_chi.tab\n
+q01+&\r\{%8000\}
+keypar\sdemo_snr_per1_fld\sBINLEN\n
+x=real(keypar.value)\n
+keypar\sdemo_snr_per1_fld\sNUMBINS\n
+y=int(keypar.value)*x\n
+\n
+print\s("Plot\sof\sFold\sabout\sbest\sPeriod\s=\s",\sy,\s"\sseconds")\n
+\n
+fldplot\secolumn="err"\n
+demo_snr_per1_fld.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Timing Analysis Section 2 Data of CTB 109]\}\n
+\{%500
+        [Select and time-sort the Section 2 Data ...]\}\n
+timsort\n
+"xdata$snr.qp[time=(79490598.01:79491098.01)]"\n
+demo_snr_sti2.qp\n
+"circle\s502\s513\s24"\n
+none\n
+\{%500
+        [Make a light curve with small bins for the Section 2 Data ...]\}\n
+ltcurv\n
+demo_snr_sti2.qp\n
+none\n
+demo_snr_ltc2.tab\n
+0\n
+.5\n
+\{%500
+        [Plot the light curve ...]\}\n
+ltcplot\sy_tics=2\snum_plots=10\n
+demo_snr_ltc2.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Run FFT on Section 2 Data ...]\}\n
+fft\sfftcoeff+\n
+demo_snr_ltc2.tab\n
+demo_snr_2\n
+src\n
+\{%500
+        [Plot the FFT Power Spectrum ...]\}\n
+fftplot\sy_range="1\s30"\n
+demo_snr_2_fft.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Run Period Search on Section 2 Data ...]\}\n
+period\n
+demo_snr_sti2.qp\n
+none\n
+demo_snr_per2\n
+3.47\n
+3.51\n
+.01\n
+16\n
+\{%500
+        [Plot the Chisq ...]\}\n
+chiplot\n
+demo_snr_per2_chi.tab\n
+q01+&\r\{%8000\}
+keypar\sdemo_snr_per2_fld\sBINLEN\n
+x=real(keypar.value)\n
+keypar\sdemo_snr_per2_fld\sNUMBINS\n
+y=int(keypar.value)*x\n
+\n
+print\s("Plot\sof\sFold\sabout\sbest\sPeriod\s=\s",\sy,\s"\sseconds")\n
+\n
+fldplot\secolumn="err"\n
+demo_snr_per2_fld.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Timing Analysis Section 3 Data of CTB 109]\}\n
+\{%500
+        [Select and time-sort the Section 3 data ...]\}\n
+timsort\n
+"xdata$snr.qp[time=(79492398.01:)]"\n
+demo_snr_sti3.qp\n
+"circle\s502\s513\s24"\n
+none\n
+\{%500
+        [Make a light curve with small bins for the Section 3 Data ...]\}\n
+ltcurv\n
+demo_snr_sti3.qp\n
+none\n
+demo_snr_ltc3.tab\n
+0\n
+.5\n
+\{%500
+        [Plot the light curve ...]\}\n
+ltcplot\sy_tics=2\snum_plots=10\n
+demo_snr_ltc3.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Run FFT on Section 3 Data ...]\}\n
+fft\sfftcoeff+\n
+demo_snr_ltc3.tab\n
+demo_snr_3\n
+src\n
+\{%500
+        [Plot the FFT Power data ...]\}\n
+fftplot\sy_range="1\s30"\n
+demo_snr_3_fft.tab\n
+q01+&\r\{%8000\}
+\{%500
+        [Run Period Search on Section 3 Data ...]\}\n
+period\n
+demo_snr_sti3.qp\n
+none\n
+demo_snr_per3\n
+3.47\n
+3.51\n
+.01\n
+16\n
+\{%500
+        [Plot the Chisq ...]\}\n
+chiplot\n
+demo_snr_per3_chi.tab\n
+q01+&\r\{%8000\}
+keypar\sdemo_snr_per3_fld\sBINLEN\n
+x=real(keypar.value)\n
+keypar\sdemo_snr_per3_fld\sNUMBINS\n
+y=int(keypar.value)*x\n
+\n
+print\s("Plot\sof\sFold\sabout\sbest\sPeriod\s=\s",\sy,\s"\sseconds")\n
+\n
+fldplot\secolumn="err"\n
+demo_snr_per3_fld.tab\n
+q01+&\r\{%8000\}
+delete\stemp*\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n

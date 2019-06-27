@@ -1,0 +1,148 @@
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include t_ndwfsget.x t_cutout.x ctutils.x ctfterm.x
+t_ndwfsget.x:
+   t_ndwfsget:
+   ct_smkfname:
+   ct_sfname:
+t_cutout.x:
+   t_cutout:
+   ct_wrecord:
+   ct_mklist:
+   ct_ovlap:
+   ct_sovlap:
+   ct_povlap:
+   ct_gimptrs:
+   ct_ltrim:
+   ct_lnotrim:
+   ct_collage:
+   ct_wmwcs:
+   ct_pmw:
+   ct_projwcs:
+   ct_mkwcs:
+   ct_objname:
+   ct_mkfname:
+   ct_fname:
+ctutils.x:
+   ct_imroot:
+   ct_oimname:
+   ct_oimversion:
+   ct_mkdic:
+   ct_getitem:
+   ct_qsortd:
+ctfterm.x:
+   ct_gftermd:
+   ct_sftermd:
+t_ndwfsget.f:
+   tndwft:
+   ctsmke:
+   ctsfne:
+t_cutout.f:
+   tcutot:
+   ctwred:
+   ctmklt:
+   ctovlp:
+   ctsovp:
+   ctpovp:
+   ctgims:
+   ctltrm:
+   ctlnom:
+   ctcole:
+   ctwmws:
+   ctpmw:
+   ctpros:
+   ctmkws:
+   ctobje:
+   ctmkfe:
+   ctfnae:
+ctutils.f:
+   ctimrt:
+   ctoime:
+   ctoimn:
+   ctmkdc:
+   ctgetm:
+   ctqsod:
+ctfterm.f:
+   ctgftd:
+   ctsftd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/cutoutpkg/libpkg.a t_ndwfsget.o t_cutout.o ctutils.o ctfterm.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/cutoutpkg/libpkg.a
+ranlib libpkg.a
+Updated 4 files in libpkg.a
+warning: library `libskywcs.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include skdecode.x skwrite.x skstat.x skset.x sktransform.x sksaveim.x skwrdstr.x
+skdecode.x:
+   sk_decwcs:
+   sk_decwstr:
+   sk_decim:
+   sk_strwcs:
+   sk_imwcs:
+   sk_enwcs:
+   sk_copy:
+   sk_close:
+skwrite.x:
+   sk_iiprint:
+   sk_iiwrite:
+   sk_inprint:
+   sk_inwrite:
+   sk_imprint:
+   sk_imwrite:
+skstat.x:
+   sk_statd:
+   sk_stati:
+   sk_stats:
+skset.x:
+   sk_setd:
+   sk_seti:
+   sk_sets:
+sktransform.x:
+   sk_ultran:
+   sk_lltran:
+   sk_equatorial:
+sksaveim.x:
+   sk_saveim:
+   sk_ctypeim:
+skwrdstr.x:
+   sk_wrdstr:
+skdecode.f:
+   skdecs:
+   skdecr:
+   skdecm:
+   skstrs:
+   skimws:
+   skenws:
+   skcopy:
+   skcloe:
+skwrite.f:
+   skiipt:
+   skiiwe:
+   skinpt:
+   skinwe:
+   skimpt:
+   skimwe:
+skstat.f:
+   skstad:
+   skstai:
+   skstas:
+skset.f:
+   sksetd:
+   skseti:
+   sksets:
+sktransform.f:
+   skultn:
+   sklltn:
+   skequl:
+sksaveim.f:
+   sksavm:
+   skctym:
+skwrdstr.f:
+   skwrdr:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/cutoutpkg/libskywcs.a skdecode.o skwrite.o skstat.o skset.o sktransform.o sksaveim.o skwrdstr.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/cutoutpkg/libskywcs.a
+ranlib libskywcs.a
+Updated 7 files in libskywcs.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include x_cutout.x
+x_cutout.x:
+   sys_runtask:
+x_cutout.f:
+   sysruk:
+xc -Nz x_cutout.o libpkg.a libskywcs.a -lxtools -lslalib -o x_cutout.e

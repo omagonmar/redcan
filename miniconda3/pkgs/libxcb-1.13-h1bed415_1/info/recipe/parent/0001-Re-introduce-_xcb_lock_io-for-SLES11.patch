@@ -1,0 +1,43 @@
+From 32752f1b812fd0265524f4a57dcfbcd7a424f38d Mon Sep 17 00:00:00 2001
+From: Ray Donnelly <mingw.android@gmail.com>
+Date: Mon, 9 Apr 2018 11:08:16 +0100
+Subject: [PATCH] Re-introduce _xcb_lock_io for SLES11
+
+We do not call it from libxcb itself though, SLES11's /usr/lib64/libxcb-xlib.so.0 xcb_xlib_lock()
+does that. It is safer for other distros to keep the code the same as the latest upstream.
+
+This is a partial reversion of commit id 059ca642c76639fee958dc6054070de85e257e98
+https://cgit.freedesktop.org/xcb/libxcb/commit/?id=059ca642c76639fee958dc6054070de85e257e98
+---
+ src/xcb_conn.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+diff --git a/src/xcb_conn.c b/src/xcb_conn.c
+index 7d09637..15ce40e 100644
+--- a/src/xcb_conn.c
++++ b/src/xcb_conn.c
+@@ -432,6 +432,21 @@ xcb_connection_t *_xcb_conn_ret_error(int err)
+     }
+ }
+ 
++void _xcb_lock_io(xcb_connection_t *c)
++{
++    pthread_mutex_lock(&c->iolock);
++}
++
++void _xcb_unlock_io(xcb_connection_t *c)
++{
++    pthread_mutex_unlock(&c->iolock);
++}
++
++void _xcb_wait_io(xcb_connection_t *c, pthread_cond_t *cond)
++{
++    pthread_cond_wait(cond, &c->iolock);
++}
++
+ int _xcb_conn_wait(xcb_connection_t *c, pthread_cond_t *cond, struct iovec **vector, int *count)
+ {
+     int ret;
+-- 
+2.15.1 (Apple Git-101)
+

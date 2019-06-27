@@ -1,0 +1,59 @@
+#$Header: /home/pros/xray/xspatial/RCS/imsmooth.par,v 11.0 1997/11/06 16:33:16 prosb Exp $
+#$Log: imsmooth.par,v $
+#Revision 11.0  1997/11/06 16:33:16  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:35:33  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:55:28  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:30:42  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/11/30  00:43:04  dennis
+#Changed prompts to reflect removal of option to estimate errors from data.
+#
+#Revision 6.0  93/05/24  16:09:41  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:12  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:33:24  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  91/08/12  16:00:56  prosb
+#changed model to file
+#
+#Revision 3.0  91/08/02  01:26:31  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:10:56  pros
+#General Release 1.0
+#
+# imsmooth parameter file
+input_image,s,a,"dev$pix",,,"name of input image"
+output_image,s,a,"",,,"root name for output file [root_smo.imh]"
+function,s,a,"gauss","gauss|boxcar|expo|king|power|tophat|file|hipass|lopass|kfile|mymod|mykmod",,"type of convolving function"
+arg1,r,a,2.0,,,"function radius, sigma or width (x) in pixels"
+arg2,r,h,,,,"function (power,king,boxcar) height (y) in pixels"
+model_file,s,h,,,,"file containing convolving function"
+block,i,h,1,,,"input blocking factor"
+padding,i,h,0,,,"minimum zero padding for both dimensions"
+clobber,b,h,no,,,"delete old copy of output image"
+errors,b,h,no,,,"compute and output error array from existing error array"
+errarray,s,h,,,,"name of existing error array"
+error_out,s,h,,,,"name of output error array"
+display,i,h,1,,,"level of feedback and debug options"
+adjust_center,b,h,,,,"input new center coordinates, yes/no"
+xcen,r,h,,,,"x coordinate of function center"
+ycen,r,h,,,,"y coordinate of function center"
+display_model,b,h,,,,"write components of convolving function, yes/no"
+examine_model_fft,b,h,,,,"write components of Fourier transform of convolving function, yes/no"
+select,i,a,0,,,"(debug mode only) write one of the above"
+display_image,b,h,,,,"write components of input image, yes/no"
+examine_image_fft,b,h,,,,"write components of Fourier transform of input image, yes/no"
+examine_convolution_fft,b,h,,,,"write components of Fourier transform of convolved image, yes/no"
+examine_complex_result,b,h,,,,"write components of convolved image, yes/no"

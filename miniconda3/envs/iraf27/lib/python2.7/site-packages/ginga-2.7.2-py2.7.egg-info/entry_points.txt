@@ -1,0 +1,4 @@
+[console_scripts]
+ggrc = ginga.misc.grc:_main
+ginga = ginga.rv.main:_main
+

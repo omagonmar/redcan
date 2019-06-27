@@ -1,0 +1,19 @@
+bpm*pl
+    Additions made by James Rhoads.  (3/13/99, JR, installed by FV)
+
+=====================
+Records were not kept
+=====================
+
+XTALK/		+
+    The xtalk files from the CAL directories were moved to this new directory.
+    Links were made from these files back to the CAL directories to
+    maintain the files as referenced by data headers.
+    (3/6/01, Valdes)
+
+XTALK/xtalk0102	+
+CAL0102/	+
+    New crosstalk derivation was added.  (3/6/01, Valdes)
+
+XTALK/xtalk0209	+
+    New crosstalk.  (10/11/02, Valdes)

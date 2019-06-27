@@ -1,0 +1,5 @@
+Don't "ci  *.f" into RCS. It causes some compiling problems if the 1st 
+column starts with "$Header" or "#Initial version" - The fortran
+code (*.f)  should start with "c" as a comment in the first column. 
+
+Same problem for "detect.inc" which is used in the fortran code

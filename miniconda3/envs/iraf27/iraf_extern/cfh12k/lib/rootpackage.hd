@@ -1,0 +1,8 @@
+# Root task entry for the package help tree.  Defines `<package>'
+# as both a task and a package in the help database.
+
+cfh12k		men  = cfh12k$cfh12k.men,
+		hlp  = cfh12k$cfh12k.men,
+		sys  = cfh12k$package.hlp,
+		pkg  = cfh12k$cfh12k.hd,
+		src  = cfh12k$cfh12k.cl

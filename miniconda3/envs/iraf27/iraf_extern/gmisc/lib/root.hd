@@ -1,0 +1,5 @@
+# Root help directory for the GMISC packages.  This dummy package is
+# necessary in order to have `gmisc' appear as a module in some package,
+# so that the user can type "help gmisc" (with `gmisc' given as a task).
+
+_gmisc		pkg = gmisc$lib/rootgmisc.hd

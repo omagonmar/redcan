@@ -1,0 +1,980 @@
++ sh -x setarch.sh
+++ ls -d as
++ '[' as = as ']'
++ rm -rf as
++ ln -s as.linux as
+++ ls -d bin
++ '[' bin = bin ']'
++ rm -rf bin
++ ln -s bin.linux bin
++ echo '----------------------- OS -----------------------------'
+----------------------- OS -----------------------------
++ echo +
++
++ echo +
++
++ cd os
++ sh -x mkpkg.sh
++ echo '--------------------- OS ----------------------'
+--------------------- OS ----------------------
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall alloc.c getproc.c
++ gcc -m32 -Wall alloc.o getproc.o -o alloc.e
++ chmod 4755 alloc.e
++ mv -f alloc.e ../hlib
++ rm -f alloc.o
++ test linux '!=' macosx
++ for i in zsvjmp
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall ../as/zsvjmp.s -o zsvjmp.o
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall gmttolst.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall irafpath.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall prwait.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zalloc.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zawset.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zcall.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zdojmp.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfacss.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfaloc.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfchdr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfdele.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfgcwd.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfinfo.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiobf.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfioks.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiolp.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiomt.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiond.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiopl.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiopr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiosf.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfiotx.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfioty.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zflink.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfmkcp.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfmkdr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfnbrk.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfpath.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfpoll.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfprot.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfrmdr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfrnam.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfsubd.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfunc.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfutim.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zfxdir.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zgcmdl.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zghost.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zglobl.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zgmtco.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zgtenv.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zgtime.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zgtpid.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zintpr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zlocpr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zlocva.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zmain.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zmaloc.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zmfree.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zopdir.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zopdpr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zoscmd.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zpanic.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zraloc.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zshlib.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zwmsec.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zxwhen.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zzdbg.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zzepro.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zzexit.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zzpstr.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zzsetk.c
++ for i in gmttolst.c irafpath.c prwait.c 'z*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS -Wall zzstrt.c
++ test linux = macosx
++ rm -f zmain.o
++ ar r libos.a getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
+ar: creating libos.a
++ ranlib libos.a
++ rm getproc.o gmttolst.o irafpath.o prwait.o zalloc.o zawset.o zcall.o zdojmp.o zfacss.o zfaloc.o zfchdr.o zfdele.o zfgcwd.o zfinfo.o zfiobf.o zfioks.o zfiolp.o zfiomt.o zfiond.o zfiopl.o zfiopr.o zfiosf.o zfiotx.o zfioty.o zflink.o zfmkcp.o zfmkdr.o zfnbrk.o zfpath.o zfpoll.o zfprot.o zfrmdr.o zfrnam.o zfsubd.o zfunc.o zfutim.o zfxdir.o zgcmdl.o zghost.o zglobl.o zgmtco.o zgtenv.o zgtime.o zgtpid.o zintpr.o zlocpr.o zlocva.o zmaloc.o zmfree.o zopdir.o zopdpr.o zoscmd.o zpanic.o zraloc.o zshlib.o zsvjmp.o zwmsec.o zxwhen.o zzdbg.o zzepro.o zzexit.o zzpstr.o zzsetk.o zzstrt.o
++ there=../bin/libos.a
++ rm -f ../bin/libos.a
++ cp -f libos.a ../bin/libos.a
++ there=/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib//libos.a
++ rm -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib//libos.a
++ cp -f libos.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib//libos.a
++ echo '----------------------- BOOT ---------------------------'
+----------------------- BOOT ---------------------------
++ echo +
++
++ echo +
++
++ cd boot
++ sh -x mkpkg.sh
++ echo '----------------------- BOOTLIB ------------------------'
+----------------------- BOOTLIB ------------------------
++ cd bootlib
++ sh -x mkpkg.sh
++ test -f ../../as/bytmov.s
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS _bytmov.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS envinit.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS index.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osaccess.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osamovb.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS oschdir.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osclose.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS oscmd.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS oscreatedir.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS oscrfile.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osdelete.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osdir.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osfcopy.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osfdate.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osfiletype.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osfn2vfn.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osfpathname.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osgetenv.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osgetowner.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osopen.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osputenv.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osread.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ossetfmode.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ossetowner.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ossettime.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osstrpak.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS osstrupk.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ossubdir.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ossymlink.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ossysfile.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS ostime.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS oswrite.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS rindex.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS tape.c
++ for i in '[a-z]*.c'
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS vfn2osfn.c
++ ar rv libboot.a _bytmov.o envinit.o index.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfn2vfn.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o rindex.o tape.o vfn2osfn.o
+ar: creating libboot.a
+a - _bytmov.o
+a - envinit.o
+a - index.o
+a - osaccess.o
+a - osamovb.o
+a - oschdir.o
+a - osclose.o
+a - oscmd.o
+a - oscreatedir.o
+a - oscrfile.o
+a - osdelete.o
+a - osdir.o
+a - osfcopy.o
+a - osfdate.o
+a - osfiletype.o
+a - osfn2vfn.o
+a - osfpathname.o
+a - osgetenv.o
+a - osgetowner.o
+a - osopen.o
+a - osputenv.o
+a - osread.o
+a - ossetfmode.o
+a - ossetowner.o
+a - ossettime.o
+a - osstrpak.o
+a - osstrupk.o
+a - ossubdir.o
+a - ossymlink.o
+a - ossysfile.o
+a - ostime.o
+a - oswrite.o
+a - rindex.o
+a - tape.o
+a - vfn2osfn.o
++ rm _bytmov.o envinit.o index.o osaccess.o osamovb.o oschdir.o osclose.o oscmd.o oscreatedir.o oscrfile.o osdelete.o osdir.o osfcopy.o osfdate.o osfiletype.o osfn2vfn.o osfpathname.o osgetenv.o osgetowner.o osopen.o osputenv.o osread.o ossetfmode.o ossetowner.o ossettime.o osstrpak.o osstrupk.o ossubdir.o ossymlink.o ossysfile.o ostime.o oswrite.o rindex.o tape.o vfn2osfn.o
++ ranlib libboot.a
++ there=../../bin/libboot.a
++ rm -f ../../bin/libboot.a
++ cp -f libboot.a ../../bin/libboot.a
++ there=/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib//libboot.a
++ rm -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib//libboot.a
++ cp -f libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib//libboot.a
++ echo '----------------------- GENERIC ------------------------'
+----------------------- GENERIC ------------------------
++ cd generic
++ sh -x mkpkg.sh
++ find tok.l -newer lexyy.c -exec rm lexyy.c ';'
++ test -f lexyy.c
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS lexyy.c
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS generic.c chario.c yywrap.c
++ gcc -m32 generic.o lexyy.o chario.o yywrap.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o generic.e
++ mv -f generic.e ../../hlib
++ rm chario.o generic.o lexyy.o yywrap.o
++ echo '----------------------- MKPKG --------------------------'
+----------------------- MKPKG --------------------------
++ cd mkpkg
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS char.c fdcache.c fncache.c host.c main.c pkg.c scanlib.c sflist.c tok.c
++ gcc -m32 main.o char.o fdcache.o fncache.o host.o pkg.o scanlib.o sflist.o tok.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o mkpkg.e
++ mv -f mkpkg.e ../../hlib
++ rm char.o fdcache.o fncache.o host.o main.o pkg.o scanlib.o sflist.o tok.o
++ echo '----------------------- RMBIN  -------------------------'
+----------------------- RMBIN  -------------------------
++ cd rmbin
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS rmbin.c
++ gcc -m32 rmbin.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o rmbin.e
++ mv -f rmbin.e ../../hlib
++ rm rmbin.o
++ echo '----------------------- RMFILES  -----------------------'
+----------------------- RMFILES  -----------------------
++ cd rmfiles
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS rmfiles.c
++ gcc -m32 rmfiles.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o rmfiles.e
++ mv -f rmfiles.e ../../hlib
++ rm rmfiles.o
++ echo '----------------------- RTAR  --------------------------'
+----------------------- RTAR  --------------------------
++ cd rtar
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS rtar.c
++ gcc -m32 rtar.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o rtar.e
++ mv rtar.e ../../hlib
++ rm -f rtar.o
++ echo '----------------------- WTAR --------------------------'
+----------------------- WTAR --------------------------
++ cd wtar
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS wtar.c
++ gcc -m32 wtar.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o wtar.e
++ mv wtar.e ../../hlib
++ rm -f wtar.o
++ echo '----------------------- SPP ----------------------------'
+----------------------- SPP ----------------------------
++ cd spp
++ sh -x mkpkg.sh
++ echo '----------------------- XC  ----------------------------'
+----------------------- XC  ----------------------------
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS xc.c
++ gcc -m32 xc.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o xc.e
++ mv -f xc.e ../../hlib
++ rm -f xc.o
++ echo '----------------------- XPP ----------------------------'
+----------------------- XPP ----------------------------
++ cd xpp
++ sh -x mkpkg.sh
++ find xpp.l -newer lexyy.c -exec rm lexyy.c ';'
++ test -f lexyy.c
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS lexyy.c
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS xppmain.c xppcode.c decl.c
++ gcc -m32 xppmain.o lexyy.o xppcode.o decl.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o xpp.e
++ mv -f xpp.e ../../../hlib
++ rm decl.o lexyy.o xppcode.o xppmain.o
++ echo '----------------------- RPP ----------------------------'
+----------------------- RPP ----------------------------
++ cd rpp
++ sh -x mkpkg.sh
++ echo '----------------------- RPPFOR -------------------------'
+----------------------- RPPFOR -------------------------
++ cd rppfor
++ sh -x mkpkg.sh
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 addchr.f allblk.f alldig.f baderr.f balpar.f beginc.f
+addchr.f:
+   addchr:
+allblk.f:
+   allblk:
+alldig.f:
+   alldig:
+baderr.f:
+   baderr:
+balpar.f:
+   balpar:
+beginc.f:
+   beginc:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 brknxt.f cascod.f caslab.f declco.f deftok.f doarth.f
+brknxt.f:
+   brknxt:
+cascod.f:
+   cascod:
+caslab.f:
+   caslab:
+declco.f:
+   declco:
+deftok.f:
+   deftok:
+doarth.f:
+   doarth:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 docode.f doif.f doincr.f domac.f dostat.f dosub.f
+docode.f:
+   docode:
+doif.f:
+   doif:
+doincr.f:
+   doincr:
+domac.f:
+   domac:
+dostat.f:
+   dostat:
+dosub.f:
+   dosub:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 eatup.f elseif.f endcod.f entdef.f entdkw.f entfkw.f
+eatup.f:
+   eatup:
+elseif.f:
+   elseif:
+endcod.f:
+   endcod:
+entdef.f:
+   entdef:
+entdkw.f:
+   entdkw:
+entfkw.f:
+   entfkw:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 entrkw.f entxkw.f errchk.f errgo.f errorc.f evalr.f
+entrkw.f:
+   entrkw:
+entxkw.f:
+   entxkw:
+errchk.f:
+   errchk:
+errgo.f:
+   errgo:
+errorc.f:
+   errorc:
+evalr.f:
+   evalr:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 finit.f forcod.f fors.f getdef.f gettok.f gnbtok.f
+finit.f:
+   finit:
+forcod.f:
+   forcod:
+fors.f:
+   fors:
+getdef.f:
+   getdef:
+gettok.f:
+   gettok:
+gnbtok.f:
+   gnbtok:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 gocode.f gtok.f ifcode.f iferrc.f ifgo.f ifparm.f
+gocode.f:
+   gocode:
+gtok.f:
+   gtok:
+ifcode.f:
+   ifcode:
+iferrc.f:
+   iferrc:
+ifgo.f:
+   ifgo:
+ifparm.f:
+   ifparm:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 indent.f initkw.f labelc.f labgen.f lex.f litral.f
+indent.f:
+   indent:
+initkw.f:
+   initkw:
+labelc.f:
+   labelc:
+labgen.f:
+   labgen:
+lex.f:
+   lex:
+litral.f:
+   litral:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 lndict.f ludef.f mapid.f ngetch.f ogotos.f otherc.f
+lndict.f:
+   lndict:
+ludef.f:
+   ludef:
+mapid.f:
+   mapid:
+ngetch.f:
+   ngetch:
+ogotos.f:
+   ogotos:
+otherc.f:
+   otherc:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 outch.f outcon.f outdon.f outdwe.f outgo.f outnum.f
+outch.f:
+   outch:
+outcon.f:
+   outcon:
+outdon.f:
+   outdon:
+outdwe.f:
+   outdwe:
+outgo.f:
+   outgo:
+outnum.f:
+   outnum:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 outstr.f outtab.f parse.f pbnum.f pbstr.f poicod.f
+outstr.f:
+   outstr:
+outtab.f:
+   outtab:
+parse.f:
+   parse:
+pbnum.f:
+   pbnum:
+pbstr.f:
+   pbstr:
+poicod.f:
+   poicod:
+   poidec:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 push.f putbak.f putchr.f puttok.f ratfor.f relate.f
+push.f:
+   push:
+putbak.f:
+   putbak:
+putchr.f:
+   putchr:
+puttok.f:
+   puttok:
+ratfor.f:
+   ratfor:
+relate.f:
+   relate:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 repcod.f retcod.f sdupl.f skpblk.f squash.f strdcl.f
+repcod.f:
+   repcod:
+retcod.f:
+   retcod:
+sdupl.f:
+   sdupl:
+skpblk.f:
+   skpblk:
+squash.f:
+   squash:
+strdcl.f:
+   strdcl:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 swcode.f swend.f swvar.f synerr.f thenco.f ulstal.f
+swcode.f:
+   swcode:
+swend.f:
+   swend:
+swvar.f:
+   swvar:
+synerr.f:
+   synerr:
+thenco.f:
+   thenco:
+ulstal.f:
+   ulstal:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 uniqid.f unstak.f untils.f whilec.f whiles.f
+uniqid.f:
+   uniqid:
+unstak.f:
+   unstak:
+untils.f:
+   untils:
+whilec.f:
+   whilec:
+whiles.f:
+   whiles:
++ ar rv librpp.a addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
+ar: creating librpp.a
+a - addchr.o
+a - allblk.o
+a - alldig.o
+a - baderr.o
+a - balpar.o
+a - beginc.o
+a - brknxt.o
+a - cascod.o
+a - caslab.o
+a - declco.o
+a - deftok.o
+a - doarth.o
+a - docode.o
+a - doif.o
+a - doincr.o
+a - domac.o
+a - dostat.o
+a - dosub.o
+a - eatup.o
+a - elseif.o
+a - endcod.o
+a - entdef.o
+a - entdkw.o
+a - entfkw.o
+a - entrkw.o
+a - entxkw.o
+a - errchk.o
+a - errgo.o
+a - errorc.o
+a - evalr.o
+a - finit.o
+a - forcod.o
+a - fors.o
+a - getdef.o
+a - gettok.o
+a - gnbtok.o
+a - gocode.o
+a - gtok.o
+a - ifcode.o
+a - iferrc.o
+a - ifgo.o
+a - ifparm.o
+a - indent.o
+a - initkw.o
+a - labelc.o
+a - labgen.o
+a - lex.o
+a - litral.o
+a - lndict.o
+a - ludef.o
+a - mapid.o
+a - ngetch.o
+a - ogotos.o
+a - otherc.o
+a - outch.o
+a - outcon.o
+a - outdon.o
+a - outdwe.o
+a - outgo.o
+a - outnum.o
+a - outstr.o
+a - outtab.o
+a - parse.o
+a - pbnum.o
+a - pbstr.o
+a - poicod.o
+a - push.o
+a - putbak.o
+a - putchr.o
+a - puttok.o
+a - ratfor.o
+a - relate.o
+a - repcod.o
+a - retcod.o
+a - sdupl.o
+a - skpblk.o
+a - squash.o
+a - strdcl.o
+a - swcode.o
+a - swend.o
+a - swvar.o
+a - synerr.o
+a - thenco.o
+a - ulstal.o
+a - uniqid.o
+a - unstak.o
+a - untils.o
+a - whilec.o
+a - whiles.o
++ ranlib librpp.a
++ mv -f librpp.a ..
++ rm addchr.o allblk.o alldig.o baderr.o balpar.o beginc.o brknxt.o cascod.o caslab.o declco.o deftok.o doarth.o docode.o doif.o doincr.o domac.o dostat.o dosub.o eatup.o elseif.o endcod.o entdef.o entdkw.o entfkw.o entrkw.o entxkw.o errchk.o errgo.o errorc.o evalr.o finit.o forcod.o fors.o getdef.o gettok.o gnbtok.o gocode.o gtok.o ifcode.o iferrc.o ifgo.o ifparm.o indent.o initkw.o labelc.o labgen.o lex.o litral.o lndict.o ludef.o mapid.o ngetch.o ogotos.o otherc.o outch.o outcon.o outdon.o outdwe.o outgo.o outnum.o outstr.o outtab.o parse.o pbnum.o pbstr.o poicod.o push.o putbak.o putchr.o puttok.o ratfor.o relate.o repcod.o retcod.o sdupl.o skpblk.o squash.o strdcl.o swcode.o swend.o swvar.o synerr.o thenco.o ulstal.o uniqid.o unstak.o untils.o whilec.o whiles.o
++ echo '----------------------- RATLIBF ------------------------'
+----------------------- RATLIBF ------------------------
++ cd ratlibf
++ sh -x mkpkg.sh
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 addset.f addstr.f amatch.f catsub.f clower.f concat.f
+addset.f:
+   addset:
+addstr.f:
+   addstr:
+amatch.f:
+   amatch:
+catsub.f:
+   catsub:
+clower.f:
+   clower:
+concat.f:
+   concat:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 ctoc.f ctoi.f ctomn.f cupper.f delete.f docant.f dodash.f
+ctoc.f:
+   ctoc:
+ctoi.f:
+   ctoi:
+ctomn.f:
+   ctomn:
+cupper.f:
+   cupper:
+delete.f:
+   delete:
+docant.f:
+   docant:
+dodash.f:
+   dodash:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 dsdbiu.f dsdump.f dsfree.f dsget.f dsinit.f enter.f equal.f
+dsdbiu.f:
+   dsdbiu:
+dsdump.f:
+   dsdump:
+dsfree.f:
+   dsfree:
+dsget.f:
+   dsget:
+dsinit.f:
+   dsinit:
+enter.f:
+   enter:
+equal.f:
+   equal:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 error.f errsub.f esc.f fcopy.f filset.f fmtdat.f fold.f
+error.f:
+   error:
+errsub.f:
+   errsub:
+esc.f:
+   esc:
+fcopy.f:
+   fcopy:
+filset.f:
+   filset:
+fmtdat.f:
+   fmtdat:
+fold.f:
+   fold:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 gctoi.f getc.f getccl.f getpat.f getwrd.f gfnarg.f index.f
+gctoi.f:
+   gctoi:
+getc.f:
+   getc:
+getccl.f:
+   getccl:
+getpat.f:
+   getpat:
+getwrd.f:
+   getwrd:
+gfnarg.f:
+   gfnarg:
+index.f:
+   index:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 insub.f itoc.f length.f locate.f lookup.f lower.f makpat.f
+insub.f:
+   insub:
+itoc.f:
+   itoc:
+length.f:
+   length:
+locate.f:
+   locate:
+lookup.f:
+   lookup:
+lower.f:
+   lower:
+makpat.f:
+   makpat:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 maksub.f match.f mktabl.f mntoc.f omatch.f outsub.f patsiz.f
+maksub.f:
+   maksub:
+match.f:
+   match:
+mktabl.f:
+   mktabl:
+mntoc.f:
+   mntoc:
+omatch.f:
+   omatch:
+outsub.f:
+   outsub:
+patsiz.f:
+   patsiz:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 prompt.f putc.f putdec.f putint.f putstr.f query.f rmtabl.f
+prompt.f:
+   prompt:
+putc.f:
+   putc:
+putdec.f:
+   putdec:
+putint.f:
+   putint:
+putstr.f:
+   putstr:
+query.f:
+   query:
+rmtabl.f:
+   rmtabl:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 scopy.f sctabl.f sdrop.f skipbl.f slstr.f stake.f stclos.f
+scopy.f:
+   scopy:
+sctabl.f:
+   sctabl:
+sdrop.f:
+   sdrop:
+skipbl.f:
+   skipbl:
+slstr.f:
+   slstr:
+stake.f:
+   stake:
+stclos.f:
+   stclos:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 stcopy.f stlu.f strcmp.f strim.f termin.f trmout.f type.f
+stcopy.f:
+   stcopy:
+stlu.f:
+   stlu:
+strcmp.f:
+   strcmp:
+strim.f:
+   strim:
+termin.f:
+   termin:
+trmout.f:
+   trmout:
+type.f:
+   type:
++ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/f77.sh -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DBLD_KERNEL -m32 upper.f wkday.f
+upper.f:
+   upper:
+wkday.f:
+   wkday:
++ ar rv libf.a addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getccl.o getc.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
+ar: creating libf.a
+a - addset.o
+a - addstr.o
+a - amatch.o
+a - catsub.o
+a - clower.o
+a - concat.o
+a - ctoc.o
+a - ctoi.o
+a - ctomn.o
+a - cupper.o
+a - delete.o
+a - docant.o
+a - dodash.o
+a - dsdbiu.o
+a - dsdump.o
+a - dsfree.o
+a - dsget.o
+a - dsinit.o
+a - enter.o
+a - equal.o
+a - error.o
+a - errsub.o
+a - esc.o
+a - fcopy.o
+a - filset.o
+a - fmtdat.o
+a - fold.o
+a - gctoi.o
+a - getccl.o
+a - getc.o
+a - getpat.o
+a - getwrd.o
+a - gfnarg.o
+a - index.o
+a - insub.o
+a - itoc.o
+a - length.o
+a - locate.o
+a - lookup.o
+a - lower.o
+a - makpat.o
+a - maksub.o
+a - match.o
+a - mktabl.o
+a - mntoc.o
+a - omatch.o
+a - outsub.o
+a - patsiz.o
+a - prompt.o
+a - putc.o
+a - putdec.o
+a - putint.o
+a - putstr.o
+a - query.o
+a - rmtabl.o
+a - scopy.o
+a - sctabl.o
+a - sdrop.o
+a - skipbl.o
+a - slstr.o
+a - stake.o
+a - stclos.o
+a - stcopy.o
+a - stlu.o
+a - strcmp.o
+a - strim.o
+a - termin.o
+a - trmout.o
+a - type.o
+a - upper.o
+a - wkday.o
++ ranlib libf.a
++ mv -f libf.a ..
++ rm addset.o addstr.o amatch.o catsub.o clower.o concat.o ctoc.o ctoi.o ctomn.o cupper.o delete.o docant.o dodash.o dsdbiu.o dsdump.o dsfree.o dsget.o dsinit.o enter.o equal.o error.o errsub.o esc.o fcopy.o filset.o fmtdat.o fold.o gctoi.o getccl.o getc.o getpat.o getwrd.o gfnarg.o index.o insub.o itoc.o length.o locate.o lookup.o lower.o makpat.o maksub.o match.o mktabl.o mntoc.o omatch.o outsub.o patsiz.o prompt.o putc.o putdec.o putint.o putstr.o query.o rmtabl.o scopy.o sctabl.o sdrop.o skipbl.o slstr.o stake.o stclos.o stcopy.o stlu.o strcmp.o strim.o termin.o trmout.o type.o upper.o wkday.o
++ echo '----------------------- RATLIBC ------------------------'
+----------------------- RATLIBC ------------------------
++ cd ratlibc
++ sh -x mkpkg.sh
++ gcc -c -g -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS cant.c close.c endst.c getarg.c getlin.c initst.c open.c putch.c putlin.c r4tocstr.c remark.c
++ ar rv libc.a cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
+ar: creating libc.a
+a - cant.o
+a - close.o
+a - endst.o
+a - getarg.o
+a - getlin.o
+a - initst.o
+a - open.o
+a - putch.o
+a - putlin.o
+a - r4tocstr.o
+a - remark.o
++ ranlib libc.a
++ mv -f libc.a ..
++ rm cant.o close.o endst.o getarg.o getlin.o initst.o open.o putch.o putlin.o r4tocstr.o remark.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS rpp.c
++ gcc -m32 rpp.o librpp.a libf.a libc.a -o rpp.e
++ mv -f rpp.e ../../../hlib
++ rm libc.a libf.a librpp.a rpp.o
++ echo '----------------------- XYACC --------------------------'
+----------------------- XYACC --------------------------
++ cd xyacc
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS y1.c y2.c y3.c y4.c
++ gcc -m32 y1.o y2.o y3.o y4.o -o xyacc.e
++ mv -f xyacc.e ../../hlib
++ cp yaccpar.x ../../../lib
++ rm -f y1.o y2.o y3.o y4.o
++ echo '----------------------- GDEV ---------------------------'
+----------------------- GDEV ---------------------------
++ cd gdev
++ sh -x mkpkg.sh
++ cd sgidev
++ sh -x mkpkg.sh
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgidispatch.c
++ gcc -m32 sgidispatch.o ../../hlib/libos.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgidispatch.e
++ mv -f sgidispatch.e ../../hlib
++ rm sgidispatch.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2uimp.c
++ gcc -m32 sgi2uimp.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2uimp.e
++ mv -f sgi2uimp.e ../../hlib
++ rm sgi2uimp.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2uapl.c
++ gcc -m32 sgi2uapl.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2uapl.e
++ mv -f sgi2uapl.e ../../hlib
++ rm sgi2uapl.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2uqms.c
++ gcc -m32 sgi2uqms.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2uqms.e
++ mv -f sgi2uqms.e ../../hlib
++ rm sgi2uqms.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2uptx.c
++ gcc -m32 sgi2uptx.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2uptx.e
++ mv -f sgi2uptx.e ../../hlib
++ rm sgi2uptx.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2uhplj.c
++ gcc -m32 sgi2uhplj.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2uhplj.e
++ mv -f sgi2uhplj.e ../../hlib
++ rm sgi2uhplj.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2uhpgl.c
++ gcc -m32 sgi2uhpgl.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2uhpgl.e
++ mv -f sgi2uhpgl.e ../../hlib
++ rm sgi2uhpgl.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2ueps.c
++ gcc -m32 sgi2ueps.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2ueps.e
++ mv -f sgi2ueps.e ../../hlib
++ rm sgi2ueps.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2gif.c
++ gcc -m32 sgi2gif.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2gif.e
++ mv -f sgi2gif.e ../../hlib
++ rm sgi2gif.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2xbm.c
++ gcc -m32 sgi2xbm.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2xbm.e
++ mv -f sgi2xbm.e ../../hlib
++ rm sgi2xbm.o
++ gcc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -O -DLINUX -DREDHAT -DPOSIX -DSYSV -w -m32 -Wunused -DNOVOS sgi2svg.c
++ gcc -m32 sgi2svg.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libboot.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/hlib/libos.a -o sgi2svg.e
++ mv -f sgi2svg.e ../../hlib
++ rm sgi2svg.o
++ echo 'install HSI executables in /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix//bin.linux'
+install HSI executables in /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix//bin.linux
++ mv -f hlib/alloc.e hlib/generic.e hlib/mkpkg.e hlib/rmbin.e hlib/rmfiles.e hlib/rpp.e hlib/rtar.e hlib/sgi2gif.e hlib/sgi2svg.e hlib/sgi2uapl.e hlib/sgi2ueps.e hlib/sgi2uhpgl.e hlib/sgi2uhplj.e hlib/sgi2uimp.e hlib/sgi2uptx.e hlib/sgi2uqms.e hlib/sgi2xbm.e hlib/sgidispatch.e hlib/wtar.e hlib/xc.e hlib/xpp.e hlib/xyacc.e bin.linux

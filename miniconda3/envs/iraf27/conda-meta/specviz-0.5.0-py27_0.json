@@ -1,0 +1,2140 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy",
+    "cython",
+    "docopt",
+    "numpy",
+    "py-expression-eval",
+    "pyqt",
+    "pyqt >=5.9.2,<5.10.0a0",
+    "pyqtgraph >=0.9.11",
+    "python >=2.7,<2.8.0a0",
+    "pyyaml",
+    "qtpy",
+    "scipy",
+    "six",
+    "spectral-cube",
+    "specutils <=0.2.2",
+    "yaml",
+    "yaml >=0.1.7,<0.2.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/specviz-0.5.0-py27_0",
+  "features": "",
+  "files": [
+    "bin/specviz",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/specviz/__init__.py",
+    "lib/python2.7/site-packages/specviz/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/_astropy_init.py",
+    "lib/python2.7/site-packages/specviz/_astropy_init.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/__init__.py",
+    "lib/python2.7/site-packages/specviz/analysis/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/filters.py",
+    "lib/python2.7/site-packages/specviz/analysis/filters.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/models/__init__.py",
+    "lib/python2.7/site-packages/specviz/analysis/models/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/models/blackbody.py",
+    "lib/python2.7/site-packages/specviz/analysis/models/blackbody.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/models/gaussian_absorption.py",
+    "lib/python2.7/site-packages/specviz/analysis/models/gaussian_absorption.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/models/spline.py",
+    "lib/python2.7/site-packages/specviz/analysis/models/spline.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/operations.py",
+    "lib/python2.7/site-packages/specviz/analysis/operations.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/statistics.py",
+    "lib/python2.7/site-packages/specviz/analysis/statistics.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/tests/__init__.py",
+    "lib/python2.7/site-packages/specviz/analysis/tests/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/tests/test_statistics.py",
+    "lib/python2.7/site-packages/specviz/analysis/tests/test_statistics.pyc",
+    "lib/python2.7/site-packages/specviz/analysis/utils.py",
+    "lib/python2.7/site-packages/specviz/analysis/utils.pyc",
+    "lib/python2.7/site-packages/specviz/app.py",
+    "lib/python2.7/site-packages/specviz/app.pyc",
+    "lib/python2.7/site-packages/specviz/conftest.py",
+    "lib/python2.7/site-packages/specviz/conftest.pyc",
+    "lib/python2.7/site-packages/specviz/core/__init__.py",
+    "lib/python2.7/site-packages/specviz/core/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/core/annotation.py",
+    "lib/python2.7/site-packages/specviz/core/annotation.pyc",
+    "lib/python2.7/site-packages/specviz/core/data.py",
+    "lib/python2.7/site-packages/specviz/core/data.pyc",
+    "lib/python2.7/site-packages/specviz/core/dispatch.py",
+    "lib/python2.7/site-packages/specviz/core/dispatch.pyc",
+    "lib/python2.7/site-packages/specviz/core/events.py",
+    "lib/python2.7/site-packages/specviz/core/events.pyc",
+    "lib/python2.7/site-packages/specviz/core/linelist.py",
+    "lib/python2.7/site-packages/specviz/core/linelist.pyc",
+    "lib/python2.7/site-packages/specviz/core/plots.py",
+    "lib/python2.7/site-packages/specviz/core/plots.pyc",
+    "lib/python2.7/site-packages/specviz/core/threads.py",
+    "lib/python2.7/site-packages/specviz/core/threads.pyc",
+    "lib/python2.7/site-packages/specviz/data/linelists/Atomic-Ionic.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/Atomic-Ionic.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/CO.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/CO.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/Common_nebular.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/Common_nebular.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/Common_stellar.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/Common_stellar.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/DEV_NOTES.txt",
+    "lib/python2.7/site-packages/specviz/data/linelists/H-He.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/H-He.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/H2.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/H2.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/JWST_line_list_original.txt",
+    "lib/python2.7/site-packages/specviz/data/linelists/Reader-Corliss.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/Reader-Corliss.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/SDSS.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/SDSS.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/illss.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/illss.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/tests/Common_stellar.list",
+    "lib/python2.7/site-packages/specviz/data/linelists/tests/Common_stellar.yaml",
+    "lib/python2.7/site-packages/specviz/data/linelists/tests/README",
+    "lib/python2.7/site-packages/specviz/data/mask_definitions/jwst.ecsv",
+    "lib/python2.7/site-packages/specviz/data/mask_definitions/sdss.ecsv",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Average Math-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Average Value-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Change Theme-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Color Dropper-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Combo Chart-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Copy-96.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Delete-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Ellipse Stroked-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Export-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Generic Text-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Globe Earth-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Label-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Line Chart-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Math-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Merge Vertical-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Open Folder-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Open Folder-Wizard-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Open in Browser-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Paste-96.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Pentagon-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Rectangle Stroked-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Remove Image-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Ruler-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Save-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Settings 3-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Settings-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Split Horizontal-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Stanley Knife-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Template-50.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Theatre Mask-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Vertical Flag-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/Width-48.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/application/icon.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Attention-528.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Expand Arrow-96.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Forward-96.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-New Window-96.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Open in Window-96.png",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/lock.svg",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/resources.qrc",
+    "lib/python2.7/site-packages/specviz/data/qt/resources/unlock.svg",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/data_list_plugin.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/dialog_resample_warning.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/fitted_linemap_dialog.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/fitted_linemap_prog_dialog.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/layer_list_plugin.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/main_window.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/mask_editor_plugin.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/model_fitting_plugin.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/parameter_tie_dialog.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/plugin.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/roi_bounds_dialog.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/statistics_plugin.ui",
+    "lib/python2.7/site-packages/specviz/data/qt/ui/wizard.ui",
+    "lib/python2.7/site-packages/specviz/data/yaml_loaders/ascii.yaml",
+    "lib/python2.7/site-packages/specviz/data/yaml_loaders/generic.yaml",
+    "lib/python2.7/site-packages/specviz/data/yaml_loaders/keck_deimos.yaml",
+    "lib/python2.7/site-packages/specviz/data/yaml_loaders/keck_mosfire.yaml",
+    "lib/python2.7/site-packages/specviz/data/yaml_loaders/kittpeak_mdm.yaml",
+    "lib/python2.7/site-packages/specviz/interfaces/__init__.py",
+    "lib/python2.7/site-packages/specviz/interfaces/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/decorators.py",
+    "lib/python2.7/site-packages/specviz/interfaces/decorators.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/factories.py",
+    "lib/python2.7/site-packages/specviz/interfaces/factories.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/initializers.py",
+    "lib/python2.7/site-packages/specviz/interfaces/initializers.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/loaders.py",
+    "lib/python2.7/site-packages/specviz/interfaces/loaders.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/model_io/__init__.py",
+    "lib/python2.7/site-packages/specviz/interfaces/model_io/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/model_io/py_model_io.py",
+    "lib/python2.7/site-packages/specviz/interfaces/model_io/py_model_io.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/model_io/yaml_model_io.py",
+    "lib/python2.7/site-packages/specviz/interfaces/model_io/yaml_model_io.pyc",
+    "lib/python2.7/site-packages/specviz/interfaces/registries.py",
+    "lib/python2.7/site-packages/specviz/interfaces/registries.pyc",
+    "lib/python2.7/site-packages/specviz/io/__init__.py",
+    "lib/python2.7/site-packages/specviz/io/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/__init__.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/apogee_loader.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/apogee_loader.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/ecsv_loader.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/ecsv_loader.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/generic_loader.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/generic_loader.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/hstcos_loader.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/hstcos_loader.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/hststis_loader.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/hststis_loader.pyc",
+    "lib/python2.7/site-packages/specviz/io/loaders/sdss_loader.py",
+    "lib/python2.7/site-packages/specviz/io/loaders/sdss_loader.pyc",
+    "lib/python2.7/site-packages/specviz/io/yaml_loader.py",
+    "lib/python2.7/site-packages/specviz/io/yaml_loader.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/__init__.py",
+    "lib/python2.7/site-packages/specviz/plugins/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/data_list_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/data_list_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/layer_list_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/layer_list_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/mask_editor_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/mask_editor_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/model_fitting_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/model_fitting_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/plot_tools_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/plot_tools_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/statistics_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/statistics_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/plugins/tool_tray_plugin.py",
+    "lib/python2.7/site-packages/specviz/plugins/tool_tray_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/tests/__init__.py",
+    "lib/python2.7/site-packages/specviz/tests/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/tests/coveragerc",
+    "lib/python2.7/site-packages/specviz/tests/setup_package.py",
+    "lib/python2.7/site-packages/specviz/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/__init__.py",
+    "lib/python2.7/site-packages/specviz/third_party/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/__init__.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/apply_operation.ui",
+    "lib/python2.7/site-packages/specviz/third_party/glue/data_viewer.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/data_viewer.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/dialogs.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/dialogs.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/layer_widget.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/layer_widget.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/layer_widget.ui",
+    "lib/python2.7/site-packages/specviz/third_party/glue/no_model_error_dialog.ui",
+    "lib/python2.7/site-packages/specviz/third_party/glue/plugins.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/plugins.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/threads.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/threads.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/version.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/version.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/viewer_options.py",
+    "lib/python2.7/site-packages/specviz/third_party/glue/viewer_options.pyc",
+    "lib/python2.7/site-packages/specviz/third_party/glue/viewer_options.ui",
+    "lib/python2.7/site-packages/specviz/utils/__init__.py",
+    "lib/python2.7/site-packages/specviz/utils/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/utils/parse_ecsv.py",
+    "lib/python2.7/site-packages/specviz/utils/parse_ecsv.pyc",
+    "lib/python2.7/site-packages/specviz/utils/parse_fits.py",
+    "lib/python2.7/site-packages/specviz/utils/parse_fits.pyc",
+    "lib/python2.7/site-packages/specviz/utils/tests/__init__.py",
+    "lib/python2.7/site-packages/specviz/utils/tests/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/version.py",
+    "lib/python2.7/site-packages/specviz/version.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/__init__.py",
+    "lib/python2.7/site-packages/specviz/widgets/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/axes.py",
+    "lib/python2.7/site-packages/specviz/widgets/axes.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/dialogs.py",
+    "lib/python2.7/site-packages/specviz/widgets/dialogs.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/line_labels_plotter.py",
+    "lib/python2.7/site-packages/specviz/widgets/line_labels_plotter.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/linelists_window.py",
+    "lib/python2.7/site-packages/specviz/widgets/linelists_window.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/menus.py",
+    "lib/python2.7/site-packages/specviz/widgets/menus.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/plugin.py",
+    "lib/python2.7/site-packages/specviz/widgets/plugin.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/qt_plugins/__init__.py",
+    "lib/python2.7/site-packages/specviz/widgets/qt_plugins/__init__.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/qt_plugins/spoiler_plugin.py",
+    "lib/python2.7/site-packages/specviz/widgets/qt_plugins/spoiler_plugin.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/region_items.py",
+    "lib/python2.7/site-packages/specviz/widgets/region_items.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/resources.py",
+    "lib/python2.7/site-packages/specviz/widgets/resources.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/spoiler.py",
+    "lib/python2.7/site-packages/specviz/widgets/spoiler.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/sub_windows.py",
+    "lib/python2.7/site-packages/specviz/widgets/sub_windows.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/toolbars.py",
+    "lib/python2.7/site-packages/specviz/widgets/toolbars.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/utils.py",
+    "lib/python2.7/site-packages/specviz/widgets/utils.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/windows.py",
+    "lib/python2.7/site-packages/specviz/widgets/windows.pyc",
+    "lib/python2.7/site-packages/specviz/widgets/wizard.py",
+    "lib/python2.7/site-packages/specviz/widgets/wizard.pyc"
+  ],
+  "fn": "specviz-0.5.0-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/specviz-0.5.0-py27_0",
+    "type": 1
+  },
+  "md5": "1895b5e1cc6896050f28003d3e1fe5a7",
+  "name": "specviz",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/specviz-0.5.0-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/specviz",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "3eb6ac6a5fa4f8b4f284a95eff0048b10939fc2adc28598f9548f26e67f9b590",
+        "sha256_in_prefix": "6315cfc72d38cef91507950f8f9e3f7fdf35b471d5a1374bba48433978a5c093",
+        "size_in_bytes": 409
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "883ea4d3908ea6af115b7564a92501a758ac8b30b359dfafaf4b096f2390db98",
+        "sha256_in_prefix": "883ea4d3908ea6af115b7564a92501a758ac8b30b359dfafaf4b096f2390db98",
+        "size_in_bytes": 356
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "74957bc6ca060762e564797d68a4dd45b4dee9348a628a2b7399a15ca21ddba0",
+        "sha256_in_prefix": "74957bc6ca060762e564797d68a4dd45b4dee9348a628a2b7399a15ca21ddba0",
+        "size_in_bytes": 11388
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "f21678fb9d9412d0539fac39445d548a9d884f984b62d27187d69ffe220f49e4",
+        "sha256_in_prefix": "f21678fb9d9412d0539fac39445d548a9d884f984b62d27187d69ffe220f49e4",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "cc5ef58de3a427e9aa0977191bbcd25e897dafbdb46aa29c21065502290ac9e1",
+        "sha256_in_prefix": "cc5ef58de3a427e9aa0977191bbcd25e897dafbdb46aa29c21065502290ac9e1",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz-0.5.0-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "787a8f4ae5c3655643a1cd27d857184bf3c530e2cd070cef525619200b29c24e",
+        "sha256_in_prefix": "787a8f4ae5c3655643a1cd27d857184bf3c530e2cd070cef525619200b29c24e",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "42fd1df4c84924510981995c1e970ef8524992d39528b50f03d3b59ce88cd088",
+        "sha256_in_prefix": "42fd1df4c84924510981995c1e970ef8524992d39528b50f03d3b59ce88cd088",
+        "size_in_bytes": 798
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "518d37cefd5489c0a5e3983c44b0e1b0ef5c86a175d77e80aa530ecc10edc3e6",
+        "sha256_in_prefix": "518d37cefd5489c0a5e3983c44b0e1b0ef5c86a175d77e80aa530ecc10edc3e6",
+        "size_in_bytes": 551
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/_astropy_init.py",
+        "path_type": "hardlink",
+        "sha256": "4816111043979ad6f7b7fc9d274635b51b507907921330e617ef132153436d25",
+        "sha256_in_prefix": "4816111043979ad6f7b7fc9d274635b51b507907921330e617ef132153436d25",
+        "size_in_bytes": 5345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/_astropy_init.pyc",
+        "path_type": "hardlink",
+        "sha256": "221f829dc23bdfd2b7598dc37b562634e2ca26031fb147f539dceea63d93f913",
+        "sha256_in_prefix": "221f829dc23bdfd2b7598dc37b562634e2ca26031fb147f539dceea63d93f913",
+        "size_in_bytes": 5225
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "61228f47c7c73206d2df869c955a071854860c122e7154b3963271166b998a8e",
+        "sha256_in_prefix": "61228f47c7c73206d2df869c955a071854860c122e7154b3963271166b998a8e",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "47cd5b5fc0dfe2339d04af7c6554ad7f4f820551610054dadd74947f047df313",
+        "sha256_in_prefix": "47cd5b5fc0dfe2339d04af7c6554ad7f4f820551610054dadd74947f047df313",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/filters.py",
+        "path_type": "hardlink",
+        "sha256": "02748ca8d6ce15742c1822b9a70ad4de9b480b5b7f6249447cba2dfab1f02cf1",
+        "sha256_in_prefix": "02748ca8d6ce15742c1822b9a70ad4de9b480b5b7f6249447cba2dfab1f02cf1",
+        "size_in_bytes": 1238
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/filters.pyc",
+        "path_type": "hardlink",
+        "sha256": "b793eecc8ec022528e703771d923f052a92bf7b92605d99291486f8720ee2fe0",
+        "sha256_in_prefix": "b793eecc8ec022528e703771d923f052a92bf7b92605d99291486f8720ee2fe0",
+        "size_in_bytes": 1958
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a0f15dc2bbb1fc7e4510d8a47f42e8e3eeaabff05ec30eb8fca6027f2410022d",
+        "sha256_in_prefix": "a0f15dc2bbb1fc7e4510d8a47f42e8e3eeaabff05ec30eb8fca6027f2410022d",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "e37ca1f9e1abf779ddfe8c3119af8fa72a86331fbd8ec0b1521dcb74b9fa3684",
+        "sha256_in_prefix": "e37ca1f9e1abf779ddfe8c3119af8fa72a86331fbd8ec0b1521dcb74b9fa3684",
+        "size_in_bytes": 305
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/blackbody.py",
+        "path_type": "hardlink",
+        "sha256": "798f097196c0022f722f0bc29225a1acf1e6520df97b4a7048e0742333a88721",
+        "sha256_in_prefix": "798f097196c0022f722f0bc29225a1acf1e6520df97b4a7048e0742333a88721",
+        "size_in_bytes": 2514
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/blackbody.pyc",
+        "path_type": "hardlink",
+        "sha256": "b4cf02ffb7cc4d899327b07a2ab42a68cff84596e6e8404771c131e1eb228e3d",
+        "sha256_in_prefix": "b4cf02ffb7cc4d899327b07a2ab42a68cff84596e6e8404771c131e1eb228e3d",
+        "size_in_bytes": 2986
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/gaussian_absorption.py",
+        "path_type": "hardlink",
+        "sha256": "2cc6ff0929e251c7ec8436f5a5b89bf5482fe7497a8205e583ab82e193f420f5",
+        "sha256_in_prefix": "2cc6ff0929e251c7ec8436f5a5b89bf5482fe7497a8205e583ab82e193f420f5",
+        "size_in_bytes": 3052
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/gaussian_absorption.pyc",
+        "path_type": "hardlink",
+        "sha256": "25d5769902bb10c63c867ab60006f2b58cfec2a4af05bb1c074c60aceed4546e",
+        "sha256_in_prefix": "25d5769902bb10c63c867ab60006f2b58cfec2a4af05bb1c074c60aceed4546e",
+        "size_in_bytes": 3646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/spline.py",
+        "path_type": "hardlink",
+        "sha256": "f9b77cfd7d81a758ff127596b41a097c73017344b30391ed333542989ac6acde",
+        "sha256_in_prefix": "f9b77cfd7d81a758ff127596b41a097c73017344b30391ed333542989ac6acde",
+        "size_in_bytes": 1722
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/models/spline.pyc",
+        "path_type": "hardlink",
+        "sha256": "257b503bcd93a2751542a45d0d03d939c67accf441f836d8bd69b651d211d014",
+        "sha256_in_prefix": "257b503bcd93a2751542a45d0d03d939c67accf441f836d8bd69b651d211d014",
+        "size_in_bytes": 2518
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/operations.py",
+        "path_type": "hardlink",
+        "sha256": "130df86a13ffc3205e74cf0d133856f68a0d32b4dab9a448df1b111ec3c39ac5",
+        "sha256_in_prefix": "130df86a13ffc3205e74cf0d133856f68a0d32b4dab9a448df1b111ec3c39ac5",
+        "size_in_bytes": 1812
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/operations.pyc",
+        "path_type": "hardlink",
+        "sha256": "f1cf8252d852cfbafd0f4acbbfa7fc8ad538b8eb9b9ea56e0d1b5019df896e9c",
+        "sha256_in_prefix": "f1cf8252d852cfbafd0f4acbbfa7fc8ad538b8eb9b9ea56e0d1b5019df896e9c",
+        "size_in_bytes": 3338
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/statistics.py",
+        "path_type": "hardlink",
+        "sha256": "865eb5d8415a98b12ff6c30dd0106a96c5c2d6c1ef9641e54a25f0f915ad1715",
+        "sha256_in_prefix": "865eb5d8415a98b12ff6c30dd0106a96c5c2d6c1ef9641e54a25f0f915ad1715",
+        "size_in_bytes": 6442
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/statistics.pyc",
+        "path_type": "hardlink",
+        "sha256": "58da17b74405b76cf478dc64963605128e3691065b1fa21bdf8df44d80700663",
+        "sha256_in_prefix": "58da17b74405b76cf478dc64963605128e3691065b1fa21bdf8df44d80700663",
+        "size_in_bytes": 6705
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "f783ce7f164a347ecd03ca0adeefc6880de5de4e74bf256a45bca3d25d7fe53d",
+        "sha256_in_prefix": "f783ce7f164a347ecd03ca0adeefc6880de5de4e74bf256a45bca3d25d7fe53d",
+        "size_in_bytes": 173
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/tests/test_statistics.py",
+        "path_type": "hardlink",
+        "sha256": "04d822dac8f62ca52837c42e21f10a93f51ad15bb5961719cd7c80355ce22a84",
+        "sha256_in_prefix": "04d822dac8f62ca52837c42e21f10a93f51ad15bb5961719cd7c80355ce22a84",
+        "size_in_bytes": 338
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/tests/test_statistics.pyc",
+        "path_type": "hardlink",
+        "sha256": "f177104693bdc53658db247a883619e9ced8d77d21428f14d84d7002de885588",
+        "sha256_in_prefix": "f177104693bdc53658db247a883619e9ced8d77d21428f14d84d7002de885588",
+        "size_in_bytes": 778
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/utils.py",
+        "path_type": "hardlink",
+        "sha256": "6d02e0b827162310e1acd35ad518ce78a7ad566d035fc58b7ef96bcc1bf211f2",
+        "sha256_in_prefix": "6d02e0b827162310e1acd35ad518ce78a7ad566d035fc58b7ef96bcc1bf211f2",
+        "size_in_bytes": 8844
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/analysis/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "1cd7a858448d0547925fc75c5acb0ae6c05bfc57fe852ab40b0a549916fc68da",
+        "sha256_in_prefix": "1cd7a858448d0547925fc75c5acb0ae6c05bfc57fe852ab40b0a549916fc68da",
+        "size_in_bytes": 7982
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/app.py",
+        "path_type": "hardlink",
+        "sha256": "eb1765541b4e4134627c0ed8102928c12e4e388826f800706a9a4fe90987b018",
+        "sha256_in_prefix": "eb1765541b4e4134627c0ed8102928c12e4e388826f800706a9a4fe90987b018",
+        "size_in_bytes": 7265
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/app.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f2cb948cc2f9f1ba26956b0ef81c745da39a78f97d3013b1c0f15cfcc458bc2",
+        "sha256_in_prefix": "3f2cb948cc2f9f1ba26956b0ef81c745da39a78f97d3013b1c0f15cfcc458bc2",
+        "size_in_bytes": 8614
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "75f4ba6f86579dd222acd8342f5ace3622eae298e6ec0cd2b5ca5357a230c934",
+        "sha256_in_prefix": "75f4ba6f86579dd222acd8342f5ace3622eae298e6ec0cd2b5ca5357a230c934",
+        "size_in_bytes": 1435
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "55eb54a5a9467689de52639b2a3f79f9cec2068d819093312a414eef1eb89daf",
+        "sha256_in_prefix": "55eb54a5a9467689de52639b2a3f79f9cec2068d819093312a414eef1eb89daf",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fee9768a5b6892f304b86fba06bc5e8fdac32c0c14d76caba0fa4bb615961833",
+        "sha256_in_prefix": "fee9768a5b6892f304b86fba06bc5e8fdac32c0c14d76caba0fa4bb615961833",
+        "size_in_bytes": 28
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "6201d1cf9ecd6a9306fb0a868601920021fd000b193b1d25a1f491bfdf7b1727",
+        "sha256_in_prefix": "6201d1cf9ecd6a9306fb0a868601920021fd000b193b1d25a1f491bfdf7b1727",
+        "size_in_bytes": 218
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/annotation.py",
+        "path_type": "hardlink",
+        "sha256": "161f618fa1d65da3ce020113d0a4d15359e95f9da7ffbf3763dacd23e61bf9af",
+        "sha256_in_prefix": "161f618fa1d65da3ce020113d0a4d15359e95f9da7ffbf3763dacd23e61bf9af",
+        "size_in_bytes": 5755
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/annotation.pyc",
+        "path_type": "hardlink",
+        "sha256": "e934b79739e561f852ad69c8064f0ff7fab5598d74ea85c83f520fe534620de5",
+        "sha256_in_prefix": "e934b79739e561f852ad69c8064f0ff7fab5598d74ea85c83f520fe534620de5",
+        "size_in_bytes": 5242
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/data.py",
+        "path_type": "hardlink",
+        "sha256": "ed821acdf1b632bee9a6e212592cfcd47b245c4852020f6e1ef19227ad2d806e",
+        "sha256_in_prefix": "ed821acdf1b632bee9a6e212592cfcd47b245c4852020f6e1ef19227ad2d806e",
+        "size_in_bytes": 17879
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/data.pyc",
+        "path_type": "hardlink",
+        "sha256": "8418eacccd521bf5559ed2280e38c8e27340a4a0048cd7e86a44b45fcba6f0ed",
+        "sha256_in_prefix": "8418eacccd521bf5559ed2280e38c8e27340a4a0048cd7e86a44b45fcba6f0ed",
+        "size_in_bytes": 18328
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/dispatch.py",
+        "path_type": "hardlink",
+        "sha256": "e2e0f6c76f74073b02da9ec77ee284bc8139fc391dd7191f9c7f9007425edc63",
+        "sha256_in_prefix": "e2e0f6c76f74073b02da9ec77ee284bc8139fc391dd7191f9c7f9007425edc63",
+        "size_in_bytes": 5475
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/dispatch.pyc",
+        "path_type": "hardlink",
+        "sha256": "d927052b70f5e8d1d9a6973fca9e8d09c51688ba3e8c4877af8cda2f45fbf161",
+        "sha256_in_prefix": "d927052b70f5e8d1d9a6973fca9e8d09c51688ba3e8c4877af8cda2f45fbf161",
+        "size_in_bytes": 7291
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/events.py",
+        "path_type": "hardlink",
+        "sha256": "fed221d4f9dd03120bef278d2efbddd510bf708455d68eb6fe863a2c27881efa",
+        "sha256_in_prefix": "fed221d4f9dd03120bef278d2efbddd510bf708455d68eb6fe863a2c27881efa",
+        "size_in_bytes": 3973
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/events.pyc",
+        "path_type": "hardlink",
+        "sha256": "36209486056f0a83ad6c48e769e23706cc957fc1ef7d7884b60a698028856ea5",
+        "sha256_in_prefix": "36209486056f0a83ad6c48e769e23706cc957fc1ef7d7884b60a698028856ea5",
+        "size_in_bytes": 3476
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/linelist.py",
+        "path_type": "hardlink",
+        "sha256": "fa7b0e10d82ec81c29a5c7f6615ab129f60fb04c4574d6e10c82525b1938aa51",
+        "sha256_in_prefix": "fa7b0e10d82ec81c29a5c7f6615ab129f60fb04c4574d6e10c82525b1938aa51",
+        "size_in_bytes": 11921
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/linelist.pyc",
+        "path_type": "hardlink",
+        "sha256": "32dd91195f5c1fe7fbff7679590dbb6eb348fa81db18e14ce369182fcf3bb298",
+        "sha256_in_prefix": "32dd91195f5c1fe7fbff7679590dbb6eb348fa81db18e14ce369182fcf3bb298",
+        "size_in_bytes": 11001
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/plots.py",
+        "path_type": "hardlink",
+        "sha256": "70512f806b092d0a0ed3e181f7362a78aa488a48d3b2b9618dc5162488c65cf1",
+        "sha256_in_prefix": "70512f806b092d0a0ed3e181f7362a78aa488a48d3b2b9618dc5162488c65cf1",
+        "size_in_bytes": 10373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/plots.pyc",
+        "path_type": "hardlink",
+        "sha256": "33ff943b783e2bc559851916370417de183b956a957f705ec2c6b2a86b52b121",
+        "sha256_in_prefix": "33ff943b783e2bc559851916370417de183b956a957f705ec2c6b2a86b52b121",
+        "size_in_bytes": 11012
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/threads.py",
+        "path_type": "hardlink",
+        "sha256": "ecc38bc21e295028cb8c9c5b3e53c8067044bad3f5b1745fb3b487722a58a0ba",
+        "sha256_in_prefix": "ecc38bc21e295028cb8c9c5b3e53c8067044bad3f5b1745fb3b487722a58a0ba",
+        "size_in_bytes": 12022
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/core/threads.pyc",
+        "path_type": "hardlink",
+        "sha256": "9199283d83656d8a4629e3d101eef9e169babc37d5763bd3e3fac7d0bdb36128",
+        "sha256_in_prefix": "9199283d83656d8a4629e3d101eef9e169babc37d5763bd3e3fac7d0bdb36128",
+        "size_in_bytes": 11047
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Atomic-Ionic.list",
+        "path_type": "hardlink",
+        "sha256": "de2da7c87b3a74c140a825fc6d9df30de4793fdb66b8ed2c537f730b50a237a2",
+        "sha256_in_prefix": "de2da7c87b3a74c140a825fc6d9df30de4793fdb66b8ed2c537f730b50a237a2",
+        "size_in_bytes": 8228
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Atomic-Ionic.yaml",
+        "path_type": "hardlink",
+        "sha256": "f63fc9ab4b219997f4a734836bd628b0dcd6251a75a072ef576edf58bfdeb21d",
+        "sha256_in_prefix": "f63fc9ab4b219997f4a734836bd628b0dcd6251a75a072ef576edf58bfdeb21d",
+        "size_in_bytes": 506
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/CO.list",
+        "path_type": "hardlink",
+        "sha256": "b6f34e26f6d2fb28422a22eea09e97db12c87f77b1c4fc700620f6f0f5db1a17",
+        "sha256_in_prefix": "b6f34e26f6d2fb28422a22eea09e97db12c87f77b1c4fc700620f6f0f5db1a17",
+        "size_in_bytes": 2405
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/CO.yaml",
+        "path_type": "hardlink",
+        "sha256": "02b1f240784b50c69bc98466a3fa1749268782df2d5e5e59c5aa24080751bdd8",
+        "sha256_in_prefix": "02b1f240784b50c69bc98466a3fa1749268782df2d5e5e59c5aa24080751bdd8",
+        "size_in_bytes": 348
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Common_nebular.list",
+        "path_type": "hardlink",
+        "sha256": "fca9a9ff61403b3d1a47a2c1fad51a152e0638c3920005634dd7629637962e78",
+        "sha256_in_prefix": "fca9a9ff61403b3d1a47a2c1fad51a152e0638c3920005634dd7629637962e78",
+        "size_in_bytes": 1675
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Common_nebular.yaml",
+        "path_type": "hardlink",
+        "sha256": "588ff5686d82311fec5b6992f4e40476f9943e52f14cd4c3710f31257e48f374",
+        "sha256_in_prefix": "588ff5686d82311fec5b6992f4e40476f9943e52f14cd4c3710f31257e48f374",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Common_stellar.list",
+        "path_type": "hardlink",
+        "sha256": "90f7399943aa10c17b369bb90e3a6674427021a1d97af15b458c51ddb9b3d7db",
+        "sha256_in_prefix": "90f7399943aa10c17b369bb90e3a6674427021a1d97af15b458c51ddb9b3d7db",
+        "size_in_bytes": 3037
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Common_stellar.yaml",
+        "path_type": "hardlink",
+        "sha256": "b196739cc29ed0a194b2b9bbd25454efd93e46d50ee3db56415341890082579b",
+        "sha256_in_prefix": "b196739cc29ed0a194b2b9bbd25454efd93e46d50ee3db56415341890082579b",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/DEV_NOTES.txt",
+        "path_type": "hardlink",
+        "sha256": "04dcc6beb9102308be51b5e798d3aba9331dbc924d9f45257fd8d67894ed3943",
+        "sha256_in_prefix": "04dcc6beb9102308be51b5e798d3aba9331dbc924d9f45257fd8d67894ed3943",
+        "size_in_bytes": 2748
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/H-He.list",
+        "path_type": "hardlink",
+        "sha256": "b5c86c81233ef24b9d66e79b70f61b165a2b5186f0dce28005293d0d231c35ed",
+        "sha256_in_prefix": "b5c86c81233ef24b9d66e79b70f61b165a2b5186f0dce28005293d0d231c35ed",
+        "size_in_bytes": 5984
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/H-He.yaml",
+        "path_type": "hardlink",
+        "sha256": "35df45b82d532103a71944904f04571796b9dc6eb5125b508660099e22f109b9",
+        "sha256_in_prefix": "35df45b82d532103a71944904f04571796b9dc6eb5125b508660099e22f109b9",
+        "size_in_bytes": 487
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/H2.list",
+        "path_type": "hardlink",
+        "sha256": "a90caac35e0451d0b89685934e68125ff92b19674a4ceee79532c46dba844fea",
+        "sha256_in_prefix": "a90caac35e0451d0b89685934e68125ff92b19674a4ceee79532c46dba844fea",
+        "size_in_bytes": 2863
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/H2.yaml",
+        "path_type": "hardlink",
+        "sha256": "c765cf2e934f135ccf3e1a0f577e476da1e6e64ebbcdc254cc13dec038606919",
+        "sha256_in_prefix": "c765cf2e934f135ccf3e1a0f577e476da1e6e64ebbcdc254cc13dec038606919",
+        "size_in_bytes": 346
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/JWST_line_list_original.txt",
+        "path_type": "hardlink",
+        "sha256": "21b6ba2b842134f2dff9e4319154247d95db1c26938ce48d3e7d7961c1472edb",
+        "sha256_in_prefix": "21b6ba2b842134f2dff9e4319154247d95db1c26938ce48d3e7d7961c1472edb",
+        "size_in_bytes": 21334
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Reader-Corliss.list",
+        "path_type": "hardlink",
+        "sha256": "649dc9e98608d1594d3cdcbec33c9ed73e1aed53704d0c0b309a918cc48e78f5",
+        "sha256_in_prefix": "649dc9e98608d1594d3cdcbec33c9ed73e1aed53704d0c0b309a918cc48e78f5",
+        "size_in_bytes": 2753360
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/Reader-Corliss.yaml",
+        "path_type": "hardlink",
+        "sha256": "6a660dd14fc5202ca94e2d338362305bc21815a47587070a43189542ee323b75",
+        "sha256_in_prefix": "6a660dd14fc5202ca94e2d338362305bc21815a47587070a43189542ee323b75",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/SDSS.list",
+        "path_type": "hardlink",
+        "sha256": "264e9b05e3de109cbafe2e2ff2e3567f712b278523ad7a555e76636ee31754f0",
+        "sha256_in_prefix": "264e9b05e3de109cbafe2e2ff2e3567f712b278523ad7a555e76636ee31754f0",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/SDSS.yaml",
+        "path_type": "hardlink",
+        "sha256": "779b258099afed88706fca99c0ea78a6b71676ca2330c3e164c6f1d96709d9ae",
+        "sha256_in_prefix": "779b258099afed88706fca99c0ea78a6b71676ca2330c3e164c6f1d96709d9ae",
+        "size_in_bytes": 485
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/illss.list",
+        "path_type": "hardlink",
+        "sha256": "578e9b3f37b774ad9bb4e12ef4f802e65584cb7fa155b2a4b40848a5c802e7d7",
+        "sha256_in_prefix": "578e9b3f37b774ad9bb4e12ef4f802e65584cb7fa155b2a4b40848a5c802e7d7",
+        "size_in_bytes": 1380733
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/illss.yaml",
+        "path_type": "hardlink",
+        "sha256": "e35753fc104e5c7bd5ff912802dfd312ce91852cd56449e99a43aa4f86d15bbe",
+        "sha256_in_prefix": "e35753fc104e5c7bd5ff912802dfd312ce91852cd56449e99a43aa4f86d15bbe",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/tests/Common_stellar.list",
+        "path_type": "hardlink",
+        "sha256": "90f7399943aa10c17b369bb90e3a6674427021a1d97af15b458c51ddb9b3d7db",
+        "sha256_in_prefix": "90f7399943aa10c17b369bb90e3a6674427021a1d97af15b458c51ddb9b3d7db",
+        "size_in_bytes": 3037
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/tests/Common_stellar.yaml",
+        "path_type": "hardlink",
+        "sha256": "b196739cc29ed0a194b2b9bbd25454efd93e46d50ee3db56415341890082579b",
+        "sha256_in_prefix": "b196739cc29ed0a194b2b9bbd25454efd93e46d50ee3db56415341890082579b",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/linelists/tests/README",
+        "path_type": "hardlink",
+        "sha256": "77e2d2201ab888915071909b89bdacff7b6ba45eaef70a626e36e1eb78cb31a7",
+        "sha256_in_prefix": "77e2d2201ab888915071909b89bdacff7b6ba45eaef70a626e36e1eb78cb31a7",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/mask_definitions/jwst.ecsv",
+        "path_type": "hardlink",
+        "sha256": "8bddb6b3f3d3700906caffb962388272b7caebd4a7e6d5b98572923bbbb8f8fc",
+        "sha256_in_prefix": "8bddb6b3f3d3700906caffb962388272b7caebd4a7e6d5b98572923bbbb8f8fc",
+        "size_in_bytes": 1524
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/mask_definitions/sdss.ecsv",
+        "path_type": "hardlink",
+        "sha256": "82dfbd573fd914279614c83ff8dcf40d110432c3d3ab47dee40fd5b151132b07",
+        "sha256_in_prefix": "82dfbd573fd914279614c83ff8dcf40d110432c3d3ab47dee40fd5b151132b07",
+        "size_in_bytes": 2053
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Average Math-48.png",
+        "path_type": "hardlink",
+        "sha256": "bf8e78260a8dd728e314ab87fb73c2fd5ee0b0aecf8fc32b7378c0ebf37d1379",
+        "sha256_in_prefix": "bf8e78260a8dd728e314ab87fb73c2fd5ee0b0aecf8fc32b7378c0ebf37d1379",
+        "size_in_bytes": 485
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Average Value-48.png",
+        "path_type": "hardlink",
+        "sha256": "5ea78bc3f213bbdf9e1994e9b15ddb2418cefe6536d17a6235291869ad2aa3ad",
+        "sha256_in_prefix": "5ea78bc3f213bbdf9e1994e9b15ddb2418cefe6536d17a6235291869ad2aa3ad",
+        "size_in_bytes": 471
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Change Theme-50.png",
+        "path_type": "hardlink",
+        "sha256": "88074092c29d7e8b2b203e9f61a93b759731b486f5937090081cde477d524e8a",
+        "sha256_in_prefix": "88074092c29d7e8b2b203e9f61a93b759731b486f5937090081cde477d524e8a",
+        "size_in_bytes": 434
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Color Dropper-48.png",
+        "path_type": "hardlink",
+        "sha256": "8c61940756d594504a10e3bdd5f400697f6e6f323ada2b05d07d186b5d26569a",
+        "sha256_in_prefix": "8c61940756d594504a10e3bdd5f400697f6e6f323ada2b05d07d186b5d26569a",
+        "size_in_bytes": 499
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Combo Chart-48.png",
+        "path_type": "hardlink",
+        "sha256": "134aeea06e2ffd578e21a91704cf0a52d69a6d9fd262e825078a19dd68444b9a",
+        "sha256_in_prefix": "134aeea06e2ffd578e21a91704cf0a52d69a6d9fd262e825078a19dd68444b9a",
+        "size_in_bytes": 447
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Copy-96.png",
+        "path_type": "hardlink",
+        "sha256": "57c36d819e2e3a1bbbb3749107c733f98aa3c637f6858cd0526818033117fcc5",
+        "sha256_in_prefix": "57c36d819e2e3a1bbbb3749107c733f98aa3c637f6858cd0526818033117fcc5",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Delete-48.png",
+        "path_type": "hardlink",
+        "sha256": "3e04b065fc0f76576090de3f60b47bf8215cce0fd735925d08bd98cea1a3e5e8",
+        "sha256_in_prefix": "3e04b065fc0f76576090de3f60b47bf8215cce0fd735925d08bd98cea1a3e5e8",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Ellipse Stroked-50.png",
+        "path_type": "hardlink",
+        "sha256": "acdc623e9e87efd9d7d3837e225b9afd60804d162936b5e4226df41e0eda26d3",
+        "sha256_in_prefix": "acdc623e9e87efd9d7d3837e225b9afd60804d162936b5e4226df41e0eda26d3",
+        "size_in_bytes": 640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Export-48.png",
+        "path_type": "hardlink",
+        "sha256": "36c72fc1e94f674235340ea3b47e35ed9d9ab19c07c1169240599987fe0f837b",
+        "sha256_in_prefix": "36c72fc1e94f674235340ea3b47e35ed9d9ab19c07c1169240599987fe0f837b",
+        "size_in_bytes": 331
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Generic Text-48.png",
+        "path_type": "hardlink",
+        "sha256": "ccb1d34376f5eafdb994443a7b5f242804deafa5d17fd1839a30185977084225",
+        "sha256_in_prefix": "ccb1d34376f5eafdb994443a7b5f242804deafa5d17fd1839a30185977084225",
+        "size_in_bytes": 447
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Globe Earth-48.png",
+        "path_type": "hardlink",
+        "sha256": "b2d788e4387d33d255c9c34e29231e2c6a935290c1a57a6e66364698e7388d0a",
+        "sha256_in_prefix": "b2d788e4387d33d255c9c34e29231e2c6a935290c1a57a6e66364698e7388d0a",
+        "size_in_bytes": 1567
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Label-48.png",
+        "path_type": "hardlink",
+        "sha256": "f23c42140bf88fcba759df4878e58a59e41ef74871cda4db0bd993c727c52491",
+        "sha256_in_prefix": "f23c42140bf88fcba759df4878e58a59e41ef74871cda4db0bd993c727c52491",
+        "size_in_bytes": 314
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Line Chart-48.png",
+        "path_type": "hardlink",
+        "sha256": "92c0674046122cdaeb4eacabc63b0c86be4ca2cacc107dffe56aab61244d6da5",
+        "sha256_in_prefix": "92c0674046122cdaeb4eacabc63b0c86be4ca2cacc107dffe56aab61244d6da5",
+        "size_in_bytes": 741
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Math-48.png",
+        "path_type": "hardlink",
+        "sha256": "f33888eaf6f7ee1e2c16e2f1138e040917658d2fb03fc984aaf6c4f4d1b2cc4e",
+        "sha256_in_prefix": "f33888eaf6f7ee1e2c16e2f1138e040917658d2fb03fc984aaf6c4f4d1b2cc4e",
+        "size_in_bytes": 352
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Merge Vertical-48.png",
+        "path_type": "hardlink",
+        "sha256": "17e2504b1af8f09c02ef1695c6ee9a70162bb9c40405cc8a5329a63949cbc084",
+        "sha256_in_prefix": "17e2504b1af8f09c02ef1695c6ee9a70162bb9c40405cc8a5329a63949cbc084",
+        "size_in_bytes": 327
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Open Folder-48.png",
+        "path_type": "hardlink",
+        "sha256": "5788974d61e97be3ae02ca156a2ebfd140f10de4b468c74f2576150d3682e66e",
+        "sha256_in_prefix": "5788974d61e97be3ae02ca156a2ebfd140f10de4b468c74f2576150d3682e66e",
+        "size_in_bytes": 416
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Open Folder-Wizard-48.png",
+        "path_type": "hardlink",
+        "sha256": "2115a337a1f841d8559df4e950a5443cdd94f24e6b1dbf8ecb7d1ec519530c0c",
+        "sha256_in_prefix": "2115a337a1f841d8559df4e950a5443cdd94f24e6b1dbf8ecb7d1ec519530c0c",
+        "size_in_bytes": 2067
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Open in Browser-50.png",
+        "path_type": "hardlink",
+        "sha256": "5c220bf7a30cdfb918246cc642e6f34bd37dc36534186bb1fcbdfc8ead54438f",
+        "sha256_in_prefix": "5c220bf7a30cdfb918246cc642e6f34bd37dc36534186bb1fcbdfc8ead54438f",
+        "size_in_bytes": 723
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Paste-96.png",
+        "path_type": "hardlink",
+        "sha256": "a4bbdcc9f735e4c9b422838d33fc426999b9d18fcd3a36728364357b0b72505b",
+        "sha256_in_prefix": "a4bbdcc9f735e4c9b422838d33fc426999b9d18fcd3a36728364357b0b72505b",
+        "size_in_bytes": 839
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Pentagon-50.png",
+        "path_type": "hardlink",
+        "sha256": "0775dfd91de633538fc5cb244b56d119606952b1ea2ff7358bcd7a880bb566a0",
+        "sha256_in_prefix": "0775dfd91de633538fc5cb244b56d119606952b1ea2ff7358bcd7a880bb566a0",
+        "size_in_bytes": 600
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Rectangle Stroked-50.png",
+        "path_type": "hardlink",
+        "sha256": "496af0bdab02dc78966b726700a937a352d5145a1599d7fd5880f1c8201e7d60",
+        "sha256_in_prefix": "496af0bdab02dc78966b726700a937a352d5145a1599d7fd5880f1c8201e7d60",
+        "size_in_bytes": 192
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Remove Image-50.png",
+        "path_type": "hardlink",
+        "sha256": "4ada7012655735952a745690dba6a1aa46122eda16363a36c049d5d29851e3a7",
+        "sha256_in_prefix": "4ada7012655735952a745690dba6a1aa46122eda16363a36c049d5d29851e3a7",
+        "size_in_bytes": 969
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Ruler-48.png",
+        "path_type": "hardlink",
+        "sha256": "dc9ed099896cde3dea6e606c4de6ec0a66f5d31d468b8a926f7bbdfe11e1c4a6",
+        "sha256_in_prefix": "dc9ed099896cde3dea6e606c4de6ec0a66f5d31d468b8a926f7bbdfe11e1c4a6",
+        "size_in_bytes": 356
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Save-48.png",
+        "path_type": "hardlink",
+        "sha256": "eee7c8260ed095949156eb3983eeb071082a8cc1e49d08b8b7db0b80a3511d7a",
+        "sha256_in_prefix": "eee7c8260ed095949156eb3983eeb071082a8cc1e49d08b8b7db0b80a3511d7a",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Settings 3-50.png",
+        "path_type": "hardlink",
+        "sha256": "6abf2ad4da5614705660aa4dfcded0695f0b4ce97de289124e3a449e0dd52b6c",
+        "sha256_in_prefix": "6abf2ad4da5614705660aa4dfcded0695f0b4ce97de289124e3a449e0dd52b6c",
+        "size_in_bytes": 912
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Settings-50.png",
+        "path_type": "hardlink",
+        "sha256": "f26fbf386e492ba52440a2790d6adf6d5a8f945b5a15b91d321ce8df25558f19",
+        "sha256_in_prefix": "f26fbf386e492ba52440a2790d6adf6d5a8f945b5a15b91d321ce8df25558f19",
+        "size_in_bytes": 987
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Split Horizontal-48.png",
+        "path_type": "hardlink",
+        "sha256": "cb10fd4b56a76df2d4b5cc065d3113ec1cdb0d413fb127433116bc5461644730",
+        "sha256_in_prefix": "cb10fd4b56a76df2d4b5cc065d3113ec1cdb0d413fb127433116bc5461644730",
+        "size_in_bytes": 317
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Stanley Knife-48.png",
+        "path_type": "hardlink",
+        "sha256": "6509ce73941646eaec507dcacdf6116e90b1f6122c8291561f0665853583cc49",
+        "sha256_in_prefix": "6509ce73941646eaec507dcacdf6116e90b1f6122c8291561f0665853583cc49",
+        "size_in_bytes": 1029
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Template-50.png",
+        "path_type": "hardlink",
+        "sha256": "2ca42d8ee505ec9755b97e9ddd78d564f1b9caa32de695d4868480f49e0ed1d3",
+        "sha256_in_prefix": "2ca42d8ee505ec9755b97e9ddd78d564f1b9caa32de695d4868480f49e0ed1d3",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Theatre Mask-48.png",
+        "path_type": "hardlink",
+        "sha256": "73c8601deaad3ebae1b4197eb7e091d65fa7a55a218abd0c4435dfa2a9139e47",
+        "sha256_in_prefix": "73c8601deaad3ebae1b4197eb7e091d65fa7a55a218abd0c4435dfa2a9139e47",
+        "size_in_bytes": 1896
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Vertical Flag-48.png",
+        "path_type": "hardlink",
+        "sha256": "31cb7159cd95f23d5996dda2bc755a663bf53eca581abd4049e4c2cf1a780e05",
+        "sha256_in_prefix": "31cb7159cd95f23d5996dda2bc755a663bf53eca581abd4049e4c2cf1a780e05",
+        "size_in_bytes": 128
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/Width-48.png",
+        "path_type": "hardlink",
+        "sha256": "c8908b61f1b90e19f525086e74c2201f7468658b7922827fac4c2210e3743e72",
+        "sha256_in_prefix": "c8908b61f1b90e19f525086e74c2201f7468658b7922827fac4c2210e3743e72",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/application/icon.png",
+        "path_type": "hardlink",
+        "sha256": "cd9af95042e187d768a98b4e284bd602b27b2cd7d5e7b380d8e242b9e7e254b1",
+        "sha256_in_prefix": "cd9af95042e187d768a98b4e284bd602b27b2cd7d5e7b380d8e242b9e7e254b1",
+        "size_in_bytes": 55840
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Attention-528.png",
+        "path_type": "hardlink",
+        "sha256": "578cfb566726e1a59e20ca0eb4250f79c6ea109d289e5c5cac7a2db56f07b51e",
+        "sha256_in_prefix": "578cfb566726e1a59e20ca0eb4250f79c6ea109d289e5c5cac7a2db56f07b51e",
+        "size_in_bytes": 7337
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Expand Arrow-96.png",
+        "path_type": "hardlink",
+        "sha256": "d43d8ab2d0df7160fd793a9cf448ffed9f62d7f8da5a0e963d987feff0e68f69",
+        "sha256_in_prefix": "d43d8ab2d0df7160fd793a9cf448ffed9f62d7f8da5a0e963d987feff0e68f69",
+        "size_in_bytes": 421
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Forward-96.png",
+        "path_type": "hardlink",
+        "sha256": "50c95ea291f9f25baacf1713f8ab9b571ae63ed51f5d8a3be9036ea2562d499d",
+        "sha256_in_prefix": "50c95ea291f9f25baacf1713f8ab9b571ae63ed51f5d8a3be9036ea2562d499d",
+        "size_in_bytes": 360
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-New Window-96.png",
+        "path_type": "hardlink",
+        "sha256": "f40d019f6142f666804ea3b36caa6cc92ba6feb18263a3cec91c73c9d732ff5b",
+        "sha256_in_prefix": "f40d019f6142f666804ea3b36caa6cc92ba6feb18263a3cec91c73c9d732ff5b",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/icons8-Open in Window-96.png",
+        "path_type": "hardlink",
+        "sha256": "306af7558217e9b23726ea2365f898a4a818a653fa841c4affab2b730d583987",
+        "sha256_in_prefix": "306af7558217e9b23726ea2365f898a4a818a653fa841c4affab2b730d583987",
+        "size_in_bytes": 493
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/lock.svg",
+        "path_type": "hardlink",
+        "sha256": "028928b4f809e7ef4668d49ea75aa9889d77e18e9b1b5e6025775c352ee46646",
+        "sha256_in_prefix": "028928b4f809e7ef4668d49ea75aa9889d77e18e9b1b5e6025775c352ee46646",
+        "size_in_bytes": 1433
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/resources.qrc",
+        "path_type": "hardlink",
+        "sha256": "81b6227be1e103c8420b98cc0dec953a3623044d3d7d81a8e05584d7f0d28fac",
+        "sha256_in_prefix": "81b6227be1e103c8420b98cc0dec953a3623044d3d7d81a8e05584d7f0d28fac",
+        "size_in_bytes": 1494
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/resources/unlock.svg",
+        "path_type": "hardlink",
+        "sha256": "7c41e9aacba8741a6bac3a6e4b09b46c1961096dd5f238c335266e664f1fb60b",
+        "sha256_in_prefix": "7c41e9aacba8741a6bac3a6e4b09b46c1961096dd5f238c335266e664f1fb60b",
+        "size_in_bytes": 1500
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/data_list_plugin.ui",
+        "path_type": "hardlink",
+        "sha256": "44c116d44b5df0097c0630f059134b589bf03fcd05c6f3397ed861c9dfe2e04c",
+        "sha256_in_prefix": "44c116d44b5df0097c0630f059134b589bf03fcd05c6f3397ed861c9dfe2e04c",
+        "size_in_bytes": 3908
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/dialog_resample_warning.ui",
+        "path_type": "hardlink",
+        "sha256": "92c5fce312deb4f8eabaaffafd11081bb8c48c7d56a55888826d68f776496f72",
+        "sha256_in_prefix": "92c5fce312deb4f8eabaaffafd11081bb8c48c7d56a55888826d68f776496f72",
+        "size_in_bytes": 3869
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/fitted_linemap_dialog.ui",
+        "path_type": "hardlink",
+        "sha256": "e0caa02a2325af35027632b3bc4c4a94ed769e2d4a25fdc71117a0b707d592cb",
+        "sha256_in_prefix": "e0caa02a2325af35027632b3bc4c4a94ed769e2d4a25fdc71117a0b707d592cb",
+        "size_in_bytes": 2536
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/fitted_linemap_prog_dialog.ui",
+        "path_type": "hardlink",
+        "sha256": "168cefcfea88b52d915de0dcef27d6ac0deb563048a4c9ad587a01ba8157fdd6",
+        "sha256_in_prefix": "168cefcfea88b52d915de0dcef27d6ac0deb563048a4c9ad587a01ba8157fdd6",
+        "size_in_bytes": 1794
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/layer_list_plugin.ui",
+        "path_type": "hardlink",
+        "sha256": "6c14875d7067cccc7ee07a039faad49afd61f29dfcbc2698329d01154b453c96",
+        "sha256_in_prefix": "6c14875d7067cccc7ee07a039faad49afd61f29dfcbc2698329d01154b453c96",
+        "size_in_bytes": 5811
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/main_window.ui",
+        "path_type": "hardlink",
+        "sha256": "5148a30eab829f1d221f97516fce7dddc55dabebce0e471068af9ee6f6834d51",
+        "sha256_in_prefix": "5148a30eab829f1d221f97516fce7dddc55dabebce0e471068af9ee6f6834d51",
+        "size_in_bytes": 1953
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/mask_editor_plugin.ui",
+        "path_type": "hardlink",
+        "sha256": "ae0f5dfddcd530d10a37376b185feee17cd8676c7a00749130900ae21765910c",
+        "sha256_in_prefix": "ae0f5dfddcd530d10a37376b185feee17cd8676c7a00749130900ae21765910c",
+        "size_in_bytes": 3646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/model_fitting_plugin.ui",
+        "path_type": "hardlink",
+        "sha256": "affdaac8c87c8f8e1b78e922fe443c67f0a8f8d208f54a525c1328580032e87f",
+        "sha256_in_prefix": "affdaac8c87c8f8e1b78e922fe443c67f0a8f8d208f54a525c1328580032e87f",
+        "size_in_bytes": 10785
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/parameter_tie_dialog.ui",
+        "path_type": "hardlink",
+        "sha256": "b64fdd86ec9ab77d84e763b778bd63b56c101f2711b219a25e913bc13a3701b6",
+        "sha256_in_prefix": "b64fdd86ec9ab77d84e763b778bd63b56c101f2711b219a25e913bc13a3701b6",
+        "size_in_bytes": 2754
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/plugin.ui",
+        "path_type": "hardlink",
+        "sha256": "49f83abe764a38fd246357464670825e71b572ccec1b38d2a769c482685fd8e6",
+        "sha256_in_prefix": "49f83abe764a38fd246357464670825e71b572ccec1b38d2a769c482685fd8e6",
+        "size_in_bytes": 1031
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/roi_bounds_dialog.ui",
+        "path_type": "hardlink",
+        "sha256": "ac48837f5599ff81a9b3ab98063269babeb8ceaddf57e657879514787e1fbcbb",
+        "sha256_in_prefix": "ac48837f5599ff81a9b3ab98063269babeb8ceaddf57e657879514787e1fbcbb",
+        "size_in_bytes": 1989
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/statistics_plugin.ui",
+        "path_type": "hardlink",
+        "sha256": "d7761b3831f6a8c31b2566a211a18f60c02f21d3fa9d63ab1a9007f3c7f4b4da",
+        "sha256_in_prefix": "d7761b3831f6a8c31b2566a211a18f60c02f21d3fa9d63ab1a9007f3c7f4b4da",
+        "size_in_bytes": 11640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/qt/ui/wizard.ui",
+        "path_type": "hardlink",
+        "sha256": "cf1970690814375b804cd8959906a0a7c9637cff2c77c393e3c8d42c9fb304e4",
+        "sha256_in_prefix": "cf1970690814375b804cd8959906a0a7c9637cff2c77c393e3c8d42c9fb304e4",
+        "size_in_bytes": 21483
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/yaml_loaders/ascii.yaml",
+        "path_type": "hardlink",
+        "sha256": "bbfcc62757c40fcd97ed9d453cb6cdf04c0d87c0a23caab35c5c3dea522a0d0e",
+        "sha256_in_prefix": "bbfcc62757c40fcd97ed9d453cb6cdf04c0d87c0a23caab35c5c3dea522a0d0e",
+        "size_in_bytes": 198
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/yaml_loaders/generic.yaml",
+        "path_type": "hardlink",
+        "sha256": "4dd59a708630577eb4df6ffe36f418248706288b388e1e1afffa9e9820db4836",
+        "sha256_in_prefix": "4dd59a708630577eb4df6ffe36f418248706288b388e1e1afffa9e9820db4836",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/yaml_loaders/keck_deimos.yaml",
+        "path_type": "hardlink",
+        "sha256": "b1e701d8af9f4a882ad36b7072b94709a412883e920c6ef6697fd2421071af32",
+        "sha256_in_prefix": "b1e701d8af9f4a882ad36b7072b94709a412883e920c6ef6697fd2421071af32",
+        "size_in_bytes": 220
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/yaml_loaders/keck_mosfire.yaml",
+        "path_type": "hardlink",
+        "sha256": "a3b8dd6e40cfe48727f81ab396a2cb34117f3b6f51f5014b95b66aeba54505d4",
+        "sha256_in_prefix": "a3b8dd6e40cfe48727f81ab396a2cb34117f3b6f51f5014b95b66aeba54505d4",
+        "size_in_bytes": 250
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/data/yaml_loaders/kittpeak_mdm.yaml",
+        "path_type": "hardlink",
+        "sha256": "43e2867c9349af65f2ea616724157ed2f6d7a6410253f5e41a3a9c1354c5a27b",
+        "sha256_in_prefix": "43e2867c9349af65f2ea616724157ed2f6d7a6410253f5e41a3a9c1354c5a27b",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "92f8005068ebc0a1c3c117406a67033748962817f8b006b25e7957f80f1c6b33",
+        "sha256_in_prefix": "92f8005068ebc0a1c3c117406a67033748962817f8b006b25e7957f80f1c6b33",
+        "size_in_bytes": 99
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "385d7743b0902d94769a6fa04496e1651831b879e181135a51e9a654c3e63e64",
+        "sha256_in_prefix": "385d7743b0902d94769a6fa04496e1651831b879e181135a51e9a654c3e63e64",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/decorators.py",
+        "path_type": "hardlink",
+        "sha256": "9e2871547bb041ec076e5839ea92bad9b6778d98126c63a6870fa5e34cbaedee",
+        "sha256_in_prefix": "9e2871547bb041ec076e5839ea92bad9b6778d98126c63a6870fa5e34cbaedee",
+        "size_in_bytes": 2695
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/decorators.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e46520dae80236efcafb6766810ae14eb1f5f6289acafa5ea17807194ab891c",
+        "sha256_in_prefix": "9e46520dae80236efcafb6766810ae14eb1f5f6289acafa5ea17807194ab891c",
+        "size_in_bytes": 3634
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/factories.py",
+        "path_type": "hardlink",
+        "sha256": "8f12ebba69016b7959be648b3df6f652a36004140dd16b6972feb47be1ac0dc4",
+        "sha256_in_prefix": "8f12ebba69016b7959be648b3df6f652a36004140dd16b6972feb47be1ac0dc4",
+        "size_in_bytes": 3815
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/factories.pyc",
+        "path_type": "hardlink",
+        "sha256": "415fbefacdc838a6829c785631c09a387c475ae40f5f9c5625f3545bd322ef25",
+        "sha256_in_prefix": "415fbefacdc838a6829c785631c09a387c475ae40f5f9c5625f3545bd322ef25",
+        "size_in_bytes": 4458
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/initializers.py",
+        "path_type": "hardlink",
+        "sha256": "8c3098dd15073ff2279c0e15ca347e1bcbbdfebc59843e030d4f9c988e7a5333",
+        "sha256_in_prefix": "8c3098dd15073ff2279c0e15ca347e1bcbbdfebc59843e030d4f9c988e7a5333",
+        "size_in_bytes": 9213
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/initializers.pyc",
+        "path_type": "hardlink",
+        "sha256": "cbd58a7d524366586ee0afe0da1941837a65592bacbaa0d4ba86f289c25b37a5",
+        "sha256_in_prefix": "cbd58a7d524366586ee0afe0da1941837a65592bacbaa0d4ba86f289c25b37a5",
+        "size_in_bytes": 9800
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/loaders.py",
+        "path_type": "hardlink",
+        "sha256": "6841243390699fed5407f49b0722a7ef90c545e025e23fef202bcf45bb9b400d",
+        "sha256_in_prefix": "6841243390699fed5407f49b0722a7ef90c545e025e23fef202bcf45bb9b400d",
+        "size_in_bytes": 5228
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/loaders.pyc",
+        "path_type": "hardlink",
+        "sha256": "aecb0b58ab25a42aef6372bb2786a28e3cc686abdd4cb59dad62020b6af75263",
+        "sha256_in_prefix": "aecb0b58ab25a42aef6372bb2786a28e3cc686abdd4cb59dad62020b6af75263",
+        "size_in_bytes": 6149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/model_io/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "986ac0c3789030910bddacce750fbe13b1597ecc1febac6e32aa3f0ce240e54b",
+        "sha256_in_prefix": "986ac0c3789030910bddacce750fbe13b1597ecc1febac6e32aa3f0ce240e54b",
+        "size_in_bytes": 21
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/model_io/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "88037d2d688f3d40bf2b0d429bfef0dfef170d880090653ef6fde8e8230f9a70",
+        "sha256_in_prefix": "88037d2d688f3d40bf2b0d429bfef0dfef170d880090653ef6fde8e8230f9a70",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/model_io/py_model_io.py",
+        "path_type": "hardlink",
+        "sha256": "4c3cd376ec9bdfa148fc5fdb481e16cbde6d44ef11187f4aef0847bda6bd8675",
+        "sha256_in_prefix": "4c3cd376ec9bdfa148fc5fdb481e16cbde6d44ef11187f4aef0847bda6bd8675",
+        "size_in_bytes": 11485
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/model_io/py_model_io.pyc",
+        "path_type": "hardlink",
+        "sha256": "049527657b9cfda2dd9d2f4df19115eb65222d2cb67a5c81a65c34839c694848",
+        "sha256_in_prefix": "049527657b9cfda2dd9d2f4df19115eb65222d2cb67a5c81a65c34839c694848",
+        "size_in_bytes": 10090
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/model_io/yaml_model_io.py",
+        "path_type": "hardlink",
+        "sha256": "23f2ed3fc63af7b8ebea3a42f28646bf56c2e9fe2d1001159b0e2285d6a5349a",
+        "sha256_in_prefix": "23f2ed3fc63af7b8ebea3a42f28646bf56c2e9fe2d1001159b0e2285d6a5349a",
+        "size_in_bytes": 14118
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/model_io/yaml_model_io.pyc",
+        "path_type": "hardlink",
+        "sha256": "2acc7f769bb1060d8e329da8ca4b3255e1f37a623789c84fbf38c01b70ee6514",
+        "sha256_in_prefix": "2acc7f769bb1060d8e329da8ca4b3255e1f37a623789c84fbf38c01b70ee6514",
+        "size_in_bytes": 13448
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/registries.py",
+        "path_type": "hardlink",
+        "sha256": "04b4b803d7d62c004e9e53ccdfa7b681baee5f7f0ce6453ba7e079f9c6f0af24",
+        "sha256_in_prefix": "04b4b803d7d62c004e9e53ccdfa7b681baee5f7f0ce6453ba7e079f9c6f0af24",
+        "size_in_bytes": 1667
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/interfaces/registries.pyc",
+        "path_type": "hardlink",
+        "sha256": "6989ff7ffd15abfb84289169c71d30bec3137de4dbe5beaf3c66b119040a02ac",
+        "sha256_in_prefix": "6989ff7ffd15abfb84289169c71d30bec3137de4dbe5beaf3c66b119040a02ac",
+        "size_in_bytes": 2944
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c0c0e21cbf87df6306fef117e48142328b025f02da6a108680a1448aa4447b6f",
+        "sha256_in_prefix": "c0c0e21cbf87df6306fef117e48142328b025f02da6a108680a1448aa4447b6f",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "005c6821f1bc1696afe27d9f40c4512c144529d933b9a655e863e092978b25e2",
+        "sha256_in_prefix": "005c6821f1bc1696afe27d9f40c4512c144529d933b9a655e863e092978b25e2",
+        "size_in_bytes": 199
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4fc0c0eb6d2530e1c8eca0ff8494c7f17102dbebd67cf803831f83afba213731",
+        "sha256_in_prefix": "4fc0c0eb6d2530e1c8eca0ff8494c7f17102dbebd67cf803831f83afba213731",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "0871ae97601509450cf994bbee48d13bbafe390db506522a3969801652b900c9",
+        "sha256_in_prefix": "0871ae97601509450cf994bbee48d13bbafe390db506522a3969801652b900c9",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/apogee_loader.py",
+        "path_type": "hardlink",
+        "sha256": "fd6a5e435a13fb4cd8bb68684e0e77ac4aa18f324fdfc4b22c8f824aa89f67e9",
+        "sha256_in_prefix": "fd6a5e435a13fb4cd8bb68684e0e77ac4aa18f324fdfc4b22c8f824aa89f67e9",
+        "size_in_bytes": 5601
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/apogee_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "69e626adb325d5498b89cf27119905f204fc771ee813825227f915bff7349a09",
+        "sha256_in_prefix": "69e626adb325d5498b89cf27119905f204fc771ee813825227f915bff7349a09",
+        "size_in_bytes": 5937
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/ecsv_loader.py",
+        "path_type": "hardlink",
+        "sha256": "9b08587c6ff0e618bea4b00d155bad9b79d536215e808febeaeea643c7702484",
+        "sha256_in_prefix": "9b08587c6ff0e618bea4b00d155bad9b79d536215e808febeaeea643c7702484",
+        "size_in_bytes": 1123
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/ecsv_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "bac397a6fa7cf31f4825659138fa674641517391ddc15f379f17debfee2508a8",
+        "sha256_in_prefix": "bac397a6fa7cf31f4825659138fa674641517391ddc15f379f17debfee2508a8",
+        "size_in_bytes": 1616
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/generic_loader.py",
+        "path_type": "hardlink",
+        "sha256": "5191789a9eecb1cc83b9a73eca6e453d902838c42e5c93f2664b05ecb46b6db6",
+        "sha256_in_prefix": "5191789a9eecb1cc83b9a73eca6e453d902838c42e5c93f2664b05ecb46b6db6",
+        "size_in_bytes": 2510
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/generic_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "26e18e9c3741f039d1ff29bc160d47650b16767c8bfaf3c036ba3dde6cec7878",
+        "sha256_in_prefix": "26e18e9c3741f039d1ff29bc160d47650b16767c8bfaf3c036ba3dde6cec7878",
+        "size_in_bytes": 3370
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/hstcos_loader.py",
+        "path_type": "hardlink",
+        "sha256": "8fa0ba47de55859696f752dbae778217e1d2fe9ebd4fe780ffcf1e92ce612c62",
+        "sha256_in_prefix": "8fa0ba47de55859696f752dbae778217e1d2fe9ebd4fe780ffcf1e92ce612c62",
+        "size_in_bytes": 1563
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/hstcos_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "1230f83492216462c1047ee5f9cde9c6820f1c1f48b23fc85a1becbb794cc0aa",
+        "sha256_in_prefix": "1230f83492216462c1047ee5f9cde9c6820f1c1f48b23fc85a1becbb794cc0aa",
+        "size_in_bytes": 2036
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/hststis_loader.py",
+        "path_type": "hardlink",
+        "sha256": "819cd48774bca09ab1052c43da1835cb24ad89942819cc2f803a5c057bdbe2b8",
+        "sha256_in_prefix": "819cd48774bca09ab1052c43da1835cb24ad89942819cc2f803a5c057bdbe2b8",
+        "size_in_bytes": 1575
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/hststis_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "d8c8da9d0b6192629a4011d8dca7c2b133af1cc36ab07c855bdfeafc85998d3f",
+        "sha256_in_prefix": "d8c8da9d0b6192629a4011d8dca7c2b133af1cc36ab07c855bdfeafc85998d3f",
+        "size_in_bytes": 2048
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/sdss_loader.py",
+        "path_type": "hardlink",
+        "sha256": "3f88f759b3342bea0e5dc00dddaf99ad1d1cace66ed8ec43448d89aabcb9f641",
+        "sha256_in_prefix": "3f88f759b3342bea0e5dc00dddaf99ad1d1cace66ed8ec43448d89aabcb9f641",
+        "size_in_bytes": 3645
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/loaders/sdss_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "de90ca3bdfdc6c1443eea696c53eb369e634132b18335750b9c669ca87b9090a",
+        "sha256_in_prefix": "de90ca3bdfdc6c1443eea696c53eb369e634132b18335750b9c669ca87b9090a",
+        "size_in_bytes": 4186
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/yaml_loader.py",
+        "path_type": "hardlink",
+        "sha256": "194e247719e3355c359491d33d662df7efd965c00353e3cfc4ca8d9cd567bb30",
+        "sha256_in_prefix": "194e247719e3355c359491d33d662df7efd965c00353e3cfc4ca8d9cd567bb30",
+        "size_in_bytes": 16614
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/io/yaml_loader.pyc",
+        "path_type": "hardlink",
+        "sha256": "a86b7f739a13b8a50ead03a7f7d68e3a9d9dd3f29bdcabb3e2f6bfe907ee8f8f",
+        "sha256_in_prefix": "a86b7f739a13b8a50ead03a7f7d68e3a9d9dd3f29bdcabb3e2f6bfe907ee8f8f",
+        "size_in_bytes": 12266
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "53a702e15957315b0454281de171582fd795de4ad69d14a6c9eedc3e5085fb8b",
+        "sha256_in_prefix": "53a702e15957315b0454281de171582fd795de4ad69d14a6c9eedc3e5085fb8b",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "cde9c57630d51c65ddcd2353121199a655e61b826f255dc25f83a93c67c9e591",
+        "sha256_in_prefix": "cde9c57630d51c65ddcd2353121199a655e61b826f255dc25f83a93c67c9e591",
+        "size_in_bytes": 664
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/data_list_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "ed7e7de98561bf21547470cb0a27350d7823c73f74d96e176ec49f97c20c0769",
+        "sha256_in_prefix": "ed7e7de98561bf21547470cb0a27350d7823c73f74d96e176ec49f97c20c0769",
+        "size_in_bytes": 7772
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/data_list_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "47051901f989fc46a58a91d192feefa240cdf476d070c0d727606bc7e3b41b96",
+        "sha256_in_prefix": "47051901f989fc46a58a91d192feefa240cdf476d070c0d727606bc7e3b41b96",
+        "size_in_bytes": 10318
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/layer_list_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "fead5ea7d3a4a1f1bda86ccae30c0116447b522b6428d369d9aab6d114acaad3",
+        "sha256_in_prefix": "fead5ea7d3a4a1f1bda86ccae30c0116447b522b6428d369d9aab6d114acaad3",
+        "size_in_bytes": 16946
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/layer_list_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "99edff4645541601175cdbaec73ec78328da4ac2b9825c0d7cdb9a3362d83ef7",
+        "sha256_in_prefix": "99edff4645541601175cdbaec73ec78328da4ac2b9825c0d7cdb9a3362d83ef7",
+        "size_in_bytes": 16679
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/mask_editor_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "5e105dafc053cd39127f8a14da5ebeda98db7184787f648b8a31841d166a31fd",
+        "sha256_in_prefix": "5e105dafc053cd39127f8a14da5ebeda98db7184787f648b8a31841d166a31fd",
+        "size_in_bytes": 4706
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/mask_editor_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "8c69350c949928793c5e84483cfdfadcf9699cec60573f35778f61af07789643",
+        "sha256_in_prefix": "8c69350c949928793c5e84483cfdfadcf9699cec60573f35778f61af07789643",
+        "size_in_bytes": 5736
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/model_fitting_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "942a6b672589c4b1e0bc4cb6287be1421f29c64e03d5fbc15710417b51ef3ee6",
+        "sha256_in_prefix": "942a6b672589c4b1e0bc4cb6287be1421f29c64e03d5fbc15710417b51ef3ee6",
+        "size_in_bytes": 23403
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/model_fitting_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "0fd703053591db89433a7664971da388a3691fb8ab5e5f5d2086d8b35d25eeca",
+        "sha256_in_prefix": "0fd703053591db89433a7664971da388a3691fb8ab5e5f5d2086d8b35d25eeca",
+        "size_in_bytes": 20368
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/plot_tools_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "9d4f9b157608e213e8b386dc1bd845a107d943fe2b5f0b37964a6a9b6bf01b5f",
+        "sha256_in_prefix": "9d4f9b157608e213e8b386dc1bd845a107d943fe2b5f0b37964a6a9b6bf01b5f",
+        "size_in_bytes": 5856
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/plot_tools_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "01598acd969e63d34781c922f120525bc68ba1c8c9c5036ee74d3a66ef44794d",
+        "sha256_in_prefix": "01598acd969e63d34781c922f120525bc68ba1c8c9c5036ee74d3a66ef44794d",
+        "size_in_bytes": 7173
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/statistics_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "aec16e05ba0952525f13dfc702799319f8cdcbae9de279695b5acb5f3bb7a9e7",
+        "sha256_in_prefix": "aec16e05ba0952525f13dfc702799319f8cdcbae9de279695b5acb5f3bb7a9e7",
+        "size_in_bytes": 4824
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/statistics_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "54367b52119b17029439ccb69f2f64dd5f55b6313aceec33d0615d6ba45d5f0e",
+        "sha256_in_prefix": "54367b52119b17029439ccb69f2f64dd5f55b6313aceec33d0615d6ba45d5f0e",
+        "size_in_bytes": 4185
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/tool_tray_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "1a5eaa9965fa1f6467a0ed75bebe1c46f2b3b134c75938f8c1ccb27f6d37adf1",
+        "sha256_in_prefix": "1a5eaa9965fa1f6467a0ed75bebe1c46f2b3b134c75938f8c1ccb27f6d37adf1",
+        "size_in_bytes": 3692
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/plugins/tool_tray_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ca53aad344b1e915ebac13c00f784ba8b5c8cb2a6820ca7530db3c78c6c0400",
+        "sha256_in_prefix": "2ca53aad344b1e915ebac13c00f784ba8b5c8cb2a6820ca7530db3c78c6c0400",
+        "size_in_bytes": 3059
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "sha256_in_prefix": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "c6c0dcb13b01b1e807ae0b70e716122edccdb08d117b3ba0911293e9b0b25de1",
+        "sha256_in_prefix": "c6c0dcb13b01b1e807ae0b70e716122edccdb08d117b3ba0911293e9b0b25de1",
+        "size_in_bytes": 237
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/tests/coveragerc",
+        "path_type": "hardlink",
+        "sha256": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "sha256_in_prefix": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "size_in_bytes": 768
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "4edb97bb4e527c60952b79f80347a0d81e01ed558f41d3334f3fb131c797f5bd",
+        "sha256_in_prefix": "4edb97bb4e527c60952b79f80347a0d81e01ed558f41d3334f3fb131c797f5bd",
+        "size_in_bytes": 96
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "c360d77a8026e0aa5ab1e08f36867283a854c9611c2e0d61fdaa35f80d912185",
+        "sha256_in_prefix": "c360d77a8026e0aa5ab1e08f36867283a854c9611c2e0d61fdaa35f80d912185",
+        "size_in_bytes": 423
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "f44ba6c42db82fd2d0c02570117762551cdb8ddaddb71a9d66374c74438de9e8",
+        "sha256_in_prefix": "f44ba6c42db82fd2d0c02570117762551cdb8ddaddb71a9d66374c74438de9e8",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "2701b084db397c158ae01e07a8eeca0d5d587a9be29da8b64da50d343663a252",
+        "sha256_in_prefix": "2701b084db397c158ae01e07a8eeca0d5d587a9be29da8b64da50d343663a252",
+        "size_in_bytes": 175
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/apply_operation.ui",
+        "path_type": "hardlink",
+        "sha256": "2f21120ec41dec8dad5d21bb3030aabbd0424e3c6e53d19ced5c9470cd62f467",
+        "sha256_in_prefix": "2f21120ec41dec8dad5d21bb3030aabbd0424e3c6e53d19ced5c9470cd62f467",
+        "size_in_bytes": 5007
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/data_viewer.py",
+        "path_type": "hardlink",
+        "sha256": "9ce0fd56e751a0c2d19cf123239722e1a62749d4d73a8c6147056777ee2034c3",
+        "sha256_in_prefix": "9ce0fd56e751a0c2d19cf123239722e1a62749d4d73a8c6147056777ee2034c3",
+        "size_in_bytes": 13948
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/data_viewer.pyc",
+        "path_type": "hardlink",
+        "sha256": "4b3af66ed5504b07c43dcdf5f1291d95770df06e8370413ce160621968adb9f8",
+        "sha256_in_prefix": "4b3af66ed5504b07c43dcdf5f1291d95770df06e8370413ce160621968adb9f8",
+        "size_in_bytes": 12291
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/dialogs.py",
+        "path_type": "hardlink",
+        "sha256": "2c78017d0a1e3192cbb57c1ec14951eb111e113546a19b82eb3477b79d7c0315",
+        "sha256_in_prefix": "2c78017d0a1e3192cbb57c1ec14951eb111e113546a19b82eb3477b79d7c0315",
+        "size_in_bytes": 6126
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/dialogs.pyc",
+        "path_type": "hardlink",
+        "sha256": "37efaa216fb29b412a5b2d188350f9e484814fe239b6f0acd7a83adce8966d12",
+        "sha256_in_prefix": "37efaa216fb29b412a5b2d188350f9e484814fe239b6f0acd7a83adce8966d12",
+        "size_in_bytes": 7036
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/layer_widget.py",
+        "path_type": "hardlink",
+        "sha256": "830057a61abdae7dd873826d5da3123891efd4cd0c409f8b5bc3584ead25ac15",
+        "sha256_in_prefix": "830057a61abdae7dd873826d5da3123891efd4cd0c409f8b5bc3584ead25ac15",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/layer_widget.pyc",
+        "path_type": "hardlink",
+        "sha256": "d7a21a086c982f603087fef8934017d62e69401f562372efa81c5b4a5a959c93",
+        "sha256_in_prefix": "d7a21a086c982f603087fef8934017d62e69401f562372efa81c5b4a5a959c93",
+        "size_in_bytes": 2245
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/layer_widget.ui",
+        "path_type": "hardlink",
+        "sha256": "94c9af7f33918f2e76ddc6a8317460d96495815ab784bf707eab363545970cea",
+        "sha256_in_prefix": "94c9af7f33918f2e76ddc6a8317460d96495815ab784bf707eab363545970cea",
+        "size_in_bytes": 1224
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/no_model_error_dialog.ui",
+        "path_type": "hardlink",
+        "sha256": "f3af53f8bb891fd58ac35cd26aab3aaeb8f8078be06bf8c1525836ead2999ee7",
+        "sha256_in_prefix": "f3af53f8bb891fd58ac35cd26aab3aaeb8f8078be06bf8c1525836ead2999ee7",
+        "size_in_bytes": 1833
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/plugins.py",
+        "path_type": "hardlink",
+        "sha256": "ec78132749b30792998456292290eb7ef9b8b1f433b91275e071d275903508b4",
+        "sha256_in_prefix": "ec78132749b30792998456292290eb7ef9b8b1f433b91275e071d275903508b4",
+        "size_in_bytes": 6489
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/plugins.pyc",
+        "path_type": "hardlink",
+        "sha256": "a530924cf3f66e70c3e2a342e468ad6039d3bac4c5810da0e04dd203344063e6",
+        "sha256_in_prefix": "a530924cf3f66e70c3e2a342e468ad6039d3bac4c5810da0e04dd203344063e6",
+        "size_in_bytes": 9016
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/threads.py",
+        "path_type": "hardlink",
+        "sha256": "453df754a6cec0bac5327bc66a39e62f22ad45a0b1c5311c58a92489d8a1e235",
+        "sha256_in_prefix": "453df754a6cec0bac5327bc66a39e62f22ad45a0b1c5311c58a92489d8a1e235",
+        "size_in_bytes": 2402
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/threads.pyc",
+        "path_type": "hardlink",
+        "sha256": "4bcf078990608377e55e285d23df59e83cbf43c87f23e1a986b64457490b307b",
+        "sha256_in_prefix": "4bcf078990608377e55e285d23df59e83cbf43c87f23e1a986b64457490b307b",
+        "size_in_bytes": 3957
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/version.py",
+        "path_type": "hardlink",
+        "sha256": "52b9881c15669250139684527e658f9bfc5c19f433b5ddd6c047286511e33b19",
+        "sha256_in_prefix": "52b9881c15669250139684527e658f9bfc5c19f433b5ddd6c047286511e33b19",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "ef625dc40da59492f9e81df82a956abd311378bff146700518a7727490f64a50",
+        "sha256_in_prefix": "ef625dc40da59492f9e81df82a956abd311378bff146700518a7727490f64a50",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/viewer_options.py",
+        "path_type": "hardlink",
+        "sha256": "b93685d2af7a57816ea60a02c0a5153bb34c84db220359de3a0aa9164a752cef",
+        "sha256_in_prefix": "b93685d2af7a57816ea60a02c0a5153bb34c84db220359de3a0aa9164a752cef",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/viewer_options.pyc",
+        "path_type": "hardlink",
+        "sha256": "6a4f721a296809c2f253e28d01a0f54eba4932da26b22d2b0894c45ff9d261dc",
+        "sha256_in_prefix": "6a4f721a296809c2f253e28d01a0f54eba4932da26b22d2b0894c45ff9d261dc",
+        "size_in_bytes": 1679
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/third_party/glue/viewer_options.ui",
+        "path_type": "hardlink",
+        "sha256": "2ecf5c7c5cdb7a9821ce495a15da8423c1cbfd15a67207621909a51d5a78b175",
+        "sha256_in_prefix": "2ecf5c7c5cdb7a9821ce495a15da8423c1cbfd15a67207621909a51d5a78b175",
+        "size_in_bytes": 1234
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "821d2adabc354142edb7cbecf4a6f473e27a489e777ca7c29637a2923e2cf0b4",
+        "sha256_in_prefix": "821d2adabc354142edb7cbecf4a6f473e27a489e777ca7c29637a2923e2cf0b4",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "4fa56c0e92ebe3c578c380450779e71cddeeb2f5acbf187134d384225b0d16c4",
+        "sha256_in_prefix": "4fa56c0e92ebe3c578c380450779e71cddeeb2f5acbf187134d384225b0d16c4",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/parse_ecsv.py",
+        "path_type": "hardlink",
+        "sha256": "436d045299967373bef4f7b050dc6edcbcfc7f3e29c895b65597dfaaf28aec5e",
+        "sha256_in_prefix": "436d045299967373bef4f7b050dc6edcbcfc7f3e29c895b65597dfaaf28aec5e",
+        "size_in_bytes": 1261
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/parse_ecsv.pyc",
+        "path_type": "hardlink",
+        "sha256": "9864c8e2c3a270e491de311f095915d69fe7feb4c220aeb2514fc127327ec2ca",
+        "sha256_in_prefix": "9864c8e2c3a270e491de311f095915d69fe7feb4c220aeb2514fc127327ec2ca",
+        "size_in_bytes": 1487
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/parse_fits.py",
+        "path_type": "hardlink",
+        "sha256": "35b23cc9ca1c2021eadb1d06eaf6e720ae8384049b6a2c8c05d76d3dc65a9993",
+        "sha256_in_prefix": "35b23cc9ca1c2021eadb1d06eaf6e720ae8384049b6a2c8c05d76d3dc65a9993",
+        "size_in_bytes": 3927
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/parse_fits.pyc",
+        "path_type": "hardlink",
+        "sha256": "2053759fbb0739fa3ae76286368209a637cd1381dab64704f1e3817a39032c10",
+        "sha256_in_prefix": "2053759fbb0739fa3ae76286368209a637cd1381dab64704f1e3817a39032c10",
+        "size_in_bytes": 3344
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/utils/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ee73b2f1c7e251be77671d8bdfc675c522692eaf452f5188505906837882315",
+        "sha256_in_prefix": "2ee73b2f1c7e251be77671d8bdfc675c522692eaf452f5188505906837882315",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/version.py",
+        "path_type": "hardlink",
+        "sha256": "2781ad1f7775d8291522722fd77c0ee043167edc6e3a4d826d885b9c3ca7653d",
+        "sha256_in_prefix": "2781ad1f7775d8291522722fd77c0ee043167edc6e3a4d826d885b9c3ca7653d",
+        "size_in_bytes": 7303
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "a8591579b47226987c6987a3eb66516633093290c4ac0ecbccfc083721cf272b",
+        "sha256_in_prefix": "a8591579b47226987c6987a3eb66516633093290c4ac0ecbccfc083721cf272b",
+        "size_in_bytes": 5886
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "e32c46e8007fd345bba64e071fce7778aa9bc4949b8bade3ab4d6e46a0fb3781",
+        "sha256_in_prefix": "e32c46e8007fd345bba64e071fce7778aa9bc4949b8bade3ab4d6e46a0fb3781",
+        "size_in_bytes": 166
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/axes.py",
+        "path_type": "hardlink",
+        "sha256": "9f74b49527c636a9bff65979ef69173e1e8f850affe2af3d57a2674d32849f0a",
+        "sha256_in_prefix": "9f74b49527c636a9bff65979ef69173e1e8f850affe2af3d57a2674d32849f0a",
+        "size_in_bytes": 3103
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/axes.pyc",
+        "path_type": "hardlink",
+        "sha256": "a5c79d1c189ee1a818f681ee02a2b50bc0ac0f697c2ec49ea43ceef04059c698",
+        "sha256_in_prefix": "a5c79d1c189ee1a818f681ee02a2b50bc0ac0f697c2ec49ea43ceef04059c698",
+        "size_in_bytes": 3593
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/dialogs.py",
+        "path_type": "hardlink",
+        "sha256": "0b3b1c728e92d00b9e79fcbc27cc7bbeeec62198fdb06c729587ca25640af869",
+        "sha256_in_prefix": "0b3b1c728e92d00b9e79fcbc27cc7bbeeec62198fdb06c729587ca25640af869",
+        "size_in_bytes": 15189
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/dialogs.pyc",
+        "path_type": "hardlink",
+        "sha256": "72cc6faf40039ba3c55b86c6560093e4459ee651e292d72109ea7c1f721a7957",
+        "sha256_in_prefix": "72cc6faf40039ba3c55b86c6560093e4459ee651e292d72109ea7c1f721a7957",
+        "size_in_bytes": 17753
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/line_labels_plotter.py",
+        "path_type": "hardlink",
+        "sha256": "5add262e7374922fdc8ad24170f4e446626cc9eedf76ba717efce19bc48ec011",
+        "sha256_in_prefix": "5add262e7374922fdc8ad24170f4e446626cc9eedf76ba717efce19bc48ec011",
+        "size_in_bytes": 20982
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/line_labels_plotter.pyc",
+        "path_type": "hardlink",
+        "sha256": "581bc05f128a3d052c130d5fb4fc8bd9ccda310c82bf0633caf8fec96f421d4f",
+        "sha256_in_prefix": "581bc05f128a3d052c130d5fb4fc8bd9ccda310c82bf0633caf8fec96f421d4f",
+        "size_in_bytes": 11799
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/linelists_window.py",
+        "path_type": "hardlink",
+        "sha256": "14cc5f655ee342a14de13abe2a64c81ec4d383198496989e11b619d35bf15cfe",
+        "sha256_in_prefix": "14cc5f655ee342a14de13abe2a64c81ec4d383198496989e11b619d35bf15cfe",
+        "size_in_bytes": 39264
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/linelists_window.pyc",
+        "path_type": "hardlink",
+        "sha256": "4127059b525b16f801e2e87e2f42fc12dbed39af2dda10a7812759a943532636",
+        "sha256_in_prefix": "4127059b525b16f801e2e87e2f42fc12dbed39af2dda10a7812759a943532636",
+        "size_in_bytes": 30427
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/menus.py",
+        "path_type": "hardlink",
+        "sha256": "50e618992e27a5c1ed36ac502d2258c69d037e9450955b08822bd8f883c1aec4",
+        "sha256_in_prefix": "50e618992e27a5c1ed36ac502d2258c69d037e9450955b08822bd8f883c1aec4",
+        "size_in_bytes": 1005
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/menus.pyc",
+        "path_type": "hardlink",
+        "sha256": "508a3b0b74695a9648db66a211748ce07d841c1affc4ccc2e17b9582a7fa88d1",
+        "sha256_in_prefix": "508a3b0b74695a9648db66a211748ce07d841c1affc4ccc2e17b9582a7fa88d1",
+        "size_in_bytes": 2179
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/plugin.py",
+        "path_type": "hardlink",
+        "sha256": "0ade8b9706c5ed8e05156f9357139aea8c08cd65464c3e998cf59cbe4fcde713",
+        "sha256_in_prefix": "0ade8b9706c5ed8e05156f9357139aea8c08cd65464c3e998cf59cbe4fcde713",
+        "size_in_bytes": 4549
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad8f91ef7791132abe49d7d98f25a63f7e19a727be0177bee4604fb4ef867739",
+        "sha256_in_prefix": "ad8f91ef7791132abe49d7d98f25a63f7e19a727be0177bee4604fb4ef867739",
+        "size_in_bytes": 6553
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/qt_plugins/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/qt_plugins/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d877c2ef4ec72ebbd02d2d0826c64529ca27e303eb3f4cd02ef29217d3e8619",
+        "sha256_in_prefix": "6d877c2ef4ec72ebbd02d2d0826c64529ca27e303eb3f4cd02ef29217d3e8619",
+        "size_in_bytes": 177
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/qt_plugins/spoiler_plugin.py",
+        "path_type": "hardlink",
+        "sha256": "b44612ea3ed5b4c72a221aab702e1efce60e300db043a71e091d2e01bb545563",
+        "sha256_in_prefix": "b44612ea3ed5b4c72a221aab702e1efce60e300db043a71e091d2e01bb545563",
+        "size_in_bytes": 1147
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/qt_plugins/spoiler_plugin.pyc",
+        "path_type": "hardlink",
+        "sha256": "ebe89e64d34e663077ff1852e1e021b0d7ec7cdd859a172e99e38f8a258b03bd",
+        "sha256_in_prefix": "ebe89e64d34e663077ff1852e1e021b0d7ec7cdd859a172e99e38f8a258b03bd",
+        "size_in_bytes": 3502
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/region_items.py",
+        "path_type": "hardlink",
+        "sha256": "6feca79eb95e33bc4fa3a29695493a994c8799d6d3b85bf78dc3a09c3a68e648",
+        "sha256_in_prefix": "6feca79eb95e33bc4fa3a29695493a994c8799d6d3b85bf78dc3a09c3a68e648",
+        "size_in_bytes": 2978
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/region_items.pyc",
+        "path_type": "hardlink",
+        "sha256": "01e5a0011bf5900ae1105d80bcbe49b9cce2042498e40e8bac71939c74632f9e",
+        "sha256_in_prefix": "01e5a0011bf5900ae1105d80bcbe49b9cce2042498e40e8bac71939c74632f9e",
+        "size_in_bytes": 4580
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/resources.py",
+        "path_type": "hardlink",
+        "sha256": "60163ee5056e593a832307e0eb850832a541e4a7fbbf40df8a04350ccdb3d514",
+        "sha256_in_prefix": "60163ee5056e593a832307e0eb850832a541e4a7fbbf40df8a04350ccdb3d514",
+        "size_in_bytes": 172550
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/resources.pyc",
+        "path_type": "hardlink",
+        "sha256": "e3656fe9192f08a5dc7176ee49263321b42e0038efaa1472c05260447221aa13",
+        "sha256_in_prefix": "e3656fe9192f08a5dc7176ee49263321b42e0038efaa1472c05260447221aa13",
+        "size_in_bytes": 42486
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/spoiler.py",
+        "path_type": "hardlink",
+        "sha256": "b87a67d06724ca0c4ec4277c4f015f94bc206b0bd09631f2d814ea95f9eca0d5",
+        "sha256_in_prefix": "b87a67d06724ca0c4ec4277c4f015f94bc206b0bd09631f2d814ea95f9eca0d5",
+        "size_in_bytes": 3819
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/spoiler.pyc",
+        "path_type": "hardlink",
+        "sha256": "679c9b3e5757135525f65c2f4a65e057ac55171c6248f4b39b65214a9f70d097",
+        "sha256_in_prefix": "679c9b3e5757135525f65c2f4a65e057ac55171c6248f4b39b65214a9f70d097",
+        "size_in_bytes": 3732
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/sub_windows.py",
+        "path_type": "hardlink",
+        "sha256": "0dff4d71b4a51f83971b76b725e3094d24ccc4e5ab288d6ab9bf1fae6ecb21c1",
+        "sha256_in_prefix": "0dff4d71b4a51f83971b76b725e3094d24ccc4e5ab288d6ab9bf1fae6ecb21c1",
+        "size_in_bytes": 20606
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/sub_windows.pyc",
+        "path_type": "hardlink",
+        "sha256": "c7cfd4f57be0be23e78cfa5dbbc4f7b5f0732c43f63b921ef52d6980c7ffddb8",
+        "sha256_in_prefix": "c7cfd4f57be0be23e78cfa5dbbc4f7b5f0732c43f63b921ef52d6980c7ffddb8",
+        "size_in_bytes": 21455
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/toolbars.py",
+        "path_type": "hardlink",
+        "sha256": "b3c3e81a2caf9da155e217e14ac209c44f5e7804a0959102906e4dbdf7cb9ec8",
+        "sha256_in_prefix": "b3c3e81a2caf9da155e217e14ac209c44f5e7804a0959102906e4dbdf7cb9ec8",
+        "size_in_bytes": 1465
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/toolbars.pyc",
+        "path_type": "hardlink",
+        "sha256": "fedaffd56d8ad87b7a3efdccc8d5cfd994a43f8c398f707cd4e57938e90e182a",
+        "sha256_in_prefix": "fedaffd56d8ad87b7a3efdccc8d5cfd994a43f8c398f707cd4e57938e90e182a",
+        "size_in_bytes": 1719
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/utils.py",
+        "path_type": "hardlink",
+        "sha256": "ef3af6b057f5f3cbaee16ad7696db39b15e981d0fb00b7462847e2c5710f6c2b",
+        "sha256_in_prefix": "ef3af6b057f5f3cbaee16ad7696db39b15e981d0fb00b7462847e2c5710f6c2b",
+        "size_in_bytes": 634
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "dfd9633ac27c3a71acfa1791143f2b10bde9a32743afbbc2c403bbd26aa878e7",
+        "sha256_in_prefix": "dfd9633ac27c3a71acfa1791143f2b10bde9a32743afbbc2c403bbd26aa878e7",
+        "size_in_bytes": 927
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/windows.py",
+        "path_type": "hardlink",
+        "sha256": "215121d6fb5c7bb29c8b0101bca12bcef790f57ef0f84f2dfe17445b7b8ab8af",
+        "sha256_in_prefix": "215121d6fb5c7bb29c8b0101bca12bcef790f57ef0f84f2dfe17445b7b8ab8af",
+        "size_in_bytes": 3542
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/windows.pyc",
+        "path_type": "hardlink",
+        "sha256": "6570acf49e0c99835123d2663be112beb8e17094d6742115d55f75b6cdb236b6",
+        "sha256_in_prefix": "6570acf49e0c99835123d2663be112beb8e17094d6742115d55f75b6cdb236b6",
+        "size_in_bytes": 5908
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/wizard.py",
+        "path_type": "hardlink",
+        "sha256": "fe39aa78e6c9c4c5c57caf9b3d66274bea8252fb841562b8881da5ab68216564",
+        "sha256_in_prefix": "fe39aa78e6c9c4c5c57caf9b3d66274bea8252fb841562b8881da5ab68216564",
+        "size_in_bytes": 22142
+      },
+      {
+        "_path": "lib/python2.7/site-packages/specviz/widgets/wizard.pyc",
+        "path_type": "hardlink",
+        "sha256": "bd34f8bfcae89038e8eae392bdd59186db18533798f6f62a80ccc60f60c679ef",
+        "sha256_in_prefix": "bd34f8bfcae89038e8eae392bdd59186db18533798f6f62a80ccc60f60c679ef",
+        "size_in_bytes": 21339
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 797354,
+  "subdir": "linux-64",
+  "timestamp": 1526630687890,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/specviz-0.5.0-py27_0.tar.bz2",
+  "version": "0.5.0"
+}

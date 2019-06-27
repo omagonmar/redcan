@@ -1,0 +1,308 @@
+						February 1, 1990
+
+	The February 1990 build of the PROS has been installed in the
+IRAF V2.8 system and resides in the /iraf/xray directory.
+The xray package is a "top level" package (at the same level as
+packages such as "image" and "noao") containing the sub-packages
+einstein, nimages, rosat, spatial, spectral, and timing.
+
+I) NEW PROS AND QPOE FEATURES
+
+	The format definition for the qpoe file can now be defined in
+your loginuser.cl file, rather than in your UNIX .login file.  See
+section V. for details
+ 
+	The QPOE file format has remained stable over the last three
+months.  We are not anticipating any major change to the QPOE format,
+except for the addition of world-coordinate information in the next
+build.  However, see the note at the end of these release notes concerning
+use of sub-sections with QPOE files.  The use of "rect=" is no longer
+recommended for defining a sub-section of a qpoe file as input to an
+image task; rather, one should use the normal IRAF sub-section specification.
+
+II) NEW TASKS AND PACKAGES
+
+	Period is a new task in the timing package.  The task searches a
+time series for a coherent modulation by computing a chi-squared statistic 
+for each trial period over a range of periods.  If there is modulation then 
+the chi-squared is maximized at that period.  
+
+	Fakesrc is another new task in timing.  It creates a set of
+artificial data based on a pulse profile given in a data file.
+
+III) MAJOR MODIFICATIONS TO EXISTING TASKS
+
+	The general PROS default file naming system has been modified.  
+This was prompted by many complaints that using the <CR> default output 
+filename would produce files that were NOT located in the current working 
+directory, when the input filename included a pathname.  A new convention 
+allows the user to enter '.' for the output filename.  In this case the default
+output filename will be constructed from the input filename, but any existing
+path will be stripped off.  So when using '.' as the output filename,
+the output file will always be located in the current working directory,
+regardless of where the input files are located.
+
+	The spectral fitting tasks now have the capability to write
+the intermediate model spectra to an STScI table file.  The spectral
+parameter "intermediate" controls this function.  The spectral plotting
+tasks have all been enhanced.  There have been many bug fixes to spectral.
+
+	In timing, the table files created by each task now have headers.
+Some of the data in the headers (start/stop time, bin size, src/bkgd region)
+are displayed on top of the plots.  Task Fold has a new option to write the 
+output data to the table twice.  This is useful if one wants to see the data 
+plotted twice on his/her plot.  Other plotting options added are bar plots,
+plotting seconds and frequency in X, and giving the user a choice whether or 
+not to close the plotting window.
+ 
+	Imcontour scaling and labelling features have been enhanced.  The 
+scale units for a sky plot are arcseconds/mm and the units for a pixel map
+are pixels/mm.  If no scale (0.0) is specified, then the scale defaults 
+to the largest possible plot which can be drawn within the plot window.  When
+a scale (independent in x and y) is specified the contour plot is drawn to 
+fit the scale by either centering and clipping edges if the scaled plot is 
+larger than the window, or redrawing a smaller window to accommodate a scale
+corresponding to a smaller plot.  A second graphics device call scale_device 
+has also been added.  If stdplot is chosen for scale_device then all plots 
+that are drawn to graph_device "stdgraph" or "stdplot" will look the same.  
+This is not true if scale_device is "stdgraph".  A last area of enhancement 
+has been labelling options.  A user choose from a grid, or tics and labelling
+inside or outside of the plot box.  A choice to eliminate the legend and 
+title has also been added.  
+
+IV) EXISTING XRAY PACKAGES AND TASKS
+
+	The xray package contains the following sub-packages and tasks
+(* denotes a new task, + denotes major modifications to a task, and -
+denotes that the task has changed packages, $ denotes the task has a new name):
+
+package		tasks		description
+
+xray
+
+nimages
+
+spatial
+
+		+ imcontour 	added scaling and labelling features
+
+		+ vigdata	added support for error arrays
+
+		+ vigmodel	added support for error arrays as well
+				as fixed bug that didn't properly scale the data
+
+einstein
+		- sdfspec	moved from the spectral package
+		
+rosat
+		+ tm2qp		Modified to work off a list of filenames as
+				well as individual files
+
+		+ tm2tqp	Produce a time-sorted qp file from ROSAT 
+				telemetry
+
+timing
+
+		* fakesrc	create artificial test data
+
+		+ fft		Added exposure threshold for each input bin
+				Improved headers.
+
+		* period	search a time series for a coherent modulation
+
+		+ timplot	update plots with legend, improve display
+
+spectral
+
+		various		bug fixes and enhancements		
+
+	There are help pages for all tasks.  In addition, there is help for
+spatial filtering ("help regions"), PROS/IRAF coordinates ("help coords"),
+QPOE filtering ("help qpoe") and PROS file name conventions ("help extensions")
+in the xray package.
+
+V) SETTING UP TO USE THE XRAY PACKAGE
+
+	To run the xray package, users should use the default IRAF V2.9.
+
+	Also, users who wish to perform QPOE filtering should add the
+following command to their loginuser.cl file (located in their iraf
+directory):
+
+	set qmfiles ="/iraf/xray/QPDEFS"
+
+	or if the user wishes to add useful qpoe filter and rectangle
+macros of their own, copy the QPDEFS file into your own iraf directory and
+and the following to your loginuser.cl:
+
+	set qmfiles = "home$QPDEFS"
+
+This QPDEFS file defines various filter name aliases and sets QPOE defaults.
+NB: If you do not do this, you will get strange results, since the default
+block factor for qpoe files is 8, not 1, and therefore IPC images, for
+example, seem to be 128 x 128, not 1024 x 1024.
+
+	The Unix environment variable "xrayversion" controls the version
+of the xray package that IRAF loads.  If "xrayversion" does not exist or
+is set to "old", then the currently installed xray package will be loaded.
+This is the generally recommended procedure for most users.
+
+	If, however, "xrayversion" is set to "new", the development build will
+be loaded.  Most users should use the currently installed xray package, as
+the new one is subject to development and may not work at any given moment.
+On the other hand, bugs are fixed in the development build, so if you need
+a bug fix, you might use the development version.
+
+	Users should reset the parameter values of all xray tasks to their
+initial defaults if they were using the Oct89 build.  See help on the iraf
+task "unlearn" for more information.
+
+VI) TEST DATA FILES
+
+	To gain some familiarity with the system, there are some Einstein
+data files available.  The directory /pros/einstein contains the necessary
+data files for the Einstein sequences:
+
+		296 (IPC) and 1043 (HRI)
+
+	The -.mhdr, -.tgr, -.xpr, and -.img files are input to the xpr2qp 
+or img2qp task to produce an IRAF qpoe file.  The -.exp file is input to
+the expmask task to produce the corresponding exposure mask.
+
+	The directory /pros/qpoe contains QPOE files for i296 and h1043. 
+
+VII) XTERM AND XIMAGE
+
+	It is now easier to set up the X (V10) equivalent of gterm.  Copy
+these lines into your loginuser.cl:
+
+	if ( envget("TERM") == "tek4015" )  {
+		print "resetting terminal to xterm with graphics"
+		reset terminal = xterm
+		reset stdgraph = xterm
+		stty xterm
+	} else {
+		print "resetting terminal to gterm"
+		stty	gterm			# set terminal protocol
+	}
+
+Copy the following alias into your .cshrc (or .uwmrc menu if you use it):
+
+alias xiraf "xterm =80x40+300+45 %745x625+290+20 -t -n iraf -e /iraf/Xstart&"
+
+Note: the xterm window is positioned by the last numbers in the =geometry
+(IRAF2.8 appears to require the 80x40).  The tektronix window is positioned
+and sized by the %geometry.
+
+To start up iraf, type xiraf (instead of cl) from your IRAF home directory.
+
+
+#	A new version of ximage that fully supports region filtering now
+# exists. This ximage has many new features and works with the IRAF tv.display
+# task.  To run ximage in this mode, execute:
+#
+#		ximage -pros
+#
+# and then use tv.display, as with imtool.  See Mike VanHilst for more
+# details and the new manual.
+
+VIII) KNOWN BUGS
+
+	The img2qp and xpr2qp tasks still have trouble with memory.
+If these tasks run and seem to take an extremely long time (>10 minutes
+for 100000 photons) or give strange error messages ("can't delete file"),
+try using a smaller sortsize buffer.
+
+IX) NEXT BUILD
+
+The next build will be in May, 1990.  In the next several months
+areas of focus will consist of the following:  
+
+	ROSAT    - tasks to convert PSPC data to QPOE
+
+        Misc     - conversion from FITS to QPOE and back
+
+	Spatial  - enhancements to regions to allow input in RA, DEC etc.
+		 - add World Coordinates to Imcontour
+
+	Spectral - enhancements to spectral plots. add MPC data sets
+		 
+	Timing   - enhancements to timing plots, add time corrections  
+		 
+
+The following message concerning qpoe sub-sections and masks was sent
+to iraf users on 2/6/90:
+
+	IMPORTANT MESSAGE TO ALL IRAF/PROS USERS:
+
+		QPOE SUB_SECTIONS AND MASKS
+
+One often wants to specify a sub-section of an image file or
+a qpoe file.  Image files support the sub-section facility, so
+that one specifies, for example:
+
+		foo.imh[400:599,400:599]
+
+to define a "logical" 200 x 200 image centered at 500,500.
+
+Until now, users have been advised to use the "rect="
+filter to define a similar sub-section of a qpoe file.  For example,
+
+		foo.qp[rect=(400:599,400:599)]
+
+defines a 200 x 200 qpoe centered at 500, 500.  This is especially
+useful when one is using a qpoe file as an image in tasks, such as
+imcnts, imcontour, and all PROS tasks that begin with "im".
+
+It is now clear that this advice is incorrect.  THE SAME SUB-SECTION
+CAPABILITIES WORK WITH QPOE FILES AS WORK WITH IMH FILES, IN TASKS THAT
+ACCEPT IMAGES AS INPUT.  Thus, one can specify:
+
+		foo.qp[400:599,400:599]
+
+the same as in the first example, and the section will mean the same thing
+to the task.
+
+This clears up much confusion concerning the use of masks in connection
+with sub-sections.  A mask that is made using the original image (with its
+physical dimensions) as a reference can be used for spatial filtering of a
+sub-section of that image.  This also works when a qpoe file is used with
+a sub-section, but it does not work when a qpoe file is used with a "rect="
+filter!  For example, suppose one uses plcreate to make a 1024 x 1024 mask
+consisting of a  circle centered at 512 512 of radius 50, called foo.pl.
+Suppose one has a qpoe file, foo.qp, and an imh file, foo.imh, such that
+the latter is a simple imcopy of the former (and thus has the same
+dimensionality and same number of photons as the former).  Then one can
+run a task such as imcnts on both files and get identical results, if
+one uses sub-sections, i.e.
+
+		imcnts foo.imh[400:599,400:599] foo.pl
+and
+		imcnts foo.qp[400:599,400:599] foo.pl
+		
+will give the same results.  However, the use of a "rect=", i.e.
+
+		imcnts foo.imh[rect=(400:599,400:599)] foo.pl
+
+does not give the same results.  In the latter case, the mask must be re-made
+so that it is centered on 100, of size 200, not centered on 512 of size 1024.
+That is, one must rescale the mask so that the center and dimensions fit
+the size of the rect.
+
+MORAL:  DO NOT USE "RECT=" FOR IMIO TASKS.  USE THE SECTION SPECIFICATION
+INSTEAD.  By doing this, one can (almost - see below) use the original
+mask with the section.
+
+Unfortunately, use of the "block=" filter in a qpoe file works the same
+as "rect=" and requires that one re-scale the mask.  That is, the center
+of a region as well as the region dimensions must be divided by the block
+size.  We hope that NOAO will allow blocked images and masks to work together
+without rescaling in a future release of IRAF.
+
+It is not clear when, if ever, a "rect=" specifier should be used.  For
+tasks which a qpoe specific (in the PROS, these begin with "qp"), one will
+usually filter photons through a mask, not using "rect=".  It is therefore
+recommended that one not use "rect=" at all, either to "im" tasks or "qp"
+tasks.  If we find cases in which "rect=" is useful, we will let you know.
+We welcome comments, suggestions, and especially, bug reports.
+

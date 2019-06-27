@@ -1,0 +1,218 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/qphedit.hlp,v 11.0 1997/11/06 16:25:53 prosb Exp $
+#$Log: qphedit.hlp,v $
+#Revision 11.0  1997/11/06 16:25:53  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:20  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:43:22  prosb
+#General Release 2.3.1
+#
+#Revision 7.3  94/06/08  11:59:12  janet
+#jd - changed image prompt to qpoe.
+#
+#Revision 7.2  94/06/08  11:32:32  prosb
+#Removed section about "hedit" in BUGS, since that should really
+#be forwarded to NOAO folks.
+#
+#Revision 7.1  94/06/08  11:27:50  prosb
+#Brought help file up to date.
+#
+#Revision 7.0  93/12/27  18:23:16  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  15:14:50  mo
+#MC	12/22/93		Update for fixes to QPHEDIT and notes
+#			that it can't work on the WCS parameters.
+#
+#Revision 6.0  93/05/24  16:04:59  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:24:02  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:16:18  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:16:05  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/12  12:15:03  prosb
+#xray.ximages   7/12/91
+#
+#Revision 2.0  91/03/06  23:37:24  pros
+#General Release 1.0
+#
+.help qphedit Jun94 xray.ximages
+.ih
+NAME
+qphedit - edit or view one or more qpoe headers
+.ih
+USAGE
+qphedit qpoe fields value
+.ih
+DESCRIPTION
+
+This task can be used to add, edit, delete, or view the header keywords
+in one or more qpoe files.  This task functions similarly to the
+images task \fIhedit\fR.  
+
+Note: This task can NOT be used to edit WCS keywords in a QPOE file,
+such as any of the following:
+.nf
+                CTYPE1,2
+		CRPIX1,2
+                CRVAL1,2
+                CDELT1,2
+                CD1_1,CD2_2,CD1_2,CD2_1
+.fi
+Use the task \fIwcsqpedit\fR for these special parameters.
+.ih
+PARAMETERS
+.ls qpoe =		prompt = qpoe(s) to be edited
+
+Template specifying the qpoe files to be edited.
+
+.le
+.ls fields =		prompt = fields to be edited
+
+The field (header keyword) to be edited in each qpoe file.
+
+.le
+.ls value =		prompt = value expression
+
+Either a string constant or a general expression (if the first character is
+a left parenthesis) to be evaluated to compute the new value of each field.
+A single expression is used for all fields.  The special value "." causes the
+value of each field to be printed rather than edited.
+
+.le
+.ls (add = no) [boolean]
+
+Change the operation of the editor from update to add new field.
+
+.le
+.ls (delete = no) [boolean]
+
+Change the operation of the editor from update to delete field.
+The listed field is deleted from each qpoe file.
+
+.le
+.ls (verify = yes) [boolean]
+
+Interactively verify all operations which modify the image database.
+The editor will describe the operation to be performed, prompting with the
+new value of the parameter in the case of a field edit.  Type carriage
+return or "yes" to complete the operation, or enter a new value explicitly
+as a string.  Respond with "no" if you do not wish to change the value of
+the parameter.
+
+After each parameter is changed, the user will be asked if they wish to
+continue.  Respond with "no" if you wish to change no more parameters,
+"yes" if you wish to continue changing parameters.
+
+.le
+.ls (show = yes) [boolean]
+
+Print a record of each operation which modifies the database upon the standard
+output.  Old values are given as well as new values, making it possible to
+undo an edit operation.
+
+.le
+.ls (update = yes) [boolean]
+
+Enable updating of the image database.  If updating is disabled the edit
+operations are performed in memory but image headers will not be updated
+on disk.
+.le
+.ih
+EXAMPLES
+
+1) To add a parameter to a collection of QPOE files.
+
+.nf
+	xi> dir rp*qp
+	rp150015.qp  rp600119.qp  
+	xi> qphedit add=yes
+	images to be edited: rp*.qp
+	fields to be edited: myfield
+	value expression: This is a new field
+	add rp150015.qp,myfield = "This is a new field"
+	continue ? (yes): yes
+	rp150015.qp updated
+	add rp600119.qp,myfield = "This is a new field"
+	continue ? (yes): yes
+	rp600119.qp updated
+.fi
+
+2) To display a parameter in a collection of QPOE files.
+
+.nf
+	xi> qphedit
+	images to be edited: rp*.qp
+	fields to be edited: myfield
+	value expression: .
+	rp150015.qp,myfield = "This is a new field"
+	rp600119.qp,myfield = "This is a new field"
+.fi
+
+3) To update a parameter in a collection of QPOE files, without asking
+for verification.
+
+.nf 
+	xi> qphedit verify=no
+	images to be edited: rp*.qp
+	fields to be edited: myfield
+	value expression: newer field
+	rp150015.qp,myfield: "This is a new field" -> "newer field"
+	rp150015.qp updated
+	rp600119.qp,myfield: "This is a new field" -> "newer field"
+	rp600119.qp updated
+.fi
+
+4) To update a parameter in a collection of QPOE files, with verification.
+
+.nf
+	xi> qphedit
+	images to be edited: rp*.qp
+	fields to be edited: myfield
+	value expression: Newest field
+	rp150015.qp,myfield ("newer field" -> "Newest field"): yes
+	rp150015.qp,myfield: "newer field" -> "Newest field"
+	continue ? (yes): 
+	rp150015.qp updated
+	rp600119.qp,myfield ("newer field" -> "Newest field"): yes
+	rp600119.qp,myfield: "newer field" -> "Newest field"
+	continue ? (yes): 
+	rp600119.qp updated
+.fi
+
+5) To delete a parameter in a collection of QPOE files.
+
+.nf
+	xi> qphedit delete=yes
+	images to be edited: rp*.qp
+	fields to be edited: myfield
+	delete rp150015.qp,myfield ? (yes): 
+	rp150015.qp,myfield deleted
+	continue ? (yes): 
+	rp150015.qp updated
+	delete rp600119.qp,myfield ? (yes): 
+	rp600119.qp,myfield deleted
+	continue ? (yes): 
+	rp600119.qp updated
+.fi
+.ih
+BUGS
+
+This task does not handle compound header parameters, such as
+the tgr data.  Do not try to display or edit this data using qphedit.
+
+.ih
+SEE ALSO
+
+wcsqpedit
+
+hedit
+.endhelp

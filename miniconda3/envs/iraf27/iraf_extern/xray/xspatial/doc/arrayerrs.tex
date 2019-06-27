@@ -1,0 +1,161 @@
+\input cfa_memohead
+\input mathsymbols
+\date{July 15th, 1988}
+\to{PROS}
+\from{Diana Worrall}
+\subject{Error Arrays - Fundamentals (Rev 0.15)}
+
+\centerline{\underbar{Definitions}}
+\vskip 12pt
+\halign{
+\hfill $#$ & \hfill # \hfill & # \hfill \cr
+A & = & true area of pixel (including contraction, if applicable) \cr
+K, K_1, K_2 & = & constants \cr
+C_{ij} & = & counts in $ith, jth$ element of array \cr
+\varepsilon_{ij} & = & error for $ith, jth$ element \cr
+w_{ij} & = & weight in the $ith, jth$ element due to a smoothing
+function \cr
+r & = & distance \cr
+\Xi & = & area in smoothing function \cr
+N & = & number of pixels in smoothing function, $ = \Xi / A$ \cr
+}
+\blankpar
+Subscript (1,1) is used to denote the reference cell (for contraction
+or smoothing).
+\blankline
+Note: positions and areas are normally specified in sky dimensions
+({\it e.g.}, arcsecs, square-arcseconds).
+\vskip 18pt\noindent
+1. FUNDAMENTALS
+\blankpar
+An input data array (raw counts), before any operations, obeys Poisson statistics.
+$$\varepsilon_{ij} = C_{ij}^{1\over 2} \eqno(1)$$
+Equation (1) is accurate for large $C_{ij}$.  At small $C_{ij}$, and
+after certain array arithmetic, the
+error is described accurately only by having more than one error
+number associated with each pixel in the error array.  For the moment,
+this complication will be ignored.  However, if $C_{ij} \simless 15$,
+the user should be warned that counts are small and errors may be
+inaccurate.  The user should be told how many pixels have $C_{ij}
+\simless 15$.
+Then, the user would be expected to contract an array by
+some value (to increase the number of counts per pixel) before
+performing array arithmetic or smoothing.  A contraction by $n$ puts a
+new value of
+$$C_{11} = \sum_{i=1}^n \sum_{j=1}^n C_{ij}$$
+in reference element (1,1), and its error is
+$$\varepsilon_{11} = C_{11}^{1\over 2} \eqno(2)$$
+A contracted original data array can be thought of in the same way as
+an original data array as far as error analysis is concerned.
+\blankline
+2. SIMPLE ARRAY ARITHMETIC
+\blankpar
+The first error equation (after each `if') below is used
+if the function is performed on
+an input data array of raw counts.  The second equation is used if the
+data array already has an error array.
+\blankpar
+$$\eqalignno{
+        {\rm if \qquad\qquad}C'_{ij} &= K C_{ij} \cr
+       \varepsilon'_{ij} &= K C_{ij}^{1\over 2} &(3)\cr
+{\rm or \quad}\varepsilon'_{ij} &= K \varepsilon_{ij} &(4)\cr
+        {\rm if \qquad\qquad}C'_{ij} &= K_1 C_{1_{ij}} \pm  K_2 C_{2_{ij}} \cr
+       \varepsilon'_{ij} &= {(K_1^2 C_{1_{ij}} + K_2^2 C_{2_{ij}})}^{1\over 2} &(5)\cr
+{\rm or \quad}\varepsilon'_{ij} &= {(K_1^2 \varepsilon_{1_{ij}}^2
+                                   + K_2^2 \varepsilon_{2_{ij}}^2)}^{1\over 2} &(6)\cr
+        {\rm if \qquad\qquad}C'_{ij} &= {K_1 C_{1_{ij}} \over K_2 C_{2_{ij}}}
+                {\rm \qquad or \qquad } {K_1 C_{1_{ij}} \times K_2 C_{2_{ij}}}\cr
+      \varepsilon'_{ij} &= C'_{ij}\left({{K_1^2 \over C_{1_{ij}}} +
+                                   {K_2^2 \over C_{2_{ij}}}}\right)^{1\over 2} &(7)\cr
+{\rm or \quad}\varepsilon'_{ij} &= C'_{ij}\left({{K_1^2 \over \varepsilon_{1_{ij}}^2} +
+                                            {K_2^2\over\varepsilon_{2_{ij}}^2}
+                                                      }\right)^{1\over 2} &(8)\cr
+                              }$$
+\blankpar
+Note that constants may also be arrays.  In this case the above will
+apply with $K$ replaced by $K_{ij}$. 
+\blankpar
+Any implementation of simple array arithmetic must know into which of the
+following categories each array falls:
+
+\item{(a).}Input data array of raw counts or any other array for which
+the error is just the square root of the counts.  A contracted array
+also falls into this category (see equation (2) above).
+
+\item{(b.)}An array for which an error array exists.
+
+\item{(c).}An array which does not fall into (a), and which does
+not have an error array.  This would be $K_{ij}$ in the equations above.
+An exposure map is an example of such an array.
+
+Arithmetic may be performed to combine arrays from one or more of the
+above categories.  It is important that an array know about its own
+error status ({\i.e.}, whether or not there is an associated file).
+Note that
+the user must have the ability to construct an error array using some
+arbitrary array arithmetic (or pixel editing) and make this error
+array
+be known to the data array for subsequent analysis.
+\blankpar
+Examples of array arithmetic include dividing by an exposure map and
+forming array mosaics.  The division by an exposure map would normally
+be division of a raw-counts array or an array with errors by a constant array, and would
+be given by equations (3) or (4), where $K = 1/K_{ij}$.  Array
+mosaicing is complicated by the necessity to map both onto a fixed
+grid.  However, where pixels are perfectly aligned, the errors would be
+given by equations (5) or (6) (or a mixture).
+\blankline
+3. SMOOTHING
+\blankpar
+$$\eqalignno{
+               C_{11} &= { \sum_i \sum_j C_{ij} w_{ij} \over \sum_i \sum_j w_{ij}} \cr
+              \varepsilon_{11} &= { ( \sum_i \sum_j C_{ij} w_{ij}^2)^{1\over 2} \over 
+                                      \sum_i \sum_j w_{ij}} &(9)\cr
+{\rm or \quad}\varepsilon_{11} &= { ( \sum_i \sum_j \varepsilon_{ij}^2
+                                                          w_{ij}^2)^{1\over 2} 
+                                    \over \sum_i \sum_j w_{ij}} &(10)\cr
+                     }$$
+\blankpar
+Suppose the smoothing function is a Gaussian of standard deviation
+$\sigma$.  To evaluate (9) and (10),
+$$w_{ij} = e^{-\left({r_i^2 \over 2 \sigma^2}\right)}$$
+where $r_i$ is the distance of the $ith,jth$ pixel from the
+reference pixel. (In practice, a pixel would be divided into many
+small equal-area subpixels each giving weight $w_{iijj}$, and
+$w_{ij} = \sum w_{iijj}$.)
+\blankpar
+Let us assume that the counts per pixel is a constant, $C$.  This
+approximation
+is roughly true away from strong sources and after sparse arrays
+have been contracted.  (If there is an error array,  we will assume that the
+error for each pixel is the same, $\varepsilon$.)  We can derive a
+simple expression for the error in the smoothed array.  This may be
+used to verify that the error computation (equations (9) and (10))
+has no major bugs.
+For a Gaussian,
+$$\Xi = 2 \pi \sigma^2$$
+We find that,
+$$\eqalign{
+ \sum_i \sum_j w_{ij} &= {\int_0^\infty e^{-\left({r^2 \over 2 \sigma^2}\right)} 2 \pi r dr
+                   \over A}  \cr
+                &= {2 \pi \sigma^2 \over A} \cr
+                &= N \cr
+            }$$
+and,
+$$\eqalign{
+ \sum_i \sum_j w_{ij}^2 &= {\int_0^\infty e^{-\left({r^2 \over \sigma^2}\right)} 2 \pi r dr
+                   \over A}  \cr
+                &= {2 \pi \sigma^2 \over 2 A} \cr
+                &= {N \over 2 } \cr
+            }$$
+Using (9) and (10) we find,
+$$\eqalign{
+              C_{11} &= C \cr
+    \varepsilon_{11} &= \left({C A \over 2 (2 \pi \sigma^2)}\right)^{1\over 2}  \cr
+                     &= \left({C  \over 2 N }\right)^{1\over 2}  \cr
+{\rm or \quad}\varepsilon_{11} &= \varepsilon \left({A \over 2 (2 \pi\sigma^2)}\right)
+                                    ^{1\over 2}  \cr
+                     &= \varepsilon\left({1  \over 2 N }\right)^{1\over 2}  \cr
+            }$$
+
+\vfill\eject\end

@@ -1,0 +1,20 @@
+This mem0 package version C is revised from its v. B released in Oct. 1992.
+
+Major revisions:
+
+1. The task irme0. Now convergence is much faster and results are much
+better. This is due partly to the use of the "model updating" technique.
+The number of FFTs per iteration is 4.
+
+The input parameters for noise are changed. Some new parameters are added.
+
+The parameters after "message" are mainly for the purposes of test and
+comparison. Usually they need not be changed.
+
+2. The suffix "b" in some tasks' names has been deleted. The task foolfactor 
+has been renamed to pfactor.
+
+3. A bug in the task imconv has been fixed so that the result is correct for
+the parameter norm=no.
+
+Nailong Wu, Dec. 10, 1993.

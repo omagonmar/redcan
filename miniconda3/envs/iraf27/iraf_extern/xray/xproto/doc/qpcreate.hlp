@@ -1,0 +1,215 @@
+#$Header: /home/pros/xray/xproto/doc/RCS/qpcreate.hlp,v 11.0 1997/11/06 16:39:03 prosb Exp $
+#$Log: qpcreate.hlp,v $
+#Revision 11.0  1997/11/06 16:39:03  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:26:55  prosb
+#General Release 2.4
+#
+#Revision 8.1  1995/06/12  18:38:29  prosb
+#JCC - Add the description for new key words (xkey & ykey).
+#
+#Revision 8.0  1994/06/27  17:26:20  prosb
+#General Release 2.3.1
+#
+#Revision 1.1  94/06/15  16:05:50  janet
+#Initial revision
+#
+#
+.help qpcreate Feb94 xray.xproto
+.ih
+NAME
+qpcreate -- create a qpoe file from an input ASCII event-list
+.ih
+USAGE
+qpcreate input_list column_definitions  qpoe 
+.ih
+DESCRIPTION
+\fIqpcreate\fR converts an input ASCII event-list to QPOE format.  
+The input file must have an accompanying column definition file
+to specify the names of the event-list columns as well as their datatype.
+There is also as accompanying header data file, which should be edited
+to reflect the appropriate keywords.
+Optionally, display parameters and units may also be specified.
+The input is first converted to an ST/TABLE file (with \fItcreate\fR), then to 
+a FITS BINTABLE file (with \fIxwfits\fR), for conversion into a standard PROS 
+QPOE file (with \fIqpcreate\fR).
+.ih
+PARAMETERS
+.ls evtlist = ""		prompt = input ASCII event-list
+
+The filename containing the input ASCII list.  
+.le
+.ls coldef = "."		prompt = column definition file
+
+The filename containing the column definitions for the evtlist.
+The default ".", expects the filename to have the same root as the
+'evtlist' with a ".cd" file extension.
+Four columns are defined:
+.nf
+	name	datatype	display-format	units
+.fi
+The names when making an event-list should ALWAYS include
+.nf
+		x	s
+		y	s
+.fi
+and OFTEN include
+.nf
+		pha	s
+		pi	s
+		time	d
+		rawx	s
+		rawy	s
+where the recognised data-types are:
+.nf
+		s	- short
+		i	- integer
+		r	- single precision real
+		d	- double precision real
+		b	- boolean
+		ch*n	- character string of length n
+.fi
+The display format is optional and accepts standard FORTRAN or SPP
+formats.
+See also \fIhelp tcreate\fR for more detailed information.
+.le
+.ls headdef = "."		prompt = header parameter definitions
+
+The filename containing the column definitions for the evtlist.
+The default ".", expects the filename to have the same root as the
+'evtlist' with a ".hd" file extension.
+.le
+.ls outfile = "."		prompt = output QPOE file name
+
+The output qpoe file name.  The file must have a ".qp" extension,
+but may be specified with or without the extension.  The "."
+default will build an output QPOE filename with the same root as the
+input evtlist.
+.le
+.ls (nskip = 0) [int]
+
+Number of lines at the beginning of 'evtlist' to skip.  This is set
+when there are some header lines in the input file.
+.le
+.ls (nlines = 0) [int]
+
+Number of lines in the input 'evtlist' to be read to produce a single
+output row.
+.le
+.ls (nrows = 0) [int]
+
+Number of lines to write to the output file.  If ==0, write all
+the data.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file or any of the
+other intermediate files can be overwritten, if they already exists.
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A display level
+.nf
+	level		action
+	-----		------
+	  0		no output
+	  1		just output filename info
+	  2		all filenames
+.fi
+.le
+.ls (sort = yes) [boolean]
+
+Boolean flag to indicate if final QPOE file should be sorted.
+.le
+.ls (ssize = 1000000) [int]
+
+Maximum number of events per buffer when doing sorting.  This number
+can be made larger for machines with large memory (an average event
+is ~20 bytes long) or smaller for low-memory machines.
+.le
+.ls (qpi = yes) [boolean]
+
+Boolean flag controlling whether the internal qpoe parameters (see below)
+are prompted for, or whether they are defaulted to internally hardwired
+values.  This parameter is not usually changed by the user.  (Prompting
+is normally turned off during stand-alone debugging only.)
+.ls (psize = 4096) [int]
+
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (bsize = 8192) [int]
+
+Bucket length for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (xkey = "x") [string]
+
+Name of the event keyword to use for the x-index of the QPOE file.
+.le
+.ls (ykey = "y") [string]
+
+Name of the event keyword to use for the y-index of the QPOE file.
+.le
+.ls (qpkey = "") [string]
+
+Key on which to make the qpoe index.  This parameter is internal to qpoe and
+should not normally be changed. 
+.le
+.ls (debug = 0) [int]
+
+Debug level for qpoe internals.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.le
+.ih
+EXAMPLES
+1.
+Make a QPOE file from the input list, sim.lst containing:
+.nf
+10      20      2
+20      30      4
+30      40      6
+40      50      8
+50      60      10
+60      70      12
+70      80      14
+80      90      16
+90      100     18
+100     120     20
+.fi
+with a column description file, sim.cd containing:
+.nf
+x       s       %6d     pixels
+y       s       %6d     pixels
+pha     s       %6d     pixels
+.fi
+
+qpcreate sim.lst . sim.qp
+
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+Task, \fItcreate\fR, which will create a TABLE file to an ASCII-list.  
+
+Task, \fIimcopy\fR, which will copy a qpoe file to an image file.  However,
+currently this task will NOT correctly update the WCS information,
+so task, \fIblkavg\fR with option=sum is recommended instead.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on qpoe filtering (\fIhelp qpoe\fR) for a description of
+the qpoe filter user interface.
+
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp
+

@@ -1,0 +1,9 @@
+README.md
+setup.py
+py_expression_eval/__init__.py
+py_expression_eval/tests.py
+py_expression_eval.egg-info/PKG-INFO
+py_expression_eval.egg-info/SOURCES.txt
+py_expression_eval.egg-info/dependency_links.txt
+py_expression_eval.egg-info/not-zip-safe
+py_expression_eval.egg-info/top_level.txt

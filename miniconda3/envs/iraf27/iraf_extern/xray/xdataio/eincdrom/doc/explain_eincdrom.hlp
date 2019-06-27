@@ -1,0 +1,214 @@
+#$Log: explain_eincdrom.hlp,v $
+#Revision 11.0  1997/11/06 16:36:40  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:01:04  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:24:04  prosb
+#General Release 2.3.1
+#
+#Revision 1.3  94/05/13  17:06:34  prosb
+#Made minor modifications to help file.
+#
+#Revision 1.2  94/05/06  16:16:03  prosb
+#Revised documentation a bit...
+#
+#Revision 1.1  94/05/06  16:12:47  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/doc/RCS/explain_eincdrom.hlp,v 11.0 1997/11/06 16:36:40 prosb Exp $
+.help explain_eincdrom May94 xray.xdataio.eincdrom
+.ih
+NAME
+eincdrom -- tasks to access Einstein data on CD-ROM from within
+IRAF/PROS
+.ih
+USAGE
+This document describes the EINCDROM package.
+.ih
+DESCRIPTION
+A large fraction of the Einstein Observatory data archive has now
+been released on CD-ROM.  These include:
+
+.nf
+*  The Einstein Observatory Catalog of X-Ray Sources in FITS image 
+   format.
+   
+*  The Einstein Database of HRI images in FITS image format 
+
+*  The Einstein Database of HRI images in Event List Format
+
+*  The Einstein Observatory Slew Survey
+
+*  The Einstein Observatory Database of IPC Images in Event List 
+   Format 
+
+*  The Einstein Observatory Database of Unscreened IPC Images in 
+   Event List Format 
+.fi
+
+A more complete description of each data set is given at the 
+end of this help file.  
+
+The EINCDROM package contains tasks to retrieve and examine Einstein
+data on CD-ROM.  The user must specify the sequence number or
+FITS data file name, the instrument (IPC or HRI) 
+and the required data set (event,image, slew,
+or unscreened).  Three tasks have been provided: \fIecd2pros\fR will retrieve
+data from any of the above CD-ROM sets and convert it to the appropriate
+IRAF/PROS format, \fIecdinfo\fR allows the user to access information about
+a particular observation and \fIeincdpar\fR sets the package-wide parameters.
+
+.ih
+EINCDPAR
+This task sets the package-wide parameters, including the location
+of the CD-ROMs and the tables containing CD-ROM information.  
+The parameters can be edited using the IRAF task "epar".  The environment
+variables used as the default values for these parameters 
+are set to values used at the Smithsonian Astrophysical
+Observatory.  Users at other locations will want to edit these values
+appropriately.  For example, if the first volume of the IPC Event List
+CD-ROM is in a CD-ROM reader with an address "/CDROM" then set
+ipcevt1="/CDROM".
+
+.ih
+ECDINFO
+This task uses the tables specified in \fIeincdpar\fR to enable the user
+to obtain information about a particular observation.  The
+user must specify the FITS filename, the instrument and the type
+of data required (an image file, an Event List file or the 
+Unscreened Data Archive) and the task will return the name of the
+FITS file, the RA and Dec of the field center, the livetime, 
+the title of the observation, and which CD-ROM contains the data.
+
+.ih
+ECD2PROS
+This task will retrieve Einstein data from any of the CD-ROM
+archives.  The user must specify the FITS filename, the instrument 
+and the type of data required (an image file, an Event List file or the
+Unscreened Data Archive).  \fIecd2pros\fR will then either copy the
+specified FITS file to the users disk space or call the appropriate
+IRAF/PROS tasks and create an image file or a QPOE file.  The user
+can also copy or convert some of the auxiliary data from the CD-ROM.
+
+.ih
+EINSTEIN DATA ON CD-ROM
+
+The following data sets are available on CD-ROM.  A detailed description
+of the data formats used in each set is given in the "doc" directory
+on each disk.  Additional details can be found in the documentation directories
+on each CD-ROM data set.
+
+.ce 
+The Einstein Observatory Catalog of X-Ray Sources in FITS image
+.ce
+Format
+.ce
+---------------------------------------------------------------
+
+This 3- CD-ROM set contains FITS image files of each IPC pointing with an
+exposure time > 300s.  These images have been corrected for background
+and vignetting and smoothed with a 75 arcsecond FWHM Gaussian.  Exposure
+maps are also supplied. The AUXDATA directory contains both a deep
+survey and bright earth FITS template image, the vignetting array, and
+Image correction factor array.
+
+.ce 
+The Einstein Database of HRI images in FITS image Format
+.ce 
+--------------------------------------------------------
+
+This two CD-ROM set contains FITS image files of the 870 Einstein
+HRI pointings.  The images have not been smoothed and no background
+corrections have been appled.  The AUXDATA directory contains
+a long exposure bright earth FITS image, useful for estimating the
+HRI flat-field, and several optical images.
+
+.ce 
+The Einstein Database of HRI images in Event List Format
+.ce 
+--------------------------------------------------------
+
+This two CD-ROM set contains HRI data in Event List (BINTABLE) format. 
+In this format each detected photon is characterized by its position
+and by its arrival time.  These data can therefore be used
+for timing analysis. The images are at the full HRI resolution.
+The auxiliary data consists of some optical images, barycenter time 
+corrections and spacecraft ephemeris, a bright earth map in
+Event List Format and ground-based calibration images of a point
+source at 8 energies.
+
+.ce 
+The Einstein Observatory Slew Survey
+.ce 
+------------------------------------
+
+This CD-ROM contains IPC data obtained when the satellite
+was slewing between one pointed observation and the next. 
+There are a total of 1303 BINTABLE files, each containing data from a
+6.5O x 6.5O degree region.  The AUXDATA directory contains aspect 
+and timing-gap files, and sky bin HUT lists.
+
+.ce 
+The Einstein Observatory Database of IPC Images in Event List Format
+.ce 
+--------------------------------------------------------------------
+
+This 4 CD-ROM set contains Event list data for 4093 IPC sequences.
+The data is at the full IPC resolution, and each photon has
+an associated arrival time and photon pulse height bin.  These data
+can therefore be used for timing and spectral analysis.  The 
+AUXDATA directory contains a bright earth map in Event-List 
+and Image format, a Deep Survey images with sources removed, and
+ascii files for each sequence giving the details of individual
+observation intervals.  Also included are the IPC point responses at
+3 different line energies, the  energy response matrices in
+ASCII format for each BAL gain value, an ASCII listing of the BAL versus
+time, images of the DGNI and PSGNI spatial gain maps, and the telescope
+effective area files.
+
+.ce
+The Einstein Observatory Database of Unscreened IPC Images in 
+.ce
+Event List Format
+.ce
+-------------------------------------------------------------
+
+This data set consists of 18 CD-ROMs.  Previous releases of IPC data (images
+and Event Lists, described above)  were subject to the standard 
+event screening excluding the outer regions of the detector and 
+periods  of poor aspect solution or high background. Since this 
+excluded data may still be useful for bright  sources, the present data 
+includes the full photon data archive (4108 sequences).
+Also included in this release is a calibration disk.  This disk
+contains an extensive collection of data including;
+
+-- IPC area files
+
+-- the  Diffuse Gain Normalization Image (DGNI)
+
+-- the Point Source Gain Normalization Image (PSGNI)
+
+-- the BAL database
+
+-- DCAL and and High Voltage Databases 
+
+-- the DCOR (Distortion Correction) map
+
+-- PI mapping tables 
+
+-- the Ephemeris Database, 
+
+-- the MAG database 
+
+-- Star Tracker Temperature Corrections
+
+-- Fiducial Light Calibration Positions
+
+-- Quaternion Pointing Data for each Major Frame
+
+-- IPC point spread functions.  A total of 81 files, each 
+corresponding to one of 9 PHA channels (3-11) and one of 9 line energies.
+
+.endhelp

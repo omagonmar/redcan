@@ -1,0 +1,48 @@
+			PROS Library Update Request
+
+
+Source file:	qpmask.x	
+
+PROS library:	qpcreate
+
+Programmers name: E. Mandel
+
+Date: 	10/29/90
+
+Modification or Addition(pick one):  Mod
+
+Description of change:
+
+	set_qpmask	overwrote "mask=<pl>" in filter spec
+
+
+
+
+
+
+
+
+
+Programs affected:
+	< You should be able to name at least one - which prompted the
+		change.  Maybe you know it will affect a lot.          >
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+Librarian use only:
+Date entered:
+
+Date remade:
+
+Problems encountered:
+
+Librarian:
+------------------------------------------------------------------------
+

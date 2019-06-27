@@ -1,0 +1,101 @@
+#$Header: /home/pros/xray/lib/doc/RCS/dgi4.hlp,v 11.0 1997/11/06 16:22:29 prosb Exp $
+#$Log: dgi4.hlp,v $
+#Revision 11.0  1997/11/06 16:22:29  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:23  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:34:52  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:18:38  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  15:59:59  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:01  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:08:12  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:31  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:34:54  pros
+#General Release 1.0
+#
+.help dgi4 Jan89 PROS_Library
+NAME
+.in 4
+dgi4 - convert DG 4-byte integer to host format
+.sp
+.in -4
+USAGE
+.in 4
+ival = dgi4(ibuf)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	ibuf		any type	data element containing DG int
+
+Output Arguments:
+	none
+
+Return Value:
+	ival		int		SPP int in host format
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function dgi4 takes a 4-byte integer in DG data format and returns
+a 4-byte integer (SPP int) in host format.  Because SPP (and Fortran)
+pass data by reference, the DG data can be stored in any data type, and
+in either an array or a scalar.
+
+Note that dgi4 checks BYTE_SWAP4 (defined in <mach.h>) and calls the 
+SPP library routine bswap4.  If a user needs to convert many 4-byte integers
+stored in an array, it would be more efficient to call bswap4 directly (see
+second example).
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. Convert a DG 4-byte integer to host format.
+.in 8
+.nf
+int	i
+short	dgbuf[100]
+int	dgi4()
+
+i = dgi4(dgbuf[50])
+.fi
+.sp
+.in -12
+.in 4
+ex. Convert an array of DG 4-byte integers to host format using bswap4.
+.in 8
+.nf
+include <mach.h>
+define	BUFSIZ 100
+int	dgbuf[BUFSIZ]
+int	hostbuf[BUFSIZ]
+
+# convert DG i*4, if necessary
+if( BYTE_SWAP4 == YES )
+    # last arg to bswap4 is the number of machine bytes to swap
+    call bswap4(dgbuf, 1, hostbuf, 1, BUFSIZ*4)
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+dgi2, dgr4, dgr8, dgi6

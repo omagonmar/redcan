@@ -1,0 +1,81 @@
+# $Header: /home/pros/xray/xspatial/eintools/RCS/rbkmap_make.par,v 11.0 1997/11/06 16:31:37 prosb Exp $
+# $Log: rbkmap_make.par,v $
+# Revision 11.0  1997/11/06 16:31:37  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:47:56  prosb
+# General Release 2.4
+#
+#Revision 1.2  1994/08/04  13:39:08  dvs
+#Added header & log.
+#
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+# parameter file for rbkmap_make
+qpoefile,s,a,,,,"input QPOE file [root.qp]"
+rbkmap,s,a,".",,,"output rotated background image [root_bkg.imh]"
+pi_band,s,a,"all",,,"PI band"
+srcfile,s,a,"",,,"input source table [or NONE]"
+src_cnts,r,a,0..,,,"input source counts"
+expfile,s,a,".",,,"exposure PL mask [root_exp.pl]"
+defmaps,b,a,yes,,,"use default bright Earth and deep survey maps?"
+bemap,s,a,,,,"input bright Earth map"
+dsmap,s,a,,,,"input deep survey map"
+bkfac_tab,s,h,".",,,"intermediate background factor table [root_bkfac.tab]"
+xscale,r,h,1.,,,"x-scale of final image (>1 expands, <1 compresses)"
+yscale,r,h,1.,,,"y-scale of final image (>1 expands, <1 compresses)"
+
+# defaults for be/ds maps
+def_be_hard,s,h,"eintoolsdata$bemaph",,,"default hard bright Earth map"
+def_ds_hard,s,h,"eintoolsdata$dsmaph",,,"default hard deep survey map"
+def_be_soft,s,h,"eintoolsdata$bemaps",,,"default soft bright Earth map"
+def_ds_soft,s,h,"eintoolsdata$dsmaps",,,"default soft deep survey map"
+def_be_broad,s,h,"eintoolsdata$bemapb",,,"default broad bright Earth map"
+def_ds_broad,s,h,"eintoolsdata$dsmapb",,,"default broad deep survey map"
+
+# parameters for bkfac_make
+use_obi,b,h,yes,,,"generate average aspect per OBI"
+gti_ext,s,h,"",,,"name of gti extension with OBI [or '' for default]"
+obi_name,s,h,"obi_num",,,"name of OBI field in GTI extension"
+br_edge_filt,s,h,"detx=287:738,dety=287:738",,,"filter to use to remove bright edge"
+max_off_diff,r,h,1.0,,,"total difference allowed for asp offsets (pixels)"
+dist_to_edge,r,h,150.0,,,"distance to edge of field (pixels)"
+
+# parameters for calc_factors
+br_edge_reg,s,h,"box 256.5 256.5 226 226",,,"region excluding bright edge from be/ds image"
+min_grp_time,r,h,1000.0,,,"minimum group time for using group counts"
+
+# parameters for exp_make
+catfile,s,h,".",,,"intermediate constant aspect table [root_cat.tab]"
+full_exp,b,h,no,,,"use full IPC exposure screening?"
+aspx_res,r,h,4.0,,,"resolution for aspx (pixels)"
+aspy_res,r,h,4.0,,,"resolution for aspy (pixels)"
+aspr_res,r,h,0.0087266463,,,"resolution for roll (rad)"
+cell_size,i,h,4.0,,,"cell size of the exposure mask (pixels)"
+exp_max,i,h,32767,1,,"maximum value of exposure mask"
+geom_bounds,s,h,"eintoolsdata$geom_bounds.tab",,,"IPC geometry boundaries table"
+
+# parameters for src_cnts
+src_rad,r,h,22.5,,,"source radius (in pixels)"
+bkgd_ann_in,r,h,37.5,,,"inner radius of background annulus (in pixels)"
+bkgd_ann_out,r,h,45.0,,,"outer radius of background annulus (in pixels)"
+soft_cmsc,r,h,1.09,,,"circle mirror scattering correction for soft band"
+soft_cprc,r,h,1.09,,,"circle point response correction for soft band"
+hard_cmsc,r,h,1.14,,,"circle mirror scattering correction for hard band"
+hard_cprc,r,h,1.00,,,"circle point response correction for hard band"
+
+# parameters for be_ds_rotate
+xsample,r,h,1.,1.,,"Coordinate surface sampling interval in x"
+ysample,r,h,1.,1.,,"Coordinate surface sampling interval in y"
+interpolant,s,h,'linear',,,"Interpolant (nearest,linear,poly3,poly5,spline3)"
+boundary,s,h,'constant',,,"Boundary extension (nearest,constant,reflect,wrap)"
+constant,r,h,0.,,,"Constant boundary extension"
+nxblock,i,h,512,,,"X dimension of working block size in pixels (for rotate)"
+nyblock,i,h,512,,,"Y dimension of working block size in pixels (for rotate)"
+
+# other parameters
+clobber,b,h,no,,,"Overwrite existing output file"
+display,i,h,1,0,5,"Display level"

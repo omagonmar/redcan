@@ -1,0 +1,199 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/counts_plot.hlp,v 11.0 1997/11/06 16:41:13 prosb Exp $
+#$Log: counts_plot.hlp,v $
+#Revision 11.0  1997/11/06 16:41:13  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:11  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:51  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:52:53  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/21  23:18:35  dennis
+#Added SRG HEPC1 and LEPC1 instruments.
+#
+#Revision 6.0  93/05/24  16:47:27  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:42:18  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:27:06  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.3  92/04/22  11:44:15  prosb
+#Changed date.
+#
+#Revision 3.2  92/04/07  16:17:58  prosb
+#added new parameters for HRI.
+#
+#Revision 3.1  92/03/20  11:02:29  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:16  prosb
+#General Release 1.1
+#
+#Revision 2.4  91/08/01  18:21:56  prosb
+#jso - update for Aug 91
+#
+#Revision 2.2  91/07/08  15:29:55  mo
+#MC	7/8/91		Updated with the new PROS package structure
+#
+#Revision 2.1  91/04/17  21:21:26  dmm
+#added info about star in graph output
+#
+#Revision 2.0  91/03/06  23:09:22  pros
+#General Release 1.0
+#
+.help counts_plot Apr92 xray.xspectral
+.ih
+NAME
+counts_plot -- plots the observed and predicted spectra
+.ih
+USAGE
+counts_plot
+.ih
+DESCRIPTION
+
+Plots the data points of the observed spectrum, as well as a histogram
+of the predicted spectrum, if one has been computed.  The data points that
+were used in the fit will be labeled with boxes.  Note that the
+task leaves you in "cursor input" mode.  Type a "?" to obtain a help
+menu in cursor input mode.  Type a "q" to exit back to the CL.
+.ih
+PARAMETERS
+.ls observed = ""             prompt = observed spectrum [root_obs.tab]
+
+This is a package wide parameter, found in the pkgpars parameter file.
+
+The  file  names  of one or more observed data sets to be plotted.
+Multiple observation data sets  can  be specified  by  entering the
+file names, separated by semicolons, e.g. "foo1; foo2;  foo3",  etc.
+\fIcounts_plot\fR will plot the first dataset; cursor commands allow
+paging to other datasets.  Normally the dataset files have a
+"_obs.tab" extension.  This extension need not be input explicitly; if
+the files do not follow this convention the explicit name should be
+typed.
+
+Channels to fit for a given data set may be selected by appending a
+bracket notation to the file name.  Thus "foo[3:11,15]" will cause
+channels 3 to 11 (inclusive) and 15 to be fit.  If channels are not
+explicitly specified, the default channels for the given instrument
+are retrieved from the pkgpars parameter file.
+
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ls (plot_title = "") [string]
+
+The title of the plot.  If this is null ("") the task will choose "Photon
+Counts" as the default.
+.le
+.ls (x_axis_title = "") [string]
+
+The x axis title.  If this is null ("") the task will choose "keV" as the
+default.
+.le
+.ls (y_axis_title = "") [string]
+
+The y axis title.  If this is null ("") the task will choose "counts" as the
+default.
+.le
+.ls (ipc_minimum_energy = 0.1) [real]
+
+The minimum energy to be displayed on an IPC plot.
+.le
+.ls (ipc_maximum_energy = 10.0) [real]
+
+The maximum energy to be displayed on an IPC plot.
+.le
+.ls (mpc_minimum_energy = 1.0) [real]
+
+The minimum energy to be displayed on an MPC plot.
+.le
+.ls (mpc_maximum_energy = 25.0) [real]
+
+The maximum energy to be displayed on an MPC plot.
+.le
+.ls (ein_hri_minimum_energy = 0.1) [real]
+
+The minimum energy to be displayed on an Einstein HRI plot.
+.le
+.ls (ein_hri_maximum_energy = 10.0) [real]
+
+The maximum energy to be displayed on an Einstein HRI plot.
+.le
+.ls (pspc_minimum_energy = 0.1) [real]
+
+The minimum energy to be displayed on a PSPC plot.
+.le
+.ls (pspc_maximum_energy = 3.0) [real]
+
+The maximum energy to be displayed on a PSPC plot.
+.le
+.ls (ros_hri_minimum_energy = 0.1) [real]
+
+The minimum energy to be displayed on a ROSAT HRI plot.
+.le
+.ls (ros_hri_maximum_energy = 3.0) [real]
+
+The maximum energy to be displayed on a ROSAT HRI plot.
+.le
+.ls (hepc1_minimum_energy = 2.0) [real]
+
+The minimum energy to be displayed on an SRG HEPC1 plot.
+.le
+.ls (hepc1_maximum_energy = 30.0) [real]
+
+The maximum energy to be displayed on an SRG HEPC1 plot.
+.le
+.ls (lepc1_minimum_energy = 0.2) [real]
+
+The minimum energy to be displayed on an SRG LEPC1 plot.
+.le
+.ls (lepc1_maximum_energy = 8.0) [real]
+
+The maximum energy to be displayed on an SRG LEPC1 plot.
+.le
+.ls (device = "stdgraph") [string]
+
+The output graphics device.
+.le
+.ls (cursor = "") [*gcur]
+
+Graphics cursor input.
+.le
+.ih
+EXAMPLES
+The following example plots the predicted and the observed data,
+but changes the default plot title from "Photon Counts" to "My fit
+results".
+.nf
+
+	xs> counts_plot plot_title="My fit results"
+	observed spectrum [root_obs.tab]: snr
+
+	[Type "q" to quit from graphics display.]
+
+.fi
+.ih
+TIME REQUIREMENTS
+
+This tasks normally executes promptly, in less than 10 seconds.
+.ih
+BUGS
+
+The _obs.tab file name must not begin with a numeral.  Beginning the
+file names of these files with a numeral causes the parser to attempt
+to process the numeral, resulting in an error.
+.ih
+SEE ALSO
+
+bal_plot, grid_plot, fit, singlefit, pkgpars
+.endhelp

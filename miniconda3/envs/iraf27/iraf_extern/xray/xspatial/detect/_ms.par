@@ -1,0 +1,9 @@
+# $Header: /home/pros/xray/xspatial/detect/RCS/_ms.par,v 11.0 1997/11/06 16:32:18 prosb Exp $
+# $Log#
+src_list,s,a,"",,,"Input Unique Source table"
+qpoe,s,a,"",,,"Reference Qpoe file"
+matchlist,s,a,"",,,"Output Match Source List"
+err_factor,r,h,3.0,,,"Error factor"
+overide,b,h,no,,,"Overide use of error from input file?"
+clobber,b,h,no,,,"OK to overwrite existing output file?"
+display,i,h,3,0,5,"Display level"

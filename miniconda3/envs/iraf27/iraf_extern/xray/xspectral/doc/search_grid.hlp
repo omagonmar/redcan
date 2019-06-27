@@ -1,0 +1,287 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/search_grid.hlp,v 11.0 1997/11/06 16:41:26 prosb Exp $
+#$Log: search_grid.hlp,v $
+#Revision 11.0  1997/11/06 16:41:26  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:34  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:29:25  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:53:22  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:48:07  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:42:43  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/20  16:54:38  orszak
+#jso - addition for rebin, and not on correct norm searching.
+#
+#Revision 4.0  92/04/27  15:27:50  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.4  92/04/22  16:14:59  prosb
+#Changed date.
+#
+#Revision 3.3  92/04/15  14:34:10  prosb
+#*** empty log message ***
+#
+#Revision 3.2  92/03/23  16:35:43  prosb
+#*** empty log message ***
+#
+#Revision 3.1  92/03/23  16:24:53  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:23  prosb
+#General Release 1.1
+#
+#Revision 2.3  91/08/01  19:17:53  prosb
+#jso - for Aug91
+#
+#Revision 2.1  91/07/08  15:31:46  mo
+#MC	7/8/91		Updated with the new package structure
+#
+#Revision 2.0  91/03/06  23:09:15  pros
+#General Release 1.0
+#
+.help search_grid Apr92 xray.xspectral
+.ih
+NAME
+search_grid -- performs a chi-square grid search
+.ih
+USAGE
+search_grid grid model x_axis_steps y_axis_steps x_model_for_axis
+y_model_for_axis x_axis_param y_axis_param x_parameter_delta y_parameter_delta
+.ih
+DESCRIPTION
+
+This task computes the best fit to a spectrum by finding the minimum
+Chi-square in a two-dimensional grid.  A Chi-squared is computed at
+each grid point by "fixing" the grid parameters, but allowing any
+"free" parameters to be fit using the Simplex minimization method.  At
+the very end, when the minimum grid point is found, then a final
+Simplex fit is performed using all the "free" parameters.
+.ih
+PARAMETERS
+.ls observed = ""	prompt = observed spectrum [root_obs.tab]
+
+This is a package wide parameter, found in the pkgpars parameter file.
+
+The file names of one or more observed data sets on which the fit is
+to be performed.  Multiple observation data sets can be specified by
+entering the file names, separated by semicolons, e.g. "foo1; foo2;
+foo3", etc. Normally these files have a "_obs.tab" extension.  This
+extension need not be input explicitly; if the files do not follow this
+convention the explicit name should be typed.
+
+Channels to fit for a given data set may be selected by appending a
+bracket notation to the file name.  Thus "foo[3:11,15]" will cause
+channels 3 to 11 (inclusive) and 15 to be fit. If channels are not
+explicitly specified, the default channels for the given instrument
+are retrieved from the pkgpars parameter file.
+.le
+.ls grid = ""		prompt = root name for output file [root_grd.tab]
+
+The name of the output grid search file.  There is no default for this
+file name; however, if the extension is omitted, a "_grd.tab" is
+added.  The grid fit output file is an STScI table file containing the
+chisquare values at each grid point.  The names of the columns
+correspond to the value of the "x" free parameter at each grid point.
+In addition, an extra column is added to give the values of the "y"
+free parameters at each grid point.  Finally, the table header
+contains information about the model used, the grid points, etc.
+.le
+.ls model = ""		prompt = model descriptor (null -> last best fit)
+
+The ASCII model descriptor.  If "?" is input a short helpfile appears,
+and the model prompt reappears.  A null string ("") will cause the previously
+determined best
+model to be taken from the _prd.tab file.  Type \fIhelp models_spectral\fR
+from the CL for further information.
+.le
+.ls x_axis_steps =		prompt = number of steps in the first axis
+
+Number of grid points on X axis.
+.le
+.ls y_axis_steps =		prompt = number of steps in the second axis
+
+Number of grid points on Y axis.
+.le
+.ls x_model_for_axis = 1	prompt = model number for the first axis
+
+Model number of X axis parameter.
+.le
+.ls y_model_for_axis = 1	prompt = model number for the second axis
+
+Model number of Y axis parameter.
+.le
+.ls x_axis_param =		prompt = first axis parameter
+
+Name of parameter to be used for the X axis.
+.le
+.ls y_axis_param =		prompt = second axis parameter
+
+Name of parameter to be used for the Y axis.
+.le
+.ls x_parameter_delta =		prompt = half-range of first axis parameter
+
+Half-range of x-axis parameter value
+.le
+.ls y_parameter_delta =		prompt = half-range of second axis parameter
+
+Half-range of y-axis parameter value
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ls (final = yes) [boolean]
+
+Perform final fit to evaluate the minimum chisquare and best-fit model.
+.le
+.ls (x_axis_type = "linear") [string]
+
+If set to "logarithmic", then logarithmic steps will be used.
+Note that normalizations and column-densities are parameterized as
+logarithmic.  It is unlikely that anything other than "linear" is
+required here.
+.le
+.ls (y_axis_type = "linear") [string]
+
+If set to "logarithmic", then logarithmic steps will be used.
+Note that normalizations and column-densities are parameterized as
+logarithmic.  It is unlikely that anything other than "linear" is
+required here.
+.le
+.ls (max_iteratio = 400) [int]
+
+Maximum number of iterations allowed in minimization search
+performed from the minimum grid point at the end of the grid-point
+calculations.
+.le
+.ls (tolerance = 1.0E-3) [real]
+
+Convergence tolerance for the minimization search performed
+at the end of the grid-point calculations.  This should be decreased
+for improved fit, e.g. 5.0E-6.
+.le
+.ls (verbose = no) [boolean]
+
+If set to "yes", then intermediate computational results
+are printed out to standard output.
+.le
+.ls (rebin = no) [boolean]
+
+This parameter is only for compatability, and will cause an error
+in search_grid.
+.le
+.ih
+EXAMPLES
+
+Assume the fit example from the fit help file has been performed on
+the input observed data set snr_obs.tab using the model "abs(20:23) *
+pow(4:7)".  Now perform a grid search using the best fit value of that
+fit, as found in the snr_prd.tab output file. (The latter is specified
+by the null string input to the model descriptor).
+.nf
+
+xs> search_grid
+Performing a grid search.
+observed spectrum [root_obs.tab] (snr):
+model descriptor {null=>last best fit}:
+model from file: abs(20.8773:23.8773)*pow(4.3449:7.3449)
+root name for output file [root_grd.tab]: .
+
+The chisquare grid will be built around the following model
+parameters:
+
+Model: abs(20.88:23.88)*pow(4.34:7.34)
+
+Model Component 1: Power Law
+          energy index = 5.845 (free)
+    normalization (log) = 1.0000 (calculated)
+    galactic Nh (log) = 22.377 (free)
+    intrinsic Nh (log) = 0.000 (fixed)
+          redshift = 0.000 (fixed)
+
+Please choose the grid axes:
+first axis parameter (norm|index|temp|width|galacticNh|intrinsicNh): index
+half-range of first axis parameter: 3
+number of steps in the first axis (1:): 10
+second axis parameter (norm|index|temp|width|galacticNh|intrinsicNh): galacticNh
+half-range of second axis parameter: 0.5
+number of steps in the second axis (1:): 10
+ Best grid fit found at grid point: 9 7
+       First parameter value =     8.178E0
+      Second parameter value =     2.254E1
+      Chi-square = 8.878
+
+The final fit will be performed using the following model:
+
+Model: abs(20.8773:23.8773)*pow(2.8449:8.8449)
+
+Model Component 1: Power Law
+          energy index = 5.845 (free)
+    normalization (log) = 2.1493 (calculated)
+    galactic Nh (log) = 22.377 (free)
+    intrinsic Nh (log) = 0.000 (fixed)
+          redshift = 0.000 (fixed)
+
+Simplex 1
+
+The final best fit parameters are:
+
+Model: abs(22.3773)*pow(0.0406 5.8449)
+
+Model Component 1: Power Law
+          energy index = 5.845 (free)
+    normalization (log) = 0.0406 (calculated)
+    galactic Nh (log) = 22.377 (free)
+    intrinsic Nh (log) = 0.000 (fixed)
+          redshift = 0.000 (fixed)
+
+Output Grid file: ./snr_grd.tab
+Minimum chi-squared is 6.133
+Predicted Data file: snr_prd.tab
+Intermediate Spectra file: ./snr_int.tab
+
+
+The grid table can be displayed using tprint.
+.fi
+.ih
+TIME REQUIREMENTS
+
+The time required to complete a grid search is dependent upon the
+number of grid points and the number of "free" parameters in the
+models.  Note that the parameters used for the grid axes are
+temporarily "fixed" at each grid point.
+.ih
+BUGS
+
+The obs_tab file name must not begin with a numeral.  The same is true
+for the model input file, if one is used.  Beginning the file names of
+these files with a numeral causes the parser to attempt to process the
+numeral, resulting in an error.
+
+When using search_grid and one of grid axis is the normalization of
+the first model the input model should have a range for this
+normalization and not a fixed value.  That is, a model of abs(17)*(12
+0.3 c 100) + ray(0.7 1:2 c 100) will give an incorrect final fit if
+the first normalization is a grid axis, while the model
+abs(17)*(ray(11:13 0.3 c 100) + ray(0.7 1:2 c 100) will give the
+correct final fit.  NB: A null string ("") should not be used for the
+search_model if you wish to use the first normalization on an axis.
+
+.ih
+SEE ALSO
+
+Documentation on spectral models (\fIhelp spectral_models\fR) for a
+description of the spectral model user interface.
+
+singlefit, fit, pspc_fitting.
+.endhelp

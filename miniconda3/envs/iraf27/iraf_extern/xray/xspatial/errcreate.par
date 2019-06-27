@@ -1,0 +1,23 @@
+#$Header: /home/pros/xray/xspatial/RCS/errcreate.par,v 11.0 1997/11/06 16:31:48 prosb Exp $
+#$Log: errcreate.par,v $
+#Revision 11.0  1997/11/06 16:31:48  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:35:25  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:55:14  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:30:20  prosb
+#General Release 2.3
+#
+#Revision 1.1  93/12/22  17:48:16  mo
+#Initial revision
+#
+#
+# errcreate parameter file
+input_image,s,a,"xdata$snr.qp[bl=2]",,,"name of input image"
+output_errimage,s,a,".",,,"root name for output file [root_err.imh]"
+clobber,b,h,no,,,"delete old copy of output image"
+display,i,h,1,,,"level of feedback and debug options"

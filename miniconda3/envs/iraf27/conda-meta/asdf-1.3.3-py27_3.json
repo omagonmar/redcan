@@ -1,0 +1,3166 @@
+{
+  "build": "py27_3",
+  "build_number": 3,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.3",
+    "jsonschema",
+    "numpy",
+    "pytest",
+    "python >=2.7,<2.8.0a0",
+    "pyyaml",
+    "semantic_version >=2.3.1",
+    "setuptools",
+    "six"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/asdf-1.3.3-py27_3",
+  "features": "",
+  "files": [
+    "bin/asdftool",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/asdf/__init__.py",
+    "lib/python2.7/site-packages/asdf/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/_internal_init.py",
+    "lib/python2.7/site-packages/asdf/_internal_init.pyc",
+    "lib/python2.7/site-packages/asdf/asdf.py",
+    "lib/python2.7/site-packages/asdf/asdf.pyc",
+    "lib/python2.7/site-packages/asdf/asdftypes.py",
+    "lib/python2.7/site-packages/asdf/asdftypes.pyc",
+    "lib/python2.7/site-packages/asdf/block.py",
+    "lib/python2.7/site-packages/asdf/block.pyc",
+    "lib/python2.7/site-packages/asdf/commands/__init__.py",
+    "lib/python2.7/site-packages/asdf/commands/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/commands/defragment.py",
+    "lib/python2.7/site-packages/asdf/commands/defragment.pyc",
+    "lib/python2.7/site-packages/asdf/commands/diff.py",
+    "lib/python2.7/site-packages/asdf/commands/diff.pyc",
+    "lib/python2.7/site-packages/asdf/commands/exploded.py",
+    "lib/python2.7/site-packages/asdf/commands/exploded.pyc",
+    "lib/python2.7/site-packages/asdf/commands/main.py",
+    "lib/python2.7/site-packages/asdf/commands/main.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tags.py",
+    "lib/python2.7/site-packages/asdf/commands/tags.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/block0.asdf",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/block1.asdf",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/blocks.diff",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/frames.diff",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/frames0.asdf",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/frames1.asdf",
+    "lib/python2.7/site-packages/asdf/commands/tests/data/frames_minimal.diff",
+    "lib/python2.7/site-packages/asdf/commands/tests/setup_package.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_defragment.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_defragment.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_diff.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_diff.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_exploded.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_exploded.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_main.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_main.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_tags.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_tags.pyc",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_to_yaml.py",
+    "lib/python2.7/site-packages/asdf/commands/tests/test_to_yaml.pyc",
+    "lib/python2.7/site-packages/asdf/commands/to_yaml.py",
+    "lib/python2.7/site-packages/asdf/commands/to_yaml.pyc",
+    "lib/python2.7/site-packages/asdf/compat/__init__.py",
+    "lib/python2.7/site-packages/asdf/compat/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/compat/functools_backport.py",
+    "lib/python2.7/site-packages/asdf/compat/functools_backport.pyc",
+    "lib/python2.7/site-packages/asdf/compat/numpycompat.py",
+    "lib/python2.7/site-packages/asdf/compat/numpycompat.pyc",
+    "lib/python2.7/site-packages/asdf/compression.py",
+    "lib/python2.7/site-packages/asdf/compression.pyc",
+    "lib/python2.7/site-packages/asdf/conftest.py",
+    "lib/python2.7/site-packages/asdf/conftest.pyc",
+    "lib/python2.7/site-packages/asdf/constants.py",
+    "lib/python2.7/site-packages/asdf/constants.pyc",
+    "lib/python2.7/site-packages/asdf/extension.py",
+    "lib/python2.7/site-packages/asdf/extension.pyc",
+    "lib/python2.7/site-packages/asdf/extern/RangeHTTPServer.py",
+    "lib/python2.7/site-packages/asdf/extern/RangeHTTPServer.pyc",
+    "lib/python2.7/site-packages/asdf/extern/__init__.py",
+    "lib/python2.7/site-packages/asdf/extern/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/extern/atomicfile.py",
+    "lib/python2.7/site-packages/asdf/extern/atomicfile.pyc",
+    "lib/python2.7/site-packages/asdf/fits_embed.py",
+    "lib/python2.7/site-packages/asdf/fits_embed.pyc",
+    "lib/python2.7/site-packages/asdf/generic_io.py",
+    "lib/python2.7/site-packages/asdf/generic_io.pyc",
+    "lib/python2.7/site-packages/asdf/reference.py",
+    "lib/python2.7/site-packages/asdf/reference.pyc",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/ascii.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/ascii.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/basic.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/basic.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/complex.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/complex.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/compressed.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/compressed.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/exploded.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/exploded.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/exploded0000.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/float.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/float.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/int.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/int.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/shared.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/shared.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/stream.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/stream.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_bmp.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_bmp.yaml",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_spp.asdf",
+    "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_spp.yaml",
+    "lib/python2.7/site-packages/asdf/resolver.py",
+    "lib/python2.7/site-packages/asdf/resolver.pyc",
+    "lib/python2.7/site-packages/asdf/schema.py",
+    "lib/python2.7/site-packages/asdf/schema.pyc",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/asdf-schema-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/asdf-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/column-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/complex-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/constant-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/history_entry-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/ndarray-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/software-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/table-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/fits/fits-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/time/time-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/time/time-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/add-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/add-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/affine-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/affine-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/airy-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/airy-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/bonne_equal_area-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/bonne_equal_area-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cobe_quad_spherical_cube-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cobe_quad_spherical_cube-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/compose-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/compose-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/concatenate-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/concatenate-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equal_area-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equal_area-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equidistant-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equidistant-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_orthomorphic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_orthomorphic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_perspective-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_perspective-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/constant-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/constant-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_equal_area-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_equal_area-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_perspective-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_perspective-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/divide-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/divide-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/domain-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/generic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/generic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/gnomonic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/gnomonic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/hammer_aitoff-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/hammer_aitoff-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix_polar-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix_polar-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/identity-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/identity-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/label_mapper-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/label_mapper-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/mercator-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/mercator-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/molleweide-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/molleweide-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/multiply-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/multiply-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/parabolic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/parabolic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/plate_carree-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/plate_carree-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polyconic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polyconic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polynomial-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polynomial-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/power-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/power-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudoconic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudoconic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudocylindrical-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudocylindrical-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quad_spherical_cube-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quad_spherical_cube-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quadcube-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quadcube-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/regions_selector-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/regions_selector-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/remap_axes-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/remap_axes-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate2d-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate2d-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate3d-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate3d-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/sanson_flamsteed-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/sanson_flamsteed-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/scale-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/scale-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/shift-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/shift-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_orthographic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_orthographic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_zenithal_perspective-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_zenithal_perspective-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/stereographic-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/stereographic-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/subtract-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/subtract-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tabular-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tabular-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tangential_spherical_cube-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tangential_spherical_cube-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/transform-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/transform-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equal_area-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equal_area-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equidistant-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equidistant-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_perspective-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_perspective-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/unit/defunit-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/unit/quantity-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/unit/unit-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/version_map-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/version_map-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/celestial_frame-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/celestial_frame-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/composite_frame-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/composite_frame-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/frame-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/frame-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/icrs_coord-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/spectral_frame-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/spectral_frame-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/step-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/step-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/wcs-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/wcs-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/schemas/stsci.edu/yaml-schema/draft-01.yaml",
+    "lib/python2.7/site-packages/asdf/setup_package.py",
+    "lib/python2.7/site-packages/asdf/setup_package.pyc",
+    "lib/python2.7/site-packages/asdf/stream.py",
+    "lib/python2.7/site-packages/asdf/stream.pyc",
+    "lib/python2.7/site-packages/asdf/tagged.py",
+    "lib/python2.7/site-packages/asdf/tagged.pyc",
+    "lib/python2.7/site-packages/asdf/tags/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/core/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/complex.py",
+    "lib/python2.7/site-packages/asdf/tags/core/complex.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/constant.py",
+    "lib/python2.7/site-packages/asdf/tags/core/constant.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/ndarray.py",
+    "lib/python2.7/site-packages/asdf/tags/core/ndarray.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/table.py",
+    "lib/python2.7/site-packages/asdf/tags/core/table.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/data/datatype-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/data/ndim-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/setup_package.py",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_complex.py",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_complex.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_history.py",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_history.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_ndarray.py",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_ndarray.pyc",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_table.py",
+    "lib/python2.7/site-packages/asdf/tags/core/tests/test_table.pyc",
+    "lib/python2.7/site-packages/asdf/tags/fits/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/fits/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/fits/fits.py",
+    "lib/python2.7/site-packages/asdf/tags/fits/fits.pyc",
+    "lib/python2.7/site-packages/asdf/tags/fits/setup_package.py",
+    "lib/python2.7/site-packages/asdf/tags/fits/setup_package.pyc",
+    "lib/python2.7/site-packages/asdf/tags/fits/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/fits/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/fits/tests/data/complex.fits",
+    "lib/python2.7/site-packages/asdf/tags/fits/tests/test_fits.py",
+    "lib/python2.7/site-packages/asdf/tags/fits/tests/test_fits.pyc",
+    "lib/python2.7/site-packages/asdf/tags/time/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/time/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/time/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/time/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/time/tests/test_time.py",
+    "lib/python2.7/site-packages/asdf/tags/time/tests/test_time.pyc",
+    "lib/python2.7/site-packages/asdf/tags/time/time.py",
+    "lib/python2.7/site-packages/asdf/tags/time/time.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/basic.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/basic.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/compound.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/compound.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/polynomial.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/polynomial.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/projections.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/projections.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/tabular.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/tabular.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/transform/tests/test_transform.py",
+    "lib/python2.7/site-packages/asdf/tags/transform/tests/test_transform.pyc",
+    "lib/python2.7/site-packages/asdf/tags/unit/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/unit/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/unit/quantity.py",
+    "lib/python2.7/site-packages/asdf/tags/unit/quantity.pyc",
+    "lib/python2.7/site-packages/asdf/tags/unit/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/unit/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/unit/tests/test_quantity.py",
+    "lib/python2.7/site-packages/asdf/tags/unit/tests/test_quantity.pyc",
+    "lib/python2.7/site-packages/asdf/tags/unit/tests/test_unit.py",
+    "lib/python2.7/site-packages/asdf/tags/unit/tests/test_unit.pyc",
+    "lib/python2.7/site-packages/asdf/tags/unit/unit.py",
+    "lib/python2.7/site-packages/asdf/tags/unit/unit.pyc",
+    "lib/python2.7/site-packages/asdf/tags/wcs/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/wcs/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/wcs/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tags/wcs/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tags/wcs/tests/test_wcs.py",
+    "lib/python2.7/site-packages/asdf/tags/wcs/tests/test_wcs.pyc",
+    "lib/python2.7/site-packages/asdf/tags/wcs/wcs.py",
+    "lib/python2.7/site-packages/asdf/tags/wcs/wcs.pyc",
+    "lib/python2.7/site-packages/asdf/tests/__init__.py",
+    "lib/python2.7/site-packages/asdf/tests/__init__.pyc",
+    "lib/python2.7/site-packages/asdf/tests/coveragerc",
+    "lib/python2.7/site-packages/asdf/tests/data/complex-42.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/custom-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/custom_flow-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/custom_flow-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/custom_style-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/default-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/example_schema.json",
+    "lib/python2.7/site-packages/asdf/tests/data/fraction-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/missing-1.1.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/self_referencing-1.0.0.yaml",
+    "lib/python2.7/site-packages/asdf/tests/data/version_mismatch.fits",
+    "lib/python2.7/site-packages/asdf/tests/helpers.py",
+    "lib/python2.7/site-packages/asdf/tests/helpers.pyc",
+    "lib/python2.7/site-packages/asdf/tests/httpserver.py",
+    "lib/python2.7/site-packages/asdf/tests/httpserver.pyc",
+    "lib/python2.7/site-packages/asdf/tests/setup_package.py",
+    "lib/python2.7/site-packages/asdf/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_asdf_schemas.py",
+    "lib/python2.7/site-packages/asdf/tests/test_asdf_schemas.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_asdftypes.py",
+    "lib/python2.7/site-packages/asdf/tests/test_asdftypes.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_compression.py",
+    "lib/python2.7/site-packages/asdf/tests/test_compression.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_fits_embed.py",
+    "lib/python2.7/site-packages/asdf/tests/test_fits_embed.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_generic_io.py",
+    "lib/python2.7/site-packages/asdf/tests/test_generic_io.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_low_level.py",
+    "lib/python2.7/site-packages/asdf/tests/test_low_level.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_reference.py",
+    "lib/python2.7/site-packages/asdf/tests/test_reference.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_schema.py",
+    "lib/python2.7/site-packages/asdf/tests/test_schema.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_stream.py",
+    "lib/python2.7/site-packages/asdf/tests/test_stream.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_suite.py",
+    "lib/python2.7/site-packages/asdf/tests/test_suite.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_versioning.py",
+    "lib/python2.7/site-packages/asdf/tests/test_versioning.pyc",
+    "lib/python2.7/site-packages/asdf/tests/test_yaml.py",
+    "lib/python2.7/site-packages/asdf/tests/test_yaml.pyc",
+    "lib/python2.7/site-packages/asdf/treeutil.py",
+    "lib/python2.7/site-packages/asdf/treeutil.pyc",
+    "lib/python2.7/site-packages/asdf/util.py",
+    "lib/python2.7/site-packages/asdf/util.pyc",
+    "lib/python2.7/site-packages/asdf/version.py",
+    "lib/python2.7/site-packages/asdf/version.pyc",
+    "lib/python2.7/site-packages/asdf/versioning.py",
+    "lib/python2.7/site-packages/asdf/versioning.pyc",
+    "lib/python2.7/site-packages/asdf/yamlutil.py",
+    "lib/python2.7/site-packages/asdf/yamlutil.pyc",
+    "lib/python2.7/site-packages/setuptools.pth"
+  ],
+  "fn": "asdf-1.3.3-py27_3.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/asdf-1.3.3-py27_3",
+    "type": 1
+  },
+  "md5": "3a0cce06a6174e8d69a890f4f0617c42",
+  "name": "asdf",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/asdf-1.3.3-py27_3.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/asdftool",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "d3a65871e6b46e3d45be91e98dfc4ff0d3e72aa095e7822cdc76966f96a47a3b",
+        "sha256_in_prefix": "a3a7fdcfb1e05df52f2497e86b57114d71766999c9ce5795616970b1e7a76300",
+        "size_in_bytes": 402
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "0971e28ca23ba228c09cea90a9be2b41c064e32b8d07f3a798514127e345bbb6",
+        "sha256_in_prefix": "0971e28ca23ba228c09cea90a9be2b41c064e32b8d07f3a798514127e345bbb6",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "1ad244f35331701f6a0c0d1bc721b8914b70345aaee42f046f197be17dbfd6cb",
+        "sha256_in_prefix": "1ad244f35331701f6a0c0d1bc721b8914b70345aaee42f046f197be17dbfd6cb",
+        "size_in_bytes": 21293
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "3e10b6c2db4ba688f27b6158e37c87d5a381ed657d615eb7ea8f505be89c1f0b",
+        "sha256_in_prefix": "3e10b6c2db4ba688f27b6158e37c87d5a381ed657d615eb7ea8f505be89c1f0b",
+        "size_in_bytes": 54
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "c896f8fa18e738ac5bae380df53b50e5a9601249d282661d4dc17a4255566d5a",
+        "sha256_in_prefix": "c896f8fa18e738ac5bae380df53b50e5a9601249d282661d4dc17a4255566d5a",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf-1.3.3-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "d1bc8d3ba4afc7e109612cb73acbdddac052c93025aa1f82942edabb7deb82a1",
+        "sha256_in_prefix": "d1bc8d3ba4afc7e109612cb73acbdddac052c93025aa1f82942edabb7deb82a1",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "dd470337e154d092bebf014e7b8fae32aa431f3ca07d312c848f84aec5334e24",
+        "sha256_in_prefix": "dd470337e154d092bebf014e7b8fae32aa431f3ca07d312c848f84aec5334e24",
+        "size_in_bytes": 1372
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "d993d07e889c4571e6ab6e508d948fadb236953b5df4e948288cb9d77a6d6447",
+        "sha256_in_prefix": "d993d07e889c4571e6ab6e508d948fadb236953b5df4e948288cb9d77a6d6447",
+        "size_in_bytes": 1382
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/_internal_init.py",
+        "path_type": "hardlink",
+        "sha256": "8a6102bac5df84511ce0635f0089ed33d6a52bddfe02feae50c73de2059880ee",
+        "sha256_in_prefix": "8a6102bac5df84511ce0635f0089ed33d6a52bddfe02feae50c73de2059880ee",
+        "size_in_bytes": 4450
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/_internal_init.pyc",
+        "path_type": "hardlink",
+        "sha256": "f85d6721f0a5f8665a962cd725306a6489b5dba23e216c800b84fcc10701e739",
+        "sha256_in_prefix": "f85d6721f0a5f8665a962cd725306a6489b5dba23e216c800b84fcc10701e739",
+        "size_in_bytes": 4759
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/asdf.py",
+        "path_type": "hardlink",
+        "sha256": "82a52208894af1763b5cecc1ea6aaa495d1dba2a93a407299dad99b7a2b358a5",
+        "sha256_in_prefix": "82a52208894af1763b5cecc1ea6aaa495d1dba2a93a407299dad99b7a2b358a5",
+        "size_in_bytes": 37377
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/asdf.pyc",
+        "path_type": "hardlink",
+        "sha256": "df6b6da3a19a60bb9393743d52c849c8be597d63b694e012bbfabcd50da4c841",
+        "sha256_in_prefix": "df6b6da3a19a60bb9393743d52c849c8be597d63b694e012bbfabcd50da4c841",
+        "size_in_bytes": 35708
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/asdftypes.py",
+        "path_type": "hardlink",
+        "sha256": "1986369926b0389d6bb8a07d891c0b268c2e6b26d6f79d3fa36b45f1df4fe92c",
+        "sha256_in_prefix": "1986369926b0389d6bb8a07d891c0b268c2e6b26d6f79d3fa36b45f1df4fe92c",
+        "size_in_bytes": 21398
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/asdftypes.pyc",
+        "path_type": "hardlink",
+        "sha256": "e7f11658c57d8adb8437f7c320f23cae493a28fb5858d9f4d53c0782f05457bb",
+        "sha256_in_prefix": "e7f11658c57d8adb8437f7c320f23cae493a28fb5858d9f4d53c0782f05457bb",
+        "size_in_bytes": 20341
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/block.py",
+        "path_type": "hardlink",
+        "sha256": "c7c059653722367f7a3bbadc6a18bdd514b8aa227118c3766cfc6dc3088d834d",
+        "sha256_in_prefix": "c7c059653722367f7a3bbadc6a18bdd514b8aa227118c3766cfc6dc3088d834d",
+        "size_in_bytes": 42446
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/block.pyc",
+        "path_type": "hardlink",
+        "sha256": "6ade31e305c50e5629b7dc7827cc87e695c97f69bd61c3d9998a4352606f1097",
+        "sha256_in_prefix": "6ade31e305c50e5629b7dc7827cc87e695c97f69bd61c3d9998a4352606f1097",
+        "size_in_bytes": 39034
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ac2a43daf5dd7b92cf762d720077c2de248ce7f46ab2642765c5e612a9537de7",
+        "sha256_in_prefix": "ac2a43daf5dd7b92cf762d720077c2de248ce7f46ab2642765c5e612a9537de7",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "a42b9ffbdd69a3cf2637b00eb2d811802e1350c2adc641ef898877026b074d3e",
+        "sha256_in_prefix": "a42b9ffbdd69a3cf2637b00eb2d811802e1350c2adc641ef898877026b074d3e",
+        "size_in_bytes": 447
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/defragment.py",
+        "path_type": "hardlink",
+        "sha256": "033f58067dd6715eae07d23d6d03c0dfbbc58f2103c4d23075c9f660e72e31f2",
+        "sha256_in_prefix": "033f58067dd6715eae07d23d6d03c0dfbbc58f2103c4d23075c9f660e72e31f2",
+        "size_in_bytes": 2142
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/defragment.pyc",
+        "path_type": "hardlink",
+        "sha256": "a67b2618778fb0da8ad26d9d4e7fe9defca34959f14f380cd3ca1e66b6cbeb72",
+        "sha256_in_prefix": "a67b2618778fb0da8ad26d9d4e7fe9defca34959f14f380cd3ca1e66b6cbeb72",
+        "size_in_bytes": 2862
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/diff.py",
+        "path_type": "hardlink",
+        "sha256": "48a791c8f30a761e30f80fd4d2922d393d6fcc5b50c34f5c9690927681369108",
+        "sha256_in_prefix": "48a791c8f30a761e30f80fd4d2922d393d6fcc5b50c34f5c9690927681369108",
+        "size_in_bytes": 9742
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/diff.pyc",
+        "path_type": "hardlink",
+        "sha256": "076c7a07dcfb9ae2bf37688a4f974691d7eab9afefe8e4954fa0d8ecac9379dd",
+        "sha256_in_prefix": "076c7a07dcfb9ae2bf37688a4f974691d7eab9afefe8e4954fa0d8ecac9379dd",
+        "size_in_bytes": 10827
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/exploded.py",
+        "path_type": "hardlink",
+        "sha256": "a9d25e71cd48eb4895cfbb981675a4d3e3d3f064f9ef08e9e7843682e29300fa",
+        "sha256_in_prefix": "a9d25e71cd48eb4895cfbb981675a4d3e3d3f064f9ef08e9e7843682e29300fa",
+        "size_in_bytes": 3489
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/exploded.pyc",
+        "path_type": "hardlink",
+        "sha256": "02fa81ae9480928de07e6e29e5c311f03e23e98a175353b774935a507dfa514c",
+        "sha256_in_prefix": "02fa81ae9480928de07e6e29e5c311f03e23e98a175353b774935a507dfa514c",
+        "size_in_bytes": 4757
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/main.py",
+        "path_type": "hardlink",
+        "sha256": "f38e5eea06a858d1f6cd046bb788c10ec05857a19a81a7317ab4774d91441d2b",
+        "sha256_in_prefix": "f38e5eea06a858d1f6cd046bb788c10ec05857a19a81a7317ab4774d91441d2b",
+        "size_in_bytes": 2226
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/main.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a251da151086fe33a237f7e3dbc85cc55a8f98096a90e008f8f9a449ade0296",
+        "sha256_in_prefix": "9a251da151086fe33a237f7e3dbc85cc55a8f98096a90e008f8f9a449ade0296",
+        "size_in_bytes": 3479
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tags.py",
+        "path_type": "hardlink",
+        "sha256": "37a5ae95013017f13057f9fcba6c6e41cc7df1c2efa8c0a96bf09deb94d46c4f",
+        "sha256_in_prefix": "37a5ae95013017f13057f9fcba6c6e41cc7df1c2efa8c0a96bf09deb94d46c4f",
+        "size_in_bytes": 1495
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tags.pyc",
+        "path_type": "hardlink",
+        "sha256": "d2ef2cdae5827adfa0154b35d4447245c76f80f23513aaff3a93f3a9b948dbbd",
+        "sha256_in_prefix": "d2ef2cdae5827adfa0154b35d4447245c76f80f23513aaff3a93f3a9b948dbbd",
+        "size_in_bytes": 2463
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "287bfb4ce5fc5b185f57444f99e85e237070d0888fc3e4e8dbdd408a25f3522e",
+        "sha256_in_prefix": "287bfb4ce5fc5b185f57444f99e85e237070d0888fc3e4e8dbdd408a25f3522e",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "00ffaf226fa654d0183e04eadf2d64a3e1364fb5c59c3317779bceb7d66d15e0",
+        "sha256_in_prefix": "00ffaf226fa654d0183e04eadf2d64a3e1364fb5c59c3317779bceb7d66d15e0",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/block0.asdf",
+        "path_type": "hardlink",
+        "sha256": "2aa2230a935810c3c6e5464d7e41e9061fab698a0d7e64c667e016b8eb4069a7",
+        "sha256_in_prefix": "2aa2230a935810c3c6e5464d7e41e9061fab698a0d7e64c667e016b8eb4069a7",
+        "size_in_bytes": 80469
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/block1.asdf",
+        "path_type": "hardlink",
+        "sha256": "cd0d64a3b76c39f7b738f1592003ab7eaf295886066af316f5b88f3e1041f467",
+        "sha256_in_prefix": "cd0d64a3b76c39f7b738f1592003ab7eaf295886066af316f5b88f3e1041f467",
+        "size_in_bytes": 80469
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/blocks.diff",
+        "path_type": "hardlink",
+        "sha256": "1c9b283d1499e689178f8df73130030a0e098697db18e38d725db8c5443e7d66",
+        "sha256_in_prefix": "1c9b283d1499e689178f8df73130030a0e098697db18e38d725db8c5443e7d66",
+        "size_in_bytes": 276
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/frames.diff",
+        "path_type": "hardlink",
+        "sha256": "852c574b6bd95fdb913bf44c7db875de8758f82d5661e899f2bcc9efb1671577",
+        "sha256_in_prefix": "852c574b6bd95fdb913bf44c7db875de8758f82d5661e899f2bcc9efb1671577",
+        "size_in_bytes": 1246
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/frames0.asdf",
+        "path_type": "hardlink",
+        "sha256": "6d94bb7122268cd7d0d78d4f8b4afbfc7e2e2318bacb08bf9ac5c2fdd634e19c",
+        "sha256_in_prefix": "6d94bb7122268cd7d0d78d4f8b4afbfc7e2e2318bacb08bf9ac5c2fdd634e19c",
+        "size_in_bytes": 4191
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/frames1.asdf",
+        "path_type": "hardlink",
+        "sha256": "d77399289fcd69d6785004fe21930309041dc5175524a18da1347fb177643bfb",
+        "sha256_in_prefix": "d77399289fcd69d6785004fe21930309041dc5175524a18da1347fb177643bfb",
+        "size_in_bytes": 3793
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/data/frames_minimal.diff",
+        "path_type": "hardlink",
+        "sha256": "d52431ef2e5535ff5c39334927a4bb5eaa61485163a4e579fa997ca69479e44f",
+        "sha256_in_prefix": "d52431ef2e5535ff5c39334927a4bb5eaa61485163a4e579fa997ca69479e44f",
+        "size_in_bytes": 269
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "b988b1af8bcb25fafc9746dbebaea2e4a1581333e48b1e4c038d6b3c94bcab3a",
+        "sha256_in_prefix": "b988b1af8bcb25fafc9746dbebaea2e4a1581333e48b1e4c038d6b3c94bcab3a",
+        "size_in_bytes": 312
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "32a1e9206ab9108d814826d86c099455b811242449a827d8d4f12042b32f5c61",
+        "sha256_in_prefix": "32a1e9206ab9108d814826d86c099455b811242449a827d8d4f12042b32f5c61",
+        "size_in_bytes": 618
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_defragment.py",
+        "path_type": "hardlink",
+        "sha256": "982e3e4640851b94fabcdb080df055426a2396faedbf5d5d967e96fb2d3eb33c",
+        "sha256_in_prefix": "982e3e4640851b94fabcdb080df055426a2396faedbf5d5d967e96fb2d3eb33c",
+        "size_in_bytes": 1660
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_defragment.pyc",
+        "path_type": "hardlink",
+        "sha256": "d31c30aa3772da16b17a3ee4d49a504d4429139ce981302abc19078a0010174b",
+        "sha256_in_prefix": "d31c30aa3772da16b17a3ee4d49a504d4429139ce981302abc19078a0010174b",
+        "size_in_bytes": 2636
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_diff.py",
+        "path_type": "hardlink",
+        "sha256": "31f217da75f703d3fc1bb9ebc406bc333bfa986d3149af9d4cff9785b2dc856f",
+        "sha256_in_prefix": "31f217da75f703d3fc1bb9ebc406bc333bfa986d3149af9d4cff9785b2dc856f",
+        "size_in_bytes": 1714
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_diff.pyc",
+        "path_type": "hardlink",
+        "sha256": "84845a886c3c855a482ee4ae89a1e3cf22548f7e31658a53453ab15add3f6ae6",
+        "sha256_in_prefix": "84845a886c3c855a482ee4ae89a1e3cf22548f7e31658a53453ab15add3f6ae6",
+        "size_in_bytes": 2905
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_exploded.py",
+        "path_type": "hardlink",
+        "sha256": "57f2354d38417a83cdbb08bd181868ad69bf211cb618c59fcafade46f04d0ccc",
+        "sha256_in_prefix": "57f2354d38417a83cdbb08bd181868ad69bf211cb618c59fcafade46f04d0ccc",
+        "size_in_bytes": 1516
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_exploded.pyc",
+        "path_type": "hardlink",
+        "sha256": "e70734da0fea52e475241dfe9c2d621babb2967cec2f5832b04ce06bfd938b34",
+        "sha256_in_prefix": "e70734da0fea52e475241dfe9c2d621babb2967cec2f5832b04ce06bfd938b34",
+        "size_in_bytes": 2081
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_main.py",
+        "path_type": "hardlink",
+        "sha256": "416dc60ff0038457b84f17ba504209c4f62f7794d0fb2a1837224a21eebda873",
+        "sha256_in_prefix": "416dc60ff0038457b84f17ba504209c4f62f7794d0fb2a1837224a21eebda873",
+        "size_in_bytes": 588
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_main.pyc",
+        "path_type": "hardlink",
+        "sha256": "0db44459a9d9ca23874489a67812699ef12019d7b1318b6d4f6442288bee6373",
+        "sha256_in_prefix": "0db44459a9d9ca23874489a67812699ef12019d7b1318b6d4f6442288bee6373",
+        "size_in_bytes": 1107
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_tags.py",
+        "path_type": "hardlink",
+        "sha256": "d6ac901e95f931b0bbc2541482ca80814d1b81f11c447d6fd9bc593032f72220",
+        "sha256_in_prefix": "d6ac901e95f931b0bbc2541482ca80814d1b81f11c447d6fd9bc593032f72220",
+        "size_in_bytes": 1177
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_tags.pyc",
+        "path_type": "hardlink",
+        "sha256": "d3816d0e3ea2417e2021fc143c1bb3bbd90a1fe834a27d2502138fe0e97bf945",
+        "sha256_in_prefix": "d3816d0e3ea2417e2021fc143c1bb3bbd90a1fe834a27d2502138fe0e97bf945",
+        "size_in_bytes": 2080
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_to_yaml.py",
+        "path_type": "hardlink",
+        "sha256": "23ba82e9fbf7df0c9101e2a4c1ea9b0f8068e30407cccf2aee71351e44b4a3cf",
+        "sha256_in_prefix": "23ba82e9fbf7df0c9101e2a4c1ea9b0f8068e30407cccf2aee71351e44b4a3cf",
+        "size_in_bytes": 1042
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/tests/test_to_yaml.pyc",
+        "path_type": "hardlink",
+        "sha256": "35d6592d429e49da9c75c8f6b6cacc39ff0235df98bd6afc5edef33f12b0ffce",
+        "sha256_in_prefix": "35d6592d429e49da9c75c8f6b6cacc39ff0235df98bd6afc5edef33f12b0ffce",
+        "size_in_bytes": 1562
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/to_yaml.py",
+        "path_type": "hardlink",
+        "sha256": "99bccd7cacd3f9b0033dacb8cd7d95a6c98ff5e7143b52fd48a51d14eab87d7c",
+        "sha256_in_prefix": "99bccd7cacd3f9b0033dacb8cd7d95a6c98ff5e7143b52fd48a51d14eab87d7c",
+        "size_in_bytes": 2100
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/commands/to_yaml.pyc",
+        "path_type": "hardlink",
+        "sha256": "739e6c06105b8fb112d14c43bb7ebb2dfd88d7ad5f853afb1526c7e79a788f59",
+        "sha256_in_prefix": "739e6c06105b8fb112d14c43bb7ebb2dfd88d7ad5f853afb1526c7e79a788f59",
+        "size_in_bytes": 2911
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compat/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c7ab7e6934bb7ee5f13d072fdd5255a3bfff07f70916527b6d1f936a0ba7cc30",
+        "sha256_in_prefix": "c7ab7e6934bb7ee5f13d072fdd5255a3bfff07f70916527b6d1f936a0ba7cc30",
+        "size_in_bytes": 685
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compat/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "645c0f298223746174bc1687e8e84cc8cc7ac7091e712fb058a2a86e06fe5939",
+        "sha256_in_prefix": "645c0f298223746174bc1687e8e84cc8cc7ac7091e712fb058a2a86e06fe5939",
+        "size_in_bytes": 852
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compat/functools_backport.py",
+        "path_type": "hardlink",
+        "sha256": "c393c783d322e0deb7bbe60aaa7d5fe0e512c8f2516807ff85c61ed24aa79d87",
+        "sha256_in_prefix": "c393c783d322e0deb7bbe60aaa7d5fe0e512c8f2516807ff85c61ed24aa79d87",
+        "size_in_bytes": 6771
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compat/functools_backport.pyc",
+        "path_type": "hardlink",
+        "sha256": "9f134ca7e9d47158921987447779904be27872c2bd61cd07fd5f2980b10f585b",
+        "sha256_in_prefix": "9f134ca7e9d47158921987447779904be27872c2bd61cd07fd5f2980b10f585b",
+        "size_in_bytes": 6225
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compat/numpycompat.py",
+        "path_type": "hardlink",
+        "sha256": "90ec899c020988583d189373fdfe86d3108f0366de6145ad543b53515b3dbfaf",
+        "sha256_in_prefix": "90ec899c020988583d189373fdfe86d3108f0366de6145ad543b53515b3dbfaf",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compat/numpycompat.pyc",
+        "path_type": "hardlink",
+        "sha256": "29532cb68feac166ed4231414e4cc2ddbfea988b46dd064fdcbade5de9c081a7",
+        "sha256_in_prefix": "29532cb68feac166ed4231414e4cc2ddbfea988b46dd064fdcbade5de9c081a7",
+        "size_in_bytes": 466
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compression.py",
+        "path_type": "hardlink",
+        "sha256": "18420280debcfbb0087b17a67e0df90a6645896500f6c36c90fc20534f52b4c4",
+        "sha256_in_prefix": "18420280debcfbb0087b17a67e0df90a6645896500f6c36c90fc20534f52b4c4",
+        "size_in_bytes": 7782
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/compression.pyc",
+        "path_type": "hardlink",
+        "sha256": "18e9dfbf5d514597b56d8c2006f1a2a96aefdbbc2c990fe7718935c88104c0a6",
+        "sha256_in_prefix": "18e9dfbf5d514597b56d8c2006f1a2a96aefdbbc2c990fe7718935c88104c0a6",
+        "size_in_bytes": 8263
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "5936bc3b9bc2f382151a6688541fa61a619a1fa31f90efbc2c0744257882f507",
+        "sha256_in_prefix": "5936bc3b9bc2f382151a6688541fa61a619a1fa31f90efbc2c0744257882f507",
+        "size_in_bytes": 2397
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "b22e4da2f59f63aa97b8ab5c8e4c8e656de01c4d2d45bf000018bd7330fb37fa",
+        "sha256_in_prefix": "b22e4da2f59f63aa97b8ab5c8e4c8e656de01c4d2d45bf000018bd7330fb37fa",
+        "size_in_bytes": 2463
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/constants.py",
+        "path_type": "hardlink",
+        "sha256": "bddb5f5b53c3014373a68869a82144737fbd6b78ccbda0b2caf10de79b9ae531",
+        "sha256_in_prefix": "bddb5f5b53c3014373a68869a82144737fbd6b78ccbda0b2caf10de79b9ae531",
+        "size_in_bytes": 649
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/constants.pyc",
+        "path_type": "hardlink",
+        "sha256": "6416eee83381743654a5bc29344c1309c9a1e3c6c24aec39c8e11f3a95bcdf0a",
+        "sha256_in_prefix": "6416eee83381743654a5bc29344c1309c9a1e3c6c24aec39c8e11f3a95bcdf0a",
+        "size_in_bytes": 884
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extension.py",
+        "path_type": "hardlink",
+        "sha256": "df795b0ff05ad6dea85a355f16cbc115c8fa848681fa148289871fc08fb3c6b1",
+        "sha256_in_prefix": "df795b0ff05ad6dea85a355f16cbc115c8fa848681fa148289871fc08fb3c6b1",
+        "size_in_bytes": 5562
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extension.pyc",
+        "path_type": "hardlink",
+        "sha256": "5531c71fe400d7719faaa95e8aaaef9b634ca077c0d6e311b143dcd41fd32f95",
+        "sha256_in_prefix": "5531c71fe400d7719faaa95e8aaaef9b634ca077c0d6e311b143dcd41fd32f95",
+        "size_in_bytes": 7357
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extern/RangeHTTPServer.py",
+        "path_type": "hardlink",
+        "sha256": "5c2be2c582cc9422f23989ea5816f3d0230586da17331fb354505851417391c6",
+        "sha256_in_prefix": "5c2be2c582cc9422f23989ea5816f3d0230586da17331fb354505851417391c6",
+        "size_in_bytes": 7091
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extern/RangeHTTPServer.pyc",
+        "path_type": "hardlink",
+        "sha256": "8355ba72316d51e55d74f3ca7a0bdaa8078c2f5bea40b41b8d39242dcf691f8d",
+        "sha256_in_prefix": "8355ba72316d51e55d74f3ca7a0bdaa8078c2f5bea40b41b8d39242dcf691f8d",
+        "size_in_bytes": 6600
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extern/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "40d51ca23f1b05f9f7052bb6031bdb38cb0cba2a52095e584f8fd0324a66c141",
+        "sha256_in_prefix": "40d51ca23f1b05f9f7052bb6031bdb38cb0cba2a52095e584f8fd0324a66c141",
+        "size_in_bytes": 72
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extern/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "4326cb2826d51d0b1818f2d820335be4dafae9aef57ec729b3406d3c26696769",
+        "sha256_in_prefix": "4326cb2826d51d0b1818f2d820335be4dafae9aef57ec729b3406d3c26696769",
+        "size_in_bytes": 183
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extern/atomicfile.py",
+        "path_type": "hardlink",
+        "sha256": "bff8e5d0cf27d223bf083c0ef334621d3711f30099345de33676395a961eb5b8",
+        "sha256_in_prefix": "bff8e5d0cf27d223bf083c0ef334621d3711f30099345de33676395a961eb5b8",
+        "size_in_bytes": 4221
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/extern/atomicfile.pyc",
+        "path_type": "hardlink",
+        "sha256": "d47237c2b831f3176dc7fd7181c2768ba8ab3c0bf1628dc7bce93a50b7dd327a",
+        "sha256_in_prefix": "d47237c2b831f3176dc7fd7181c2768ba8ab3c0bf1628dc7bce93a50b7dd327a",
+        "size_in_bytes": 5663
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/fits_embed.py",
+        "path_type": "hardlink",
+        "sha256": "b99e8c26e7d8ef879cfc8e9d8219e9a70748d1897fb6889674b633504ae3f1d7",
+        "sha256_in_prefix": "b99e8c26e7d8ef879cfc8e9d8219e9a70748d1897fb6889674b633504ae3f1d7",
+        "size_in_bytes": 9078
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/fits_embed.pyc",
+        "path_type": "hardlink",
+        "sha256": "d65d9ed4ea107af6b5796625d0f3fb595ea370332f4265ed08573d5cfb681ff3",
+        "sha256_in_prefix": "d65d9ed4ea107af6b5796625d0f3fb595ea370332f4265ed08573d5cfb681ff3",
+        "size_in_bytes": 10330
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/generic_io.py",
+        "path_type": "hardlink",
+        "sha256": "7232ded99f7ef190d0497d46b32611f98ef973c11dfb10b8f8da6d9408b4740e",
+        "sha256_in_prefix": "7232ded99f7ef190d0497d46b32611f98ef973c11dfb10b8f8da6d9408b4740e",
+        "size_in_bytes": 40454
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/generic_io.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a4199cfc52d87897ece307794dfccf88450366551020348b8d7dbbb17e15482",
+        "sha256_in_prefix": "9a4199cfc52d87897ece307794dfccf88450366551020348b8d7dbbb17e15482",
+        "size_in_bytes": 42008
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference.py",
+        "path_type": "hardlink",
+        "sha256": "cd41c1557936caa335cf5cb5276a02f6bad6044e40b7bfd6fd060aa9da64512c",
+        "sha256_in_prefix": "cd41c1557936caa335cf5cb5276a02f6bad6044e40b7bfd6fd060aa9da64512c",
+        "size_in_bytes": 5494
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference.pyc",
+        "path_type": "hardlink",
+        "sha256": "49a51d653b0dbf29bcad19545ba34f8c50dbd09c95a05b7f130e3a3e9fc35bad",
+        "sha256_in_prefix": "49a51d653b0dbf29bcad19545ba34f8c50dbd09c95a05b7f130e3a3e9fc35bad",
+        "size_in_bytes": 7814
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/ascii.asdf",
+        "path_type": "hardlink",
+        "sha256": "3bec5cc27f51ef0bf5dec0e1a9a755f897cc55ef349bb8fb1e9dd160467f045b",
+        "sha256_in_prefix": "3bec5cc27f51ef0bf5dec0e1a9a755f897cc55ef349bb8fb1e9dd160467f045b",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/ascii.yaml",
+        "path_type": "hardlink",
+        "sha256": "e06e527f35d27711cbdc97f8de3979c7eecf97ee8741e84e49ff52aa3ae03db2",
+        "sha256_in_prefix": "e06e527f35d27711cbdc97f8de3979c7eecf97ee8741e84e49ff52aa3ae03db2",
+        "size_in_bytes": 337
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/basic.asdf",
+        "path_type": "hardlink",
+        "sha256": "aa53f21421b9771f07880579154d24db6ff4a68880db3d97facc9fccb89144cd",
+        "sha256_in_prefix": "aa53f21421b9771f07880579154d24db6ff4a68880db3d97facc9fccb89144cd",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/basic.yaml",
+        "path_type": "hardlink",
+        "sha256": "ddffe4dba38a9541777273395e26cffaeff9139ea4d41b12f58131d5d51c8f7b",
+        "sha256_in_prefix": "ddffe4dba38a9541777273395e26cffaeff9139ea4d41b12f58131d5d51c8f7b",
+        "size_in_bytes": 345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/complex.asdf",
+        "path_type": "hardlink",
+        "sha256": "9045000ab2897872ca29472251887c704aacd6c7ced83d503240c20ea2a6a0db",
+        "sha256_in_prefix": "9045000ab2897872ca29472251887c704aacd6c7ced83d503240c20ea2a6a0db",
+        "size_in_bytes": 5737
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/complex.yaml",
+        "path_type": "hardlink",
+        "sha256": "2ef5c95c02c4d994d22ebccf6e32e1d8862fcfd74cc1ab6faed13ec74eb86346",
+        "sha256_in_prefix": "2ef5c95c02c4d994d22ebccf6e32e1d8862fcfd74cc1ab6faed13ec74eb86346",
+        "size_in_bytes": 18513
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/compressed.asdf",
+        "path_type": "hardlink",
+        "sha256": "7e1ccd9e48026f775e13bbba9f6d0b6dbe80409341ccda079913e55ee74182dd",
+        "sha256_in_prefix": "7e1ccd9e48026f775e13bbba9f6d0b6dbe80409341ccda079913e55ee74182dd",
+        "size_in_bytes": 1029
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/compressed.yaml",
+        "path_type": "hardlink",
+        "sha256": "925ae37e7f54662dc01a62b3c527de78a04400c014896cae168359feb7c9b307",
+        "sha256_in_prefix": "925ae37e7f54662dc01a62b3c527de78a04400c014896cae168359feb7c9b307",
+        "size_in_bytes": 1499
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/exploded.asdf",
+        "path_type": "hardlink",
+        "sha256": "a24a08493768218ec513015d20616d1624fb06b3031da44f087f562cb733e01d",
+        "sha256_in_prefix": "a24a08493768218ec513015d20616d1624fb06b3031da44f087f562cb733e01d",
+        "size_in_bytes": 360
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/exploded.yaml",
+        "path_type": "hardlink",
+        "sha256": "ddffe4dba38a9541777273395e26cffaeff9139ea4d41b12f58131d5d51c8f7b",
+        "sha256_in_prefix": "ddffe4dba38a9541777273395e26cffaeff9139ea4d41b12f58131d5d51c8f7b",
+        "size_in_bytes": 345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/exploded0000.asdf",
+        "path_type": "hardlink",
+        "sha256": "4ded92be1807ff64dbdd14bbfadd4107f079e9c57cf01c6e50232e14b9ada46a",
+        "sha256_in_prefix": "4ded92be1807ff64dbdd14bbfadd4107f079e9c57cf01c6e50232e14b9ada46a",
+        "size_in_bytes": 415
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/float.asdf",
+        "path_type": "hardlink",
+        "sha256": "1373e2372afff45e20557b9957300152a5d3d3b52ce556b2885b2585088fe80d",
+        "sha256_in_prefix": "1373e2372afff45e20557b9957300152a5d3d3b52ce556b2885b2585088fe80d",
+        "size_in_bytes": 1158
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/float.yaml",
+        "path_type": "hardlink",
+        "sha256": "f015e2adff6077e16296ef87d6571d4bbc40309a3efaa344d506967d81558548",
+        "sha256_in_prefix": "f015e2adff6077e16296ef87d6571d4bbc40309a3efaa344d506967d81558548",
+        "size_in_bytes": 1181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/int.asdf",
+        "path_type": "hardlink",
+        "sha256": "62406266ec1b021c0db75a65cb4b7b9afa31cf5620a87698becccee201ecbb9b",
+        "sha256_in_prefix": "62406266ec1b021c0db75a65cb4b7b9afa31cf5620a87698becccee201ecbb9b",
+        "size_in_bytes": 2214
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/int.yaml",
+        "path_type": "hardlink",
+        "sha256": "a06edd780dd225732f2d90d1417e1ac9467f6e26d858fcfa4898a7404542fb9d",
+        "sha256_in_prefix": "a06edd780dd225732f2d90d1417e1ac9467f6e26d858fcfa4898a7404542fb9d",
+        "size_in_bytes": 1319
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/shared.asdf",
+        "path_type": "hardlink",
+        "sha256": "9b36fb81066b05662e73d55bd363efeadcee2e7ca95c605088bde7b0b674e2d4",
+        "sha256_in_prefix": "9b36fb81066b05662e73d55bd363efeadcee2e7ca95c605088bde7b0b674e2d4",
+        "size_in_bytes": 623
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/shared.yaml",
+        "path_type": "hardlink",
+        "sha256": "12489791f621e23d217987d837fad0300be1e2249be5f02ef838dbc375390977",
+        "sha256_in_prefix": "12489791f621e23d217987d837fad0300be1e2249be5f02ef838dbc375390977",
+        "size_in_bytes": 425
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/stream.asdf",
+        "path_type": "hardlink",
+        "sha256": "7e825d7e824e51d6ecd7a9325d174ac346b4cf7aa7084988ff2624261ec3e761",
+        "sha256_in_prefix": "7e825d7e824e51d6ecd7a9325d174ac346b4cf7aa7084988ff2624261ec3e761",
+        "size_in_bytes": 923
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/stream.yaml",
+        "path_type": "hardlink",
+        "sha256": "33279ab6f2cb083f58a401026673c95ba004b0f603d9ac35257a3b113347741f",
+        "sha256_in_prefix": "33279ab6f2cb083f58a401026673c95ba004b0f603d9ac35257a3b113347741f",
+        "size_in_bytes": 690
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_bmp.asdf",
+        "path_type": "hardlink",
+        "sha256": "109cce97f0c76f41f358cfb8f4d7c534262a8bb349c29587d8a38036d4c7cef5",
+        "sha256_in_prefix": "109cce97f0c76f41f358cfb8f4d7c534262a8bb349c29587d8a38036d4c7cef5",
+        "size_in_bytes": 637
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_bmp.yaml",
+        "path_type": "hardlink",
+        "sha256": "92fb346ac099f26a7a80ebe8e538528a1871051ccb20ba082869a5ebba266524",
+        "sha256_in_prefix": "92fb346ac099f26a7a80ebe8e538528a1871051ccb20ba082869a5ebba266524",
+        "size_in_bytes": 427
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_spp.asdf",
+        "path_type": "hardlink",
+        "sha256": "6d0337b8d3aee45b47bbb7af1ee4bd7bd3491292bb4319d1042c5c31ed01b228",
+        "sha256_in_prefix": "6d0337b8d3aee45b47bbb7af1ee4bd7bd3491292bb4319d1042c5c31ed01b228",
+        "size_in_bytes": 637
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/reference_files/1.0.0/unicode_spp.yaml",
+        "path_type": "hardlink",
+        "sha256": "6410624edc52cd8f127372175d1ddb5459465265e102561ca7e336c15a98942c",
+        "sha256_in_prefix": "6410624edc52cd8f127372175d1ddb5459465265e102561ca7e336c15a98942c",
+        "size_in_bytes": 443
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/resolver.py",
+        "path_type": "hardlink",
+        "sha256": "59d9ef6dd353f0be30ce987b300a3ad063350e2d31c7c42c969d09f134b218c3",
+        "sha256_in_prefix": "59d9ef6dd353f0be30ce987b300a3ad063350e2d31c7c42c969d09f134b218c3",
+        "size_in_bytes": 3679
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/resolver.pyc",
+        "path_type": "hardlink",
+        "sha256": "d9fba87f7b3375907a053a893db67e8af23be7a94eb16e6723ca1d2574e17da8",
+        "sha256_in_prefix": "d9fba87f7b3375907a053a893db67e8af23be7a94eb16e6723ca1d2574e17da8",
+        "size_in_bytes": 4329
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schema.py",
+        "path_type": "hardlink",
+        "sha256": "dc3761d5b551341692da07f661c7ed5251ef99f9d09347a1183e088b02b508d0",
+        "sha256_in_prefix": "dc3761d5b551341692da07f661c7ed5251ef99f9d09347a1183e088b02b508d0",
+        "size_in_bytes": 18211
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schema.pyc",
+        "path_type": "hardlink",
+        "sha256": "d661794f59f60beb78d0f1ce4e9aa0f283205e9657eddd3999eaaf276d5bdab9",
+        "sha256_in_prefix": "d661794f59f60beb78d0f1ce4e9aa0f283205e9657eddd3999eaaf276d5bdab9",
+        "size_in_bytes": 17635
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/asdf-schema-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "237aa10798fa181320b4180aa8a832dfafd2ff6fed245e09c95e794d5173042c",
+        "sha256_in_prefix": "237aa10798fa181320b4180aa8a832dfafd2ff6fed245e09c95e794d5173042c",
+        "size_in_bytes": 1485
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/asdf-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "7e4c44ce9224d0ed4eae39f6a40f9e19e62292793d96f630c49407a86cffb16d",
+        "sha256_in_prefix": "7e4c44ce9224d0ed4eae39f6a40f9e19e62292793d96f630c49407a86cffb16d",
+        "size_in_bytes": 1414
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/column-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "43a47316efc08d0b33b0095c4ec4e2411da7ab466f496164a803094a57a7d16f",
+        "sha256_in_prefix": "43a47316efc08d0b33b0095c4ec4e2411da7ab466f496164a803094a57a7d16f",
+        "size_in_bytes": 1048
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/complex-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "fa9ad084aefa541e9c946764c7624c158d60d51854c5b01c5aac30e97deec47d",
+        "sha256_in_prefix": "fa9ad084aefa541e9c946764c7624c158d60d51854c5b01c5aac30e97deec47d",
+        "size_in_bytes": 921
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/constant-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "56c30eb44208e5608838e9c1e433e630d0429dfc2647191701e7725352f0f1eb",
+        "sha256_in_prefix": "56c30eb44208e5608838e9c1e433e630d0429dfc2647191701e7725352f0f1eb",
+        "size_in_bytes": 297
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/history_entry-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "8fa0c3e051b56921a0bb944189f97cafc63df0bda12ca74fcc26732cd8e78a90",
+        "sha256_in_prefix": "8fa0c3e051b56921a0bb944189f97cafc63df0bda12ca74fcc26732cd8e78a90",
+        "size_in_bytes": 752
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/ndarray-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "d30fdcb9a6f99fad61dd3e058499a0ab59c2ad17922e318fa93924aae9ba2683",
+        "sha256_in_prefix": "d30fdcb9a6f99fad61dd3e058499a0ab59c2ad17922e318fa93924aae9ba2683",
+        "size_in_bytes": 11705
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/software-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "95ab2cd83c83f93fd4d5bb81146324c74677c668a426596f4a3766c63b0beb0a",
+        "sha256_in_prefix": "95ab2cd83c83f93fd4d5bb81146324c74677c668a426596f4a3766c63b0beb0a",
+        "size_in_bytes": 861
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/core/table-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "397513d426e6b55a432fb1308e418bdac6dfba9e10aaacdb337406b2f7b50b48",
+        "sha256_in_prefix": "397513d426e6b55a432fb1308e418bdac6dfba9e10aaacdb337406b2f7b50b48",
+        "size_in_bytes": 2922
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/fits/fits-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "0a1e6b5ba95a5afabdac66ff64b7ec8d157283e7b196f30227a26cc1a1147983",
+        "sha256_in_prefix": "0a1e6b5ba95a5afabdac66ff64b7ec8d157283e7b196f30227a26cc1a1147983",
+        "size_in_bytes": 3935
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/time/time-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a41d5998a32e59ff44ed0131a65654204045e3c268908e1be020274db1059d5e",
+        "sha256_in_prefix": "a41d5998a32e59ff44ed0131a65654204045e3c268908e1be020274db1059d5e",
+        "size_in_bytes": 8631
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/time/time-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "c8d76233c93b93758775762afcf3543b3adedb1561f9cd08487c153aca904ea9",
+        "sha256_in_prefix": "c8d76233c93b93758775762afcf3543b3adedb1561f9cd08487c153aca904ea9",
+        "size_in_bytes": 7977
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/add-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "192caa83a604432d1e2c44db5378ea2872291e34f3f8f151240151e62779c52b",
+        "sha256_in_prefix": "192caa83a604432d1e2c44db5378ea2872291e34f3f8f151240151e62779c52b",
+        "size_in_bytes": 829
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/add-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "ead21b61d97e05dedff28d809ea7fa468f8bef927fa4742949bfbb9e1774bcf5",
+        "sha256_in_prefix": "ead21b61d97e05dedff28d809ea7fa468f8bef927fa4742949bfbb9e1774bcf5",
+        "size_in_bytes": 829
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/affine-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2f3d904c03648e2527798248bead87168a1483869c0ecf4ea7537d7448eccd9e",
+        "sha256_in_prefix": "2f3d904c03648e2527798248bead87168a1483869c0ecf4ea7537d7448eccd9e",
+        "size_in_bytes": 1236
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/affine-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "880de01eda47e151797e6e1c5dcad638a7d2a74ab695c7e3491951f4d742e002",
+        "sha256_in_prefix": "880de01eda47e151797e6e1c5dcad638a7d2a74ab695c7e3491951f4d742e002",
+        "size_in_bytes": 1236
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/airy-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2d66009de115ac1e1c6c993c1f767aa2253e727090ba5c81bd5bb3523f733843",
+        "sha256_in_prefix": "2d66009de115ac1e1c6c993c1f767aa2253e727090ba5c81bd5bb3523f733843",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/airy-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "e01bc8683c2d5eafe32a0dae3a8f00a20e6268edfab24f0873343ec8284846b3",
+        "sha256_in_prefix": "e01bc8683c2d5eafe32a0dae3a8f00a20e6268edfab24f0873343ec8284846b3",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/bonne_equal_area-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "ba46beb82496525c3c977b7ece0b7e2ea0d409a5914615593c8f7d26b329b9c7",
+        "sha256_in_prefix": "ba46beb82496525c3c977b7ece0b7e2ea0d409a5914615593c8f7d26b329b9c7",
+        "size_in_bytes": 1219
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/bonne_equal_area-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "dfb24d99aa1584563f3197e44f2c88b78d73649f701eefbd5ab355271702034a",
+        "sha256_in_prefix": "dfb24d99aa1584563f3197e44f2c88b78d73649f701eefbd5ab355271702034a",
+        "size_in_bytes": 1219
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cobe_quad_spherical_cube-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "9f67f6ea175a1790f6c28d4893e2f865cc0b69bb998871a4843fe2bb591e3789",
+        "sha256_in_prefix": "9f67f6ea175a1790f6c28d4893e2f865cc0b69bb998871a4843fe2bb591e3789",
+        "size_in_bytes": 470
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cobe_quad_spherical_cube-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "7f83bad4cbf3a2d63726dde9d1a0a4869634466fcc4e6ce93841b689d1171d63",
+        "sha256_in_prefix": "7f83bad4cbf3a2d63726dde9d1a0a4869634466fcc4e6ce93841b689d1171d63",
+        "size_in_bytes": 470
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/compose-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2b5dfcd862a2c37771b72e549a10c2f3e6fa330bc0c793715746a7a455112d44",
+        "sha256_in_prefix": "2b5dfcd862a2c37771b72e549a10c2f3e6fa330bc0c793715746a7a455112d44",
+        "size_in_bytes": 1178
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/compose-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "14c14dfea47e016e250a1dcbe26ecf0391b0766d9f1ad1b664c75c85c92cc2d7",
+        "sha256_in_prefix": "14c14dfea47e016e250a1dcbe26ecf0391b0766d9f1ad1b664c75c85c92cc2d7",
+        "size_in_bytes": 1178
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/concatenate-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "0d777a36fe358163d900369e16be81a9da8943f95b5766afa35087ac3e276abf",
+        "sha256_in_prefix": "0d777a36fe358163d900369e16be81a9da8943f95b5766afa35087ac3e276abf",
+        "size_in_bytes": 2040
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/concatenate-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "60dbd6c8c505c2048643c493f2c8c8c33eecbfca52f5669da7a6a2d05cf41f0a",
+        "sha256_in_prefix": "60dbd6c8c505c2048643c493f2c8c8c33eecbfca52f5669da7a6a2d05cf41f0a",
+        "size_in_bytes": 2040
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "7d6046889345f7c5c12b85237b6946a0f09cbe1db65b9e10e7578f2a705cd514",
+        "sha256_in_prefix": "7d6046889345f7c5c12b85237b6946a0f09cbe1db65b9e10e7578f2a705cd514",
+        "size_in_bytes": 1322
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "02f76d66451f83e94a6c77f9e75eaccd417fc5d5c45df79fc571084958573d1c",
+        "sha256_in_prefix": "02f76d66451f83e94a6c77f9e75eaccd417fc5d5c45df79fc571084958573d1c",
+        "size_in_bytes": 1322
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equal_area-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "ec89059b5a5e1f937d878b459317fd32496fc775a83d1bfc8c438b38563ac096",
+        "sha256_in_prefix": "ec89059b5a5e1f937d878b459317fd32496fc775a83d1bfc8c438b38563ac096",
+        "size_in_bytes": 926
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equal_area-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "8c5ba14a28690a29fd87de50fe2c2aa11d4505711787336ff109bb3cc896378d",
+        "sha256_in_prefix": "8c5ba14a28690a29fd87de50fe2c2aa11d4505711787336ff109bb3cc896378d",
+        "size_in_bytes": 926
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equidistant-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "db8be6e178348f69595c1e188c555bc7bedde1ab4e05014a85dbe84ac23c29d5",
+        "sha256_in_prefix": "db8be6e178348f69595c1e188c555bc7bedde1ab4e05014a85dbe84ac23c29d5",
+        "size_in_bytes": 763
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_equidistant-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "c93410f01d9d8611c0ebdaef6a48b6477d9f3de3746cd0a5bd5723cb91f955f7",
+        "sha256_in_prefix": "c93410f01d9d8611c0ebdaef6a48b6477d9f3de3746cd0a5bd5723cb91f955f7",
+        "size_in_bytes": 763
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_orthomorphic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "75f0fbab8884bb679ce4e17ffde651f3be607151684b38f344e628c5542f4a35",
+        "sha256_in_prefix": "75f0fbab8884bb679ce4e17ffde651f3be607151684b38f344e628c5542f4a35",
+        "size_in_bytes": 1146
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_orthomorphic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "489ec52524bc4c1e07a72a9547d5cb5dcf71da490d89669f780c84784b3133ab",
+        "sha256_in_prefix": "489ec52524bc4c1e07a72a9547d5cb5dcf71da490d89669f780c84784b3133ab",
+        "size_in_bytes": 1146
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_perspective-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "38e9e401e32cee15b5cb8b63f7778394c99a3385a248c78128f9571450d9c853",
+        "sha256_in_prefix": "38e9e401e32cee15b5cb8b63f7778394c99a3385a248c78128f9571450d9c853",
+        "size_in_bytes": 781
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/conic_perspective-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "d4b1d0c6cdbd47c7de83b2935ee89662922c1b6d35c585392f49457ed4fb45a2",
+        "sha256_in_prefix": "d4b1d0c6cdbd47c7de83b2935ee89662922c1b6d35c585392f49457ed4fb45a2",
+        "size_in_bytes": 781
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/constant-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "5893313123ebb0d66a6d8e640f29aa743f3b68caf9c47ce5029f54a4045f343c",
+        "sha256_in_prefix": "5893313123ebb0d66a6d8e640f29aa743f3b68caf9c47ce5029f54a4045f343c",
+        "size_in_bytes": 547
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/constant-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "9824b417e4b5ad7184b491ab50c9233c6ccac629d2dd7ea01adc65d8a03a874d",
+        "sha256_in_prefix": "9824b417e4b5ad7184b491ab50c9233c6ccac629d2dd7ea01adc65d8a03a874d",
+        "size_in_bytes": 547
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "4013dafdf721fc389618c6c65b8aa3135ef4eddffad670ed950a58cefd9ab797",
+        "sha256_in_prefix": "4013dafdf721fc389618c6c65b8aa3135ef4eddffad670ed950a58cefd9ab797",
+        "size_in_bytes": 405
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "65a847e19d423fa2a89d89ca204c2bdcf60c3bb4da7210b1c131bb787f6acd69",
+        "sha256_in_prefix": "65a847e19d423fa2a89d89ca204c2bdcf60c3bb4da7210b1c131bb787f6acd69",
+        "size_in_bytes": 405
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_equal_area-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "4d0d9d1116908f6cad4308ed9c955d078e920542ace77b225b584b36412ddcfc",
+        "sha256_in_prefix": "4d0d9d1116908f6cad4308ed9c955d078e920542ace77b225b584b36412ddcfc",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_equal_area-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "6d6a1e8f5c6813dd7df09de07b102659e6da166ed67cc774801c216a8292a826",
+        "sha256_in_prefix": "6d6a1e8f5c6813dd7df09de07b102659e6da166ed67cc774801c216a8292a826",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_perspective-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "be1bec99b21607ab47581248df81a0bf79ecba11b89344bdef12c71892a69ced",
+        "sha256_in_prefix": "be1bec99b21607ab47581248df81a0bf79ecba11b89344bdef12c71892a69ced",
+        "size_in_bytes": 1188
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/cylindrical_perspective-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "25cf448b8fe9349a442cd924c8fe0e4a71af6c68a31282fb1a1151eae673fce2",
+        "sha256_in_prefix": "25cf448b8fe9349a442cd924c8fe0e4a71af6c68a31282fb1a1151eae673fce2",
+        "size_in_bytes": 1188
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/divide-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "127565ec08b988825cf7fa0c89412e474b83a0a050d531656b46697cb810e8ca",
+        "sha256_in_prefix": "127565ec08b988825cf7fa0c89412e474b83a0a050d531656b46697cb810e8ca",
+        "size_in_bytes": 921
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/divide-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "5dda11b9b0b68b550004a4ab6c2c8acd02987548d63d7d2429822ad55cb55708",
+        "sha256_in_prefix": "5dda11b9b0b68b550004a4ab6c2c8acd02987548d63d7d2429822ad55cb55708",
+        "size_in_bytes": 921
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/domain-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2fee0964e5d9d02fa8e6792173ffa01877a94048bf3a527e937c003bb5ddf6a4",
+        "sha256_in_prefix": "2fee0964e5d9d02fa8e6792173ffa01877a94048bf3a527e937c003bb5ddf6a4",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/generic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "5a0d3e01d9129ed2562625cc396203ba9c2879127c1873e5444c40d277ab0739",
+        "sha256_in_prefix": "5a0d3e01d9129ed2562625cc396203ba9c2879127c1873e5444c40d277ab0739",
+        "size_in_bytes": 610
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/generic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "6e5812ddeaf873d7358f8edcd7246bab5e5e4b851fced53b22905b56f14c05f2",
+        "sha256_in_prefix": "6e5812ddeaf873d7358f8edcd7246bab5e5e4b851fced53b22905b56f14c05f2",
+        "size_in_bytes": 610
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/gnomonic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "6a99b0ad14295fe9ec3a7f10b226c7fc5b9fa344345296fbeed337ba96326210",
+        "sha256_in_prefix": "6a99b0ad14295fe9ec3a7f10b226c7fc5b9fa344345296fbeed337ba96326210",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/gnomonic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "4744516ca1f1a93326b32520f876243cc0bdf927cdfcc9c004bec706d909c0ea",
+        "sha256_in_prefix": "4744516ca1f1a93326b32520f876243cc0bdf927cdfcc9c004bec706d909c0ea",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/hammer_aitoff-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "417bac581745a8e265932b5cf163357c1bbf6aad3f4c9f7491dfa9efd2399612",
+        "sha256_in_prefix": "417bac581745a8e265932b5cf163357c1bbf6aad3f4c9f7491dfa9efd2399612",
+        "size_in_bytes": 860
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/hammer_aitoff-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "29ce3de02fbd0bb645b72461f92abfb85637fe7776d9636ad37c3a5cbbf2d01f",
+        "sha256_in_prefix": "29ce3de02fbd0bb645b72461f92abfb85637fe7776d9636ad37c3a5cbbf2d01f",
+        "size_in_bytes": 860
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "ac8e5daa250fa7a03bbcf54627959c747c6f659f1f2e83ba9f94aaf0411e5868",
+        "sha256_in_prefix": "ac8e5daa250fa7a03bbcf54627959c747c6f659f1f2e83ba9f94aaf0411e5868",
+        "size_in_bytes": 793
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2d8c297625baba90cc23fc106e63b90c140fc35fa151894643dc57188f0d8e27",
+        "sha256_in_prefix": "2d8c297625baba90cc23fc106e63b90c140fc35fa151894643dc57188f0d8e27",
+        "size_in_bytes": 793
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix_polar-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b9185c7e34da1934c24b96b65a80d58d765fc30c8275f42bbccaf9bfc137021a",
+        "sha256_in_prefix": "b9185c7e34da1934c24b96b65a80d58d765fc30c8275f42bbccaf9bfc137021a",
+        "size_in_bytes": 562
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/healpix_polar-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "c684153616e288d9627f92f0c491c5c9c3215e6c80558e4846cdf6a5cfc3eb62",
+        "sha256_in_prefix": "c684153616e288d9627f92f0c491c5c9c3215e6c80558e4846cdf6a5cfc3eb62",
+        "size_in_bytes": 562
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/identity-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "e69bd2def295afd08077f925a6814d0ce0c21e6da5c2af731bf86400edf7130a",
+        "sha256_in_prefix": "e69bd2def295afd08077f925a6814d0ce0c21e6da5c2af731bf86400edf7130a",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/identity-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "d58294615c8eda8798464351ff0c230f1537f17549ea61c4d2d86b5cce383cc6",
+        "sha256_in_prefix": "d58294615c8eda8798464351ff0c230f1537f17549ea61c4d2d86b5cce383cc6",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/label_mapper-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "bfb74ce97de1e2742b9e0cfdae78fb5ac45ebe34b4578cb952350ac0f527abd6",
+        "sha256_in_prefix": "bfb74ce97de1e2742b9e0cfdae78fb5ac45ebe34b4578cb952350ac0f527abd6",
+        "size_in_bytes": 4170
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/label_mapper-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "591eb7f1d797510a2418e772fc73461cc7cb4faf98c2411a5c71b8afc1626466",
+        "sha256_in_prefix": "591eb7f1d797510a2418e772fc73461cc7cb4faf98c2411a5c71b8afc1626466",
+        "size_in_bytes": 4580
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/mercator-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "568da906fb1900b948d5b491de1ee3747c4c7349f43ec81a36f614937e68ff06",
+        "sha256_in_prefix": "568da906fb1900b948d5b491de1ee3747c4c7349f43ec81a36f614937e68ff06",
+        "size_in_bytes": 713
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/mercator-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "46b68ed01f7205eb8d41f2e42360fcfb6caadf52328889610511127aa7b4075a",
+        "sha256_in_prefix": "46b68ed01f7205eb8d41f2e42360fcfb6caadf52328889610511127aa7b4075a",
+        "size_in_bytes": 713
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/molleweide-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "d00271a15d8a4f0e6d34223a65a149ed318c2eb1a59a6179b914cba15de61958",
+        "sha256_in_prefix": "d00271a15d8a4f0e6d34223a65a149ed318c2eb1a59a6179b914cba15de61958",
+        "size_in_bytes": 906
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/molleweide-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a8e317328782926eef444682e448846dd5419a0a5eaf82daee633947aa7f170e",
+        "sha256_in_prefix": "a8e317328782926eef444682e448846dd5419a0a5eaf82daee633947aa7f170e",
+        "size_in_bytes": 906
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/multiply-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "4cb2e45591734b112ffd7ebf2947ae96f518f3d4ea85bc9aa3c96e54c1ee0878",
+        "sha256_in_prefix": "4cb2e45591734b112ffd7ebf2947ae96f518f3d4ea85bc9aa3c96e54c1ee0878",
+        "size_in_bytes": 935
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/multiply-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a96a516142da3b7b30d60fb396dece40d6217fb05b63f4e0a3cdc060a49c500a",
+        "sha256_in_prefix": "a96a516142da3b7b30d60fb396dece40d6217fb05b63f4e0a3cdc060a49c500a",
+        "size_in_bytes": 935
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/parabolic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "24a508fef0cb07a2eb84f03f383061ba57f944f834e1b0febdbe7e764d23432c",
+        "sha256_in_prefix": "24a508fef0cb07a2eb84f03f383061ba57f944f834e1b0febdbe7e764d23432c",
+        "size_in_bytes": 757
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/parabolic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "bf63d971eac30270d7dd5fe004255a5d8d0b309adb437b47d0c180a41b43e27e",
+        "sha256_in_prefix": "bf63d971eac30270d7dd5fe004255a5d8d0b309adb437b47d0c180a41b43e27e",
+        "size_in_bytes": 757
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/plate_carree-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "06a6e157a36d087a7c78f54b771458ae275ea532fc62a9be7c97be22f7b82b41",
+        "sha256_in_prefix": "06a6e157a36d087a7c78f54b771458ae275ea532fc62a9be7c97be22f7b82b41",
+        "size_in_bytes": 662
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/plate_carree-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "efaa750b64305d309b0bcd7fc6ceb61c55b7f06ae5b9e6fe2a8a10403f12f807",
+        "sha256_in_prefix": "efaa750b64305d309b0bcd7fc6ceb61c55b7f06ae5b9e6fe2a8a10403f12f807",
+        "size_in_bytes": 662
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polyconic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "7e98e3818f18d0a3392181a9f536d5982b0a2885609520ad6e0c56718e19ffb7",
+        "sha256_in_prefix": "7e98e3818f18d0a3392181a9f536d5982b0a2885609520ad6e0c56718e19ffb7",
+        "size_in_bytes": 415
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polyconic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "bb8f5e43673c8bda717181c5ee2efa0a887752eabe2bb0406612814ce16bd223",
+        "sha256_in_prefix": "bb8f5e43673c8bda717181c5ee2efa0a887752eabe2bb0406612814ce16bd223",
+        "size_in_bytes": 415
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polynomial-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "3cc3183e2b1b15bcdeba00c4c6af1381b295bc156858f26cc77b79969201d48b",
+        "sha256_in_prefix": "3cc3183e2b1b15bcdeba00c4c6af1381b295bc156858f26cc77b79969201d48b",
+        "size_in_bytes": 1238
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/polynomial-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "023fef8f10bb47b5af9fb0aa4fc55c78eb5ae73566becc8d8a970400fdc831fb",
+        "sha256_in_prefix": "023fef8f10bb47b5af9fb0aa4fc55c78eb5ae73566becc8d8a970400fdc831fb",
+        "size_in_bytes": 1238
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/power-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "eb751f0103dfec39e4b019445cb23695460a9b068644a82bd55fb3fa99240c97",
+        "sha256_in_prefix": "eb751f0103dfec39e4b019445cb23695460a9b068644a82bd55fb3fa99240c97",
+        "size_in_bytes": 607
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/power-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "91dd7c84f79159a69958846a75a8da5d89cc4fe07e92776156ac6f48670e85ab",
+        "sha256_in_prefix": "91dd7c84f79159a69958846a75a8da5d89cc4fe07e92776156ac6f48670e85ab",
+        "size_in_bytes": 607
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudoconic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "1e9c328e2032053004a91ccd3d07236e4730055aa648a863920da222a4383fb6",
+        "sha256_in_prefix": "1e9c328e2032053004a91ccd3d07236e4730055aa648a863920da222a4383fb6",
+        "size_in_bytes": 416
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudoconic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b06a741993c24777a9243e46223bd0903098f9fcc2dcd65955cb137bf8c88261",
+        "sha256_in_prefix": "b06a741993c24777a9243e46223bd0903098f9fcc2dcd65955cb137bf8c88261",
+        "size_in_bytes": 416
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudocylindrical-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a1d6f52427212457fcf07b933b76a1e75f3669b912d2cbcf4f35c5f4d59269c7",
+        "sha256_in_prefix": "a1d6f52427212457fcf07b933b76a1e75f3669b912d2cbcf4f35c5f4d59269c7",
+        "size_in_bytes": 613
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/pseudocylindrical-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "09a57e07e2eb2df3dcf913aece8b1c5a17a3a0d56c2628d6f36f388d9fa8c734",
+        "sha256_in_prefix": "09a57e07e2eb2df3dcf913aece8b1c5a17a3a0d56c2628d6f36f388d9fa8c734",
+        "size_in_bytes": 613
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quad_spherical_cube-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "d2b8ce5ff3e2b7e5c81a57500351bae29044e8bc3ace72a856249d878728e7aa",
+        "sha256_in_prefix": "d2b8ce5ff3e2b7e5c81a57500351bae29044e8bc3ace72a856249d878728e7aa",
+        "size_in_bytes": 455
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quad_spherical_cube-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "718c5830636b99236d9774d5c0e54edd08018ee5b117d1d7ea9f65692c919c86",
+        "sha256_in_prefix": "718c5830636b99236d9774d5c0e54edd08018ee5b117d1d7ea9f65692c919c86",
+        "size_in_bytes": 455
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quadcube-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "8c6a7b7a8636870194cee6095aa7162f5eb1a51a54294bb73e1d79e8b4f41d4f",
+        "sha256_in_prefix": "8c6a7b7a8636870194cee6095aa7162f5eb1a51a54294bb73e1d79e8b4f41d4f",
+        "size_in_bytes": 675
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/quadcube-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "76160ddd335142749f41f5982b89ff22a5f00677a586247622d8a21d5fceae39",
+        "sha256_in_prefix": "76160ddd335142749f41f5982b89ff22a5f00677a586247622d8a21d5fceae39",
+        "size_in_bytes": 675
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/regions_selector-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "3bfecde7de08aba12ecec1065f5f97566480d1cab0031b2da0c2eea49eb0fff0",
+        "sha256_in_prefix": "3bfecde7de08aba12ecec1065f5f97566480d1cab0031b2da0c2eea49eb0fff0",
+        "size_in_bytes": 3131
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/regions_selector-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "59e3127f9ab149c42d9aa855d9c46911be87a0065404a185c9cf401fdf27657d",
+        "sha256_in_prefix": "59e3127f9ab149c42d9aa855d9c46911be87a0065404a185c9cf401fdf27657d",
+        "size_in_bytes": 3131
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/remap_axes-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "bd3f437e802d7caaea7118022f1a2ba89175979638b96488bdc7491f61e98eaa",
+        "sha256_in_prefix": "bd3f437e802d7caaea7118022f1a2ba89175979638b96488bdc7491f61e98eaa",
+        "size_in_bytes": 2575
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/remap_axes-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "028bb2f9a169ba4686f58eee1b03a47d12222342a43680c7b2219c1b26338725",
+        "sha256_in_prefix": "028bb2f9a169ba4686f58eee1b03a47d12222342a43680c7b2219c1b26338725",
+        "size_in_bytes": 2575
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate2d-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a59be91081eda8a4e65800fe16b37a59af1576748dccad8ea79c9be132dce149",
+        "sha256_in_prefix": "a59be91081eda8a4e65800fe16b37a59af1576748dccad8ea79c9be132dce149",
+        "size_in_bytes": 544
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate2d-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "51001f7e4d66f02e113c191cb091678b236dd1b96ecebdb38c043f29b6637923",
+        "sha256_in_prefix": "51001f7e4d66f02e113c191cb091678b236dd1b96ecebdb38c043f29b6637923",
+        "size_in_bytes": 544
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate3d-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "858b3104ffcf45c3fc7345699f7300c09d41a386ad8b4d2044531a1c0d558fd2",
+        "sha256_in_prefix": "858b3104ffcf45c3fc7345699f7300c09d41a386ad8b4d2044531a1c0d558fd2",
+        "size_in_bytes": 1459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/rotate3d-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a0d5b70141c15e59e32311d9d8bf8a204cab38c32133b8ace045fd63c8b970af",
+        "sha256_in_prefix": "a0d5b70141c15e59e32311d9d8bf8a204cab38c32133b8ace045fd63c8b970af",
+        "size_in_bytes": 1459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/sanson_flamsteed-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "461d8711df413f316bd9647db2b962ff59a68b4702d94e66fb8514d144b08b60",
+        "sha256_in_prefix": "461d8711df413f316bd9647db2b962ff59a68b4702d94e66fb8514d144b08b60",
+        "size_in_bytes": 649
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/sanson_flamsteed-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "98efe4c7d05118f8d7aed592f2bc0575c71451e8f624d3deed042743a6c8ed02",
+        "sha256_in_prefix": "98efe4c7d05118f8d7aed592f2bc0575c71451e8f624d3deed042743a6c8ed02",
+        "size_in_bytes": 649
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/scale-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "cad70303af1dba7fb14d96818c9a0f8e86419e5272f0eda325c79f19eeeabf82",
+        "sha256_in_prefix": "cad70303af1dba7fb14d96818c9a0f8e86419e5272f0eda325c79f19eeeabf82",
+        "size_in_bytes": 363
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/scale-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "6848facd9817e8a20e8ceec39e56e1924aca93052a2c776ee4b61cb904f797df",
+        "sha256_in_prefix": "6848facd9817e8a20e8ceec39e56e1924aca93052a2c776ee4b61cb904f797df",
+        "size_in_bytes": 363
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/shift-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "6befa42a71e9fecd6a1224d7704388374f74e86920b86510a526c86c56271000",
+        "sha256_in_prefix": "6befa42a71e9fecd6a1224d7704388374f74e86920b86510a526c86c56271000",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/shift-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "8b55d9ece4fef5f17a919210b4a7e10dd7ab526bcd8b4594f1abeb54b9a8e7bd",
+        "sha256_in_prefix": "8b55d9ece4fef5f17a919210b4a7e10dd7ab526bcd8b4594f1abeb54b9a8e7bd",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_orthographic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a846ba8e80b3df23b74ce8f5f4e1adf27835137a7aaadec30ddd0d0ace0a4d68",
+        "sha256_in_prefix": "a846ba8e80b3df23b74ce8f5f4e1adf27835137a7aaadec30ddd0d0ace0a4d68",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_orthographic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2dee4290609f09da723ef77e32661608cdb2f60ba30d332846582112c46a93f7",
+        "sha256_in_prefix": "2dee4290609f09da723ef77e32661608cdb2f60ba30d332846582112c46a93f7",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_zenithal_perspective-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "39c4e3eba815c10f878ad9ec1b62ce7e11911d622db5ee597fa6cd59f1c37d6c",
+        "sha256_in_prefix": "39c4e3eba815c10f878ad9ec1b62ce7e11911d622db5ee597fa6cd59f1c37d6c",
+        "size_in_bytes": 1328
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/slant_zenithal_perspective-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "e25a786c48e13e2f899c02572386a342e8b1176cc78c7bf34e5ba6a40af1685c",
+        "sha256_in_prefix": "e25a786c48e13e2f899c02572386a342e8b1176cc78c7bf34e5ba6a40af1685c",
+        "size_in_bytes": 1328
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/stereographic-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "84d7b519d791fc0771582824d42f08987df398b2fa7c41f2f9fd3147e4324888",
+        "sha256_in_prefix": "84d7b519d791fc0771582824d42f08987df398b2fa7c41f2f9fd3147e4324888",
+        "size_in_bytes": 826
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/stereographic-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "809ab94c883cc273d9953d43ffa86a7452322fdf0ccd3be8d232c3cfe3b88985",
+        "sha256_in_prefix": "809ab94c883cc273d9953d43ffa86a7452322fdf0ccd3be8d232c3cfe3b88985",
+        "size_in_bytes": 826
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/subtract-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "d9009e540f1dc0b2066a7b720674f121728126b03b10615c9b787f111d6bf1d5",
+        "sha256_in_prefix": "d9009e540f1dc0b2066a7b720674f121728126b03b10615c9b787f111d6bf1d5",
+        "size_in_bytes": 932
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/subtract-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "8de7412f3a15cd80b3bce2112cc1f2df4fd6176afb66b21313d547d31b44d34a",
+        "sha256_in_prefix": "8de7412f3a15cd80b3bce2112cc1f2df4fd6176afb66b21313d547d31b44d34a",
+        "size_in_bytes": 932
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tabular-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "3e554b71a7e7c1b8732c20512c3e4ae5e72c98e3d0713c613087c251f3b99b65",
+        "sha256_in_prefix": "3e554b71a7e7c1b8732c20512c3e4ae5e72c98e3d0713c613087c251f3b99b65",
+        "size_in_bytes": 1690
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tabular-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b5d73d0adc5172fc6e1196c2df9b0e4ee86f824cccdea2e64e0878a2c12d56c8",
+        "sha256_in_prefix": "b5d73d0adc5172fc6e1196c2df9b0e4ee86f824cccdea2e64e0878a2c12d56c8",
+        "size_in_bytes": 1690
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tangential_spherical_cube-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b3f9f1caa47e819d4dc7051b0caed06949b13ecd4ccbc7031cd1c8f91c2e3306",
+        "sha256_in_prefix": "b3f9f1caa47e819d4dc7051b0caed06949b13ecd4ccbc7031cd1c8f91c2e3306",
+        "size_in_bytes": 460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/tangential_spherical_cube-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "0f873c46b545a6d7ba56b478384f800688af634153976314a79fd0454ed81692",
+        "sha256_in_prefix": "0f873c46b545a6d7ba56b478384f800688af634153976314a79fd0454ed81692",
+        "size_in_bytes": 460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/transform-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "eeb207a6300a2f402f2a6f098bde8f2a835024ddaf6cb9e46b1e48ee355b7b32",
+        "sha256_in_prefix": "eeb207a6300a2f402f2a6f098bde8f2a835024ddaf6cb9e46b1e48ee355b7b32",
+        "size_in_bytes": 1028
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/transform-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "c2b41b86a3970ef057c322087a5cfd21e370aef495e48426d712844fd0214010",
+        "sha256_in_prefix": "c2b41b86a3970ef057c322087a5cfd21e370aef495e48426d712844fd0214010",
+        "size_in_bytes": 1028
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "f61f644efaebceaa922628866be49d5b206394a6c0a751247d7816e4f11f5ac1",
+        "sha256_in_prefix": "f61f644efaebceaa922628866be49d5b206394a6c0a751247d7816e4f11f5ac1",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "f6374d46396446838a2b6c69ede45b2dc9aff9998cd71e70c5e7e5f08154cdfa",
+        "sha256_in_prefix": "f6374d46396446838a2b6c69ede45b2dc9aff9998cd71e70c5e7e5f08154cdfa",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equal_area-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "ef5357402ce54866d4d34cd4be47974e1bdef3af1b044ffda508568f6fe510bf",
+        "sha256_in_prefix": "ef5357402ce54866d4d34cd4be47974e1bdef3af1b044ffda508568f6fe510bf",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equal_area-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "892df00d060de39a0f7bfeecb39215506c9ad8f31a0a6ae8c3c6e686d20b7e42",
+        "sha256_in_prefix": "892df00d060de39a0f7bfeecb39215506c9ad8f31a0a6ae8c3c6e686d20b7e42",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equidistant-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b162275ca58d083d0b5c6a55a6d030711763797d2c7af54f880399a019fc1c50",
+        "sha256_in_prefix": "b162275ca58d083d0b5c6a55a6d030711763797d2c7af54f880399a019fc1c50",
+        "size_in_bytes": 754
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_equidistant-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "2c39a7865dc5a716bcb692c19bed535911c7c1139b4d120c162973419329e5a8",
+        "sha256_in_prefix": "2c39a7865dc5a716bcb692c19bed535911c7c1139b4d120c162973419329e5a8",
+        "size_in_bytes": 754
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_perspective-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "044af0278d9028052ce71ab82a44fc60a48fb7461bddd63b826ff3ecfa289904",
+        "sha256_in_prefix": "044af0278d9028052ce71ab82a44fc60a48fb7461bddd63b826ff3ecfa289904",
+        "size_in_bytes": 1422
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/transform/zenithal_perspective-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "63b7788e890871f7fc2add98c4ff47ea4037024785e579daafcf1f70cbfdffa5",
+        "sha256_in_prefix": "63b7788e890871f7fc2add98c4ff47ea4037024785e579daafcf1f70cbfdffa5",
+        "size_in_bytes": 1422
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/unit/defunit-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "161afc42f67a81a914e27543a5be16316af5bc479819aaa99ff20e897536d336",
+        "sha256_in_prefix": "161afc42f67a81a914e27543a5be16316af5bc479819aaa99ff20e897536d336",
+        "size_in_bytes": 824
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/unit/quantity-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "47d8bd9e1133e24f9f7617f10896548cf097709bbb5225b957398046683fc0bf",
+        "sha256_in_prefix": "47d8bd9e1133e24f9f7617f10896548cf097709bbb5225b957398046683fc0bf",
+        "size_in_bytes": 1218
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/unit/unit-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a9525f061e88d703f637cbe630923f1720846faf8b2203313035d6399ba3a334",
+        "sha256_in_prefix": "a9525f061e88d703f637cbe630923f1720846faf8b2203313035d6399ba3a334",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/version_map-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "c57c5c0c298785d2f05cddafd6f40ab0c46637baefad87b1c4cf4fe4a7438b71",
+        "sha256_in_prefix": "c57c5c0c298785d2f05cddafd6f40ab0c46637baefad87b1c4cf4fe4a7438b71",
+        "size_in_bytes": 3641
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/version_map-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "5dd4cac7503028fbf9aea2776be05b2dd9c6f49e7470d2008e094b9df02fcb41",
+        "sha256_in_prefix": "5dd4cac7503028fbf9aea2776be05b2dd9c6f49e7470d2008e094b9df02fcb41",
+        "size_in_bytes": 3682
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/celestial_frame-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "acb72287209266a7096b7b7ecbc3c7daeb540709b5fa1ed2ecfbe9152126373d",
+        "sha256_in_prefix": "acb72287209266a7096b7b7ecbc3c7daeb540709b5fa1ed2ecfbe9152126373d",
+        "size_in_bytes": 460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/celestial_frame-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "11858549dbcc0498cfa3ef2f93e17f9fa3b17b9e63209755bd6f24f4d0bafbcf",
+        "sha256_in_prefix": "11858549dbcc0498cfa3ef2f93e17f9fa3b17b9e63209755bd6f24f4d0bafbcf",
+        "size_in_bytes": 461
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/composite_frame-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "223026a64c6378fe5708ac7c751ea108128eca9d1c464f2943c64ac6cdd977df",
+        "sha256_in_prefix": "223026a64c6378fe5708ac7c751ea108128eca9d1c464f2943c64ac6cdd977df",
+        "size_in_bytes": 481
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/composite_frame-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "0264aae8983ae14a4b822e8bf006f902c5dbca2400828a4a9b95d9ac6cdce906",
+        "sha256_in_prefix": "0264aae8983ae14a4b822e8bf006f902c5dbca2400828a4a9b95d9ac6cdce906",
+        "size_in_bytes": 459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/frame-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "f17c6f067ea2b77ed9ce5f383e532a314455c0373b8a725d01b16710bc6b333f",
+        "sha256_in_prefix": "f17c6f067ea2b77ed9ce5f383e532a314455c0373b8a725d01b16710bc6b333f",
+        "size_in_bytes": 5751
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/frame-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "47c2e610cacc08e67681ca12f7c7a87c4ae317902488e30bda7f0f865820ee09",
+        "sha256_in_prefix": "47c2e610cacc08e67681ca12f7c7a87c4ae317902488e30bda7f0f865820ee09",
+        "size_in_bytes": 5445
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/icrs_coord-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "27fa6f10fce21e63efa5857c0f10c9e5fbddfc43f8323cd37a432824c6388e38",
+        "sha256_in_prefix": "27fa6f10fce21e63efa5857c0f10c9e5fbddfc43f8323cd37a432824c6388e38",
+        "size_in_bytes": 1042
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/spectral_frame-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "5bf8155399228db9d990e0c20923bfe8f0556da4cd287f94805bfd5cbd3c6d15",
+        "sha256_in_prefix": "5bf8155399228db9d990e0c20923bfe8f0556da4cd287f94805bfd5cbd3c6d15",
+        "size_in_bytes": 631
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/spectral_frame-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "c241f9678746bd76a01ca6990786cff044d58e04369491e28b6e7c10db706821",
+        "sha256_in_prefix": "c241f9678746bd76a01ca6990786cff044d58e04369491e28b6e7c10db706821",
+        "size_in_bytes": 632
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/step-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "feda26f5e35f86ac4fab1b42d53a383b84bc716030d960658496f3918eed1899",
+        "sha256_in_prefix": "feda26f5e35f86ac4fab1b42d53a383b84bc716030d960658496f3918eed1899",
+        "size_in_bytes": 757
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/step-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "8cc9c29b72acbf2a9854d754e5f4b1d04431123b4f3776a150448d1b51e5cfde",
+        "sha256_in_prefix": "8cc9c29b72acbf2a9854d754e5f4b1d04431123b4f3776a150448d1b51e5cfde",
+        "size_in_bytes": 758
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/wcs-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "01e9f9f016fa98f8424791afc5cb35da33d586b7f2cbd1c519d8b583b2d53639",
+        "sha256_in_prefix": "01e9f9f016fa98f8424791afc5cb35da33d586b7f2cbd1c519d8b583b2d53639",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/asdf/wcs/wcs-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "6f277a0e0c994b6e4cc421100b9d1a3a877f0d1cce7c4e2125f1a3d8efa0a39e",
+        "sha256_in_prefix": "6f277a0e0c994b6e4cc421100b9d1a3a877f0d1cce7c4e2125f1a3d8efa0a39e",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/schemas/stsci.edu/yaml-schema/draft-01.yaml",
+        "path_type": "hardlink",
+        "sha256": "54e74dfe7f0b1022102a251f7f417f5eecf5b1b5d8ff80e19c775145955a8382",
+        "sha256_in_prefix": "54e74dfe7f0b1022102a251f7f417f5eecf5b1b5d8ff80e19c775145955a8382",
+        "size_in_bytes": 3033
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "cbc551acbc29eb27381de0cdd8533a362b8022e046f2ddaa76ae455f3c3689cb",
+        "sha256_in_prefix": "cbc551acbc29eb27381de0cdd8533a362b8022e046f2ddaa76ae455f3c3689cb",
+        "size_in_bytes": 1202
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "d9b1e19905ff707d8c99799b3a65ecbd453ef253e66551214b64306957b6f9e1",
+        "sha256_in_prefix": "d9b1e19905ff707d8c99799b3a65ecbd453ef253e66551214b64306957b6f9e1",
+        "size_in_bytes": 1404
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/stream.py",
+        "path_type": "hardlink",
+        "sha256": "547f06335ae91e460eab724b45425cf86bf778f52373e4b3c6696e7a9987643b",
+        "sha256_in_prefix": "547f06335ae91e460eab724b45425cf86bf778f52373e4b3c6696e7a9987643b",
+        "size_in_bytes": 1962
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/stream.pyc",
+        "path_type": "hardlink",
+        "sha256": "d5f1f2f67b2f12d92a7d07b2b4e3983fb394d803f7f6c37b0488cb6093ae348a",
+        "sha256_in_prefix": "d5f1f2f67b2f12d92a7d07b2b4e3983fb394d803f7f6c37b0488cb6093ae348a",
+        "size_in_bytes": 3149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tagged.py",
+        "path_type": "hardlink",
+        "sha256": "bef9eac3676a03ee7e3c68bbc1fbcc983b438f24d129668b47f0965f853d7e5a",
+        "sha256_in_prefix": "bef9eac3676a03ee7e3c68bbc1fbcc983b438f24d129668b47f0965f853d7e5a",
+        "size_in_bytes": 3981
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tagged.pyc",
+        "path_type": "hardlink",
+        "sha256": "50173c38061680f4f48d15e7a1a863eeba40aa62168e4d42a2d128f261cdf441",
+        "sha256_in_prefix": "50173c38061680f4f48d15e7a1a863eeba40aa62168e4d42a2d128f261cdf441",
+        "size_in_bytes": 5443
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ce79cced6d1f249adcaf655b41e2382b31058228424d62b9da626170caba1df1",
+        "sha256_in_prefix": "ce79cced6d1f249adcaf655b41e2382b31058228424d62b9da626170caba1df1",
+        "size_in_bytes": 305
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "39ced3210c39a3a3f9f0962056ca0c9eea0be2ffe6f85e60136945d7ea4ee442",
+        "sha256_in_prefix": "39ced3210c39a3a3f9f0962056ca0c9eea0be2ffe6f85e60136945d7ea4ee442",
+        "size_in_bytes": 545
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "408993bc8e4a0d3d65955ea5ea65197988a34ef69f29b5714173caa0c0180c89",
+        "sha256_in_prefix": "408993bc8e4a0d3d65955ea5ea65197988a34ef69f29b5714173caa0c0180c89",
+        "size_in_bytes": 541
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "b80869429a321ce4001e7dbcf33e2def5d499259ecdeddf5ad4dcf9922ccd3db",
+        "sha256_in_prefix": "b80869429a321ce4001e7dbcf33e2def5d499259ecdeddf5ad4dcf9922ccd3db",
+        "size_in_bytes": 1370
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/complex.py",
+        "path_type": "hardlink",
+        "sha256": "c9eb1ad9e56a9dd2162a8dad0ab8f3116df97b6cdf974b9572bf3524bc0b9361",
+        "sha256_in_prefix": "c9eb1ad9e56a9dd2162a8dad0ab8f3116df97b6cdf974b9572bf3524bc0b9361",
+        "size_in_bytes": 708
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/complex.pyc",
+        "path_type": "hardlink",
+        "sha256": "747c7d09f8fdcc34e68e734acb5c6393bd237f22a9d3465c89a836a50d093711",
+        "sha256_in_prefix": "747c7d09f8fdcc34e68e734acb5c6393bd237f22a9d3465c89a836a50d093711",
+        "size_in_bytes": 1406
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/constant.py",
+        "path_type": "hardlink",
+        "sha256": "1de3cdb34728efe81204b364e1f46c137e321f42c9c057f945affb26aa13fa2f",
+        "sha256_in_prefix": "1de3cdb34728efe81204b364e1f46c137e321f42c9c057f945affb26aa13fa2f",
+        "size_in_bytes": 599
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/constant.pyc",
+        "path_type": "hardlink",
+        "sha256": "3dae0241fbf7832ac7db9bb88645d5ef761509245256d0cddd69d8f3f42a66cb",
+        "sha256_in_prefix": "3dae0241fbf7832ac7db9bb88645d5ef761509245256d0cddd69d8f3f42a66cb",
+        "size_in_bytes": 1709
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/ndarray.py",
+        "path_type": "hardlink",
+        "sha256": "c60f3a1ea9cee058fc4fc3c24864f00f5036a50bb3ccafae189ddf3c7727ce0b",
+        "sha256_in_prefix": "c60f3a1ea9cee058fc4fc3c24864f00f5036a50bb3ccafae189ddf3c7727ce0b",
+        "size_in_bytes": 21488
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/ndarray.pyc",
+        "path_type": "hardlink",
+        "sha256": "cfa3b4f37f3459dd73ca8b081f849f15fe19dc6c1fb6ec59cd0b7f74d605dad1",
+        "sha256_in_prefix": "cfa3b4f37f3459dd73ca8b081f849f15fe19dc6c1fb6ec59cd0b7f74d605dad1",
+        "size_in_bytes": 20238
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/table.py",
+        "path_type": "hardlink",
+        "sha256": "e3693c970bb42219afa120ad55852c77604c50b957c1cd87376cb751c99c0f05",
+        "sha256_in_prefix": "e3693c970bb42219afa120ad55852c77604c50b957c1cd87376cb751c99c0f05",
+        "size_in_bytes": 2594
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/table.pyc",
+        "path_type": "hardlink",
+        "sha256": "cc636015f1a39e914ddedfa7aa9392def445eafecc021f758d9bf940055fc831",
+        "sha256_in_prefix": "cc636015f1a39e914ddedfa7aa9392def445eafecc021f758d9bf940055fc831",
+        "size_in_bytes": 3745
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "e03246ed2fc311e971ea4e9199840b1c4ec31bda1caef50d08daba3ab5bfb418",
+        "sha256_in_prefix": "e03246ed2fc311e971ea4e9199840b1c4ec31bda1caef50d08daba3ab5bfb418",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/data/datatype-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "585d4873102cfb421fa1f15ca3ecb27f953ac91abfe1d173e3a44c8779868b64",
+        "sha256_in_prefix": "585d4873102cfb421fa1f15ca3ecb27f953ac91abfe1d173e3a44c8779868b64",
+        "size_in_bytes": 473
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/data/ndim-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "cebc7da13edc1ad0bbb8d9a23ce75295ad8c3ddc30d46580731ab1add202066e",
+        "sha256_in_prefix": "cebc7da13edc1ad0bbb8d9a23ce75295ad8c3ddc30d46580731ab1add202066e",
+        "size_in_bytes": 187
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "ceda9816429704d59d3f609c7dbd1b4c0d12bc8e36d61367986edff0f5a07eca",
+        "sha256_in_prefix": "ceda9816429704d59d3f609c7dbd1b4c0d12bc8e36d61367986edff0f5a07eca",
+        "size_in_bytes": 298
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "66cc9235e89f222126e1aae768095d8f9b3d916555b09410ff996a5f8061d94d",
+        "sha256_in_prefix": "66cc9235e89f222126e1aae768095d8f9b3d916555b09410ff996a5f8061d94d",
+        "size_in_bytes": 602
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_complex.py",
+        "path_type": "hardlink",
+        "sha256": "6f0bb161151b58f853bf78de3ed6b1be3f5de5e9de090bbe6791759140768c76",
+        "sha256_in_prefix": "6f0bb161151b58f853bf78de3ed6b1be3f5de5e9de090bbe6791759140768c76",
+        "size_in_bytes": 636
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_complex.pyc",
+        "path_type": "hardlink",
+        "sha256": "3b3df52e5d8acde988a2cad812165c6b3accbc389978b8ee48773aca36495d5e",
+        "sha256_in_prefix": "3b3df52e5d8acde988a2cad812165c6b3accbc389978b8ee48773aca36495d5e",
+        "size_in_bytes": 1296
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_history.py",
+        "path_type": "hardlink",
+        "sha256": "e3aacfd7ac874d418f9e172978cc49678e9bee5349cdde15e608f0412126b6ff",
+        "sha256_in_prefix": "e3aacfd7ac874d418f9e172978cc49678e9bee5349cdde15e608f0412126b6ff",
+        "size_in_bytes": 1076
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_history.pyc",
+        "path_type": "hardlink",
+        "sha256": "af17a4e1196568dd1ed7bbc52cf58959deb1c1b1e2aa7fd447d88261b3e68092",
+        "sha256_in_prefix": "af17a4e1196568dd1ed7bbc52cf58959deb1c1b1e2aa7fd447d88261b3e68092",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_ndarray.py",
+        "path_type": "hardlink",
+        "sha256": "fed719bef2d09232fcc218eefbec5ee459f57cbc2bb3a71c22bd58b955273295",
+        "sha256_in_prefix": "fed719bef2d09232fcc218eefbec5ee459f57cbc2bb3a71c22bd58b955273295",
+        "size_in_bytes": 21500
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_ndarray.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa3f36e3bf5737329252eccf1ac6c91b17f5f1f47ad358b1584084781dc740f9",
+        "sha256_in_prefix": "fa3f36e3bf5737329252eccf1ac6c91b17f5f1f47ad358b1584084781dc740f9",
+        "size_in_bytes": 27735
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_table.py",
+        "path_type": "hardlink",
+        "sha256": "87b6b3ff36cd657f9a8d0a4024206f9ab8a42a0299180405b90852e044a554fa",
+        "sha256_in_prefix": "87b6b3ff36cd657f9a8d0a4024206f9ab8a42a0299180405b90852e044a554fa",
+        "size_in_bytes": 4715
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/core/tests/test_table.pyc",
+        "path_type": "hardlink",
+        "sha256": "10755cc2242b23a58e2fdf8bae7ab9f910e98a4891c9ecbc521b5ecae7fa9d6f",
+        "sha256_in_prefix": "10755cc2242b23a58e2fdf8bae7ab9f910e98a4891c9ecbc521b5ecae7fa9d6f",
+        "size_in_bytes": 7664
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c8fdcf434f8901cf2d3c0faaf1731923d93c3ba1e114403a3028666b14ade881",
+        "sha256_in_prefix": "c8fdcf434f8901cf2d3c0faaf1731923d93c3ba1e114403a3028666b14ade881",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "c252e3b7e10f6a01b84d118072e35e8edec4178e73930b8846c2446f1decc6c0",
+        "sha256_in_prefix": "c252e3b7e10f6a01b84d118072e35e8edec4178e73930b8846c2446f1decc6c0",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/fits.py",
+        "path_type": "hardlink",
+        "sha256": "eb6038a8dde33d9ac4927250de4d8f249100b3da6a2c6efc5640494f8d0fe853",
+        "sha256_in_prefix": "eb6038a8dde33d9ac4927250de4d8f249100b3da6a2c6efc5640494f8d0fe853",
+        "size_in_bytes": 2819
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/fits.pyc",
+        "path_type": "hardlink",
+        "sha256": "465dc117df755ebef86c339592e7158f92dbf0d29f18e9f5073b073958d35dbf",
+        "sha256_in_prefix": "465dc117df755ebef86c339592e7158f92dbf0d29f18e9f5073b073958d35dbf",
+        "size_in_bytes": 3245
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "ee72ab6c80c81fb76fe4998fac2a2d521fc0799238cd0c57b15a7bab2c0ca2a0",
+        "sha256_in_prefix": "ee72ab6c80c81fb76fe4998fac2a2d521fc0799238cd0c57b15a7bab2c0ca2a0",
+        "size_in_bytes": 290
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "11f19f913b5670d868a5c232aecf6fe8ac8dc9f050a527211e00c7340d6b3ade",
+        "sha256_in_prefix": "11f19f913b5670d868a5c232aecf6fe8ac8dc9f050a527211e00c7340d6b3ade",
+        "size_in_bytes": 571
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5d2198c1f191f79f4005274bd6b6be435a01ad293b9098f7f8ec5e0b58825839",
+        "sha256_in_prefix": "5d2198c1f191f79f4005274bd6b6be435a01ad293b9098f7f8ec5e0b58825839",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/tests/data/complex.fits",
+        "path_type": "hardlink",
+        "sha256": "4d3c6729ea9adf0d3b375671a2e2093bc6649337dd9d122f9e7c0ce6686833c0",
+        "sha256_in_prefix": "4d3c6729ea9adf0d3b375671a2e2093bc6649337dd9d122f9e7c0ce6686833c0",
+        "size_in_bytes": 34560
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/tests/test_fits.py",
+        "path_type": "hardlink",
+        "sha256": "5eb8bf77f8e9f08a2e0e38cb354206a49eb5963f79e3ffe88c5c81e25209983b",
+        "sha256_in_prefix": "5eb8bf77f8e9f08a2e0e38cb354206a49eb5963f79e3ffe88c5c81e25209983b",
+        "size_in_bytes": 1154
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/fits/tests/test_fits.pyc",
+        "path_type": "hardlink",
+        "sha256": "c90a73e8c9d06e3834f184d48c349db77371f1b1a4404d75efd26e78b3e43ce6",
+        "sha256_in_prefix": "c90a73e8c9d06e3834f184d48c349db77371f1b1a4404d75efd26e78b3e43ce6",
+        "size_in_bytes": 2043
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6246a0d1ba1b64167022c343e6daebd21b95c2097006baa5cd0ba4bd23da28df",
+        "sha256_in_prefix": "6246a0d1ba1b64167022c343e6daebd21b95c2097006baa5cd0ba4bd23da28df",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "e6f1b414e3828dd9ba50128e5e9a27fe7d31891253621fbebae12fc4c3254132",
+        "sha256_in_prefix": "e6f1b414e3828dd9ba50128e5e9a27fe7d31891253621fbebae12fc4c3254132",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5d8a3dd9f2918eea684bf2a905fb0446c8fdefaafd6923feddc4f1ebf5c5c00d",
+        "sha256_in_prefix": "5d8a3dd9f2918eea684bf2a905fb0446c8fdefaafd6923feddc4f1ebf5c5c00d",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/tests/test_time.py",
+        "path_type": "hardlink",
+        "sha256": "df5d8f477e7dd16030b151401201f0cb8ba8cde09ffea04d64fd8411155b0ff8",
+        "sha256_in_prefix": "df5d8f477e7dd16030b151401201f0cb8ba8cde09ffea04d64fd8411155b0ff8",
+        "size_in_bytes": 4384
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/tests/test_time.pyc",
+        "path_type": "hardlink",
+        "sha256": "c3bfcd1a631dd698f2ccc618d57adfe015469f18031ba47f6cb6d97f52915b1a",
+        "sha256_in_prefix": "c3bfcd1a631dd698f2ccc618d57adfe015469f18031ba47f6cb6d97f52915b1a",
+        "size_in_bytes": 5504
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/time.py",
+        "path_type": "hardlink",
+        "sha256": "789f3e59c9c4f13a446d4887190f58750b9936356f3be09b7e56f5722dca1ec7",
+        "sha256_in_prefix": "789f3e59c9c4f13a446d4887190f58750b9936356f3be09b7e56f5722dca1ec7",
+        "size_in_bytes": 5091
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/time/time.pyc",
+        "path_type": "hardlink",
+        "sha256": "8238b2a783419d0ad39ddcb0ebf2f8dccd2dc3b2c32fdaf5facdd3da9e6135d5",
+        "sha256_in_prefix": "8238b2a783419d0ad39ddcb0ebf2f8dccd2dc3b2c32fdaf5facdd3da9e6135d5",
+        "size_in_bytes": 4508
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c4e6cc29ddbd65b473eea68fb2ce81dacc194ceca3f163da4b5d513c855e64f5",
+        "sha256_in_prefix": "c4e6cc29ddbd65b473eea68fb2ce81dacc194ceca3f163da4b5d513c855e64f5",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "05a2e8b7c2fe994eea78d98bc1999814093f2bc6fb99bf6298bda589d37a71e7",
+        "sha256_in_prefix": "05a2e8b7c2fe994eea78d98bc1999814093f2bc6fb99bf6298bda589d37a71e7",
+        "size_in_bytes": 461
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/basic.py",
+        "path_type": "hardlink",
+        "sha256": "9b766d54dfd62026e6f411de4a3c69eca2f55ffa4ac95bb2d3103169fa30c945",
+        "sha256_in_prefix": "9b766d54dfd62026e6f411de4a3c69eca2f55ffa4ac95bb2d3103169fa30c945",
+        "size_in_bytes": 5430
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/basic.pyc",
+        "path_type": "hardlink",
+        "sha256": "79a1303a57ed455a21a3c20e57941a83157b4bb4c81990cad6a991aad6e11805",
+        "sha256_in_prefix": "79a1303a57ed455a21a3c20e57941a83157b4bb4c81990cad6a991aad6e11805",
+        "size_in_bytes": 8397
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/compound.py",
+        "path_type": "hardlink",
+        "sha256": "8a0b8805c161b1ada4ddd59693ff884d93e09f99c277d02ad4c6bde0524209d4",
+        "sha256_in_prefix": "8a0b8805c161b1ada4ddd59693ff884d93e09f99c277d02ad4c6bde0524209d4",
+        "size_in_bytes": 4679
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/compound.pyc",
+        "path_type": "hardlink",
+        "sha256": "47985a8e556b9072a23ce718474b34aa4786214986a150f662c68aba0aa20bb9",
+        "sha256_in_prefix": "47985a8e556b9072a23ce718474b34aa4786214986a150f662c68aba0aa20bb9",
+        "size_in_bytes": 5534
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/polynomial.py",
+        "path_type": "hardlink",
+        "sha256": "64f9b0ac8c7c4bfaa3b3b636c4193b1b70c2fb812ed0abaa7545112c34fe86ad",
+        "sha256_in_prefix": "64f9b0ac8c7c4bfaa3b3b636c4193b1b70c2fb812ed0abaa7545112c34fe86ad",
+        "size_in_bytes": 4697
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/polynomial.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d4d4a347cc8d78269c1697a0b3b95ea8017bc1c516da3884d862cfc981f1b38",
+        "sha256_in_prefix": "6d4d4a347cc8d78269c1697a0b3b95ea8017bc1c516da3884d862cfc981f1b38",
+        "size_in_bytes": 5878
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/projections.py",
+        "path_type": "hardlink",
+        "sha256": "585d4b7a7f59076bd4d7eaf6d98eb1fe4e2c5441375e37b492a29eb2bdfc54db",
+        "sha256_in_prefix": "585d4b7a7f59076bd4d7eaf6d98eb1fe4e2c5441375e37b492a29eb2bdfc54db",
+        "size_in_bytes": 8714
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/projections.pyc",
+        "path_type": "hardlink",
+        "sha256": "146f12070003debb1e9e56f1fac838fb84a1447bc87e3cee794e92f01b1f503b",
+        "sha256_in_prefix": "146f12070003debb1e9e56f1fac838fb84a1447bc87e3cee794e92f01b1f503b",
+        "size_in_bytes": 10061
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/tabular.py",
+        "path_type": "hardlink",
+        "sha256": "02176c4decb476a91f792214f3e3c33287316204e30dcc7483a190c37e15f8b4",
+        "sha256_in_prefix": "02176c4decb476a91f792214f3e3c33287316204e30dcc7483a190c37e15f8b4",
+        "size_in_bytes": 3132
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/tabular.pyc",
+        "path_type": "hardlink",
+        "sha256": "2e7ecc5685226ee2335b2af78b7d565d670e47bb4738455bc3964e9bbf8e9274",
+        "sha256_in_prefix": "2e7ecc5685226ee2335b2af78b7d565d670e47bb4738455bc3964e9bbf8e9274",
+        "size_in_bytes": 3210
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "526fbb32b0d0dffb706e65f8010089a520302806690d1f3848ebc6bd0f889225",
+        "sha256_in_prefix": "526fbb32b0d0dffb706e65f8010089a520302806690d1f3848ebc6bd0f889225",
+        "size_in_bytes": 173
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/tests/test_transform.py",
+        "path_type": "hardlink",
+        "sha256": "e5422a7b7b8c07fc6b6bac2934df4a32f4d8b34fdf7c9cf46864195e4abc03c3",
+        "sha256_in_prefix": "e5422a7b7b8c07fc6b6bac2934df4a32f4d8b34fdf7c9cf46864195e4abc03c3",
+        "size_in_bytes": 4373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/transform/tests/test_transform.pyc",
+        "path_type": "hardlink",
+        "sha256": "09c3394ec930603f440400a15fa79b38febd564946bff14695cfda4389cd8ee0",
+        "sha256_in_prefix": "09c3394ec930603f440400a15fa79b38febd564946bff14695cfda4389cd8ee0",
+        "size_in_bytes": 6481
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6f98b36a6bb25c8494bcdee7e06fb3c8afeb69edcb9040c603b33dc84f320736",
+        "sha256_in_prefix": "6f98b36a6bb25c8494bcdee7e06fb3c8afeb69edcb9040c603b33dc84f320736",
+        "size_in_bytes": 235
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a5588ab656992daf8b0cf3fc80d0aa9e84fd8c73b4ef86c8f7f77bb155fe480",
+        "sha256_in_prefix": "5a5588ab656992daf8b0cf3fc80d0aa9e84fd8c73b4ef86c8f7f77bb155fe480",
+        "size_in_bytes": 427
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/quantity.py",
+        "path_type": "hardlink",
+        "sha256": "bbf646c39cc91acef632ee2ebbf995b39b6b33bf7d6624b6d0900bbd5668b32e",
+        "sha256_in_prefix": "bbf646c39cc91acef632ee2ebbf995b39b6b33bf7d6624b6d0900bbd5668b32e",
+        "size_in_bytes": 1283
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/quantity.pyc",
+        "path_type": "hardlink",
+        "sha256": "085c0d351ffd0db2c6ecd689d888d0be2944a2819497014c8fdb4ecd17597ca3",
+        "sha256_in_prefix": "085c0d351ffd0db2c6ecd689d888d0be2944a2819497014c8fdb4ecd17597ca3",
+        "size_in_bytes": 1939
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "054555ce53eea8c2c761da5438e9399ddfb61ec712dd6717fbe66fa396d86b81",
+        "sha256_in_prefix": "054555ce53eea8c2c761da5438e9399ddfb61ec712dd6717fbe66fa396d86b81",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/tests/test_quantity.py",
+        "path_type": "hardlink",
+        "sha256": "3fd6e4a6c73fde9027cc7ce91cdd9d277d2187b831e004945d76e19c988ca0df",
+        "sha256_in_prefix": "3fd6e4a6c73fde9027cc7ce91cdd9d277d2187b831e004945d76e19c988ca0df",
+        "size_in_bytes": 1990
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/tests/test_quantity.pyc",
+        "path_type": "hardlink",
+        "sha256": "33a51f31aa62892277b8fcb5be8c67bb6c57a80c37f88e9d2569d5a4dda399b8",
+        "sha256_in_prefix": "33a51f31aa62892277b8fcb5be8c67bb6c57a80c37f88e9d2569d5a4dda399b8",
+        "size_in_bytes": 3088
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/tests/test_unit.py",
+        "path_type": "hardlink",
+        "sha256": "b3ef56c3430adab880f8b23ec5510cdfb24bd8750a28ab20fc980b97cd6b5051",
+        "sha256_in_prefix": "b3ef56c3430adab880f8b23ec5510cdfb24bd8750a28ab20fc980b97cd6b5051",
+        "size_in_bytes": 743
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/tests/test_unit.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a5d87e12c51f016f99427ec754982ee4d15811e1f2da9656fbdaa743d086af2",
+        "sha256_in_prefix": "8a5d87e12c51f016f99427ec754982ee4d15811e1f2da9656fbdaa743d086af2",
+        "size_in_bytes": 1193
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/unit.py",
+        "path_type": "hardlink",
+        "sha256": "1ff258ebde4e8f10495a5101281c5816f5e3fb0284921352c1ead0491627ce4c",
+        "sha256_in_prefix": "1ff258ebde4e8f10495a5101281c5816f5e3fb0284921352c1ead0491627ce4c",
+        "size_in_bytes": 868
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/unit/unit.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a4d865df79d5278df2f22925e14c554735def30ee3831a56f82d4d182f82e78",
+        "sha256_in_prefix": "8a4d865df79d5278df2f22925e14c554735def30ee3831a56f82d4d182f82e78",
+        "size_in_bytes": 1571
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "08dc84eb36a1049740e588775be31e48a5c1d0c1991df6b19adb78c406cb85c7",
+        "sha256_in_prefix": "08dc84eb36a1049740e588775be31e48a5c1d0c1991df6b19adb78c406cb85c7",
+        "size_in_bytes": 192
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "14af187109537c05ec4facee40d22288363ba36a06ef737a04a3c33898c703f0",
+        "sha256_in_prefix": "14af187109537c05ec4facee40d22288363ba36a06ef737a04a3c33898c703f0",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "aae07bc667e09d1dc4022971c080abb7c7f1f9b908dfc5211e2feddb8b27e430",
+        "sha256_in_prefix": "aae07bc667e09d1dc4022971c080abb7c7f1f9b908dfc5211e2feddb8b27e430",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/tests/test_wcs.py",
+        "path_type": "hardlink",
+        "sha256": "4d360c10e61da5e0e90099bb7f5524ef047cbf665c6769290fb5bd1e24815039",
+        "sha256_in_prefix": "4d360c10e61da5e0e90099bb7f5524ef047cbf665c6769290fb5bd1e24815039",
+        "size_in_bytes": 8845
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/tests/test_wcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "c06ad1cc951d1d3aaebe8616c4340c190abd8d5ac27d07596e5244774fad371f",
+        "sha256_in_prefix": "c06ad1cc951d1d3aaebe8616c4340c190abd8d5ac27d07596e5244774fad371f",
+        "size_in_bytes": 8474
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/wcs.py",
+        "path_type": "hardlink",
+        "sha256": "7081a3afd6c6592faa535d7355700d2e5f45b7fa4cc152cea79d8ad53c794120",
+        "sha256_in_prefix": "7081a3afd6c6592faa535d7355700d2e5f45b7fa4cc152cea79d8ad53c794120",
+        "size_in_bytes": 12965
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tags/wcs/wcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "872ea197266114e6ba4fdf31287c02611c749824bd5beb42eeec226ad67760c1",
+        "sha256_in_prefix": "872ea197266114e6ba4fdf31287c02611c749824bd5beb42eeec226ad67760c1",
+        "size_in_bytes": 13954
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a254f2293f2e972c67cd6c532d5509ddd53ea0ec36a7a8b11e9f0bd7911a7528",
+        "sha256_in_prefix": "a254f2293f2e972c67cd6c532d5509ddd53ea0ec36a7a8b11e9f0bd7911a7528",
+        "size_in_bytes": 619
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "e80b148ff40b7b1f2a2d5fde0a39ed84d7935e89b2aba357af3d7beda2aef5f8",
+        "sha256_in_prefix": "e80b148ff40b7b1f2a2d5fde0a39ed84d7935e89b2aba357af3d7beda2aef5f8",
+        "size_in_bytes": 1211
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/coveragerc",
+        "path_type": "hardlink",
+        "sha256": "33e70c66e3e59797b9c2fb205f95fddebc0fbfb01c8104c01cd214b53d1f6149",
+        "sha256_in_prefix": "33e70c66e3e59797b9c2fb205f95fddebc0fbfb01c8104c01cd214b53d1f6149",
+        "size_in_bytes": 853
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/complex-42.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "32121dc419d3cca191e1c2d69b96f0c45046b54272ac54ffb740387406b51be3",
+        "sha256_in_prefix": "32121dc419d3cca191e1c2d69b96f0c45046b54272ac54ffb740387406b51be3",
+        "size_in_bytes": 138
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/custom-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a4bf3e98ec8af5c54b22cc513ba212cf63205e3757a0b90fdd0292e38d286d03",
+        "sha256_in_prefix": "a4bf3e98ec8af5c54b22cc513ba212cf63205e3757a0b90fdd0292e38d286d03",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/custom_flow-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "443932d3670668f5fba60234832908251dd6205f179ac554fe2968450216ee89",
+        "sha256_in_prefix": "443932d3670668f5fba60234832908251dd6205f179ac554fe2968450216ee89",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/custom_flow-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b0868b8d304eca177562b0712cd9e86d3b31b7d92b97cce739b22e646af4401f",
+        "sha256_in_prefix": "b0868b8d304eca177562b0712cd9e86d3b31b7d92b97cce739b22e646af4401f",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/custom_style-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "61f3ff57bfe9bbeaf26fec95f6846fe653a025175721b9ed3c2d60ca0980e926",
+        "sha256_in_prefix": "61f3ff57bfe9bbeaf26fec95f6846fe653a025175721b9ed3c2d60ca0980e926",
+        "size_in_bytes": 158
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/default-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "9726e3a18d999a6a94526cf2937498564e47e65ea17772491390938d57b615bb",
+        "sha256_in_prefix": "9726e3a18d999a6a94526cf2937498564e47e65ea17772491390938d57b615bb",
+        "size_in_bytes": 277
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/example_schema.json",
+        "path_type": "hardlink",
+        "sha256": "f866d25a5d46beb01d47898a64b73cd921558ac7ce15bdd63803aa6ad768b339",
+        "sha256_in_prefix": "f866d25a5d46beb01d47898a64b73cd921558ac7ce15bdd63803aa6ad768b339",
+        "size_in_bytes": 2203
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/fraction-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "a0beaccf69bf0b9d95a962db1b97d6fd0119b59d49acfcf6e478d319b22f93dc",
+        "sha256_in_prefix": "a0beaccf69bf0b9d95a962db1b97d6fd0119b59d49acfcf6e478d319b22f93dc",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/missing-1.1.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b235e6331570956fd749c1f1b5aff4f6c9be6057d9c3e67aa1caca56db407299",
+        "sha256_in_prefix": "b235e6331570956fd749c1f1b5aff4f6c9be6057d9c3e67aa1caca56db407299",
+        "size_in_bytes": 137
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/self_referencing-1.0.0.yaml",
+        "path_type": "hardlink",
+        "sha256": "b4612a07746581d00aa5c3a4dffb17d3e06bf38251592f98d51d4816b1c992f4",
+        "sha256_in_prefix": "b4612a07746581d00aa5c3a4dffb17d3e06bf38251592f98d51d4816b1c992f4",
+        "size_in_bytes": 183
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/data/version_mismatch.fits",
+        "path_type": "hardlink",
+        "sha256": "24b701f0a8256fd0341e6da22a68a87f6048f8931c1f2789b2c70ab519858cb1",
+        "sha256_in_prefix": "24b701f0a8256fd0341e6da22a68a87f6048f8931c1f2789b2c70ab519858cb1",
+        "size_in_bytes": 5760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "8fb2ce577ef3cafe627b16d94e4b6f7e6cfeb6da753c403155077661ff150d8d",
+        "sha256_in_prefix": "8fb2ce577ef3cafe627b16d94e4b6f7e6cfeb6da753c403155077661ff150d8d",
+        "size_in_bytes": 9258
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/helpers.pyc",
+        "path_type": "hardlink",
+        "sha256": "3c3426375f76c3960206ae411d4762b0363f9ec13798e51917b88d417b66be65",
+        "sha256_in_prefix": "3c3426375f76c3960206ae411d4762b0363f9ec13798e51917b88d417b66be65",
+        "size_in_bytes": 8781
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/httpserver.py",
+        "path_type": "hardlink",
+        "sha256": "135760ad3549c4c422dd4b30d39510b80cdb4d4c6bb96e75cf7c8ea5937f0bfa",
+        "sha256_in_prefix": "135760ad3549c4c422dd4b30d39510b80cdb4d4c6bb96e75cf7c8ea5937f0bfa",
+        "size_in_bytes": 1739
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/httpserver.pyc",
+        "path_type": "hardlink",
+        "sha256": "cc01efd65fdc08e6cb1daa3420b5367219a8b044da5cdb4f9957c08e56a89e1f",
+        "sha256_in_prefix": "cc01efd65fdc08e6cb1daa3420b5367219a8b044da5cdb4f9957c08e56a89e1f",
+        "size_in_bytes": 3079
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "c51ff4a7f7c5891921ff5af209036768a3d8c592cd9ec84507f2be69fdbcba7c",
+        "sha256_in_prefix": "c51ff4a7f7c5891921ff5af209036768a3d8c592cd9ec84507f2be69fdbcba7c",
+        "size_in_bytes": 344
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "5101a00da980893506532bf10a67f0305b4ce7b7e716b1a28ccf598a2b819342",
+        "sha256_in_prefix": "5101a00da980893506532bf10a67f0305b4ce7b7e716b1a28ccf598a2b819342",
+        "size_in_bytes": 628
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_asdf_schemas.py",
+        "path_type": "hardlink",
+        "sha256": "d7f03e36f022ffdedb5696c398947dc841963350d301e39bced83970eaa1faff",
+        "sha256_in_prefix": "d7f03e36f022ffdedb5696c398947dc841963350d301e39bced83970eaa1faff",
+        "size_in_bytes": 8373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_asdf_schemas.pyc",
+        "path_type": "hardlink",
+        "sha256": "e5c17a10ec8bb044c6a42d43005b4958b2b2c4c2a0b12245133a93e0925c546b",
+        "sha256_in_prefix": "e5c17a10ec8bb044c6a42d43005b4958b2b2c4c2a0b12245133a93e0925c546b",
+        "size_in_bytes": 9665
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_asdftypes.py",
+        "path_type": "hardlink",
+        "sha256": "af60d0b18e695a3d7a4e9704e5d1f256a48f486f2291fe10a2edc5bccb582539",
+        "sha256_in_prefix": "af60d0b18e695a3d7a4e9704e5d1f256a48f486f2291fe10a2edc5bccb582539",
+        "size_in_bytes": 19264
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_asdftypes.pyc",
+        "path_type": "hardlink",
+        "sha256": "24ebd9e5fe5e4a46325ad507a840cab945bfd94d0f500c6f50648aa1e4e47730",
+        "sha256_in_prefix": "24ebd9e5fe5e4a46325ad507a840cab945bfd94d0f500c6f50648aa1e4e47730",
+        "size_in_bytes": 26970
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_compression.py",
+        "path_type": "hardlink",
+        "sha256": "98552584084638738dd7d8fc494efaa8210987bca89f7be6468fc152177ca2cb",
+        "sha256_in_prefix": "98552584084638738dd7d8fc494efaa8210987bca89f7be6468fc152177ca2cb",
+        "size_in_bytes": 4964
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_compression.pyc",
+        "path_type": "hardlink",
+        "sha256": "48952fbf2cca784f86000afc016f53446d02202bc83ca9f1b21f495266a037f1",
+        "sha256_in_prefix": "48952fbf2cca784f86000afc016f53446d02202bc83ca9f1b21f495266a037f1",
+        "size_in_bytes": 6581
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_fits_embed.py",
+        "path_type": "hardlink",
+        "sha256": "26d1abe76582b49bc4422b0f58a7bbeed78d875bd07070983b0f5d07af2ee5d5",
+        "sha256_in_prefix": "26d1abe76582b49bc4422b0f58a7bbeed78d875bd07070983b0f5d07af2ee5d5",
+        "size_in_bytes": 9146
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_fits_embed.pyc",
+        "path_type": "hardlink",
+        "sha256": "f71f6eec364bcdcda8328fdaa448c6f29838506bf5497d0afdee9ad021daf9a6",
+        "sha256_in_prefix": "f71f6eec364bcdcda8328fdaa448c6f29838506bf5497d0afdee9ad021daf9a6",
+        "size_in_bytes": 8287
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_generic_io.py",
+        "path_type": "hardlink",
+        "sha256": "cb470801e3a2b440ae09ad68a68fb10fb6e803ffa7ab6b896519e6f11aa5af95",
+        "sha256_in_prefix": "cb470801e3a2b440ae09ad68a68fb10fb6e803ffa7ab6b896519e6f11aa5af95",
+        "size_in_bytes": 24882
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_generic_io.pyc",
+        "path_type": "hardlink",
+        "sha256": "3d45f30be8420f8f62cbf0e4948d1aff3e20a95be5ada933197ddf536f37492c",
+        "sha256_in_prefix": "3d45f30be8420f8f62cbf0e4948d1aff3e20a95be5ada933197ddf536f37492c",
+        "size_in_bytes": 30464
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_low_level.py",
+        "path_type": "hardlink",
+        "sha256": "6d41a0f7cc8954838401fc6d40efbf17d71c8026cd7f79d7758025fe5b525271",
+        "sha256_in_prefix": "6d41a0f7cc8954838401fc6d40efbf17d71c8026cd7f79d7758025fe5b525271",
+        "size_in_bytes": 32819
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_low_level.pyc",
+        "path_type": "hardlink",
+        "sha256": "6647ec874bc07add63e7157375392aafd328f1ab6a20d79b180415217194a3c2",
+        "sha256_in_prefix": "6647ec874bc07add63e7157375392aafd328f1ab6a20d79b180415217194a3c2",
+        "size_in_bytes": 36966
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_reference.py",
+        "path_type": "hardlink",
+        "sha256": "b2d34cdb5047c2abf13ad3b27559fa5020e6793ea7c6c8b43b64fe9455536b6f",
+        "sha256_in_prefix": "b2d34cdb5047c2abf13ad3b27559fa5020e6793ea7c6c8b43b64fe9455536b6f",
+        "size_in_bytes": 7471
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_reference.pyc",
+        "path_type": "hardlink",
+        "sha256": "d3cddf100bbfd9563c9f64fe54c468f1d3850402ac89714a1d6c7d861ee6de77",
+        "sha256_in_prefix": "d3cddf100bbfd9563c9f64fe54c468f1d3850402ac89714a1d6c7d861ee6de77",
+        "size_in_bytes": 6782
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_schema.py",
+        "path_type": "hardlink",
+        "sha256": "578e6a52ce9216fdd28ed5e2dd4ae4dc0054660efa4115c93cea6214aaab03ea",
+        "sha256_in_prefix": "578e6a52ce9216fdd28ed5e2dd4ae4dc0054660efa4115c93cea6214aaab03ea",
+        "size_in_bytes": 12041
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_schema.pyc",
+        "path_type": "hardlink",
+        "sha256": "2443b3d024e708e75598d5e1da700c2a28ea63f10282cb271e92c38a4b08df6f",
+        "sha256_in_prefix": "2443b3d024e708e75598d5e1da700c2a28ea63f10282cb271e92c38a4b08df6f",
+        "size_in_bytes": 18073
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_stream.py",
+        "path_type": "hardlink",
+        "sha256": "56a20ef6f035307bc3fb266d86e3d5b32ef8a45eda6dcc7c598fdc49abef671c",
+        "sha256_in_prefix": "56a20ef6f035307bc3fb266d86e3d5b32ef8a45eda6dcc7c598fdc49abef671c",
+        "size_in_bytes": 5503
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_stream.pyc",
+        "path_type": "hardlink",
+        "sha256": "2f3f068d075724f1f21f281b18d6066f89da1ade251738cde223a5aa1e6d8da2",
+        "sha256_in_prefix": "2f3f068d075724f1f21f281b18d6066f89da1ade251738cde223a5aa1e6d8da2",
+        "size_in_bytes": 7258
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_suite.py",
+        "path_type": "hardlink",
+        "sha256": "310e117c5863a73d2bedad99cabfc90e221488699603c04ab3ece2ea2098614c",
+        "sha256_in_prefix": "310e117c5863a73d2bedad99cabfc90e221488699603c04ab3ece2ea2098614c",
+        "size_in_bytes": 2904
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_suite.pyc",
+        "path_type": "hardlink",
+        "sha256": "b60b23fe64efedd5d1e6d40bf0185e7c31f88bb6c4b57b025f4ef99ec6c72129",
+        "sha256_in_prefix": "b60b23fe64efedd5d1e6d40bf0185e7c31f88bb6c4b57b025f4ef99ec6c72129",
+        "size_in_bytes": 3227
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_versioning.py",
+        "path_type": "hardlink",
+        "sha256": "803bacf4c7eb4dc8d27a55175761fed461db8490ac9468aeacd9106746f1a59e",
+        "sha256_in_prefix": "803bacf4c7eb4dc8d27a55175761fed461db8490ac9468aeacd9106746f1a59e",
+        "size_in_bytes": 7056
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_versioning.pyc",
+        "path_type": "hardlink",
+        "sha256": "4b25cc7c79bf279cd8fc29db65bacd9597f51f92880827ed1a19aa4d91cff069",
+        "sha256_in_prefix": "4b25cc7c79bf279cd8fc29db65bacd9597f51f92880827ed1a19aa4d91cff069",
+        "size_in_bytes": 10425
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_yaml.py",
+        "path_type": "hardlink",
+        "sha256": "f4ab0985922b0fc4a53924dc3c33a75f9522505296e7af77ead6c242de8b9dfe",
+        "sha256_in_prefix": "f4ab0985922b0fc4a53924dc3c33a75f9522505296e7af77ead6c242de8b9dfe",
+        "size_in_bytes": 4331
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/tests/test_yaml.pyc",
+        "path_type": "hardlink",
+        "sha256": "ab0a27d2570ecb0cc5da416ad3e31f72f9cd12cebcbc8907cab258c8b5802a3b",
+        "sha256_in_prefix": "ab0a27d2570ecb0cc5da416ad3e31f72f9cd12cebcbc8907cab258c8b5802a3b",
+        "size_in_bytes": 6430
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/treeutil.py",
+        "path_type": "hardlink",
+        "sha256": "8949032df436361f884dcd157df039466e0ff69944113cf7f2dd49bbeec4f80c",
+        "sha256_in_prefix": "8949032df436361f884dcd157df039466e0ff69944113cf7f2dd49bbeec4f80c",
+        "size_in_bytes": 4952
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/treeutil.pyc",
+        "path_type": "hardlink",
+        "sha256": "753e69f368c02ce8eaa141d5bcf19027e4ca148c80ef4057c10a18f839f862de",
+        "sha256_in_prefix": "753e69f368c02ce8eaa141d5bcf19027e4ca148c80ef4057c10a18f839f862de",
+        "size_in_bytes": 5006
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/util.py",
+        "path_type": "hardlink",
+        "sha256": "2057d827fc45b64dd0d2cac313e7742d1911817c549dc50302e2819a62cddafb",
+        "sha256_in_prefix": "2057d827fc45b64dd0d2cac313e7742d1911817c549dc50302e2819a62cddafb",
+        "size_in_bytes": 11122
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/util.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f99f95fb2672ac9e89ece440a56814c0d1c2e1dd734de324e33211340ef40e7",
+        "sha256_in_prefix": "3f99f95fb2672ac9e89ece440a56814c0d1c2e1dd734de324e33211340ef40e7",
+        "size_in_bytes": 13055
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/version.py",
+        "path_type": "hardlink",
+        "sha256": "154a63827883e9c2a1ccb05566e8ab072856d31286005e283ee9f84ff850c597",
+        "sha256_in_prefix": "154a63827883e9c2a1ccb05566e8ab072856d31286005e283ee9f84ff850c597",
+        "size_in_bytes": 7299
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "819a1bbb6680f5a47c29b5fc082b56079b08090b8c9bfa3e9a6eeeb963b61856",
+        "sha256_in_prefix": "819a1bbb6680f5a47c29b5fc082b56079b08090b8c9bfa3e9a6eeeb963b61856",
+        "size_in_bytes": 5842
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/versioning.py",
+        "path_type": "hardlink",
+        "sha256": "eb2246283acd65d9bb6fbacd54b5634c4a9adf00ed9ca51605c3cf6b427bd1e5",
+        "sha256_in_prefix": "eb2246283acd65d9bb6fbacd54b5634c4a9adf00ed9ca51605c3cf6b427bd1e5",
+        "size_in_bytes": 5530
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/versioning.pyc",
+        "path_type": "hardlink",
+        "sha256": "74ff98aff869616918a3980a9855ef158a9833f5bbf07030032819cb03fdd8b8",
+        "sha256_in_prefix": "74ff98aff869616918a3980a9855ef158a9833f5bbf07030032819cb03fdd8b8",
+        "size_in_bytes": 8026
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/yamlutil.py",
+        "path_type": "hardlink",
+        "sha256": "97d0ee2d4466b3b951a9aa2575280cf9cf57bcf3ce5ee1dca103d8ca587d2a1c",
+        "sha256_in_prefix": "97d0ee2d4466b3b951a9aa2575280cf9cf57bcf3ce5ee1dca103d8ca587d2a1c",
+        "size_in_bytes": 10927
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asdf/yamlutil.pyc",
+        "path_type": "hardlink",
+        "sha256": "d81fac2363040b41a388f2c9d237a317a6d6a066eb867e9225d722c88ab2382b",
+        "sha256_in_prefix": "d81fac2363040b41a388f2c9d237a317a6d6a066eb867e9225d722c88ab2382b",
+        "size_in_bytes": 11765
+      },
+      {
+        "_path": "lib/python2.7/site-packages/setuptools.pth",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4dc8bfb2a806d7992a779ea25871faf2738770046b90ed1564a66d7a694f3dab",
+        "sha256_in_prefix": "ba8ea53e107435912666fca2489648dbccbe8cdb59385b1ad03cbd6d9233efe4",
+        "size_in_bytes": 61
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 455386,
+  "subdir": "linux-64",
+  "timestamp": 1520977373268,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/asdf-1.3.3-py27_3.tar.bz2",
+  "version": "1.3.3"
+}

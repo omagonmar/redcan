@@ -1,0 +1,63 @@
+#$Header: /home/pros/xray/xspectral/RCS/counts_plot.par,v 11.0 1997/11/06 16:43:43 prosb Exp $
+#$Log: counts_plot.par,v $
+#Revision 11.0  1997/11/06 16:43:43  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:27:36  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:27:48  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:58:58  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/10/22  20:27:44  dennis
+#Added parameters for DSRI's HEPC1, LEPC1 instruments.
+#
+#Revision 6.0  93/05/24  16:46:20  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:47:07  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:25:51  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/04/07  16:04:03  prosb
+#jso - add min and max parameters for both HRI's.
+#
+#Revision 3.1  92/04/06  15:17:33  jmoran
+#JMORAN no changes
+#
+#Revision 3.0  91/08/02  01:52:39  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/12  14:41:13  prosb
+#jso - change for pset implementation
+#
+#Revision 2.0  91/03/06  22:54:37  pros
+#General Release 1.0
+#
+# photon plotting task parameters       
+ 
+pkgpars,pset,h,"",,,Spectral package parameters
+plot_title,s,h,"",,,plot title
+x_axis_title,s,h,"",,,x axis title
+y_axis_title,s,h,"",,,y axis title
+ipc_minimum_energy,r,h,0.1,,,minimum energy shown on plot
+ipc_maximum_energy,r,h,10.0,,,maximum energy shown on plot
+ein_hri_minimum_energy,r,h,0.1,,,minimum energy shown on plot
+ein_hri_maximum_energy,r,h,10.0,,,maximum energy shown on plot
+mpc_minimum_energy,r,h,1.0,,,minimum energy shown on plot
+mpc_maximum_energy,r,h,25.0,,,maximum energy shown on plot
+pspc_minimum_energy,r,h,0.1,,,minimum energy shown on plot
+pspc_maximum_energy,r,h,3.0,,,maximum energy shown on plot
+ros_hri_minimum_energy,r,h,0.1,,,minimum energy shown on plot
+ros_hri_maximum_energy,r,h,3.0,,,maximum energy shown on plot
+hepc1_minimum_energy,r,h,2.0,,,minimum energy shown on plot
+hepc1_maximum_energy,r,h,30.,,,maximum energy shown on plot
+lepc1_minimum_energy,r,h,0.2,,,minimum energy shown on plot
+lepc1_maximum_energy,r,h,8.,,,maximum energy shown on plot
+device,s,h,"stdgraph",,,output graphics device
+cursor,*gcur,h,"",,,Graphics cursor input

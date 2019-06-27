@@ -1,0 +1,95 @@
+.help gscfind Jan91 finder
+.ih
+NAME
+gscfind -- search the index of the GSC for regions overlapping a field
+.ih
+USAGE
+gscfind ra dec width
+.ih
+PARAMETERS
+.ls ra
+The right ascension of the field center in hours.
+.le
+.ls dec
+The declination of the field center in degrees.
+.le
+.ls width
+The width of the field in degrees.
+.le
+.ls north = "orion!/cdrom0"
+The directory name (and node) for the northern GSC CD (i.e., volume 1).
+.le
+.ls south = "orion!/cdrom1"
+The directory name (and node) for the southern GSC CD (i.e., volume 2).
+.le
+.ls index = "finder$index"
+The filename of the Space Telescope Guide Star Catalog index table.
+.le
+.ls verbose = no
+Print verbose output on the STDERR?
+.le
+.ls nregions = 0 [output]
+The number of regions found.  This is an output parameter.
+.le
+The following parameters should not normally need to be adjusted by
+the user.  These should ideally be maintained in a catalog description
+database.
+.ls region = "REG_NO"
+The region number column name.
+.le
+.ls rahlow = "RA_H_LOW"
+The lower limit  RA hours   column name.
+.le
+.ls ramlow = "RA_M_LOW"
+ "    "     "    RA minutes   "     "
+.le
+.ls raslow = "RA_S_LOW"
+ "    "     "       seconds   "     "
+.le
+.ls rahhi = "RA_H_HI"
+The upper limit  RA hours   column name.
+.le
+.ls ramhi = "RA_M_HI"
+ "    "     "    RA minutes   "     "
+.le
+.ls rashi = "RA_S_HI"
+ "    "     "    RA seconds   "     "
+.le
+.ls decsilow = "DECSI_LO"
+The lower limit Dec sign    column name
+.le
+.ls decdlow = "DEC_D_LO"
+ "    "     "   Dec degrees   "     "
+.le
+.ls decmlow = "DEC_M_LO"
+ "    "     "   Dec minutes   "     "
+.le
+.ls decsihi = "DECSI_HI"
+The upper limit Dec sign    column name
+.le
+.ls decdhi = "DEC_D_HI"
+ "    "     "   Dec degrees   "     "
+.le
+.ls decmhi = "DEC_M_HI"
+ "    "     "   Dec minutes   "     "
+.le
+.ih
+DESCRIPTION
+GSCFIND searches the Guide Star Catalog \fIindex\fR to locate
+individual region FITS tables with boundaries that overlap the
+field whose coordinates are specified by the \fIra\fR and \fIdec\fR
+parameters a field width specified by the \fIwidth\fR parameter.
+
+The task's output consists of a simple list of filenames
+preceded by the pathnames specified by the \fInorth\fP or \fIsouth\fR
+parameters, which are the mounted locations of the two GSC CDs.
+This list of filenames is suitable for input to the CDRFITS or
+STRFITS tasks.
+.ih
+EXAMPLES
+GSCFIND is typically not called directly by the user, but is
+rather used within a script such as the TFINDER task.
+.ih
+SEE ALSO
+CDRFITS, TFINDER, stsdas.fitsio.strfits
+.endhelp

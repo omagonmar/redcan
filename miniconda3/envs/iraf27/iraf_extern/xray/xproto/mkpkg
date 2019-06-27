@@ -1,0 +1,100 @@
+#$Header: /home/pros/xray/xproto/RCS/mkpkg,v 11.2 1998/04/24 16:14:22 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.2  1998/04/24 16:14:22  prosb
+#Patch Release 2.5.p1
+#
+#Revision 11.1  1998/02/25 18:45:43  prosb
+#JCC(1/27/98) - Add a new task: xexamine_r.
+#
+#Revision 11.0  1997/11/06 16:39:09  prosb
+#General Release 2.5
+#
+#Revision 9.1  1997/09/26 20:29:36  prosb
+#JCC(9/97) - move imdetect from xspatial to xproto.
+#
+#Revision 9.0  1995/11/16 19:26:16  prosb
+#General Release 2.4
+#
+# Revision 8.1  1994/07/15  14:28:52  chen
+# jchen - add the task "evalvg"
+#
+# Revision 8.0  94/06/27  17:25:22  prosb
+# General Release 2.3.1
+# 
+# Revision 7.2  94/05/20  13:54:01  janet
+# jd - removed qpgapmap ... moved to xdataio.
+# 
+# Revision 7.1  94/03/24  16:22:26  mo
+# JD/JCHEN	3/24/94		Add EVALVG task
+# 
+# Revision 7.0  93/12/27  18:50:28  prosb
+# General Release 2.3
+# 
+# Revision 6.2  93/12/22  17:42:57  mo
+# UPdate tasks
+# 
+# Revision 6.1  93/08/23  13:51:29  mo
+# MC	8/23/93		Add new task
+# 
+# Revision 6.0  93/05/24  16:43:06  prosb
+# General Release 2.2
+# 
+# Revision 5.1  93/05/22  20:53:02  mo
+# Mc	update with new tasks
+# 
+# Revision 5.0  92/10/29  22:39:16  prosb
+# General Release 2.1
+# 
+# Revision 4.1  92/10/23  09:52:24  mo
+# MC	10/24/92	Add new tasks
+# 
+# Revision 4.0  92/04/27  15:18:01  prosb
+# General Release 2.0:  April 1992
+# 
+# Revision 3.0  91/08/02  01:23:27  prosb
+# General Release 1.1
+# 
+#Initial revision
+#
+#       mkpkg for the xproto directory
+
+$call   relink
+$exit
+
+update:
+        $call relink
+        $call install
+        ;
+
+relink:
+# add libdet.a & libcolgen.a for imdetect
+#JCC(1/98)-add more libs(-lcurfit,-lds,-lstg) for xexamine_r
+#       $set LIBS = "-lpros -ltbtables -lstxtools"  
+        $set LIBS = "-lpros -ltbtables -lstxtools -lcurfit -lds -lstg"
+        $omake  x_xproto.x
+        $update libpkg.a
+        $update libdet.a
+        $update libcolgen.a
+        $omake  debug.x
+# $link  x_xproto.o debug.o  libpkg.a $(LIBS) -o xx_xproto.e
+$link x_xproto.o debug.o libdet.a libcolgen.a libpkg.a  ../xspatial/libspatial.a $(LIBS) -o xx_xproto.e
+        ;
+
+install:
+        $move   xx_xproto.e xraybin$x_xproto.e
+        ;
+
+libpkg.a:
+	@qpcalc
+	@wcsqpedit
+        @evalvg
+        @xexamine_r
+        ;
+
+libdet.a:
+        @imdetect
+        ;
+
+libcolgen.a:
+        @imdetect
+        ;

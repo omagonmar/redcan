@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+lib/fitsblender/__init__.py
+lib/fitsblender/blender.py
+lib/fitsblender/blendheaders.py
+lib/fitsblender/version.py
+lib/fitsblender.egg-info/PKG-INFO
+lib/fitsblender.egg-info/SOURCES.txt
+lib/fitsblender.egg-info/dependency_links.txt
+lib/fitsblender.egg-info/not-zip-safe
+lib/fitsblender.egg-info/top_level.txt
+lib/fitsblender/tests/__init__.py
+lib/fitsblender/tests/test.py

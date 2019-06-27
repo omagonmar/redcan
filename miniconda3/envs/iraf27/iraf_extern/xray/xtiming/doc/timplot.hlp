@@ -1,0 +1,230 @@
+#$Header: /home/pros/xray/xtiming/doc/RCS/timplot.hlp,v 11.0 1997/11/06 16:44:17 prosb Exp $
+#$Log: timplot.hlp,v $
+#Revision 11.0  1997/11/06 16:44:17  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:33:16  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:39:03  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/06/01  09:53:20  prosb
+#krm - updated last modified date.
+#
+#Revision 7.1  94/05/27  11:58:43  prosb
+#krm - removed example 2 ... the table file used did not produce a useful 
+#plot.
+#may want to replace it to show off the features ... didn't have time today.
+#
+#Revision 7.0  93/12/27  19:00:19  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/21  12:25:22  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:56:07  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:48:10  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:31:43  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/24  12:08:20  janet
+#revised for apr 92 release.
+#
+#Revision 3.0  91/08/02  02:00:50  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/03  14:38:31  prosb
+#xray.xtiming   7/3/91
+#
+#Revision 2.0  91/03/06  22:53:29  pros
+#General Release 1.0
+#
+.help timplot May94 xray.xtiming
+.ih
+NAME
+timplot - Make a strip plot of table stored timing data
+.ih
+USAGE
+timplot table ycolumn outplt
+.ih
+DESCRIPTION
+\fITIMPLOT\fR makes a plot of data stored in table format.  The
+parameters are set to reasonable default values but most of the values
+to customize a plot are available as hidden parameters.  Changes can
+be made to the range of data plotted along the x and y axis, number of
+strips that the data is plotted in, specified x and y data ranges, and
+font sizes. The default is to plot all of the rows in the input table
+file along with the entire column range from minimum to maximum value.
+The iraf IGS plot commands are available to the user to further
+expand, zoom, and query the plot.
+
+The input column names must be input as they appear in the file, and
+are plotted against the number of table rows.  Error bars are
+optional.  Outplt filename is only required when making a hardcopy.
+.ih
+PARAMETERS
+.ls table =		prompt = Input Table File
+
+Table file to be plotted.
+.le
+.ls column =		prompt = Plot data column name
+
+Column name of plot data.  The name must be input as it appears in the
+table.  The data corresponding to the column name is read from the
+table file and plotted.
+.le
+.ls outplt =		prompt = Plot output file
+
+Filename of output plot.  Required when parameter hdcopy is \fIyes\fR.
+This file is left in the user's directory after termination of this
+task.  It can be reprinted using the STPLOT package SGIKERN task.
+.le
+.ls (plot_type = "histo") [string]
+
+Type of plot, either \fIhisto\fR or \fIbar\fR.  If plot_type is
+"histo" a histogram of the column data will be plotted.  If the
+plot_type is "bar" the column data will be plotted as horizontal
+bars. Default is set to \fIhisto\fR.
+.le
+.ls (ecolumn = "") [string]
+
+Column name of error data to be plotted.  This is an option only if
+plot_type is "histo" and will appear as error bars on the graph.
+Ecolumn is the name of the error data associated with the column.
+The name must be input as it appears in the input table.
+.le
+.ls (plot_title = "") [string]
+
+Title for plot.
+.le
+.ls (x_title = "") [string]
+
+Title for X-axis.
+.le
+.ls (y_title = "") [string]
+
+Title for Y-axis.
+.le
+.ls (hdcopy = no) [boolean]
+
+\fIyes\fR prints a hardcopy of the plot to the printer and \fIno\fR
+displays the plot on the screen.  Default is set to \fIno\fR.
+.le
+.ls (gclose = no) [boolean]
+
+\fINo\fR leaves task in graphics window - type 'q' to quit.
+\fIYes\fR closes plot and returns to the cl.  Default is set to
+\fIno\fR.
+.le
+.ls (num_plots = 1) [int]
+
+Number of plot windows in which to display the data.  Data will be
+evenly divided among the specified number of windows.
+.le
+.ls (x_units = "bin") [string]
+
+X-axis label, either \fIbin\fR or \fIseconds\fR or \fIfreq\fR
+\fIphase\fR.  Default is \fIbin\fR.  Header parameters must be present 
+for \fIseconds\fR or \fIfreq\fR or \fIphase\fR to work.  x_units will 
+default to \fIbin\fR if header parameters are missing.
+.le
+.ls (x_tics = 4.) [real]
+
+Number of tic labels on x-axis.  This is the approximate number of tics and 
+corresponding labels along the x-axis.  The task chooses evenly spaced round
+numbers for labels and thus the actual number of labels may not be exactly 
+that which was chosen.
+.le
+.ls (y_tics = 4.) [real]
+
+Number of tic labels on y-axis.  This is the approximate number of tics and 
+corresponding labels along the y-axis.  The task chooses evenly spaced round
+numbers for labels and thus the actual number of labels may not be exactly 
+that which was chosen.
+.le
+.ls (label_size = 0.75) [real]
+
+Plotting Header and axis labels format size.  This is the size of the labels
+for the plot header and X & Y axis labels.  The format is set to a reasonable
+size.  Adjust this value by 1/10's to change the size of the labels.
+.le
+.ls (tlabel_size = 0.5) [real]
+
+Strip plot tic label format size.  This is the size of the labels
+on the axis tic marks.  Small adjustments to this value dramaticly affect 
+the size.  This value should be decreased slightly (by 1/10's) when the 
+number of plots is large and the labels run into adjoining plot windows.
+.le
+.ls (x_range = "auto") [string]
+
+Either \fIauto\fR which will plot entire file length or a \fIRange\fR 
+consisting of a min and max. (i.e. If plotting x_unit=BIN, then 
+x_range="10 200" will start the plot at bin 10 and end at 200.)  (Use 
+TIMPRINT to view table and choose range of values.)
+.le
+.ls (y_range = "auto") [string]
+
+Either \fIauto\fR which will plot the entire range of histogram values 
+or a \fIRange\fR consisting of a min and max value (i.e. y_range="0.5 2.9"),
+where the y-axis will be labelled and will display those points in the
+range (i.e. between 0.5 and 2.9 inclusive). 
+
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the plot file can be overwritten if 
+it already exists (i.e. postscript plot file).  Does not apply to window 
+graphics.  Used when \fIhardcopy\fR equals \fIyes\fR.
+.le
+.ls (cursor = "") [string]
+
+Stores cursor commands taken in interactive graphics mode.
+.le
+.ih
+EXAMPLES
+.nf
+Type `help ltcurv`, `help period` and `help fft` for information concerning
+input files.
+.fi
+
+1. Plot a histogram of the count rate of light curve table
+snr_ltc.tab.
+.nf
+
+	xt> timplot
+	Input Table File: snr_ltc
+	Plot data column name: ctrt
+
+.fi
+2. Plot the power density distribution table sumd_pwr.tab plotting npower
+vs. bin.  Increase the number of y_tics and x_tics to 8.  Close the plot
+window when finished.
+.nf
+
+	xt> timplot.x_tics=8
+	xt> timplot.y_tics=8
+	xt> timplot.gclose=yes
+	xt> timplot
+	Input Table File: sumd_pwr
+	Plot data column name: npower
+
+	xt>
+
+.fi
+3. As in example 2 only in command line format.
+.nf
+
+	xt> timplot "sumd_pwr" "npower" x_tics=8 y_tics=8 gclose+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+.endhelp

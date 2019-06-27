@@ -1,0 +1,5827 @@
+check out file `libnfe.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libnfe.a'
+warning: library `libnfe.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern ccdsection.x hdmflag.x hdrmap.x yrmmed.x yrmsorted.x
+ccdsection.x:
+   ccd_section:
+hdmflag.x:
+   hdmflag:
+hdrmap.x:
+   hdmopen:
+   hdmclose:
+   hdmwrite:
+   hdmname:
+   hdmpname:
+   hdmgdef:
+   hdmpdef:
+   hdmaccf:
+   hdmgstr:
+   hdmgetr:
+   hdmgeti:
+   hdmpstr:
+   hdmputi:
+   hdmputr:
+   hdmgstp:
+   hdmpstp:
+   hdmdelf:
+   hdmparam:
+yrmmed.x:
+   yrm_med:
+   yrm_gmed:
+   yrm_gdata:
+   yrm_open:
+   yrm_close:
+   yrm_pack:
+   yrm_unpack:
+   yanirs:
+   yrm_dump:
+yrmsorted.x:
+   yrmsorted:
+   yrms_open:
+   yrms_close:
+   yrms_dump:
+ccdsection.f:
+   ccdsen:
+hdmflag.f:
+   hdmflg:
+hdrmap.f:
+   hdmopn:
+   hdmcle:
+   hdmwre:
+   hdmnae:
+   hdmpne:
+   hdmgdf:
+   hdmpdf:
+   hdmacf:
+   hdmgsr:
+   hdmger:
+   hdmgei:
+   hdmpsr:
+   hdmpui:
+   hdmpur:
+   hdmgsp:
+   hdmpsp:
+   hdmdef:
+   hdmpam:
+yrmmed.f:
+   yrmmed:
+   yrmgmd:
+   yrmgda:
+   yrmopn:
+   yrmcle:
+   yrmpak:
+   yrmunk:
+   yanirs:
+   yrmdup:
+yrmsorted.f:
+   yrmsod:
+   yrmson:
+   yrmsce:
+   yrmsdp:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libnfe.a ccdsection.o hdmflag.o hdrmap.o yrmmed.o yrmsorted.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libnfe.a
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libnfe.a
+Updated 5 files in libnfe.a
+check file `libnfe.a' into `nfebin$'
+check out file `libacecat.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a'
+warning: library `libacecat.a' not found
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern tcsrdaryb.x tcsrdaryc.x tcsrdaryd.x tcsrdaryi.x tcsrdaryr.x tcsrdarys.x
+tcsrdaryb.x:
+   tcs_rdaryb:
+tcsrdaryc.x:
+   tcs_rdaryt:
+tcsrdaryd.x:
+   tcs_rdaryd:
+tcsrdaryi.x:
+   tcs_rdaryi:
+tcsrdaryr.x:
+   tcs_rdaryr:
+tcsrdarys.x:
+   tcs_rdarys:
+tcsrdaryb.f:
+   tcsrdb:
+tcsrdaryc.f:
+   tcsrdt:
+tcsrdaryd.f:
+   tcsrdd:
+tcsrdaryi.f:
+   tcsrdi:
+tcsrdaryr.f:
+   tcsrdr:
+tcsrdarys.f:
+   tcsrds:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a tcsrdaryb.o tcsrdaryc.o tcsrdaryd.o tcsrdaryi.o tcsrdaryr.o tcsrdarys.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern omniread.x rdselect.x rst.x selrows.x tcsaddcol.x tcsclose.x tcscolumn.x tcsintinfo.x tcslinesize.x tcsopen.x tcsshape.x tcstotsize.x tcstxtinfo.x tbcga.x tbcnel.x trsclose.x trseval.x trsgencode.x trsopen.x trsrows.x trstree.x trstrim.x whatfile.x
+omniread.x:
+   omniread:
+   omniproject:
+   om_error:
+   om_projim:
+   om_projtab:
+   om_rdarray:
+   om_rdimage:
+   om_rdscalar:
+   om_rdtable:
+rdselect.x:
+   rdselect:
+   nextbrak:
+rst.x:
+   rst_addtab:
+   rst_addval:
+   rst_and:
+   rst_copy:
+   rst_create:
+   rst_deltab:
+   rst_delval:
+   rst_free:
+   rst_inset:
+   rst_nelem:
+   rst_not:
+   rst_or:
+   rst_rownum:
+   rst_show:
+   rst_addrange:
+   rst_concat:
+   rst_findloc:
+   rst_notail:
+   rst_tail:
+selrows.x:
+   selrows:
+tcsaddcol.x:
+   tcs_addcol:
+tcsclose.x:
+   tcs_close:
+tcscolumn.x:
+   tcs_column:
+tcsintinfo.x:
+   tcs_intinfo:
+tcslinesize.x:
+   tcs_linesize:
+tcsopen.x:
+   tcs_open:
+   tcs_token:
+   tcs_breakname:
+   tcs_hasmeta:
+   tcs_patmatch:
+   tcs_strmatch:
+   tcs_fillstruct:
+   tcs_getsect:
+   tcs_allcols:
+   tcs_invert:
+tcsshape.x:
+   tcs_shape:
+tcstotsize.x:
+   tcs_totsize:
+tcstxtinfo.x:
+   tcs_txtinfo:
+tbcga.x:
+   tbcgad:
+   tbcgar:
+tbcnel.x:
+   tbcnel:
+   tbcnel1:
+trsclose.x:
+   trsclose:
+trseval.x:
+   trseval:
+   trscalc:
+   trsgetd:
+   trsgett:
+trsgencode.x:
+   trsgencode:
+   trshasrow:
+   trsoptimize:
+   trsputcode:
+   trsputjump:
+   trsroweval:
+   trsvalue:
+trsopen.x:
+   trsopen:
+   trsaddnode:
+   trscname:
+   trscnum:
+   trserr:
+   trsinit:
+   trslex:
+   trsnextch:
+   trstok:
+   yyparse:
+trsrows.x:
+   trsrows:
+trstree.x:
+   trs_col_tree:
+   trs_first_tree:
+   trs_next_tree:
+   trs_over_tree:
+   trs_snip_tree:
+   trs_under_tree:
+   trs_xcg_tree:
+trstrim.x:
+   trstrim:
+whatfile.x:
+   whatfile:
+   is_image:
+omniread.f:
+   omnird:
+   omnipt:
+   omerrr:
+   omprom:
+   omprob:
+   omrday:
+   omrdie:
+   omrdsr:
+   omrdte:
+rdselect.f:
+   rdselt:
+   nextbk:
+rst.f:
+   rstadb:
+   rstadl:
+   rstand:
+   rstcoy:
+   rstcre:
+   rstdeb:
+   rstdel:
+   rstfre:
+   rstint:
+   rstnem:
+   rstnot:
+   rstor:
+   rstrom:
+   rstshw:
+   rstade:
+   rstcot:
+   rstfic:
+   rstnol:
+   rsttal:
+selrows.f:
+   selros:
+tcsaddcol.f:
+   tcsadl:
+tcsclose.f:
+   tcscle:
+tcscolumn.f:
+   tcscon:
+tcsintinfo.f:
+   tcsino:
+tcslinesize.f:
+   tcslie:
+tcsopen.f:
+   tcsopn:
+   tcston:
+   tcsbre:
+   tcshaa:
+   tcspah:
+   tcssth:
+   tcsfit:
+   tcsget:
+   tcsals:
+   tcsint:
+tcsshape.f:
+   tcsshe:
+tcstotsize.f:
+   tcstoe:
+tcstxtinfo.f:
+   tcstxo:
+tbcga.f:
+   tbcgad:
+   tbcgar:
+tbcnel.f:
+   tbcnel:
+   tbcne1:
+trsclose.f:
+   trscle:
+trseval.f:
+   trsevl:
+   trscac:
+   trsged:
+   trsget:
+trsgencode.f:
+   trsgee:
+   trshaw:
+   trsope:
+   trspue:
+   trspup:
+   trsrol:
+   trsvae:
+trsopen.f:
+   trsopn:
+   trsade:
+   trscne:
+   trscnm:
+   trserr:
+   trsint:
+   trslex:
+   trsneh:
+   trstok:
+   trspae:
+trsrows.f:
+   trsros:
+trstree.f:
+   trscoe:
+   trsfie:
+   trsnee:
+   trsove:
+   trssne:
+   trsune:
+   trsxce:
+trstrim.f:
+   trstrm:
+whatfile.f:
+   whatfe:
+   isimae:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a omniread.o rdselect.o rst.o selrows.o tcsaddcol.o tcsclose.o tcscolumn.o tcsintinfo.o tcslinesize.o tcsopen.o tcsshape.o tcstotsize.o tcstxtinfo.o tbcga.o tbcnel.o trsclose.o trseval.o trsgencode.o trsopen.o trsrows.o trstree.o trstrim.o whatfile.o
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern fsadef.x fsarch.x fsasfm.x fsbdef.x fsbnfm.x fsclos.x fscmps.x fscmsg.x fscopy.x fscpdt.x fscrhd.x fsdcol.x fsddef.x fsdelt.x fsdhdu.x fsdkey.x fsdrec.x fsdrow.x fsdsum.x fsdtyp.x fsesum.x fsfiou.x fsg2db.x fsg2dd.x fsg2de.x fsg2di.x fsg2dj.x fsg3db.x fsg3dd.x fsg3de.x fsg3di.x fsg3dj.x fsgabc.x fsgacl.x fsgbcl.x fsgcfb.x fsgcfc.x fsgcfd.x fsgcfe.x fsgcfi.x fsgcfj.x fsgcfl.x fsgcfm.x fsgcfs.x fsgcks.x fsgcl.x fsgcnn.x fsgcno.x fsgcrd.x fsgcvb.x fsgcvc.x fsgcvd.x fsgcve.x fsgcvi.x fsgcvj.x fsgcvm.x fsgcvs.x fsgcx.x fsgcxd.x fsgcxi.x fsgcxj.x fsgdes.x fsgerr.x fsggpb.x fsggpd.x fsggpe.x fsggpi.x fsggpj.x fsghad.x fsghbn.x fsghdn.x fsghpr.x fsghps.x fsghsp.x fsghtb.x fsgics.x fsgiou.x fsgkey.x fsgknd.x fsgkne.x fsgknj.x fsgknl.x fsgkns.x fsgkyd.x fsgkye.x fsgkyj.x fsgkyl.x fsgkyn.x fsgkys.x fsgkyt.x fsgmsg.x fsgpfb.x fsgpfd.x fsgpfe.x fsgpfi.x fsgpfj.x fsgpvb.x fsgpvd.x fsgpve.x fsgpvi.x fsgpvj.x fsgrec.x fsgrsz.x fsgsdt.x fsgsfb.x fsgsfd.x fsgsfe.x fsgsfi.x fsgsfj.x fsgsvb.x fsgsvd.x fsgsve.x fsgsvi.x fsgsvj.x fsgtbb.x fsgtbs.x fsgtcl.x fsgtcs.x fsgtdm.x fsgthd.x fshdef.x fsibin.x fsicol.x fsiimg.x fsikyd.x fsikye.x fsikyf.x fsikyg.x fsikyj.x fsikyl.x fsikys.x fsinit.x fsirec.x fsirow.x fsitab.x fskeyn.x fsmahd.x fsmcom.x fsmcrd.x fsmkyd.x fsmkye.x fsmkyf.x fsmkyg.x fsmkyj.x fsmkyl.x fsmkys.x fsmnam.x fsmrec.x fsmrhd.x fsnkey.x fsopen.x fsp2db.x fsp2dd.x fsp2de.x fsp2di.x fsp2dj.x fsp3db.x fsp3dd.x fsp3de.x fsp3di.x fsp3dj.x fspcks.x fspclb.x fspclc.x fspcld.x fspcle.x fspcli.x fspclj.x fspcll.x fspclm.x fspcls.x fspclu.x fspclx.x fspcnb.x fspcnd.x fspcne.x fspcni.x fspcnj.x fspcom.x fspdat.x fspdef.x fspdes.x fspgpb.x fspgpd.x fspgpe.x fspgpi.x fspgpj.x fsphbn.x fsphis.x fsphpr.x fsphtb.x fspkls.x fspknd.x fspkne.x fspknf.x fspkng.x fspknj.x fspknl.x fspkns.x fspkyd.x fspkye.x fspkyf.x fspkyg.x fspkyj.x fspkyl.x fspkys.x fspkyt.x fsplsw.x fspmsg.x fspnul.x fsppnb.x fsppnd.x fsppne.x
+fsadef.x:
+   fsadef:
+fsarch.x:
+   fsarch:
+fsasfm.x:
+   fsasfm:
+fsbdef.x:
+   fsbdef:
+fsbnfm.x:
+   fsbnfm:
+fsclos.x:
+   fsclos:
+fscmps.x:
+   fscmps:
+fscmsg.x:
+   fscmsg:
+fscopy.x:
+   fscopy:
+fscpdt.x:
+   fscpdt:
+fscrhd.x:
+   fscrhd:
+fsdcol.x:
+   fsdcol:
+fsddef.x:
+   fsddef:
+fsdelt.x:
+   fsdelt:
+fsdhdu.x:
+   fsdhdu:
+fsdkey.x:
+   fsdkey:
+fsdrec.x:
+   fsdrec:
+fsdrow.x:
+   fsdrow:
+fsdsum.x:
+   fsdsum:
+fsdtyp.x:
+   fsdtyp:
+fsesum.x:
+   fsesum:
+fsfiou.x:
+   fsfiou:
+fsg2db.x:
+   fsg2db:
+fsg2dd.x:
+   fsg2dd:
+fsg2de.x:
+   fsg2de:
+fsg2di.x:
+   fsg2di:
+fsg2dj.x:
+   fsg2dj:
+fsg3db.x:
+   fsg3db:
+fsg3dd.x:
+   fsg3dd:
+fsg3de.x:
+   fsg3de:
+fsg3di.x:
+   fsg3di:
+fsg3dj.x:
+   fsg3dj:
+fsgabc.x:
+   fsgabc:
+fsgacl.x:
+   fsgacl:
+fsgbcl.x:
+   fsgbcl:
+fsgcfb.x:
+   fsgcfb:
+fsgcfc.x:
+   fsgcfc:
+fsgcfd.x:
+   fsgcfd:
+fsgcfe.x:
+   fsgcfe:
+fsgcfi.x:
+   fsgcfi:
+fsgcfj.x:
+   fsgcfj:
+fsgcfl.x:
+   fsgcfl:
+fsgcfm.x:
+   fsgcfm:
+fsgcfs.x:
+   fsgcfs:
+fsgcks.x:
+   fsgcks:
+fsgcl.x:
+   fsgcl:
+fsgcnn.x:
+   fsgcnn:
+fsgcno.x:
+   fsgcno:
+fsgcrd.x:
+   fsgcrd:
+fsgcvb.x:
+   fsgcvb:
+fsgcvc.x:
+   fsgcvc:
+fsgcvd.x:
+   fsgcvd:
+fsgcve.x:
+   fsgcve:
+fsgcvi.x:
+   fsgcvi:
+fsgcvj.x:
+   fsgcvj:
+fsgcvm.x:
+   fsgcvm:
+fsgcvs.x:
+   fsgcvs:
+fsgcx.x:
+   fsgcx:
+fsgcxd.x:
+   fsgcxd:
+fsgcxi.x:
+   fsgcxi:
+fsgcxj.x:
+   fsgcxj:
+fsgdes.x:
+   fsgdes:
+fsgerr.x:
+   fsgerr:
+fsggpb.x:
+   fsggpb:
+fsggpd.x:
+   fsggpd:
+fsggpe.x:
+   fsggpe:
+fsggpi.x:
+   fsggpi:
+fsggpj.x:
+   fsggpj:
+fsghad.x:
+   fsghad:
+fsghbn.x:
+   fsghbn:
+fsghdn.x:
+   fsghdn:
+fsghpr.x:
+   fsghpr:
+fsghps.x:
+   fsghps:
+fsghsp.x:
+   fsghsp:
+fsghtb.x:
+   fsghtb:
+fsgics.x:
+   fsgics:
+fsgiou.x:
+   fsgiou:
+fsgkey.x:
+   fsgkey:
+fsgknd.x:
+   fsgknd:
+fsgkne.x:
+   fsgkne:
+fsgknj.x:
+   fsgknj:
+fsgknl.x:
+   fsgknl:
+fsgkns.x:
+   fsgkns:
+fsgkyd.x:
+   fsgkyd:
+fsgkye.x:
+   fsgkye:
+fsgkyj.x:
+   fsgkyj:
+fsgkyl.x:
+   fsgkyl:
+fsgkyn.x:
+   fsgkyn:
+fsgkys.x:
+   fsgkys:
+fsgkyt.x:
+   fsgkyt:
+fsgmsg.x:
+   fsgmsg:
+fsgpfb.x:
+   fsgpfb:
+fsgpfd.x:
+   fsgpfd:
+fsgpfe.x:
+   fsgpfe:
+fsgpfi.x:
+   fsgpfi:
+fsgpfj.x:
+   fsgpfj:
+fsgpvb.x:
+   fsgpvb:
+fsgpvd.x:
+   fsgpvd:
+fsgpve.x:
+   fsgpve:
+fsgpvi.x:
+   fsgpvi:
+fsgpvj.x:
+   fsgpvj:
+fsgrec.x:
+   fsgrec:
+fsgrsz.x:
+   fsgrsz:
+fsgsdt.x:
+   fsgsdt:
+fsgsfb.x:
+   fsgsfb:
+fsgsfd.x:
+   fsgsfd:
+fsgsfe.x:
+   fsgsfe:
+fsgsfi.x:
+   fsgsfi:
+fsgsfj.x:
+   fsgsfj:
+fsgsvb.x:
+   fsgsvb:
+fsgsvd.x:
+   fsgsvd:
+fsgsve.x:
+   fsgsve:
+fsgsvi.x:
+   fsgsvi:
+fsgsvj.x:
+   fsgsvj:
+fsgtbb.x:
+   fsgtbb:
+fsgtbs.x:
+   fsgtbs:
+fsgtcl.x:
+   fsgtcl:
+fsgtcs.x:
+   fsgtcs:
+fsgtdm.x:
+   fsgtdm:
+fsgthd.x:
+   fsgthd:
+fshdef.x:
+   fshdef:
+fsibin.x:
+   fsibin:
+fsicol.x:
+   fsicol:
+fsiimg.x:
+   fsiimg:
+fsikyd.x:
+   fsikyd:
+fsikye.x:
+   fsikye:
+fsikyf.x:
+   fsikyf:
+fsikyg.x:
+   fsikyg:
+fsikyj.x:
+   fsikyj:
+fsikyl.x:
+   fsikyl:
+fsikys.x:
+   fsikys:
+fsinit.x:
+   fsinit:
+fsirec.x:
+   fsirec:
+fsirow.x:
+   fsirow:
+fsitab.x:
+   fsitab:
+fskeyn.x:
+   fskeyn:
+fsmahd.x:
+   fsmahd:
+fsmcom.x:
+   fsmcom:
+fsmcrd.x:
+   fsmcrd:
+fsmkyd.x:
+   fsmkyd:
+fsmkye.x:
+   fsmkye:
+fsmkyf.x:
+   fsmkyf:
+fsmkyg.x:
+   fsmkyg:
+fsmkyj.x:
+   fsmkyj:
+fsmkyl.x:
+   fsmkyl:
+fsmkys.x:
+   fsmkys:
+fsmnam.x:
+   fsmnam:
+fsmrec.x:
+   fsmrec:
+fsmrhd.x:
+   fsmrhd:
+fsnkey.x:
+   fsnkey:
+fsopen.x:
+   fsopen:
+fsp2db.x:
+   fsp2db:
+fsp2dd.x:
+   fsp2dd:
+fsp2de.x:
+   fsp2de:
+fsp2di.x:
+   fsp2di:
+fsp2dj.x:
+   fsp2dj:
+fsp3db.x:
+   fsp3db:
+fsp3dd.x:
+   fsp3dd:
+fsp3de.x:
+   fsp3de:
+fsp3di.x:
+   fsp3di:
+fsp3dj.x:
+   fsp3dj:
+fspcks.x:
+   fspcks:
+fspclb.x:
+   fspclb:
+fspclc.x:
+   fspclc:
+fspcld.x:
+   fspcld:
+fspcle.x:
+   fspcle:
+fspcli.x:
+   fspcli:
+fspclj.x:
+   fspclj:
+fspcll.x:
+   fspcll:
+fspclm.x:
+   fspclm:
+fspcls.x:
+   fspcls:
+fspclu.x:
+   fspclu:
+fspclx.x:
+   fspclx:
+fspcnb.x:
+   fspcnb:
+fspcnd.x:
+   fspcnd:
+fspcne.x:
+   fspcne:
+fspcni.x:
+   fspcni:
+fspcnj.x:
+   fspcnj:
+fspcom.x:
+   fspcom:
+fspdat.x:
+   fspdat:
+fspdef.x:
+   fspdef:
+fspdes.x:
+   fspdes:
+fspgpb.x:
+   fspgpb:
+fspgpd.x:
+   fspgpd:
+fspgpe.x:
+   fspgpe:
+fspgpi.x:
+   fspgpi:
+fspgpj.x:
+   fspgpj:
+fsphbn.x:
+   fsphbn:
+fsphis.x:
+   fsphis:
+fsphpr.x:
+   fsphpr:
+fsphtb.x:
+   fsphtb:
+fspkls.x:
+   fspkls:
+fspknd.x:
+   fspknd:
+fspkne.x:
+   fspkne:
+fspknf.x:
+   fspknf:
+fspkng.x:
+   fspkng:
+fspknj.x:
+   fspknj:
+fspknl.x:
+   fspknl:
+fspkns.x:
+   fspkns:
+fspkyd.x:
+   fspkyd:
+fspkye.x:
+   fspkye:
+fspkyf.x:
+   fspkyf:
+fspkyg.x:
+   fspkyg:
+fspkyj.x:
+   fspkyj:
+fspkyl.x:
+   fspkyl:
+fspkys.x:
+   fspkys:
+fspkyt.x:
+   fspkyt:
+fsplsw.x:
+   fsplsw:
+fspmsg.x:
+   fspmsg:
+fspnul.x:
+   fspnul:
+fsppnb.x:
+   fsppnb:
+fsppnd.x:
+   fsppnd:
+fsppne.x:
+   fsppne:
+fsadef.f:
+   fsadef:
+fsarch.f:
+   fsarch:
+fsasfm.f:
+   fsasfm:
+fsbdef.f:
+   fsbdef:
+fsbnfm.f:
+   fsbnfm:
+fsclos.f:
+   fsclos:
+fscmps.f:
+   fscmps:
+fscmsg.f:
+   fscmsg:
+fscopy.f:
+   fscopy:
+fscpdt.f:
+   fscpdt:
+fscrhd.f:
+   fscrhd:
+fsdcol.f:
+   fsdcol:
+fsddef.f:
+   fsddef:
+fsdelt.f:
+   fsdelt:
+fsdhdu.f:
+   fsdhdu:
+fsdkey.f:
+   fsdkey:
+fsdrec.f:
+   fsdrec:
+fsdrow.f:
+   fsdrow:
+fsdsum.f:
+   fsdsum:
+fsdtyp.f:
+   fsdtyp:
+fsesum.f:
+   fsesum:
+fsfiou.f:
+   fsfiou:
+fsg2db.f:
+   fsg2db:
+fsg2dd.f:
+   fsg2dd:
+fsg2de.f:
+   fsg2de:
+fsg2di.f:
+   fsg2di:
+fsg2dj.f:
+   fsg2dj:
+fsg3db.f:
+   fsg3db:
+fsg3dd.f:
+   fsg3dd:
+fsg3de.f:
+   fsg3de:
+fsg3di.f:
+   fsg3di:
+fsg3dj.f:
+   fsg3dj:
+fsgabc.f:
+   fsgabc:
+fsgacl.f:
+   fsgacl:
+fsgbcl.f:
+   fsgbcl:
+fsgcfb.f:
+   fsgcfb:
+fsgcfc.f:
+   fsgcfc:
+fsgcfd.f:
+   fsgcfd:
+fsgcfe.f:
+   fsgcfe:
+fsgcfi.f:
+   fsgcfi:
+fsgcfj.f:
+   fsgcfj:
+fsgcfl.f:
+   fsgcfl:
+fsgcfm.f:
+   fsgcfm:
+fsgcfs.f:
+   fsgcfs:
+fsgcks.f:
+   fsgcks:
+fsgcl.f:
+   fsgcl:
+fsgcnn.f:
+   fsgcnn:
+fsgcno.f:
+   fsgcno:
+fsgcrd.f:
+   fsgcrd:
+fsgcvb.f:
+   fsgcvb:
+fsgcvc.f:
+   fsgcvc:
+fsgcvd.f:
+   fsgcvd:
+fsgcve.f:
+   fsgcve:
+fsgcvi.f:
+   fsgcvi:
+fsgcvj.f:
+   fsgcvj:
+fsgcvm.f:
+   fsgcvm:
+fsgcvs.f:
+   fsgcvs:
+fsgcx.f:
+   fsgcx:
+fsgcxd.f:
+   fsgcxd:
+fsgcxi.f:
+   fsgcxi:
+fsgcxj.f:
+   fsgcxj:
+fsgdes.f:
+   fsgdes:
+fsgerr.f:
+   fsgerr:
+fsggpb.f:
+   fsggpb:
+fsggpd.f:
+   fsggpd:
+fsggpe.f:
+   fsggpe:
+fsggpi.f:
+   fsggpi:
+fsggpj.f:
+   fsggpj:
+fsghad.f:
+   fsghad:
+fsghbn.f:
+   fsghbn:
+fsghdn.f:
+   fsghdn:
+fsghpr.f:
+   fsghpr:
+fsghps.f:
+   fsghps:
+fsghsp.f:
+   fsghsp:
+fsghtb.f:
+   fsghtb:
+fsgics.f:
+   fsgics:
+fsgiou.f:
+   fsgiou:
+fsgkey.f:
+   fsgkey:
+fsgknd.f:
+   fsgknd:
+fsgkne.f:
+   fsgkne:
+fsgknj.f:
+   fsgknj:
+fsgknl.f:
+   fsgknl:
+fsgkns.f:
+   fsgkns:
+fsgkyd.f:
+   fsgkyd:
+fsgkye.f:
+   fsgkye:
+fsgkyj.f:
+   fsgkyj:
+fsgkyl.f:
+   fsgkyl:
+fsgkyn.f:
+   fsgkyn:
+fsgkys.f:
+   fsgkys:
+fsgkyt.f:
+   fsgkyt:
+fsgmsg.f:
+   fsgmsg:
+fsgpfb.f:
+   fsgpfb:
+fsgpfd.f:
+   fsgpfd:
+fsgpfe.f:
+   fsgpfe:
+fsgpfi.f:
+   fsgpfi:
+fsgpfj.f:
+   fsgpfj:
+fsgpvb.f:
+   fsgpvb:
+fsgpvd.f:
+   fsgpvd:
+fsgpve.f:
+   fsgpve:
+fsgpvi.f:
+   fsgpvi:
+fsgpvj.f:
+   fsgpvj:
+fsgrec.f:
+   fsgrec:
+fsgrsz.f:
+   fsgrsz:
+fsgsdt.f:
+   fsgsdt:
+fsgsfb.f:
+   fsgsfb:
+fsgsfd.f:
+   fsgsfd:
+fsgsfe.f:
+   fsgsfe:
+fsgsfi.f:
+   fsgsfi:
+fsgsfj.f:
+   fsgsfj:
+fsgsvb.f:
+   fsgsvb:
+fsgsvd.f:
+   fsgsvd:
+fsgsve.f:
+   fsgsve:
+fsgsvi.f:
+   fsgsvi:
+fsgsvj.f:
+   fsgsvj:
+fsgtbb.f:
+   fsgtbb:
+fsgtbs.f:
+   fsgtbs:
+fsgtcl.f:
+   fsgtcl:
+fsgtcs.f:
+   fsgtcs:
+fsgtdm.f:
+   fsgtdm:
+fsgthd.f:
+   fsgthd:
+fshdef.f:
+   fshdef:
+fsibin.f:
+   fsibin:
+fsicol.f:
+   fsicol:
+fsiimg.f:
+   fsiimg:
+fsikyd.f:
+   fsikyd:
+fsikye.f:
+   fsikye:
+fsikyf.f:
+   fsikyf:
+fsikyg.f:
+   fsikyg:
+fsikyj.f:
+   fsikyj:
+fsikyl.f:
+   fsikyl:
+fsikys.f:
+   fsikys:
+fsinit.f:
+   fsinit:
+fsirec.f:
+   fsirec:
+fsirow.f:
+   fsirow:
+fsitab.f:
+   fsitab:
+fskeyn.f:
+   fskeyn:
+fsmahd.f:
+   fsmahd:
+fsmcom.f:
+   fsmcom:
+fsmcrd.f:
+   fsmcrd:
+fsmkyd.f:
+   fsmkyd:
+fsmkye.f:
+   fsmkye:
+fsmkyf.f:
+   fsmkyf:
+fsmkyg.f:
+   fsmkyg:
+fsmkyj.f:
+   fsmkyj:
+fsmkyl.f:
+   fsmkyl:
+fsmkys.f:
+   fsmkys:
+fsmnam.f:
+   fsmnam:
+fsmrec.f:
+   fsmrec:
+fsmrhd.f:
+   fsmrhd:
+fsnkey.f:
+   fsnkey:
+fsopen.f:
+   fsopen:
+fsp2db.f:
+   fsp2db:
+fsp2dd.f:
+   fsp2dd:
+fsp2de.f:
+   fsp2de:
+fsp2di.f:
+   fsp2di:
+fsp2dj.f:
+   fsp2dj:
+fsp3db.f:
+   fsp3db:
+fsp3dd.f:
+   fsp3dd:
+fsp3de.f:
+   fsp3de:
+fsp3di.f:
+   fsp3di:
+fsp3dj.f:
+   fsp3dj:
+fspcks.f:
+   fspcks:
+fspclb.f:
+   fspclb:
+fspclc.f:
+   fspclc:
+fspcld.f:
+   fspcld:
+fspcle.f:
+   fspcle:
+fspcli.f:
+   fspcli:
+fspclj.f:
+   fspclj:
+fspcll.f:
+   fspcll:
+fspclm.f:
+   fspclm:
+fspcls.f:
+   fspcls:
+fspclu.f:
+   fspclu:
+fspclx.f:
+   fspclx:
+fspcnb.f:
+   fspcnb:
+fspcnd.f:
+   fspcnd:
+fspcne.f:
+   fspcne:
+fspcni.f:
+   fspcni:
+fspcnj.f:
+   fspcnj:
+fspcom.f:
+   fspcom:
+fspdat.f:
+   fspdat:
+fspdef.f:
+   fspdef:
+fspdes.f:
+   fspdes:
+fspgpb.f:
+   fspgpb:
+fspgpd.f:
+   fspgpd:
+fspgpe.f:
+   fspgpe:
+fspgpi.f:
+   fspgpi:
+fspgpj.f:
+   fspgpj:
+fsphbn.f:
+   fsphbn:
+fsphis.f:
+   fsphis:
+fsphpr.f:
+   fsphpr:
+fsphtb.f:
+   fsphtb:
+fspkls.f:
+   fspkls:
+fspknd.f:
+   fspknd:
+fspkne.f:
+   fspkne:
+fspknf.f:
+   fspknf:
+fspkng.f:
+   fspkng:
+fspknj.f:
+   fspknj:
+fspknl.f:
+   fspknl:
+fspkns.f:
+   fspkns:
+fspkyd.f:
+   fspkyd:
+fspkye.f:
+   fspkye:
+fspkyf.f:
+   fspkyf:
+fspkyg.f:
+   fspkyg:
+fspkyj.f:
+   fspkyj:
+fspkyl.f:
+   fspkyl:
+fspkys.f:
+   fspkys:
+fspkyt.f:
+   fspkyt:
+fsplsw.f:
+   fsplsw:
+fspmsg.f:
+   fspmsg:
+fspnul.f:
+   fspnul:
+fsppnb.f:
+   fsppnb:
+fsppnd.f:
+   fsppnd:
+fsppne.f:
+   fsppne:
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern fsppni.x fsppnj.x fspprb.x fspprd.x fsppre.x fsppri.x fspprj.x fsppru.x fsprec.x fspscl.x fspssb.x fspssd.x fspsse.x fspssi.x fspssj.x fspsvc.x fsptbb.x fsptbs.x fsptdm.x fspthp.x fsrdef.x fssnul.x fstkey.x fstnul.x fstscl.x fsucks.x fsucrd.x fsukyd.x fsukye.x fsukyf.x fsukyg.x fsukyj.x fsukyl.x fsukys.x fsvcks.x fsvers.x fswldp.x fsxypx.x
+fsppni.x:
+   fsppni:
+fsppnj.x:
+   fsppnj:
+fspprb.x:
+   fspprb:
+fspprd.x:
+   fspprd:
+fsppre.x:
+   fsppre:
+fsppri.x:
+   fsppri:
+fspprj.x:
+   fspprj:
+fsppru.x:
+   fsppru:
+fsprec.x:
+   fsprec:
+fspscl.x:
+   fspscl:
+fspssb.x:
+   fspssb:
+fspssd.x:
+   fspssd:
+fspsse.x:
+   fspsse:
+fspssi.x:
+   fspssi:
+fspssj.x:
+   fspssj:
+fspsvc.x:
+   fspsvc:
+fsptbb.x:
+   fsptbb:
+fsptbs.x:
+   fsptbs:
+fsptdm.x:
+   fsptdm:
+fspthp.x:
+   fspthp:
+fsrdef.x:
+   fsrdef:
+fssnul.x:
+   fssnul:
+fstkey.x:
+   fstkey:
+fstnul.x:
+   fstnul:
+fstscl.x:
+   fstscl:
+fsucks.x:
+   fsucks:
+fsucrd.x:
+   fsucrd:
+fsukyd.x:
+   fsukyd:
+fsukye.x:
+   fsukye:
+fsukyf.x:
+   fsukyf:
+fsukyg.x:
+   fsukyg:
+fsukyj.x:
+   fsukyj:
+fsukyl.x:
+   fsukyl:
+fsukys.x:
+   fsukys:
+fsvcks.x:
+   fsvcks:
+fsvers.x:
+   fsvers:
+fswldp.x:
+   fswldp:
+fsxypx.x:
+   fsxypx:
+fsppni.f:
+   fsppni:
+fsppnj.f:
+   fsppnj:
+fspprb.f:
+   fspprb:
+fspprd.f:
+   fspprd:
+fsppre.f:
+   fsppre:
+fsppri.f:
+   fsppri:
+fspprj.f:
+   fspprj:
+fsppru.f:
+   fsppru:
+fsprec.f:
+   fsprec:
+fspscl.f:
+   fspscl:
+fspssb.f:
+   fspssb:
+fspssd.f:
+   fspssd:
+fspsse.f:
+   fspsse:
+fspssi.f:
+   fspssi:
+fspssj.f:
+   fspssj:
+fspsvc.f:
+   fspsvc:
+fsptbb.f:
+   fsptbb:
+fsptbs.f:
+   fsptbs:
+fsptdm.f:
+   fsptdm:
+fspthp.f:
+   fspthp:
+fsrdef.f:
+   fsrdef:
+fssnul.f:
+   fssnul:
+fstkey.f:
+   fstkey:
+fstnul.f:
+   fstnul:
+fstscl.f:
+   fstscl:
+fsucks.f:
+   fsucks:
+fsucrd.f:
+   fsucrd:
+fsukyd.f:
+   fsukyd:
+fsukye.f:
+   fsukye:
+fsukyf.f:
+   fsukyf:
+fsukyg.f:
+   fsukyg:
+fsukyj.f:
+   fsukyj:
+fsukyl.f:
+   fsukyl:
+fsukys.f:
+   fsukys:
+fsvcks.f:
+   fsvcks:
+fsvers.f:
+   fsvers:
+fswldp.f:
+   fswldp:
+fsxypx.f:
+   fsxypx:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a fsadef.o fsarch.o fsasfm.o fsbdef.o fsbnfm.o fsclos.o fscmps.o fscmsg.o fscopy.o fscpdt.o fscrhd.o fsdcol.o fsddef.o fsdelt.o fsdhdu.o fsdkey.o fsdrec.o fsdrow.o fsdsum.o fsdtyp.o fsesum.o fsfiou.o fsg2db.o fsg2dd.o fsg2de.o fsg2di.o fsg2dj.o fsg3db.o fsg3dd.o fsg3de.o fsg3di.o fsg3dj.o fsgabc.o fsgacl.o fsgbcl.o fsgcfb.o fsgcfc.o fsgcfd.o fsgcfe.o fsgcfi.o fsgcfj.o fsgcfl.o fsgcfm.o fsgcfs.o fsgcks.o fsgcl.o fsgcnn.o fsgcno.o fsgcrd.o fsgcvb.o fsgcvc.o fsgcvd.o fsgcve.o fsgcvi.o fsgcvj.o fsgcvm.o fsgcvs.o fsgcx.o fsgcxd.o fsgcxi.o fsgcxj.o fsgdes.o fsgerr.o fsggpb.o fsggpd.o fsggpe.o fsggpi.o fsggpj.o fsghad.o fsghbn.o fsghdn.o fsghpr.o fsghps.o fsghsp.o fsghtb.o fsgics.o fsgiou.o fsgkey.o fsgknd.o fsgkne.o fsgknj.o fsgknl.o fsgkns.o fsgkyd.o fsgkye.o fsgkyj.o fsgkyl.o fsgkyn.o fsgkys.o fsgkyt.o fsgmsg.o fsgpfb.o fsgpfd.o fsgpfe.o fsgpfi.o fsgpfj.o fsgpvb.o fsgpvd.o fsgpve.o fsgpvi.o fsgpvj.o fsgrec.o fsgrsz.o fsgsdt.o fsgsfb.o fsgsfd.o fsgsfe.o fsgsfi.o fsgsfj.o fsgsvb.o fsgsvd.o fsgsve.o fsgsvi.o fsgsvj.o fsgtbb.o fsgtbs.o fsgtcl.o fsgtcs.o fsgtdm.o fsgthd.o fshdef.o fsibin.o fsicol.o fsiimg.o fsikyd.o fsikye.o fsikyf.o fsikyg.o fsikyj.o fsikyl.o fsikys.o fsinit.o fsirec.o fsirow.o fsitab.o fskeyn.o fsmahd.o fsmcom.o fsmcrd.o fsmkyd.o fsmkye.o fsmkyf.o fsmkyg.o fsmkyj.o fsmkyl.o fsmkys.o fsmnam.o fsmrec.o fsmrhd.o fsnkey.o fsopen.o fsp2db.o fsp2dd.o fsp2de.o fsp2di.o fsp2dj.o fsp3db.o fsp3dd.o fsp3de.o fsp3di.o fsp3dj.o fspcks.o fspclb.o fspclc.o fspcld.o fspcle.o fspcli.o fspclj.o fspcll.o fspclm.o fspcls.o fspclu.o fspclx.o fspcnb.o fspcnd.o fspcne.o fspcni.o fspcnj.o fspcom.o fspdat.o fspdef.o fspdes.o fspgpb.o fspgpd.o fspgpe.o fspgpi.o fspgpj.o fsphbn.o fsphis.o fsphpr.o fsphtb.o fspkls.o fspknd.o fspkne.o fspknf.o fspkng.o fspknj.o fspknl.o fspkns.o fspkyd.o fspkye.o fspkyf.o fspkyg.o fspkyj.o fspkyl.o fspkys.o fspkyt.o fsplsw.o fspmsg.o fspnul.o fsppnb.o fsppnd.o fsppne.o fsppni.o
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a fsppnj.o fspprb.o fspprd.o fsppre.o fsppri.o fspprj.o fsppru.o fsprec.o fspscl.o fspssb.o fspssd.o fspsse.o fspssi.o fspssj.o fspsvc.o fsptbb.o fsptbs.o fsptdm.o fspthp.o fsrdef.o fssnul.o fstkey.o fstnul.o fstscl.o fsucks.o fsucrd.o fsukyd.o fsukye.o fsukyf.o fsukyg.o fsukyj.o fsukyl.o fsukys.o fsvcks.o fsvers.o fswldp.o fsxypx.o
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern ftpcbf.x ftgcbf.x
+ftpcbf.x:
+   ftpcbf:
+ftgcbf.x:
+   ftgcbf:
+ftpcbf.f:
+   ftpcbf:
+ftgcbf.f:
+   ftgcbf:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a ftpcbf.o ftgcbf.o
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern ftadef.f ftaini.f ftarch.f ftas2c.f ftasfm.f ftbdef.f ftbini.f ftbnfm.f ftc2as.f ftc2d.f ftc2dd.f ftc2i.f ftc2ii.f ftc2l.f ftc2ll.f ftc2r.f ftc2rr.f ftc2s.f ftc2x.f ftcdel.f ftcdfl.f ftchdu.f ftchfl.f ftcins.f ftclos.f ftcmps.f ftcmsg.f ftcopy.f ftcpdt.f ftcrep.f ftcrhd.f ftcsum.f ftd2e.f ftd2f.f ftdblk.f ftdcol.f ftddef.f ftdelt.f ftdhdu.f ftdkey.f ftdrec.f ftdrow.f ftdsum.f ftdtyp.f ftesum.f ftfiou.f ftfrcl.f ftg2db.f ftg2dd.f ftg2de.f ftg2di.f ftg2dj.f ftg3db.f ftg3dd.f ftg3de.f ftg3di.f ftg3dj.f ftgabc.f ftgacl.f ftgatp.f ftgbcl.f ftgbit.f ftgbnh.f ftgbtp.f ftgcfb.f ftgcfc.f ftgcfd.f ftgcfe.f ftgcfi.f ftgcfj.f ftgcfl.f ftgcfm.f ftgcfs.f ftgcks.f ftgcl.f ftgclb.f ftgclc.f ftgcld.f ftgcle.f ftgcli.f ftgclj.f ftgclm.f ftgcls.f ftgcnn.f ftgcno.f ftgcrd.f ftgcvb.f ftgcvc.f ftgcvd.f ftgcve.f ftgcvi.f ftgcvj.f ftgcvm.f ftgcvs.f ftgcx.f ftgcxd.f ftgcxi.f ftgcxj.f ftgdes.f ftgerr.f ftgext.f ftggpb.f ftggpd.f ftggpe.f ftggpi.f ftggpj.f ftghad.f ftghbn.f ftghdn.f ftghpr.f ftghps.f ftghsp.f ftghtb.f ftgi1b.f ftgics.f ftgiou.f ftgkey.f ftgknd.f ftgkne.f ftgknj.f ftgknl.f ftgkns.f ftgkyd.f ftgkye.f ftgkyj.f ftgkyl.f ftgkyn.f ftgkys.f ftgkyt.f ftgmsg.f ftgnst.f ftgpfb.f ftgpfd.f ftgpfe.f ftgpfi.f ftgpfj.f ftgphx.f ftgprh.f ftgpvb.f ftgpvd.f ftgpve.f ftgpvi.f ftgpvj.f ftgrec.f ftgsfb.f ftgsfd.f ftgsfe.f ftgsfi.f ftgsfj.f ftgsvb.f ftgsvd.f ftgsve.f ftgsvi.f ftgsvj.f ftgtbb.f ftgtbc.f ftgtbh.f ftgtbn.f ftgtbs.f ftgtcl.f ftgtcs.f ftgtdm.f ftgthd.f ftgtkn.f ftgttb.f fthdef.f fthpdn.f fthpup.f fti1i1.f fti1i2.f fti1i4.f fti1r4.f fti1r8.f fti2c.f fti2i1.f fti2i2.f fti2i4.f fti2r4.f fti2r8.f fti4i1.f fti4i2.f fti4i4.f fti4r4.f fti4r8.f ftibin.f ftiblk.f fticol.f ftiimg.f ftikyd.f ftikye.f ftikyf.f ftikyg.f ftikyj.f ftikyl.f ftikys.f ftinit.f ftirec.f ftirow.f ftitab.f ftkeyn.f ftkshf.f ftl2c.f ftmahd.f ftmcom.f ftmcrd.f ftmkey.f ftmkyd.f ftmkye.f ftmkyf.f ftmkyg.f ftmkyj.f ftmkyl.f ftmkys.f ftmnam.f ftmodr.f
+ftadef.f:
+   ftadef:
+ftaini.f:
+   ftaini:
+ftarch.f:
+   ftarch:
+ftas2c.f:
+   ftas2c:
+ftasfm.f:
+   ftasfm:
+ftbdef.f:
+   ftbdef:
+ftbini.f:
+   ftbini:
+ftbnfm.f:
+   ftbnfm:
+ftc2as.f:
+   ftc2as:
+ftc2d.f:
+   ftc2d:
+ftc2dd.f:
+   ftc2dd:
+ftc2i.f:
+   ftc2i:
+ftc2ii.f:
+   ftc2ii:
+ftc2l.f:
+   ftc2l:
+ftc2ll.f:
+   ftc2ll:
+ftc2r.f:
+   ftc2r:
+ftc2rr.f:
+   ftc2rr:
+ftc2s.f:
+   ftc2s:
+ftc2x.f:
+   ftc2x:
+ftcdel.f:
+   ftcdel:
+ftcdfl.f:
+   ftcdfl:
+ftchdu.f:
+   ftchdu:
+ftchfl.f:
+   ftchfl:
+ftcins.f:
+   ftcins:
+ftclos.f:
+   ftclos:
+ftcmps.f:
+   ftcmps:
+ftcmsg.f:
+   ftcmsg:
+ftcopy.f:
+   ftcopy:
+ftcpdt.f:
+   ftcpdt:
+ftcrep.f:
+   ftcrep:
+ftcrhd.f:
+   ftcrhd:
+ftcsum.f:
+   ftcsum:
+ftd2e.f:
+   ftd2e:
+ftd2f.f:
+   ftd2f:
+ftdblk.f:
+   ftdblk:
+ftdcol.f:
+   ftdcol:
+ftddef.f:
+   ftddef:
+ftdelt.f:
+   ftdelt:
+ftdhdu.f:
+   ftdhdu:
+ftdkey.f:
+   ftdkey:
+ftdrec.f:
+   ftdrec:
+ftdrow.f:
+   ftdrow:
+ftdsum.f:
+   ftdsum:
+ftdtyp.f:
+   ftdtyp:
+ftesum.f:
+   ftesum:
+ftfiou.f:
+   ftfiou:
+ftfrcl.f:
+   ftfrcl:
+ftg2db.f:
+   ftg2db:
+ftg2dd.f:
+   ftg2dd:
+ftg2de.f:
+   ftg2de:
+ftg2di.f:
+   ftg2di:
+ftg2dj.f:
+   ftg2dj:
+ftg3db.f:
+   ftg3db:
+ftg3dd.f:
+   ftg3dd:
+ftg3de.f:
+   ftg3de:
+ftg3di.f:
+   ftg3di:
+ftg3dj.f:
+   ftg3dj:
+ftgabc.f:
+   ftgabc:
+ftgacl.f:
+   ftgacl:
+ftgatp.f:
+   ftgatp:
+ftgbcl.f:
+   ftgbcl:
+ftgbit.f:
+   ftgbit:
+ftgbnh.f:
+   ftgbnh:
+ftgbtp.f:
+   ftgbtp:
+ftgcfb.f:
+   ftgcfb:
+ftgcfc.f:
+   ftgcfc:
+ftgcfd.f:
+   ftgcfd:
+ftgcfe.f:
+   ftgcfe:
+ftgcfi.f:
+   ftgcfi:
+ftgcfj.f:
+   ftgcfj:
+ftgcfl.f:
+   ftgcfl:
+ftgcfm.f:
+   ftgcfm:
+ftgcfs.f:
+   ftgcfs:
+ftgcks.f:
+   ftgcks:
+ftgcl.f:
+   ftgcl:
+ftgclb.f:
+   ftgclb:
+ftgclc.f:
+   ftgclc:
+ftgcld.f:
+   ftgcld:
+ftgcle.f:
+   ftgcle:
+ftgcli.f:
+   ftgcli:
+ftgclj.f:
+   ftgclj:
+ftgclm.f:
+   ftgclm:
+ftgcls.f:
+   ftgcls:
+ftgcnn.f:
+   ftgcnn:
+ftgcno.f:
+   ftgcno:
+ftgcrd.f:
+   ftgcrd:
+ftgcvb.f:
+   ftgcvb:
+ftgcvc.f:
+   ftgcvc:
+ftgcvd.f:
+   ftgcvd:
+ftgcve.f:
+   ftgcve:
+ftgcvi.f:
+   ftgcvi:
+ftgcvj.f:
+   ftgcvj:
+ftgcvm.f:
+   ftgcvm:
+ftgcvs.f:
+   ftgcvs:
+ftgcx.f:
+   ftgcx:
+ftgcxd.f:
+   ftgcxd:
+ftgcxi.f:
+   ftgcxi:
+ftgcxj.f:
+   ftgcxj:
+ftgdes.f:
+   ftgdes:
+ftgerr.f:
+   ftgerr:
+ftgext.f:
+   ftgext:
+ftggpb.f:
+   ftggpb:
+ftggpd.f:
+   ftggpd:
+ftggpe.f:
+   ftggpe:
+ftggpi.f:
+   ftggpi:
+ftggpj.f:
+   ftggpj:
+ftghad.f:
+   ftghad:
+ftghbn.f:
+   ftghbn:
+ftghdn.f:
+   ftghdn:
+ftghpr.f:
+   ftghpr:
+ftghps.f:
+   ftghps:
+ftghsp.f:
+   ftghsp:
+ftghtb.f:
+   ftghtb:
+ftgi1b.f:
+   ftgi1b:
+ftgics.f:
+   ftgics:
+ftgiou.f:
+   ftgiou:
+ftgkey.f:
+   ftgkey:
+ftgknd.f:
+   ftgknd:
+ftgkne.f:
+   ftgkne:
+ftgknj.f:
+   ftgknj:
+ftgknl.f:
+   ftgknl:
+ftgkns.f:
+   ftgkns:
+ftgkyd.f:
+   ftgkyd:
+ftgkye.f:
+   ftgkye:
+ftgkyj.f:
+   ftgkyj:
+ftgkyl.f:
+   ftgkyl:
+ftgkyn.f:
+   ftgkyn:
+ftgkys.f:
+   ftgkys:
+ftgkyt.f:
+   ftgkyt:
+ftgmsg.f:
+   ftgmsg:
+ftgnst.f:
+   ftgnst:
+ftgpfb.f:
+   ftgpfb:
+ftgpfd.f:
+   ftgpfd:
+ftgpfe.f:
+   ftgpfe:
+ftgpfi.f:
+   ftgpfi:
+ftgpfj.f:
+   ftgpfj:
+ftgphx.f:
+   ftgphx:
+ftgprh.f:
+   ftgprh:
+ftgpvb.f:
+   ftgpvb:
+ftgpvd.f:
+   ftgpvd:
+ftgpve.f:
+   ftgpve:
+ftgpvi.f:
+   ftgpvi:
+ftgpvj.f:
+   ftgpvj:
+ftgrec.f:
+   ftgrec:
+ftgsfb.f:
+   ftgsfb:
+ftgsfd.f:
+   ftgsfd:
+ftgsfe.f:
+   ftgsfe:
+ftgsfi.f:
+   ftgsfi:
+ftgsfj.f:
+   ftgsfj:
+ftgsvb.f:
+   ftgsvb:
+ftgsvd.f:
+   ftgsvd:
+ftgsve.f:
+   ftgsve:
+ftgsvi.f:
+   ftgsvi:
+ftgsvj.f:
+   ftgsvj:
+ftgtbb.f:
+   ftgtbb:
+ftgtbc.f:
+   ftgtbc:
+ftgtbh.f:
+   ftgtbh:
+ftgtbn.f:
+   ftgtbn:
+ftgtbs.f:
+   ftgtbs:
+ftgtcl.f:
+   ftgtcl:
+ftgtcs.f:
+   ftgtcs:
+ftgtdm.f:
+   ftgtdm:
+ftgthd.f:
+   ftgthd:
+ftgtkn.f:
+   ftgtkn:
+ftgttb.f:
+   ftgttb:
+fthdef.f:
+   fthdef:
+fthpdn.f:
+   fthpdn:
+fthpup.f:
+   fthpup:
+fti1i1.f:
+   fti1i1:
+fti1i2.f:
+   fti1i2:
+fti1i4.f:
+   fti1i4:
+fti1r4.f:
+   fti1r4:
+fti1r8.f:
+   fti1r8:
+fti2c.f:
+   fti2c:
+fti2i1.f:
+   fti2i1:
+fti2i2.f:
+   fti2i2:
+fti2i4.f:
+   fti2i4:
+fti2r4.f:
+   fti2r4:
+fti2r8.f:
+   fti2r8:
+fti4i1.f:
+   fti4i1:
+fti4i2.f:
+   fti4i2:
+fti4i4.f:
+   fti4i4:
+fti4r4.f:
+   fti4r4:
+fti4r8.f:
+   fti4r8:
+ftibin.f:
+   ftibin:
+ftiblk.f:
+   ftiblk:
+fticol.f:
+   fticol:
+ftiimg.f:
+   ftiimg:
+ftikyd.f:
+   ftikyd:
+ftikye.f:
+   ftikye:
+ftikyf.f:
+   ftikyf:
+ftikyg.f:
+   ftikyg:
+ftikyj.f:
+   ftikyj:
+ftikyl.f:
+   ftikyl:
+ftikys.f:
+   ftikys:
+ftinit.f:
+   ftinit:
+ftirec.f:
+   ftirec:
+ftirow.f:
+   ftirow:
+ftitab.f:
+   ftitab:
+ftkeyn.f:
+   ftkeyn:
+ftkshf.f:
+   ftkshf:
+ftl2c.f:
+   ftl2c:
+ftmahd.f:
+   ftmahd:
+ftmcom.f:
+   ftmcom:
+ftmcrd.f:
+   ftmcrd:
+ftmkey.f:
+   ftmkey:
+ftmkyd.f:
+   ftmkyd:
+ftmkye.f:
+   ftmkye:
+ftmkyf.f:
+   ftmkyf:
+ftmkyg.f:
+   ftmkyg:
+ftmkyj.f:
+   ftmkyj:
+ftmkyl.f:
+   ftmkyl:
+ftmkys.f:
+   ftmkys:
+ftmnam.f:
+   ftmnam:
+ftmodr.f:
+   ftmodr:
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern ftmrec.f ftmrhd.f ftnkey.f ftnulc.f ftnulm.f ftopen.f ftp2db.f ftp2dd.f ftp2de.f ftp2di.f ftp2dj.f ftp3db.f ftp3dd.f ftp3de.f ftp3di.f ftp3dj.f ftpbit.f ftpbnh.f ftpcks.f ftpclb.f ftpclc.f ftpcld.f ftpcle.f ftpcli.f ftpclj.f ftpcll.f ftpclm.f ftpcls.f ftpclu.f ftpclx.f ftpcnb.f ftpcnd.f ftpcne.f ftpcni.f ftpcnj.f ftpcom.f ftpdat.f ftpdef.f ftpdes.f ftpdfl.f ftpgpb.f ftpgpd.f ftpgpe.f ftpgpi.f ftpgpj.f ftphbn.f ftphis.f ftphpr.f ftphtb.f ftpi1b.f ftpini.f ftpkey.f ftpkls.f ftpknd.f ftpkne.f ftpknf.f ftpkng.f ftpknj.f ftpknl.f ftpkns.f ftpkyd.f ftpkye.f ftpkyf.f ftpkyg.f ftpkyj.f ftpkyl.f ftpkys.f ftpkyt.f ftplsw.f ftpmsg.f ftpnul.f ftppnb.f ftppnd.f ftppne.f ftppni.f ftppnj.f ftpprb.f ftpprd.f ftppre.f ftpprh.f ftppri.f ftpprj.f ftppru.f ftprec.f ftprsv.f ftpscl.f ftpssb.f ftpssd.f ftpsse.f ftpssi.f ftpssj.f ftpsvc.f ftptbb.f ftptbh.f ftptbs.f ftptdm.f ftpthp.f ftr2e.f ftr2f.f ftr4i1.f ftr4i2.f ftr4i4.f ftr4r4.f ftr4r8.f ftr8i1.f ftr8i2.f ftr8i4.f ftr8r4.f ftr8r8.f ftrdef.f ftrhdu.f ftrsnm.f ftrwdn.f ftrwup.f fts2c.f ftsdnn.f ftsnul.f ftsrnn.f fttbit.f fttdnn.f fttkey.f fttkyn.f fttnul.f fttrec.f fttrnn.f fttscl.f ftucks.f ftucrd.f ftukyd.f ftukye.f ftukyf.f ftukyg.f ftukyj.f ftukyl.f ftukys.f ftuscc.f ftuscm.f ftvcks.f ftvers.f ftwend.f ftwldp.f ftxiou.f ftxmsg.f ftxypx.f fitsspp.x
+fitsspp.x:
+   ftopnx:
+   ftclsx:
+   ftflsh:
+   ftgsdt:
+   ftmbyt:
+   ftmoff:
+   ftpi2b:
+   ftpi4b:
+   ftpr4b:
+   ftpr8b:
+   ftgi2b:
+   ftgi4b:
+   ftgr4b:
+   ftgr8b:
+   ftupch:
+   ftpbyt:
+   ftgbyt:
+   ftwrit:
+   ftread:
+ftmrec.f:
+   ftmrec:
+ftmrhd.f:
+   ftmrhd:
+ftnkey.f:
+   ftnkey:
+ftnulc.f:
+   ftnulc:
+ftnulm.f:
+   ftnulm:
+ftopen.f:
+   ftopen:
+ftp2db.f:
+   ftp2db:
+ftp2dd.f:
+   ftp2dd:
+ftp2de.f:
+   ftp2de:
+ftp2di.f:
+   ftp2di:
+ftp2dj.f:
+   ftp2dj:
+ftp3db.f:
+   ftp3db:
+ftp3dd.f:
+   ftp3dd:
+ftp3de.f:
+   ftp3de:
+ftp3di.f:
+   ftp3di:
+ftp3dj.f:
+   ftp3dj:
+ftpbit.f:
+   ftpbit:
+ftpbnh.f:
+   ftpbnh:
+ftpcks.f:
+   ftpcks:
+ftpclb.f:
+   ftpclb:
+ftpclc.f:
+   ftpclc:
+ftpcld.f:
+   ftpcld:
+ftpcle.f:
+   ftpcle:
+ftpcli.f:
+   ftpcli:
+ftpclj.f:
+   ftpclj:
+ftpcll.f:
+   ftpcll:
+ftpclm.f:
+   ftpclm:
+ftpcls.f:
+   ftpcls:
+ftpclu.f:
+   ftpclu:
+ftpclx.f:
+   ftpclx:
+ftpcnb.f:
+   ftpcnb:
+ftpcnd.f:
+   ftpcnd:
+ftpcne.f:
+   ftpcne:
+ftpcni.f:
+   ftpcni:
+ftpcnj.f:
+   ftpcnj:
+ftpcom.f:
+   ftpcom:
+ftpdat.f:
+   ftpdat:
+ftpdef.f:
+   ftpdef:
+ftpdes.f:
+   ftpdes:
+ftpdfl.f:
+   ftpdfl:
+ftpgpb.f:
+   ftpgpb:
+ftpgpd.f:
+   ftpgpd:
+ftpgpe.f:
+   ftpgpe:
+ftpgpi.f:
+   ftpgpi:
+ftpgpj.f:
+   ftpgpj:
+ftphbn.f:
+   ftphbn:
+ftphis.f:
+   ftphis:
+ftphpr.f:
+   ftphpr:
+ftphtb.f:
+   ftphtb:
+ftpi1b.f:
+   ftpi1b:
+ftpini.f:
+   ftpini:
+ftpkey.f:
+   ftpkey:
+ftpkls.f:
+   ftpkls:
+ftpknd.f:
+   ftpknd:
+ftpkne.f:
+   ftpkne:
+ftpknf.f:
+   ftpknf:
+ftpkng.f:
+   ftpkng:
+ftpknj.f:
+   ftpknj:
+ftpknl.f:
+   ftpknl:
+ftpkns.f:
+   ftpkns:
+ftpkyd.f:
+   ftpkyd:
+ftpkye.f:
+   ftpkye:
+ftpkyf.f:
+   ftpkyf:
+ftpkyg.f:
+   ftpkyg:
+ftpkyj.f:
+   ftpkyj:
+ftpkyl.f:
+   ftpkyl:
+ftpkys.f:
+   ftpkys:
+ftpkyt.f:
+   ftpkyt:
+ftplsw.f:
+   ftplsw:
+ftpmsg.f:
+   ftpmsg:
+ftpnul.f:
+   ftpnul:
+ftppnb.f:
+   ftppnb:
+ftppnd.f:
+   ftppnd:
+ftppne.f:
+   ftppne:
+ftppni.f:
+   ftppni:
+ftppnj.f:
+   ftppnj:
+ftpprb.f:
+   ftpprb:
+ftpprd.f:
+   ftpprd:
+ftppre.f:
+   ftppre:
+ftpprh.f:
+   ftpprh:
+ftppri.f:
+   ftppri:
+ftpprj.f:
+   ftpprj:
+ftppru.f:
+   ftppru:
+ftprec.f:
+   ftprec:
+ftprsv.f:
+   ftprsv:
+ftpscl.f:
+   ftpscl:
+ftpssb.f:
+   ftpssb:
+ftpssd.f:
+   ftpssd:
+ftpsse.f:
+   ftpsse:
+ftpssi.f:
+   ftpssi:
+ftpssj.f:
+   ftpssj:
+ftpsvc.f:
+   ftpsvc:
+ftptbb.f:
+   ftptbb:
+ftptbh.f:
+   ftptbh:
+ftptbs.f:
+   ftptbs:
+ftptdm.f:
+   ftptdm:
+ftpthp.f:
+   ftpthp:
+ftr2e.f:
+   ftr2e:
+ftr2f.f:
+   ftr2f:
+ftr4i1.f:
+   ftr4i1:
+ftr4i2.f:
+   ftr4i2:
+ftr4i4.f:
+   ftr4i4:
+ftr4r4.f:
+   ftr4r4:
+ftr4r8.f:
+   ftr4r8:
+ftr8i1.f:
+   ftr8i1:
+ftr8i2.f:
+   ftr8i2:
+ftr8i4.f:
+   ftr8i4:
+ftr8r4.f:
+   ftr8r4:
+ftr8r8.f:
+   ftr8r8:
+ftrdef.f:
+   ftrdef:
+ftrhdu.f:
+   ftrhdu:
+ftrsnm.f:
+   ftrsnm:
+ftrwdn.f:
+   ftrwdn:
+ftrwup.f:
+   ftrwup:
+fts2c.f:
+   fts2c:
+ftsdnn.f:
+   ftsdnn:
+ftsnul.f:
+   ftsnul:
+ftsrnn.f:
+   ftsrnn:
+fttbit.f:
+   fttbit:
+fttdnn.f:
+   fttdnn:
+fttkey.f:
+   fttkey:
+fttkyn.f:
+   fttkyn:
+fttnul.f:
+   fttnul:
+fttrec.f:
+   fttrec:
+fttrnn.f:
+   fttrnn:
+fttscl.f:
+   fttscl:
+ftucks.f:
+   ftucks:
+ftucrd.f:
+   ftucrd:
+ftukyd.f:
+   ftukyd:
+ftukye.f:
+   ftukye:
+ftukyf.f:
+   ftukyf:
+ftukyg.f:
+   ftukyg:
+ftukyj.f:
+   ftukyj:
+ftukyl.f:
+   ftukyl:
+ftukys.f:
+   ftukys:
+ftuscc.f:
+   ftuscc:
+ftuscm.f:
+   ftuscm:
+ftvcks.f:
+   ftvcks:
+ftvers.f:
+   ftvers:
+ftwend.f:
+   ftwend:
+ftwldp.f:
+   ftwldp:
+ftxiou.f:
+   ftxiou:
+ftxmsg.f:
+   ftxmsg:
+ftxypx.f:
+   ftxypx:
+fitsspp.f:
+   ftopnx:
+   ftclsx:
+   ftflsh:
+   ftgsdt:
+   ftmbyt:
+   ftmoff:
+   ftpi2b:
+   ftpi4b:
+   ftpr4b:
+   ftpr8b:
+   ftgi2b:
+   ftgi4b:
+   ftgr4b:
+   ftgr8b:
+   ftupch:
+   ftpbyt:
+   ftgbyt:
+   ftwrit:
+   ftread:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a ftadef.o ftaini.o ftarch.o ftas2c.o ftasfm.o ftbdef.o ftbini.o ftbnfm.o ftc2as.o ftc2d.o ftc2dd.o ftc2i.o ftc2ii.o ftc2l.o ftc2ll.o ftc2r.o ftc2rr.o ftc2s.o ftc2x.o ftcdel.o ftcdfl.o ftchdu.o ftchfl.o ftcins.o ftclos.o ftcmps.o ftcmsg.o ftcopy.o ftcpdt.o ftcrep.o ftcrhd.o ftcsum.o ftd2e.o ftd2f.o ftdblk.o ftdcol.o ftddef.o ftdelt.o ftdhdu.o ftdkey.o ftdrec.o ftdrow.o ftdsum.o ftdtyp.o ftesum.o ftfiou.o ftfrcl.o ftg2db.o ftg2dd.o ftg2de.o ftg2di.o ftg2dj.o ftg3db.o ftg3dd.o ftg3de.o ftg3di.o ftg3dj.o ftgabc.o ftgacl.o ftgatp.o ftgbcl.o ftgbit.o ftgbnh.o ftgbtp.o ftgcfb.o ftgcfc.o ftgcfd.o ftgcfe.o ftgcfi.o ftgcfj.o ftgcfl.o ftgcfm.o ftgcfs.o ftgcks.o ftgcl.o ftgclb.o ftgclc.o ftgcld.o ftgcle.o ftgcli.o ftgclj.o ftgclm.o ftgcls.o ftgcnn.o ftgcno.o ftgcrd.o ftgcvb.o ftgcvc.o ftgcvd.o ftgcve.o ftgcvi.o ftgcvj.o ftgcvm.o ftgcvs.o ftgcx.o ftgcxd.o ftgcxi.o ftgcxj.o ftgdes.o ftgerr.o ftgext.o ftggpb.o ftggpd.o ftggpe.o ftggpi.o ftggpj.o ftghad.o ftghbn.o ftghdn.o ftghpr.o ftghps.o ftghsp.o ftghtb.o ftgi1b.o ftgics.o ftgiou.o ftgkey.o ftgknd.o ftgkne.o ftgknj.o ftgknl.o ftgkns.o ftgkyd.o ftgkye.o ftgkyj.o ftgkyl.o ftgkyn.o ftgkys.o ftgkyt.o ftgmsg.o ftgnst.o ftgpfb.o ftgpfd.o ftgpfe.o ftgpfi.o ftgpfj.o ftgphx.o ftgprh.o ftgpvb.o ftgpvd.o ftgpve.o ftgpvi.o ftgpvj.o ftgrec.o ftgsfb.o ftgsfd.o ftgsfe.o ftgsfi.o ftgsfj.o ftgsvb.o ftgsvd.o ftgsve.o ftgsvi.o ftgsvj.o ftgtbb.o ftgtbc.o ftgtbh.o ftgtbn.o ftgtbs.o ftgtcl.o ftgtcs.o ftgtdm.o ftgthd.o ftgtkn.o ftgttb.o fthdef.o fthpdn.o fthpup.o fti1i1.o fti1i2.o fti1i4.o fti1r4.o fti1r8.o fti2c.o fti2i1.o fti2i2.o fti2i4.o fti2r4.o fti2r8.o fti4i1.o fti4i2.o fti4i4.o fti4r4.o fti4r8.o ftibin.o ftiblk.o fticol.o ftiimg.o ftikyd.o ftikye.o ftikyf.o ftikyg.o ftikyj.o ftikyl.o ftikys.o ftinit.o ftirec.o ftirow.o ftitab.o ftkeyn.o ftkshf.o ftl2c.o ftmahd.o ftmcom.o ftmcrd.o ftmkey.o ftmkyd.o ftmkye.o ftmkyf.o ftmkyg.o ftmkyj.o ftmkyl.o ftmkys.o ftmnam.o ftmodr.o
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a ftmrec.o ftmrhd.o ftnkey.o ftnulc.o ftnulm.o ftopen.o ftp2db.o ftp2dd.o ftp2de.o ftp2di.o ftp2dj.o ftp3db.o ftp3dd.o ftp3de.o ftp3di.o ftp3dj.o ftpbit.o ftpbnh.o ftpcks.o ftpclb.o ftpclc.o ftpcld.o ftpcle.o ftpcli.o ftpclj.o ftpcll.o ftpclm.o ftpcls.o ftpclu.o ftpclx.o ftpcnb.o ftpcnd.o ftpcne.o ftpcni.o ftpcnj.o ftpcom.o ftpdat.o ftpdef.o ftpdes.o ftpdfl.o ftpgpb.o ftpgpd.o ftpgpe.o ftpgpi.o ftpgpj.o ftphbn.o ftphis.o ftphpr.o ftphtb.o ftpi1b.o ftpini.o ftpkey.o ftpkls.o ftpknd.o ftpkne.o ftpknf.o ftpkng.o ftpknj.o ftpknl.o ftpkns.o ftpkyd.o ftpkye.o ftpkyf.o ftpkyg.o ftpkyj.o ftpkyl.o ftpkys.o ftpkyt.o ftplsw.o ftpmsg.o ftpnul.o ftppnb.o ftppnd.o ftppne.o ftppni.o ftppnj.o ftpprb.o ftpprd.o ftppre.o ftpprh.o ftppri.o ftpprj.o ftppru.o ftprec.o ftprsv.o ftpscl.o ftpssb.o ftpssd.o ftpsse.o ftpssi.o ftpssj.o ftpsvc.o ftptbb.o ftptbh.o ftptbs.o ftptdm.o ftpthp.o ftr2e.o ftr2f.o ftr4i1.o ftr4i2.o ftr4i4.o ftr4r4.o ftr4r8.o ftr8i1.o ftr8i2.o ftr8i4.o ftr8r4.o ftr8r8.o ftrdef.o ftrhdu.o ftrsnm.o ftrwdn.o ftrwup.o fts2c.o ftsdnn.o ftsnul.o ftsrnn.o fttbit.o fttdnn.o fttkey.o fttkyn.o fttnul.o fttrec.o fttrnn.o fttscl.o ftucks.o ftucrd.o ftukyd.o ftukye.o ftukyf.o ftukyg.o ftukyj.o ftukyl.o ftukys.o ftuscc.o ftuscm.o ftvcks.o ftvers.o ftwend.o ftwldp.o ftxiou.o ftxmsg.o ftxypx.o fitsspp.o
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern tbagt.x tbapt.x tbbadf.x tbbaln.x tbbcmt.x tbbftp.x tbbnll.x tbbptf.x tbbtyp.x tbbwrd.x tbcadd.x tbcchg.x tbcdef.x tbcdef1.x tbcdes.x tbcfmt.x tbcfnd.x tbcfnd1.x tbcftl.x tbcgt.x tbciga.x tbcigi.x tbcigt.x tbcinf.x tbcnam.x tbcnit.x tbcnum.x tbcpt.x tbcrcd.x tbcscal.x tbctpe.x tbcwcd.x tbdsav.x tbegp.x tbegt.x tbeoff.x tbepp.x tbept.x tbeszt.x tbfag.x tbfanp.x tbfap.x tbfcal.x tbfchp.x tbfckn.x tbfclo.x tbfdef.x tbfdel.x tbferr.x tbffkw.x tbffmt.x tbffnd.x tbfgcm.x tbfgnp.x tbfhdl.x tbfhg.x tbfhp.x tbfiga.x tbfopn.x tbfnam.x tbfnew.x tbfnit.x tbfnll.x tbfpcm.x tbfpnp.x tbfpri.x tbfptf.x tbfrcd.x tbfres.x tbfrsi.x tbfscal.x tbfsiz.x tbfsft.x tbftya.x tbftyb.x tbfudf.x tbfwcd.x tbfwer.x tbfwsi.x tbhad.x tbhcal.x tbhckn.x tbhdel.x tbhfcm.x tbhfkr.x tbhfkw.x tbhgcm.x tbhgnp.x tbhgt.x tbhisc.x tbhkeq.x tbhpcm.x tbhpt.x tbhrpr.x tbhwpr.x tbnopen.x tbpset.x tbpsta.x tbrchg.x tbrcmp.x tbrcpy.x tbrcsc.x tbrdel.x tbrgt.x tbrnll.x tbrpt.x tbrsft.x tbrswp.x tbrudf.x tbscol.x tbsirow.x tbsopn.x tbsrow.x tbswer.x tbswer1.x tbtacc.x tbtbod.x tbtchs.x tbtclo.x tbtcpy.x tbtcre.x tbtdel.x tbtext.x tbtflu.x tbtfst.x tbtnam.x tbtopn.x tbtopns.x tbtren.x tbtrsi.x tbtscd.x tbtscu.x tbtsrt.x tbtwer.x tbtwsi.x tbuopn.x tbxag.x tbxap.x tbxcg.x tbxcp.x tbxncn.x tbxnew.x tbxnll.x tbxoff.x tbxrg.x tbxrp.x tbxscp.x tbxsft.x tbxsiz.x tbxudf.x tbxwnc.x tbxwer.x tbycg.x tbycp.x tbyncn.x tbynew.x tbynll.x tbyoff.x tbyrg.x tbyrp.x tbyscn.x tbyscp.x tbysft.x tbysiz.x tbyudf.x tbywer.x tbywnc.x tbzadd.x tbzcg.x tbzclo.x tbzcol.x tbzcp.x tbzd2t.x tbzgt.x tbzi2d.x tbzi2t.x tbzt2t.x tbzkey.x tbzlin.x tbzmem.x tbznew.x tbznll.x tbzopn.x tbzpt.x tbzrds.x tbzrdx.x tbzsft.x tbzsiz.x tbzsub.x tbztyp.x tbzudf.x tbzwer.x tbzwrt.x tbparse.x tbnparse.x
+tbagt.x:
+   tbagtd:
+   tbagtr:
+   tbagti:
+   tbagts:
+   tbagtb:
+   tbagtt:
+tbapt.x:
+   tbaptd:
+   tbaptr:
+   tbapti:
+   tbapts:
+   tbaptb:
+   tbaptt:
+tbbadf.x:
+   tbbadf:
+tbbaln.x:
+   tbbaln:
+tbbcmt.x:
+   tbbcmt:
+tbbftp.x:
+   tbbftp:
+tbbnll.x:
+   tbbnll:
+   tbbeqd:
+   tbbeqr:
+   tbbeqi:
+   tbbeqs:
+   tbbeqb:
+tbbptf.x:
+   tbbptf:
+tbbtyp.x:
+   tbbtyp:
+tbbwrd.x:
+   tbbwrd:
+tbcadd.x:
+   tbcadd:
+tbcchg.x:
+   tbcchg:
+tbcdef.x:
+   tbcdef:
+tbcdef1.x:
+   tbcdef1:
+tbcdes.x:
+   tbcdes:
+tbcfmt.x:
+   tbcfmt:
+tbcfnd.x:
+   tbcfnd:
+tbcfnd1.x:
+   tbcfnd1:
+tbcftl.x:
+   tbcftl:
+tbcgt.x:
+   tbcgtd:
+   tbcgtr:
+   tbcgti:
+   tbcgts:
+   tbcgtb:
+   tbcgtt:
+tbciga.x:
+   tbciga:
+   tbcisa:
+tbcigi.x:
+   tbcigi:
+tbcigt.x:
+   tbcigt:
+tbcinf.x:
+   tbcinf:
+tbcnam.x:
+   tbcnam:
+tbcnit.x:
+   tbcnit:
+tbcnum.x:
+   tbcnum:
+tbcpt.x:
+   tbcptd:
+   tbcptr:
+   tbcpti:
+   tbcpts:
+   tbcptb:
+   tbcptt:
+tbcrcd.x:
+   tbcrcd:
+   tbbncp1:
+   tbalen:
+tbcscal.x:
+   tbcscal:
+tbctpe.x:
+   tbctpe:
+tbcwcd.x:
+   tbcwcd:
+   tbbncp0:
+tbdsav.x:
+   tbdsav:
+   tbdres:
+   tbdfre:
+tbegp.x:
+   tbegpb:
+   tbegpd:
+   tbegpr:
+   tbegpi:
+   tbegps:
+   tbegpt:
+tbegt.x:
+   tbegtd:
+   tbegtr:
+   tbegti:
+   tbegts:
+   tbegtb:
+   tbegtt:
+tbeoff.x:
+   tbeoff:
+tbepp.x:
+   tbeppb:
+   tbeppd:
+   tbeppr:
+   tbeppi:
+   tbepps:
+   tbeppt:
+tbept.x:
+   tbeptd:
+   tbeptr:
+   tbepti:
+   tbepts:
+   tbeptb:
+   tbeptt:
+tbeszt.x:
+   tbeszt:
+tbfag.x:
+   tbfagd:
+   tbfagr:
+   tbfagi:
+   tbfags:
+   tbfagb:
+   tbfagt:
+tbfanp.x:
+   tbfanp:
+tbfap.x:
+   tbfapd:
+   tbfapr:
+   tbfapi:
+   tbfaps:
+   tbfapb:
+   tbfapt:
+tbfcal.x:
+   tbfcal:
+tbfchp.x:
+   tbfchp:
+tbfckn.x:
+   tbfckn:
+tbfclo.x:
+   tbfclo:
+tbfdef.x:
+   tbfdef:
+   tbftfo:
+tbfdel.x:
+   tbfdel:
+tbferr.x:
+   tbferr:
+tbffkw.x:
+   tbffkw:
+tbffmt.x:
+   tbffmt:
+tbffnd.x:
+   tbffnd:
+tbfgcm.x:
+   tbfgcm:
+tbfgnp.x:
+   tbfgnp:
+tbfhdl.x:
+   tbfhdl:
+tbfhg.x:
+   tbfhgd:
+   tbfhgr:
+   tbfhgi:
+   tbfhgb:
+   tbfhgt:
+tbfhp.x:
+   tbfhpd:
+   tbfhpr:
+   tbfhpi:
+   tbfhpb:
+   tbfhpt:
+tbfiga.x:
+   tbfiga:
+   tbfisa:
+tbfopn.x:
+   tbfopn:
+tbfnam.x:
+   tbfnam:
+tbfnew.x:
+   tbfnew:
+   tbfroot:
+tbfnit.x:
+   tbfnit:
+tbfnll.x:
+   tbfnll:
+tbfpcm.x:
+   tbfpcm:
+tbfpnp.x:
+   tbfpnp:
+tbfpri.x:
+   tbfpri:
+tbfptf.x:
+   tbfptf:
+tbfrcd.x:
+   tbfrcd:
+   tbfcd1:
+   tbfcd2:
+   tbfcd3:
+tbfres.x:
+   tbfres:
+tbfrsi.x:
+   tbfrsi:
+tbfscal.x:
+   tbfscal:
+tbfsiz.x:
+   tbfsiz:
+tbfsft.x:
+   tbfsft:
+tbftya.x:
+   tbftya:
+tbftyb.x:
+   tbftyb:
+tbfudf.x:
+   tbfudf:
+tbfwcd.x:
+   tbfwcd:
+tbfwer.x:
+   tbfwer:
+tbfwsi.x:
+   tbfwsi:
+tbhad.x:
+   tbhadd:
+   tbhadr:
+   tbhadi:
+   tbhadb:
+   tbhadt:
+tbhcal.x:
+   tbhcal:
+tbhckn.x:
+   tbhckn:
+tbhdel.x:
+   tbhdel:
+tbhfcm.x:
+   tbhfcm:
+tbhfkr.x:
+   tbhfkr:
+tbhfkw.x:
+   tbhfkw:
+tbhgcm.x:
+   tbhgcm:
+tbhgnp.x:
+   tbhgnp:
+tbhgt.x:
+   tbhgtb:
+   tbhgtd:
+   tbhgti:
+   tbhgtr:
+   tbhgtt:
+tbhisc.x:
+   tbhisc:
+tbhkeq.x:
+   tbhkeq:
+tbhpcm.x:
+   tbhpcm:
+tbhpt.x:
+   tbhptd:
+   tbhptr:
+   tbhpti:
+   tbhptb:
+   tbhptt:
+tbhrpr.x:
+   tbhrpr:
+tbhwpr.x:
+   tbhwpr:
+tbnopen.x:
+   tbnopenp:
+   tbnopen:
+   tbnget:
+   tbnlen:
+   tbnrew:
+   tbnclose:
+   tbn_mapname:
+tbpset.x:
+   tbpset:
+tbpsta.x:
+   tbpsta:
+   tbtszd:
+   tbrlen:
+tbrchg.x:
+   tbrchg:
+tbrcmp.x:
+   tbrcmp:
+tbrcpy.x:
+   tbrcpy:
+tbrcsc.x:
+   tbrcsc:
+tbrdel.x:
+   tbrdel:
+tbrgt.x:
+   tbrgtd:
+   tbrgtr:
+   tbrgti:
+   tbrgts:
+   tbrgtb:
+   tbrgtt:
+tbrnll.x:
+   tbrnll:
+tbrpt.x:
+   tbrptd:
+   tbrptr:
+   tbrpti:
+   tbrpts:
+   tbrptb:
+   tbrptt:
+tbrsft.x:
+   tbrsft:
+tbrswp.x:
+   tbrswp:
+tbrudf.x:
+   tbrudf:
+tbscol.x:
+   tbscol:
+tbsirow.x:
+   tbsirow:
+tbsopn.x:
+   tbsopn:
+tbsrow.x:
+   tbsrow:
+tbswer.x:
+   tbswer:
+tbswer1.x:
+   tbswer1:
+tbtacc.x:
+   tbtacc:
+tbtbod.x:
+   tbtbod:
+tbtchs.x:
+   tbtchs:
+tbtclo.x:
+   tbtclo:
+tbtcpy.x:
+   tbtcpy:
+tbtcre.x:
+   tbtcre:
+tbtdel.x:
+   tbtdel:
+tbtext.x:
+   tbtext:
+tbtflu.x:
+   tbtflu:
+tbtfst.x:
+   tbtfst:
+tbtnam.x:
+   tbtnam:
+tbtopn.x:
+   tbtopn:
+tbtopns.x:
+   tbtopns:
+   tbtopn2:
+   tbuopn2:
+   tbtrsi2:
+   tbcrcd2:
+tbtren.x:
+   tbtren:
+tbtrsi.x:
+   tbtrsi:
+tbtscd.x:
+   tbtscd:
+tbtscu.x:
+   tbtscu:
+tbtsrt.x:
+   tbtsrt:
+   tbqcmp:
+tbtwer.x:
+   tbtwer:
+tbtwsi.x:
+   tbtwsi:
+tbuopn.x:
+   tbuopn:
+tbxag.x:
+   tbxagd:
+   tbxagr:
+   tbxagi:
+   tbxags:
+   tbxagb:
+   tbxagt:
+   tbxgpt:
+tbxap.x:
+   tbxapd:
+   tbxapr:
+   tbxapi:
+   tbxaps:
+   tbxapb:
+   tbxapt:
+   tbxppt:
+tbxcg.x:
+   tbxcgb:
+   tbxcgd:
+   tbxcgr:
+   tbxcgi:
+   tbxcgs:
+   tbxcgt:
+tbxcp.x:
+   tbxcpb:
+   tbxcpd:
+   tbxcpr:
+   tbxcpi:
+   tbxcps:
+   tbxcpt:
+tbxncn.x:
+   tbxncn:
+tbxnew.x:
+   tbxnew:
+tbxnll.x:
+   tbxnll:
+tbxoff.x:
+   tbxoff:
+tbxrg.x:
+   tbxrgb:
+   tbxrgd:
+   tbxrgr:
+   tbxrgi:
+   tbxrgs:
+   tbxrgt:
+tbxrp.x:
+   tbxrpb:
+   tbxrpd:
+   tbxrpr:
+   tbxrpi:
+   tbxrps:
+   tbxrpt:
+   tbbcpy:
+tbxscp.x:
+   tbxscp:
+tbxsft.x:
+   tbxsft:
+tbxsiz.x:
+   tbxsiz:
+tbxudf.x:
+   tbxudf:
+tbxwnc.x:
+   tbxwnc:
+tbxwer.x:
+   tbxwer:
+tbycg.x:
+   tbycgb:
+   tbycgd:
+   tbycgr:
+   tbycgi:
+   tbycgs:
+   tbycgt:
+tbycp.x:
+   tbycpb:
+   tbycpd:
+   tbycpr:
+   tbycpi:
+   tbycps:
+   tbycpt:
+tbyncn.x:
+   tbyncn:
+tbynew.x:
+   tbynew:
+tbynll.x:
+   tbynll:
+tbyoff.x:
+   tbyoff:
+tbyrg.x:
+   tbyrgb:
+   tbyrgd:
+   tbyrgr:
+   tbyrgi:
+   tbyrgs:
+   tbyrgt:
+tbyrp.x:
+   tbyrpb:
+   tbyrpd:
+   tbyrpr:
+   tbyrpi:
+   tbyrps:
+   tbyrpt:
+tbyscn.x:
+   tbyscn:
+tbyscp.x:
+   tbyscp:
+tbysft.x:
+   tbysft:
+tbysiz.x:
+   tbysiz:
+tbyudf.x:
+   tbyudf:
+tbywer.x:
+   tbywer:
+tbywnc.x:
+   tbywnc:
+tbzadd.x:
+   tbzadd:
+tbzcg.x:
+   tbzcgb:
+   tbzcgd:
+   tbzcgr:
+   tbzcgi:
+   tbzcgs:
+   tbzcgt:
+tbzclo.x:
+   tbzclo:
+tbzcol.x:
+   tbzcol:
+tbzcp.x:
+   tbzcpb:
+   tbzcpd:
+   tbzcpr:
+   tbzcpi:
+   tbzcps:
+   tbzcpt:
+tbzd2t.x:
+   tbzd2t:
+tbzgt.x:
+   tbzgtb:
+   tbzgtd:
+   tbzgtr:
+   tbzgti:
+   tbzgts:
+   tbzgtt:
+tbzi2d.x:
+   tbzi2d:
+tbzi2t.x:
+   tbzi2t:
+tbzt2t.x:
+   tbzt2t:
+tbzkey.x:
+   tbzkey:
+tbzlin.x:
+   tbzlin:
+tbzmem.x:
+   tbzmem:
+   tbzmex:
+   tbzpbt:
+tbznew.x:
+   tbznew:
+tbznll.x:
+   tbznll:
+tbzopn.x:
+   tbzopn:
+tbzpt.x:
+   tbzptb:
+   tbzptd:
+   tbzptr:
+   tbzpti:
+   tbzpts:
+   tbzptt:
+tbzrds.x:
+   tbzrds:
+tbzrdx.x:
+   tbzrdx:
+   tbbecd:
+tbzsft.x:
+   tbzsft:
+tbzsiz.x:
+   tbzsiz:
+tbzsub.x:
+   tbzsub:
+tbztyp.x:
+   tbztyp:
+tbzudf.x:
+   tbzudf:
+tbzwer.x:
+   tbzwer:
+tbzwrt.x:
+   tbzwrt:
+tbparse.x:
+   tbparse:
+tbnparse.x:
+   tbnparse:
+   tbnexpr:
+tbagt.f:
+   tbagtd:
+   tbagtr:
+   tbagti:
+   tbagts:
+   tbagtb:
+   tbagtt:
+tbapt.f:
+   tbaptd:
+   tbaptr:
+   tbapti:
+   tbapts:
+   tbaptb:
+   tbaptt:
+tbbadf.f:
+   tbbadf:
+tbbaln.f:
+   tbbaln:
+tbbcmt.f:
+   tbbcmt:
+tbbftp.f:
+   tbbftp:
+tbbnll.f:
+   tbbnll:
+   tbbeqd:
+   tbbeqr:
+   tbbeqi:
+   tbbeqs:
+   tbbeqb:
+tbbptf.f:
+   tbbptf:
+tbbtyp.f:
+   tbbtyp:
+tbbwrd.f:
+   tbbwrd:
+tbcadd.f:
+   tbcadd:
+tbcchg.f:
+   tbcchg:
+tbcdef.f:
+   tbcdef:
+tbcdef1.f:
+   tbcde1:
+tbcdes.f:
+   tbcdes:
+tbcfmt.f:
+   tbcfmt:
+tbcfnd.f:
+   tbcfnd:
+tbcfnd1.f:
+   tbcfn1:
+tbcftl.f:
+   tbcftl:
+tbcgt.f:
+   tbcgtd:
+   tbcgtr:
+   tbcgti:
+   tbcgts:
+   tbcgtb:
+   tbcgtt:
+tbciga.f:
+   tbciga:
+   tbcisa:
+tbcigi.f:
+   tbcigi:
+tbcigt.f:
+   tbcigt:
+tbcinf.f:
+   tbcinf:
+tbcnam.f:
+   tbcnam:
+tbcnit.f:
+   tbcnit:
+tbcnum.f:
+   tbcnum:
+tbcpt.f:
+   tbcptd:
+   tbcptr:
+   tbcpti:
+   tbcpts:
+   tbcptb:
+   tbcptt:
+tbcrcd.f:
+   tbcrcd:
+   tbbnc1:
+   tbalen:
+tbcscal.f:
+   tbcscl:
+tbctpe.f:
+   tbctpe:
+tbcwcd.f:
+   tbcwcd:
+   tbbnc0:
+tbdsav.f:
+   tbdsav:
+   tbdres:
+   tbdfre:
+tbegp.f:
+   tbegpb:
+   tbegpd:
+   tbegpr:
+   tbegpi:
+   tbegps:
+   tbegpt:
+tbegt.f:
+   tbegtd:
+   tbegtr:
+   tbegti:
+   tbegts:
+   tbegtb:
+   tbegtt:
+tbeoff.f:
+   tbeoff:
+tbepp.f:
+   tbeppb:
+   tbeppd:
+   tbeppr:
+   tbeppi:
+   tbepps:
+   tbeppt:
+tbept.f:
+   tbeptd:
+   tbeptr:
+   tbepti:
+   tbepts:
+   tbeptb:
+   tbeptt:
+tbeszt.f:
+   tbeszt:
+tbfag.f:
+   tbfagd:
+   tbfagr:
+   tbfagi:
+   tbfags:
+   tbfagb:
+   tbfagt:
+tbfanp.f:
+   tbfanp:
+tbfap.f:
+   tbfapd:
+   tbfapr:
+   tbfapi:
+   tbfaps:
+   tbfapb:
+   tbfapt:
+tbfcal.f:
+   tbfcal:
+tbfchp.f:
+   tbfchp:
+tbfckn.f:
+   tbfckn:
+tbfclo.f:
+   tbfclo:
+tbfdef.f:
+   tbfdef:
+   tbftfo:
+tbfdel.f:
+   tbfdel:
+tbferr.f:
+   tbferr:
+tbffkw.f:
+   tbffkw:
+tbffmt.f:
+   tbffmt:
+tbffnd.f:
+   tbffnd:
+tbfgcm.f:
+   tbfgcm:
+tbfgnp.f:
+   tbfgnp:
+tbfhdl.f:
+   tbfhdl:
+tbfhg.f:
+   tbfhgd:
+   tbfhgr:
+   tbfhgi:
+   tbfhgb:
+   tbfhgt:
+tbfhp.f:
+   tbfhpd:
+   tbfhpr:
+   tbfhpi:
+   tbfhpb:
+   tbfhpt:
+tbfiga.f:
+   tbfiga:
+   tbfisa:
+tbfopn.f:
+   tbfopn:
+tbfnam.f:
+   tbfnam:
+tbfnew.f:
+   tbfnew:
+   tbfrot:
+tbfnit.f:
+   tbfnit:
+tbfnll.f:
+   tbfnll:
+tbfpcm.f:
+   tbfpcm:
+tbfpnp.f:
+   tbfpnp:
+tbfpri.f:
+   tbfpri:
+tbfptf.f:
+   tbfptf:
+tbfrcd.f:
+   tbfrcd:
+   tbfcd1:
+   tbfcd2:
+   tbfcd3:
+tbfres.f:
+   tbfres:
+tbfrsi.f:
+   tbfrsi:
+tbfscal.f:
+   tbfscl:
+tbfsiz.f:
+   tbfsiz:
+tbfsft.f:
+   tbfsft:
+tbftya.f:
+   tbftya:
+tbftyb.f:
+   tbftyb:
+tbfudf.f:
+   tbfudf:
+tbfwcd.f:
+   tbfwcd:
+tbfwer.f:
+   tbfwer:
+tbfwsi.f:
+   tbfwsi:
+tbhad.f:
+   tbhadd:
+   tbhadr:
+   tbhadi:
+   tbhadb:
+   tbhadt:
+tbhcal.f:
+   tbhcal:
+tbhckn.f:
+   tbhckn:
+tbhdel.f:
+   tbhdel:
+tbhfcm.f:
+   tbhfcm:
+tbhfkr.f:
+   tbhfkr:
+tbhfkw.f:
+   tbhfkw:
+tbhgcm.f:
+   tbhgcm:
+tbhgnp.f:
+   tbhgnp:
+tbhgt.f:
+   tbhgtb:
+   tbhgtd:
+   tbhgti:
+   tbhgtr:
+   tbhgtt:
+tbhisc.f:
+   tbhisc:
+tbhkeq.f:
+   tbhkeq:
+tbhpcm.f:
+   tbhpcm:
+tbhpt.f:
+   tbhptd:
+   tbhptr:
+   tbhpti:
+   tbhptb:
+   tbhptt:
+tbhrpr.f:
+   tbhrpr:
+tbhwpr.f:
+   tbhwpr:
+tbnopen.f:
+   tbnopp:
+   tbnopn:
+   tbnget:
+   tbnlen:
+   tbnrew:
+   tbncle:
+   tbnmae:
+tbpset.f:
+   tbpset:
+tbpsta.f:
+   tbpsta:
+   tbtszd:
+   tbrlen:
+tbrchg.f:
+   tbrchg:
+tbrcmp.f:
+   tbrcmp:
+tbrcpy.f:
+   tbrcpy:
+tbrcsc.f:
+   tbrcsc:
+tbrdel.f:
+   tbrdel:
+tbrgt.f:
+   tbrgtd:
+   tbrgtr:
+   tbrgti:
+   tbrgts:
+   tbrgtb:
+   tbrgtt:
+tbrnll.f:
+   tbrnll:
+tbrpt.f:
+   tbrptd:
+   tbrptr:
+   tbrpti:
+   tbrpts:
+   tbrptb:
+   tbrptt:
+tbrsft.f:
+   tbrsft:
+tbrswp.f:
+   tbrswp:
+tbrudf.f:
+   tbrudf:
+tbscol.f:
+   tbscol:
+tbsirow.f:
+   tbsirw:
+tbsopn.f:
+   tbsopn:
+tbsrow.f:
+   tbsrow:
+tbswer.f:
+   tbswer:
+tbswer1.f:
+   tbswe1:
+tbtacc.f:
+   tbtacc:
+tbtbod.f:
+   tbtbod:
+tbtchs.f:
+   tbtchs:
+tbtclo.f:
+   tbtclo:
+tbtcpy.f:
+   tbtcpy:
+tbtcre.f:
+   tbtcre:
+tbtdel.f:
+   tbtdel:
+tbtext.f:
+   tbtext:
+tbtflu.f:
+   tbtflu:
+tbtfst.f:
+   tbtfst:
+tbtnam.f:
+   tbtnam:
+tbtopn.f:
+   tbtopn:
+tbtopns.f:
+   tbtops:
+   tbtop2:
+   tbuop2:
+   tbtrs2:
+   tbcrc2:
+tbtren.f:
+   tbtren:
+tbtrsi.f:
+   tbtrsi:
+tbtscd.f:
+   tbtscd:
+tbtscu.f:
+   tbtscu:
+tbtsrt.f:
+   tbtsrt:
+   tbqcmp:
+tbtwer.f:
+   tbtwer:
+tbtwsi.f:
+   tbtwsi:
+tbuopn.f:
+   tbuopn:
+tbxag.f:
+   tbxagd:
+   tbxagr:
+   tbxagi:
+   tbxags:
+   tbxagb:
+   tbxagt:
+   tbxgpt:
+tbxap.f:
+   tbxapd:
+   tbxapr:
+   tbxapi:
+   tbxaps:
+   tbxapb:
+   tbxapt:
+   tbxppt:
+tbxcg.f:
+   tbxcgb:
+   tbxcgd:
+   tbxcgr:
+   tbxcgi:
+   tbxcgs:
+   tbxcgt:
+tbxcp.f:
+   tbxcpb:
+   tbxcpd:
+   tbxcpr:
+   tbxcpi:
+   tbxcps:
+   tbxcpt:
+tbxncn.f:
+   tbxncn:
+tbxnew.f:
+   tbxnew:
+tbxnll.f:
+   tbxnll:
+tbxoff.f:
+   tbxoff:
+tbxrg.f:
+   tbxrgb:
+   tbxrgd:
+   tbxrgr:
+   tbxrgi:
+   tbxrgs:
+   tbxrgt:
+tbxrp.f:
+   tbxrpb:
+   tbxrpd:
+   tbxrpr:
+   tbxrpi:
+   tbxrps:
+   tbxrpt:
+   tbbcpy:
+tbxscp.f:
+   tbxscp:
+tbxsft.f:
+   tbxsft:
+tbxsiz.f:
+   tbxsiz:
+tbxudf.f:
+   tbxudf:
+tbxwnc.f:
+   tbxwnc:
+tbxwer.f:
+   tbxwer:
+tbycg.f:
+   tbycgb:
+   tbycgd:
+   tbycgr:
+   tbycgi:
+   tbycgs:
+   tbycgt:
+tbycp.f:
+   tbycpb:
+   tbycpd:
+   tbycpr:
+   tbycpi:
+   tbycps:
+   tbycpt:
+tbyncn.f:
+   tbyncn:
+tbynew.f:
+   tbynew:
+tbynll.f:
+   tbynll:
+tbyoff.f:
+   tbyoff:
+tbyrg.f:
+   tbyrgb:
+   tbyrgd:
+   tbyrgr:
+   tbyrgi:
+   tbyrgs:
+   tbyrgt:
+tbyrp.f:
+   tbyrpb:
+   tbyrpd:
+   tbyrpr:
+   tbyrpi:
+   tbyrps:
+   tbyrpt:
+tbyscn.f:
+   tbyscn:
+tbyscp.f:
+   tbyscp:
+tbysft.f:
+   tbysft:
+tbysiz.f:
+   tbysiz:
+tbyudf.f:
+   tbyudf:
+tbywer.f:
+   tbywer:
+tbywnc.f:
+   tbywnc:
+tbzadd.f:
+   tbzadd:
+tbzcg.f:
+   tbzcgb:
+   tbzcgd:
+   tbzcgr:
+   tbzcgi:
+   tbzcgs:
+   tbzcgt:
+tbzclo.f:
+   tbzclo:
+tbzcol.f:
+   tbzcol:
+tbzcp.f:
+   tbzcpb:
+   tbzcpd:
+   tbzcpr:
+   tbzcpi:
+   tbzcps:
+   tbzcpt:
+tbzd2t.f:
+   tbzd2t:
+tbzgt.f:
+   tbzgtb:
+   tbzgtd:
+   tbzgtr:
+   tbzgti:
+   tbzgts:
+   tbzgtt:
+tbzi2d.f:
+   tbzi2d:
+tbzi2t.f:
+   tbzi2t:
+tbzt2t.f:
+   tbzt2t:
+tbzkey.f:
+   tbzkey:
+tbzlin.f:
+   tbzlin:
+tbzmem.f:
+   tbzmem:
+   tbzmex:
+   tbzpbt:
+tbznew.f:
+   tbznew:
+tbznll.f:
+   tbznll:
+tbzopn.f:
+   tbzopn:
+tbzpt.f:
+   tbzptb:
+   tbzptd:
+   tbzptr:
+   tbzpti:
+   tbzpts:
+   tbzptt:
+tbzrds.f:
+   tbzrds:
+tbzrdx.f:
+   tbzrdx:
+   tbbecd:
+tbzsft.f:
+   tbzsft:
+tbzsiz.f:
+   tbzsiz:
+tbzsub.f:
+   tbzsub:
+tbztyp.f:
+   tbztyp:
+tbzudf.f:
+   tbzudf:
+tbzwer.f:
+   tbzwer:
+tbzwrt.f:
+   tbzwrt:
+tbparse.f:
+   tbpare:
+tbnparse.f:
+   tbnpae:
+   tbnexr:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a tbagt.o tbapt.o tbbadf.o tbbaln.o tbbcmt.o tbbftp.o tbbnll.o tbbptf.o tbbtyp.o tbbwrd.o tbcadd.o tbcchg.o tbcdef.o tbcdef1.o tbcdes.o tbcfmt.o tbcfnd.o tbcfnd1.o tbcftl.o tbcgt.o tbciga.o tbcigi.o tbcigt.o tbcinf.o tbcnam.o tbcnit.o tbcnum.o tbcpt.o tbcrcd.o tbcscal.o tbctpe.o tbcwcd.o tbdsav.o tbegp.o tbegt.o tbeoff.o tbepp.o tbept.o tbeszt.o tbfag.o tbfanp.o tbfap.o tbfcal.o tbfchp.o tbfckn.o tbfclo.o tbfdef.o tbfdel.o tbferr.o tbffkw.o tbffmt.o tbffnd.o tbfgcm.o tbfgnp.o tbfhdl.o tbfhg.o tbfhp.o tbfiga.o tbfopn.o tbfnam.o tbfnew.o tbfnit.o tbfnll.o tbfpcm.o tbfpnp.o tbfpri.o tbfptf.o tbfrcd.o tbfres.o tbfrsi.o tbfscal.o tbfsiz.o tbfsft.o tbftya.o tbftyb.o tbfudf.o tbfwcd.o tbfwer.o tbfwsi.o tbhad.o tbhcal.o tbhckn.o tbhdel.o tbhfcm.o tbhfkr.o tbhfkw.o tbhgcm.o tbhgnp.o tbhgt.o tbhisc.o tbhkeq.o tbhpcm.o tbhpt.o tbhrpr.o tbhwpr.o tbnopen.o tbpset.o tbpsta.o tbrchg.o tbrcmp.o tbrcpy.o tbrcsc.o tbrdel.o tbrgt.o tbrnll.o tbrpt.o tbrsft.o tbrswp.o tbrudf.o tbscol.o tbsirow.o tbsopn.o tbsrow.o tbswer.o tbswer1.o tbtacc.o tbtbod.o tbtchs.o tbtclo.o tbtcpy.o tbtcre.o tbtdel.o tbtext.o tbtflu.o tbtfst.o tbtnam.o tbtopn.o tbtopns.o tbtren.o tbtrsi.o tbtscd.o tbtscu.o tbtsrt.o tbtwer.o tbtwsi.o tbuopn.o tbxag.o tbxap.o tbxcg.o tbxcp.o tbxncn.o tbxnew.o tbxnll.o tbxoff.o tbxrg.o tbxrp.o tbxscp.o tbxsft.o tbxsiz.o tbxudf.o tbxwnc.o tbxwer.o tbycg.o tbycp.o tbyncn.o tbynew.o tbynll.o tbyoff.o tbyrg.o tbyrp.o tbyscn.o tbyscp.o tbysft.o tbysiz.o tbyudf.o tbywer.o tbywnc.o tbzadd.o tbzcg.o tbzclo.o tbzcol.o tbzcp.o tbzd2t.o tbzgt.o tbzi2d.o tbzi2t.o tbzt2t.o tbzkey.o tbzlin.o tbzmem.o tbznew.o tbznll.o tbzopn.o tbzpt.o tbzrds.o tbzrdx.o tbzsft.o tbzsiz.o tbzsub.o tbztyp.o tbzudf.o tbzwer.o tbzwrt.o tbparse.o tbnparse.o
+xc -Inolibc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern tbttyp.x tbhanp.x tbhpnp.x afn.x catacc.x catclose.x catcreate.x catdefine.x catexpr.x catextn.x catfilter.x catfunc.x catget.x catgid.x catgrec.x cathdr.x cathead.x catnext.x catopen.x catput.x catrhdr.x catrrecs.x catsort.x catwcs.x catwhdr.x catwrecs.x
+tbttyp.x:
+   tbttyp:
+tbhanp.x:
+   tbhanp:
+tbhpnp.x:
+   tbhpnp:
+afn.x:
+   afn_cl:
+   afn_opn:
+   afn_opno:
+   afn_cls:
+   afn_len:
+   afn_rew:
+   afn_gfn:
+   afn_rfn:
+catacc.x:
+   catacc:
+catclose.x:
+   catclose:
+   catrecs_free:
+catcreate.x:
+   catcreate:
+catdefine.x:
+   catdefine:
+   catdefine1:
+   catdefine2:
+   stpdump:
+catexpr.x:
+   catexpr:
+catextn.x:
+   catextn:
+catfilter.x:
+   filter:
+catfunc.x:
+   catfunc:
+   catfuncs:
+   catop:
+catget.x:
+   catgets:
+   catgeti:
+   catgetr:
+catgid.x:
+   catgid:
+catgrec.x:
+   catgrec:
+cathdr.x:
+   mkimhdr:
+   im2tb:
+   tb2im:
+   im2im:
+cathead.x:
+   cathead:
+catnext.x:
+   catnext:
+catopen.x:
+   catopen:
+   catopen1:
+catput.x:
+   catputs:
+   catputr:
+catrhdr.x:
+   catrhdr:
+catrrecs.x:
+   catrrecs:
+   catrrec:
+   catrec:
+catsort.x:
+   catsort:
+   catcmp:
+catwcs.x:
+   catwcs:
+   catwcs_open:
+   catwcs_close:
+   cat_lw:
+   cat_lp:
+   cat_std:
+   cat_gal:
+   cat_ec:
+   ast_coord:
+catwhdr.x:
+   catwhdr:
+catwrecs.x:
+   catwrecs:
+   catwrec:
+tbttyp.f:
+   tbttyp:
+tbhanp.f:
+   tbhanp:
+tbhpnp.f:
+   tbhpnp:
+afn.f:
+   afncl:
+   afnopn:
+   afnopo:
+   afncls:
+   afnlen:
+   afnrew:
+   afngfn:
+   afnrfn:
+catacc.f:
+   catacc:
+catclose.f:
+   catcle:
+   catree:
+catcreate.f:
+   catcre:
+catdefine.f:
+   catdee:
+   catde1:
+   catde2:
+   stpdup:
+catexpr.f:
+   catexr:
+catextn.f:
+   catexn:
+catfilter.f:
+   filter:
+catfunc.f:
+   catfuc:
+   catfus:
+   catop:
+catget.f:
+   catges:
+   catgei:
+   catger:
+catgid.f:
+   catgid:
+catgrec.f:
+   catgrc:
+cathdr.f:
+   mkimhr:
+   im2tb:
+   tb2im:
+   im2im:
+cathead.f:
+   cathed:
+catnext.f:
+   catnet:
+catopen.f:
+   catopn:
+   catop1:
+catput.f:
+   catpus:
+   catpur:
+catrhdr.f:
+   catrhr:
+catrrecs.f:
+   catrrs:
+   catrrc:
+   catrec:
+catsort.f:
+   catsot:
+   catcmp:
+catwcs.f:
+   catwcs:
+   catwcn:
+   catwce:
+   catlw:
+   catlp:
+   catstd:
+   catgal:
+   catec:
+   astcod:
+catwhdr.f:
+   catwhr:
+catwrecs.f:
+   catwrs:
+   catwrc:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a tbttyp.o tbhanp.o tbhpnp.o afn.o catacc.o catclose.o catcreate.o catdefine.o catexpr.o catextn.o catfilter.o catfunc.o catget.o catgid.o catgrec.o cathdr.o cathead.o catnext.o catopen.o catput.o catrhdr.o catrrecs.o catsort.o catwcs.o catwhdr.o catwrecs.o
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/libacecat.a
+Updated 863 files in libacecat.a
+check file `libacecat.a' into `nfebin$'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern acecluster.x t_acecluster.x t_acepairs.x
+acecluster.x:
+   acecluster1:
+   acecluster2:
+   acecluster3:
+   acecluster4:
+   acecluster5:
+   acecluster6:
+   acecluster7:
+   acecluster8:
+   acecluster9:
+   aceclustera:
+   aceclusterb:
+   aceclusterc:
+t_acecluster.x:
+   t_acecluster:
+   acecluster:
+   acecluster_avg:
+t_acepairs.x:
+   t_acepairs:
+   t_acepalign:
+   acepairs:
+   ap_pairs:
+   ap_moving:
+   ap_align:
+   ap1_wcat:
+   ap2_wcat:
+   ap3_wcat:
+   ap4_wcat:
+   ap_hough:
+   ap2_compare:
+acecluster.f:
+   acecl1:
+   acecl2:
+   acecl3:
+   acecl4:
+   acecl5:
+   acecl6:
+   acecl7:
+   acecl8:
+   acecl9:
+   acecla:
+   aceclb:
+   aceclc:
+t_acecluster.f:
+   tacecr:
+   aceclr:
+   aceclg:
+t_acepairs.f:
+   taceps:
+   tacepn:
+   acepas:
+   appais:
+   apmovg:
+   apalin:
+   ap1wct:
+   ap2wct:
+   ap3wct:
+   ap4wct:
+   aphouh:
+   ap2coe:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/ace/aceproto/libpkg.a acecluster.o t_acecluster.o t_acepairs.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/ace/aceproto/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_aceproto.x
+x_aceproto.x:
+   sys_runtask:
+x_aceproto.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_aceproto.o libpkg.a -lacecat -lxtools -o xx_aceproto.e
+move `xx_aceproto.e' to `nfebin$x_aceproto.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern stffest.x stfgraph.x stfmatch.x stfmeasure.x stfprofile.x t_starfocus.x t_stffocus.x
+stffest.x:
+   stf_fitfocus:
+   stf_festimate:
+stfgraph.x:
+   stf_graph:
+   stf_colon:
+   stf_g1:
+   stf_g2:
+   stf_g3:
+   stf_g4:
+   stf_g5:
+   stf_g6:
+   stf_g7:
+   stf_g8:
+   stf_g9:
+   stf_g10:
+   stf_g11:
+   stf_g12:
+stfmatch.x:
+   stf_match:
+   deccmp:
+   ycmp:
+stfmeasure.x:
+   stf_measure:
+stfprofile.x:
+   stf_find:
+   stf_bkgd:
+   stf_profile:
+   stf_norm:
+   stf_widths:
+   stf_i2r:
+   stf_r2i:
+   stf_r2n:
+   stf_model:
+   stf_dfwhm:
+   stf_fwhms:
+   stf_radius:
+   stf_fit:
+   stf_gauss1:
+   stf_gauss2:
+   stf_moffat1:
+   stf_moffat2:
+t_starfocus.x:
+   t_starfocus:
+   t_psfmeasure:
+   starfocus:
+   stf_free:
+   stf_organize:
+   stf_log:
+   stf_title:
+   stf_magsort:
+   stf_focsort:
+   stf_display:
+   stfcur:
+t_stffocus.x:
+   t_stffocus:
+stffest.f:
+   stffis:
+   stffee:
+stfgraph.f:
+   stfgrh:
+   stfcon:
+   stfg1:
+   stfg2:
+   stfg3:
+   stfg4:
+   stfg5:
+   stfg6:
+   stfg7:
+   stfg8:
+   stfg9:
+   stfg10:
+   stfg11:
+   stfg12:
+stfmatch.f:
+   stfmah:
+   deccmp:
+   ycmp:
+stfmeasure.f:
+   stfmee:
+stfprofile.f:
+   stffid:
+   stfbkd:
+   stfpre:
+   stfnom:
+   stfwis:
+   stfi2r:
+   stfr2i:
+   stfr2n:
+   stfmol:
+   stfdfm:
+   stffws:
+   stfras:
+   stffit:
+   stfga1:
+   stfga2:
+   stfmo1:
+   stfmo2:
+t_starfocus.f:
+   tstars:
+   tpsfme:
+   starfs:
+   stffre:
+   stfore:
+   stflog:
+   stftie:
+   stfmat:
+   stffot:
+   stfdiy:
+   stfcur:
+t_stffocus.f:
+   tstffs:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/ace/libpkg.a stffest.o stfgraph.o stfmatch.o stfmeasure.o stfprofile.o t_starfocus.o t_stffocus.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/ace/libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern txt.x ace.x acefunc.x acemulticat.x aceoffsets.x aceoverlay.x bndry.x caflux.x catshape.x convolve.x detect.x eaflux.x evaluate.x grow.x gwt.x mapio.x maskcolor.x mgs.x mim.x noisemodel.x omcat.x omwrite.x pars.x sky.x skyblock.x skyfit.x skyimages.x split.x t_acefocus.x t_acematch.x t_acecopy.x t_ace.x t_acedisplay.x t_acegeomap.x t_acesetwcs.x x_ace.x
+txt.x:
+   f_acestruct:
+   f_catdef:
+   p_aceall:
+   p_acecatalog:
+   p_acediff:
+   p_aceevaluate:
+   p_acesegment:
+   f_acefocus:
+ace.x:
+   aceall:
+   ace:
+acefunc.x:
+   acefunc:
+acemulticat.x:
+   ace_omulticat:
+   ace_amulticat:
+   ace_cmulticat:
+aceoffsets.x:
+   get_offsets:
+aceoverlay.x:
+   overlay:
+bndry.x:
+   bndry:
+caflux.x:
+   caf_init:
+   caf_free:
+   caf_eval:
+   ycompare:
+catshape.x:
+   catshape:
+convolve.x:
+   convolve:
+   convolves:
+   convolve1:
+   convolve2:
+   asubr_scale:
+   cnvgline1:
+   cnvbp:
+   cnvgline2:
+   cnvparse:
+detect.x:
+   detect:
+   detect1:
+   dadd:
+   drenum:
+   drenum1:
+   newobj:
+eaflux.x:
+   eaf_ginit:
+   eaf_gdone:
+   eaf_init:
+   eaf_accum:
+   eaf_done:
+evaluate.x:
+   evaluate:
+   compare:
+   evapportion:
+   evl_findstars:
+   evgdata:
+grow.x:
+   grow:
+   grow1:
+   grow2:
+   grow3:
+gwt.x:
+   gwt_ginit:
+   gwt_gdone:
+   gwt_init:
+   gwt_accum:
+   gwt_done:
+   gwt_wt1d:
+mapio.x:
+   map_glr:
+   map_open:
+   map_opengs:
+   map_close:
+   map_gets:
+   map_geti:
+   map_getr:
+   map_seti:
+   map_setr:
+   map_sets:
+maskcolor.x:
+   mcolors:
+   mcolorr:
+mgs.x:
+   mgs_glr:
+   mgs_open:
+   mgs_close:
+   mgs_gets:
+   mgs_sets:
+   mgs_geti:
+   mgs_seti:
+   mgs_getr:
+   mgs_setr:
+   mgs_pgs:
+   mgs_ggs:
+mim.x:
+   mim_glr:
+   mim_open:
+   mim_close:
+   mim_gets:
+   mim_geti:
+   mim_getr:
+   mim_sets:
+   mim_seti:
+   mim_setr:
+noisemodel.x:
+   noisemodel:
+   expsigma:
+omcat.x:
+   omcat:
+omwrite.x:
+   omwrite:
+pars.x:
+   sky_pars:
+   skf_pars:
+   skb_pars:
+   det_pars:
+   spt_pars:
+   grw_pars:
+   evl_pars:
+   flt_pars:
+sky.x:
+   sky:
+skyblock.x:
+   sky_block:
+   skb_iminit:
+   skb_imfree:
+   skb_accum:
+   skb_blkeval:
+   skb_update:
+   skb_grow:
+   skb_merge:
+   skb_wmap:
+   interp2:
+   interp1:
+skyfit.x:
+   sky_fit:
+   blkavg:
+   blkavg1:
+skyimages.x:
+   skyimages:
+split.x:
+   split:
+   sadd:
+   srenum:
+   srenum1:
+t_acefocus.x:
+   t_acefocus:
+t_acematch.x:
+   t_acematch:
+   acm_mw:
+   acm_gcat:
+   acm_match:
+   acm_accum:
+   acm_ftp:
+   acm_stat:
+   acm_crval:
+   acm_pixel:
+   acm_phot:
+   acm_wcat:
+   acm_search:
+   acm_convolve:
+   acm_tpinit:
+   acm_tpeval:
+   acm_tpfree:
+t_acecopy.x:
+   t_acecopy:
+t_ace.x:
+   t_acesegment:
+   t_acecatalog:
+   t_aceevaluate:
+   t_acediff:
+   t_aceall:
+   t_acefilter:
+   ace_show_catdef:
+t_acedisplay.x:
+   t_acedisplay:
+   ods_load_display:
+   ods_pmmap:
+   ods_immap:
+   ods_match:
+t_acegeomap.x:
+   t_acegeomap:
+   acm_gcat1:
+   acm_geomap_data:
+   acm_geomap:
+   acm_ccmap_cat:
+t_acesetwcs.x:
+   t_acesetwcs:
+   cc_userwcs:
+   cc_usershow:
+   cc_dtwcs:
+   cc_rdproj:
+   cc_nwcsim:
+   cc_wcscor:
+   cc_gsencode:
+   rg_wrdstr:
+   geo_gcoeffd:
+   cc_catwcs:
+x_ace.x:
+   sys_runtask:
+txt.f:
+   facest:
+   fcatdf:
+   paceal:
+   pacecg:
+   pacedf:
+   paceee:
+   pacest:
+   facefs:
+ace.f:
+   aceall:
+   ace:
+acefunc.f:
+   acefuc:
+acemulticat.f:
+   aceomt:
+   aceamt:
+   acecmt:
+aceoffsets.f:
+   getofs:
+aceoverlay.f:
+   overly:
+bndry.f:
+   bndry:
+caflux.f:
+   cafint:
+   caffre:
+   cafevl:
+   ycompe:
+catshape.f:
+   catshe:
+convolve.f:
+   convoe:
+   convos:
+   convo1:
+   convo2:
+   asubre:
+   cnvgl1:
+   cnvbp:
+   cnvgl2:
+   cnvpae:
+detect.f:
+   detect:
+   detec1:
+   dadd:
+   drenum:
+   drenu1:
+   newobj:
+eaflux.f:
+   eafgit:
+   eafgde:
+   eafint:
+   eafacm:
+   eafdoe:
+evaluate.f:
+   evalue:
+   compae:
+   evappn:
+   evlfis:
+   evgdaa:
+grow.f:
+   grow:
+   grow1:
+   grow2:
+   grow3:
+gwt.f:
+   gwtgit:
+   gwtgde:
+   gwtint:
+   gwtacm:
+   gwtdoe:
+   gwtwtd:
+mapio.f:
+   mapglr:
+   mapopn:
+   mapops:
+   mapcle:
+   mapges:
+   mapgei:
+   mapger:
+   mapsei:
+   mapser:
+   mapses:
+maskcolor.f:
+   mcolos:
+   mcolor:
+mgs.f:
+   mgsglr:
+   mgsopn:
+   mgscle:
+   mgsges:
+   mgsses:
+   mgsgei:
+   mgssei:
+   mgsger:
+   mgsser:
+   mgspgs:
+   mgsggs:
+mim.f:
+   mimglr:
+   mimopn:
+   mimcle:
+   mimges:
+   mimgei:
+   mimger:
+   mimses:
+   mimsei:
+   mimser:
+noisemodel.f:
+   noisel:
+   expsia:
+omcat.f:
+   omcat:
+omwrite.f:
+   omwrie:
+pars.f:
+   skypas:
+   skfpas:
+   skbpas:
+   detpas:
+   sptpas:
+   grwpas:
+   evlpas:
+   fltpas:
+sky.f:
+   sky:
+skyblock.f:
+   skyblk:
+   skbimt:
+   skbime:
+   skbacm:
+   skbbll:
+   skbupe:
+   skbgrw:
+   skbmee:
+   skbwmp:
+   inter2:
+   inter1:
+skyfit.f:
+   skyfit:
+   blkavg:
+   blkav1:
+skyimages.f:
+   skyims:
+split.f:
+   split:
+   sadd:
+   srenum:
+   srenu1:
+t_acefocus.f:
+   tacefs:
+t_acematch.f:
+   tacemh:
+   acmmw:
+   acmgct:
+   acmmah:
+   acmacm:
+   acmftp:
+   acmstt:
+   acmcrl:
+   acmpil:
+   acmpht:
+   acmwct:
+   acmseh:
+   acmcoe:
+   acmtpt:
+   acmtpl:
+   acmtpe:
+t_acecopy.f:
+   tacecy:
+t_ace.f:
+   tacest:
+   tacecg:
+   taceee:
+   tacedf:
+   taceal:
+   tacefr:
+   aceshf:
+t_acedisplay.f:
+   tacedy:
+   odsloy:
+   odspmp:
+   odsimp:
+   odsmah:
+t_acegeomap.f:
+   tacegp:
+   acmgc1:
+   acmgea:
+   acmgep:
+   acmcct:
+t_acesetwcs.f:
+   tacess:
+   ccuses:
+   ccusew:
+   ccdtws:
+   ccrdpj:
+   ccnwcm:
+   ccwcsr:
+   ccgsee:
+   rgwrdr:
+   geogcd:
+   cccats:
+x_ace.f:
+   sysruk:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/ace/libpkg.a txt.o ace.o acefunc.o acemulticat.o aceoffsets.o aceoverlay.o bndry.o caflux.o catshape.o convolve.o detect.o eaflux.o evaluate.o grow.o gwt.o mapio.o maskcolor.o mgs.o mim.o noisemodel.o omcat.o omwrite.o pars.o sky.o skyblock.o skyfit.o skyimages.o split.o t_acefocus.o t_acematch.o t_acecopy.o t_ace.o t_acedisplay.o t_acegeomap.o t_acesetwcs.o x_ace.o
+ranlib libpkg.a
+Updated 43 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_ace.x
+x_ace.x:
+   sys_runtask:
+x_ace.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_ace.o libpkg.a -lacecat -lnfe -lds -lgsurfit          -lcurfit -lxtools -liminterp -lnlfit -lslalib -o xx_ace.e
+move `xx_ace.e' to `nfebin$x_ace.e'
+copy `aceall' to `nfebin$aceall'
+copy aceall to /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/aceall
+copy `acecatalog' to `nfebin$acecatalog'
+copy acecatalog to /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/acecatalog
+copy `acediff' to `nfebin$acediff'
+copy acediff to /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/acediff
+copy `aceevaluate' to `nfebin$aceevaluate'
+copy aceevaluate to /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/aceevaluate
+copy `acesegment' to `nfebin$acesegment'
+copy acesegment to /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/bin.linux/acesegment
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern astfunc.x exprdb.x ie.x mravr.x ost.x par.x pefunc.x peget.x pi.x prclog.x prcsteps.x prc.x proctool.x setexpr.x setimage.x setmef.x t_aimexpr.x t_mskmerge.x t_proctool.x
+astfunc.x:
+   ast_func:
+   airmass:
+exprdb.x:
+   exprdb:
+ie.x:
+   ie_getexprdb:
+   ie_puttok:
+   ie_gsym:
+   gt_expandtext:
+   gt_expand:
+   gt_open:
+   gt_opentext:
+   gt_gettok:
+   gt_ungettok:
+   gt_rawtok:
+   gt_nexttok:
+   gt_close:
+   gt_arglist:
+mravr.x:
+   mravr:
+   mwvgr:
+ost.x:
+   ost_iopen:
+   ost_iclose:
+   ost_bopen:
+   ost_bclose:
+   ost_bfit:
+   ost_sopen:
+   ost_sclose:
+   sky_alloc:
+   sky_free:
+   ost_popen:
+   ost_pclose:
+   per_alloc:
+   per_free:
+   ost_find:
+par.x:
+   par_alloc:
+   par_free:
+pefunc.x:
+   pe_func:
+peget.x:
+   pe_getop:
+   pe_getim:
+   prc_exprs:
+   prc_exprr:
+   prc_exprd:
+   prc_exprb:
+   prc_exprp:
+pi.x:
+   pi_iopen:
+   pi_igline:
+   pi_mgline:
+   pi_iclose:
+   pi_bopen:
+   pi_bgline:
+   pi_bclose:
+   pi_sopen:
+   pi_sgline:
+   pi_sclose:
+   pi_smode:
+   pi_popen:
+   pi_pgline:
+   pi_pclose:
+   pi_moder:
+   pi_alloc:
+   pi_free:
+   pi_map:
+   pi_unmap:
+   pi_compare:
+prclog.x:
+   prclog_open:
+   prclog_close:
+   prclog:
+   prclog_flush:
+   prclog_clear:
+prcsteps.x:
+   prc_steps:
+prc.x:
+   prc_alloc:
+   prc_free:
+   prc_piunmap:
+   prc_error:
+proctool.x:
+   proctool:
+   proc1:
+   proc:
+   procline:
+setexpr.x:
+   setexpr:
+   setexpr1:
+   setexpr2:
+setimage.x:
+   setimage:
+setmef.x:
+   setmef:
+t_aimexpr.x:
+   t_aimexpr:
+t_mskmerge.x:
+   t_mskmerge:
+t_proctool.x:
+   t_proctool:
+astfunc.f:
+   astfuc:
+   airmas:
+exprdb.f:
+   exprdb:
+ie.f:
+   iegetb:
+   ieputk:
+   iegsym:
+   gtexpt:
+   gtexpd:
+   gtopen:
+   gtopet:
+   gtgetk:
+   gtungk:
+   gtrawk:
+   gtnexk:
+   gtcloe:
+   gtargt:
+mravr.f:
+   mravr:
+   mwvgr:
+ost.f:
+   ostion:
+   ostice:
+   ostbon:
+   ostbce:
+   ostbft:
+   ostson:
+   ostsce:
+   skyalc:
+   skyfre:
+   ostpon:
+   ostpce:
+   peralc:
+   perfre:
+   ostfid:
+par.f:
+   paralc:
+   parfre:
+pefunc.f:
+   pefunc:
+peget.f:
+   pegetp:
+   pegetm:
+   prcexs:
+   prcexr:
+   prcexd:
+   prcexb:
+   prcexp:
+pi.f:
+   piiopn:
+   piigle:
+   pimgle:
+   piicle:
+   pibopn:
+   pibgle:
+   pibcle:
+   pisopn:
+   pisgle:
+   piscle:
+   pismoe:
+   pipopn:
+   pipgle:
+   pipcle:
+   pimodr:
+   piallc:
+   pifree:
+   pimap:
+   piunmp:
+   picome:
+prclog.f:
+   prclon:
+   prcloe:
+   prclog:
+   prcloh:
+   prclor:
+prcsteps.f:
+   prcsts:
+prc.f:
+   prcalc:
+   prcfre:
+   prcpip:
+   prcerr:
+proctool.f:
+   proctl:
+   proc1:
+   proc:
+   procle:
+setexpr.f:
+   setexr:
+   setex1:
+   setex2:
+setimage.f:
+   setime:
+setmef.f:
+   setmef:
+t_aimexpr.f:
+   taimer:
+t_mskmerge.f:
+   tmskme:
+t_proctool.f:
+   tprocl:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/proctool/libpkg.a astfunc.o exprdb.o ie.o mravr.o ost.o par.o pefunc.o peget.o pi.o prclog.o prcsteps.o prc.o proctool.o setexpr.o setimage.o setmef.o t_aimexpr.o t_mskmerge.o t_proctool.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/proctool/libpkg.a
+ranlib libpkg.a
+Updated 19 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_proctool.x
+x_proctool.x:
+   sys_runtask:
+x_proctool.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_proctool.o libpkg.a -lnfe -lasttools -lxtools -lcurfit  -liminterp -o xx_proctool.e
+move `xx_proctool.e' to `nfebin$x_proctool.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern expr.x icmefscale.x t_combine.x
+expr.x:
+   getkeys:
+   getkey:
+   getfunc:
+   mkid:
+icmefscale.x:
+   mefscales:
+   mefscales1:
+t_combine.x:
+   t_combine:
+   t_cgroup:
+   t_coutput:
+   cmbine:
+   cmb_images_free:
+   coutput:
+   cmb_images:
+   mefcombine:
+   ic_mklist:
+   cmb_sequences:
+   cmb_sequences1:
+   cmb_compare:
+expr.f:
+   getkes:
+   getkey:
+   getfuc:
+   mkid:
+icmefscale.f:
+   mefscs:
+   mefsc1:
+t_combine.f:
+   tcombe:
+   tcgrop:
+   tcoutt:
+   cmbine:
+   cmbime:
+   coutpt:
+   cmbims:
+   mefcoe:
+   icmklt:
+   cmbses:
+   cmbse1:
+   cmbcoe:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/combine/libpkg.a expr.o icmefscale.o t_combine.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/combine/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_combine.x
+x_combine.x:
+   sys_runtask:
+x_combine.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_combine.o libpkg.a -lnfe -limc -lxtools -lcurfit -lsurfit -lgsurfit -liminterp -lnlfit -lslalib -lncar -lgks -o xx_combine.e
+move `xx_combine.e' to `nfebin$x_combine.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern curfit.x t_curfit.x
+curfit.x:
+   cf_fitr:
+   cf_listxyr:
+   im_projectionr:
+   cf_fitd:
+   cf_listxyd:
+   im_projectiond:
+t_curfit.x:
+   t_curfit:
+   cf_operand:
+   cf_rlist:
+   cf_rimage:
+   cf_divzr:
+   cf_divzd:
+curfit.f:
+   cffitr:
+   cflisr:
+   impror:
+   cffitd:
+   cflisd:
+   improd:
+t_curfit.f:
+   tcurft:
+   cfoped:
+   cfrlit:
+   cfrime:
+   cfdivr:
+   cfdivd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/libpkg.a curfit.o t_curfit.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern imsurfit.x pixlist.x ranges.x t_imsurfit.x
+imsurfit.x:
+   imsurfit:
+   all_pixels:
+   good_pixels:
+   all_medians:
+   good_medians:
+   set_outimage:
+   clean_line:
+   do_reject:
+   refit_surface:
+   grow_regions:
+   get_sigma:
+   detect_rejects:
+   awssqr:
+   ims_divzero:
+pixlist.x:
+   prl_add_ranges:
+   prl_eqlines:
+   prl_get_ranges:
+   prl_nextlineno:
+   prl_prevlineno:
+   prl_put_ranges:
+   prl_free:
+   prl_init:
+ranges.x:
+   is_decode_ranges:
+   is_next_number:
+   is_previous_number:
+   is_in_rangelist:
+   is_expand_ranges:
+   is_select_ranges:
+   is_choose_rangesi:
+   is_choose_rangesr:
+   is_make_ranges:
+t_imsurfit.x:
+   t_imsurfit:
+   make_good_list:
+imsurfit.f:
+   imsurt:
+   allpis:
+   goodps:
+   allmes:
+   goodms:
+   setoue:
+   cleane:
+   dorejt:
+   refite:
+   growrs:
+   getsia:
+   detecs:
+   awssqr:
+   imsdio:
+pixlist.f:
+   prlads:
+   prleqs:
+   prlges:
+   prlneo:
+   prlpro:
+   prlpus:
+   prlfre:
+   prlint:
+ranges.f:
+   isdecs:
+   isnexr:
+   isprer:
+   isinrt:
+   isexps:
+   issels:
+   ischoi:
+   ischor:
+   ismaks:
+t_imsurfit.f:
+   timsut:
+   makegt:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/libpkg.a imsurfit.o pixlist.o ranges.o t_imsurfit.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern ccsetwcs.x liststr.x mapio.x mgs.x mim.x mscwcs.x patblk.x rgstr.x skywcs.x t_addkey.x t_fitscopy.x t_getcatalog.x t_imext.x t_imstat.x t_jlists.x t_mkmsc.x t_msccmatch.x t_mscctran.x t_mscext.x t_mscgmask.x t_mscimatch.x t_mscpmask.x t_msctmplt.x t_mscuniq.x t_mscwcs.x t_patfit.x t_pixarea.x t_pixscale.x t_toshort.x t_xlog.x
+ccsetwcs.x:
+   t_ccsetwcs:
+   ccsetwcs:
+   cc_dtwcs:
+   cc_rdproj:
+   cc_nwcsim:
+   cc_wcscor:
+   cc_gsencode:
+   geo_gcoeffd:
+liststr.x:
+   li_find_fields:
+   li_cappend_line:
+   li_get_numr:
+   li_pack_liner:
+   li_append_liner:
+   li_format_fieldr:
+   li_get_numd:
+   li_pack_lined:
+   li_append_lined:
+   li_format_fieldd:
+mapio.x:
+   map_glr:
+   map_open:
+   map_opengs:
+   map_close:
+   map_gets:
+   map_geti:
+   map_getr:
+   map_seti:
+   map_setr:
+   map_sets:
+mgs.x:
+   mgs_glr:
+   mgs_open:
+   mgs_close:
+   mgs_gets:
+   mgs_sets:
+   mgs_geti:
+   mgs_seti:
+   mgs_getr:
+   mgs_setr:
+   mgs_pgs:
+   mgs_ggs:
+mim.x:
+   mim_glr:
+   mim_open:
+   mim_close:
+   mim_gets:
+   mim_geti:
+   mim_getr:
+   mim_sets:
+   mim_seti:
+   mim_setr:
+mscwcs.x:
+   msc_openim:
+   msc_open:
+   msc_close:
+   msc_sctran:
+   msc_ctrand:
+   msc_ctranr:
+   msc_c2tranr:
+   msc_c2trand:
+   msc_wcsstati:
+   msc_wcsstatd:
+patblk.x:
+   pblk_initi:
+   patblki:
+   pblk_initr:
+   patblkr:
+rgstr.x:
+   rg_apack_liner:
+   rg_apack_lined:
+skywcs.x:
+   sk_decwcs:
+   sk_decim:
+   sk_strwcs:
+   sk_imwcs:
+   sk_close:
+   sk_cscopy:
+   sk_hdrsaveim:
+   sk_ctypeim:
+   sk_statd:
+   sk_setd:
+   sk_stati:
+   sk_seti:
+   sk_getstr:
+   sk_setstr:
+   sk_iiprint:
+   sk_iiwrite:
+   sk_inprint:
+   sk_inwrite:
+   sk_imprint:
+   sk_imwrite:
+   sk_ultran:
+   sk_lltran:
+   sk_equatorial:
+   rg_wrdstr:
+t_addkey.x:
+   t_addkey:
+   imaddfc:
+t_fitscopy.x:
+   t_fitscopy:
+   fits_copy:
+   fits_hdr:
+   fits_gstr:
+   fits_geti:
+t_getcatalog.x:
+   t_getcatalog:
+   mscagetcat:
+   noaousno:
+   cadcusno:
+t_imext.x:
+   t_imextensions:
+t_imstat.x:
+   t_imstatistics:
+   ist_fields:
+   ist_isfield:
+   ist_initialize:
+   ist_accumulate4:
+   ist_accumulate3:
+   ist_accumulate2:
+   ist_accumulate1:
+   ist_accumulate0:
+   ist_stats:
+   ist_ihist:
+   ist_hmedian:
+   ist_hmode:
+   ist_pheader:
+   ist_print:
+   ist_fprint:
+   ist_gdata:
+t_jlists.x:
+   t_jlists:
+t_mkmsc.x:
+   t_mkmsc:
+   mk_gkey:
+   estp_open:
+t_msccmatch.x:
+   t_msccmatch:
+   cm_pixel:
+   cm_shift:
+   cm_center:
+   cm_geomap:
+   cm_updcoords:
+   cm_compared:
+   cm_getcoords:
+t_mscctran.x:
+   t_mscctran:
+   wt_transform:
+   wt_laxmap:
+   wt_vmap:
+   wt_cunits:
+   wt_tvlogd:
+   wt_ctrand:
+   wt_logtvd:
+   wt_getlabels:
+t_mscext.x:
+   t_mscextensions:
+t_mscgmask.x:
+   t_mscgmask:
+t_mscimatch.x:
+   t_mscimatch:
+   t_rand:
+   imat_measure:
+   imat_comp:
+   imat_fit:
+   imat_fit1:
+   imat_fnc:
+   imat_fit2:
+   imat_scale:
+   imat_eprop:
+   imat_fix:
+   imat_rej:
+   imat_rms:
+   imat_icinit:
+   imat_icfree:
+   imat_iclabels:
+   imat_ic1:
+   imat_ic2:
+t_mscpmask.x:
+   t_mscpmask:
+t_msctmplt.x:
+   t_msctemplate:
+   t_mscwtemplate:
+t_mscuniq.x:
+   t_mscuniq:
+t_mscwcs.x:
+   t_mscwcs:
+   wcs_trans:
+   wcs_adjust:
+t_patfit.x:
+   t_patfit:
+   patfit1:
+   patfit2:
+t_pixarea.x:
+   t_pixarea:
+   pixarea:
+t_pixscale.x:
+   t_pixscale:
+t_toshort.x:
+   t_toshort:
+   toshort:
+   toshort_minmax:
+t_xlog.x:
+   t_xlog:
+   xlog_open:
+   xlog_close:
+   xlog_send:
+ccsetwcs.f:
+   tccses:
+   ccsets:
+   ccdtws:
+   ccrdpj:
+   ccnwcm:
+   ccwcsr:
+   ccgsee:
+   geogcd:
+liststr.f:
+   lifins:
+   licape:
+   ligetr:
+   lipacr:
+   liappr:
+   liforr:
+   ligetd:
+   lipacd:
+   liappd:
+   liford:
+mapio.f:
+   mapglr:
+   mapopn:
+   mapops:
+   mapcle:
+   mapges:
+   mapgei:
+   mapger:
+   mapsei:
+   mapser:
+   mapses:
+mgs.f:
+   mgsglr:
+   mgsopn:
+   mgscle:
+   mgsges:
+   mgsses:
+   mgsgei:
+   mgssei:
+   mgsger:
+   mgsser:
+   mgspgs:
+   mgsggs:
+mim.f:
+   mimglr:
+   mimopn:
+   mimcle:
+   mimges:
+   mimgei:
+   mimger:
+   mimses:
+   mimsei:
+   mimser:
+mscwcs.f:
+   mscopm:
+   mscopn:
+   msccle:
+   mscscn:
+   mscctd:
+   mscctr:
+   mscc2r:
+   mscc2d:
+   mscwci:
+   mscwcd:
+patblk.f:
+   pblkii:
+   patbli:
+   pblkir:
+   patblr:
+rgstr.f:
+   rgapar:
+   rgapad:
+skywcs.f:
+   skdecs:
+   skdecm:
+   skstrs:
+   skimws:
+   skcloe:
+   skcscy:
+   skhdrm:
+   skctym:
+   skstad:
+   sksetd:
+   skstai:
+   skseti:
+   skgetr:
+   sksetr:
+   skiipt:
+   skiiwe:
+   skinpt:
+   skinwe:
+   skimpt:
+   skimwe:
+   skultn:
+   sklltn:
+   skequl:
+   rgwrdr:
+t_addkey.f:
+   taddky:
+   imaddc:
+t_fitscopy.f:
+   tfitsy:
+   fitscy:
+   fitshr:
+   fitsgr:
+   fitsgi:
+t_getcatalog.f:
+   tgetcg:
+   mscagt:
+   noaouo:
+   cadcuo:
+t_imext.f:
+   timexs:
+t_imstat.f:
+   timsts:
+   istfis:
+   istisd:
+   istine:
+   istac4:
+   istac3:
+   istac2:
+   istac1:
+   istac0:
+   iststs:
+   istiht:
+   isthmn:
+   isthme:
+   istphr:
+   istprt:
+   istfpt:
+   istgda:
+t_jlists.f:
+   tjliss:
+t_mkmsc.f:
+   tmkmsc:
+   mkgkey:
+   estpon:
+t_msccmatch.f:
+   tmscch:
+   cmpixl:
+   cmshit:
+   cmcenr:
+   cmgeop:
+   cmupds:
+   cmcomd:
+   cmgets:
+t_mscctran.f:
+   tmsccn:
+   wttram:
+   wtlaxp:
+   wtvmap:
+   wtcuns:
+   wttvld:
+   wtctrd:
+   wtlogd:
+   wtgets:
+t_mscext.f:
+   tmsces:
+t_mscgmask.f:
+   tmscgk:
+t_mscimatch.f:
+   tmscih:
+   trand:
+   imatme:
+   imatcp:
+   imatft:
+   imatf1:
+   imatfc:
+   imatf2:
+   imatse:
+   imatep:
+   imatfx:
+   imatrj:
+   imatrs:
+   imatit:
+   imatie:
+   imatis:
+   imati1:
+   imati2:
+t_mscpmask.f:
+   tmscpk:
+t_msctmplt.f:
+   tmscte:
+   tmscwe:
+t_mscuniq.f:
+   tmscuq:
+t_mscwcs.f:
+   tmscws:
+   wcstrs:
+   wcsadt:
+t_patfit.f:
+   tpatft:
+   patfi1:
+   patfi2:
+t_pixarea.f:
+   tpixaa:
+   pixara:
+t_pixscale.f:
+   tpixse:
+t_toshort.f:
+   ttosht:
+   toshot:
+   toshox:
+t_xlog.f:
+   txlog:
+   xlogon:
+   xlogce:
+   xlogsd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/libpkg.a ccsetwcs.o liststr.o mapio.o mgs.o mim.o mscwcs.o patblk.o rgstr.o skywcs.o t_addkey.o t_fitscopy.o t_getcatalog.o t_imext.o t_imstat.o t_jlists.o t_mkmsc.o t_msccmatch.o t_mscctran.o t_mscext.o t_mscgmask.o t_mscimatch.o t_mscpmask.o t_msctmplt.o t_mscuniq.o t_mscwcs.o t_patfit.o t_pixarea.o t_pixscale.o t_toshort.o t_xlog.o
+ranlib libpkg.a
+Updated 36 files in libpkg.a
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern akavg.x ampset.x gamma.x linebias.x maskcolor.x maxmin.x migl2.x mignl.x migs2.x miproc.x mitemplate.x mkoverscan.x moscoords.x mosmap.x mscg.x proc.x sigm2.x t_mscdisplay.x t_mscrtdisp.x
+akavg.x:
+   akavgs:
+   akavrs:
+   akavgi:
+   akavri:
+   akavgl:
+   akavrl:
+   akavgr:
+   akavrr:
+   akavgd:
+   akavrd:
+ampset.x:
+   ampset:
+   ampvals:
+   ampfree:
+   ampnull:
+gamma.x:
+   signorm:
+   gammp:
+   gammq:
+   gamser:
+   gamcf:
+   gammln:
+linebias.x:
+   set_linebias:
+   linebiass:
+   linebiasi:
+   linebiasl:
+   linebiasr:
+   linebiasd:
+maskcolor.x:
+   xmaskcolor_map:
+   xmaskcolor_free:
+   xmaskcolor:
+   xmaskexprn:
+   xmaskoperand:
+   xmaskfunc:
+maxmin.x:
+   maxmin:
+migl2.x:
+   migl2s:
+   migl2i:
+   migl2l:
+   migl2r:
+   migl2d:
+mignl.x:
+   minl_inits:
+   mignls:
+   minl_initi:
+   mignli:
+   minl_initl:
+   mignll:
+   minl_initr:
+   mignlr:
+   minl_initd:
+   mignld:
+migs2.x:
+   migs2s:
+   migs2i:
+   migs2l:
+   migs2r:
+   migs2d:
+   migetss:
+   migetsi:
+   migetsl:
+   migetsr:
+   migetsd:
+   micpy:
+   micpys:
+   micpyi:
+   micpyl:
+   micpyr:
+   micpyd:
+miproc.x:
+   miprocs:
+   miproci:
+   miprocl:
+   miprocr:
+   miprocd:
+mitemplate.x:
+   mitopen:
+   mitgetim:
+   mitrgetim:
+   mitlen:
+   mitrewind:
+   mitclose:
+mkoverscan.x:
+   mk_overscan:
+   avg_overscan:
+moscoords.x:
+   moscoords:
+mosmap.x:
+   mimap:
+   miunmap:
+   mg_open:
+   mos_header:
+   mg_compgeom:
+   mg_sort:
+   mg_free:
+   mg_dump:
+   mg_ampid:
+   mg_ampname:
+   mg_rootname:
+   mg_c2im:
+   mg_im2c:
+   mkdetsec:
+mscg.x:
+   mscl2s:
+   mscnls:
+   mscs2s:
+   mscuprocs:
+   mscprocs:
+   mscl2i:
+   mscnli:
+   mscs2i:
+   mscuproci:
+   mscproci:
+   mscl2l:
+   mscnll:
+   mscs2l:
+   mscuprocl:
+   mscprocl:
+   mscl2r:
+   mscnlr:
+   mscs2r:
+   mscuprocr:
+   mscprocr:
+   mscl2d:
+   mscnld:
+   mscs2d:
+   mscuprocd:
+   mscprocd:
+   mscbuf:
+proc.x:
+   procset:
+   zproc:
+sigm2.x:
+   zigm2_setup:
+   yigm2s:
+   yigm2i:
+   yi_blmavgi:
+   zigm2s:
+   zi_blmavgs:
+   zi_maxs:
+   zt_fps:
+   zt_fpss:
+   zt_fpvals:
+   zi_samples:
+   zigm2i:
+   zi_blmavgi:
+   zi_maxi:
+   zt_fpi:
+   zt_fpsi:
+   zt_fpvali:
+   zi_samplei:
+   zigm2r:
+   zi_blmavgr:
+   zi_maxr:
+   zt_fpr:
+   zt_fpsr:
+   zt_fpvalr:
+   zi_sampler:
+t_mscdisplay.x:
+   t_mscdisplay:
+   msctile:
+   mos_comap:
+   mos_info:
+   mos_params:
+   msc_mzscale:
+   msc_load_display:
+   logerrfcn:
+t_mscrtdisp.x:
+   t_mscrtdisplay:
+   msc_rtload_display:
+akavg.f:
+   akavgs:
+   akavrs:
+   akavgi:
+   akavri:
+   akavgl:
+   akavrl:
+   akavgr:
+   akavrr:
+   akavgd:
+   akavrd:
+ampset.f:
+   ampset:
+   ampvas:
+   ampfre:
+   ampnul:
+gamma.f:
+   signom:
+   gammp:
+   gammq:
+   gamser:
+   gamcf:
+   gammln:
+linebias.f:
+   setlis:
+   linebs:
+   linebi:
+   linebl:
+   linebr:
+   linebd:
+maskcolor.f:
+   xmaskp:
+   xmaske:
+   xmaskr:
+   xmaskn:
+   xmaskd:
+   xmaskc:
+maxmin.f:
+   maxmin:
+migl2.f:
+   migl2s:
+   migl2i:
+   migl2l:
+   migl2r:
+   migl2d:
+mignl.f:
+   minlis:
+   mignls:
+   minlii:
+   mignli:
+   minlil:
+   mignll:
+   minlir:
+   mignlr:
+   minlid:
+   mignld:
+migs2.f:
+   migs2s:
+   migs2i:
+   migs2l:
+   migs2r:
+   migs2d:
+   migets:
+   migeti:
+   migetl:
+   migetr:
+   migetd:
+   micpy:
+   micpys:
+   micpyi:
+   micpyl:
+   micpyr:
+   micpyd:
+miproc.f:
+   mipros:
+   miproi:
+   miprol:
+   mipror:
+   miprod:
+mitemplate.f:
+   mitopn:
+   mitgem:
+   mitrgm:
+   mitlen:
+   mitred:
+   mitcle:
+mkoverscan.f:
+   mkoven:
+   avgovn:
+moscoords.f:
+   moscos:
+mosmap.f:
+   mimap:
+   miunmp:
+   mgopen:
+   mosher:
+   mgcomm:
+   mgsort:
+   mgfree:
+   mgdump:
+   mgampd:
+   mgampe:
+   mgrooe:
+   mgc2im:
+   mgim2c:
+   mkdetc:
+mscg.f:
+   mscl2s:
+   mscnls:
+   mscs2s:
+   mscups:
+   mscprs:
+   mscl2i:
+   mscnli:
+   mscs2i:
+   mscupi:
+   mscpri:
+   mscl2l:
+   mscnll:
+   mscs2l:
+   mscupl:
+   mscprl:
+   mscl2r:
+   mscnlr:
+   mscs2r:
+   mscupr:
+   mscprr:
+   mscl2d:
+   mscnld:
+   mscs2d:
+   mscupd:
+   mscprd:
+   mscbuf:
+proc.f:
+   procst:
+   zproc:
+sigm2.f:
+   zigm2p:
+   yigm2s:
+   yigm2i:
+   yiblmi:
+   zigm2s:
+   ziblms:
+   zimaxs:
+   ztfps:
+   ztfpss:
+   ztfpvs:
+   zisams:
+   zigm2i:
+   ziblmi:
+   zimaxi:
+   ztfpi:
+   ztfpsi:
+   ztfpvi:
+   zisami:
+   zigm2r:
+   ziblmr:
+   zimaxr:
+   ztfpr:
+   ztfpsr:
+   ztfpvr:
+   zisamr:
+t_mscdisplay.f:
+   tmscdy:
+   msctie:
+   moscop:
+   mosino:
+   mospas:
+   mscmze:
+   mscloy:
+   logern:
+t_mscrtdisp.f:
+   tmscry:
+   mscrty:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscdisplay/libpkg.a akavg.o ampset.o gamma.o linebias.o maskcolor.o maxmin.o migl2.o mignl.o migs2.o miproc.o mitemplate.o mkoverscan.o moscoords.o mosmap.o mscg.o proc.o sigm2.o t_mscdisplay.o t_mscrtdisp.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscdisplay/libpkg.a
+ranlib libpkg.a
+Updated 19 files in libpkg.a
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern rngranges.x stfgraph.x stfprofile.x t_starfocus.x
+rngranges.x:
+   rng_test:
+   rng_open:
+   rng_close:
+   rng_index:
+   rng_nearest:
+   rng_inrange:
+   rng_add:
+   rng_error:
+stfgraph.x:
+   stf_graph:
+   stf_colon:
+   stf_g1:
+   stf_g2:
+   stf_g3:
+   stf_g4:
+   stf_g5:
+   stf_g6:
+   stf_g7:
+   stf_g8:
+   stf_g9:
+   stf_g10:
+   stf_g11:
+   stf_g12:
+stfprofile.x:
+   stf_find:
+   stf_bkgd:
+   stf_profile:
+   stf_norm:
+   stf_widths:
+   stf_i2r:
+   stf_r2i:
+   stf_r2n:
+   stf_model:
+   stf_dfwhm:
+   stf_fwhms:
+   stf_radius:
+   stf_fit:
+   stf_gauss1:
+   stf_gauss2:
+   stf_moffat1:
+   stf_moffat2:
+t_starfocus.x:
+   t_starfocus:
+   t_psfmeasure:
+   starfocus:
+   stf_free:
+   stf_organize:
+   stf_log:
+   stf_title:
+   stf_fitfocus:
+   stf_parab:
+   stf_magsort:
+   stf_focsort:
+   stf_display:
+   stfcur:
+rngranges.f:
+   rngtet:
+   rngopn:
+   rngcle:
+   rnginx:
+   rngnet:
+   rngine:
+   rngadd:
+   rngerr:
+stfgraph.f:
+   stfgrh:
+   stfcon:
+   stfg1:
+   stfg2:
+   stfg3:
+   stfg4:
+   stfg5:
+   stfg6:
+   stfg7:
+   stfg8:
+   stfg9:
+   stfg10:
+   stfg11:
+   stfg12:
+stfprofile.f:
+   stffid:
+   stfbkd:
+   stfpre:
+   stfnom:
+   stfwis:
+   stfi2r:
+   stfr2i:
+   stfr2n:
+   stfmol:
+   stfdfm:
+   stffws:
+   stfras:
+   stffit:
+   stfga1:
+   stfga2:
+   stfmo1:
+   stfmo2:
+t_starfocus.f:
+   tstars:
+   tpsfme:
+   starfs:
+   stffre:
+   stfore:
+   stflog:
+   stftie:
+   stffis:
+   stfpab:
+   stfmat:
+   stffot:
+   stfdiy:
+   stfcur:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscdisplay/src/starfocus/libpkg.a rngranges.o stfgraph.o stfprofile.o t_starfocus.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscdisplay/src/starfocus/libpkg.a
+ranlib libpkg.a
+Updated 4 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_mscdisplay.x
+x_mscdisplay.x:
+   sys_runtask:
+x_mscdisplay.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_mscdisplay.o src/starfocus/libpkg.a libpkg.a     -lnfe -lds -lxtools -lcurfit -lgsurfit -lnlfit -liminterp -lncar -lgks -lllsq -o xx_mscdisplay.e
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern iecimexam.x iecolon.x iedisplay.x ieeimexam.x iegcur.x iegdata.x iegimage.x iegnfr.x iegraph.x iehimexam.x ieimname.x iejimexam.x ielimexam.x iemw.x ieopenlog.x iepos.x ieprint.x ieqrimexam.x ierimexam.x iesimexam.x iestatistics.x ietimexam.x ievimexam.x stfmeasure.x stfprofile.x t_imexam.x
+iecimexam.x:
+   ie_cimexam:
+iecolon.x:
+   ie_colon:
+   ie_colon1:
+   ie_colon2:
+iedisplay.x:
+   ie_display:
+ieeimexam.x:
+   ie_eimexam:
+iegcur.x:
+   ie_gcur:
+iegdata.x:
+   ie_gdata:
+iegimage.x:
+   ie_gimage:
+iegnfr.x:
+   ie_getnframes:
+iegraph.x:
+   ie_graph:
+iehimexam.x:
+   ie_himexam:
+ieimname.x:
+   ie_imname:
+iejimexam.x:
+   ie_jimexam:
+   ie_gfit:
+   derivs:
+   mr_solve:
+   mr_eval:
+   mr_invert:
+ielimexam.x:
+   ie_limexam:
+iemw.x:
+   ie_mwinit:
+   ie_mwctran:
+   ie_imwctran:
+   ie_iformatr:
+ieopenlog.x:
+   ie_openlog:
+iepos.x:
+   ie_pos:
+ieprint.x:
+   ie_print:
+ieqrimexam.x:
+   ie_qrimexam:
+ierimexam.x:
+   ie_rimexam:
+   ie_center:
+   ie_gauss:
+   ie_dgauss:
+   ie_moffat:
+   ie_dmoffat:
+iesimexam.x:
+   ie_simexam:
+   ie_perimeter:
+   ie_draw_axis:
+   ie_label_axis:
+   ie_draw_ticksx:
+   ie_draw_ticksy:
+   ie_surf_limits:
+iestatistics.x:
+   ie_statistics:
+ietimexam.x:
+   ie_timexam:
+ievimexam.x:
+   ie_vimexam:
+   ie_get_vector:
+   ie_get_col:
+   ie_get_row:
+   ie_setboundary:
+   ie_bufl2r:
+stfmeasure.x:
+   stf_measure:
+   stf_free:
+stfprofile.x:
+   stf_find:
+   stf_bkgd:
+   stf_profile:
+   stf_norm:
+   stf_widths:
+   stf_i2r:
+   stf_r2i:
+   stf_r2n:
+   stf_model:
+   stf_dfwhm:
+   stf_fwhms:
+   stf_radius:
+   stf_fit:
+   stf_gauss1:
+   stf_gauss2:
+   stf_moffat1:
+   stf_moffat2:
+t_imexam.x:
+   t_imexamine:
+   ie_addimage:
+iecimexam.f:
+   iecimm:
+iecolon.f:
+   iecoln:
+   iecol1:
+   iecol2:
+iedisplay.f:
+   iedisy:
+ieeimexam.f:
+   ieeimm:
+iegcur.f:
+   iegcur:
+iegdata.f:
+   iegdaa:
+iegimage.f:
+   iegime:
+iegnfr.f:
+   iegets:
+iegraph.f:
+   iegrah:
+iehimexam.f:
+   iehimm:
+ieimname.f:
+   ieimne:
+iejimexam.f:
+   iejimm:
+   iegfit:
+   derivs:
+   mrsole:
+   mreval:
+   mrinvt:
+ielimexam.f:
+   ielimm:
+iemw.f:
+   iemwit:
+   iemwcn:
+   ieimwn:
+   ieifor:
+ieopenlog.f:
+   ieopeg:
+iepos.f:
+   iepos:
+ieprint.f:
+   ieprit:
+ieqrimexam.f:
+   ieqrim:
+ierimexam.f:
+   ierimm:
+   iecenr:
+   iegaus:
+   iedgas:
+   iemoft:
+   iedmot:
+iesimexam.f:
+   iesimm:
+   ieperr:
+   iedras:
+   ielabs:
+   iedrax:
+   iedray:
+   iesurs:
+iestatistics.f:
+   iestas:
+ietimexam.f:
+   ietimm:
+ievimexam.f:
+   ievimm:
+   iegetr:
+   iegetl:
+   iegetw:
+   iesety:
+   iebufr:
+stfmeasure.f:
+   stfmee:
+   stffre:
+stfprofile.f:
+   stffid:
+   stfbkd:
+   stfpre:
+   stfnom:
+   stfwis:
+   stfi2r:
+   stfr2i:
+   stfr2n:
+   stfmol:
+   stfdfm:
+   stffws:
+   stfras:
+   stffit:
+   stfga1:
+   stfga2:
+   stfmo1:
+   stfmo2:
+t_imexam.f:
+   timexe:
+   ieadde:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscdisplay/src/imexam/libpkg.a iecimexam.o iecolon.o iedisplay.o ieeimexam.o iegcur.o iegdata.o iegimage.o iegnfr.o iegraph.o iehimexam.o ieimname.o iejimexam.o ielimexam.o iemw.o ieopenlog.o iepos.o ieprint.o ieqrimexam.o ierimexam.o iesimexam.o iestatistics.o ietimexam.o ievimexam.o stfmeasure.o stfprofile.o t_imexam.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscdisplay/src/imexam/libpkg.a
+ranlib libpkg.a
+Updated 26 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_mscexam.x
+x_mscexam.x:
+   sys_runtask:
+x_mscexam.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_mscexam.o src/imexam/libpkg.a libpkg.a ../libpkg.a     -lslalib -lnfe -lds -lxtools -lcurfit -lgsurfit -lnlfit -liminterp -lncar -lgks -lllsq -o xx_mscexam.e
+move `xx_mscdisplay.e' to `nfebin$x_mscdisplay.e'
+move `xx_mscexam.e' to `nfebin$x_mscexam.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern select.x allrows.x change.x mjd.x tbleval.x tblterm.x
+select.x:
+   select:
+allrows.x:
+   allrows:
+change.x:
+   change:
+   patcode:
+   subcode:
+   addpat:
+   addsub:
+   submake:
+   dosub:
+   movechars:
+mjd.x:
+   mjd:
+tbleval.x:
+   tbl_eval:
+tblterm.x:
+   tbl_term:
+   tbl_func:
+   tbl_handler:
+select.f:
+   select:
+allrows.f:
+   allros:
+change.f:
+   change:
+   patcoe:
+   subcoe:
+   addpat:
+   addsub:
+   submae:
+   dosub:
+   movecs:
+mjd.f:
+   mjd:
+tbleval.f:
+   tblevl:
+tblterm.f:
+   tbltem:
+   tblfuc:
+   tblhar:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscfinder/libpkg.a select.o allrows.o change.o mjd.o tbleval.o tblterm.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscfinder/libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern t_tpeak.x
+t_tpeak.x:
+   t_tpeak:
+   tp_colon:
+   opentab:
+   nearest:
+   display:
+   tpltsol:
+   printlog:
+   overlay:
+   center:
+   pcenter:
+   rotate:
+   scale:
+   shift:
+   overlay_one:
+   center_one:
+   newpoint:
+   newobject:
+   goodpoint:
+   badpoint:
+   tp_select:
+   reinit:
+   reinit_one:
+   replace:
+t_tpeak.f:
+   ttpeak:
+   tpcoln:
+   opentb:
+   nearet:
+   disply:
+   tpltsl:
+   printg:
+   overly:
+   center:
+   pcentr:
+   rotate:
+   scale:
+   shift:
+   overle:
+   centee:
+   newpot:
+   newobt:
+   goodpt:
+   badpot:
+   tpselt:
+   reinit:
+   reinie:
+   replae:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/msctools/mscfinder/libpkg.a t_tpeak.o
+ranlib libpkg.a
+Updated 7 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_finder.x
+x_finder.x:
+   sys_runtask:
+x_finder.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_finder.o libpkg.a -ltbtables -lxtools -o xx_finder.e
+move `xx_finder.e' to `nfebin$x_finder.e'
+Subdirectory src//msctools/curfit is up to date
+Subdirectory src//msctools/imsurfit is up to date
+Library libpkg.a is up to date
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_msctools.x
+x_msctools.x:
+   sys_runtask:
+x_msctools.f:
+   sysruk:
+xc -Nz -p noao -p nfextern  x_msctools.o libpkg.a -lnfe -lxtools -lcurfit      -lgsurfit -lslalib -lsurfit -liminterp -o xx_msctools.e
+move `xx_msctools.e' to `nfebin$x_msctools.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern maskinterp.x t_avshift.x mptools.x
+maskinterp.x:
+   t_maskinterp:
+t_avshift.x:
+   t_avshift:
+mptools.x:
+   mp_open:
+   mp_pmmap:
+   mp_immap:
+   mp_section:
+   mp_mpcopy:
+   mp_miopen:
+   mp_samesize:
+   mp_invert:
+   mp_copy:
+maskinterp.f:
+   tmaskp:
+t_avshift.f:
+   tavsht:
+mptools.f:
+   mpopen:
+   mppmmp:
+   mpimmp:
+   mpsecn:
+   mpmpcy:
+   mpmion:
+   mpsame:
+   mpinvt:
+   mpcopy:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/dimsum/libpkg.a maskinterp.o t_avshift.o mptools.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/dimsum/libpkg.a
+ranlib libpkg.a
+Updated 3 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_dimsum.x
+x_dimsum.x:
+   sys_runtask:
+x_dimsum.f:
+   sysruk:
+xc -Nz -p noao -p nfextern   x_dimsum.o libpkg.a -lxtools -o xx_dimsum.e
+move `xx_dimsum.e' to `nfebin$x_dimsum.e'
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern epbackground.x epcol.x epcolon.x epconstant.x epdisplay.x epdosurface.x epgcur.x epgdata.x epgsfit.x epimcopy.x epinput.x epline.x epmask.x epmove.x epnoise.x epreplace.x epsearch.x epsetpars.x epstatistics.x epsurface.x t_imedit.x
+epbackground.x:
+   ep_background:
+   ep_bg:
+epcol.x:
+   ep_col:
+   ep_col1:
+epcolon.x:
+   ep_colon:
+epconstant.x:
+   ep_constant:
+   ep_constant1:
+epdisplay.x:
+   ep_display:
+   ep_command:
+   ep_zoom:
+epdosurface.x:
+   ep_dosurface:
+epgcur.x:
+   ep_gcur:
+epgdata.x:
+   ep_gdata:
+   ep_gindata:
+epgsfit.x:
+   ep_gsfit:
+epimcopy.x:
+   ep_imcopy:
+epinput.x:
+   ep_input:
+   ep_input1:
+epline.x:
+   ep_line:
+   ep_line1:
+epmask.x:
+   ep_mask:
+epmove.x:
+   ep_move:
+   ep_movem:
+   ep_moven:
+epnoise.x:
+   ep_noise:
+   ep_gauss:
+epreplace.x:
+   ep_replacei:
+   ep_replacer:
+epsearch.x:
+   ep_search:
+epsetpars.x:
+   ep_setpars:
+epstatistics.x:
+   ep_statistics:
+   ep_statistics1:
+   ep_box:
+epsurface.x:
+   ep_surface:
+t_imedit.x:
+   t_imedit:
+epbackground.f:
+   epbacd:
+   epbg:
+epcol.f:
+   epcol:
+   epcol1:
+epcolon.f:
+   epcoln:
+epconstant.f:
+   epcont:
+   epcon1:
+epdisplay.f:
+   epdisy:
+   epcomd:
+   epzoom:
+epdosurface.f:
+   epdose:
+epgcur.f:
+   epgcur:
+epgdata.f:
+   epgdaa:
+   epgina:
+epgsfit.f:
+   epgsft:
+epimcopy.f:
+   epimcy:
+epinput.f:
+   epinpt:
+   epinp1:
+epline.f:
+   epline:
+   eplin1:
+epmask.f:
+   epmask:
+epmove.f:
+   epmove:
+   epmovm:
+   epmovn:
+epnoise.f:
+   epnoie:
+   epgaus:
+epreplace.f:
+   eprepi:
+   eprepr:
+epsearch.f:
+   epseah:
+epsetpars.f:
+   epsets:
+epstatistics.f:
+   epstas:
+   epsta1:
+   epbox:
+epsurface.f:
+   epsure:
+t_imedit.f:
+   timedt:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/imedit/libpkg.a epbackground.o epcol.o epcolon.o epconstant.o epdisplay.o epdosurface.o epgcur.o epgdata.o epgsfit.o epimcopy.o epinput.o epline.o epmask.o epmove.o epnoise.o epreplace.o epsearch.o epsetpars.o epstatistics.o epsurface.o t_imedit.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/nfextern/src/imedit/libpkg.a
+ranlib libpkg.a
+Updated 21 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao -p nfextern x_imedit.x
+x_imedit.x:
+   sys_runtask:
+x_imedit.f:
+   sysruk:
+xc -Nz -p noao -p nfextern x_imedit.o libpkg.a -liminterp -lncar -lgks -lds -lxtools -lgsurfit -lnlfit -lcurfit -lllsq -o xx_imedit.e
+move `xx_imedit.e' to `nfebin$x_imedit.e'

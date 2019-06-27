@@ -1,0 +1,180 @@
+.help mibackground Sep2003 gemini.midir
+.ih
+NAME
+.sp
+mibackground -- automatically examine raw Michelle images and flag bad frames 
+.ih
+USAGE
+.sp
+mibackground inimages
+.ih
+PARAMETERS
+.ls inimages
+.sp
+The input image(s) to be examined for bad savesets.  This parameter 
+can be an image name, a list of image names, a wild-card image name, 
+or the "@" syntax can be used to direct the task to read a list of 
+file names.
+.sp
+.le
+.ls rawpath = ""
+.sp
+The path to the directory containing the Michelle images files.  If the 
+value is "" (NULL) the current directory is used.
+.sp
+.le
+.ls outimages = ""
+.sp
+The output image name(s).  Since the task changes the headers automatically 
+if any bad frames are found, the task requires that the output image 
+names are distinct from the input image names.  If this field is left 
+blank the \fIoutpref\fR string is used to create new file names from the 
+input file names.  Otherwise the number of output file names must match 
+the number of input file names or an error condition occurs.  The field 
+must contain either a list of output file names or use the "@" syntax to 
+direct the task to read a list of file names.  The task tests for whether 
+the output images exist and exits with an error condition if any of them 
+do exist.
+.sp
+.le
+.ls outpref = "b"
+.sp
+A prefix string which is prefixed to each input image name to make
+the corresponding output image name if the output file name(s) are 
+not specified via the \fIoutimages\fR parameter.
+.sp
+.le
+.ls sigma = 4.0
+.sp
+A number of standard deviations for the rejection of bad frames.  The 
+value must be greater than zero, but no other checks of it are made.
+.sp
+.le
+.ls logfile = "midir.log"
+.sp
+The name of the logfile for the task.  If no value is set then the 
+routine looks to see if the \fImidir\fR package logfile is defined, 
+in which case that file is used.  If neither the task nor the package
+logfile names are defined the default name \fImidir.log\fR is used.
+.sp
+.le
+.ls verbose = yes
+.sp
+A boolean value for whether messages are written to the terminal or not.
+.sp
+.le
+.ls writeps = no
+.sp
+A boolean value for whether postscript plots are made of the set of 
+mean values for each saveset.  Plots are also directed to STDPLOT.
+.sp
+.le
+.ls sh_change = no
+.sp
+A boolean value for whether the changes made to the image headers 
+are listed for the user.  This value is used for the \fIshow\fR 
+parameter to the \fIhedit\fR task.
+.sp
+.le
+.ls status = ""
+.sp
+A variable for the exit error status, set in the task.  A value of 
+zero means that the task executed properly.  When an error occurs 
+the return value is greater than zero.  The user should not change this 
+value.
+.sp
+.le
+.ih
+DESCRIPTION
+.sp
+This routine examines mprepared Michelle images and tprepared T-ReCS 
+images and produces matching output files with any "bad" savesets 
+marked with header keywords in the extension header.  If there are no 
+"bad" nods then the output files will be identical to the input files.
+.sp 
+.ih 
+Summary
+.sp
+Given a list of input images, or the name of a file containing a set of 
+input file names, the \fImibackground\fR task copies each prepared 
+Michelle/T-ReCS image to an output file.  It then examines each 
+output file for bad frames based upon statistics of the "reference" 
+frames.  Any such frames that deviate from the mean by more than 
+\fIsigma\fR standard deviations are marked as "bad".  To preserve the 
+number of savesets in an AB nod pair.  If bad frames are 
+found, the keywords NBADSET are written to the extension headers.
+.sp
+If the image(s) specified have already been processed by \fmibackground\fR 
+then no output file is produced.  A message is printed to the logfile, but 
+the error status remains "good".
+.sp
+.ih 
+Screening of Nodsets
+.sp
+The \fImibackground\fR task works on raw or mprepared Michelle files and on tprepared T-ReCS files.  The normal operation requires that 
+the observation be taken in either NOD or CHOP-NOD mode, so that the 
+"on-source" and "reference" frames can be defined for both NOD positions A and B. 
+.sp
+What is done is to assemble statistics for the set of reference frames in 
+each pair of data extensions in the file (or for the only extension in the 
+file, if the observation was taken in CHOP or STARE modes) with the \fIimsat\fR task in the \fIimages.imutil\fR package.  These are then used to define the mean and standard deviation of the signal level in the reference images.  Once this has been done, images in the group that deviate more than the set \fIsigma\fR 
+limit number of standard deviations are flagged.  Following this, header 
+keywords are written to both extension headers of the NOD pair (or to 
+the single extension in CHOP or STARE modes). 
+.sp
+The header keywords that are used are
+.ls NBADSET
+.sp 
+This is an integer value giving the number of bad savesets in the 
+current image extension.  The value will be 1 or larger.  One could set 
+NBADSET to zero for image extensions that have no bad reference files, 
+but this is not necessary.
+.sp
+.le
+.sp
+It is also possible to mark bad frames interactively using the \fImview\fR, \fItview\fR  or \fImiview\fR
+tasks.  Normally one would run \fImibackground\fR first and then \fImiview\fR 
+afterward.
+.sp
+Note that if a saveset in one nod position is marked as being bad, the 
+corresponding saveset in the other nod position is also marked as bad to 
+insure that the two nod positions have the same exposure time.
+.ih
+Examples:
+.sp
+1) The basic usage is
+.sp
+    mibackground N2003B0909S0012 
+.sp
+which will produce an output file named bN2003B0909S0012.fits. (Assuming 
+that there are no errors.)
+.sp
+2) Using \fImibackground\fR for images in another directory is done as with 
+.sp
+    mibackground N2003B0909S0012 rawpath=/home/user/michelle
+.sp
+which would read /home/user/michelel/N2003B0909S0012.fits and produce an 
+output file named bN2003B0909S0012.fits if all goes well.
+.sp
+3) Defining the output file name works the following way--
+.sp
+    mibackground N2003B0909S0012 frame12 verbose=no
+.sp
+which should produce "frame12.fits" in the current directory.  In this 
+case most of the log messages are not written to the terminal because 
+\fIverbose\fR is set to "no"
+.sp
+4) If one wants to define the prefix explicitly and apply it to all 
+the images in a list it is done by
+.sp
+    mibackground @file.list prefix="new" sigma=3.0 logfile="tb.log"
+.sp
+which produces an output file named "newN2003B0909S0012.fits" for an 
+input file name "N2003B0909S0012" listed in file "files.list".  In this 
+example the logfile name is set to "tb.log".  This example also 
+sets the threshold for bad frames to +/-3 standard deviations from the 
+default of 4 standard deviations.
+.ih
+SEE ALSO
+tbackground, mview, tview, miview, mireduce, midir
+.endhelp

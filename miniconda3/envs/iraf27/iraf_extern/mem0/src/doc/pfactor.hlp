@@ -1,0 +1,32 @@
+.help pfactor Dec93 mem0
+.ih
+NAME 
+pfactor -- Factorize a natural number
+.ih
+USAGE
+pfactor number
+.ih
+PARAMETERS
+.ls number
+The number to be factorized.
+.le
+.ih
+DESCRIPTION
+This is a task written in a simple way to factorize a natural number
+(no greater than 1223) to its prime factors.
+.ih
+EXAMPLES
+1. Factorize 272.
+
+	me>pfactor 272
+
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+The maximum number is 1223, limited by the prime number list in the
+program.
+.ih
+SEE ALSO
+stsdas.analysis.fourier.factor
+.endhelp

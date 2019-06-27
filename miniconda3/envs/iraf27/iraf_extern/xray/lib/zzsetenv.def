@@ -1,0 +1,84 @@
+# Global environment definitions for the XRAY packages.
+
+set	pkglibs		= "xray$lib/"
+set	xraybin		= "xray$bin(arch)/"
+set	xraylib		= "xray$lib/"
+
+set	xdataio		= xray$xdataio/
+set	xdataiodata	= xdataio$data/
+set	eincdrom	= xdataio$eincdrom/
+set	eincdromdata	= eincdrom$data/
+set	eincdromdemo	= eincdrom$demo/
+set	xplot		= xray$xplot/
+set	xplotdata	= xplot$data/
+set	xlocal		= xray$xlocal/
+set	xlocaldata	= xlocal$data/
+set	rosbb		= xlocal$rosbb/
+set	rosbbdata	= rosbb$data/
+set	einobsolete	= xlocal$einobsolete/
+set	mpc		= xlocal$mpc/
+set	xproto		= xray$xproto/
+set	xprotodata	= xproto$data/
+set	xobsolete	= xray$xobsolete/
+set	xobsoletedata	= xobsolete$data/
+set	ximages		= xray$ximages/
+set	ximagesdata	= ximages$data/
+set	xspatial	= xray$xspatial/
+set	detect		= xspatial$detect/
+set	eintools	= xspatial$eintools/
+set	eintoolsdata    = eintools$data/
+set	xspatialdata	= xspatial$data/
+set	xspatialdoc	= xspatial$doc/
+set	spatialdata	= xspatial$data/
+set	xspectral	= xray$xspectral/
+set	xspectraldata	= xspectral$data/
+set	xspectraldoc	= xspectral$doc/
+set	spectraldata	= xspectral$data/
+set	xraytasks       = xray$xraytasks/
+set	xraytasksdata   = xraytasks$data/
+set	xtiming		= xray$xtiming/
+set	timcor		= xtiming$timcor/
+set	xtimingdata	= xtiming$data/
+set	xtimingdoc	= xtiming$doc/
+
+set	xdata		= xray$data/
+set	xcal		= xray$caldata/
+set	xecal		= xcal$einstein/
+set	xrcal		= xcal$rosat/
+set	xdemo		= xray$xdemo/
+set     adass		= xray$adass/
+set     xinstall        = xray$xinstall/
+
+# definitions for xdataio.eincdrom package:
+set 	ipcevt1		= "/data/ipcevt1/"
+set 	ipcevt2		= "/data/ipcevt2/"
+set 	ipcevt3		= "/data/ipcevt3/"
+set 	ipcevt4		= "/data/ipcevt4/"
+set 	hrievt1		= "/data/hrievt1/"
+set 	hrievt2		= "/data/hrievt2/"
+set 	eoscat1		= "/data/eoscat1/"
+set 	eoscat2		= "/data/eoscat2/"
+set 	eoscat3		= "/data/eoscat3/"
+set 	hriimg1		= "/data/hri1/"
+set 	hriimg2		= "/data/hri2/"
+set 	slewcd		= "/data/slewcd/"
+set	ipcu1		= "/data/ipcu1/"
+set	ipcu2		= "/data/ipcu2/"
+set	ipcu3		= "/data/ipcu3/"
+set	ipcu4		= "/data/ipcu4/"
+set	ipcu5		= "/data/ipcu5/"
+set	ipcu6		= "/data/ipcu6/"
+set	ipcu7		= "/data/ipcu7/"
+set	ipcu8		= "/data/ipcu8/"
+set	ipcu9		= "/data/ipcu9/"
+set	ipcu10		= "/data/ipcu10/"
+set	ipcu11		= "/data/ipcu11/"
+set	ipcu12		= "/data/ipcu12/"
+set	ipcu13		= "/data/ipcu13/"
+set	ipcu14		= "/data/ipcu14/"
+set	ipcu15		= "/data/ipcu15/"
+set	ipcu16		= "/data/ipcu16/"
+set	ipcu17		= "/data/ipcu17/"
+set	ipcu18		= "/data/ipcu18/"
+
+keep

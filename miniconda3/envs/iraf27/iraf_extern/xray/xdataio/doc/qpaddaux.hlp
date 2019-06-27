@@ -1,0 +1,132 @@
+#$Header: /home/pros/xray/xdataio/doc/RCS/qpaddaux.hlp,v 11.0 1997/11/06 16:34:09 prosb Exp $
+#$Log: qpaddaux.hlp,v $
+#Revision 11.0  1997/11/06 16:34:09  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:58:05  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:19:20  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:38:53  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  10:03:05  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:24:01  prosb
+#General Release 2.2
+#
+#Revision 5.2  93/05/20  14:13:03  mo
+#MC	5/20/93		Add info for TGR->TSI conversion
+#
+#Revision 5.1  92/12/01  11:07:05  prosb
+#Clarified "tsh".
+#
+#Revision 5.0  92/10/29  21:36:26  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:01:05  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:12:27  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/12  12:24:31  prosb
+#xray.xdataio   7/12/91
+#
+#Revision 2.0  91/03/06  23:37:19  pros
+#General Release 1.0
+#
+.help qpaddaux Dec93 xray.xdataio
+.ih
+NAME
+qpaddaux -- add an Einstein or ROSAT auxiliary file to a qpoe file
+.ih
+USAGE
+qpaddaux qpoe aux type
+.ih
+DESCRIPTION
+\fIqpaddaux\fR adds an auxiliary data file to a qpoe file.  The file
+types that can be added are: blt (Einstein blt files, used in spectral
+analysis), tgr (Einstein tgr files, used in calculating good time
+intervals), gti (ROSAT gti files, used in calculating good time
+intervals), or tsh (temporal status history files.  ROSAT tsh files,
+not currently used).  In addition, there is a special type - convtgr -
+that will convert TGR records already in the QPOE file, into 
+the more general 'TSI' format, now used by ROSAT and other missions.
+The tgr and gti files are normally added when
+the qpoe file is made (using xpr2qp, img2qp, toe2qp, etc.) but can be
+added later using this task.  The blt file must be added using this
+task.  The tsh file is currently only used by the development team.
+When a tgr file is added, the corresponding gti records are also
+added.
+.ih
+PARAMETERS
+.ls qpoe = ""		prompt = input qpoe file name
+
+The input qpoe file name.  The file must have a ".qp" extension,
+but may be specified with or without the extension.
+.le
+.ls aux = ""		prompt = auxiliary file to add
+
+The input auxiliary header file name.  This can be one of the
+following file types: blt (Einstein blt files, used in spectral
+analysis), tgr (Einstein tgr files, used in calculating good time
+intervals), gti (ROSAT gti files, used in calculating good time
+intervals), or tsh (ROSAT tsh files, not currently used).  The tgr and
+gti files are normally added when the qpoe file is made (using xpr2qp,
+img2qp, toe2qp, etc.)  but can be added later using this task.  The
+blt file must be added using this task.  The tsh file is currently
+only used by the development team.  When a tgr file is added, the
+corresponding gti records are also added.
+
+To use the 'convtgr' option, just set aux = "" (empty string), and
+the TGR records already in the QPOE file will be read and converted
+to TSI format.
+.le
+.ls type = ""		prompt = type of aux file
+
+The type of data being added.  This can be one of the following,
+corresponding to the file types listed above: "blt", "tgr", "tgi",
+"tsh", "convtgr".
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A
+display level of 4 generates a display of the aux file information.
+.le
+.ls (datarep = 1) [int]
+
+The type of data representation conversion required.  0 implies no
+conversion of data formats.  1 implies conversion from DG format to
+host format, while 2 converts from Vax format.
+.le
+.fi
+.ih
+EXAMPLES
+1. Add a blt file to an already existing qpoe file, in preparation for
+spectral analysis.
+.nf
+
+cl> qpaddaux i8933.qp i8933.blt "blt"
+
+.fi
+2. Convert the OLD tgr records in an existing Einstein QPOE file
+into NEW tsi records.  This will facilitate data screening.  
+(See 'help hkfilter').
+.nf
+
+xd> qpcopy xdata$snr.qp "" snr.qp ""
+    qpaddaux snr.qp "" "convtgr"
+
+.fi
+.ih
+TIME REQUIREMENTS
+This task takes a few seconds.
+.ih
+BUGS
+.ih
+SEE ALSO
+.endhelp

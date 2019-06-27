@@ -1,0 +1,8 @@
+# Root task entry for the mem0 package, version b  help tree.  Defines `mem0'
+# as both a task and a package in the mem0 help database.
+
+mem0		men  = mem0$mem0.men,
+		hlp  = mem0$mem0.men,
+		sys  = mem0$mem0.hlp,
+		pkg  = mem0$mem0.hd,
+		src  = mem0$mem0.cl

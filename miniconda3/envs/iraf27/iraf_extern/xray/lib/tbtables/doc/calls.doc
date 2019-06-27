@@ -1,0 +1,151 @@
+                                                        1988 November 10
+opening and closing tables:
+
+    tbtopn - initialize (and open the table if not NEW_FILE or NEW_COPY)
+    tbtcre - create a new table (after initializing with tbtopn)
+    tbtclo - close a table
+
+columns:
+
+    tbcdef - define columns
+    tbcfnd - find a column from its name
+    tbcinf - get information about a column
+    tbcig[ti] - get specific info about a column (e.g. name or data type)
+
+table parameters:
+
+    tbpset - set a table parameter
+    tbpsta - get the value of a table parameter (e.g. number of rows)
+
+get and put:
+
+    tbegt[tbird] - get a value from the table
+    tbept[tbird] - put a value into the table
+    tbrgt[tbird] - get values from a row
+    tbrpt[tbird] - put values into a row
+    tbcgt[tbird] - get values from a column
+    tbcpt[tbird] - put values into a column
+    tbrudf - set values in a row to undefined
+
+header parameters:
+
+    tbhgt[tbird] - get a header parameter
+    tbhad[tbird] - add a new header parameter or replace existing one
+    tbhpt[tbird] - replace an existing header parameter
+    tbhcal - copy all header parameters
+    tbhgnp - get Nth header parameter as a string
+
+table files:
+
+    tbtcpy - copy a table
+    tbtdel - delete a table
+    tbtren - rename a table
+    tbtacc - test for the existence of a table
+    tbtext - append default extension (if it's not already there)
+    tbtnam - get the name (including extension) of the table
+    tbtflu - flush FIO buffer for table
+
+miscellaneous:
+
+    tbtchs - change allocated space of any/all portions of a table
+    tbrcpy - copy an entire row (only for tables with identical columns)
+    tbrcsc - copy a row, but copy only selected columns
+    tbrswp - swap two rows
+    tbrdel - delete a range of rows
+    tbrnll - set all columns in a range of rows to INDEF
+    tbcnam - change the name of a column
+    tbcfmt - change the format for printing a column
+    tbcnit - change the units for a column
+    tbcnum - get the column pointer from the column number
+
+
+Calling sequences:
+
+             tbcdef  (tp, colptr,
+                      colname, colunits, colfmt, datatype, lendata, numcols)
+
+             tbcfmt  (tp, colptr, colfmt)
+
+             tbcfnd  (tp, colname, colptr, numcols)
+
+             tbcgt[] (tp, colptr, buffer, nullflag,         firstrow, lastrow)
+             tbcgtt  (tp, colptr, buffer, nullflag, lenstr, firstrow, lastrow)
+
+             tbcinf  (colptr,
+                colnum, colname, colunits, colfmt, datatype, lendata, lenfmt)
+
+    int    = tbcigi  (colptr, param)
+             tbcigt  (colptr, param, outstr, maxch)
+
+             tbcnam  (tp, colptr, colname)
+
+             tbcnit  (tp, colptr, colunits)
+
+    colptr = tbcnum  (tp, colnum)
+
+             tbcpt[] (tp, colptr, buffer,         firstrow, lastrow)
+             tbcptt  (tp, colptr, buffer, lenstr, firstrow, lastrow)
+
+             tbegt[] (tp, colptr, rownum, buffer)
+             tbegtt  (tp, colptr, rownum, buffer, maxch)
+
+             tbept[] (tp, colptr, rownum, buffer)
+
+             tbhad[] (tp, param, value)
+
+             tbhcal  (itp, otp)
+
+             tbhgnp  (tp, parnum, keyword, dtype, str)
+
+    bool   = tbhgtb  (tp, param)
+    double = tbhgtd  (tp, param)
+    int    = tbhgti  (tp, param)
+    real   = tbhgtr  (tp, param)
+             tbhgtt  (tp, param, text, maxch)
+
+             tbhpt[] (tp, param, value)
+
+             tbpset  (tp, setwhat, value)
+
+    int    = tbpsta  (tp, param)
+
+             tbrcpy  (itp, otp, irownum, orownum)
+
+             tbrcsc  (itp, otp, icptr, ocptr, irownum, orownum, ncols)
+
+             tbrdel  (tp, firstrow, lastrow)
+
+             tbrgt[] (tp, colptr, buffer, nullflag,         numcols, rownum)
+             tbrgtt  (tp, colptr, buffer, nullflag, lenstr, numcols, rownum)
+
+
+             tbrnll  (tp, firstrow, lastrow)
+
+             tbrpt[] (tp, colptr, buffer,         numcols, rownum)
+             tbrptt  (tp, colptr, buffer, lenstr, numcols, rownum)
+
+             tbrswp  (tp, row1, row2)
+
+             tbrudf  (tp, colptr, numcols, rownum)
+
+    int    = tbtacc  (tablename)
+
+             tbtchs  (tp, maxpar, maxcols, rowlen, allrows)
+
+             tbtclo  (tp)
+
+             tbtcpy  (inname, outname)
+
+             tbtcre  (tp)
+
+             tbtdel  (tablename)
+
+             tbtext  (inname, outname, maxch)
+
+             tbtflu  (tp)
+
+             tbtnam  (tp, tblname, maxch)
+
+    tp     = tbtopn  (tablename, iomode, template)
+
+             tbtren  (oldname, newname)

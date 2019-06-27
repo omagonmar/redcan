@@ -1,0 +1,5 @@
+       imconv - Convolve an image with a point spread function		 
+       immake - Generate an image of Gaussian type
+      irfftes - Test the 2-D FFT procedure 
+        irme0 - Perform 2-D deconvolution for an image by MEM
+      pfactor - Factorize a natural number

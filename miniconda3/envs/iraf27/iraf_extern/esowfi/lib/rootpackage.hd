@@ -1,0 +1,9 @@
+# Root task entry for the package help tree.  Defines `<package>'
+# as both a task and a package in the help database.
+
+esowfi		men  = esowfi$esowfi.men,
+		hlp  = esowfi$esowfi.men,
+		sys  = esowfi$package.hlp,
+		pkg  = esowfi$esowfi.hd,
+		src  = esowfi$esowfi.cl
+

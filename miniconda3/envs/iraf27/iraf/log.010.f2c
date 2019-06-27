@@ -1,0 +1,30 @@
+cc -c -O -m32 main.c
+cc -c -O -m32 init.c
+cc -c -O -m32 gram.c
+grep -n . <tokens | sed "s/\([^:]*\):\(.*\)/#define \2 \1/" >tokdefs.h
+cc -c -O -m32 lex.c
+cc -c -O -m32 proc.c
+cc -c -O -m32 equiv.c
+cc -c -O -m32 data.c
+cc -c -O -m32 format.c
+cc -c -O -m32 expr.c
+cc -c -O -m32 exec.c
+cc -c -O -m32 intr.c
+cc -c -O -m32 io.c
+cc -c -O -m32 misc.c
+cc -c -O -m32 error.c
+cc -c -O -m32 mem.c
+cc -c -O -m32 names.c
+cc -c -O -m32 output.c
+cc -c -O -m32 p1output.c
+cc -c -O -m32 pread.c
+cc -c -O -m32 put.c
+cc -c -O -m32 putpcc.c
+cc -c -O -m32 vax.c
+cc -c -O -m32 formatdata.c
+cc -c -O -m32 parse_args.c
+cc -c -O -m32 niceprintf.c
+cc -c -O -m32 cds.c
+cc -c -O -m32 sysdep.c
+cc -c -O -m32 version.c
+cc -m32  main.o init.o gram.o lex.o proc.o equiv.o data.o format.o expr.o exec.o intr.o io.o misc.o error.o mem.o names.o output.o p1output.o pread.o put.o putpcc.o vax.o formatdata.o parse_args.o niceprintf.o cds.o sysdep.o version.o  -o f2c

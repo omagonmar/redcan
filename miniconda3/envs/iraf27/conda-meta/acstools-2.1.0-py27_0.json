@@ -1,0 +1,467 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "matplotlib",
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "scikit-image",
+    "stsci.tools"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/acstools-2.1.0-py27_0",
+  "features": "",
+  "files": [
+    "bin/acs_destripe",
+    "bin/acs_destripe_plus",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/acstools/__init__.py",
+    "lib/python2.7/site-packages/acstools/__init__.pyc",
+    "lib/python2.7/site-packages/acstools/acs2d.py",
+    "lib/python2.7/site-packages/acstools/acs2d.pyc",
+    "lib/python2.7/site-packages/acstools/acs_destripe.py",
+    "lib/python2.7/site-packages/acstools/acs_destripe.pyc",
+    "lib/python2.7/site-packages/acstools/acs_destripe_plus.py",
+    "lib/python2.7/site-packages/acstools/acs_destripe_plus.pyc",
+    "lib/python2.7/site-packages/acstools/acsccd.py",
+    "lib/python2.7/site-packages/acstools/acsccd.pyc",
+    "lib/python2.7/site-packages/acstools/acscte.py",
+    "lib/python2.7/site-packages/acstools/acscte.pyc",
+    "lib/python2.7/site-packages/acstools/acscteforwardmodel.py",
+    "lib/python2.7/site-packages/acstools/acscteforwardmodel.pyc",
+    "lib/python2.7/site-packages/acstools/acsrej.py",
+    "lib/python2.7/site-packages/acstools/acsrej.pyc",
+    "lib/python2.7/site-packages/acstools/acssum.py",
+    "lib/python2.7/site-packages/acstools/acssum.pyc",
+    "lib/python2.7/site-packages/acstools/calacs.py",
+    "lib/python2.7/site-packages/acstools/calacs.pyc",
+    "lib/python2.7/site-packages/acstools/pars/acs2d.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acs2d.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acs_destripe.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acs_destripe.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acs_destripe_plus.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acs_destripe_plus.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acsccd.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acsccd.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acscte.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acscte.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acscteforwardmodel.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acscteforwardmodel.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acsrej.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acsrej.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/acssum.cfg",
+    "lib/python2.7/site-packages/acstools/pars/acssum.cfgspc",
+    "lib/python2.7/site-packages/acstools/pars/calacs.cfg",
+    "lib/python2.7/site-packages/acstools/pars/calacs.cfgspc",
+    "lib/python2.7/site-packages/acstools/satdet.py",
+    "lib/python2.7/site-packages/acstools/satdet.pyc",
+    "lib/python2.7/site-packages/acstools/utils_calib.py",
+    "lib/python2.7/site-packages/acstools/utils_calib.pyc",
+    "lib/python2.7/site-packages/acstools/version.py",
+    "lib/python2.7/site-packages/acstools/version.pyc"
+  ],
+  "fn": "acstools-2.1.0-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/acstools-2.1.0-py27_0",
+    "type": 1
+  },
+  "md5": "8cd321439eea679eace40fb02639bedd",
+  "name": "acstools",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/acstools-2.1.0-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/acs_destripe",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "e289703c78173b8c0370d6be012eba88ef98741c00e7db9077b971264eb52c0c",
+        "sha256_in_prefix": "1cad6e4690762fbb8b7e919046086e3f7cd6cfbb31373215559511fb9ad2fb99",
+        "size_in_bytes": 422
+      },
+      {
+        "_path": "bin/acs_destripe_plus",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "7b6e73c253cf8916fe85b731c09f51d5385669b0ef5663e93471742c076949c1",
+        "sha256_in_prefix": "77084f99e50429350af5c662ccc41577147371971f9d19574eb48ba8987bba67",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "7bf1e14bbd38f59baed3beaa4d2f0ff4d6e5449404cd66d703183cd91db1fb12",
+        "sha256_in_prefix": "7bf1e14bbd38f59baed3beaa4d2f0ff4d6e5449404cd66d703183cd91db1fb12",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "5303c2f8d2cb540a9bf33a621a1105d518a7a8fe0805e1f49216b096cdc2c8d5",
+        "sha256_in_prefix": "5303c2f8d2cb540a9bf33a621a1105d518a7a8fe0805e1f49216b096cdc2c8d5",
+        "size_in_bytes": 1710
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "10dfb6b79dca0341996debf9c89aa4379a45e0d018f5f076c98a6a2db6260c42",
+        "sha256_in_prefix": "10dfb6b79dca0341996debf9c89aa4379a45e0d018f5f076c98a6a2db6260c42",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "02f5db68747e269c4c6b95c9fd5b20d2c54fb551f4357c0f9190b0e3fbd59016",
+        "sha256_in_prefix": "02f5db68747e269c4c6b95c9fd5b20d2c54fb551f4357c0f9190b0e3fbd59016",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools-2.1.0-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "49327a100addd9b50a6f716504be29f2be243fdf948859e474c53235eeadcefb",
+        "sha256_in_prefix": "49327a100addd9b50a6f716504be29f2be243fdf948859e474c53235eeadcefb",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8bf38516ecc2e5f2a452b3aaa6e962db4fa5b1574d32cdd549ff660eec74febe",
+        "sha256_in_prefix": "8bf38516ecc2e5f2a452b3aaa6e962db4fa5b1574d32cdd549ff660eec74febe",
+        "size_in_bytes": 1490
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "47a8561d2724250494116d694c30631cbd2eedbe68860fae63e5e810c7292ab6",
+        "sha256_in_prefix": "47a8561d2724250494116d694c30631cbd2eedbe68860fae63e5e810c7292ab6",
+        "size_in_bytes": 1640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acs2d.py",
+        "path_type": "hardlink",
+        "sha256": "4f0705b5197731e9caf0c17fcea67827b7fb04599471a4899891abe37fad5369",
+        "sha256_in_prefix": "4f0705b5197731e9caf0c17fcea67827b7fb04599471a4899891abe37fad5369",
+        "size_in_bytes": 4002
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acs2d.pyc",
+        "path_type": "hardlink",
+        "sha256": "a77f356497948ede16ea38db5d37025da2a0ab2ee047ed9af89d07850e79e69f",
+        "sha256_in_prefix": "a77f356497948ede16ea38db5d37025da2a0ab2ee047ed9af89d07850e79e69f",
+        "size_in_bytes": 4338
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acs_destripe.py",
+        "path_type": "hardlink",
+        "sha256": "68eed15f176dda4860a53e8b57d75dd1ff71ba8455fc00a5e075f6296d3b53f5",
+        "sha256_in_prefix": "68eed15f176dda4860a53e8b57d75dd1ff71ba8455fc00a5e075f6296d3b53f5",
+        "size_in_bytes": 40054
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acs_destripe.pyc",
+        "path_type": "hardlink",
+        "sha256": "cec1d5fb3635a01041d0e7a92643541ede70c3bf8c19a383aab1b1273df6f946",
+        "sha256_in_prefix": "cec1d5fb3635a01041d0e7a92643541ede70c3bf8c19a383aab1b1273df6f946",
+        "size_in_bytes": 33903
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acs_destripe_plus.py",
+        "path_type": "hardlink",
+        "sha256": "d6d9a0ede43c78e31078065c0f2a881c30e255ba4a43b881f1f5fb17b6613f11",
+        "sha256_in_prefix": "d6d9a0ede43c78e31078065c0f2a881c30e255ba4a43b881f1f5fb17b6613f11",
+        "size_in_bytes": 24196
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acs_destripe_plus.pyc",
+        "path_type": "hardlink",
+        "sha256": "a59915c64e3e66ed6adf8f9546aa2483d7e950910a0f749fdb6fd987a3125952",
+        "sha256_in_prefix": "a59915c64e3e66ed6adf8f9546aa2483d7e950910a0f749fdb6fd987a3125952",
+        "size_in_bytes": 19705
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acsccd.py",
+        "path_type": "hardlink",
+        "sha256": "9db7e7798400091a615202e06dfb892fdb662124d8a773dcfee3734a087dabdd",
+        "sha256_in_prefix": "9db7e7798400091a615202e06dfb892fdb662124d8a773dcfee3734a087dabdd",
+        "size_in_bytes": 4334
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acsccd.pyc",
+        "path_type": "hardlink",
+        "sha256": "155a2169de5138369b37016af57441c29691011b18d15bba54f52057e2328c70",
+        "sha256_in_prefix": "155a2169de5138369b37016af57441c29691011b18d15bba54f52057e2328c70",
+        "size_in_bytes": 3466
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acscte.py",
+        "path_type": "hardlink",
+        "sha256": "a90a5155a1aee8a85d81a365cd218f91a3f6a6437a957f31f4fdbbc03da00547",
+        "sha256_in_prefix": "a90a5155a1aee8a85d81a365cd218f91a3f6a6437a957f31f4fdbbc03da00547",
+        "size_in_bytes": 3566
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acscte.pyc",
+        "path_type": "hardlink",
+        "sha256": "be93053acc54509e33d99ccea51a186eaff78e77438229ab1d9f4b1bfc0fd1ab",
+        "sha256_in_prefix": "be93053acc54509e33d99ccea51a186eaff78e77438229ab1d9f4b1bfc0fd1ab",
+        "size_in_bytes": 3861
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acscteforwardmodel.py",
+        "path_type": "hardlink",
+        "sha256": "d40fcef3e914039e2ffb7b8b9f0f5223e4bbafa18cb4611fd5f08ad8e7092190",
+        "sha256_in_prefix": "d40fcef3e914039e2ffb7b8b9f0f5223e4bbafa18cb4611fd5f08ad8e7092190",
+        "size_in_bytes": 3945
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acscteforwardmodel.pyc",
+        "path_type": "hardlink",
+        "sha256": "eb9a082e7272128fcbf8aa319609132c6b9b33b57665bcc558dab1e24c0de143",
+        "sha256_in_prefix": "eb9a082e7272128fcbf8aa319609132c6b9b33b57665bcc558dab1e24c0de143",
+        "size_in_bytes": 4156
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acsrej.py",
+        "path_type": "hardlink",
+        "sha256": "9e381c5c71a554ea96657040cf4e566d4c438cb188a4246986b9e7e30cbc8969",
+        "sha256_in_prefix": "9e381c5c71a554ea96657040cf4e566d4c438cb188a4246986b9e7e30cbc8969",
+        "size_in_bytes": 6843
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acsrej.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2a861668eb7f1c8e76cf9313815fcc73ebbd02124a32719228f0d9ac3c8260d",
+        "sha256_in_prefix": "b2a861668eb7f1c8e76cf9313815fcc73ebbd02124a32719228f0d9ac3c8260d",
+        "size_in_bytes": 6711
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acssum.py",
+        "path_type": "hardlink",
+        "sha256": "abc502d7a9a6bb73572688492d3e4429e98817bdafc74b11817dd2e423bbee59",
+        "sha256_in_prefix": "abc502d7a9a6bb73572688492d3e4429e98817bdafc74b11817dd2e423bbee59",
+        "size_in_bytes": 3212
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/acssum.pyc",
+        "path_type": "hardlink",
+        "sha256": "e92da7bc7c4eb8fdb40d35577f37dfacd078597df7e916257b631460abc8f013",
+        "sha256_in_prefix": "e92da7bc7c4eb8fdb40d35577f37dfacd078597df7e916257b631460abc8f013",
+        "size_in_bytes": 3502
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/calacs.py",
+        "path_type": "hardlink",
+        "sha256": "f1f2cad8b40cb3132cdc6606e0cba84c7553e1c6edb193e40edf899e28dcf3d5",
+        "sha256_in_prefix": "f1f2cad8b40cb3132cdc6606e0cba84c7553e1c6edb193e40edf899e28dcf3d5",
+        "size_in_bytes": 3161
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/calacs.pyc",
+        "path_type": "hardlink",
+        "sha256": "1f08038bd711e16f54ad14deca6b10730f32c9048010c8c16b05def0114fdcca",
+        "sha256_in_prefix": "1f08038bd711e16f54ad14deca6b10730f32c9048010c8c16b05def0114fdcca",
+        "size_in_bytes": 3388
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acs2d.cfg",
+        "path_type": "hardlink",
+        "sha256": "307390e257cbc256cb01aaad8976144ccdc37e867784cdd0c64fd37c26d91cfd",
+        "sha256_in_prefix": "307390e257cbc256cb01aaad8976144ccdc37e867784cdd0c64fd37c26d91cfd",
+        "size_in_bytes": 96
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acs2d.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "7dbd1ebc25566770a1d5a26a2a63c31a5eee3b423e7fece299a196b3d040384c",
+        "sha256_in_prefix": "7dbd1ebc25566770a1d5a26a2a63c31a5eee3b423e7fece299a196b3d040384c",
+        "size_in_bytes": 388
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acs_destripe.cfg",
+        "path_type": "hardlink",
+        "sha256": "037484086f151ef003eb860e6168f496d645c377087a5e14430f0d71b61eb4d4",
+        "sha256_in_prefix": "037484086f151ef003eb860e6168f496d645c377087a5e14430f0d71b61eb4d4",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acs_destripe.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "11267a9239b3d8b75dc7a154d4273405d66b7cbb094dfd1225785721f0e44b9d",
+        "sha256_in_prefix": "11267a9239b3d8b75dc7a154d4273405d66b7cbb094dfd1225785721f0e44b9d",
+        "size_in_bytes": 1449
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acs_destripe_plus.cfg",
+        "path_type": "hardlink",
+        "sha256": "8502153b55150ca1aa734bd23f12aab105f9a35b23a3bce45949636dd1dfc5f2",
+        "sha256_in_prefix": "8502153b55150ca1aa734bd23f12aab105f9a35b23a3bce45949636dd1dfc5f2",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acs_destripe_plus.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "89babb89eb01c73eaa0880f2d62272f55436fea5b3d6260088c03a2ff679410f",
+        "sha256_in_prefix": "89babb89eb01c73eaa0880f2d62272f55436fea5b3d6260088c03a2ff679410f",
+        "size_in_bytes": 1533
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acsccd.cfg",
+        "path_type": "hardlink",
+        "sha256": "6f65409de45b27fb094586e8d1e73ddce5642252b5a0b0e87d550b484028af2d",
+        "sha256_in_prefix": "6f65409de45b27fb094586e8d1e73ddce5642252b5a0b0e87d550b484028af2d",
+        "size_in_bytes": 97
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acsccd.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "f8949dbba63a998730c4a1f0fe5e7f3c2dc79e2b9401a74b235375134d0915c6",
+        "sha256_in_prefix": "f8949dbba63a998730c4a1f0fe5e7f3c2dc79e2b9401a74b235375134d0915c6",
+        "size_in_bytes": 390
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acscte.cfg",
+        "path_type": "hardlink",
+        "sha256": "75ca6248739427cae4a5a1098c367431e94ea2e8087b4948f6ca60a2e8416b86",
+        "sha256_in_prefix": "75ca6248739427cae4a5a1098c367431e94ea2e8087b4948f6ca60a2e8416b86",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acscte.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "6cf3a14289d5d741f074e427b5ad289f8b9c0b72bc947edb0e3cf2c24e0389e1",
+        "sha256_in_prefix": "6cf3a14289d5d741f074e427b5ad289f8b9c0b72bc947edb0e3cf2c24e0389e1",
+        "size_in_bytes": 471
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acscteforwardmodel.cfg",
+        "path_type": "hardlink",
+        "sha256": "ede0026b0581ec36ef6b8277681684ed5c49e7566bc106857be8cfd7b678eb25",
+        "sha256_in_prefix": "ede0026b0581ec36ef6b8277681684ed5c49e7566bc106857be8cfd7b678eb25",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acscteforwardmodel.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "678510b6559ddd9b66ab2c43d9882ccf3e5123169ed1110cdcea58a1b6fbbf57",
+        "sha256_in_prefix": "678510b6559ddd9b66ab2c43d9882ccf3e5123169ed1110cdcea58a1b6fbbf57",
+        "size_in_bytes": 483
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acsrej.cfg",
+        "path_type": "hardlink",
+        "sha256": "b3b1f305d4a7e5eddd8b9ffb6a370b010ef29e4f30d43b11cd7aa2b2a8740426",
+        "sha256_in_prefix": "b3b1f305d4a7e5eddd8b9ffb6a370b010ef29e4f30d43b11cd7aa2b2a8740426",
+        "size_in_bytes": 268
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acsrej.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "95cd28672293eaa9522d035f1ad7f563959644c9c1ad182784bd1f95aaf9589b",
+        "sha256_in_prefix": "95cd28672293eaa9522d035f1ad7f563959644c9c1ad182784bd1f95aaf9589b",
+        "size_in_bytes": 1365
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acssum.cfg",
+        "path_type": "hardlink",
+        "sha256": "3c26eca8778c0b144b7d03148bb6af7fb0173bdab3419c70dbe55dc26c0cad60",
+        "sha256_in_prefix": "3c26eca8778c0b144b7d03148bb6af7fb0173bdab3419c70dbe55dc26c0cad60",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/acssum.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "083403f154bfc814b4a588d97d49eef7b6ae0ffced958a0d5d13435331dc5b4d",
+        "sha256_in_prefix": "083403f154bfc814b4a588d97d49eef7b6ae0ffced958a0d5d13435331dc5b4d",
+        "size_in_bytes": 444
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/calacs.cfg",
+        "path_type": "hardlink",
+        "sha256": "52ce116981623d14d7d32747e699a9d324473617469f1656711849fac4cf3d0b",
+        "sha256_in_prefix": "52ce116981623d14d7d32747e699a9d324473617469f1656711849fac4cf3d0b",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/pars/calacs.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "1c45e4348d6cfa80bf958ae79f9ef05d17bca84e7a21d20f9a2adea9a83818a5",
+        "sha256_in_prefix": "1c45e4348d6cfa80bf958ae79f9ef05d17bca84e7a21d20f9a2adea9a83818a5",
+        "size_in_bytes": 610
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/satdet.py",
+        "path_type": "hardlink",
+        "sha256": "7d2a198633be51c19e9fe5d05404074d3a31dfd24f4151c0ab2e8d14f00fc427",
+        "sha256_in_prefix": "7d2a198633be51c19e9fe5d05404074d3a31dfd24f4151c0ab2e8d14f00fc427",
+        "size_in_bytes": 37853
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/satdet.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f18b5d9f0b8c221dc36e76b11796b4e5ca3a059d19fe45fd513e460118f2038",
+        "sha256_in_prefix": "8f18b5d9f0b8c221dc36e76b11796b4e5ca3a059d19fe45fd513e460118f2038",
+        "size_in_bytes": 28421
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/utils_calib.py",
+        "path_type": "hardlink",
+        "sha256": "9f8d7e5220acc8abd3c0bd1fee1de456f0bc92f1058bc5d18cce7aa0182b38d5",
+        "sha256_in_prefix": "9f8d7e5220acc8abd3c0bd1fee1de456f0bc92f1058bc5d18cce7aa0182b38d5",
+        "size_in_bytes": 16602
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/utils_calib.pyc",
+        "path_type": "hardlink",
+        "sha256": "699f45851a56fc268f7e469157af690092f74fa5932a9635a157110f97479578",
+        "sha256_in_prefix": "699f45851a56fc268f7e469157af690092f74fa5932a9635a157110f97479578",
+        "size_in_bytes": 16990
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/version.py",
+        "path_type": "hardlink",
+        "sha256": "809cf0c192ba1aeee12e8665d95784456d76e5ca57b20c5f83a2b577347d9741",
+        "sha256_in_prefix": "809cf0c192ba1aeee12e8665d95784456d76e5ca57b20c5f83a2b577347d9741",
+        "size_in_bytes": 780
+      },
+      {
+        "_path": "lib/python2.7/site-packages/acstools/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a7be76d4e9dedd5a7f6d9da0e95ba462439abd1277a553c6538c261ca8e5bf5",
+        "sha256_in_prefix": "7a7be76d4e9dedd5a7f6d9da0e95ba462439abd1277a553c6538c261ca8e5bf5",
+        "size_in_bytes": 763
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 66512,
+  "subdir": "linux-64",
+  "timestamp": 1541537550002,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/acstools-2.1.0-py27_0.tar.bz2",
+  "version": "2.1.0"
+}

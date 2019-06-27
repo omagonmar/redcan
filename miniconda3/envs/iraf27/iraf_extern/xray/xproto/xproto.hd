@@ -1,0 +1,84 @@
+# $Header: /home/pros/xray/xproto/RCS/xproto.hd,v 11.3 1998/04/24 16:14:24 prosb Exp $
+#$Log: xproto.hd,v $
+#Revision 11.3  1998/04/24 16:14:24  prosb
+#Patch Release 2.5.p1
+#
+#Revision 11.2  1998/02/25 18:43:07  prosb
+#JCC(1/27/98) - add 2 new tasks: marx2qpoe & xexamine_r.
+#
+#Revision 11.0  1997/11/06 16:39:15  prosb
+#General Release 2.5
+#
+#Revision 9.1  1997/09/26 20:31:59  prosb
+#JCC(9/97) - move imdetect from xspatial to xproto
+#
+#Revision 9.0  1995/11/16 19:26:26  prosb
+#General Release 2.4
+#
+#Revision 8.1  1994/07/15  14:23:35  chen
+#jchen - add the task "evalvg"
+#
+#Revision 8.0  94/06/27  17:25:41  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/05/20  13:56:06  janet
+#jd - commented evalvg out for patch.
+#
+#Revision 7.0  93/12/27  18:50:44  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  17:43:21  mo
+#Change tasks
+#
+#Revision 6.0  93/05/24  16:43:23  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/22  20:52:22  mo
+#Mc	add new tasks
+#
+#Revision 5.0  92/10/29  22:39:26  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/23  09:51:59  mo
+#MC	10/24/92	Add new tasks
+#
+#Revision 4.0  92/04/27  15:18:48  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.1  92/02/13  09:15:43  mo
+#Initial revision
+#
+
+$doc		= "./doc/"
+$evalvg		= "./evalvg/"
+$imdetect       = "./imdetect/"
+$wcsqpedit	= "./wcsqpedit/"
+$qpcalc		= "./qpcalc/"
+$script         = "./"
+$xexamine_r     = "./xexamine_r/"
+
+evalvg		hlp = doc$evalvg.hlp,
+		src = evalvg$evalvg.x
+
+imdetect        hlp = doc$imdetect.hlp,
+		src = imdetect$imdetect.x
+
+marx2qpoe       src = script$marx2qpoe.cl,
+                hlp = doc$marx2qpoe.hlp
+
+qpcalc		hlp = doc$qpcalc.hlp,
+		src = qpcalc$qpcalc.cl
+
+qpcreate	hlp = doc$qpcreate.hlp,
+		src = script$qpcreate.cl
+
+wcsqpedit	hlp = doc$wcsqpedit.hlp,
+		src = wcsqpedit$wcsqpedit.x
+
+xexamine_r      src = xexamine_r$xexamine_r.x,
+                hlp = doc$xexamine_r.hlp
+
+tabfilter       hlp = doc$tabfilter.hlp,
+		src = script$tabfilter.cl
+
+revisions	hlp = Revisions

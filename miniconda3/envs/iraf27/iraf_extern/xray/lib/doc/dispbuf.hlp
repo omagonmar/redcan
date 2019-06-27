@@ -1,0 +1,110 @@
+#$Header: /home/pros/xray/lib/doc/RCS/dispbuf.hlp,v 11.0 1997/11/06 16:22:41 prosb Exp $
+#$Log: dispbuf.hlp,v $
+#Revision 11.0  1997/11/06 16:22:41  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:39  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:19  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:06  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:00:27  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:24  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:08:58  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:38  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:12  pros
+#General Release 1.0
+#
+.help dispbuf Jan89 PROS_Library
+NAME
+.in 4
+dispbuf<silrdx> - display 2D buffer
+.sp
+.in -4
+USAGE
+.in 4
+call dispbuf<silrdx>(buf, ncols, nrows, flip)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	buf		<silrdx>	input buffer (type matches call)
+	ncols		int		number of columns in buf
+	nrows		int		number of rows in buf
+	flip		boolean		if true, display in reverse row order
+
+Output Arguments:
+	none
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine family dispbuf<silrdx> displays the contents of a 2-dimensional
+buffer.  The total counts in the buffer is also displayed,
+as well as the maximum value and the pixel at which this maximim occurs.
+This routine is used in imdisp, for example.
+
+The first argument is a pointer to the data buffer, whose type must match
+the specific call (silrdx) being used.  The second and third arguments
+specify the number of columns and rows in the buffer.  The final argument
+specified whether the display should be in reverse row order.  If \fIflip\fR
+is true, reverse-row order is used, otherwise not.
+The display is generally row-reversed because IRAF treats row 1 as the bottom
+row of an image.  Therefore, if a buffer is filled in row-order with image
+data, the first row of the displayed data will contain the "last" line of the
+image.
+
+The display format depends on the data type.  For <sil>, the display is
+"%5d ", while for <rdx> the display is "%7.2f ".  Note that only the real part
+of a complex value is displayed.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. Display a real buffer of dimension 128 * 128.
+.in 8
+.nf
+pointer buf
+int	ncols
+int	nrows
+bool	flip
+ncols = 128
+nrows = 128
+flip = true
+call malloc(buf, ncols*nrows, TY_REAL)
+...
+call dispbufr(Memr[buf], ncols, nrows, flip)
+.fi
+.sp
+.in -12
+.in 4
+ex. Display a integer buffer of dimension 128 * 128.
+.in 8
+.nf
+define	XSIZE 128
+define	YSIZE 128
+int	buf[XSIZE,YSIZE]
+call dispbufi(buf, XSIZE,  YSIZE, true)
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+mskg2s (which fills a 2-D buffer through a mask)

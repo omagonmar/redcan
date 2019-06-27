@@ -1,0 +1,6 @@
+cutoutpkg       men  = cutoutpkg$cutoutpkg.men,
+		hlp  = cutoutpkg$cutoutpkg.men,
+		sys  = cutoutpkg$cutoutpkg.hlp,
+                pkg  = cutoutpkg$cutoutpkg.hd,
+		src  = cutoutpkg$cutoutpkg.cl
+

@@ -1,0 +1,861 @@
+Only in fits2qp: RCS
+diff fits2qp/cards.com /pros/prosdev/jmoran/ratfits/cards.com
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/cards.com,v 6.0 93/05/24 16:24:16 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/cards.com,v 5.0 92/10/29 21:36:31 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:24:16  prosb
+< #General Release 2.2
+< #
+diff fits2qp/cards.h /pros/prosdev/jmoran/ratfits/cards.h
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/cards.h,v 6.0 93/05/24 16:24:19 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/cards.h,v 5.0 92/10/29 21:36:33 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:24:19  prosb
+< #General Release 2.2
+< #
+Only in fits2qp: debug
+Only in fits2qp: debug.f
+Binary files fits2qp/debug.o and /pros/prosdev/jmoran/ratfits/debug.o differ
+Only in /pros/prosdev/jmoran/ratfits: ext.cards
+Only in /pros/prosdev/jmoran/ratfits: fits.cards
+diff fits2qp/fits2qp.com /pros/prosdev/jmoran/ratfits/fits2qp.com
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/fits2qp.com,v 6.0 93/05/24 16:24:21 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/fits2qp.com,v 5.0 92/10/29 21:36:36 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:24:21  prosb
+< #General Release 2.2
+< #
+diff fits2qp/fits2qp.par /pros/prosdev/jmoran/ratfits/fits2qp.par
+10,13c10,13
+< fits_cards,s,h,"xdataio$fits.cards",,,"definitions for FITS cards"
+< qpoe_cards,s,h,"xdataio$qpoe.cards",,,"definitions for qpoe cards"
+< ext_cards,s,h,"xdataio$ext.cards",,,"definitions for qpoe cards"
+< wcs_cards,s,h,"xdataio$wcs.cards",,,"definitions for wcs cards"
+---
+> fits_cards,s,h,"/pros/prosdev/jmoran/ratfits/fits.cards",,,"definitions for FITS cards"
+> qpoe_cards,s,h,"/pros/prosdev/jmoran/ratfits/qpoe.cards",,,"definitions for qpoe cards"
+> ext_cards,s,h,"/pros/prosdev/jmoran/ratfits/ext.cards",,,"definitions for qpoe cards"
+> wcs_cards,s,h,"/pros/prosdev/jmoran/ratfits/wcs.cards",,,"definitions for wcs cards"
+diff fits2qp/fits_rheader.x /pros/prosdev/jmoran/ratfits/fits_rheader.x
+1c1
+< # $Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/fits_rheader.x,v 6.0 93/05/24 16:24:41 prosb Rel $
+---
+> # $Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/fits_rheader.x,v 5.0 92/10/29 21:36:51 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:24:41  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_addev.f /pros/prosdev/jmoran/ratfits/ft_addev.f
+62c62
+<       integer*2 st0001(45)
+---
+>       integer*2 st0001(46)
+88c88
+<       data (st0001(iyy),iyy=41,45) /110,103, 32, 50, 0/
+---
+>       data (st0001(iyy),iyy=41,46) /110,103, 32, 37,100, 0/
+136c136
+<          if (.not.( naxlen .eq.0 )) goto 110
+---
+>          if (.not.( naxlen .eq. 0 )) goto 110
+137a138
+>             call pargi(2)
+diff fits2qp/ft_addev.x /pros/prosdev/jmoran/ratfits/ft_addev.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_addev.x,v 6.0 93/05/24 16:24:54 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_addev.x,v 5.0 92/10/29 21:37:02 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:24:54  prosb
+< #General Release 2.2
+< #
+77,79c74,78
+< 	if( naxlen ==0 ){
+< 	    call printf("warning: no qpoe 'naxlen' param - assuming 2")
+< 	    naxlen = 2
+---
+> 	if( naxlen == 0 )
+> 	{
+> 	    call printf("warning: no qpoe 'naxlen' param - assuming %d")
+> 	    call pargi(DEFAULT_AXLEN)
+> 	    naxlen = DEFAULT_AXLEN
+81c80
+< 	else if( naxlen != 2 )
+---
+> 	else if( naxlen != DEFAULT_AXLEN )
+diff fits2qp/ft_addparam.x /pros/prosdev/jmoran/ratfits/ft_addparam.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_addparam.x,v 6.0 93/05/24 16:24:58 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_addparam.x,v 5.1 92/11/20 15:39:36 mo Exp $
+3,5d2
+< #Revision 6.0  93/05/24  16:24:58  prosb
+< #General Release 2.2
+< #
+63a61
+> 
+diff fits2qp/ft_duplparam.f /pros/prosdev/jmoran/ratfits/ft_duplparam.f
+34a35,40
+>       integer val
+>       integer len
+>       integer flag
+>       integer qpquef
+>       integer*2 type(161 +1)
+>       integer*2 str(161 +1)
+36,38c42,52
+<       integer*2 st0001(19)
+<       integer*2 st0002(50)
+<       integer*2 st0003(41)
+---
+>       integer*2 st0001(42)
+>       integer*2 st0002(42)
+>       integer*2 st0003(42)
+>       integer*2 st0004(42)
+>       integer*2 st0005(42)
+>       integer*2 st0006(42)
+>       integer*2 st0007(42)
+>       integer*2 st0008(42)
+>       integer*2 st0009(19)
+>       integer*2 st0010(50)
+>       integer*2 st0011(41)
+41,56c55,118
+<       data (st0001(iyy),iyy= 1, 8) / 98, 97,100, 32, 70, 73, 84, 83/
+<       data (st0001(iyy),iyy= 9,16) / 32, 99, 97,114,100, 32,116,121/
+<       data (st0001(iyy),iyy=17,19) /112,101, 0/
+<       data (st0002(iyy),iyy= 1, 8) /119, 97,114,110,105,110,103, 58/
+<       data (st0002(iyy),iyy= 9,16) / 32, 99, 97,114,100, 32, 37,115/
+<       data (st0002(iyy),iyy=17,24) / 32,101,120,105,115,116,115, 32/
+<       data (st0002(iyy),iyy=25,32) / 97,110,100, 32,104, 97,115, 32/
+<       data (st0002(iyy),iyy=33,40) /100,105,102,102,101,114,101,110/
+<       data (st0002(iyy),iyy=41,48) /116, 32,118, 97,108,117,101, 46/
+<       data (st0002(iyy),iyy=49,50) / 10, 0/
+<       data (st0003(iyy),iyy= 1, 8) / 84,104,101, 32,101,120,105,115/
+<       data (st0003(iyy),iyy= 9,16) /116,105,110,103, 32, 99, 97,114/
+<       data (st0003(iyy),iyy=17,24) /100, 32,105,115, 32, 98,101,105/
+<       data (st0003(iyy),iyy=25,32) /110,103, 32,111,118,101,114,119/
+<       data (st0003(iyy),iyy=33,40) /114,105,116,116,101,110, 46, 10/
+<       data (st0003(iyy),iyy=41,41) / 0/
+---
+>       data (st0001(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0001(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0001(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0001(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0001(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0001(iyy),iyy=41,42) / 10, 0/
+>       data (st0002(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0002(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0002(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0002(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0002(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0002(iyy),iyy=41,42) / 10, 0/
+>       data (st0003(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0003(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0003(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0003(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0003(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0003(iyy),iyy=41,42) / 10, 0/
+>       data (st0004(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0004(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0004(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0004(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0004(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0004(iyy),iyy=41,42) / 10, 0/
+>       data (st0005(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0005(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0005(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0005(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0005(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0005(iyy),iyy=41,42) / 10, 0/
+>       data (st0006(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0006(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0006(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0006(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0006(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0006(iyy),iyy=41,42) / 10, 0/
+>       data (st0007(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0007(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0007(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0007(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0007(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0007(iyy),iyy=41,42) / 10, 0/
+>       data (st0008(iyy),iyy= 1, 8) / 87, 65, 82, 78, 73, 78, 71, 58/
+>       data (st0008(iyy),iyy= 9,16) / 32,100, 97,116, 97, 32,116,121/
+>       data (st0008(iyy),iyy=17,24) /112,101,115, 32,100,105,102,102/
+>       data (st0008(iyy),iyy=25,32) /101,114, 32,102,111,114, 32, 99/
+>       data (st0008(iyy),iyy=33,40) / 97,114,100, 32, 42, 37,115, 42/
+>       data (st0008(iyy),iyy=41,42) / 10, 0/
+>       data (st0009(iyy),iyy= 1, 8) / 98, 97,100, 32, 70, 73, 84, 83/
+>       data (st0009(iyy),iyy= 9,16) / 32, 99, 97,114,100, 32,116,121/
+>       data (st0009(iyy),iyy=17,19) /112,101, 0/
+>       data (st0010(iyy),iyy= 1, 8) /119, 97,114,110,105,110,103, 58/
+>       data (st0010(iyy),iyy= 9,16) / 32, 99, 97,114,100, 32, 37,115/
+>       data (st0010(iyy),iyy=17,24) / 32,101,120,105,115,116,115, 32/
+>       data (st0010(iyy),iyy=25,32) / 97,110,100, 32,104, 97,115, 32/
+>       data (st0010(iyy),iyy=33,40) /100,105,102,102,101,114,101,110/
+>       data (st0010(iyy),iyy=41,48) /116, 32,118, 97,108,117,101, 46/
+>       data (st0010(iyy),iyy=49,50) / 10, 0/
+>       data (st0011(iyy),iyy= 1, 8) / 84,104,101, 32,101,120,105,115/
+>       data (st0011(iyy),iyy= 9,16) /116,105,110,103, 32, 99, 97,114/
+>       data (st0011(iyy),iyy=17,24) /100, 32,105,115, 32, 98,101,105/
+>       data (st0011(iyy),iyy=25,32) /110,103, 32,111,118,101,114,119/
+>       data (st0011(iyy),iyy=33,40) /114,105,116,116,101,110, 46, 10/
+>       data (st0011(iyy),iyy=41,41) / 0/
+61,63c123,130
+<             bval = qpgetb(qp, memc(memi((card) + 0) ))
+<             if (.not.(bval .ne. memb((card) + 4) )) goto 130
+<                warnig = .true.
+---
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 98)) goto 130
+>                bval = qpgetb(qp, memc(memi((card) + 0) ))
+>                if (.not.(bval .ne. memb((card) + 4) )) goto 140
+>                   warnig = .true.
+> 140            continue
+>                goto 131
+64a132,134
+>                call xprinf(st0001)
+>                call pargsr(memc(memi((card) + 0) ))
+> 131         continue
+66,70c136,149
+< 140      continue
+<             sval = qpgets(qp, memc(memi((card) + 0) ))
+<             if (.not.(sval .ne. mems(((((card) + 4)-1)*2+1)) )) goto 150
+<                warnig = .true.
+< 150         continue
+---
+> 150      continue
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 115)) goto 160
+>                sval = qpgets(qp, memc(memi((card) + 0) ))
+>                if (.not.(sval .ne. mems(((((card) + 4)-1)*2+1)) )) goto 
+>      *         170
+>                   warnig = .true.
+> 170            continue
+>                goto 161
+> 160         continue
+>                call xprinf(st0002)
+>                call pargsr(memc(memi((card) + 0) ))
+> 161         continue
+72,77d150
+< 160      continue
+<             ival = qpgeti(qp, memc(memi((card) + 0) ))
+<             if (.not.(ival .ne. memi((card) + 4) )) goto 170
+<                warnig = .true.
+< 170         continue
+<          goto 111
+79,81c152,159
+<             lval= qpgetl(qp, memc(memi((card) + 0) ))
+<             if (.not.(lval .ne. meml((card) + 4) )) goto 190
+<                warnig = .true.
+---
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 105)) goto 190
+>                ival = qpgeti(qp, memc(memi((card) + 0) ))
+>                if (.not.(ival .ne. memi((card) + 4) )) goto 200
+>                   warnig = .true.
+> 200            continue
+>                goto 191
+82a161,163
+>                call xprinf(st0003)
+>                call pargsr(memc(memi((card) + 0) ))
+> 191         continue
+84,88c165,177
+< 200      continue
+<             rval = qpgetr(qp, memc(memi((card) + 0) ))
+<             if (.not.(.not.(fpequr(rval, memr((card) + 4) )))) goto 210
+<                warnig = .true.
+< 210         continue
+---
+> 210      continue
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 108)) goto 220
+>                lval= qpgetl(qp, memc(memi((card) + 0) ))
+>                if (.not.(lval .ne. meml((card) + 4) )) goto 230
+>                   warnig = .true.
+> 230            continue
+>                goto 221
+> 220         continue
+>                call xprinf(st0004)
+>                call pargsr(memc(memi((card) + 0) ))
+> 221         continue
+90,96d178
+< 220      continue
+<             dval = qpgetd(qp, memc(memi((card) + 0) ))
+<             if (.not.(.not.(fpequd(dval, memd(((((card) + 4)-1)/2+1)) ))
+<      *      )) goto 230
+<                warnig = .true.
+< 230         continue
+<          goto 111
+98,100c180,188
+<             xval = qpgetx(qp, memc(memi((card) + 0) ))
+<             if (.not.(xval .ne. memd(((((card) + 4)-1)/2+1)) )) goto 250
+<                warnig = .true.
+---
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 114)) goto 250
+>                rval = qpgetr(qp, memc(memi((card) + 0) ))
+>                if (.not.(.not.(fpequr(rval, memr((card) + 4) )))) goto 
+>      *         260
+>                   warnig = .true.
+> 260            continue
+>                goto 251
+101a190,192
+>                call xprinf(st0005)
+>                call pargsr(memc(memi((card) + 0) ))
+> 251         continue
+103,110c194,207
+< 260      continue
+<             dummy = qpgstr(qp, memc(memi((card) + 0) ), tempsr, 72 )
+<             call strupr(tempsr)
+<             call strupr(memc(memi((card) + 4) ))
+<             if (.not.(strncp(tempsr, memc(memi((card) + 4) ), 72 ) .ne. 
+<      *      0)) goto 270
+<                warnig = .true.
+< 270         continue
+---
+> 270      continue
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 100)) goto 280
+>                dval = qpgetd(qp, memc(memi((card) + 0) ))
+>                if (.not.(.not.(fpequd(dval, memd(((((card) + 4)-1)/2+1))
+>      *          )))) goto 290
+>                   warnig = .true.
+> 290            continue
+>                goto 281
+> 280         continue
+>                call xprinf(st0006)
+>                call pargsr(memc(memi((card) + 0) ))
+> 281         continue
+112,113c209,242
+< 280      continue
+<             call errori(st0001, memi((card) + 1) )
+---
+> 300      continue
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 120)) goto 310
+>                xval = qpgetx(qp, memc(memi((card) + 0) ))
+>                if (.not.(xval .ne. memd(((((card) + 4)-1)/2+1)) )) goto 
+>      *         320
+>                   warnig = .true.
+> 320            continue
+>                goto 311
+> 310         continue
+>                call xprinf(st0007)
+>                call pargsr(memc(memi((card) + 0) ))
+> 311         continue
+>          goto 111
+> 330      continue
+>             val = qpquef(qp, memc(memi((card) + 0) ), type, len, str, 
+>      *      flag)
+>             if (.not.(type(1) .eq. 99)) goto 340
+>                dummy = qpgstr(qp, memc(memi((card) + 0) ), tempsr, 72 )
+>                call strupr(tempsr)
+>                call strupr(memc(memi((card) + 4) ))
+>                if (.not.(strncp(tempsr, memc(memi((card) + 4) ), 72 ) .
+>      *         ne. 0)) goto 350
+>                   warnig = .true.
+> 350            continue
+>                goto 341
+> 340         continue
+>                call xprinf(st0008)
+>                call pargsr(memc(memi((card) + 0) ))
+> 341         continue
+>          goto 111
+> 360      continue
+>             call errori(st0009, memi((card) + 1) )
+116,117c245,246
+<             if (sw0001.lt.1.or.sw0001.gt.8) goto 280
+<             goto (120,260,140,160,180,200,220,240),sw0001
+---
+>             if (sw0001.lt.1.or.sw0001.gt.8) goto 360
+>             goto (120,330,150,180,210,240,270,300),sw0001
+119,120c248,249
+<          if (.not.(warnig)) goto 290
+<             call xprinf(st0002)
+---
+>          if (.not.(warnig)) goto 370
+>             call xprinf(st0010)
+122c251
+<             call xprinf(st0003)
+---
+>             call xprinf(st0011)
+124c253
+< 290      continue
+---
+> 370      continue
+141a271
+> c     qpquef  qp_queryf
+diff fits2qp/ft_duplparam.x /pros/prosdev/jmoran/ratfits/ft_duplparam.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_duplparam.x,v 6.0 93/05/24 16:25:01 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_duplparam.x,v 5.0 92/10/29 21:37:07 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:01  prosb
+< #General Release 2.2
+< #
+48a46,50
+> int	val, len, flag
+> int	qp_queryf()
+> char	type[SZ_LINE]
+> char	str[SZ_LINE]
+> 
+61a64,66
+> 	    val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+> 	    if (type[1] == 'b')
+> 	    { 
+64a70,75
+> 	    }
+> 	    else
+> 	    {
+> 		call printf("WARNING: data types differ for card *%s*\n")
+> 		call pargstr(Memc[CARDNA(card)])
+> 	    }
+66a78,80
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 's')
+>             {
+69a84,89
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+70a91
+> 
+71a93,95
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 'i')
+>             {
+74a99,104
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+76a107,109
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 'l')
+>             {
+79a113,118
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+81a121,123
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 'r')
+>             {
+84a127,132
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+86a135,137
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 'd')
+>             {
+89a141,146
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+91a149,151
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 'x')
+>             {
+94a155,160
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+96a163,165
+>             val = qp_queryf(qp, Memc[CARDNA(card)], type, len, str, flag)
+>             if (type[1] == 'c')
+>             {
+101a171,176
+>             }
+>             else
+>             {
+>                 call printf("WARNING: data types differ for card *%s*\n")
+>                 call pargstr(Memc[CARDNA(card)])
+>             }
+diff fits2qp/ft_enterwcs.x /pros/prosdev/jmoran/ratfits/ft_enterwcs.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_enterwcs.x,v 6.0 93/05/24 16:25:04 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_enterwcs.x,v 5.0 92/10/29 21:37:09 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:04  prosb
+< #General Release 2.2
+< #
+66a64
+> 
+diff fits2qp/ft_extno.x /pros/prosdev/jmoran/ratfits/ft_extno.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_extno.x,v 6.0 93/05/24 16:25:07 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_extno.x,v 5.0 92/10/29 21:37:11 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:07  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_header.f /pros/prosdev/jmoran/ratfits/ft_header.f
+271a272
+>                   if (sw0002.eq.2004) goto 400
+diff fits2qp/ft_header.x /pros/prosdev/jmoran/ratfits/ft_header.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_header.x,v 6.0 93/05/24 16:25:10 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_header.x,v 5.0 92/10/29 21:37:14 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:10  prosb
+< #General Release 2.2
+< #
+64d60
+< 
+188c184
+< 	    case 2001, 2002, 2003:
+---
+> 	    case 2001, 2002, 2003, 2004:
+diff fits2qp/ft_hist.x /pros/prosdev/jmoran/ratfits/ft_hist.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_hist.x,v 6.0 93/05/24 16:25:13 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_hist.x,v 5.0 92/10/29 21:37:16 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:13  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_macros.x /pros/prosdev/jmoran/ratfits/ft_macros.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_macros.x,v 6.0 93/05/24 16:25:16 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_macros.x,v 5.0 92/10/29 21:37:18 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:16  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_mpe_event.x /pros/prosdev/jmoran/ratfits/ft_mpe_event.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mpe_event.x,v 6.0 93/05/24 16:25:19 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mpe_event.x,v 5.0 92/10/29 21:37:21 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:19  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_mpe_head.x /pros/prosdev/jmoran/ratfits/ft_mpe_head.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mpe_head.x,v 6.0 93/05/24 16:25:24 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mpe_head.x,v 5.1 93/03/03 14:06:12 mo Exp $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:24  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_mpe_utl.x /pros/prosdev/jmoran/ratfits/ft_mpe_utl.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mpe_utl.x,v 6.0 93/05/24 16:25:28 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mpe_utl.x,v 5.0 92/10/29 21:37:26 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:28  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_mwcs.x /pros/prosdev/jmoran/ratfits/ft_mwcs.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mwcs.x,v 6.0 93/05/24 16:25:32 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_mwcs.x,v 5.0 92/10/29 21:37:29 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:32  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_nxtext.f /pros/prosdev/jmoran/ratfits/ft_nxtext.f
+92c92
+<       integer*2 st0008(16)
+---
+>       integer*2 st0008(9)
+94,98c94,98
+<       integer*2 st0010(9)
+<       integer*2 st0011(6)
+<       integer*2 st0012(40)
+<       integer*2 st0013(38)
+<       integer*2 st0014(34)
+---
+>       integer*2 st0010(6)
+>       integer*2 st0011(40)
+>       integer*2 st0012(38)
+>       integer*2 st0013(34)
+>       integer*2 st0014(30)
+100,102c100,101
+<       integer*2 st0016(30)
+<       integer*2 st0017(39)
+<       integer*2 st0018(47)
+---
+>       integer*2 st0016(39)
+>       integer*2 st0017(47)
+128,130c127,129
+<       data (st0008(iyy),iyy= 1, 8) / 73,110, 32,110,120,116,101,120/
+<       data (st0008(iyy),iyy= 9,16) /116, 32, 45, 32, 37,100, 10, 0/
+<       data (st0009(iyy),iyy= 1, 8) / 65, 51, 68, 84, 65, 66, 76, 69/
+---
+>       data (st0008(iyy),iyy= 1, 8) / 65, 51, 68, 84, 65, 66, 76, 69/
+>       data (st0008(iyy),iyy= 9, 9) / 0/
+>       data (st0009(iyy),iyy= 1, 8) / 66, 73, 78, 84, 65, 66, 76, 69/
+132,150c131,151
+<       data (st0010(iyy),iyy= 1, 8) / 66, 73, 78, 84, 65, 66, 76, 69/
+<       data (st0010(iyy),iyy= 9, 9) / 0/
+<       data st0011 / 84, 65, 66, 76, 69, 0/
+<       data (st0012(iyy),iyy= 1, 8) /117,110,107,110,111,119,110, 32/
+<       data (st0012(iyy),iyy= 9,16) /101,120,116,101,110,115,105,111/
+<       data (st0012(iyy),iyy=17,24) /110, 32,116,121,112,101, 32, 40/
+<       data (st0012(iyy),iyy=25,32) / 37,115, 41, 32, 45, 32,115,107/
+<       data (st0012(iyy),iyy=33,40) /105,112,112,105,110,103, 10, 0/
+<       data (st0013(iyy),iyy= 1, 8) /119,114,111,110,103, 32,110,117/
+<       data (st0013(iyy),iyy= 9,16) /109, 98,101,114, 32,111,102, 32/
+<       data (st0013(iyy),iyy=17,24) / 97,120,101,115, 32, 40, 37,100/
+<       data (st0013(iyy),iyy=25,32) / 41, 32, 45, 32,115,107,105,112/
+<       data (st0013(iyy),iyy=33,38) /112,105,110,103, 10, 0/
+<       data (st0014(iyy),iyy= 1, 8) /119,114,111,110,103, 32, 98,105/
+<       data (st0014(iyy),iyy= 9,16) /116,115, 47,112,105,120,101,108/
+<       data (st0014(iyy),iyy=17,24) / 32, 40, 37,100, 41, 32, 45, 32/
+<       data (st0014(iyy),iyy=25,32) /115,107,105,112,112,105,110,103/
+<       data (st0014(iyy),iyy=33,34) / 10, 0/
+<       data (st0015(iyy),iyy= 1, 8) /119,114,111,110,103, 32, 80, 67/
+---
+>       data st0010 / 84, 65, 66, 76, 69, 0/
+>       data (st0011(iyy),iyy= 1, 8) /117,110,107,110,111,119,110, 32/
+>       data (st0011(iyy),iyy= 9,16) /101,120,116,101,110,115,105,111/
+>       data (st0011(iyy),iyy=17,24) /110, 32,116,121,112,101, 32, 40/
+>       data (st0011(iyy),iyy=25,32) / 37,115, 41, 32, 45, 32,115,107/
+>       data (st0011(iyy),iyy=33,40) /105,112,112,105,110,103, 10, 0/
+>       data (st0012(iyy),iyy= 1, 8) /119,114,111,110,103, 32,110,117/
+>       data (st0012(iyy),iyy= 9,16) /109, 98,101,114, 32,111,102, 32/
+>       data (st0012(iyy),iyy=17,24) / 97,120,101,115, 32, 40, 37,100/
+>       data (st0012(iyy),iyy=25,32) / 41, 32, 45, 32,115,107,105,112/
+>       data (st0012(iyy),iyy=33,38) /112,105,110,103, 10, 0/
+>       data (st0013(iyy),iyy= 1, 8) /119,114,111,110,103, 32, 98,105/
+>       data (st0013(iyy),iyy= 9,16) /116,115, 47,112,105,120,101,108/
+>       data (st0013(iyy),iyy=17,24) / 32, 40, 37,100, 41, 32, 45, 32/
+>       data (st0013(iyy),iyy=25,32) /115,107,105,112,112,105,110,103/
+>       data (st0013(iyy),iyy=33,34) / 10, 0/
+>       data (st0014(iyy),iyy= 1, 8) /119,114,111,110,103, 32, 80, 67/
+>       data (st0014(iyy),iyy= 9,16) / 79, 85, 78, 84, 32, 40, 37,100/
+>       data (st0014(iyy),iyy=17,24) / 41, 32, 45, 32,115,107,105,112/
+>       data (st0014(iyy),iyy=25,30) /112,105,110,103, 10, 0/
+>       data (st0015(iyy),iyy= 1, 8) /119,114,111,110,103, 32, 71, 67/
+154,168c155,165
+<       data (st0016(iyy),iyy= 1, 8) /119,114,111,110,103, 32, 71, 67/
+<       data (st0016(iyy),iyy= 9,16) / 79, 85, 78, 84, 32, 40, 37,100/
+<       data (st0016(iyy),iyy=17,24) / 41, 32, 45, 32,115,107,105,112/
+<       data (st0016(iyy),iyy=25,30) /112,105,110,103, 10, 0/
+<       data (st0017(iyy),iyy= 1, 8) /105,110,116,101,114,110, 97,108/
+<       data (st0017(iyy),iyy= 9,16) / 32, 99, 97,114,100, 32,101,114/
+<       data (st0017(iyy),iyy=17,24) /114,111,114, 58, 32,117,110,107/
+<       data (st0017(iyy),iyy=25,32) /110,111,119,110, 32, 99, 97,114/
+<       data (st0017(iyy),iyy=33,39) /100, 32,116,121,112,101, 0/
+<       data (st0018(iyy),iyy= 1, 8) /116,102,105,101,108,100,115, 32/
+<       data (st0018(iyy),iyy= 9,16) /100,111,101,115, 32,110,111,116/
+<       data (st0018(iyy),iyy=17,24) / 32,109, 97,116, 99,104, 32,110/
+<       data (st0018(iyy),iyy=25,32) /117,109, 98,101,114, 32,111,102/
+<       data (st0018(iyy),iyy=33,40) / 32,102,105,101,108,100,115, 32/
+<       data (st0018(iyy),iyy=41,47) /105,110, 32,101,120,116, 0/
+---
+>       data (st0016(iyy),iyy= 1, 8) /105,110,116,101,114,110, 97,108/
+>       data (st0016(iyy),iyy= 9,16) / 32, 99, 97,114,100, 32,101,114/
+>       data (st0016(iyy),iyy=17,24) /114,111,114, 58, 32,117,110,107/
+>       data (st0016(iyy),iyy=25,32) /110,111,119,110, 32, 99, 97,114/
+>       data (st0016(iyy),iyy=33,39) /100, 32,116,121,112,101, 0/
+>       data (st0017(iyy),iyy= 1, 8) /116,102,105,101,108,100,115, 32/
+>       data (st0017(iyy),iyy= 9,16) /100,111,101,115, 32,110,111,116/
+>       data (st0017(iyy),iyy=17,24) / 32,109, 97,116, 99,104, 32,110/
+>       data (st0017(iyy),iyy=25,32) /117,109, 98,101,114, 32,111,102/
+>       data (st0017(iyy),iyy=33,40) / 32,102,105,101,108,100,115, 32/
+>       data (st0017(iyy),iyy=41,47) /105,110, 32,101,120,116, 0/
+226,227d222
+<                call xprinf(st0008)
+<                call pargi (memi((card) + 2) )
+231,234c226,229
+<                   if (.not.( strne(memc(memi((card) + 4) ), st0009) .and
+<      *            . strne(memc(memi((card) + 4) ), st0010) .and. strne(
+<      *            memc(memi((card) + 4) ), st0011) )) goto 240
+<                      call xprinf(st0012)
+---
+>                   if (.not.( strne(memc(memi((card) + 4) ), st0008) .and
+>      *            . strne(memc(memi((card) + 4) ), st0009) .and. strne(
+>      *            memc(memi((card) + 4) ), st0010) )) goto 240
+>                      call xprinf(st0011)
+242c237
+<                         call xprinf(st0013)
+---
+>                         call xprinf(st0012)
+251c246
+<                         call xprinf(st0014)
+---
+>                         call xprinf(st0013)
+267c262
+<                         call xprinf(st0015)
+---
+>                         call xprinf(st0014)
+276c271
+<                         call xprinf(st0016)
+---
+>                         call xprinf(st0015)
+475c470
+<                   call errori(1, st0017, memi((card) + 2) )
+---
+>                   call errori(1, st0016, memi((card) + 2) )
+522c517
+<             call xerror(1, st0018)
+---
+>             call xerror(1, st0017)
+diff fits2qp/ft_nxtext.x /pros/prosdev/jmoran/ratfits/ft_nxtext.x
+170,172d169
+<             call printf ("In nxtext - %d\n")
+<               call pargi (CARDID(card))
+<             
+diff fits2qp/ft_rename.x /pros/prosdev/jmoran/ratfits/ft_rename.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_rename.x,v 6.0 93/05/24 16:25:40 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_rename.x,v 5.0 92/10/29 21:37:34 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:40  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_savev.x /pros/prosdev/jmoran/ratfits/ft_savev.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_savev.x,v 6.0 93/05/24 16:25:42 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_savev.x,v 5.0 92/10/29 21:37:36 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:42  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_skip.x /pros/prosdev/jmoran/ratfits/ft_skip.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_skip.x,v 6.0 93/05/24 16:25:45 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_skip.x,v 5.0 92/10/29 21:37:38 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:45  prosb
+< #General Release 2.2
+< #
+53a51
+> 
+diff fits2qp/ft_standard.x /pros/prosdev/jmoran/ratfits/ft_standard.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_standard.x,v 6.0 93/05/24 16:25:49 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_standard.x,v 5.0 92/10/29 21:37:41 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:49  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ft_typedef.x /pros/prosdev/jmoran/ratfits/ft_typedef.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_typedef.x,v 6.0 93/05/24 16:25:52 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ft_typedef.x,v 5.0 92/10/29 21:37:43 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:52  prosb
+< #General Release 2.2
+< #
+diff fits2qp/ftwcs.h /pros/prosdev/jmoran/ratfits/ftwcs.h
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ftwcs.h,v 6.0 93/05/24 16:25:55 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/ftwcs.h,v 5.0 92/10/29 21:37:45 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:55  prosb
+< #General Release 2.2
+< #
+diff fits2qp/im_mpe_head.x /pros/prosdev/jmoran/ratfits/im_mpe_head.x
+1c1
+< # $Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/im_mpe_head.x,v 6.0 93/05/24 16:25:58 prosb Rel $
+---
+> # $Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/im_mpe_head.x,v 5.0 92/10/29 21:37:48 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:25:58  prosb
+< #General Release 2.2
+< #
+diff fits2qp/knowncards.x /pros/prosdev/jmoran/ratfits/knowncards.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/knowncards.x,v 6.0 93/05/24 16:26:03 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/knowncards.x,v 5.0 92/10/29 21:37:51 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:26:03  prosb
+< #General Release 2.2
+< #
+Binary files fits2qp/libimpkg.a and /pros/prosdev/jmoran/ratfits/libimpkg.a differ
+Binary files fits2qp/libpkg.a and /pros/prosdev/jmoran/ratfits/libpkg.a differ
+Binary files fits2qp/miistruct.o and /pros/prosdev/jmoran/ratfits/miistruct.o differ
+Only in fits2qp: miistruct_tmp.f
+Only in fits2qp: miistruct_tmp.x
+Only in fits2qp: mkpkg.bckup
+diff fits2qp/mpefits.h /pros/prosdev/jmoran/ratfits/mpefits.h
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/mpefits.h,v 6.0 93/05/24 16:26:09 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/mpefits.h,v 5.0 92/10/29 21:37:55 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:26:09  prosb
+< #General Release 2.2
+< #
+diff fits2qp/mwcs.h /pros/prosdev/jmoran/ratfits/mwcs.h
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/mwcs.h,v 6.0 93/05/24 16:26:11 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/mwcs.h,v 5.0 92/10/29 21:37:57 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:26:11  prosb
+< #General Release 2.2
+< #
+diff fits2qp/nextcard.x /pros/prosdev/jmoran/ratfits/nextcard.x
+1c1
+< #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/nextcard.x,v 6.0 93/05/24 16:26:15 prosb Rel $
+---
+> #$Header: /tmp_mnt/home/pros/xray/xdataio/fits2qp/RCS/nextcard.x,v 5.0 92/10/29 22:32:27 prosb Rel $
+3,5d2
+< #Revision 6.0  93/05/24  16:26:15  prosb
+< #General Release 2.2
+< #
+Only in /pros/prosdev/jmoran/ratfits: parfile
+Only in /pros/prosdev/jmoran/ratfits: prat.par
+Only in fits2qp: pre_rev1.lst
+Only in /pros/prosdev/jmoran/ratfits: pspc.fits
+Only in /pros/prosdev/jmoran/ratfits: pspc_evt.qp
+Only in /pros/prosdev/jmoran/ratfits: qpoe.cards
+Only in /pros/prosdev/jmoran/ratfits: qpoe.h
+Only in /pros/prosdev/jmoran/ratfits: test.fits
+Only in /pros/prosdev/jmoran/ratfits: uparmqpoe.msv
+Only in /pros/prosdev/jmoran/ratfits: wcs.cards
+Only in fits2qp: x
+Binary files fits2qp/x_fits2qp.o and /pros/prosdev/jmoran/ratfits/x_fits2qp.o differ
+Binary files fits2qp/xx_fits2qp.e and /pros/prosdev/jmoran/ratfits/xx_fits2qp.e differ

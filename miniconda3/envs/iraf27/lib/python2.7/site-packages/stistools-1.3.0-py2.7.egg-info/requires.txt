@@ -1,0 +1,9 @@
+astropy
+nose
+numpy
+numpydoc
+scipy
+sphinx
+sphinx_rtd_theme
+stsci_rtd_theme
+stsci.tools

@@ -1,0 +1,34 @@
+#$Header: /pros/xray/xtiming/timlib/RCS/mkpkg,v 3.0 91/08/02 02:02:22 prosb Rel $
+#$Log:	mkpkg,v $
+#Revision 3.0  91/08/02  02:02:22  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  17:53:34  mo
+#MC	7/21/91		Fix checkout syntax
+#
+#Revision 2.0  91/03/06  22:50:22  pros
+#General Release 1.0
+#
+#
+#	make the timing package library
+#
+
+update:
+$checkout libtiming.a ../
+$update   libtiming.a
+$checkin  libtiming.a ../
+$exit
+
+libtiming.a:
+	tim_binexp.x
+	tim_binphots.x
+	tim_cntrate.x
+	tim_addmsk.x
+ 	tim_hdrcp.x
+	tim_stats.x
+	tim_tabio.x
+	binsubs.x
+	ltc_fillhdr.x
+        persubs.x
+        fld_phots.x
+	;

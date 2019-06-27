@@ -1,0 +1,1032 @@
+/usr/bin/gcc
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking whether make sets $(MAKE)... yes
+checking for working aclocal... missing
+checking for working autoconf... missing
+checking for working automake... missing
+checking for working autoheader... missing
+checking for working makeinfo... missing
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking whether to build Wininet client XML transport module... no
+checking whether to build Curl client XML transport module... yes
+checking whether to build Libwww client XML transport module... no
+checking whether to build Abyss server module... yes
+checking whether to build CGI server module... no
+checking whether to build C++ wrappers and tools... no
+checking for gcc... gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ accepts -g... yes
+checking for gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ option to accept ANSI C... none needed
+checking for socket... yes
+checking how to run the C preprocessor... gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -E
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking sys/filio.h usability... no
+checking sys/filio.h presence... no
+checking for sys/filio.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking for size_t... yes
+checking whether va_list is an array... no
+checking whether compiler has __attribute__... yes
+checking for vsnprintf... yes
+checking for wcsncmp... yes
+checking for setgroups... yes
+checking for asprintf... yes
+checking for setenv... yes
+checking for pselect... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for gmtime_r... yes
+checking for strcasecmp... yes
+checking for stricmp... no
+checking for _stricmp... no
+checking whether to use Abyss pthread function... yes
+checking for curl-xmlrpc-config... no
+checking for curl-config... /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/../../bin//curl-config
+checking for curl library directory... /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib
+checking whether to build the libxml2 backend... no
+configure: creating ./config.status
+config.status: creating srcdir.mk
+config.status: creating config.mk
+config.status: creating xmlrpc_config.h
+config.status: creating xmlrpc_amconfig.h
+config.status: executing default-1 commands
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make -C include/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//include/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+rm -f xmlrpc-c/config.h
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+make -C lib/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//lib/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C util/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+make -C libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 blddir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make -C abyss/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 blddir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C expat/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+make -C gennmtab/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f gennmtab
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+make -C xmlparse/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f nametab.h
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//src/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 blddir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make -C test clean
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src/test'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f test cgitest1
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src/test'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+make -C tools/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//tools/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools'
+make -C lib/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/lib/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/lib'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 blddir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/lib'
+make -C binmode-rpc-kit/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/binmode-rpc-kit/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/binmode-rpc-kit'
+make[4]: Nothing to be done for `clean'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/binmode-rpc-kit'
+make -C turbocharger/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/turbocharger/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/turbocharger'
+make[4]: Nothing to be done for `clean'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/turbocharger'
+make -C xmlrpc/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 blddir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f xmlrpc
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc'
+make -C xmlrpc_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc_transport/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc_transport'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 srcdir
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 blddir
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f xmlrpc_transport config.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc_transport'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools'
+make -C examples/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//examples/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples'
+rm -f  zzs zzloop interrupted_server xmlrpc_inetd_server xmlrpc_socket_server xmlrpc_loop_server xmlrpc_sample_add_server xmlrpc_server_validatee  gen_sample_add_xml zzc zzc2 auth_client synch_client xmlrpc_sample_add_client xmlrpc_asynch_client  interrupted_client *.o config.h xmlrpc_amconfig.h
+make -C cpp clean
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples/cpp'
+rm -f  xmlrpc_inetd_server xmlrpc_loop_server xmlrpc_sample_add_server  xmlrpc_sample_add_client sample_add_client_complex asynch_client  pstream_inetd_server pstream_client *.o config.h xmlrpc_amconfig.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples/cpp'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f transport_config.h version.h
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+rm -f shell_config
+Lots of echoes to 'shell_config' suppressed here ...
+rm -f xmlrpc-c-config
+Echoes to 'xmlrpc-c-config' suppressed here ...
+cat shell_config >>xmlrpc-c-config
+cat xmlrpc-c-config.main >>xmlrpc-c-config
+chmod a+rx xmlrpc-c-config
+rm -f xmlrpc-c-config.test
+Echoes to 'xmlrpc-c-config.test' suppressed here ...
+cat shell_config >>xmlrpc-c-config.test
+cat xmlrpc-c-config.test.main >>xmlrpc-c-config.test
+chmod a+rx xmlrpc-c-config.test
+make -C include/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//include/Makefile \
+	    all 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+>xmlrpc-c/config.h
+Lots of echoes to 'xmlrpc-c/config.h' suppressed here ...
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+make -C lib/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//lib/Makefile \
+	    all 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C util/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/Makefile \
+	    all 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29   ucasprintf.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29   cmdline_parser.c
+g++ -g -ggdb -O0 -m32 -c -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29   cmdline_parser_cpp.cpp
+cc1plus: warning: command line option "-Wmissing-declarations" is valid for C/ObjC but not for C++
+cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29   getoptx.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29   string_parser.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29   stripcaseeq.c
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+make -C libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    all 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o asprintf.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    asprintf.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o error.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    error.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o make_printable.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    make_printable.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o memblock.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    memblock.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o uselect.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    uselect.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o sleep.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    sleep.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o time.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    time.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o utf8.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    utf8.c
+rm -f libxmlrpc_util.a
+ar cru libxmlrpc_util.a asprintf.o error.o make_printable.o memblock.o uselect.o sleep.o time.o utf8.o
+ranlib libxmlrpc_util.a
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o asprintf.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC asprintf.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o error.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC error.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o make_printable.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC make_printable.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o memblock.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC memblock.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o uselect.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC uselect.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o sleep.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC sleep.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o time.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC time.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o utf8.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -Isrcdir -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC utf8.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_util.so.3  asprintf.osh error.osh make_printable.osh memblock.osh uselect.osh sleep.osh time.osh utf8.osh   -o libxmlrpc_util.so.3.16  
+rm -f libxmlrpc_util.so
+ln -s libxmlrpc_util.so.3.16 libxmlrpc_util.so
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/GNUmakefile version.h
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+rm -f version.h
+echo "/* Generated by make file rule */" >>version.h
+echo "#define XMLRPC_C_VERSION" \"1.16.29"\"" >>version.h
+echo "#define XMLRPC_VERSION_MAJOR 1" >>version.h
+echo "#define XMLRPC_VERSION_MINOR 16" >>version.h
+echo "#define XMLRPC_VERSION_POINT 29" >>version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make -C abyss/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/Makefile \
+	    all 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/Makefile \
+	    all 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o channel.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   channel.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o chanswitch.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   chanswitch.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o conf.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   conf.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o conn.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   conn.c
+conn.c: In function ‘traceChannelWrite’:
+conn.c:334: warning: pointer targets in passing argument 2 of ‘traceBuffer’ differ in signedness
+conn.c: In function ‘ConnRead’:
+conn.c:391: warning: pointer targets in passing argument 2 of ‘ChannelRead’ differ in signedness
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o data.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   data.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o date.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   date.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o abyss_file.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   abyss_file.c
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/version.h version.h
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o handler.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   handler.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o abyss_http.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   abyss_http.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o init.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   init.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o response.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   response.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o server.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   server.c
+server.c:1165: warning: no previous prototype for ‘xr_serverRunOnce’
+server.c:559: warning: ‘handleReqInvalidURI’ defined but not used
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o session.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   session.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o socket.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   socket.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o socket_unix.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   socket_unix.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o token.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   token.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o thread_pthread.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   thread_pthread.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o abyss_trace.o -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -D_UNIX   abyss_trace.c
+rm -f libxmlrpc_abyss.a
+ar cru libxmlrpc_abyss.a channel.o chanswitch.o conf.o conn.o data.o date.o abyss_file.o handler.o abyss_http.o init.o response.o server.o session.o socket.o socket_unix.o token.o thread_pthread.o abyss_trace.o
+ranlib libxmlrpc_abyss.a
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o channel.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC channel.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o chanswitch.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC chanswitch.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o conf.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC conf.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o conn.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC conn.c
+conn.c: In function ‘traceChannelWrite’:
+conn.c:334: warning: pointer targets in passing argument 2 of ‘traceBuffer’ differ in signedness
+conn.c: In function ‘ConnRead’:
+conn.c:391: warning: pointer targets in passing argument 2 of ‘ChannelRead’ differ in signedness
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o data.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC data.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o date.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC date.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o abyss_file.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC abyss_file.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o handler.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC handler.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o abyss_http.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC abyss_http.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o init.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC init.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o response.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC response.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o server.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC server.c
+server.c:1165: warning: no previous prototype for ‘xr_serverRunOnce’
+server.c:559: warning: ‘handleReqInvalidURI’ defined but not used
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o session.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC session.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o socket.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC socket.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o socket_unix.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC socket_unix.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o token.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC token.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o thread_pthread.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC thread_pthread.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o abyss_trace.osh -Iblddir -Isrcdir -Isrcdir/include -Isrcdir/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -D_UNIX   -fPIC abyss_trace.c
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[6]: `libxmlrpc_util.so' is up to date.
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_abyss.so.3  channel.osh chanswitch.osh conf.osh conn.osh data.osh date.osh abyss_file.osh handler.osh abyss_http.osh init.osh response.osh server.osh session.osh socket.osh socket_unix.osh token.osh thread_pthread.osh abyss_trace.osh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/libxmlrpc_util.so  /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/libxmlrpc_util.so -o libxmlrpc_abyss.so.3.16  
+rm -f libxmlrpc_abyss.so
+ln -s libxmlrpc_abyss.so.3.16 libxmlrpc_abyss.so
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    all 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+ln -s /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/version.h version.h
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_curl_transport.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_curl_transport.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o curltransaction.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    curltransaction.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o curlmulti.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    curlmulti.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o lock_pthread.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    lock_pthread.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_curl_transport.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_curl_transport.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o curltransaction.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC curltransaction.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o curlmulti.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC curlmulti.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o lock_pthread.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC lock_pthread.c
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C expat/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/Makefile \
+	    all 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+make -C gennmtab/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab/Makefile \
+	    all 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c gennmtab.c -o gennmtab.o -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -o gennmtab  gennmtab.o
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+make -C xmlparse/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/Makefile \
+	    all 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlparse.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlparse.c
+rm -f libxmlrpc_xmlparse.a
+ar cru libxmlrpc_xmlparse.a xmlparse.o
+ranlib libxmlrpc_xmlparse.a
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlparse.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlparse.c
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    libxmlrpc_xmltok.so
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+rm -f nametab.h
+../gennmtab/gennmtab >nametab.h
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmltok.osh -I. -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -DXML_BYTE_ORDER=0   -fPIC xmltok.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrole.osh -I. -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC -DXML_BYTE_ORDER=0   -fPIC xmlrole.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_xmltok.so.3  xmltok.osh xmlrole.osh   -o libxmlrpc_xmltok.so.3.16  
+rm -f libxmlrpc_xmltok.so
+ln -s libxmlrpc_xmltok.so.3.16 libxmlrpc_xmltok.so
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[6]: `libxmlrpc_util.so' is up to date.
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_xmlparse.so.3  xmlparse.osh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/libxmlrpc_xmltok.so /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/libxmlrpc_util.so  /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/libxmlrpc_xmltok.so /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/libxmlrpc_util.so -o libxmlrpc_xmlparse.so.3.16  
+rm -f libxmlrpc_xmlparse.so
+ln -s libxmlrpc_xmlparse.so.3.16 libxmlrpc_xmlparse.so
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    all 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmltok.o -I. -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -DXML_BYTE_ORDER=0   xmltok.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrole.o -I. -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -DXML_BYTE_ORDER=0   xmlrole.c
+rm -f libxmlrpc_xmltok.a
+ar cru libxmlrpc_xmltok.a xmltok.o xmlrole.o
+ranlib libxmlrpc_xmltok.a
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//src/Makefile \
+	    all 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o double.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    double.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o parse_value.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    parse_value.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o resource.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    resource.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o trace.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    trace.c
+trace.c: In function ‘xmlrpc_traceXml’:
+trace.c:55: warning: initialization discards qualifiers from pointer target type
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o version.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    version.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_data.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_data.c
+xmlrpc_data.c:108: warning: no previous prototype for ‘xmlrpc_refcount’
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_datetime.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_datetime.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_string.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_string.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_array.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_array.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_struct.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_struct.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_build.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_build.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_decompose.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_decompose.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_expat.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_expat.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_parse.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_parse.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_serialize.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_serialize.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_base64.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_base64.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_authcookie.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_authcookie.c
+rm -f libxmlrpc.a
+ar cru libxmlrpc.a double.o parse_value.o resource.o trace.o version.o xmlrpc_data.o xmlrpc_datetime.o xmlrpc_string.o xmlrpc_array.o xmlrpc_struct.o xmlrpc_build.o xmlrpc_decompose.o xmlrpc_expat.o xmlrpc_parse.o xmlrpc_serialize.o xmlrpc_base64.o xmlrpc_authcookie.o
+ranlib libxmlrpc.a
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o registry.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    registry.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o method.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    method.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o system_method.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    system_method.c
+rm -f libxmlrpc_server.a
+ar cru libxmlrpc_server.a registry.o method.o system_method.o
+ranlib libxmlrpc_server.a
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_server_abyss.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_server_abyss.c
+rm -f libxmlrpc_server_abyss.a
+ar cru libxmlrpc_server_abyss.a xmlrpc_server_abyss.o
+ranlib libxmlrpc_server_abyss.a
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/GNUmakefile transport_config.h
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+rm -f transport_config.h
+echo '/* This file was generated by a make rule */' >>transport_config.h
+echo '#define MUST_BUILD_WININET_CLIENT 0' >>transport_config.h
+echo '#define MUST_BUILD_CURL_CLIENT 1' >>transport_config.h
+echo '#define MUST_BUILD_LIBWWW_CLIENT 0' >>transport_config.h
+echo "static const char * const XMLRPC_DEFAULT_TRANSPORT =" >>transport_config.h
+echo '"curl";' >>transport_config.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_client.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/lib/wininet_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libwww_transport  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_client.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_client_global.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/lib/wininet_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libwww_transport  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_client_global.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_server_info.o -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/lib/wininet_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libwww_transport  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0    xmlrpc_server_info.c
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    xmlrpc_curl_transport.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `xmlrpc_curl_transport.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curltransaction.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curltransaction.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curlmulti.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curlmulti.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    lock_pthread.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `lock_pthread.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+rm -f libxmlrpc_client.a
+ar cru libxmlrpc_client.a xmlrpc_client.o xmlrpc_client_global.o xmlrpc_server_info.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/xmlrpc_curl_transport.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/curltransaction.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/curlmulti.o /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/lock_pthread.o
+ranlib libxmlrpc_client.a
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o double.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC double.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o parse_value.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC parse_value.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o resource.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC resource.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o trace.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC trace.c
+trace.c: In function ‘xmlrpc_traceXml’:
+trace.c:55: warning: initialization discards qualifiers from pointer target type
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o version.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC version.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_data.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_data.c
+xmlrpc_data.c:108: warning: no previous prototype for ‘xmlrpc_refcount’
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_datetime.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_datetime.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_string.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_string.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_array.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_array.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_struct.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_struct.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_build.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_build.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_decompose.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_decompose.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_expat.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_expat.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_parse.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_parse.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_serialize.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_serialize.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_base64.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_base64.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_authcookie.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_authcookie.c
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[4]: `libxmlrpc_util.so' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/Makefile \
+	    libxmlrpc_xmlparse.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    libxmlrpc_xmltok.so
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[5]: `libxmlrpc_xmltok.so' is up to date.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[5]: `libxmlrpc_util.so' is up to date.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    libxmlrpc_xmltok.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[4]: `libxmlrpc_xmltok.so' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc.so.3  double.osh parse_value.osh resource.osh trace.osh version.osh xmlrpc_data.osh xmlrpc_datetime.osh xmlrpc_string.osh xmlrpc_array.osh xmlrpc_struct.osh xmlrpc_build.osh xmlrpc_decompose.osh xmlrpc_expat.osh xmlrpc_parse.osh xmlrpc_serialize.osh xmlrpc_base64.osh xmlrpc_authcookie.osh  -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil -lxmlrpc_util -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -lxmlrpc_xmlparse -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok -lxmlrpc_xmltok -o libxmlrpc.so.3.16  
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o registry.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC registry.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o method.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC method.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o system_method.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC system_method.c
+rm -f libxmlrpc.so
+ln -s libxmlrpc.so.3.16 libxmlrpc.so
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_server.so.3  registry.osh method.osh system_method.osh  -L. -lxmlrpc -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -lxmlrpc_xmlparse -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok -lxmlrpc_xmltok -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil -lxmlrpc_util -o libxmlrpc_server.so.3.16  
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_server_abyss.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_server_abyss.c
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/Makefile \
+	    libxmlrpc_abyss.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[5]: `libxmlrpc_util.so' is up to date.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+rm -f libxmlrpc_server.so
+ln -s libxmlrpc_server.so.3.16 libxmlrpc_server.so
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_server_abyss.so.3  xmlrpc_server_abyss.osh  -L. -lxmlrpc_server -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src -lxmlrpc_abyss -L. -lxmlrpc -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -lxmlrpc_xmlparse -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok -lxmlrpc_xmltok -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil -lxmlrpc_util -o libxmlrpc_server_abyss.so.3.16  
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_client.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/lib/wininet_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libwww_transport  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_client.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_client_global.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/lib/wininet_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libwww_transport  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_client_global.c
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/ -c -o xmlrpc_server_info.osh -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29 -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/include  -I/lib/wininet_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libwww_transport  -DNDEBUG -Wall -Wundef -Wimplicit -W -Winline -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -fno-common -g -ggdb -O0  -fPIC   -fPIC xmlrpc_server_info.c
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    xmlrpc_curl_transport.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `xmlrpc_curl_transport.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curltransaction.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curltransaction.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curlmulti.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curlmulti.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    lock_pthread.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `lock_pthread.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+gcc -g -ggdb -O0 -m32 -g -Wall  -DLinux -I../../lib/ -I./ -L./ -g -Wall -DLinux -DLinux -I../include/  -I. -L./ -L../lib/  -shared -Wl,-soname,libxmlrpc_client.so.3  xmlrpc_client.osh xmlrpc_client_global.osh xmlrpc_server_info.osh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/xmlrpc_curl_transport.osh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/curltransaction.osh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/curlmulti.osh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/lock_pthread.osh   -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib -lcurl -lrt -L. -lxmlrpc -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse -lxmlrpc_xmlparse -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok -lxmlrpc_xmltok -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil -lxmlrpc_util -o libxmlrpc_client.so.3.16  
+rm -f libxmlrpc_server_abyss.so
+ln -s libxmlrpc_server_abyss.so.3.16 libxmlrpc_server_abyss.so
+rm -f libxmlrpc_client.so
+ln -s libxmlrpc_client.so.3.16 libxmlrpc_client.so
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make -C include/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//include/Makefile \
+	    install 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/config.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/config.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/inttypes.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/inttypes.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/c_util.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/c_util.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/util.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/util.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/base.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/base.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/abyss.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/abyss.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/abyss_unixsock.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/abyss_unixsock.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/abyss_winsock.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/abyss_winsock.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/server.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/server.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/server_abyss.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/server_abyss.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/server_w32httpsys.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/server_w32httpsys.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/oldxmlrpc.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/oldxmlrpc.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/client.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/client.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/transport.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/transport.h 
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 xmlrpc-c/client_global.h /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c/client_global.h 
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include; \
+	  rm -f xmlrpc.h xmlrpc_client.h xmlrpc_server.h xmlrpc_cgi.h \
+                xmlrpc_server_abyss.h xmlrpc_abyss.h \
+		xmlrpc_server_w32httpsys.h \
+	        XmlRpcCpp.h; \
+	  ln -s xmlrpc-c/oldxmlrpc.h         xmlrpc.h; ln -s xmlrpc-c/server.h            xmlrpc_server.h; ln -s xmlrpc-c/server_abyss.h      xmlrpc_abyss.h; ln -s xmlrpc-c/server_w32httpsys.h xmlrpc_server_w32httpsys.h;  ln -s xmlrpc-c/client.h xmlrpc_client.h;
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+make -C lib/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//lib/Makefile \
+	    install 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C util/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/Makefile \
+	    install 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+make[4]: Nothing to be done for `install'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+make -C libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    install 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_util.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_util.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_util.a
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_util.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_util.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_util.so.3; \
+          ln -s libxmlrpc_util.so.3.16 libxmlrpc_util.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_util.so; \
+          ln -s libxmlrpc_util.so.3 libxmlrpc_util.so
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make -C abyss/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/Makefile \
+	    install 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/Makefile \
+	    install 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_abyss.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_abyss.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_abyss.a
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[6]: `libxmlrpc_util.so' is up to date.
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_abyss.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_abyss.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_abyss.so.3; \
+          ln -s libxmlrpc_abyss.so.3.16 libxmlrpc_abyss.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_abyss.so; \
+          ln -s libxmlrpc_abyss.so.3 libxmlrpc_abyss.so
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    install 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: Nothing to be done for `install'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C expat/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/Makefile \
+	    install 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+make -C gennmtab/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab/Makefile \
+	    install 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+make[5]: Nothing to be done for `install'.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+make -C xmlparse/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/Makefile \
+	    install 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_xmlparse.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_xmlparse.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_xmlparse.a
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    libxmlrpc_xmltok.so
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[6]: `libxmlrpc_xmltok.so' is up to date.
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[6]: `libxmlrpc_util.so' is up to date.
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_xmlparse.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_xmlparse.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_xmlparse.so.3; \
+          ln -s libxmlrpc_xmlparse.so.3.16 libxmlrpc_xmlparse.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_xmlparse.so; \
+          ln -s libxmlrpc_xmlparse.so.3 libxmlrpc_xmlparse.so
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    install 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_xmltok.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_xmltok.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_xmltok.a
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_xmltok.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_xmltok.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_xmltok.so.3; \
+          ln -s libxmlrpc_xmltok.so.3.16 libxmlrpc_xmltok.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_xmltok.so; \
+          ln -s libxmlrpc_xmltok.so.3 libxmlrpc_xmltok.so
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//src/Makefile \
+	    install 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    xmlrpc_curl_transport.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `xmlrpc_curl_transport.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curltransaction.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curltransaction.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curlmulti.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curlmulti.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    lock_pthread.o
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `lock_pthread.o' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc.a
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_server.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_server.a
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_server_abyss.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_server_abyss.a
+ /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 644 libxmlrpc_client.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_client.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_server.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_server_abyss.a
+ ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_client.a
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[4]: `libxmlrpc_util.so' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/Makefile \
+	    libxmlrpc_xmlparse.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    libxmlrpc_xmltok.so
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[5]: `libxmlrpc_xmltok.so' is up to date.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[5]: `libxmlrpc_util.so' is up to date.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    libxmlrpc_xmltok.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+make[4]: `libxmlrpc_xmltok.so' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc.so.3; \
+          ln -s libxmlrpc.so.3.16 libxmlrpc.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc.so; \
+          ln -s libxmlrpc.so.3 libxmlrpc.so
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_server.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_server.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_server.so.3; \
+          ln -s libxmlrpc_server.so.3.16 libxmlrpc_server.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_server.so; \
+          ln -s libxmlrpc_server.so.3 libxmlrpc_server.so
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/Makefile \
+	    libxmlrpc_abyss.so
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    libxmlrpc_util.so
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[5]: `libxmlrpc_util.so' is up to date.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_server_abyss.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_server_abyss.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_server_abyss.so.3; \
+          ln -s libxmlrpc_server_abyss.so.3.16 libxmlrpc_server_abyss.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_server_abyss.so; \
+          ln -s libxmlrpc_server_abyss.so.3 libxmlrpc_server_abyss.so
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    xmlrpc_curl_transport.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `xmlrpc_curl_transport.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curltransaction.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curltransaction.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    curlmulti.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `curlmulti.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    lock_pthread.osh
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make[4]: `lock_pthread.osh' is up to date.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 libxmlrpc_client.so.3.16 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib/libxmlrpc_client.so.3.16
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_client.so.3; \
+          ln -s libxmlrpc_client.so.3.16 libxmlrpc_client.so.3
+cd /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib; \
+	  rm -f libxmlrpc_client.so; \
+          ln -s libxmlrpc_client.so.3 libxmlrpc_client.so
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include
+/bin/sh /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/mkinstalldirs /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include/xmlrpc-c
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/install-sh -c -m 755 xmlrpc-c-config /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/bin/xmlrpc-c-config
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'
+make -C include/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//include/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+rm -f xmlrpc-c/config.h
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/include'
+make -C lib/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//lib/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C util/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/util'
+make -C libutil/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/libutil'
+make -C abyss/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss/src'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/abyss'
+make -C curl_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/curl_transport'
+make -C expat/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+make -C gennmtab/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f gennmtab
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/gennmtab'
+make -C xmlparse/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmlparse'
+make -C xmltok/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok/Makefile \
+	    clean 
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f nametab.h
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat/xmltok'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib/expat'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/lib'
+make -C src/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//src/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make -C test clean
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src/test'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f test cgitest1
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src/test'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/src'
+make -C tools/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//tools/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools'
+make -C lib/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/lib/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/lib'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/lib'
+make -C binmode-rpc-kit/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/binmode-rpc-kit/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/binmode-rpc-kit'
+make[4]: Nothing to be done for `clean'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/binmode-rpc-kit'
+make -C turbocharger/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/turbocharger/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/turbocharger'
+make[4]: Nothing to be done for `clean'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/turbocharger'
+make -C xmlrpc/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f xmlrpc
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc'
+make -C xmlrpc_transport/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc_transport/Makefile \
+	    clean 
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc_transport'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f version.h
+rm -f xmlrpc_transport config.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools/xmlrpc_transport'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/tools'
+make -C examples/ -f /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29//examples/Makefile \
+	    clean 
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples'
+rm -f  zzs zzloop interrupted_server xmlrpc_inetd_server xmlrpc_socket_server xmlrpc_loop_server xmlrpc_sample_add_server xmlrpc_server_validatee  gen_sample_add_xml zzc zzc2 auth_client synch_client xmlrpc_sample_add_client xmlrpc_asynch_client  interrupted_client *.o config.h xmlrpc_amconfig.h
+make -C cpp clean
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples/cpp'
+rm -f  xmlrpc_inetd_server xmlrpc_loop_server xmlrpc_sample_add_server  xmlrpc_sample_add_client sample_add_client_complex asynch_client  pstream_inetd_server pstream_client *.o config.h xmlrpc_amconfig.h
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples/cpp'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29/examples'
+rm -f *.o *.osh *.a *.s *.i *.la *.lo
+rm -f *.so *.so.*
+rm -rf .libs
+rm -f transport_config.h version.h
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29'

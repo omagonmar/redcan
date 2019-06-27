@@ -1,0 +1,13 @@
+# XTCOEFF: NOAO/IRAF V2.12.1-EXPORT jannuzi@climber 
+#             Images         Victim Bkg         Source Bkg        Victim Mask
+# Determined from images obtained March 28, 2003    tested on April 25, 2003   
+
+im1     im2      0.001624 (0.000013, 129.7)
+im2    
+im3     im4      0.002975 (0.000102,  29.2)
+im4     
+im5     
+im6     im5      0.001753 (0.000006, 297.6)
+im7     
+im8     im7      0.000904 (0.000007, 125.7)
+

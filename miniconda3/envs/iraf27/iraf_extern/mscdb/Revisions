@@ -1,0 +1,17 @@
+mscdb$noao/CCDMosaThin1/CAL0208V212	+
+mscdb$noao/CCDMosaThin1/CAL0208V211	+
+mscdb$noao/CCDMosaThin1/CAL9903V212	+
+mscdb$noao/CCDMosaThin1/CAL9903V211	+
+mscdb$noao/Mosaic2/CAL0010V212	+
+mscdb$noao/Mosaic2/CAL0010V211	+
+    While V2.11 pl files are readable by V2.12 they cannot be used with
+    FIXPIX.  Therefore, versions of the pl files for V2.11 and V2.12
+    are now provided.  Since the pathnames are in the mosaic data headers
+    one must use logical links to point to the appropriate version.
+
+mscdb$noao/ctio/4meter/wcs/CAL0210/	+
+    Added new WCS solutions for BVRI.  (10/24/02, Valdes)
+
+mscdb$noao/Mosaic2/CAL0401/		+
+mscdb$noao/Mosaic2/CAL0401/xtalk160401	+
+    Added new crosstalk file.  (1/15/04, Valdes)

@@ -1,0 +1,375 @@
+             RELEASE NOTES FOR SAO/PROS -- Dec 93
+
+(N.B.: Some directory names refer explicitly to the SAO Unix LAN.)
+
+    The December 1993 build of the PROS has been installed in the IRAF V2.10.2
+    system.  The xray package is a "top level" package (at the same level as
+    packages such as "tables" and "noao").  The xray package contains the
+    sub-packages xdataio, ximages, xspatial, xspectral, xplot, xtiming,
+    xproto, xobsolete, xinstall, xdemo and xlocal.
+
+I) Setting up to use the XRAY package
+
+To run the xray package, users should use the default IRAF V2.10.2.  In
+addition, the TABLES 1.3.1 package, available from STScI, is required. 
+Optionally, the EUV package is used by the XPROTO/TABFILTER task and is
+available from "cea-ftp.cea.berkeley.edu" (128.32.154.12).
+
+Users must rerun the "mkiraf" task and answer 'yes' to the 're-initialize 
+uparm?' option before running.
+
+II) New PROS and QPOE features
+
+   A. RDF FITS/QPOE formats
+
+There have been major changes throughout the system to bring
+PROS into compliance with the Rationalized Data Format (RDF). 
+For ROSAT this has meant a change in the existing data file formats, and also a
+standardization between US, UK and MPE data-set formats;  hence all Rev 1 
+ROSAT re-processed data will be in a common format, regardless of where it was 
+processed.  Information on the new ROSAT RDF data files can be found in
+
+	'help explain_xdata'
+
+Of course, there is still a large quantity of ROSAT data distributed in the
+old REV0 format.  PROS will continue to support data in either
+format, but will always write output files in the NEW RDF format.
+The PROS ROSAT FITS readers will do any required conversions 
+automatically.  However, any EXISTING PROS QPOE files, must be
+converted manually by the user, with the task 
+
+	xr> xdataio
+	xd> upqpoerdf *.qp
+
+
+Several of the header keywords are changed by this process.  These
+changes from existing Rev0 format to RDF format are described in
+
+	'help file_compare'
+
+The ASCA (Astro-D) mission is following the same FITS-format guidelines
+(which are being coordinated by the HEASRC for the archiving of High Energy
+Data) which should ensure that ASCA data will be readable in IRAF/PROS
+as well.
+
+   B. Unscreened ROSAT event data
+
+One of the additional features of the new RDF format for ROSAT data
+is the inclusion of the 'rejected' events.  Both PSPC and HRI
+do spatial and temporal screening of the event-list before analysis
+by the pipeline SASS processing system.  Previously, only the 
+photon-events that passed this standard screening process were available
+to users.  With the RDF format and Rev 1 processing, an additional
+extension of 'rejected' events is available.  Access to these events
+requires running the FITS conversion tasks with the switch
+
+	rfits2pros unscreen+
+
+Additional information on how to use and manipulate these data is available in
+
+	'help explain_screens'
+
+   C. POISSON error calculation
+
+PROS now provides an improved estimate of errors on binned data in the
+limit when the number of counts per bin is small.  The new Poisson
+error approximation is now the system default.  Details  can be found in
+
+	'help explain_errors'
+
+   D. ROSAT archive support
+
+The XDATAIO package now supports both GERMAN and US format files for Rev 0
+and Rev 1 ROSAT data.  The task RARC2PROS will convert archive data, while the
+task RFITS2PROS will support user data tapes.   
+
+III) New TASKS and PACKAGES
+
+   A.  XSPATIAL
+	ERRCREATE
+        ---------
+	Utility to create a PROS error file from an input data file.
+	See 'help explain_errors' for more details on the algorithm used.
+
+   B.  XDATAIO 
+        MKHKSCR
+	-------
+        New macro to build a set of default filter parameters which may
+	be edited for user-defined screening.
+
+	UPQPOERDF
+        ---------
+	Utility to update EXISTING QPOE files to the new RDF compatible
+	format.  This task is REQUIRED before using other PROS utilitlies.
+	(It is executed automatically when reading in Rev 0 ROSAT FITS files.)
+
+	UPIMGRDF
+        ---------
+	Utility to update EXISTING IMG files to the new RDF compatible
+	format.  (It is executed automatically when reading in Rev 0 ROSAT 
+	FITS files.)
+
+IV) Major modifications to existing TASKS
+
+The following changes have been made to PROS in this release:
+
+   A. XSPECTRAL
+
+      QPSPEC            
+      ------
+        There is a MAJOR new format for the output QPSPEC files, to conform
+        to the new RDF standards from HEASRC.  
+
+        Calculates errors using Poisson (rather than Gaussian) statistics
+        Produces full RDF header
+
+        Enhanced to calculate the vignetting and charged-particle
+        corrections during background subtraction using in PI units
+	rather than energy units; for details, see "help PSPC_FITTING" .
+
+     QPSPEC/FIT/COUNTS_PLOT
+     ----------------------
+        Upgraded to support SRG/SODART/LEPC/HEPC instruments.
+
+        Default parameters in "pkgpars" have been set to be optimal
+	for ROSAT observations AFTER the PSPC gain change (Oct. 1991)
+	They must be manually altered for data PRECEEDING the gain
+	change.  See ROSAT Status Report #45  (already available in PROS 2.1.2)
+                ros_dtmat = "xspectraldata$dtmat_36.ieee"
+                ros_offar = "xspecraldata$offar2_6.ieee"
+                ros_pspc_cha = "3:34"
+
+   B. XSPATIAL
+
+        IMCNTS
+        ------
+	Updated to default to Poisson error calculations.
+	Produces full RDF header
+
+	MAKEVIG
+	-------
+	Einstein calibration files for energies greater than 2.5 have been
+	corrected
+
+   C. DETECT
+
+   D. XTIMING
+
+        LTCURV/FOLD/PERIOD
+	------------------
+        Calculates errors using Poisson (rather than Gaussian) statistics
+
+        FFT
+        ---
+        A bug which interchanged the 'ctrt' and 'net' options when
+	calculation an FFT directly from a QPOE file has been fixed,
+	and bug which always normalized the background counts (e.g.
+	when calculating 'net') to zero has been fixed
+
+
+        PERIOD/FOLD
+        -----------
+        Fixed a bug  to exposure binning when the period was of length 
+	comparable to or longer than the length of the good data intervals.
+
+        TIMCOR/CALC_BARY
+        ----------------
+        Task updated to work on new RDF format, as well as rev0 files 
+        Updated to delete duplicate ephemenris records & write warning message
+
+   F. XPLOT
+
+	PSPC_HRCOLOR
+	------------
+	Updated to allow user specified 'pi' boundaries for the 3 colors
+
+        IMCONTOUR/TVIMCONTOUR
+        ---------------------
+	Fixed bug in reading source positions at declinations of
+	negative 00 degrees.
+
+   G. XDATAIO
+
+        FITS2QP 
+        --------
+	Updated to accept new RDF formats.  Current parameter configuration
+	is correct for ASCA data.  ROSAT data must be converted using
+	the specialized conversion scripts below.	
+
+        UPQPOERDF
+        --------
+	Utility to update existing QPOE data files to the new RDF
+	formats.
+
+        RFITS2PROS
+        ----------
+	Modified to recognise and accept both Rev0 and RDF
+	ROSAT files and perform the appropriate conversions.
+	For REV1 data there is an option to make a QPOE file, including
+	the REJECTED events.
+
+        RARC2PROS
+        ----------
+	Modified to recognise and accept both Rev0 (including MPE) and 
+	RDF ROSAT files and perform the appropriate conversions.
+	For REV1 data there is an option to make a QPOE file, including
+	the REJECTED events.
+
+ 
+
+V) PROS PACKAGES AND TASKS
+
+The xray package contains the following sub-packages and tasks
+      (note that:
+         * denotes a new task,
+         + major modifications made to a task,
+         $ task has been given a new name,
+         - task has been moved from one package to another):
+
+package     tasks           description
+---------   ------------    ------------------------------------------
+xdataio                 
+            $ einbb.eincdrom   support for reading Einstein CDROM data.
+            + rfits2pros    ROSAT data tape reading (& correcting) script
+            + rarc2pros     ROSAT archive FITS reading (& correcting) script
+            + fits2qp       Fixed bug that prevented use on "foreign" data
+                              without "GTI" information.
+	    * upqpoerdf	    Update existing QPOE files in old format
+	    $ qpappend	    Combine a list of ROSAT QPOE files
+	    $ hkfilter	    Generate an IRAF/QPOE time filter from TSI values
+
+xspatial                
+            + imcnts        Updated to use Poison Error calculation,
+			    and write full RDF header parameters.
+            + imsmooth      Modified to require user to supply the error
+			    array that is to be used, if this option is 
+			    requested.  
+detect          
+xtiming                         
+            + fft           Fix net/ctrt option
+            + ltcurv        Fixed problems with "long" bins
+			    Add Poisson error calculation
+			    Added an sc-time column
+
+	    + fold/period   Add Poisson eror calculation.
+timcor          
+            + calc_bary     Updated to skip duplicated records and for new 
+			    formats
+
+xspectral       
+            + (package)     updated for latest ROSAT calibration files    
+			    The former _chi.tab output file is now called
+				_csq.tab (avoid conflict the xtiming/period)
+			    Support added for Spectrum X Gamma instruments
+				with code and calibration files from DSRI
+
+            + qpspec        Updated support for background vignetting and
+                              cosmic ray corrections to use PI bins.
+	    		    Full RDF header now ouput
+			    Column headings updated.
+
+xplot	    
+	    + pspc_hrcolor  Added parameters for user specified color boundaries
+	    + imcontour	    Fixed to handle sources at -00 degrees declination.
+
+ximages
+            + qplist        Fixed "display" level bug and added support
+                              for different GTI names.
+xproto
+            + qpgapmap      Task to generate the 'detx,dety' coordinates
+				for the ROSAT/HRI QPOE files.
+
+
+xlocal      (tasks supported locally, e.g., at SAO) 
+            + einbb.sdfspec  Updated for RDF formats
+                        
+In addition to help files for all tasks, there is new help available
+by typing "help pros" which directs users to auxiliary, non-task help
+files within the xray package.
+
+VI) TEST DATA FILES
+
+To enable users to develop familiarity with IRAF/PROS, some ROSAT and
+EINSTEIN data files are provide with this release.  The directory
+"xdata$" contains ROSAT data files for PSPC (rp110590*) and HRI
+(rh110267*) observations of AR Lac, and EINSTEIN data files for IPC
+("snr") and HRI (h8102) observations of the galactic SNR/X-ray pulsar
+CTB-109.  With the PROS 2.3 release we have included new versions of
+the ROSAT/AR Lac data, in the new RDF-format.
+
+VII) KNOWN BUGS
+
+Current IRAF and PROS bugs are available from PROS via:
+
+	`help bugs`
+
+
+VIII)  Support information
+
+Additional support can be obtained by sending email requests to the
+ROSAT Science Data Center at SAO: "rsdc@cfa.harvard.edu" or "6699::RSDC"
+
+   A. Type "help pros" for an overview of on-line help available in PROS.
+
+   B. We are continually trying to improve the cross-referencing
+information in PROS.  We recommend using either "references" or
+"xapropos" to look for information on given keywords, e.g.,
+"references prf" or "xapropos prf" (xapropos requires the CTIO package
+to be loaded).
+
+   C. Indexes for PROS tasks - provided by E. Schlegel (NASA/GSFC).
+In the anonymous-ftp directory /pub/pros/PUG on "sao-ftp.harvard.edu",
+the ASCII file "indexes.asc" (total length ~40 pages, as 62 lines/page)
+contains a cross index of PROS, STSDAS, and useful IRAF tasks, structured
+as follows:
+
+    page  section  contents
+      1     1.0    PROS Task Index.
+      3     2.0    Index to IRAF tasks (except STSDAS and PROS).
+     12     3.0    .STSDAS Glossary of Tasks.
+     23     4.0    Inverse Index for PROS (by Schlegel).
+     26     5.0    Inverse Index for IRAF Tasks (by Schlegel).
+     32     6.0    Inverted Index to ST-SDAS Tasks (by Schlegel).
+
+   D. Hints & Pointers
+
+As the provider of the PROS software package ("xray" in IRAF), the
+ROSAT Science Data Center (RSDC) at SAO distributes HINTS & POINTERS
+to PROS Users via email.  When we find answers to often asked
+questions, or when we have implemented new software solutions to
+longstanding problems, we will send this information directly to our
+users.  These messages will also be available via anonymous ftp*, but
+to receive the email version, you should register with us. If your
+username is the one associated with your site registration, you are
+already registered for "HINTS & POINTERS", but we encourage other
+users (even at the same sites) to register.
+
+Mailings will be sent as the need arises, perhaps every month or so.
+If you would like to suggest items for future issues of H&P or add
+your name to our distribution list, please contact us at the following
+address:
+
+**************************************************************************
+Internet - rsdc@cfa.harvard.edu         RSDC    MS-3
+DECnet   - CFA::RSDC (6699::RSDC)       Center for Astrophysics
+UUCP     - ...!harvard!cfa!rsdc         60 Garden St. Cambridge MA 02138 USA
+BITNET   - rsdc@cfa                     tel: (617) 495-7134  FAX: 495-7356
+**************************************************************************
+
+* to access our anonymous ftp service:
+    o   ftp -i sao-ftp.harvard.edu              # node address: 128.103.42.3
+        [Name: anonymous]
+        [Password: <yourusername@yoursite>]
+
+   ftp> cd pub/pros/Hints
+
+N.B.: you can also obtain your own copy of the PROS USERS GUIDE by
+anonftp from subdir /pub/pros/PUG.
+
+   E. System Support
+
+SAO can also provide support for additional IRAF system specific
+configurations on the following topics: SAOIMAGE/XIMTOOL including
+"personal pipes" for multiple processes; Post-Script Graphics output
+from GRAPHICS tasks, and encapsulation post-script screen dumps for
+publication.

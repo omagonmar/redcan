@@ -1,0 +1,32 @@
+This is TeX, C Version 3.14 (format=plain 91.12.27)  3 MAR 1993 11:07
+**spectral
+(spectral.tex (skeleton.tex (family1200.tex
+\itfam=\fam8
+\slfam=\fam9
+\bffam=\fam10
+\ttfam=\fam11
+)
+\grsign=\box16
+\grdimen=\dimen16
+\simlessbox=\box17
+\simgreatbox=\box18
+\simppropto=\box19
+) [1001] [1001] [-1] [-2] [-3]
+[1.2.1.1] [2.2.1.3] [3.3.2.1] [4.4.1.3] [5.4.2.7] [6.4.4.3] [7.5.2] [8.5.2.1]
+Underfull \hbox (badness 5637) in paragraph at lines 748--757
+ []\tenrm The auxilliary Raymond-Smith code pre-computes tables of
+
+\hbox(8.33333+2.33333)x469.75499, glue set 3.83786
+.\glue(\leftskip) 74.0
+.\hbox(0.0+0.0)x36.0
+.\tenrm T
+.\tenrm h
+.\tenrm e
+.etc.
+
+[9.5.4.2] [10.5.4.3] [11.5.4.4] [12.5.4.6] [13.5.4.7] [14.5.4.7] [15.5.4.7]
+[16.5.4.7] [17.5.4.8] [18.5.4.8] [19.5.4.9] [20.5.5.1] [21.5.5.1] [22.5.5.2]
+[23.5.5.2] [24.5.6] [25.5.7] [26.5.8] [27.6.2] [28.7] [29.7.1] [30.7.2.4]
+[31.7.2.4] [32.8.2] [33.8.4] [34.9.4] [35.9.8] [36.2] [37.7] [38.7] [39.7]
+[40.7] [41.7] )
+Output written on spectral.dvi (46 pages, 133172 bytes).

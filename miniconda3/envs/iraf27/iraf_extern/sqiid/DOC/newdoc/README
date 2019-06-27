@@ -1,0 +1,402 @@
+*** Last Change 18JUN96
+
+18JUN96
+
+Incorporate the following general tasks:
+  GETSTAR: locate an object on an images.
+  RECOMBINE: interactive intensity readjust and imcombine of
+      nircombine-output-based image stacks.
+  STATELIST: generate lists of on or off frames for input images
+    generated from the following protocols
+#       all_on: ++++++
+#       pair:   +-+-+-
+#       triad:  +-++-++-
+#       quad:   +--++--++-
+  WHERE: outline the individual pieces within a composite image.
+
+Incorporate SQCORR: linearize SQIID raw image data using imexpr().
+
+#  CORRECTION MODEL:
+#
+#    (actual - obs)/obs = a1*(sqrt(a2/(a2 - a3 * x)) - 1.0)
+#
+#    actual = (1 + ymcor) * obs
+#
+#     ymcor = 1.0 + a1*(sqrt(a2/(a2 - a3 * x)) - 1.0)
+#           = ((1.0 - a1) + (a1/sqrt(1/(1 - (a3/a2)* x)))
+#
+#        b1 = a1; b2 = a3/a2
+#     ymcor = ((1.0 - b1) + (b1/sqrt(1/(1 - (b2)* x)))
+#
+#   x = observed difrrence between data at time d and ti+d
+#  tcorr =  (ti + 2*td)/ti
+#  actual = x*ymcor(tcorr*x)
+#
+#  a1 = 0.758420
+#  a2 = 3.12864
+#  a3 = 2.20141e-5
+#  b1 = a1     = 0.75842
+#  b2 = a3/a2  = 7.036316e-6
+
+Incorporate CRSP processing tasks:
+
+ CRSPROC: process CRSP raw image data
+ CRSPREG: register stack extracted images via intra frame shifts
+ CRSPTRIAD: enable combining of sky pairs and scaling of on-off line
+            value for sky to that of object
+# ON OFF ON ON OFF ON ...
+#  1  2
+#  3  2
+#  4  5
+#  6  5
+#  7  8
+#  9  8
+# etc basic unit is (on-off-on)
+
+Incorporate spectral data cube image/spectral extraction tasks:
+
+  STACKIMAGE: extract spectral line images from a spectral data cube
+  STACKSPECT: extract spectra from spectral data cube
+  STACKZMAX: project image maximum Z values spectral data cube
+
+Incorporate task IMPROC: process raw image data generated from the following
+protocols:
+#              all_on: ++++++
+#              pair:   +-+-+-
+#              triad:  +-++-++-
+#              quad:   +--++--++-
+
+Incorporate task SPPROC -- process raw (spectral) image data generated from the
+following protocols:
+#              all_on: ++++++
+#              pair:   +-+-+-
+#              triad:  +-++-++-
+#              quad:   +--++--++-
+(can combine sky pairs and scale of on-off line value for sky to that of object)
+
+Incorporate Shift-and-Add (COB in DLIRIM mode) specific tasks:
+
+  IDSAA: ID ROI locations in  saa *.shft files on an image
+         SAA shift file: ROIR ROIC INTENSITY = y x z
+  MKSAAFLAT: make composite flat based on saa *.shft files
+         SAA shift file: ROIR ROIC INTENSITY = y x z
+  PLTSAA: plot image motion data from saa *.shft files
+         SAA shift file: ROIR ROIC INTENSITY = y x z
+  SAAFILTER: report COB filter id from image header
+  SAAGAIN: shift-and-add image by gain_image and subtract system dc-offset
+  SAAGET:  determine shifts between source images using peak pixel
+  SAAMERGE: merge SAA IR images with common stars in common
+  SAAPHOT:  perform QPHOT photometry on a GAIN corrected SAA peak image
+  SAAREPORT:  report image info to a file
+  SAAQUICK:  determine shifts between source images using peak pixel
+  SAAVIEW:  successively view a series of SAA images, incrementing the pix_num
+
+24APR96
+Modify MERGECOM to accept paired image link within infofile using format:
+##             link: image_cum|x0|y0
+##             link: image_next|x1|y1
+##             where image_cum  is name from accumulated list
+
+29DEC95
+Modify SQ9PAIR to incorporate STATELIST to make "op-file".
+
+*** Last Change 08AUG94
+
+Replaced internal calls to UNIX awk (to provide fancy database format) with
+IRAF printf.  "format" parameter no longer used.  IRAF printf is only
+available in IRAF2.10EXPORT and later.  Versions which still use awk for
+use with older IRAF and UNIX are in the subdirectory "prior" and end in ".cl9".
+
+Trap and skip blank lines within the image_num file within ZGET.
+
+*** Last Change 22JUL94
+
+Replaced list directed fscan with scan from pipe as method of choice for reading
+single line information from the database.  Coding is more compact and the
+method formerly in use apparently fails on VMS systems when reading to a
+structure.  IRAF scan from pipe is only available in IRAF2.10EXPORT and later.
+
+*** Last Change 16JUN94
+
+Fix typos in parameter file for SQSKY.  The user can select the type of
+statistic to apply to the data (norm_stat) and whether to offset or scale the
+data to a common statistic ("norm_opt") prior to imcombine.
+
+Modify TRANSMAT to correctly handle output when no transformation file is
+present.
+
+### Last change 23APR94
+
+Separated "nircombine" into nircombine, which supports only current (>= 2.10.2)
+imcombine and "onircombine" which supports only older (<= 2.20.1) imcombine.
+
+NIRCOMBINE work
+
+Modify stack database; submit intensity offsets to imcombine rather than perform
+imarith prior tro submission.
+
+Fix bug in recovering intensity offsets from imcombine log:
+   When less than 10 images are combined, the format is
+      imname[n] median adjust xoff yoff
+   However when 10 or more images are combined, the  format is:
+      imname[ n] median adjust xoff yoff ;  n < 10
+      imname[nn] median adjust xoff yoff ;  n >= 10
+   Since the field count varies for ten or more images, the assumption that
+   field 3 contained the "adjust" value fails on images 1-9 (median is extracted
+   instead).
+
+Replace fscan with scan from a pipe to get database parameters.
+
+Add apply_zero flag to allow choice of:
+   (1) applying zero-point shifts via imarith prior to imcombine,
+       so that zeropoint adjusted results will be saved via
+       make_stack+ or save_images+.
+   (2) submitting intensity offsets file directly to imcombine,
+       so that zeropoint unadjusted results will be saved via
+       make_stack+ or save_images+.
+
+Note: IRAF V2.10EXPORT April 1992 imcombine has an inconsistency in the sign
+convention on applied zeropoint.  The sign of the file based zeropoint assumes
+the value to be subtracted, whereas the reported number is the value to be
+added.  These have been reconciled to "value to be added" in the next release
+and current IRAFX  zero_invert flag toggles these situations.
+
+Tested results against original code.  Results are indistinguishable.  However,
+note that recorded log from IMCOMBINE can lose precision due to formatting.
+(This will be fixed inside next release IRAF imcombine.)
+
+Fix so frame_nums = ""," ","all" work to correctly signify "use all COM lines".
+
+### Last change 07APR94
+
+Major "bug" fix:
+
+  Replaced internal writes to file which used "type" with "concatenate" or
+     "copy" as appropriate.  Within the core SQIID database routines, lines
+     longer than a given length (e.g. 80 characters) were being wrapped to
+     80 characters with the rest of the line appearing as a new line in
+     an enviromentally sensitive way: 
+        stty gterm worked OK
+        stty xterm or stty xgterm exhibited the "wrap" behavior
+     The above modification fixes this bug in the following routines:
+       closure, getcenters, ircombine, linklaps, mergecom, nircombine, sqmos,
+       transmat, xyadopt, xyget, xylap, xytrace, zget
+     Apparently "type" is context sensitive to the tty even when writing to
+     files.
+
+Some changes/additions:
+
+  The tasks getcombine.cl, compose.cl, getmatch.cl, getoffsets.cl, which have
+     not been kept current, have been dropped from the current distribution.
+
+  Sub-directory "prior" contains earlier versions of tasks:
+     1) which were changed in the current release.
+     2) which were frozen as compatible with earlier IRAF releases,
+        such as the *.cl0 tasks mentioned below.
+
+### Last change 23MAR94
+
+Some changes/additions:
+
+ `chlist' and `colorlist' have been updated to allow the new WILDFIRE
+     naming convention for IRIM/CRSP/COB (id_color = "seq"), which does not
+     append a channel designator (j|h|k|l) to the end of the image_name.
+    (The old FIRE convention is id_color = "predot" for SQIID.)
+    (The current WFIRE convention is id_color = "end" for SQIID.)
+    (The current WFIRE convention is id_color = "seq" for IRIM|COB|CRSP.)
+ `sqmos' has been modified to allow wildcarded images like `sqproc', `sqky',
+    `sqdark', and `sqflat' already allow.  Thus:
+         sqmos pn1_001_*j.imh mosj 3 3 
+     will put the 9 files pn1_001_001j thru pn1_001_009j into the mosaic "mosj".
+
+### Last change 05OCT93
+
+NB: IRAF2.10.2 contains a change to the IMCOMBINE task which requires
+    changes to all tasks which use imcombine.
+    The versions which work with 2.10.0 and 2.10.1 are labeled *.cl0
+          (they can be found within the subdirectory "prior")
+    and the ones which work with 2.10.2 and later are labeled *.cl.
+    To use the *.cl0 files, delete (or rename) the .cl versions and rename
+    the *.cl0 files *.cl.
+
+The sqdark, sqsky, sqflat and nircombine tasks make use of the IRAF "imcombine"
+task.   The following parameters are from the "imcombine" task and can be
+studied by typing "help imcombine": 
+
+  (reject_opt = "minmax")       Type of rejection operation
+    (comb_opt = "median")       Type of combine operation: |average|median|
+  (lthreshold = INDEF)          Lower threshold for exclusion in statistics
+  (hthreshold = INDEF)          Upper threshold for exclusion in statistics
+       (blank = 0.)             Value of output pixel when all are rejected
+     (expname = "")             Image header exposure time keyword
+        (nlow = 1)              minmax: Number of low pixels to reject
+       (nhigh = 1)              minmax: Number of high pixels to reject
+       (nkeep = 0)              Min to keep (pos) or max to reject (neg)
+      (lsigma = 3.)             Lower sigma clipping factor
+      (hsigma = 3.)             Upper sigma clipping factor
+       (pclip = -0.5)           pclip: Percentile clipping parameter
+
+The IMCOMBINE task was reorganized for the 2.10EXPORT revision 2 release.
+Among other changes the "nkeep" parameter was added.  An error message that
+"parameter nkeep is not found", implies that either the old version of IMCOMBINE
+is on your system, or the new version is present, but the parameter file has not
+been updated.  You can check this yourself as follows:
+
+   1) Type "lpar imcombine >> oldpar"
+   2) Type "unleran imcombine"
+   3) Type "lpar imcombine >> newpar"
+   4) Compare oldpar and newpar.  The new imcombine parameters are:
+
+        input =                 List of images to combine
+       output =                 List of output images
+      (plfile = "")             List of output pixel list files (optional)
+       (sigma = "")             List of sigma images (optional)
+     (logfile = "STDOUT")       Log file\n
+     (combine = "average")      Type of combine operation
+      (reject = "none")         Type of rejection
+     (project = no)             Project highest dimension of input images?
+     (outtype = "real")         Output image pixel datatype
+     (offsets = "none")         Input image offsets
+    (masktype = "none")         Mask type
+   (maskvalue = 0.)             Mask value
+       (blank = 0.)             Value if there are no pixels\n
+       (scale = "none")         Image scaling
+        (zero = "none")         Image zero point offset
+      (weight = "none")         Image weights
+     (statsec = "")             Image section for computing statistics
+     (expname = "")             Image header exposure time keyword\n
+  (lthreshold = INDEF)          Lower threshold
+  (hthreshold = INDEF)          Upper threshold
+        (nlow = 1)              minmax: Number of low pixels to reject
+       (nhigh = 1)              minmax: Number of high pixels to reject
+       (nkeep = 1)              Minimum to keep (pos) or maximum to reject (neg
+       (mclip = yes)            Use median in sigma clipping algorithms?
+      (lsigma = 3.)             Lower sigma clipping factor
+      (hsigma = 3.)             Upper sigma clipping factor
+     (rdnoise = "0.")           ccdclip: CCD readout noise (electrons)
+        (gain = "1.")           ccdclip: CCD gain (electrons/DN)
+      (snoise = "0.")           ccdclip: Sensitivity noise (fraction)
+    (sigscale = 0.1)            Tolerance for sigma clipping scaling correction
+       (pclip = -0.5)           pclip: Percentile clipping parameter
+        (grow = 0)              Radius (pixels) for 1D neighbor rejection
+
+If your newpar does not have these parmeters available you will need to
+install the old routines for sqdark, sqflat, and sqsky and use the task
+"oircombine" instead of the task "nircombnine".  Within the sqiid directory:
+    rename sqdark.cl sqdark.cl2
+    rename sqsky.cl  sqsky.cl2
+    rename sqflat.cl sqflat.cl2
+    copy prior/sqdark.cl0 sqdark.cl
+    copy prior/sqsky.cl0  sqsky.cl
+    copy prior/sqflat.cl0 sqflat.cl
+
+A preliminary discussion on how to use the "sqiid" package, by K. Michael
+Merrill and John Mackenty is in "DOC/sqiidpkg.doc".  There are no help pages
+yet.  The latest copy of the SQIID observation manual is in "DOC/sqiid.aug92".
+
+Some changes/additions:
+
+  `chlist' and `colorlist' have been updated to allow the new WILDFIRE naming
+     convention (id_color = "end"), which appends the SQIID channel designator
+     (j|h|k|l) to the end of the image_name.  (The old FIRE convention is
+     id_color = "predot")
+  `nircombine' -- incorporates "frame_num" list to combine a designated subset
+      of the data list and incorpates `imstack' as a means of getting around
+      the 102 frame limit for "imcombine".
+  `sqproc' -- the general list-process data task has undergone minor revisions
+     and some new data processing tasks have been generated:
+     `sqnotch' uses a subset of a datalist within a specified distance of
+        each frame (the "notch") to generate a running SKY frame which is
+        subtracted from that frame.
+     `sqtriad' - list-process SQIID raw image data of the form ON OFF ON ...
+                 ON  OFF
+           list#  1  2
+           list#  3  2
+           list#  4  5
+           list#  6  5
+           list#  7  8
+           list#  9  8
+     `sq9pair' - list-process SQIID raw image data of the form ON OFF OFF ON ...
+                 ON  OFF
+           list#  1  2
+           list#  4  3
+           list#  5  6
+           list#  8  7
+           list#  9 10
+           list# 12 11
+           list# 13 14
+           list# 16 15
+           list# 17 18
+  `show1' -- display and optionally sky subtract an image
+  `show4' -- display and optionally sky subtract all 4 channels of an image
+  `show9' -- display and optionally sky subtract a 3x3 grid of image data
+  `show9pair' -- display sky subtracted data taken as noted above
+  `which' -- interactive task which outputs the path_ids ("COM_XXXX") that
+                were `nircombined' to produce the image at a given image cursor
+                position.  The resultant image must be in the display.
+  `xyadopt' -- a number of changes, including an "all_images" parameter to
+                 over-ride "nraster" within a mosaic to allow all the images to
+                 be used.  Previously, one was limited to the number of images
+                 within the "nraster" line of the database.  Since one could
+                 have generated a longer listing (using `mergecom'), the task
+                 was amended to allow a larger number.
+  `xyget' -- output modified to skip images which have not been adequately
+                 centroided.  Previously, all images were included.  Only on
+                 careful reading of verbose+ output, could one realize that
+                 some of the off-sets might be ill-defined.
+  `zget' -- minor changes
+
+================================================================================
+
+Assuming you copy the package somewhere in a directory called "sqiid", you
+would put the following definitions in you loginuser.cl file:
+
+	set     sqscripts       = "your_pathname/sqiid/"
+	task    $sqiid          =  sqscripts$sqiid.cl
+
+You also need to edit the sqiid.cl in the "sqiid" package to file to point to
+your path instead of my path!
+
+Sample files needed to GEOTRAN images in one color to that of another color are
+included in the geotran subdirectory as follows:
+  files for GEOTRAN the raw (S up E left) JH to K: n10[jh]tok.geo[co|db]
+  files for GEOTRAN the raw (S up E left) HK to J: n10[hk]toj.geo[co|db]
+  files for GEOTRAN the raw (S up E left) JK to H: n10[jk]toh.geo[co|db]
+  files for GEOTRAN the oriented (N up E left) JH to K: n10[jh]toktr.geo[co|db]
+  files for GEOTRAN the oriented (N up E left) HK to J: n10[hk]tojtr.geo[co|db]
+  files for GEOTRAN the oriented (N up E left) JK to H: n10[jk]tohtr.geo[co|db]
+
+Both (.geoco & .geodb) files are needed in the directory where images are
+GEOTRANed.  See the README file inside the geotran directory for more details.
+
+Since a number of the scripts call the UNIX "awk" command to do their fancy
+formatted output, "awk" must be available if the parameter format=yes
+is selected.
+
+A preliminary user manual for the sqiid package is in "DOC/sqiid.doc"
+
+The sqiid IRAF package is available from a tar file called "sqiid.tar"
+within the ftp-anonymous area at mira.tuc.noao.edu.  You can retrieve it
+by using:
+
+   ftp mira.tuc.noao.edu ( aka 140.252.3.85)
+   logging in as "anonymous"
+   using your last name as password
+   cd pub/sqiid
+      to see what's there
+   get sqiid.tar
+      to get tar file
+   bye
+
+Contact me (merrill@noao.edu;520-318-8319) when you have successfully retrieved
+the programs and if you have further questions.
+
+Program-related problems are most easily addressed if the appropriate info are
+included with the problem report:
+
+    copy of command line used to call the task 
+    lpar of the task in question ( lpar task_name >> errfile )
+    copies of the ascii files called by that task (type filenames >> errfile)
+    version of IRAF used (= cl.version)
+
+Michael Merrill

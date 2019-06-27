@@ -1,0 +1,15 @@
+# Make the VOPS vector operators library
+
+$checkout libcolgen.a ../../..
+$update   libcolgen.a
+$checkin  libcolgen.a ../../..
+$exit
+
+libcolgen.a:
+	collapses.x
+	collapsei.x
+	collapsel.x
+	collapser.x
+	collapsed.x
+	collapsex.x
+	;

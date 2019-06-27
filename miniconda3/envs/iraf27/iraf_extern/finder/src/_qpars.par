@@ -1,0 +1,4 @@
+overwrite,b,q,no,,,"overwrite the file?"
+recenter,b,q,yes,,,"Automatically recenter the catalog sources?"
+go_ahead,b,q,no,,,"(yes/no)"
+mode,s,h,"ql"

@@ -1,0 +1,133 @@
+#$Header: /home/pros/xray/lib/doc/RCS/get_qptimes.hlp,v 11.0 1997/11/06 16:22:55 prosb Exp $
+#$Log: get_qptimes.hlp,v $
+#Revision 11.0  1997/11/06 16:22:55  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:56  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:44  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:33  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:00  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:47  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:45  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:47  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:30  pros
+#General Release 1.0
+#
+.help get_qptimes Apr89 PROS_Library
+NAME
+.in 4
+get_qptimes - return a list of good time intervals from a qpoe file
+.sp
+.in -4
+USAGE
+.in 4
+call get_qptimes(qp, timespec, list, nlist, duration)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	qp		pointer		qpoe handle
+	timespec	char array	time filter specification
+
+Output Arguments:
+	list		double pointer	list containing start/stop times
+	nlist		int		number of start/stop pairs in list
+	duration	double		total time in good intervals
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine get_qptimes reads qpoe temporal status records and returns a
+list of start and stop times for all good intervals which also satisfy the
+temporal filter(s) specified in the timespec string.  The routine automatically
+reads Einstein time records (tgr) or ROSAT time records (tsh or pspc records)
+**ROSAT is not implemented**.
+
+The first input argument is the qpoe handle, returned by qp_open.
+The second argument, **not implemented**, is the temporal filter
+specification. If this argument is the null string, all good time intervals are
+returned.
+
+The first output argument is a pointer to a list of double precision
+start and stop times.  The second output argument is the number of start/stop
+pairs in this list, so that the size of the list is nlist*2*SZ_DOUBLE.
+The final output argument is the total time found in the good intervals.
+Note that the routine allocates memory to hold the start/stop list using
+calloc.  This space must be freed by the application using mfree.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how get_qptimes is used. The routine prints the start time, stop time, and
+duration of all good time intervals.
+.in 8
+.nf
+procedure goodtime()
+
+char poefile[SZ_FNAME]	# pointer to name of data file + event list
+int	i		# loop counter
+int	nlist		# number of good times
+double	duration	# total good time duration
+double	diff		# duration of current interval
+pointer	list		# list of good times
+pointer	qp		# qpoe handle
+
+pointer	qp_open()	# open a qpoe file
+
+begin
+	# get parameters
+	call clgstr("qpoe", poefile, SZ_FNAME)
+	# open the qpoe file
+	qp = qp_open(poefile, READ_ONLY, NULL)
+	# get list of good time intervals
+	call get_qptimes(qp, "", list, nlist, duration)
+	# print totals
+	call printf("%d good intervals with total duration %.2f\n")
+	call pargi(nlist)
+	call pargd(duration)
+	# display all good intervals
+	for(i=0; i<nlist; i=i+1){
+	    diff = Memd[list+(i*2+1)] - Memd[list+(i*2)]
+	    call printf("%.2f\t%.2f\t%.2f\n")
+	    call pargd(Memd[list+(i*2)])
+	    call pargd(diff)
+	    call pargd(Memd[list+(i*2+1)])
+	}
+	# close the qpoe file
+	call qp_close(qp)
+	# and free all space
+	call mfree(list, TY_DOUBLE)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+It is questionable whether it is a good idea for the routine to allocate
+the space for the list, since the user must still free the space.
+
+The time specification is not implemented and must be the null string.
+
+ROSAT time records are not supported.
+.in -4
+.sp
+SEE ALSO
+.in4
+good_qptgr

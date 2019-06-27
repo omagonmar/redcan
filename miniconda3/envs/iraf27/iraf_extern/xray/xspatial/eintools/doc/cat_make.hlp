@@ -1,0 +1,199 @@
+#$Header: /home/pros/xray/xspatial/eintools/doc/RCS/cat_make.hlp,v 11.0 1997/11/06 16:30:35 prosb Exp $
+#$Log: cat_make.hlp,v $
+#Revision 11.0  1997/11/06 16:30:35  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:48:08  prosb
+#General Release 2.4
+#
+#Revision 1.2  1994/08/15  11:26:55  dvs
+#Help file for cat_make
+#
+.help cat_make Jul94 xray.xspatial.eintools
+.ih
+NAME
+cat_make -- Create a constant aspect table for an Einstein QPOE file.
+.ih
+USAGE
+cat_make qpoefile catfile
+.ih
+DESCRIPTION
+\fIcat_make\fR will read in the aspect information in the BLT records of the 
+input QPOE file and group together aspect records which fall within the same 
+"aspect bin".  The final constant aspect table converts the Einstein aspect
+information into a more general WCS format.
+
+The task will take into account any time filter placed on the QPOE file.
+
+The task \fIexp_make\fR uses \fIcat_make\fR and \fIcat2exp\fR to create exposure 
+masks for Einstein IPC images.
+
+.ih
+PARAMETERS
+.ls qpoefile = ""          prompt = input QPOE file [root.qp]
+
+The input qpoe file name.  The extension ".qp" will be added to the
+file if there is no extension.
+
+.le
+.ls catfile = ""           prompt = output constant aspect table [root_cat.tab]
+
+
+The output constant aspect table.  If no root is given, the 
+output table file name will be the root of the reference QPOE file followed 
+by the "_cat.tab" suffix.  If the user supplies a name without an extension, 
+the default extension will be "_cat.tab".
+
+.le
+.ls (aspx_res = 4.) [double]
+
+
+The aspect x offset resolution (in pixels) for the binning.  With a resolution
+of 4 pixels, aspect x offsets of -2.0 through 2.0 will be binned together,
+as will 2.0 through 6.0, etc.
+
+.le
+.ls (aspy_res = 4.) [double]
+
+The aspect y offset resolution (in pixels) for the binning.  With a resolution
+of 4 pixels, aspect y offsets of -2.0 through 2.0 will be binned together,
+as will 2.0 through 6.0, etc.
+
+.le
+.ls (aspr_res = 0.0087266463) [double]
+
+The aspect roll offset resolution (in radians) for the binning.  The default
+value corresponds to 0.5 degrees will, for instance, bin together all
+aspect roll offsets between -0.25 and 0.25 degrees.
+
+.le
+.ls (clobber = no) [boolean]
+
+OK to overwrite the existing output file?
+
+.le
+.ls (display = 1) [int]
+
+The display level.  A setting of 0 should output no display (besides warnings), 
+while settings above 3 are only useful for debugging.
+
+.le
+
+.ih
+ALGORITHM
+
+Each BLT record in the QPOE file is time-filtered through the DEFFILT and
+the (possibly empty) user-supplied on-line QPOE filter.  The aspect within
+the remaining BLT records contains four relevant quantities: aspect x 
+offset (aspx), aspect y offset (aspy), aspect roll offset (aspr), and nominal
+roll (roll).  These aspect values are binned together, following an algorithm
+modeled after one found in the Einstein Level One Processing file 
+\fImake_cah_cai.f\fR.  
+
+For each aspect record, the first three values (aspx, aspy, aspr) are
+replaced by the center value of the resolution bin each falls into.  If,
+for instance, the aspx resolution is 4.0 pixels, then all aspx values between
+-2.0 and 2.0 pixels will be replaced with 0.0 pixels, while all aspx values
+between 2.0 and 6.0 pixels will be replaced with 4.0 pixels, etc.  The
+nominal roll is not changed.  
+
+Two aspect records are then combined if they have duplicate binned values.
+(Hence if two records have different nominal rolls, they will remain
+separate.)  Each row of the final constant aspect table represents one
+collection of duplicate aspect records, with the final livetime being
+the sum of the aspect records' durations times the QPOE's dead time
+correction (DTCOR).
+
+Note that the sum of all the livetimes in the CAT should be equal to
+the exposure time of the QPOE multiplied by the DTCOR (assuming no on-line time
+filters).  There may be small discrepancies due to differences between
+BLT records and GTI intervals.  (For instance, for Revision 0 
+IPC QPOE files, each BLT record is missing .32 seconds.  Other BLT 
+records in both Revision 0 and Revision 1 files may
+be missing up to 41 seconds.)  
+
+Each row is then converted into a WCS-style format, describing the map
+between PROS detector coordinates and the final sky coordinates described
+by the aspect row and the QPOE WCS information.
+
+For Revision 1 IPC QPOE files, all BLT records are used, even if the aspect
+records were considered "bad" (quality=3).  (The user must use a time filter
+to screen out these records.)
+
+.ih
+EXAMPLES
+
+Use cat_make to create a constant aspect table for a Revision 1 IPC
+QPOE file i196.qp:
+
+.nf
+ei> cat_make
+input QPOE file [root.qp]: i196.qp
+output CAT file [root_cat.tab]: 
+
+Created constant aspect table i196_cat.tab with 14 row(s).
+ei> tprint i196_cat.tab prparam=yes
+  Table i196_cat.tab  Mon 16:11:37 28-Feb-94
+
+RA_NOM   r 11.52499       
+DEC_NOM  r 1.099999       
+RCTYP1   t RA--TAN
+RCTYP2   t DEC-TAN
+RCRPX1   d 512.                     
+RCRPX2   d 513.0000000000006        
+RCDLT1   d -0.002222222276032004    
+RCDLT2   d 0.002222222276032004     
+ASPX_RES d 4.                       
+ASPY_RES d 4.                       
+ASPR_RES d 0.008726646300000007     
+COMMENT1 t This constant aspect table is an intermediate file used
+COMMENT2 t in creating an exposure mask in the EINTOOLS package.
+COMMENT3 t The aspect of the input qpoe file has been grouped according
+COMMENT4 t to the input resolutions, then converted into WCS format.
+COMMENT5 t See the help page for CAT_MAKE for more information.
+HISTORY  t CAT_MAKE: i196.qp -> i196_cat.tab
+
+(row)           LIVTI          RCRVL1          RCRVL2          RCROT2
+                  sec             deg             deg             deg
+
+    1         9.28020        11.50515         1.10117        66.80892
+    2         8.35218        11.50164         1.10934        66.80892
+    3         4.02142        11.51332         1.10467        66.80892
+    4         3.09340        11.51682         1.09650        66.80892
+    5      2149.60260        11.52499         1.10000        66.80892
+    6        11.75491        11.51245         1.06443        64.41191
+    7         4.64010        11.50862         1.07245        64.41191
+    8         1.54670        11.51663         1.07629        64.41191
+    9         3.40274        11.51279         1.08430        64.41191
+   10         6.18680        11.52081         1.08814        64.41191
+   11      3432.43498        11.52499         1.10000        64.41191
+   12        11.75491        11.53651         1.07595        64.41191
+   13         6.49614        11.53267         1.08396        64.41191
+   14         6.18680        11.52883         1.09198        64.41191
+
+.fi
+
+.ih
+TIME REQUIREMENTS
+This task takes under 5 seconds on a Sparc to create the constant
+aspect table from a QPOE file with 14 BLT records.  It takes about
+90 seconds on a Sparc for a QPOE file with 187 BLT records.
+
+.ih
+BUGS
+The WCS information in the constant aspect table depends on the WCS
+information in the QPOE file.  If the WCS in the QPOE has been
+modified (via \fIqplintran\fR or \fIwcsedit\fR)
+the constant aspect table may be incorrect.
+.ih
+SEE ALSO
+See \fIcat2exp\fR for creating an exposure mask from a constant aspect
+table. 
+
+Use "help explain_cat" for more information on 
+the contents of constant aspect tables. 
+
+See also \fIexp_make\fR,
+a script which calls both \fIcat_make\fR and \fIcat2exp\fR.
+
+.endhelp

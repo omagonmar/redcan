@@ -1,0 +1,288 @@
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default xterm]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+warning: missing external package definitions file (IRAF_EXTPKG)
+PATH: /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/
+
+Make helpdb for package iraf
+  1            root (iraf$lib/root.hd): 4 help modules
+  2       clpackage (lib$clpackage.hd): 1 help modules
+  3       clpackage (clpackage$clpackage.hd): 12 help modules
+  4          dataio (pkg$dataio/dataio.hd): 14 help modules
+		    (cannot access `pkg$dbms/dbms.hd')
+  4          images (pkg$images/images.hd): 8 help modules
+  5        imcoords (pkg$images/imcoords/imcoords.hd): 17 help modules
+  5        imfilter (pkg$images/imfilter/imfilter.hd): 15 help modules
+  5           imfit (pkg$images/imfit/imfit.hd): 4 help modules
+  5          imgeom (pkg$images/imgeom/imgeom.hd): 10 help modules
+  5         immatch (pkg$images/immatch/immatch.hd): 19 help modules
+  5          imutil (pkg$images/imutil/imutil.hd): 25 help modules
+  5              tv (pkg$images/tv/tv.hd): 9 help modules
+Warning: bad file type `doc$cv.hlpsrc' in helpdir
+  6             iis (images$tv/iis/iis.hd): 11 help modules
+  4        language (pkg$language/language.hd): 79 help modules
+  4           lists (pkg$lists/lists.hd): 10 help modules
+  4        obsolete (pkg$obsolete/obsolete.hd): 9 help modules
+  4            plot (pkg$plot/plot.hd): 28 help modules
+  4           proto (pkg$proto/proto.hd): 23 help modules
+  5           color (pkg$proto/color/color.hd): 6 help modules
+  5             vol (pkg$proto/vol/vol.hd): 4 help modules
+  4        softools (pkg$softools/softools.hd): 15 help modules
+  4          system (pkg$system/system.hd): 40 help modules
+  4       utilities (pkg$utilities/utilities.hd): 13 help modules
+  5         nttools (pkg$utilities/nttools/nttools.hd): 52 help modules
+  4          xtools (pkg$xtools/doc/xtools.hd): 28 help modules
+  5        catquery (pkg$xtools/catquery/doc/catquery.hd): 46 help modules
+  5          skywcs (pkg$xtools/skywcs/doc/skywcs.hd): 19 help modules
+  2            _sys (sys$_sys.hd): 1 help modules
+  3             sys (sys$sys.hd): 15 help modules
+  4            clio (sys$clio/doc/clio.hd): 36 help modules
+		    (cannot access `sys$dbio/doc/dbio.hd')
+		    (cannot access `sys$debug/doc/debug.hd')
+  4             etc (sys$etc/doc/etc.hd): 25 help modules
+  4             fio (sys$fio/doc/fio.hd): 50 help modules
+  4           fmtio (sys$fmtio/doc/fmtio.hd): 73 help modules
+		    (cannot access `sys$gio/doc/gio.hd')
+  4          imfort (sys$imfort/doc/imfort.hd): 38 help modules
+		    (cannot access `sys$imio/doc/imio.hd')
+		    (cannot access `sys$memio/doc/memio.hd')
+		    (cannot access `sys$mtio/doc/mtio.hd')
+  4              os (host$os/doc/os.hd): 64 help modules
+		    (cannot access `sys$tty/doc/tty.hd')
+		    (cannot access `sys$vops/doc/vops.hd')
+  2           _math (math$_math.hd): 1 help modules
+  3            math (math$math.hd): 11 help modules
+		    (cannot access `math$bevington/doc/bev.hd')
+  4          curfit (math$curfit/doc/curfit.hd): 20 help modules
+		    (cannot access `math$deboor/doc/deboor.hd')
+  4         gsurfit (math$gsurfit/doc/gsurfit.hd): 21 help modules
+		    (cannot access `math$ieee/doc/ieee.hd')
+  4        iminterp (math$iminterp/doc/iminterp.hd): 32 help modules
+		    (cannot access `math$interp/doc/interp.hd')
+		    (cannot access `math$llsq/doc/llsq.hd')
+  4           nlfit (math$nlfit/doc/nlfit.hd): 8 help modules
+  4          slalib (math$slalib/doc/slalib.hd): 179 help modules
+  4          surfit (math$surfit/doc/surfit.hd): 15 help modules
+  2            _doc (doc$_doc.hd): 1 help modules
+  3             doc (doc$doc/doc.hd): 6 help modules
+  0                 (_index): 45 help modules
+
+Total of 1162 help modules in 45 packages, file size 92632 bytes
+
+Make apropos.db for package iraf
+  1            root (iraf$lib/root.hd): 4 help modules
+  2       clpackage (lib$clpackage.hd): 1 help modules
+  3       clpackage (clpackage$clpackage.hd): 12 help modules
+  4          dataio (pkg$dataio/dataio.hd): 14 help modules
+		    (cannot access 'pkg$dbms/dbms.hd')
+  4          images (pkg$images/images.hd): 8 help modules
+  5        imcoords (pkg$images/imcoords/imcoords.hd): 17 help modules
+  5        imfilter (pkg$images/imfilter/imfilter.hd): 15 help modules
+  5           imfit (pkg$images/imfit/imfit.hd): 4 help modules
+  5          imgeom (pkg$images/imgeom/imgeom.hd): 10 help modules
+  5         immatch (pkg$images/immatch/immatch.hd): 19 help modules
+  5          imutil (pkg$images/imutil/imutil.hd): 25 help modules
+  5              tv (pkg$images/tv/tv.hd): 9 help modules
+Warning: bad file type `doc$cv.hlpsrc' in helpdir
+  6             iis (images$tv/iis/iis.hd): 11 help modules
+  4        language (pkg$language/language.hd): 79 help modules
+  4           lists (pkg$lists/lists.hd): 10 help modules
+  4        obsolete (pkg$obsolete/obsolete.hd): 9 help modules
+  4            plot (pkg$plot/plot.hd): 28 help modules
+  4           proto (pkg$proto/proto.hd): 23 help modules
+  5           color (pkg$proto/color/color.hd): 6 help modules
+  5             vol (pkg$proto/vol/vol.hd): 4 help modules
+  4        softools (pkg$softools/softools.hd): 15 help modules
+  4          system (pkg$system/system.hd): 40 help modules
+  4       utilities (pkg$utilities/utilities.hd): 13 help modules
+  5         nttools (pkg$utilities/nttools/nttools.hd): 52 help modules
+  4          xtools (pkg$xtools/doc/xtools.hd): 28 help modules
+  5        catquery (pkg$xtools/catquery/doc/catquery.hd): 46 help modules
+  5          skywcs (pkg$xtools/skywcs/doc/skywcs.hd): 19 help modules
+  2            _sys (sys$_sys.hd): 1 help modules
+  3             sys (sys$sys.hd): 15 help modules
+  4            clio (sys$clio/doc/clio.hd): 36 help modules
+		    (cannot access 'sys$dbio/doc/dbio.hd')
+		    (cannot access 'sys$debug/doc/debug.hd')
+  4             etc (sys$etc/doc/etc.hd): 25 help modules
+  4             fio (sys$fio/doc/fio.hd): 50 help modules
+  4           fmtio (sys$fmtio/doc/fmtio.hd): 73 help modules
+		    (cannot access 'sys$gio/doc/gio.hd')
+  4          imfort (sys$imfort/doc/imfort.hd): 38 help modules
+		    (cannot access 'sys$imio/doc/imio.hd')
+		    (cannot access 'sys$memio/doc/memio.hd')
+		    (cannot access 'sys$mtio/doc/mtio.hd')
+  4              os (host$os/doc/os.hd): 64 help modules
+		    (cannot access 'sys$tty/doc/tty.hd')
+		    (cannot access 'sys$vops/doc/vops.hd')
+  2           _math (math$_math.hd): 1 help modules
+  3            math (math$math.hd): 11 help modules
+		    (cannot access 'math$bevington/doc/bev.hd')
+  4          curfit (math$curfit/doc/curfit.hd): 20 help modules
+		    (cannot access 'math$deboor/doc/deboor.hd')
+  4         gsurfit (math$gsurfit/doc/gsurfit.hd): 21 help modules
+		    (cannot access 'math$ieee/doc/ieee.hd')
+  4        iminterp (math$iminterp/doc/iminterp.hd): 32 help modules
+		    (cannot access 'math$interp/doc/interp.hd')
+		    (cannot access 'math$llsq/doc/llsq.hd')
+  4           nlfit (math$nlfit/doc/nlfit.hd): 8 help modules
+  4          slalib (math$slalib/doc/slalib.hd): 179 help modules
+  4          surfit (math$surfit/doc/surfit.hd): 15 help modules
+  2            _doc (doc$_doc.hd): 1 help modules
+  3             doc (doc$doc/doc.hd): 6 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default xterm]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+warning: missing external package definitions file (IRAF_EXTPKG)
+PATH: iraf$noao/
+
+Make helpdb for package noao
+  1            root (noao$lib/root.hd): 1 help modules
+  2        rootnoao (noao$lib/rootnoao.hd): 1 help modules
+  3            noao (noao$noao.hd): 12 help modules
+  4         artdata (noao$artdata/artdata.hd): 11 help modules
+  4          astcat (noao$astcat/astcat.hd): 20 help modules
+  4         astutil (noao$astutil/astutil.hd): 16 help modules
+  4        digiphot (noao$digiphot/digiphot.hd): 4 help modules
+  5          apphot (noao$digiphot/apphot/apphot.hd): 19 help modules
+  5         daophot (noao$digiphot/daophot/daophot.hd): 24 help modules
+  5         photcal (noao$digiphot/photcal/photcal.hd): 17 help modules
+  5          ptools (noao$digiphot/ptools/ptools.hd): 25 help modules
+  4           imred (noao$imred/imred.hd): 18 help modules
+  5           argus (noao$imred/argus/argus.hd): 2 help modules
+  5            bias (noao$imred/bias/bias.hd): 3 help modules
+  5          ccdred (noao$imred/ccdred/ccdred.hd): 26 help modules
+  6         ccdtest (noao$imred/ccdred/ccdtest/ccdtest.hd): 4 help modules
+  5          crutil (noao$imred/crutil/crutil.hd): 10 help modules
+  5        ctioslit (noao$imred/ctioslit/ctioslit.hd): 0 help modules
+  5            dtoi (noao$imred/dtoi/dtoi.hd): 7 help modules
+  5         echelle (noao$imred/echelle/echelle.hd): 5 help modules
+  5         generic (noao$imred/generic/generic.hd): 7 help modules
+  5           hydra (noao$imred/hydra/hydra.hd): 2 help modules
+  5            iids (noao$imred/iids/iids.hd): 0 help modules
+  5           irred (noao$imred/irred/irred.hd): 4 help modules
+  5             irs (noao$imred/irs/irs.hd): 0 help modules
+  5       kpnocoude (noao$imred/kpnocoude/kpnocoude.hd): 1 help modules
+  5        kpnoslit (noao$imred/kpnoslit/kpnoslit.hd): 0 help modules
+  5         quadred (noao$imred/quadred/quadred.hd): 11 help modules
+  5         specred (noao$imred/specred/specred.hd): 5 help modules
+  5            vtel (noao$imred/vtel/vtel.hd): 25 help modules
+  4         mtlocal (noao$mtlocal/mtlocal.hd): 11 help modules
+  4       nobsolete (noao$nobsolete/nobsolete.hd): 2 help modules
+  4          nproto (noao$nproto/nproto.hd): 13 help modules
+  4         obsutil (noao$obsutil/obsutil.hd): 12 help modules
+  4        onedspec (noao$onedspec/onedspec.hd): 44 help modules
+  5         irsiids (noao$onedspec/irsiids/irsiids.hd): 14 help modules
+  4              rv (noao$rv/rv.hd): 7 help modules
+  4        twodspec (noao$twodspec/twodspec.hd): 2 help modules
+  5       apextract (noao$twodspec/apextract/apextract.hd): 21 help modules
+  5        longslit (noao$twodspec/longslit/longslit.hd): 9 help modules
+  0                 (_index): 40 help modules
+
+Total of 455 help modules in 40 packages, file size 50408 bytes
+
+Make apropos.db for package noao
+  1            root (noao$lib/root.hd): 1 help modules
+  2        rootnoao (noao$lib/rootnoao.hd): 1 help modules
+  3            noao (noao$noao.hd): 12 help modules
+  4         artdata (noao$artdata/artdata.hd): 11 help modules
+  4          astcat (noao$astcat/astcat.hd): 20 help modules
+  4         astutil (noao$astutil/astutil.hd): 16 help modules
+  4        digiphot (noao$digiphot/digiphot.hd): 4 help modules
+  5          apphot (noao$digiphot/apphot/apphot.hd): 19 help modules
+  5         daophot (noao$digiphot/daophot/daophot.hd): 24 help modules
+  5         photcal (noao$digiphot/photcal/photcal.hd): 17 help modules
+  5          ptools (noao$digiphot/ptools/ptools.hd): 25 help modules
+  4           imred (noao$imred/imred.hd): 18 help modules
+  5           argus (noao$imred/argus/argus.hd): 2 help modules
+  5            bias (noao$imred/bias/bias.hd): 3 help modules
+  5          ccdred (noao$imred/ccdred/ccdred.hd): 26 help modules
+  6         ccdtest (noao$imred/ccdred/ccdtest/ccdtest.hd): 4 help modules
+  5          crutil (noao$imred/crutil/crutil.hd): 10 help modules
+  5        ctioslit (noao$imred/ctioslit/ctioslit.hd): 0 help modules
+  5            dtoi (noao$imred/dtoi/dtoi.hd): 7 help modules
+  5         echelle (noao$imred/echelle/echelle.hd): 5 help modules
+  5         generic (noao$imred/generic/generic.hd): 7 help modules
+  5           hydra (noao$imred/hydra/hydra.hd): 2 help modules
+  5            iids (noao$imred/iids/iids.hd): 0 help modules
+  5           irred (noao$imred/irred/irred.hd): 4 help modules
+  5             irs (noao$imred/irs/irs.hd): 0 help modules
+  5       kpnocoude (noao$imred/kpnocoude/kpnocoude.hd): 1 help modules
+  5        kpnoslit (noao$imred/kpnoslit/kpnoslit.hd): 0 help modules
+  5         quadred (noao$imred/quadred/quadred.hd): 11 help modules
+  5         specred (noao$imred/specred/specred.hd): 5 help modules
+  5            vtel (noao$imred/vtel/vtel.hd): 25 help modules
+  4         mtlocal (noao$mtlocal/mtlocal.hd): 11 help modules
+  4       nobsolete (noao$nobsolete/nobsolete.hd): 2 help modules
+  4          nproto (noao$nproto/nproto.hd): 13 help modules
+  4         obsutil (noao$obsutil/obsutil.hd): 12 help modules
+  4        onedspec (noao$onedspec/onedspec.hd): 44 help modules
+  5         irsiids (noao$onedspec/irsiids/irsiids.hd): 14 help modules
+  4              rv (noao$rv/rv.hd): 7 help modules
+  4        twodspec (noao$twodspec/twodspec.hd): 2 help modules
+  5       apextract (noao$twodspec/apextract/apextract.hd): 21 help modules
+  5        longslit (noao$twodspec/longslit/longslit.hd): 9 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default xterm]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+warning: missing external package definitions file (IRAF_EXTPKG)
+PATH: proto$color/
+
+Make helpdb for package color
+  1            root (color$lib/root.hd): 1 help modules
+  2       rootcolor (color$lib/rootcolor.hd): 1 help modules
+  3           color (color$color.hd): 6 help modules
+  0                 (_index): 3 help modules
+
+Total of 11 help modules in 3 packages, file size 3120 bytes
+
+Make apropos.db for package color
+  1            root (color$lib/root.hd): 1 help modules
+  2       rootcolor (color$lib/rootcolor.hd): 1 help modules
+  3           color (color$color.hd): 6 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default xterm]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+warning: missing external package definitions file (IRAF_EXTPKG)
+PATH: proto$vol/
+
+Make helpdb for package vol
+  1            root (vol$lib/root.hd): 1 help modules
+  2         rootvol (vol$lib/rootvol.hd): 1 help modules
+  3             vol (vol$vol.hd): 4 help modules
+  0                 (_index): 3 help modules
+
+Total of 9 help modules in 3 packages, file size 2974 bytes
+
+Make apropos.db for package vol
+  1            root (vol$lib/root.hd): 1 help modules
+  2         rootvol (vol$lib/rootvol.hd): 1 help modules
+  3             vol (vol$vol.hd): 4 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+

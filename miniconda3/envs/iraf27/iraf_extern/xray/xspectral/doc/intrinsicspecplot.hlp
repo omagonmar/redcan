@@ -1,0 +1,80 @@
+# $Header: /home/pros/xray/xspectral/doc/RCS/intrinsicspecplot.hlp,v 11.0 1997/11/06 16:41:18 prosb Exp $
+# $Log: intrinsicspecplot.hlp,v $
+# Revision 11.0  1997/11/06 16:41:18  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:28:22  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:29:07  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:53:04  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:47:40  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:42:28  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:27:22  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/04/22  16:08:57  prosb
+#Changed date.
+#
+#Revision 3.1  92/03/20  11:48:07  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:19  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/08/01  18:25:01  prosb
+#Initial revision
+#
+#
+.help intrinsicspecplot Apr92 xray.xspectral
+.ih
+NAME
+intrinsicspecplot -- An IRAF script that plots sgraphs of "incident" and "emitted" energy columns from _int.tab files.
+.ih    
+USAGE
+intrinsicspecplot intrinsic print_plot
+.ih    
+DESCRIPTION
+
+This task makes a plot of the best-fit spectrum for a given data set
+that has previously been created using the task ``fit''.  Both the   
+emitted and the observed spectra are plotted (on the same log-log
+scale).
+.ih    
+PARAMETERS
+.ls intrinsic = ""       intrinsic spectrum [root_int.tab]
+
+The file name of the intermediate data sets to be graphed.
+
+.le
+.ls print_plot  = "no"  [boolean]
+
+Generate hardcopy of plot.
+.le
+.ih
+EXAMPLES
+
+The following example plots the emitted and the observed spectra to the
+terminal.  (This assumes the presence of the file "snr_int.tab", which
+can be produced by following the examples in the help files of the fit
+or singlefit tasks.)
+.nf
+
+	intrinsicspecplot snr no
+.fi
+.ih
+TIME REQUIREMENTS
+
+This tasks normally executes promptly, in less than 10 seconds.
+.ih    
+SEE ALSO
+sgraph, fit
+.endhelp

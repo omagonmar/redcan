@@ -1,0 +1,190 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "stsci.tools"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stsci.imagemanip-1.1.4-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7-nspkg.pth",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/namespace_packages.txt",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/stsci/imagemanip/__init__.py",
+    "lib/python2.7/site-packages/stsci/imagemanip/__init__.pyc",
+    "lib/python2.7/site-packages/stsci/imagemanip/bilinearinterp.so",
+    "lib/python2.7/site-packages/stsci/imagemanip/interp2d.py",
+    "lib/python2.7/site-packages/stsci/imagemanip/interp2d.pyc",
+    "lib/python2.7/site-packages/stsci/imagemanip/tests/__init__.py",
+    "lib/python2.7/site-packages/stsci/imagemanip/tests/__init__.pyc",
+    "lib/python2.7/site-packages/stsci/imagemanip/tests/testImageManip.py",
+    "lib/python2.7/site-packages/stsci/imagemanip/tests/testImageManip.pyc",
+    "lib/python2.7/site-packages/stsci/imagemanip/version.py",
+    "lib/python2.7/site-packages/stsci/imagemanip/version.pyc"
+  ],
+  "fn": "stsci.imagemanip-1.1.4-py27_1.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stsci.imagemanip-1.1.4-py27_1",
+    "type": 1
+  },
+  "md5": "cc847696ed022f5cca4237ccc80c8d72",
+  "name": "stsci.imagemanip",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stsci.imagemanip-1.1.4-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7-nspkg.pth",
+        "path_type": "hardlink",
+        "sha256": "fc9b03b1454807574f3b84adc2c56f5b3be1a581534670c45abff3495645ad4f",
+        "sha256_in_prefix": "fc9b03b1454807574f3b84adc2c56f5b3be1a581534670c45abff3495645ad4f",
+        "size_in_bytes": 534
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "1fef39340f91d859e953e81593430dbc9988e9ea40938544f58f600c985a3c54",
+        "sha256_in_prefix": "1fef39340f91d859e953e81593430dbc9988e9ea40938544f58f600c985a3c54",
+        "size_in_bytes": 612
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "e68c1e8476f0a16f16e31e38db5fa8a30d7e86ac3507db50b8ea40993154071e",
+        "sha256_in_prefix": "e68c1e8476f0a16f16e31e38db5fa8a30d7e86ac3507db50b8ea40993154071e",
+        "size_in_bytes": 518
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/namespace_packages.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "95e16213781cf3d777b86085e879e34635cb7ca8072ff20a4c7ad5c2499e7cee",
+        "sha256_in_prefix": "95e16213781cf3d777b86085e879e34635cb7ca8072ff20a4c7ad5c2499e7cee",
+        "size_in_bytes": 25
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.imagemanip-1.1.4-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "15eb640a416f68466354e04e7aaf74c5ff9f8cdb4aa8019d9f692664e0492e3e",
+        "sha256_in_prefix": "15eb640a416f68466354e04e7aaf74c5ff9f8cdb4aa8019d9f692664e0492e3e",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ad65fda2e675ca7d5aaa8af860c847ee6b2eebb96d8bf84cceb74f8f43a5a2b",
+        "sha256_in_prefix": "9ad65fda2e675ca7d5aaa8af860c847ee6b2eebb96d8bf84cceb74f8f43a5a2b",
+        "size_in_bytes": 288
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/bilinearinterp.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.14/_dispatch/miniconda/conda-bld/stsci.imagemanip_1552592726274/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "a28d1aaaf65335a920078d6f4e0179aad0bfa6462d8eb39ee68ad9511af6ee32",
+        "sha256_in_prefix": "3e3d88c58f253682011c926366fd4046d2c59f257be53aa6eb6dfd2bed384b7d",
+        "size_in_bytes": 37616
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/interp2d.py",
+        "path_type": "hardlink",
+        "sha256": "c4c1452206c3a6603b7f59015a2dda4b7bd928f43c7065ff58918dd86ceabdda",
+        "sha256_in_prefix": "c4c1452206c3a6603b7f59015a2dda4b7bd928f43c7065ff58918dd86ceabdda",
+        "size_in_bytes": 842
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/interp2d.pyc",
+        "path_type": "hardlink",
+        "sha256": "38f0fc4e615ac07b18677d6c574c5703f6eacfb49ae8262599a9e27963b606a7",
+        "sha256_in_prefix": "38f0fc4e615ac07b18677d6c574c5703f6eacfb49ae8262599a9e27963b606a7",
+        "size_in_bytes": 1136
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "1accc45dac5e5779b68802b58f9aa01de10a8607fe6b8540901c30082cf6db5a",
+        "sha256_in_prefix": "1accc45dac5e5779b68802b58f9aa01de10a8607fe6b8540901c30082cf6db5a",
+        "size_in_bytes": 31
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "47406c1650ced69163c65a33a59b537c4581738a7cf142a8b6300683012631a3",
+        "sha256_in_prefix": "47406c1650ced69163c65a33a59b537c4581738a7cf142a8b6300683012631a3",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/tests/testImageManip.py",
+        "path_type": "hardlink",
+        "sha256": "b41b41c81209a59b2e1a270984c76746aef8128d8561b17b3c1b8292bc95ba76",
+        "sha256_in_prefix": "b41b41c81209a59b2e1a270984c76746aef8128d8561b17b3c1b8292bc95ba76",
+        "size_in_bytes": 863
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/tests/testImageManip.pyc",
+        "path_type": "hardlink",
+        "sha256": "35ad680c758d0644192b97cee72c6a4b316b0fdfbd1ae6ee4080426c73363d2b",
+        "sha256_in_prefix": "35ad680c758d0644192b97cee72c6a4b316b0fdfbd1ae6ee4080426c73363d2b",
+        "size_in_bytes": 1752
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/version.py",
+        "path_type": "hardlink",
+        "sha256": "d3de40c113acc4f4c0afa9e9ce31e066a3f3f02123e15c99d661a94863a5861a",
+        "sha256_in_prefix": "d3de40c113acc4f4c0afa9e9ce31e066a3f3f02123e15c99d661a94863a5861a",
+        "size_in_bytes": 2802
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/imagemanip/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "138a9f0545dfec561d1ea9525547abcb2cd0b659798bf00c19b3a6125d312abf",
+        "sha256_in_prefix": "138a9f0545dfec561d1ea9525547abcb2cd0b659798bf00c19b3a6125d312abf",
+        "size_in_bytes": 2059
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 22353,
+  "subdir": "linux-64",
+  "timestamp": 1552593474929,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stsci.imagemanip-1.1.4-py27_1.tar.bz2",
+  "version": "1.1.4"
+}

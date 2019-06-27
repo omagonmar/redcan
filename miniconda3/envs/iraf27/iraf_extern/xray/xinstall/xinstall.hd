@@ -1,0 +1,35 @@
+# $Header: /home/pros/xray/xinstall/RCS/xinstall.hd,v 11.0 1997/11/06 16:41:06 prosb Exp $
+# $Log: xinstall.hd,v $
+# Revision 11.0  1997/11/06 16:41:06  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:27:28  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:27:32  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:52:36  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:46:06  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:42:04  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/16  14:28:25  mo
+#no changes
+#
+#Revision 4.0  92/04/27  15:25:31  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/24  15:22:24  mo
+#NEw task
+#
+# Help directory for the XDEMO package
+
+$doc		= "./doc/"
+$src		= "./source/"
+
+revisions	hlp = Revisions

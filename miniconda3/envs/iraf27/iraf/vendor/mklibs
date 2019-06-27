@@ -1,0 +1,94 @@
+#!/bin/csh -f
+
+set p = `pwd`
+set top = $p:h
+
+setenv CC 	"gcc"
+setenv CXX 	"g++"
+
+set	build_cfitsio	= 1
+# UR: there's a readline in ecl & vocl but none here; not sure what this is for
+set	build_readline	= 0
+set	build_voclient	= 1
+
+
+echo "Building support libraries ...."
+echo "  (Using toplevel directory '"$top/"' ....)"
+
+# Global options.
+set	gopts = "--prefix=$top/ --exec-prefix=$top/ --disable-shared"
+
+#echo "    Cleaning files ...."
+#./mkclean
+
+set logpref=log.050
+
+
+####################################################################
+####   CFITSIO Library
+####################################################################
+if ($build_cfitsio == 1) then
+
+  echo -n "    Building CFITSIO libs ...."
+  set	opts = "$gopts --bindir=$top/bin --libdir=$top/bin"
+  (chdir cfitsio ;  \
+    ./configure $opts  				 >& _spool ; \
+    make clean 					>>& _spool ; \
+    make 					>>& _spool ; \
+    make install 				>>& _spool)
+  (chdir cfitsio ;  make clean 			>>& _spool )
+  echo "done"
+  echo "results in $cwd/cfitsio/_spool"
+
+else
+
+  echo build_cfitsio = $build_cfitsio
+
+endif
+
+
+
+####################################################################
+####   READLINE Library
+####################################################################
+if ($build_readline == 1) then
+
+  echo -n "    Building Readline libs ...."
+  set	opts = "$gopts --bindir=../../bin --libdir=../../bin"
+  (chdir readline ; mkpkg ; make clean 		 >& _spool)
+  echo "done"
+  echo "results in $cwd/readline/_spool"
+
+else
+
+  echo build_readline = $build_readline
+
+endif
+
+
+####################################################################
+####   UR: VO client
+####################################################################
+if ($build_voclient == 1) then
+
+  # Some of the autoconfs in voclient/ ask gcc "which ld do you use?"
+  # When it answers, they explicitly call that ld, so they DON'T use
+  # our special hack that passes in some necessary compiler flags.
+  setenv LD gcc
+
+  echo -n "    Building VO client ...."
+  set	opts = "$gopts --bindir=$top/bin --libdir=$top/bin"
+  (chdir voclient ;  \
+    make clean 					 >& _spool ; \
+    make 					>>& _spool ; \
+    make install 				>>& _spool)
+  # (chdir voclient ;  make clean			>>& _spool )
+  cp -p voclient/lib/libVO.a $top/bin/
+  echo "done"
+  echo "results in $cwd/voclient/_spool"
+
+else
+
+  echo build_voclient = $build_voclient
+
+endif

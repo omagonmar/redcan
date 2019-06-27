@@ -1,0 +1,5 @@
+input,s,q,,,,Input image name for convolution
+psf,s,q,,,,Input PSF file name
+output,s,q,,,,Output image name after convolution
+center,b,h,yes,,,Move PSF peak to DFT center? (yes/no)
+norm,s,h,"vol","no|peak|volume",,Normalize PSF (no/peak/vol)

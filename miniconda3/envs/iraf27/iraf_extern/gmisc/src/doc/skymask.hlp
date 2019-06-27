@@ -1,0 +1,119 @@
+.help skymask Aug99 gmisc
+.ih
+NAME
+skymask -- create a sky mask from a bad pixel file
+.ih
+USAGE
+skymask fixfiles template masks
+.ih
+PARAMETERS
+.ls fixfiles
+The list of bad pixel region files.
+.le
+.ls templates
+The template images used to define the size of the output masks. The number
+of template images must be 1 or equal to the number of fixfiles. If templates
+is "" the mask size is defined by the ncols and nlines parameters.
+.le
+.ls masks
+The output bad pixel region masks. The number of masks must be 0 or equal to
+the number of fixfiles. If masks is "" the output mask are assigned
+names of the form "templates.pl" or "fixfiles.pl".
+.le
+.ls defshape = "circle"
+The default bad region geometry. The options are "point", "circle", or
+rectangle.
+.le
+.ls defradius = 5
+The default radius for circular bad regions.
+.le
+.ls defwidth = 11
+The default width for rectangular bad regions.
+.le
+.ls defheight = 11
+The default height for rectangular bad regions.
+.le
+.ls ncols = 1024
+The default x dimension of the output masks if the template images are
+undefined.
+.le
+.ls nlines = 1024
+The default y dimension of the output masks if the template images are
+undefined.
+.le
+.ls badvalue = 1
+The mask value assigned to the bad pixel regions. The options are 0 and 1.
+.le
+.ls goodvalue = 0
+The mask value assigned to the good pixel regions. The options are 0 and 1.
+.le
+.ls verbose = yes
+Print messages about the actions of the task ?
+.le
+.ih
+DESCRIPTION
+
+SKYMASK creates a list of bad pixel masks \fImasks\fR from a list of
+bad pixel region files \fIfixfiles\fR.
+
+The bad pixel region files are text files containing  0 or more bad region
+descriptions, 1 bad region descriptor per line as shown below.
+
+.nf
+x1 y1 x2 y2
+x  y r
+x y
+.fi
+
+The first bad region descriptor specifies a rectangle whose lower left
+and upper right corners are x1,y1 and x2,y2 respectively. The second bad
+region descriptor specifies a circle of radius r centered at x,y. The third
+bad region descriptor specifies an object centered at x,y whose geometry is
+set by the \fIdefshape\fR, \fIdefradius\fR, \fIdefwidth\fR, and
+\fIdefheight\fR parameters.
+
+If \fImasks\fR is undefined then default names of the form "template.pl" or
+"fixfiles.pl" are assigned, e.g. if  masks = "", template = "n0001.fits",
+and fixfiles = "n0001.coo.1" the output mask would be "n0001.fits.pl".
+If template is also undefined, then the output mask name would be
+"n0001.coo.1.pl".
+
+The size of the output mask is determined by the size of the template
+image if one is defined, otherwise by the \fIncols\fR and
+\fInlines\fR parameter.
+
+The bad and good region mask values are set by the \fIbadvalue\fR and
+\fIgoodvalue\fR parameters.  The bad region mask is currently only 1 bit deep
+so these values are restricted to 0 or 1.
+
+.ih
+EXAMPLES
+
+1. Create a mask from the bad region file created by the starfind program.
+Note that the x and y columns must be extracted from the output of starfind
+in order to avoid having the third column interpreted as a radius and
+that the default geometry must be defined. The output mask will  in a
+file called sky1.pl
+
+.nf
+cl> starfind sky1 default 1.5 100
+cl> fields sky1.obj.1 1,2 > badregions
+cl> skymask badregions sky1 "" defshape=circle defradius=7
+.fi
+
+2. Create an 800 by 800 mask from a bad regions file created by the user which
+contains a mixture of rectangles, circles, and undefined geometries.  Note that
+the size of the mask must be set explicitly because no template image was
+defined, and that the default shape is set to "point" to force objects
+with undefined geometries to be interpreted as points.
+
+.nf
+cl> skymask badregions "" "" ncols=800 nlines=800 defshape=point 
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+.endhelp

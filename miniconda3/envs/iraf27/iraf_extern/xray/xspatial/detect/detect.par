@@ -1,0 +1,58 @@
+# $Header: /home/pros/xray/xspatial/detect/RCS/detect.par,v 11.0 1997/11/06 16:32:35 prosb Exp $ 
+# $Log: detect.par,v $
+# Revision 11.0  1997/11/06 16:32:35  prosb
+# General Release 2.5
+#
+# Revision 9.1  1997/10/08 05:10:52  prosb
+# Update version
+#
+# Revision 9.0  1995/11/16 18:50:15  prosb
+# General Release 2.4
+#
+#Revision 8.2  1995/10/10  07:45:25  wendy
+#Updating release date
+#
+#Revision 8.1  1995/08/07  17:31:43  wendy
+#release banner 2.4
+#
+#Revision 8.0  1994/06/27  15:11:36  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/17  17:23:42  wendy
+#Updated for 2.3.1 release
+#
+#Revision 7.0  93/12/27  18:34:57  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  13:01:36  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:13:12  prosb
+#General Release 2.2
+#
+#Revision 5.3  93/05/22  17:23:44  prosb
+#Update version
+#
+#Revision 5.2  93/05/20  10:09:05  mo
+#MC	5/20/93		Add 'motd'parameter to control banner output
+#
+#Revision 5.1  93/04/30  14:14:05  janet
+#*** empty log message ***
+#
+#Revision 5.0  92/10/29  21:33:30  prosb
+#General Release 2.1
+#
+#Revision 4.3  92/10/25  20:31:03  prosb
+#Update version
+#
+#Revision 4.2  92/10/25  01:07:27  prosb
+#Update version
+#
+#Revision 4.1  92/10/07  11:52:57  janet
+#detect package par 
+#
+# 
+#
+#  Parameters for the detect package
+motd,b,h,"yes",,,"Type the welcome banner?"
+version,s,h,"October, 1997"

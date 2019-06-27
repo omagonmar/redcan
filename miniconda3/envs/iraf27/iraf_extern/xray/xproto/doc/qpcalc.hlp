@@ -1,0 +1,259 @@
+#$Header: /home/pros/xray/xproto/doc/RCS/qpcalc.hlp,v 11.1 1999/10/18 17:52:58 prosb Exp $
+#$Log: qpcalc.hlp,v $
+#Revision 11.1  1999/10/18 17:52:58  prosb
+#fixed the example.
+#
+#Revision 11.0  1997/11/06 16:39:02  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:26:54  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:26:17  prosb
+#General Release 2.3.1
+#
+#Revision 1.2  94/06/08  13:48:18  prosb
+#Added new eventdef definition.
+#
+#Revision 1.1  94/03/23  17:10:37  mo
+#Initial revision
+#
+#Revision 7.0  93/12/27  18:51:02  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:43:48  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/05/22  19:07:34  mo
+#Initial revision
+#
+#
+.help qpcalc  Jun94 xray.xproto
+.ih
+NAME
+qpcalc -- Calculate new or modified event-attribute values algebraically
+.ih
+USAGE
+qpcalc	input_qpoe region  qpoe  eventdef outname equals
+.ih
+DESCRIPTION
+This task evaluates an arbitrary expression that includes event-attribute names,
+constants, and operators, and creates a specified event-attribute in the 
+QPOE ---or overwrites an existing event-attribute if the specified name 
+already exists.
+Variables in the expression are event-attribute names in either case. 
+ 
+Event-Attributes
+may be of any type except string. If the event-attribute name contains
+non-alphanumeric characters, it should be preceded by a dollar sign
+and followed by a blank. For example, the expression "date-obs+1."
+contains the column "date-obs", but the task thinks that it contains
+two column names, "date" and "obs".  To ensure that the expression is
+evaluated correctly, rewrite it as "$date-obs +1.". The variable
+"rownum" may also be used in an expression if there is no column in
+the table of the same name. Its value is the current row number. The
+expression will be evaluated using the data types of the columns and
+constants in the expression, with the usual rules of type promotion used in
+Fortran.  Please remember that integer division truncates.
+ 
+The output value in any row will be set to INDEF if one or more event-attribute 
+values used in the calculation is equal to INDEF. The result will be
+INDEF if either of the clauses in an if expression contains a row with
+an INDEF value. If the result of an operation is undefined (such as
+division by zero) the output column will also be set to INDEF.
+ 
+The following Fortran-type arithmetic operators are supported.  If the
+second argument of the exponentiation is not an integer, the result
+will be undefined if the the first argument is not positive.  Again, 
+remember that integer division truncates.
+.nf
++       addition                -       subtraction
+*       multiplication          /       division
+-       negation                **      exponentiation
+.fi
+ 
+The following logical operators are supported. Logical operators will
+return a value of 1 if true or 0 if false. Logical operators are
+supported in both their Fortran and SPP form.
+ 
+.nf
+.or. ||         logical or      .and.   &&      logical and
+.eq. ==         equality        .ne.    !=      inequality
+.lt. <          less than       .gt.    >       greater than
+.le. <=         less or equal   .ge.    >=      greater or equal
+.not. !         not
+.fi
+ 
+The following functions are supported. These functions all take a
+single argument, which may be an expression. The argument or result of
+trigonometric functions are in radians.
+ 
+.nf
+abs     absolute value          acos    arc cosine
+asin    arc sine                atan    arc tangent
+cos     arc cosine              cosh    hyperbolic cosine
+cube    third power             double  convert to double
+exp     E raised to power       int     convert to integer
+log     natural logarithm       log10   common logarithm
+nint    nearest integer         real    convert to real
+sin     sine                    sinh    hyperbolic sine
+sqr     second power            sqrt    square root
+tan     tangent                 tanh    hyperbolic tangent
+.fi
+.ih
+PARAMETERS
+.ls input_qpoe = ""	prompt = input qpoe filename
+The input qpoe file name.  The file must have a ".qp" extension,
+but may be specified with or without the extension. Qpoe filters
+can  be  applied  using the bracket notation to filter the input
+photons.
+
+.le
+.ls region = ""		prompt = region descriptor
+
+The region descriptor.  If null is input, the entire field is copied
+(subject to the qpoe filters specified with the input file name).
+Otherwise only those photons are copied which pass the spatial region
+filter.
+.le
+.ls qpoe = ""		prompt = output qpoe file name
+
+The output qpoe file name.  The file must have a ".qp" extension,
+but may be specified with or without the extension.  The output file
+can be the same as the input file.
+.le
+.ls eventdef = ""       prompt = event definition
+
+The event definition of the output QPOE file.  If the user enters the
+empty string, "", the event definition will be copied from the input
+QPOE file.  See 'help qpoe' for information on modifying the event
+definition.
+.le
+.ls (exposure = "NONE") [string]
+
+The PLIO mask containing exposure information for the specified source
+image.  If the null string is input, the name will be the same root as
+the source image file with a "_exp.pl" extension.  If "NONE" is input,
+no exposure filtering is performed.
+.le
+.ls (expthresh = 0.) [real]
+
+The percentage of total exposure required for a given source pixel to
+pass the exposure filter, (if an exposure mask is present).  For
+example, if expthresh is 50.0, then only pixels whose exposure time is
+>= 50% will be used.  An exposure threshold of 0% allows all photons
+to pass the exposure filter.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file can be overwritten,
+if it already exists.
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A display level
+of 1 generates a display of header information.
+.le
+.ls (sort = yes) [boolean]
+
+Flag if events are to be sorted.  If true, the type of sort is determined
+by the \fIsorttype\fR parameter.
+.le
+.ls (sorttype = "position") [string]
+
+The type of sort to perform.  This string consists of a list of event
+element names that specifies the order in which to sort the event
+record.  For example, "y x time" will sort on the "y" element as the
+primary key, the "x" element as the secondary key, and "time" as the
+tertiary key.  If sorting is not to be performed, this parameter can
+be used as a string that will go into the x_sort qpoe param to
+indicate the type of sorting of the events. For example, if the events
+are already sorted by time, and are not to be resorted, one can set
+\fIsort\fR to false and \fIsorttype\fR to "time", and the qpoe file
+will be indistinguishable from one whose events were sorted by time.
+.le
+.ls (sortsize = 1000000) [int]
+
+The number of bytes that are to be sorted at a time.  This allows
+users to tailor the task to the amount of available memory.  If there
+is a lot of memory available, \fIsortsize\fR should be set large
+enough so that the task will do an in-core sort.  (This requires
+knowing the approximate number of events and the byte size of each
+event.)  If only a small amount of memory is available, use a smaller
+number.  In this case, several core loads will be sorted and written
+to temp files, which are then merged.
+.le
+.ls (qp_internals = yes) [boolean]
+
+Boolean flag controlling whether the internal qpoe parameters (see
+below) are prompted for, or whether they are defaulted to internally
+hardwired values.  This parameter is not usually changed by the user.
+(Prompting is normally turned off during stand-alone debugging only.)
+.ls (qp_pagesize = 1024) [int]
+
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_bucketlen = 2048) [int]
+
+Bucket length for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_blockfact = 1) [int]
+
+The default block factor for IMIO.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_mkindex = yes) [boolean]
+
+Boolean flag that an index should be made for the qpoe file.
+This parameter is internal to qpoe and should not normally be changed.
+.le
+.ls (qp_key = "") [string]
+
+Key on which to make the qpoe index.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_debug = 0) [int]
+
+Debug level for qpoe internals.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ih
+EXAMPLES
+
+1. Calculate a new column that is 10 times the input PHA Value ('pha')
+   and overwrite the new value to the column 'pha' :
+.nf
+xp> qpcalc
+input qpoe filename: xdata$rp110590n00.qp
+region descriptor:  
+NAME OF OUtput element: pha
+equation (or file with equation): pha*10
+output qpoe file name (.): testOut.qp
+event definition: 
+
+xdata$rp110590n00.qp (; no exp.) -> testOut.qp
+Creating QPOE output file: testOut.qp
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on table calculation (\fIhelp tcalc\fR) for a
+description of the algebraic forms
+
+Documentation on QPOE list(\fIhelp qplist\fR) for a
+description of how to display existing event-attribute names and values.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on qpoe filtering (\fIhelp qpoe\fR) for a description of
+the qpoe filter user interface.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

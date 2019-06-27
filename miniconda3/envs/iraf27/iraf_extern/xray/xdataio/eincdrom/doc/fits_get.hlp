@@ -1,0 +1,123 @@
+#$Log: fits_get.hlp,v $
+#Revision 11.0  1997/11/06 16:36:41  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:01:05  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:24:07  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:44:47  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/10/04  12:16:45  dvs
+#Moved eincdrom to xdataio from einbb.
+#
+#Revision 6.0  93/05/24  17:12:31  prosb
+#General Release 2.2
+#
+#Revision 1.4  93/04/29  17:49:39  prosb
+#Checking in requested changes by Michael Garcia.
+#
+#Revision 1.3  93/04/28  10:20:19  prosb
+#Made corrections and minor changes to help file.
+#
+#Revision 1.2  93/04/18  17:50:30  prosb
+#Since we added datasets eoscat and hriimg, the prompt for
+#"dataset" became too long.  I opted to remove the description
+#of all the prompts.
+#
+#Revision 1.1  93/04/13  11:40:50  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/doc/RCS/fits_get.hlp,v 11.0 1997/11/06 16:36:41 prosb Exp $
+.help fits_get Oct93 xray.xdataio.eincdrom
+.ih
+NAME
+fits_get -- copy the FITS file associated with a given specifier
+(sequence number or FITS file name) from Einstein CDROMs into
+the current directory.
+.ih
+USAGE
+fits_get dataset specifier
+.ih
+DESCRIPTION
+
+\fIfits_get\fR finds the specified FITS file on the appropriate Einstein
+CD and copies it into the current directory.  The user may specify the
+FITS file by name (such as H1734S03.XPA) or by sequence number (only for
+the pointed IPC and HRI datasets).  
+
+NOTE: For the eoscat CDs, sequence numbers will correspond to the
+image FITS files, not the exposure maps.  Exposure maps can be copied
+by specifying the FITS filename.
+
+.ih
+PARAMETERS
+.ls dataset = "ipcevt"	  
+
+The dataset of the requested data.  Must be one of ipcevt, hrievt, eoscat,
+hriimg, or slew.
+
+.le
+.ls specifier		  
+
+This specifies which data the user wishes to retrieve from the CDs.
+If it consists solely of digits, it is assumed to be a sequence
+number.  (Only the pointed HRI and IPC datasets allow sequence numbers.)
+In this case, this task will reference a sequence number index file
+on the CD to find the associated FITS file name.
+
+Otherwise, the specifier is assumed to be a FITS file name.  This
+file name must match the name on the Einstein CD in order for this
+task to be able to find the file.
+.le
+.ls (eincdpar = "") [pset]
+
+The name of the file containing the eincdrom package wide parameters.  If
+the name is empty (""), then the parameters will be obtained from the
+eincdpar task.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the FITS file can be
+overwritten, if it already exists.
+.le
+
+.ls (display = 1) [int]
+
+The display level.  A setting of 0 should output no display (besides warnings), while
+settings above 3 are only useful for debugging.
+.le
+.ih
+EXAMPLES
+
+1. Use fits_get to retrieve the HRI event FITS file associated with HRI 
+sequence 4566. 
+.nf
+
+ei>fits_get
+Dataset (hrievt|ipcevt|eoscat|hriimg|slew) (ipcevt): hrievt
+FITS filename OR sequence number: 4566
+
+Copied hrievt1$data/05h/H0538S68.XPA to the current directory.
+
+.fi
+
+2. Use fits_get to retrieve the SLEW survey FITS file s0336s42.f3d.
+
+.nf
+ei> fits_get
+Dataset (hrievt|ipcevt|eoscat|hriimg|slew) (hrievt): slew
+FITS filename OR sequence number (4566): s0336s42.f3d
+
+Copied slewcd$data/03h/s0336s42.f3d to the current directory.
+.fi
+.ih
+TIME REQUIREMENTS
+
+This task normally executes in ~10 seconds on a Sun-4, though
+it may take longer to copy very large FITS files.
+
+.endhelp

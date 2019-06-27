@@ -1,0 +1,44 @@
+#$Header: /home/pros/xray/xspatial/RCS/imdisp.par,v 11.0 1997/11/06 16:33:09 prosb Exp $
+#$Log: imdisp.par,v $
+#Revision 11.0  1997/11/06 16:33:09  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:35:29  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:55:21  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:30:33  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:09:33  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:05  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:33:12  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:26:29  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:10:51  pros
+#General Release 1.0
+#
+#
+#  Parameters for the imdisp task
+#
+image,s,a,"",,,"image file to display"
+region,s,h,"FIELD",,,"region descriptor"
+exposure,s,h,"NONE",,,"exposure mask"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion"
+scale,r,h,1.0,,,"scale factor to apply to data"
+bias,r,h,0.0,,,"bias to apply to data"
+flip,b,h,y,,,"flip display (and table)?"
+ncols,i,h,12,,,"number of columns in display"
+nrows,i,h,12,,,"number of rows in display"
+disp_header,b,h,n,,,"display header information?"
+table,s,h,"NONE",,,"root name for output file [root_imd.tab]"
+clobber,b,h,n,,,"clobber existing table file?"

@@ -1,0 +1,528 @@
+{
+  "build": "1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/wcstools-3.9.5-1",
+  "features": "",
+  "files": [
+    "bin/addpix",
+    "bin/bincat",
+    "bin/char2sp",
+    "bin/conpix",
+    "bin/cphead",
+    "bin/crlf",
+    "bin/delhead",
+    "bin/delwcs",
+    "bin/edhead",
+    "bin/filename",
+    "bin/fileroot",
+    "bin/filext",
+    "bin/fixpix",
+    "bin/getcol",
+    "bin/getdate",
+    "bin/getfits",
+    "bin/gethead",
+    "bin/getpix",
+    "bin/gettab",
+    "bin/i2f",
+    "bin/imcat",
+    "bin/imextract",
+    "bin/imfill",
+    "bin/imhead",
+    "bin/immatch",
+    "bin/imresize",
+    "bin/imrot",
+    "bin/imsize",
+    "bin/imsmooth",
+    "bin/imstack",
+    "bin/imstar",
+    "bin/imwcs",
+    "bin/isfile",
+    "bin/isfits",
+    "bin/isnum",
+    "bin/isrange",
+    "bin/keyhead",
+    "bin/newfits",
+    "bin/remap",
+    "bin/scat",
+    "bin/sethead",
+    "bin/setpix",
+    "bin/simpos",
+    "bin/sky2xy",
+    "bin/skycoor",
+    "bin/sp2char",
+    "bin/subpix",
+    "bin/sumpix",
+    "bin/wcshead",
+    "bin/xy2sky",
+    "include/fitsfile.h",
+    "include/fitsfile1.h",
+    "include/fitshead.h",
+    "include/fitswcs.h",
+    "include/imio.h",
+    "include/lwcs.h",
+    "include/wcs.h",
+    "include/wcscat.h",
+    "include/wcscat1.h",
+    "include/wcslib.h",
+    "lib/libwcs.a",
+    "share/doc/wcstools/COPYING"
+  ],
+  "fn": "wcstools-3.9.5-1.tar.bz2",
+  "license": "GPL",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/wcstools-3.9.5-1",
+    "type": 1
+  },
+  "md5": "b254764be4e481073b6a209b86c38ce0",
+  "name": "wcstools",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/wcstools-3.9.5-1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/addpix",
+        "path_type": "hardlink",
+        "sha256": "b7b14f097a1487e62979b9d919aec750b04a83236035e9065482d8db03e58cb3",
+        "sha256_in_prefix": "b7b14f097a1487e62979b9d919aec750b04a83236035e9065482d8db03e58cb3",
+        "size_in_bytes": 278040
+      },
+      {
+        "_path": "bin/bincat",
+        "path_type": "hardlink",
+        "sha256": "3c95cc6fac3ede6b3c15a8739c935d4ad1954e7418e7a442c9634864f81bdbb8",
+        "sha256_in_prefix": "3c95cc6fac3ede6b3c15a8739c935d4ad1954e7418e7a442c9634864f81bdbb8",
+        "size_in_bytes": 1133842
+      },
+      {
+        "_path": "bin/char2sp",
+        "path_type": "hardlink",
+        "sha256": "57e781c293885dcbe572ca35bbf568fbb09b024ae5e7c8200a06edef3f03f642",
+        "sha256_in_prefix": "57e781c293885dcbe572ca35bbf568fbb09b024ae5e7c8200a06edef3f03f642",
+        "size_in_bytes": 12752
+      },
+      {
+        "_path": "bin/conpix",
+        "path_type": "hardlink",
+        "sha256": "bf2974f84175c11d9699cdadb71cde1d022132f0214a6912d2fd0a7705f2c704",
+        "sha256_in_prefix": "bf2974f84175c11d9699cdadb71cde1d022132f0214a6912d2fd0a7705f2c704",
+        "size_in_bytes": 284198
+      },
+      {
+        "_path": "bin/cphead",
+        "path_type": "hardlink",
+        "sha256": "8c0518a635ae3459dbeeae85577c7d3c65718651628bfbfb18907a760395ba8c",
+        "sha256_in_prefix": "8c0518a635ae3459dbeeae85577c7d3c65718651628bfbfb18907a760395ba8c",
+        "size_in_bytes": 625943
+      },
+      {
+        "_path": "bin/crlf",
+        "path_type": "hardlink",
+        "sha256": "8de16a97e0012ad7835f7de517805e5aa6e3cae1575d151923a026702f2cd788",
+        "sha256_in_prefix": "8de16a97e0012ad7835f7de517805e5aa6e3cae1575d151923a026702f2cd788",
+        "size_in_bytes": 11454
+      },
+      {
+        "_path": "bin/delhead",
+        "path_type": "hardlink",
+        "sha256": "d70e2cfe508019a2becabfefc87f2ff5fe770337354843bb0b80700f5ebea2d1",
+        "sha256_in_prefix": "d70e2cfe508019a2becabfefc87f2ff5fe770337354843bb0b80700f5ebea2d1",
+        "size_in_bytes": 622282
+      },
+      {
+        "_path": "bin/delwcs",
+        "path_type": "hardlink",
+        "sha256": "0ef3c1acac6c789b3908df89d82a9d3828631c6553156f96adfcb8c91eb5455c",
+        "sha256_in_prefix": "0ef3c1acac6c789b3908df89d82a9d3828631c6553156f96adfcb8c91eb5455c",
+        "size_in_bytes": 616352
+      },
+      {
+        "_path": "bin/edhead",
+        "path_type": "hardlink",
+        "sha256": "ac3ecfb6939f3269db51a6a94c20a73e6895143d7cc4d36a09e57461eeefd548",
+        "sha256_in_prefix": "ac3ecfb6939f3269db51a6a94c20a73e6895143d7cc4d36a09e57461eeefd548",
+        "size_in_bytes": 282781
+      },
+      {
+        "_path": "bin/filename",
+        "path_type": "hardlink",
+        "sha256": "abbe0bb2918370674f93616764e9269aabddd1a87a1016dfc09b826e23f56943",
+        "sha256_in_prefix": "abbe0bb2918370674f93616764e9269aabddd1a87a1016dfc09b826e23f56943",
+        "size_in_bytes": 12476
+      },
+      {
+        "_path": "bin/fileroot",
+        "path_type": "hardlink",
+        "sha256": "b26348a051c3017f84faf7b134ccfe4c3c515454b828da1e25583b78f92f68ad",
+        "sha256_in_prefix": "b26348a051c3017f84faf7b134ccfe4c3c515454b828da1e25583b78f92f68ad",
+        "size_in_bytes": 11471
+      },
+      {
+        "_path": "bin/filext",
+        "path_type": "hardlink",
+        "sha256": "5412d74b698a38f884cb4e59ded9c60df76c4bd62431d8cfe9dc8721ac47f8fb",
+        "sha256_in_prefix": "5412d74b698a38f884cb4e59ded9c60df76c4bd62431d8cfe9dc8721ac47f8fb",
+        "size_in_bytes": 10875
+      },
+      {
+        "_path": "bin/fixpix",
+        "path_type": "hardlink",
+        "sha256": "d146b2922191abed1d0484bfd0133103b7578ae4c3c626ba63c06370300350f1",
+        "sha256_in_prefix": "d146b2922191abed1d0484bfd0133103b7578ae4c3c626ba63c06370300350f1",
+        "size_in_bytes": 280611
+      },
+      {
+        "_path": "bin/getcol",
+        "path_type": "hardlink",
+        "sha256": "6f36fbc9f2f8664ae9a46eb4902feae4eae684b936144d67fabdadb136ad5e77",
+        "sha256_in_prefix": "6f36fbc9f2f8664ae9a46eb4902feae4eae684b936144d67fabdadb136ad5e77",
+        "size_in_bytes": 1098673
+      },
+      {
+        "_path": "bin/getdate",
+        "path_type": "hardlink",
+        "sha256": "375ae85686580cf68797d0e23276f42f7a27f47f5059e5a3d048862e5493c636",
+        "sha256_in_prefix": "375ae85686580cf68797d0e23276f42f7a27f47f5059e5a3d048862e5493c636",
+        "size_in_bytes": 314474
+      },
+      {
+        "_path": "bin/getfits",
+        "path_type": "hardlink",
+        "sha256": "457811d4c23280e44905f9f8f793b8bee63db9884b8276d9784b71b2610b5739",
+        "sha256_in_prefix": "457811d4c23280e44905f9f8f793b8bee63db9884b8276d9784b71b2610b5739",
+        "size_in_bytes": 1129837
+      },
+      {
+        "_path": "bin/gethead",
+        "path_type": "hardlink",
+        "sha256": "a7e054e35d05f743619878641394c11f60d93c653baf1840cd30fce4bfdeb6f0",
+        "sha256_in_prefix": "a7e054e35d05f743619878641394c11f60d93c653baf1840cd30fce4bfdeb6f0",
+        "size_in_bytes": 1140958
+      },
+      {
+        "_path": "bin/getpix",
+        "path_type": "hardlink",
+        "sha256": "2d17e5ea8ddcd8587d86d1aabc1fcf3008f0e288d4fa566ca39a4876da0041fa",
+        "sha256_in_prefix": "2d17e5ea8ddcd8587d86d1aabc1fcf3008f0e288d4fa566ca39a4876da0041fa",
+        "size_in_bytes": 1083740
+      },
+      {
+        "_path": "bin/gettab",
+        "path_type": "hardlink",
+        "sha256": "b3bfa8b76bba9d20276f14c881d0e62ca80068bc4a9bac97ad87066d94c3a6db",
+        "sha256_in_prefix": "b3bfa8b76bba9d20276f14c881d0e62ca80068bc4a9bac97ad87066d94c3a6db",
+        "size_in_bytes": 1078984
+      },
+      {
+        "_path": "bin/i2f",
+        "path_type": "hardlink",
+        "sha256": "374f39c4e164225e1a0b579cb99f7d489933186e8547c6d1ed5138a8e2e35c87",
+        "sha256_in_prefix": "374f39c4e164225e1a0b579cb99f7d489933186e8547c6d1ed5138a8e2e35c87",
+        "size_in_bytes": 278469
+      },
+      {
+        "_path": "bin/imcat",
+        "path_type": "hardlink",
+        "sha256": "557781d25fa2a9a14ac633cfc1d94b15525e7bb32e7f85605d5443787202fa17",
+        "sha256_in_prefix": "557781d25fa2a9a14ac633cfc1d94b15525e7bb32e7f85605d5443787202fa17",
+        "size_in_bytes": 1339181
+      },
+      {
+        "_path": "bin/imextract",
+        "path_type": "hardlink",
+        "sha256": "cf4e8b300d25997ce60edbab01a9ca81de29c414ee138093c5136de635e8d4a9",
+        "sha256_in_prefix": "cf4e8b300d25997ce60edbab01a9ca81de29c414ee138093c5136de635e8d4a9",
+        "size_in_bytes": 1077245
+      },
+      {
+        "_path": "bin/imfill",
+        "path_type": "hardlink",
+        "sha256": "f6356627dee3d265b8db536f9dd89001a0233a9133ac7445096f172c75414dc0",
+        "sha256_in_prefix": "f6356627dee3d265b8db536f9dd89001a0233a9133ac7445096f172c75414dc0",
+        "size_in_bytes": 345440
+      },
+      {
+        "_path": "bin/imhead",
+        "path_type": "hardlink",
+        "sha256": "5ca163305f09cf1717f22076e7f86bc1df2cd1d1b40b5623560488e1022f1293",
+        "sha256_in_prefix": "5ca163305f09cf1717f22076e7f86bc1df2cd1d1b40b5623560488e1022f1293",
+        "size_in_bytes": 615847
+      },
+      {
+        "_path": "bin/immatch",
+        "path_type": "hardlink",
+        "sha256": "4bd4820452a73dae7024da3e362e4bf40d5a0de38e92009ac2e67f31b57ab709",
+        "sha256_in_prefix": "4bd4820452a73dae7024da3e362e4bf40d5a0de38e92009ac2e67f31b57ab709",
+        "size_in_bytes": 1307084
+      },
+      {
+        "_path": "bin/imresize",
+        "path_type": "hardlink",
+        "sha256": "eeaa28389349672dfe9ebaed573dd7cf0e9735c2d104a7bf3f611cfe3c5bef2f",
+        "sha256_in_prefix": "eeaa28389349672dfe9ebaed573dd7cf0e9735c2d104a7bf3f611cfe3c5bef2f",
+        "size_in_bytes": 683706
+      },
+      {
+        "_path": "bin/imrot",
+        "path_type": "hardlink",
+        "sha256": "eec289eb096211ae42cae3ab676926619701fd9cc4095ab46e5a63b7e251f5ac",
+        "sha256_in_prefix": "eec289eb096211ae42cae3ab676926619701fd9cc4095ab46e5a63b7e251f5ac",
+        "size_in_bytes": 635641
+      },
+      {
+        "_path": "bin/imsize",
+        "path_type": "hardlink",
+        "sha256": "60d5a567ab0a5f9564ab5a602d26173a55a4fdfd4955f092334f7efddb5996b9",
+        "sha256_in_prefix": "60d5a567ab0a5f9564ab5a602d26173a55a4fdfd4955f092334f7efddb5996b9",
+        "size_in_bytes": 1149177
+      },
+      {
+        "_path": "bin/imsmooth",
+        "path_type": "hardlink",
+        "sha256": "a57f94321bf61ff3b03771c785d2549f126fed9c5510c421bf2ff6cce319a8b0",
+        "sha256_in_prefix": "a57f94321bf61ff3b03771c785d2549f126fed9c5510c421bf2ff6cce319a8b0",
+        "size_in_bytes": 340762
+      },
+      {
+        "_path": "bin/imstack",
+        "path_type": "hardlink",
+        "sha256": "38cb87d90a60399a5a399af54c3bbf9c840008f99963076b82d433bfe7d491b7",
+        "sha256_in_prefix": "38cb87d90a60399a5a399af54c3bbf9c840008f99963076b82d433bfe7d491b7",
+        "size_in_bytes": 282884
+      },
+      {
+        "_path": "bin/imstar",
+        "path_type": "hardlink",
+        "sha256": "c06ef21261902fca5588b8a33bb54f9bd14917ad813d5d1c8e45c58fafae8364",
+        "sha256_in_prefix": "c06ef21261902fca5588b8a33bb54f9bd14917ad813d5d1c8e45c58fafae8364",
+        "size_in_bytes": 1312157
+      },
+      {
+        "_path": "bin/imwcs",
+        "path_type": "hardlink",
+        "sha256": "670b8ff8695cfb2d0b813f2384b402607a75acd981b5df7be020437ce85d7984",
+        "sha256_in_prefix": "670b8ff8695cfb2d0b813f2384b402607a75acd981b5df7be020437ce85d7984",
+        "size_in_bytes": 1312161
+      },
+      {
+        "_path": "bin/isfile",
+        "path_type": "hardlink",
+        "sha256": "fe3e68e435174bbfea607d33d8021f61ea6c9379fa3f683bb47b400d7663711f",
+        "sha256_in_prefix": "fe3e68e435174bbfea607d33d8021f61ea6c9379fa3f683bb47b400d7663711f",
+        "size_in_bytes": 272560
+      },
+      {
+        "_path": "bin/isfits",
+        "path_type": "hardlink",
+        "sha256": "8b8424450e90b3573b594d4454755d1fbc5c723f167980d5a09d9a663469c207",
+        "sha256_in_prefix": "8b8424450e90b3573b594d4454755d1fbc5c723f167980d5a09d9a663469c207",
+        "size_in_bytes": 272560
+      },
+      {
+        "_path": "bin/isnum",
+        "path_type": "hardlink",
+        "sha256": "70d0afe5ba6a92c6b84f957be0f050b79e7a3c03cf263bb784ff814268587a5c",
+        "sha256_in_prefix": "70d0afe5ba6a92c6b84f957be0f050b79e7a3c03cf263bb784ff814268587a5c",
+        "size_in_bytes": 40947
+      },
+      {
+        "_path": "bin/isrange",
+        "path_type": "hardlink",
+        "sha256": "2c7de8ed1c0eaeec9b30c72440e156592bcba1be62d3745e4a0b504577cbd5b1",
+        "sha256_in_prefix": "2c7de8ed1c0eaeec9b30c72440e156592bcba1be62d3745e4a0b504577cbd5b1",
+        "size_in_bytes": 11319
+      },
+      {
+        "_path": "bin/keyhead",
+        "path_type": "hardlink",
+        "sha256": "643aa552cfc39383e557b1a12f81ff2866c7d58ab0b2255d52e0b5ab46fe31ef",
+        "sha256_in_prefix": "643aa552cfc39383e557b1a12f81ff2866c7d58ab0b2255d52e0b5ab46fe31ef",
+        "size_in_bytes": 284357
+      },
+      {
+        "_path": "bin/newfits",
+        "path_type": "hardlink",
+        "sha256": "a17c9a9423c00809c6dbe1f5cbc2347ba8296adc9898f3655a56e9da52aab7fc",
+        "sha256_in_prefix": "a17c9a9423c00809c6dbe1f5cbc2347ba8296adc9898f3655a56e9da52aab7fc",
+        "size_in_bytes": 630537
+      },
+      {
+        "_path": "bin/remap",
+        "path_type": "hardlink",
+        "sha256": "0e838e6e0d51dcc990c0318f63c825f187b0d936bbdf1982cb1e10807bdbc95e",
+        "sha256_in_prefix": "0e838e6e0d51dcc990c0318f63c825f187b0d936bbdf1982cb1e10807bdbc95e",
+        "size_in_bytes": 656181
+      },
+      {
+        "_path": "bin/scat",
+        "path_type": "hardlink",
+        "sha256": "a85d8df48a5710462117ee76d104d4f190bb334a4221ca8eaa3c8e17d398d73b",
+        "sha256_in_prefix": "a85d8df48a5710462117ee76d104d4f190bb334a4221ca8eaa3c8e17d398d73b",
+        "size_in_bytes": 1197850
+      },
+      {
+        "_path": "bin/sethead",
+        "path_type": "hardlink",
+        "sha256": "9a25dd63cb38bc18136d7a749c4cea72a762ddbfa2b49fd0a8e88d4db764ea33",
+        "sha256_in_prefix": "9a25dd63cb38bc18136d7a749c4cea72a762ddbfa2b49fd0a8e88d4db764ea33",
+        "size_in_bytes": 1128626
+      },
+      {
+        "_path": "bin/setpix",
+        "path_type": "hardlink",
+        "sha256": "e92041b4e7ff9ea50b7c935b4df5763112b0dfa051fd0d63c2f54ebeeabaa582",
+        "sha256_in_prefix": "e92041b4e7ff9ea50b7c935b4df5763112b0dfa051fd0d63c2f54ebeeabaa582",
+        "size_in_bytes": 1077452
+      },
+      {
+        "_path": "bin/simpos",
+        "path_type": "hardlink",
+        "sha256": "02e2a589c8466b71b07d3985d3576324a6b0c8ed8b3628d72409744a0f74b11a",
+        "sha256_in_prefix": "02e2a589c8466b71b07d3985d3576324a6b0c8ed8b3628d72409744a0f74b11a",
+        "size_in_bytes": 1073247
+      },
+      {
+        "_path": "bin/sky2xy",
+        "path_type": "hardlink",
+        "sha256": "e7cae1db07e3cc22ed810ecad34efd43fd62b9b3cbec1de939b5d8d9c0954d25",
+        "sha256_in_prefix": "e7cae1db07e3cc22ed810ecad34efd43fd62b9b3cbec1de939b5d8d9c0954d25",
+        "size_in_bytes": 644890
+      },
+      {
+        "_path": "bin/skycoor",
+        "path_type": "hardlink",
+        "sha256": "1e17ec8fd39b4b1f23f3d1c5d44097887d75a4949ba9ceddb7679382fb7e9201",
+        "sha256_in_prefix": "1e17ec8fd39b4b1f23f3d1c5d44097887d75a4949ba9ceddb7679382fb7e9201",
+        "size_in_bytes": 478402
+      },
+      {
+        "_path": "bin/sp2char",
+        "path_type": "hardlink",
+        "sha256": "57ab41a289e3361deb513eab95716cbaa2f458d42c603212ee06397bcaadab0b",
+        "sha256_in_prefix": "57ab41a289e3361deb513eab95716cbaa2f458d42c603212ee06397bcaadab0b",
+        "size_in_bytes": 12660
+      },
+      {
+        "_path": "bin/subpix",
+        "path_type": "hardlink",
+        "sha256": "f05902b11ba80cd65be3d0986d9352b8aa2e8e2a5873d75524ab5316d4aee0c6",
+        "sha256_in_prefix": "f05902b11ba80cd65be3d0986d9352b8aa2e8e2a5873d75524ab5316d4aee0c6",
+        "size_in_bytes": 278056
+      },
+      {
+        "_path": "bin/sumpix",
+        "path_type": "hardlink",
+        "sha256": "a40bf7955cf7f4549db1a6111fb5ee7296d473a318eecf91e906cd952811abf2",
+        "sha256_in_prefix": "a40bf7955cf7f4549db1a6111fb5ee7296d473a318eecf91e906cd952811abf2",
+        "size_in_bytes": 1188276
+      },
+      {
+        "_path": "bin/wcshead",
+        "path_type": "hardlink",
+        "sha256": "a8b999be57bf1017d93b75cc87597f4239a65e870f1872ddfaf5853fd746c4a3",
+        "sha256_in_prefix": "a8b999be57bf1017d93b75cc87597f4239a65e870f1872ddfaf5853fd746c4a3",
+        "size_in_bytes": 1128163
+      },
+      {
+        "_path": "bin/xy2sky",
+        "path_type": "hardlink",
+        "sha256": "a28daaceb0bff9f2228019692fb462741fd45f7b0df300ecb449e67af2330e79",
+        "sha256_in_prefix": "a28daaceb0bff9f2228019692fb462741fd45f7b0df300ecb449e67af2330e79",
+        "size_in_bytes": 1153679
+      },
+      {
+        "_path": "include/fitsfile.h",
+        "path_type": "hardlink",
+        "sha256": "459c15b1c91b1dba4daa00a21f3aca37b05f255daa80e5f798eb787de891e6d8",
+        "sha256_in_prefix": "459c15b1c91b1dba4daa00a21f3aca37b05f255daa80e5f798eb787de891e6d8",
+        "size_in_bytes": 65083
+      },
+      {
+        "_path": "include/fitsfile1.h",
+        "path_type": "hardlink",
+        "sha256": "5ff43196a8e1e530430debde49068e786c660edae4292e41be448a7701990d94",
+        "sha256_in_prefix": "5ff43196a8e1e530430debde49068e786c660edae4292e41be448a7701990d94",
+        "size_in_bytes": 42510
+      },
+      {
+        "_path": "include/fitshead.h",
+        "path_type": "hardlink",
+        "sha256": "c3a2399fcb7537745723a31aafabc30ac7c60d2e92a7823cdaad7fda071852ee",
+        "sha256_in_prefix": "c3a2399fcb7537745723a31aafabc30ac7c60d2e92a7823cdaad7fda071852ee",
+        "size_in_bytes": 20207
+      },
+      {
+        "_path": "include/fitswcs.h",
+        "path_type": "hardlink",
+        "sha256": "8bbacfffb7d9e33feb1b06ce96145154c313a5dc001f391dda33afa6b992682d",
+        "sha256_in_prefix": "8bbacfffb7d9e33feb1b06ce96145154c313a5dc001f391dda33afa6b992682d",
+        "size_in_bytes": 3342
+      },
+      {
+        "_path": "include/imio.h",
+        "path_type": "hardlink",
+        "sha256": "d312914307816f507b80e1f993d375ef9f96c656bd9d9cd575510e3409df98a0",
+        "sha256_in_prefix": "d312914307816f507b80e1f993d375ef9f96c656bd9d9cd575510e3409df98a0",
+        "size_in_bytes": 3020
+      },
+      {
+        "_path": "include/lwcs.h",
+        "path_type": "hardlink",
+        "sha256": "761ba7e3e25673e4431d54271bb5403a6334c7217b2477b45c0fdfd24dfc001f",
+        "sha256_in_prefix": "761ba7e3e25673e4431d54271bb5403a6334c7217b2477b45c0fdfd24dfc001f",
+        "size_in_bytes": 3380
+      },
+      {
+        "_path": "include/wcs.h",
+        "path_type": "hardlink",
+        "sha256": "4fe221857fd3ed6f59e390741198abb6d1febb15ebda0cc0b7dcadf5d6141f08",
+        "sha256_in_prefix": "4fe221857fd3ed6f59e390741198abb6d1febb15ebda0cc0b7dcadf5d6141f08",
+        "size_in_bytes": 50117
+      },
+      {
+        "_path": "include/wcscat.h",
+        "path_type": "hardlink",
+        "sha256": "6054c91c441202c3854a0bca4247d1ebff590bab46f6f4b69488eb5f6b50b63f",
+        "sha256_in_prefix": "6054c91c441202c3854a0bca4247d1ebff590bab46f6f4b69488eb5f6b50b63f",
+        "size_in_bytes": 92339
+      },
+      {
+        "_path": "include/wcscat1.h",
+        "path_type": "hardlink",
+        "sha256": "b8ebb8c63fd2a98c2006698ce1980038c735910bbffcf45838d190acb05699a2",
+        "sha256_in_prefix": "b8ebb8c63fd2a98c2006698ce1980038c735910bbffcf45838d190acb05699a2",
+        "size_in_bytes": 88297
+      },
+      {
+        "_path": "include/wcslib.h",
+        "path_type": "hardlink",
+        "sha256": "62a7e2c24ff22cb1297546915d6189af5e796313ad06c69e0e4d3eadd1962d86",
+        "sha256_in_prefix": "62a7e2c24ff22cb1297546915d6189af5e796313ad06c69e0e4d3eadd1962d86",
+        "size_in_bytes": 16268
+      },
+      {
+        "_path": "lib/libwcs.a",
+        "path_type": "hardlink",
+        "sha256": "a90b37d28e49e9358bf9959993dcb172c079021929992fff9c0fa174ccc3081b",
+        "sha256_in_prefix": "a90b37d28e49e9358bf9959993dcb172c079021929992fff9c0fa174ccc3081b",
+        "size_in_bytes": 2478306
+      },
+      {
+        "_path": "share/doc/wcstools/COPYING",
+        "path_type": "hardlink",
+        "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6",
+        "sha256_in_prefix": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6",
+        "size_in_bytes": 17987
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 11264511,
+  "subdir": "linux-64",
+  "timestamp": 1518646335466,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/wcstools-3.9.5-1.tar.bz2",
+  "version": "3.9.5"
+}

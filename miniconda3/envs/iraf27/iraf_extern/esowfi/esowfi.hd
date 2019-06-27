@@ -1,0 +1,9 @@
+# Help directory for the ESOWFI package.
+
+$doc = "./doc/"
+$src = "./src/"
+
+revisions	sys=src$Revisions
+
+esohdr		hlp=doc$esohdr.hlp,		src=src$esohdr.cl
+esosetinst	hlp=doc$esosetinst.hlp,		src=src$esosetinst.cl

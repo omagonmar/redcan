@@ -1,0 +1,44 @@
+#$Header: /home/pros/xray/xtiming/addsine/RCS/mkpkg,v 11.0 1997/11/06 16:44:58 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:44:58  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:34:38  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:41:49  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:02:33  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:58:42  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  23:05:21  prosb
+#General Release 2.1
+#
+#Revision 3.1  92/10/23  10:04:19  mo
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  02:00:17  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  17:57:54  mo
+#MC	7/21/91		Update for new package structure
+#
+#Revision 2.0  91/03/06  22:40:05  pros
+#General Release 1.0
+#
+# Make the addsine task
+
+$checkout libpkg.a ../
+$update libpkg.a 
+$checkin libpkg.a ../
+$exit
+ 
+
+libpkg.a:
+	addsine.x <mach.h> <tbset.h>
+	addtabio.x <mach.h> <tbset.h>
+	;

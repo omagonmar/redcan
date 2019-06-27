@@ -1,0 +1,169 @@
+# Make the FINDER package.
+
+$iffile (lib/index.tab)
+    $echo "The GSC index table finder$lib/index.tab exists."
+    $echo "The (machine dependent) format and integrity of this"
+    $echo "table should be verified."
+    $echo ""
+$else
+    $echo "The GSC index table finder$lib/index.tab does not exist."
+    $echo "The IRAF finder package gscindex task will need to be"
+    $echo "executed before the package can be used."
+$endif
+
+$call	update@src
+$exit
+
+update:
+	$call update@src
+	;
+
+# STRIP -- Strip the FINDER package directories of all sources and other files
+# not required to run the system, or for user programming.
+
+strip:
+	!rmfiles -f lib/strip.finder
+	;
+
+# SUMMARY -- [UNIX] mkpkg summary: output a summary of the spooled mkpkg
+# output, omitting most of the mundane chatter.  Used to scan large spool
+# files for errors.
+
+summary:
+	$ifeq (HOSTID, unix)
+	    ! grep -v ':$$' spool | grep -v '^xc' | grep -v '^ar'\
+	    | grep -v '^check file'
+	$else
+	    $echo "mkpkg summary only available on a UNIX system"
+	$endif
+	;
+
+# SUN/IRAF multiple architecture support.
+# ----------------------------------------
+
+arch:					# show current float option
+showfloat:
+	$verbose off
+	!$(hlib)/mkfloat.csh
+	;
+generic:				# generic installation (no bin)
+	$ifnfile (bin.generic)
+	    !mkdir bin.generic
+	$endif
+	$verbose off
+	$set DIRS = "lib src"
+	!$(hlib)/mkfloat.csh generic -d $(DIRS)
+	;
+
+alpha:                                  # install DEC Alpha binaries
+	$ifnfile (bin.alpha)
+	    !mkdir bin.alpha
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh alpha -d $(DIRS)
+        ;
+freebsd:                                # install FreeBSD binaries
+	$ifnfile (bin.freebsd)
+	    !mkdir bin.freebsd
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh freebsd -d $(DIRS)
+        ;
+hp700:					# install HPUX series 700 binaries
+	$ifnfile (bin.hp700)
+	    !mkdir bin.hp700
+	$endif
+	$verbose off
+	$set DIRS = "lib src"
+	!$(hlib)/mkfloat.csh hp700 -d $(DIRS)
+	;
+irix:					# install SGI IRIX binaries
+	$ifnfile (bin.irix)
+	    !mkdir bin.irix
+	$endif
+	$verbose off
+	$set DIRS = "lib src"
+	!$(hlib)/mkfloat.csh irix -d $(DIRS)
+	;
+linux:                                  # install Slackwkare Linux binaries
+	$ifnfile (bin.linux)
+	    !mkdir bin.linux
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh linux -d $(DIRS)
+        ;
+macosx:                                 # install Mac OS X binaries
+	$ifnfile (bin.macosx)
+	    !mkdir bin.macosx
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh macosx -d $(DIRS)
+        ;
+cygwin:                                 # install Mac OS X binaries
+	$ifnfile (bin.cygwin)
+	    !mkdir bin.cygwin
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh cygwin -d $(DIRS)
+        ;
+macintel:                                 # install Mac OS X binaries
+	$ifnfile (bin.macintel)
+	    !mkdir bin.macintel
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh macintel -d $(DIRS)
+        ;
+redhat:                                 # install Redhat Linux binaries
+	$ifnfile (bin.redhat)
+	    !mkdir bin.redhat
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh redhat -d $(DIRS)
+        ;
+rs6000:					# install IBM AIX binaries
+	$ifnfile (bin.rs6000)
+	    !mkdir bin.rs6000
+	$endif
+	$verbose off
+	$set DIRS = "lib src"
+	!$(hlib)/mkfloat.csh rs6000 -d $(DIRS)
+	;
+sparc:					# install sparc binaries
+	$ifnfile (bin.sparc)
+	    !mkdir bin.sparc
+	$endif
+	$verbose off
+	$set DIRS = "lib src"
+	!$(hlib)/mkfloat.csh sparc -d $(DIRS)
+	;
+ssun:					# install Sun/Solaris binaries
+	$ifnfile (bin.ssun)
+	    !mkdir bin.ssun
+	$endif
+	$verbose off
+	$set DIRS = "lib src"
+	!$(hlib)/mkfloat.csh ssun -d $(DIRS)
+	;
+suse:                                   # install SuSE Linux binaries
+	$ifnfile (bin.suse)
+	    !mkdir bin.suse
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh suse -d $(DIRS)
+        ;
+sunos:                                  # install SunOS (Solaris x86) binaries
+	$ifnfile (bin.sunos)
+	    !mkdir bin.sunos
+	$endif
+        $verbose off
+        $set DIRS = "lib src"
+        !$(hlib)/mkfloat.csh sunos -d $(DIRS)
+        ;

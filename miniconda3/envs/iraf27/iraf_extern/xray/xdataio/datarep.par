@@ -1,0 +1,38 @@
+#$Header: /home/pros/xray/xdataio/RCS/datarep.par,v 11.0 1997/11/06 16:36:22 prosb Exp $
+#$Log: datarep.par,v $
+#Revision 11.0  1997/11/06 16:36:22  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:56:48  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:17:10  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:43:06  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:22:17  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:32:46  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:52:09  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:11:37  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:23:53  pros
+#General Release 1.0
+#
+#
+#  Parameters for the datarep task
+#
+input,s,a,"",,,"input data file"
+output,s,a,"",,,"output data file"
+template,s,a,"",,,"datarep template"
+iformat,s,a,"",,,"input data presentation (ieee|dg|vax|sun)"
+oformat,s,h,"host",,,"output data dapresentation (host)"
+clobber,b,h,no,,,"clobber existing output files"

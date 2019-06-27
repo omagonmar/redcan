@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "h6c8ec71_1",
+  "build_number": 1,
+  "depends": [
+    "libgcc-ng 7.2.0.*",
+    "libstdcxx-ng 7.2.0.*"
+  ],
+  "license": "GPL 2 and LGPL 3",
+  "name": "gmp",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1510610105481,
+  "version": "6.1.2"
+}

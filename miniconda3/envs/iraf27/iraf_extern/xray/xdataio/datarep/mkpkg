@@ -1,0 +1,57 @@
+#$Header: /home/pros/xray/xdataio/datarep/RCS/mkpkg,v 11.0 1997/11/06 16:34:00 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:34:00  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:57:47  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:18:53  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:38:02  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:23:44  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:36:10  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:00:42  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:12:20  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  19:27:22  mo
+# MC   7/21/91         Updated for package restructuring
+#
+#Revision 2.0  91/03/06  23:26:55  pros
+#General Release 1.0
+#
+# Make the xdataio package.
+
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+	$ifnewer (datapar.y, datapar.x)
+	    $ifeq (HOSTID, unix)
+		$echo "datapar.x is out of date; rebuilding with XYACC:"
+		!(rm -f datapar.x; xyacc datapar.y; mv ytab.x datapar.x)        	    $else
+		$echo "datapar.x is out of date; rebuild with XYACC"
+	    $endif
+	$endif
+	datarep.x	datarep.h
+	datapar.x       datarep.h datapar.com
+	datarun.x       datarep.h datarun.com
+	iee2host.x
+	vax2host.x
+	dg2host.x
+	vax2iee.x
+	host2txt.x	datapar.com hst2txt.com
+	;

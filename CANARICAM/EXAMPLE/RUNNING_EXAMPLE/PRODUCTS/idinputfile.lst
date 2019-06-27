@@ -1,0 +1,7 @@
+                FILE        TARG/STD/ACQ             SPEC/IM              ACQUIS            STANDARD
+ S20060925S0090.fits         ACQUISITION               IMAGE S20060925S0092.fits             NOASSOC
+ S20060925S0091.fits         ACQUISITION               IMAGE S20060925S0092.fits             NOASSOC
+ S20060925S0092.fits            STANDARD            SPECTRUM             NOASSOC             NOASSOC
+ S20060925S0095.fits         ACQUISITION               IMAGE S20060925S0097.fits             NOASSOC
+ S20060925S0096.fits         ACQUISITION               IMAGE S20060925S0097.fits             NOASSOC
+ S20060925S0097.fits              TARGET            SPECTRUM             NOASSOC S20060925S0092.fits

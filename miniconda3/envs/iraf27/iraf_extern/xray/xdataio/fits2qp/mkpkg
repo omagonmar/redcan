@@ -1,0 +1,105 @@
+#$Header: /home/pros/xray/xdataio/fits2qp/RCS/mkpkg,v 11.0 1997/11/06 16:35:33 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:35:33  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:59:48  prosb
+#General Release 2.4
+#
+#Revision 8.2  1994/09/16  16:39:48  dvs
+#Added ft_mii.x.  Changed some header dependencies.
+#
+#Revision 8.1  94/06/28  16:46:33  mo
+#MC	6/28/94		Update files with ftwcs.h dependency
+#
+#Revision 8.0  94/06/27  15:21:43  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:41:12  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  17:23:51  mo
+#MC	add routine
+#
+#Revision 6.0  93/05/24  16:26:06  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:37:53  prosb
+#General Release 2.1
+#
+#Revision 4.3  92/10/15  16:26:16  jmoran
+#*** empty log message ***
+#
+#Revision 4.2  92/10/07  17:13:08  mo
+#JM/MC		Update dependencies
+#
+#Revision 4.1  92/07/13  14:12:54  jmoran
+#JMORAN added new files
+#
+#Revision 4.0  92/04/27  15:01:50  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:14:01  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/07/21  19:23:59  mo
+#Initial revision
+#
+#Revision 2.0  91/03/06  23:26:55  pros
+#General Release 1.0
+#
+# Make the xdataio package.
+
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$checkout libimpkg.a ../
+$update libimpkg.a
+$checkin libimpkg.a ../
+$exit
+ 
+libpkg.a:
+        fits2qp.x 	<mach.h> <qpset.h> <ext.h> "cards.h" "ftwcs.h" "fits2qp.h" "fits2qp.com" "mpefits.h"
+
+        ft_header.x     <mach.h> <evmacro.h> <wfits.h> "fits2qp.h" "cards.h" "fits2qp.com"
+
+        ft_nxtext.x     <mach.h> <math.h> <evmacro.h> <wfits.h> "fits2qp.h" "cards.h" "ftwcs.h" "fits2qp.com" "mpefits.h"
+
+	ft_enterwcs.x	<ctype.h> <imhdr.h> <imio.h> "ftwcs.h" "mwcs.h"
+	ft_mwcs.x	<error.h> <imhdr.h> <imio.h> "ftwcs.h" "mwcs.h"
+        knowncards.x    cards.h <ctype.h> cards.com
+        nextcard.x      cards.h <ctype.h> cards.com
+	ft_rename.x	"fits2qp.h"
+	ft_typedef.x	<ctype.h> <evmacro.h> "fits2qp.h"
+	ft_extno.x	<ctype.h>
+	ft_addaux.x	<mach.h> <qpset.h> "fits2qp.h"
+	ft_addev.x	<mach.h> <evmacro.h> "fits2qp.h" "ftwcs.h" "fits2qp.com" "mpefits.h" "cards.h"
+	ft_savev.x	<evmacro.h> "fits2qp.h" "fits2qp.com" "cards.h"
+	ft_skip.x	<mach.h> "fits2qp.h"
+	ft_addparam.x	"cards.h"
+	ft_duplparam.x	"cards.h"
+	ft_standard.x	<qpset.h> <evmacro.h> "fits2qp.h" "fits2qp.com" "cards.h"
+	ft_macros.x
+	ft_hist.x
+	ft_mpe_event.x  <ctype.h> <mach.h> <evmacro.h> <fset.h> "cards.h" "ftwcs.h" "fits2qp.h" "mpefits.h"
+	ft_mpe_head.x   <ctype.h> <mach.h> <evmacro.h> <fset.h> <coords.h> <rosat.h> "ftwcs.h" "cards.h" "fits2qp.h" "mpefits.h"
+	ft_mpe_utl.x    <ctype.h> <mach.h> <evmacro.h> <fset.h> "cards.h" "ftwcs.h" "fits2qp.h" "mpefits.h"
+	ft_ratfits.x "fits2qp.h" "cards.h" "ftwcs.h"
+	ft_mii.x	<mach.h> <mii.h> <iraf.h> <ctype.h> "fits2qp.h"
+	;
+
+libimpkg.a:
+        fits_cards.x    wfits.com wfits.h <imhdr.h>
+        fits_params.x   wfits.h <time.h>
+        fits_read.x     rfits.com rfits.h <error.h> <fset.h> <imhdr.h>
+        fits_rheader.x  rfits.com rfits.h rfits.com <ctype.h> <imhdr.h>\
+                        <imio.h> <mach.h> "ftwcs.h"
+        fits_rimage.x   rfits.com rfits.h <imhdr.h> <fset.h> <mach.h>
+        fits_rpixels.x  <fset.h> <mach.h> <mii.h>
+        t_rfits.x       rfits.com rfits.h <error.h> <fset.h>
+        im_mpe_head.x   <ctype.h> <mach.h> <evmacro.h> <fset.h> <coords.h> \
+                        <rosat.h> <clk.h> "cards.h" "ftwcs.h" "fits2qp.h" \
+                        "mpefits.h" "rfits.h" "wfits.h"
+
+	;

@@ -1,0 +1,52 @@
+#$Header: /home/pros/xray/xtiming/timplot/RCS/mkpkg,v 11.0 1997/11/06 16:44:48 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:44:48  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:34:16  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:41:06  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:01:55  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/11/18  18:49:16  mo
+#MC	11/18/93		Update dependencies (esp. qpoe.h)
+#
+#Revision 6.0  93/05/24  16:58:01  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/20  10:33:21  janet
+#added timsetup subroutine to program.
+#
+#Revision 5.0  92/10/29  22:49:31  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:33:50  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  02:02:39  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  17:56:25  mo
+#MC	7/21/91		Update for new package structure
+#
+#Revision 2.0  91/03/06  22:51:31  pros
+#General Release 1.0
+#
+# Make control package.
+
+$checkout libpkg.a ../
+$update libpkg.a 
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+	timplot.x <tbset.h> <mach.h> <gset.h> <ext.h> timplot.h
+	timcoords.x <gset.h> <mach.h> timplot.h
+	timgraph.x <gset.h> <mach.h> <tbset.h> <qpoe.h> timplot.h
+	timsetup.x <gset.h> <mach.h> <tbset.h> timplot.h
+	;
+

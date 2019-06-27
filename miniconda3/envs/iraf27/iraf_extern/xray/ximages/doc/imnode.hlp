@@ -1,0 +1,129 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/imnode.hlp,v 11.0 1997/11/06 16:25:49 prosb Exp $
+#$Log: imnode.hlp,v $
+#Revision 11.0  1997/11/06 16:25:49  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:11  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:43:08  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:23:01  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:04:45  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:23:44  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:15:44  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:16:00  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/09  15:15:36  bent
+#xray.ximages   7/9/91
+#
+#Revision 2.0  91/03/06  23:50:51  pros
+#General Release 1.0
+#
+.help imnode Oct89 xray.ximages
+.ih
+NAME
+imnode -- edit the pixfile directory info of one or more IRAF images
+.ih
+USAGE
+imnode images node
+.ih
+DESCRIPTION
+\fIImnode\fR edits one or more IRAF image files to change the
+i_pixfile specification of the pixel file.  The pixel file pathname is
+stored in the IRAF parameter "i_pixfile" and describes where the pixel
+file (containing the actual data) is stored.  This pixfile parameter
+usually has a node name in it, so that images can be accessed from
+remote machines using IRAF networking calls.  These IRAF networking
+calls prompt for a password before accessing remote images, in order
+to protect against unauthorized access over the network.
+
+For example, if an image has a pixfile value such as
+.nf
+
+		cfa242!/pool30/eric/foo.pix
+
+.fi
+then accessing the image from cfa242 does not require networking, but
+accessing the image from any other machine does require networking and
+the user will be prompted for his password. This is unnecessary in
+cases where the directory (e.g. /pool30) is actually mounted on the
+remote machine, since ordinary I/O access would be sufficient.  Pool
+directories, for example, are commonly mounted everywhere on a LAN.
+
+For such cases, \fIimnode\fR can be used to "de-node" the pathname, so
+that node information is removed in the pixel path name.  To do this,
+specify a null string "" or "0!" for the \fInode\fR parameter. In both
+cases, the actual node is changed to "0!".  IRAF recognizes this
+special node as signifying that no networking I/O is performed (and
+therefore no password is required).
+
+One can, however, specify any node name (with a trailing "!")  or any
+directory name (with a trailing "/").  For example, if one normally
+runs IRAF on cfa242, but is running on cfa241 temporarily, the node of
+an image can be changed to cfa241 so that networking be turned off
+while accessing that image from cfa241.  If one has moved the .pix
+files from one directory to another, the task can be used to change
+the i_pixfile pathname to find the data in the new directory.
+.ih
+PARAMETERS
+.ls images = ""		prompt = list of images to de-node
+
+A list of image files (.imh) to be edited.  Templates can be used to
+specify one or more images (e.g., "f*.imh").
+.le
+.ls node = "0!"		prompt = new node or directory name
+
+The new pixfile dir name.  This can be a new node name (ending with
+"!") or a new pathname (ending with "/").  If the null string is
+input, the node "0!"  is used, which means that no IRAF networking
+will be performed.
+.le
+.ls (display = 2) [int]
+
+The display level.  A value of 0 indicates no display, 1 lists the image
+names as they are processed, >=2 lists the image names as well as the
+pixfile parameter value before and after editing.
+.le
+.ih
+EXAMPLES
+1. De-node a list of images beginning with the letter f.
+.nf
+
+	ni> imnode f*.imh display=2 node=""
+
+foo.imh:  cfa242!/pool30/eric/foo.pix -> 0!/pool30/eric/foo.pix
+foo1.imh:  cfa242!/pool30/eric/foo1.pix -> 0!/pool30/eric/foo1.pix
+foo2.imh:  cfa242!/pool30/eric/foo2.pix -> 0!/pool30/eric/foo2.pix
+foo3.imh:  cfa242!/pool30/eric/foo3.pix -> 0!/pool30/eric/foo3.pix
+
+.fi
+2. Change the pixfile directory of images beginning with f.
+.nf
+
+	ni> imnode f*.imh display=2 node="/u7/eric/test/"
+
+foo.imh:  cfa242!/pool30/eric/foo.pix -> /u7/eric/test/foo.pix
+foo1.imh:  cfa242!/pool30/eric/foo1.pix -> /u7/eric/test/foo1.pix
+foo2.imh:  cfa242!/pool30/eric/foo2.pix -> /u7/eric/test/foo2.pix
+foo3.imh:  cfa242!/pool30/eric/foo3.pix -> /u7/eric/test/foo3.pix
+
+.fi
+.ih
+TIME REQUIREMENTS
+The task is fast, since it only edits one parameter in each image.
+.ih
+BUGS
+.ih
+SEE ALSO
+.endhelp

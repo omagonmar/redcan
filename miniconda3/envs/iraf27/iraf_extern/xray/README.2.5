@@ -1,0 +1,224 @@
+              RELEASE NOTES FOR SAO/PROS 2.5 -- October 97
+
+  PROS 2.5 has been built under the IRAF V2.11 system, with the package 
+  TABLES/STSDAS version 2.0. There is now full support for Solaris 
+  platforms running PROS, and binary executables for both Sun operating 
+  systems are released.
+
+  The xray package is a "top level" package (at the same level as packages 
+  such as "tables" and "noao").  The xray package contains the sub-packages 
+  xdataio, ximages, xspatial, xspectral, xplot, xtiming, xproto, xinstall  
+  and xdemo.
+
+I) Setting up to use the XRAY package
+
+   To run the xray package, sites should use the default IRAF V2.11 
+   (V2.10 for non-Sun sites).
+
+   In addition, the TABLES 2.0.Beta package, available from STScI, is 
+   required. Optionally, the EUV package is used by the XPROTO/TABFILTER 
+   task and is available from "cea-ftp.cea.berkeley.edu" (128.32.154.12).
+
+   Users must rerun the "mkiraf" task and answer 'yes' to the 
+   're-initialize uparm?' option before running.
+
+
+II) Summarize the changes made in PROS 2.5
+
+  **** NEW TASKS ****
+
+    < package.subpackage.task  - descriptions  >
+
+     xdataio.qpappend_ftsi - Append a list of input qpoes to produce 
+       a single qpoe file. It is similar to qpappend except that it 
+       has a new parameter that gives the user the control of whether 
+       or not to append the TSI records. Either all or just the first 
+       TSI records can be included in the final qpoe file.
+
+     xdataio.rarc2pros_c - Convert ROSAT archive fits files into 
+       a set of IRAF/PROS files. It is similar to rarc2pros except
+       that it works for filenames whose extensions are capitals
+       (eg. root_BAS.FITS). 
+
+     xproto.imdetect - A new task "imdetect" has been cloned from 
+       SASS processing. It uses a fixed background level instead
+       of the local detect algorithm adopted in 'ldetect'.  It 
+       can work for ROSAT data or ASC (AXAF Science Center) data. 
+       See the help file for more details.
+
+  **** BUGFIXES AND ENHANCEMENTS ****
+
+    < package.subpackage.task  - descriptions  >
+
+     xdataio.qpappend -
+       - Updated to solve the crash problem when merging qpoe's with 
+         different TSI formats. Instead, a new qpoe is now created.
+       - Updated to write DATE-OBS,TIME-OBS,DATE-END,TIME-END as
+         character strings.
+ 
+     ximages.qpsort - 
+       Increase the length of prosdef_out for XS-EVENTS to solve 
+       the problem of the table columns truncated.
+
+     xplot.imcontour and xplot.tvimcontour -
+       Updated to check whether wcs params are available from header.
+
+     xspatial.imcnts -
+       Updated to display the count in a correct data type.
+
+     xspatial.detect.imbepos - 
+       Display a warning message when input is not in a QPOE format.
+
+     xspatial.ximages.imcalc -
+       There are two imcalc's one in stsdas and one in xspatial.  
+       If packages were loaded in the wrong order then the wrong 
+       imcalc could be called from scripts.  We have changed all 
+       the PROS tasks that use imcalc by making the call explicit 
+       ('ximages.imcalc') to preclude the previous ambiguity.
+
+     xspectral.hxflux -
+       Check the range of requested output energy and display an
+       error message if it's outside the acceptable range. 
+
+     xtiming.ksplot -     
+       The plot was scaled and labelled incorrectly when running
+       ksplot more than one time. Now it has been fixed so users 
+       do not need to log out of iraf to get another plot.
+
+     xtiming.timcor.apply_bary and xtiming.timcor.scc_to_utc -
+       These two tasks were updated to read the column name
+       NCOE from scc_to_utc.tab instead of the name NCOEFF.
+       Therefore, the table released from MPE can be read directly
+       from these tasks without any pre-conversion.
+
+     xtiming.timcor.calc_bary -
+       Updated to read the jdleap table as a floating point instead 
+       of an integer.  Also, it now read the table column "JD" instead
+       of "JDLEAP" to match up with the column name released from MPE.
+
+     xinstall.fits2spat - 
+       Added a pathname to hdummy qpoe and moved the call to 
+       datarep to the end.
+
+     qpcreate_lib - 
+       Updated to have only one qpcisqpoe.
+
+
+  **** THE UPDATED CALIBRATION DATA ****
+
+     <xpackage.data  : description >
+
+     xspatial.data :  hri_qegeom.imh          (see H&P18)  
+       Updated to correct the problem in PROS 2.4. 
+
+     xtiming.data  :  jdleap.tab              (see H&P19, H&P20)
+       A new version of the Julian Day/leap second file through 
+       1-Jul-1997. The data type is now changed to DOUBLE.
+
+     xtiming.data  :  scc_to_utc.tab          (see H&P19, H&P20)
+       Coefficients for the conversion of space craft clock time 
+       to UTC have been updated by MPE.  These values are valid 
+       through 8-Jun-1997. 
+
+
+  **** TASKS UPDATED FOR ASC AND THEIR TEST DATA ****
+
+    < package.subpackage.task  - descriptions  >
+ 
+     xproto.imdetect - A new task. 
+
+     xdataio.fits2qp and xdataio.qp2fits -
+       - Updated to do the fits and qpoe conversion. 
+       - two new cards:  qpoexrcf.cards and wcsxrcf.cards 
+
+     xspatial.detect.lpeaks - 
+       Commented out error when xdim != ydim; found no dependence in 
+       code when tested; required for AXAF gratings detection.
+
+     pros_lib -
+       xhead    - Added new keywords to the qpoe header for ASC.
+       qpcreate - Added check whether the input file is QPOE format.
+       qpwcs    - Updated to skip writing wcs when info unavailable.
+       xhist    - Added two new routines for this program to allow table
+                  files as input.
+
+     ASC data - 
+       ASC data samples for imdetect and fits2qp/qp2fit are in 
+       xspatialdata. 
+
+
+  **** UPDATED FOR ARCHITECTURE ****
+
+     xray.mkpkg - added Alpha and Linux architectures
+
+     ximages.qplintran, xtiming.fft and xdataio.eci_tools   (see hp#19)
+       updated to fix the problems when building xray on Linux.
+
+
+  **** CHANGES MADE FOR IRAF 2.11 ****
+
+     xray.lib - mkpkg.inc 
+              - add xray package name to the compile flags
+
+     xplot.xexamine -
+        IRAF2.11 has fixed the inconsistency between the QPOE
+        and IMAGE coordinate systems. Therefore, the factor of
+        0.5 pixel is no longer needed in xexamine.
+
+     xplot.<scripts> -
+        scripts in XPLOT that use the DISPLAY from IRAF have been
+        updated to accommodate the IRAF2.11 release
+
+     Updated some codes to distinguish between INDEFD and INDEFR 
+
+
+III) Other Information
+
+  A. PROS User's Guide (PUG)  ( revised on 5 December 1996, see hp#20)
+
+    Latex and/or postscript files are available via anonymous ftp:
+        sao-ftp.harvard.edu; from subdirectory /pub/pros/PUG.
+    The WWW version can be accessed with URL:
+         http://hea-www.harvard.edu/PROS/pros.html
+
+  B. Cross-referencing infomation
+
+    We are continually trying to improve the cross-referencing information
+    in PROS.  We recommend using either "references" or "xapropos" to look
+    for information on given keywords, e.g., "references prf" or
+    "xapropos prf" (xapropos requires the CTIO package to be loaded).
+
+  C. Hints & Pointers
+
+    As the provider of the PROS software package ("xray" in IRAF), the
+    ROSAT Science Data Center (RSDC) at SAO distributes HINTS & POINTERS
+    to PROS Users via email.  When we find answers to often asked
+    questions, or when we have implemented new software solutions to
+    longstanding problems, we will send this information directly to our
+    users.  These messages will also be available via anonymous ftp*, but
+    to receive the email version, you should register with us. If your
+    username is the one associated with your site registration, you are
+    already registered for "HINTS & POINTERS", but we encourage other
+    users (even at the same sites) to register.
+
+    Mailings will be sent as the need arises, perhaps every month or so.
+    If you would like to suggest items for future issues of H&P or add
+    your name to our distribution list, please contact us at the following
+    address:
+
+    ***********************************************************************
+    Internet - rsdc@cfa.harvard.edu    RSDC    MS-3
+                                       Center for Astrophysics
+                                       60 Garden St. Cambridge MA 02138 USA
+                                       tel: (617) 495-7134  FAX: 495-7356
+    ***********************************************************************
+
+    * to access our anonymous ftp service:
+        o   ftp -i sao-ftp.harvard.edu          # node address: 131.142.41.9 
+            [Name: anonymous]
+            [Password: <yourusername@yoursite>]
+
+       ftp> cd pub/pros/Hints
+
+    N.B.: you can also obtain your own copy of the PROS USERS GUIDE by
+    anonftp from subdir /pub/pros/PUG.

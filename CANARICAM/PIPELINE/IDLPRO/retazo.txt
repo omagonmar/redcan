@@ -1,0 +1,30 @@
+    
+    
+;    IF method eq 2 THEN BEGIN   
+    	;
+    	; MOFFAT calculated from the Standard for the TARGET and 3 times the width trace for the STANDARD 
+    	;
+;    	starget = fltarr(1, 2, SPEdim)
+;    	sstd_lost = fltarr(1, 2, SPEdim)
+;    	starget(0,*,*)    = Xtract( target_s , target_c, ITERNUMBER = iternumber, MODE_EXTRACT = 2, CENTER_TRACE = center_trace_t, WIDTH_TRACE = 1.*width_trace_std)
+;    	sstd    = Xtract( std_s , std_c, ITERNUMBER = iternumber, MODE_EXTRACT = 2, CENTER_TRACE = center_trace_std, WIDTH_TRACE = 6.*width_trace_std)
+;	sstd_lost(0,*,*) = Xtract( std_s , std_c,ITERNUMBER = iternumber, MODE_EXTRACT = 2, CENTER_TRACE = center_trace_std, WIDTH_TRACE = 1.*width_trace_std) 
+;    	radial_profile = 0
+;    ENDIF  
+;    IF method eq 3 THEN BEGIN   
+    	;
+    	; Theoretical value for the TARGET and 3 times the width trace for the STANDARD  SIEMPRE SIGUIENDO LA TRAZA DEL OBJECTO!! CON LA POSICION CENTRAL!!
+    	;
+;    	center_trace2 = center_trace_t
+;	IF extract_size le mean(width_trace_std) THEN BEGIN
+;    	    width_trace2  = (extract_size)*vec/vec(0)   ; if it is higher than the PSF of  the standard grows with the PSF
+;    	ENDIF ELSE BEGIN
+;            width_trace2  = sqrt(extract_size^2.  + Cvalue^2. *vec^2. *( (vec/vec(0))^2. -1.) )  ; if is lower than the PSF of the standard grows cuadratically
+;    	ENDELSE
+;    	starget = fltarr(1, 2, SPEdim)
+;    	sstd_lost = fltarr(1, 2, SPEdim)
+;    	starget(0,*,*)    = Xtract( target_s , target_c, ITERNUMBER = iternumber, MODE_EXTRACT = 2, CENTER_TRACE = center_trace2, WIDTH_TRACE = width_trace2)
+;    	sstd    = Xtract( std_s , std_c, ITERNUMBER = iternumber, MODE_EXTRACT = 2, CENTER_TRACE = center_trace_std, WIDTH_TRACE = 6.*width_trace_std)
+;	sstd_lost(0,*,*) = Xtract( std_s , std_c,ITERNUMBER = iternumber, MODE_EXTRACT = 2, CENTER_TRACE = center_trace_std, WIDTH_TRACE = width_trace2) 
+;    	radial_profile = 0
+;    ENDIF  

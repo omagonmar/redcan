@@ -1,0 +1,1134 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy",
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "radio-beam",
+    "setuptools"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/spectral-cube-0.4.3-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/spectral_cube/__init__.py",
+    "lib/python2.7/site-packages/spectral_cube/__init__.pyc",
+    "lib/python2.7/site-packages/spectral_cube/_astropy_init.py",
+    "lib/python2.7/site-packages/spectral_cube/_astropy_init.pyc",
+    "lib/python2.7/site-packages/spectral_cube/_moments.py",
+    "lib/python2.7/site-packages/spectral_cube/_moments.pyc",
+    "lib/python2.7/site-packages/spectral_cube/analysis_utilities.py",
+    "lib/python2.7/site-packages/spectral_cube/analysis_utilities.pyc",
+    "lib/python2.7/site-packages/spectral_cube/base_class.py",
+    "lib/python2.7/site-packages/spectral_cube/base_class.pyc",
+    "lib/python2.7/site-packages/spectral_cube/conftest.py",
+    "lib/python2.7/site-packages/spectral_cube/conftest.pyc",
+    "lib/python2.7/site-packages/spectral_cube/cube_utils.py",
+    "lib/python2.7/site-packages/spectral_cube/cube_utils.pyc",
+    "lib/python2.7/site-packages/spectral_cube/io/__init__.py",
+    "lib/python2.7/site-packages/spectral_cube/io/__init__.pyc",
+    "lib/python2.7/site-packages/spectral_cube/io/casa_image.py",
+    "lib/python2.7/site-packages/spectral_cube/io/casa_image.pyc",
+    "lib/python2.7/site-packages/spectral_cube/io/casa_masks.py",
+    "lib/python2.7/site-packages/spectral_cube/io/casa_masks.pyc",
+    "lib/python2.7/site-packages/spectral_cube/io/class_lmv.py",
+    "lib/python2.7/site-packages/spectral_cube/io/class_lmv.pyc",
+    "lib/python2.7/site-packages/spectral_cube/io/core.py",
+    "lib/python2.7/site-packages/spectral_cube/io/core.pyc",
+    "lib/python2.7/site-packages/spectral_cube/io/fits.py",
+    "lib/python2.7/site-packages/spectral_cube/io/fits.pyc",
+    "lib/python2.7/site-packages/spectral_cube/lower_dimensional_structures.py",
+    "lib/python2.7/site-packages/spectral_cube/lower_dimensional_structures.pyc",
+    "lib/python2.7/site-packages/spectral_cube/masks.py",
+    "lib/python2.7/site-packages/spectral_cube/masks.pyc",
+    "lib/python2.7/site-packages/spectral_cube/np_compat.py",
+    "lib/python2.7/site-packages/spectral_cube/np_compat.pyc",
+    "lib/python2.7/site-packages/spectral_cube/spectral_axis.py",
+    "lib/python2.7/site-packages/spectral_cube/spectral_axis.pyc",
+    "lib/python2.7/site-packages/spectral_cube/spectral_cube.py",
+    "lib/python2.7/site-packages/spectral_cube/spectral_cube.pyc",
+    "lib/python2.7/site-packages/spectral_cube/stokes_spectral_cube.py",
+    "lib/python2.7/site-packages/spectral_cube/stokes_spectral_cube.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/__init__.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/__init__.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/coveragerc",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/255-fk5.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/255-pixel.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/255.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/255_delta.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/455_delta_beams.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/522_delta.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/522_delta_beams.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/55.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/55_delta.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/5_spectral.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/5_spectral_beams.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/__init__.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/__init__.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/adv.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/adv_JYBEAM_upper.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/adv_Jybeam_lower.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/adv_Jybeam_whitespace.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/adv_beams.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/advs.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/cubewcs1.hdr",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/cubewcs2.hdr",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/dvsa.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/example_cube.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/example_cube.lmv",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/fk5.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/greisen2006.hdr",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/header_jybeam.hdr",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/image.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/make_test_cubes.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/make_test_cubes.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/no_overlap_fk5.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/no_overlap_image.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/partial_overlap_fk5.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/partial_overlap_image.reg",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/sadv.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/sdav.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/sdav_beams.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vad.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vda.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vda_JYBEAM_upper.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vda_Jybeam_lower.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vda_Jybeam_whitespace.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vda_beams.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/data/vsad.fits",
+    "lib/python2.7/site-packages/spectral_cube/tests/helpers.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/helpers.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/setup_package.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_analysis_functions.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_analysis_functions.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_casafuncs.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_casafuncs.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_cube_utils.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_cube_utils.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_io.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_io.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_masks.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_masks.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_moments.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_moments.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_performance.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_performance.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_projection.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_projection.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_regrid.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_regrid.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_axis.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_axis.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_cube.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_cube.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_stokes_spectral_cube.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_stokes_spectral_cube.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_subcubes.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_subcubes.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_visualization.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_visualization.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_wcs_utils.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/test_wcs_utils.pyc",
+    "lib/python2.7/site-packages/spectral_cube/tests/utilities.py",
+    "lib/python2.7/site-packages/spectral_cube/tests/utilities.pyc",
+    "lib/python2.7/site-packages/spectral_cube/utils.py",
+    "lib/python2.7/site-packages/spectral_cube/utils.pyc",
+    "lib/python2.7/site-packages/spectral_cube/version.py",
+    "lib/python2.7/site-packages/spectral_cube/version.pyc",
+    "lib/python2.7/site-packages/spectral_cube/visualization-tools.py",
+    "lib/python2.7/site-packages/spectral_cube/visualization-tools.pyc",
+    "lib/python2.7/site-packages/spectral_cube/wcs_utils.py",
+    "lib/python2.7/site-packages/spectral_cube/wcs_utils.pyc",
+    "lib/python2.7/site-packages/spectral_cube/ytcube.py",
+    "lib/python2.7/site-packages/spectral_cube/ytcube.pyc"
+  ],
+  "fn": "spectral-cube-0.4.3-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/spectral-cube-0.4.3-py27_0",
+    "type": 1
+  },
+  "md5": "21820cbe40fdff67fca444a283d25605",
+  "name": "spectral-cube",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/spectral-cube-0.4.3-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "5f4874d82699e853e1818befc91a948504e16629ffb4e30fcd65489273a70adf",
+        "sha256_in_prefix": "5f4874d82699e853e1818befc91a948504e16629ffb4e30fcd65489273a70adf",
+        "size_in_bytes": 400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "e81fc7e437c42fb47dd469c2608afe2dd4adce512db3adf8019b0980be3a764a",
+        "sha256_in_prefix": "e81fc7e437c42fb47dd469c2608afe2dd4adce512db3adf8019b0980be3a764a",
+        "size_in_bytes": 10339
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "871e0a113c0928fd195ac659842af649a1d31fd65746f55aa42b737b21b7995f",
+        "sha256_in_prefix": "871e0a113c0928fd195ac659842af649a1d31fd65746f55aa42b737b21b7995f",
+        "size_in_bytes": 32
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube-0.4.3-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "6d1ed91cf544fc5919d98d5b9bacb7316992588cefb3d61fcd9f8735f8643dcf",
+        "sha256_in_prefix": "6d1ed91cf544fc5919d98d5b9bacb7316992588cefb3d61fcd9f8735f8643dcf",
+        "size_in_bytes": 14
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3a9fc87f38ffe59a5f534c45927c3d95c45840966429a78919ff19ffe0814a24",
+        "sha256_in_prefix": "3a9fc87f38ffe59a5f534c45927c3d95c45840966429a78919ff19ffe0814a24",
+        "size_in_bytes": 667
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "692d6721a08dab29145614f48b9d94e5f92cf627a3fd5206b0521384253853b0",
+        "sha256_in_prefix": "692d6721a08dab29145614f48b9d94e5f92cf627a3fd5206b0521384253853b0",
+        "size_in_bytes": 611
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/_astropy_init.py",
+        "path_type": "hardlink",
+        "sha256": "6de17bbd1890e00bae6a0230648dcdbd44a88047464427d344230c8f92d459cb",
+        "sha256_in_prefix": "6de17bbd1890e00bae6a0230648dcdbd44a88047464427d344230c8f92d459cb",
+        "size_in_bytes": 5277
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/_astropy_init.pyc",
+        "path_type": "hardlink",
+        "sha256": "883ea402e320196ecdc3bdf9f2fc1d405b42b0c58499f1df1ed3c53063875f11",
+        "sha256_in_prefix": "883ea402e320196ecdc3bdf9f2fc1d405b42b0c58499f1df1ed3c53063875f11",
+        "size_in_bytes": 5161
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/_moments.py",
+        "path_type": "hardlink",
+        "sha256": "6a668046fabffe3a78dc780e634d4013479f9efc79f8a1cbf49a15ac808fbe84",
+        "sha256_in_prefix": "6a668046fabffe3a78dc780e634d4013479f9efc79f8a1cbf49a15ac808fbe84",
+        "size_in_bytes": 4754
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/_moments.pyc",
+        "path_type": "hardlink",
+        "sha256": "50fe09298e5535bed69d3928f5d745c2f1e3a2e9290e6e0036abc21c4f303370",
+        "sha256_in_prefix": "50fe09298e5535bed69d3928f5d745c2f1e3a2e9290e6e0036abc21c4f303370",
+        "size_in_bytes": 4960
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/analysis_utilities.py",
+        "path_type": "hardlink",
+        "sha256": "71803e0cf6b21a4f91cf324ec3b75f97dc67e49e0e257c6c8136fbd6232133d0",
+        "sha256_in_prefix": "71803e0cf6b21a4f91cf324ec3b75f97dc67e49e0e257c6c8136fbd6232133d0",
+        "size_in_bytes": 12107
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/analysis_utilities.pyc",
+        "path_type": "hardlink",
+        "sha256": "14c7f2731116a2b7e0b971cdd52d5d206b6a7caa2c6add50dd3bbc1222e87d94",
+        "sha256_in_prefix": "14c7f2731116a2b7e0b971cdd52d5d206b6a7caa2c6add50dd3bbc1222e87d94",
+        "size_in_bytes": 10427
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/base_class.py",
+        "path_type": "hardlink",
+        "sha256": "7ae98e5147bf6a96eff6e10165b36582c082e004f9eca9bb628393632c952dbf",
+        "sha256_in_prefix": "7ae98e5147bf6a96eff6e10165b36582c082e004f9eca9bb628393632c952dbf",
+        "size_in_bytes": 10070
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/base_class.pyc",
+        "path_type": "hardlink",
+        "sha256": "13c8f83d5b4784736597aec3c324d6195f0f2e89f879ce34970523531af38573",
+        "sha256_in_prefix": "13c8f83d5b4784736597aec3c324d6195f0f2e89f879ce34970523531af38573",
+        "size_in_bytes": 11621
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "1186f4680bbb3fec72358aec7322f45d0bdbb5322c50faa39fb9ae87de78ac67",
+        "sha256_in_prefix": "1186f4680bbb3fec72358aec7322f45d0bdbb5322c50faa39fb9ae87de78ac67",
+        "size_in_bytes": 1306
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "6083a39957eff20ae9794f0c2c7e0bf859065311597d0ce1c9abbae18efd6a3e",
+        "sha256_in_prefix": "6083a39957eff20ae9794f0c2c7e0bf859065311597d0ce1c9abbae18efd6a3e",
+        "size_in_bytes": 316
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/cube_utils.py",
+        "path_type": "hardlink",
+        "sha256": "802435842e4eedf78dde2597bec7eb08b10675d900a34e51f35a0d1d17b4a4ae",
+        "sha256_in_prefix": "802435842e4eedf78dde2597bec7eb08b10675d900a34e51f35a0d1d17b4a4ae",
+        "size_in_bytes": 14066
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/cube_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "c21876073a8db05eb096a39b104e2fc37326b62cf29e8fb00f458f33a059ed83",
+        "sha256_in_prefix": "c21876073a8db05eb096a39b104e2fc37326b62cf29e8fb00f458f33a059ed83",
+        "size_in_bytes": 15016
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "24727c085014fbe26595ac04295c02c76eb04f43e93192ce1bfb5feaf1c1ed83",
+        "sha256_in_prefix": "24727c085014fbe26595ac04295c02c76eb04f43e93192ce1bfb5feaf1c1ed83",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "1dff993cd083b39d27c8ed85229531db4e546daca652811940d76afd26871db9",
+        "sha256_in_prefix": "1dff993cd083b39d27c8ed85229531db4e546daca652811940d76afd26871db9",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/casa_image.py",
+        "path_type": "hardlink",
+        "sha256": "5d71cbcc8a6407ef5439639d2926fb7828ebd674c7f21ebf694d982a84d1b71d",
+        "sha256_in_prefix": "5d71cbcc8a6407ef5439639d2926fb7828ebd674c7f21ebf694d982a84d1b71d",
+        "size_in_bytes": 5535
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/casa_image.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e2047c1300784a37656ee74bd23f3b705cb92f8aa388600f288c462a1342595",
+        "sha256_in_prefix": "9e2047c1300784a37656ee74bd23f3b705cb92f8aa388600f288c462a1342595",
+        "size_in_bytes": 4015
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/casa_masks.py",
+        "path_type": "hardlink",
+        "sha256": "af954553b7902b2eac66578d715ae80a81516c6d5c50f75e0ad918b5ee1692a1",
+        "sha256_in_prefix": "af954553b7902b2eac66578d715ae80a81516c6d5c50f75e0ad918b5ee1692a1",
+        "size_in_bytes": 3144
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/casa_masks.pyc",
+        "path_type": "hardlink",
+        "sha256": "d525a2549e1283c1155260c8c911ac0171b695e1bf4df4e97fe3678533b02876",
+        "sha256_in_prefix": "d525a2549e1283c1155260c8c911ac0171b695e1bf4df4e97fe3678533b02876",
+        "size_in_bytes": 2944
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/class_lmv.py",
+        "path_type": "hardlink",
+        "sha256": "6bf5412e2ebf2ad8615ce4dcf7172a8b67f45b3fdc1bff4e642b2e9b6efa9131",
+        "sha256_in_prefix": "6bf5412e2ebf2ad8615ce4dcf7172a8b67f45b3fdc1bff4e642b2e9b6efa9131",
+        "size_in_bytes": 29515
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/class_lmv.pyc",
+        "path_type": "hardlink",
+        "sha256": "78818c0dfa3ebbca11a9e1b181f5e3c94624c5bde1cc5896ba6345bccc0cf8e9",
+        "sha256_in_prefix": "78818c0dfa3ebbca11a9e1b181f5e3c94624c5bde1cc5896ba6345bccc0cf8e9",
+        "size_in_bytes": 18389
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/core.py",
+        "path_type": "hardlink",
+        "sha256": "d30e1f3458779c057fe3b182305ac25e7841b06c9ccd2d7a32c65a23351fac04",
+        "sha256_in_prefix": "d30e1f3458779c057fe3b182305ac25e7841b06c9ccd2d7a32c65a23351fac04",
+        "size_in_bytes": 2513
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/core.pyc",
+        "path_type": "hardlink",
+        "sha256": "c457292aef827bc9fd7d7bc24e5154b9eca2c38e58c96015d950de3d95c899b7",
+        "sha256_in_prefix": "c457292aef827bc9fd7d7bc24e5154b9eca2c38e58c96015d950de3d95c899b7",
+        "size_in_bytes": 2881
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/fits.py",
+        "path_type": "hardlink",
+        "sha256": "fc670574f3f1d6805a7c952f0348c64866e79ede2a4a2df6e9b0c1d67e24b7f1",
+        "sha256_in_prefix": "fc670574f3f1d6805a7c952f0348c64866e79ede2a4a2df6e9b0c1d67e24b7f1",
+        "size_in_bytes": 7270
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/io/fits.pyc",
+        "path_type": "hardlink",
+        "sha256": "e81bbd5047879d16f3e145c66cebe7ff17f32ae2ce51ae3cb7a963465d51c377",
+        "sha256_in_prefix": "e81bbd5047879d16f3e145c66cebe7ff17f32ae2ce51ae3cb7a963465d51c377",
+        "size_in_bytes": 6332
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/lower_dimensional_structures.py",
+        "path_type": "hardlink",
+        "sha256": "8415e11b8522678000f331cf9fd607a2baab217b9577693d05866f0c329f6768",
+        "sha256_in_prefix": "8415e11b8522678000f331cf9fd607a2baab217b9577693d05866f0c329f6768",
+        "size_in_bytes": 36645
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/lower_dimensional_structures.pyc",
+        "path_type": "hardlink",
+        "sha256": "f6c031ac236a812520701b3398ca1fe6f9435cf77c1143a50dde8d2b8d5d9f21",
+        "sha256_in_prefix": "f6c031ac236a812520701b3398ca1fe6f9435cf77c1143a50dde8d2b8d5d9f21",
+        "size_in_bytes": 32369
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/masks.py",
+        "path_type": "hardlink",
+        "sha256": "061bfb3215f54ad3f00f2bf81d31b8e5421c90c6b05c093ffe2eb83597532b64",
+        "sha256_in_prefix": "061bfb3215f54ad3f00f2bf81d31b8e5421c90c6b05c093ffe2eb83597532b64",
+        "size_in_bytes": 28533
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/masks.pyc",
+        "path_type": "hardlink",
+        "sha256": "54a3605a093919d7504a752affb94b1a55dce4b0071057ce1f5de7ba42e980c2",
+        "sha256_in_prefix": "54a3605a093919d7504a752affb94b1a55dce4b0071057ce1f5de7ba42e980c2",
+        "size_in_bytes": 27515
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/np_compat.py",
+        "path_type": "hardlink",
+        "sha256": "d95ad0add78949c2f0e3614619e9c01c4ca884d1584a012b784eeca34b469d48",
+        "sha256_in_prefix": "d95ad0add78949c2f0e3614619e9c01c4ca884d1584a012b784eeca34b469d48",
+        "size_in_bytes": 808
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/np_compat.pyc",
+        "path_type": "hardlink",
+        "sha256": "237adb42b591c9b37f8306d7019e4e1e1a2d606b2d19873d5436c0ffd67e3827",
+        "sha256_in_prefix": "237adb42b591c9b37f8306d7019e4e1e1a2d606b2d19873d5436c0ffd67e3827",
+        "size_in_bytes": 1197
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/spectral_axis.py",
+        "path_type": "hardlink",
+        "sha256": "05d125ef321a2f5df71c87a2284588089a2983665f6cc3c80191ca75c8dbaf01",
+        "sha256_in_prefix": "05d125ef321a2f5df71c87a2284588089a2983665f6cc3c80191ca75c8dbaf01",
+        "size_in_bytes": 16207
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/spectral_axis.pyc",
+        "path_type": "hardlink",
+        "sha256": "beed45f0a13f6eb67a5b2a7219b5163d9cd4292d65e8eecbed2126dabb237f39",
+        "sha256_in_prefix": "beed45f0a13f6eb67a5b2a7219b5163d9cd4292d65e8eecbed2126dabb237f39",
+        "size_in_bytes": 11069
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/spectral_cube.py",
+        "path_type": "hardlink",
+        "sha256": "0cf1b9ccc932dbd205e523ab66f831b5f29448c431c8ed14ab298d19d0152eb1",
+        "sha256_in_prefix": "0cf1b9ccc932dbd205e523ab66f831b5f29448c431c8ed14ab298d19d0152eb1",
+        "size_in_bytes": 144417
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/spectral_cube.pyc",
+        "path_type": "hardlink",
+        "sha256": "fc84e16b561ac19f063d00790ebc9e4ec89f20ac73cb321fc8dd78c7776ad633",
+        "sha256_in_prefix": "fc84e16b561ac19f063d00790ebc9e4ec89f20ac73cb321fc8dd78c7776ad633",
+        "size_in_bytes": 114814
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/stokes_spectral_cube.py",
+        "path_type": "hardlink",
+        "sha256": "3ec4be6f926f4851e8966d48430cedf9971b5831f8c4e25d98842d8307ab9d73",
+        "sha256_in_prefix": "3ec4be6f926f4851e8966d48430cedf9971b5831f8c4e25d98842d8307ab9d73",
+        "size_in_bytes": 6704
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/stokes_spectral_cube.pyc",
+        "path_type": "hardlink",
+        "sha256": "f414a553b3aaf2e00b5ab476d653e3ab5f64915c7c98624b81571171605c65d9",
+        "sha256_in_prefix": "f414a553b3aaf2e00b5ab476d653e3ab5f64915c7c98624b81571171605c65d9",
+        "size_in_bytes": 7818
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "93e8680618896ba5c25cba84427795cbfa6d86595747bba64e933e9453eabb9b",
+        "sha256_in_prefix": "93e8680618896ba5c25cba84427795cbfa6d86595747bba64e933e9453eabb9b",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd0d3b0e1c9bb1f8b8e36c2939665f27a6d2c24ca2414822416fb636105fe9a1",
+        "sha256_in_prefix": "dd0d3b0e1c9bb1f8b8e36c2939665f27a6d2c24ca2414822416fb636105fe9a1",
+        "size_in_bytes": 535
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/coveragerc",
+        "path_type": "hardlink",
+        "sha256": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "sha256_in_prefix": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "size_in_bytes": 768
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/255-fk5.reg",
+        "path_type": "hardlink",
+        "sha256": "fa8f43ee03d4dc10727710b7c5c4f0a1023ebe6ccd4120f9b7f371bf91ac9c88",
+        "sha256_in_prefix": "fa8f43ee03d4dc10727710b7c5c4f0a1023ebe6ccd4120f9b7f371bf91ac9c88",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/255-pixel.reg",
+        "path_type": "hardlink",
+        "sha256": "537b67e59b05324eaf5bcebba6819514f4c62a12db9944c36f0e5d466c7339f9",
+        "sha256_in_prefix": "537b67e59b05324eaf5bcebba6819514f4c62a12db9944c36f0e5d466c7339f9",
+        "size_in_bytes": 232
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/255.fits",
+        "path_type": "hardlink",
+        "sha256": "2e8fad397119884de101e599f8924dee4c78e8ef426ae5aef5d96b68b0b9b2cb",
+        "sha256_in_prefix": "2e8fad397119884de101e599f8924dee4c78e8ef426ae5aef5d96b68b0b9b2cb",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/255_delta.fits",
+        "path_type": "hardlink",
+        "sha256": "b03c0a360898db0363b68339f512224c217022b3945058676b55ae6abbcaab9b",
+        "sha256_in_prefix": "b03c0a360898db0363b68339f512224c217022b3945058676b55ae6abbcaab9b",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/455_delta_beams.fits",
+        "path_type": "hardlink",
+        "sha256": "08163e2fd805447e78503fd51d51971b6b5acf3e1f0198eabe405277370b9972",
+        "sha256_in_prefix": "08163e2fd805447e78503fd51d51971b6b5acf3e1f0198eabe405277370b9972",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/522_delta.fits",
+        "path_type": "hardlink",
+        "sha256": "078b17f058f8b6a3cd83742e8e8da3b6d24c2ce9ba1dddc759456b424c03165c",
+        "sha256_in_prefix": "078b17f058f8b6a3cd83742e8e8da3b6d24c2ce9ba1dddc759456b424c03165c",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/522_delta_beams.fits",
+        "path_type": "hardlink",
+        "sha256": "65c949015e33b813fe76f25f56302b98059eca067f66027f098fc3df9b7cb449",
+        "sha256_in_prefix": "65c949015e33b813fe76f25f56302b98059eca067f66027f098fc3df9b7cb449",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/55.fits",
+        "path_type": "hardlink",
+        "sha256": "dca91fd8afaaa9978fae1e14014074ce099bf03b20eec06a9981dc28708c3f4a",
+        "sha256_in_prefix": "dca91fd8afaaa9978fae1e14014074ce099bf03b20eec06a9981dc28708c3f4a",
+        "size_in_bytes": 5760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/55_delta.fits",
+        "path_type": "hardlink",
+        "sha256": "d13e39bc8099624eaf9d9c9b9220b55c92e56f85ab0aa9e7ecab19206fdba3ab",
+        "sha256_in_prefix": "d13e39bc8099624eaf9d9c9b9220b55c92e56f85ab0aa9e7ecab19206fdba3ab",
+        "size_in_bytes": 5760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/5_spectral.fits",
+        "path_type": "hardlink",
+        "sha256": "920698aad7af4abace30dc01e71fd11602671b8b9c2e22435225a3d58d83fcf6",
+        "sha256_in_prefix": "920698aad7af4abace30dc01e71fd11602671b8b9c2e22435225a3d58d83fcf6",
+        "size_in_bytes": 5760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/5_spectral_beams.fits",
+        "path_type": "hardlink",
+        "sha256": "3e1e64caecbb167cc693f5ee9b75c218bf0bbf9d30fe8aa6e863863aad8b08f0",
+        "sha256_in_prefix": "3e1e64caecbb167cc693f5ee9b75c218bf0bbf9d30fe8aa6e863863aad8b08f0",
+        "size_in_bytes": 11520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "87097597527a314bcf354d3fdcf7eb417f9be0a1ada12aed98f092fd1fd12288",
+        "sha256_in_prefix": "87097597527a314bcf354d3fdcf7eb417f9be0a1ada12aed98f092fd1fd12288",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/adv.fits",
+        "path_type": "hardlink",
+        "sha256": "829caf967c314aa3d35530a5aa9e4517a148fc4a2909d37512aba4284b742b14",
+        "sha256_in_prefix": "829caf967c314aa3d35530a5aa9e4517a148fc4a2909d37512aba4284b742b14",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/adv_JYBEAM_upper.fits",
+        "path_type": "hardlink",
+        "sha256": "68d1eb544e007f37c9ef8cc7cdd3109b03509d525cc60a9e4ffb09ccdd10f56e",
+        "sha256_in_prefix": "68d1eb544e007f37c9ef8cc7cdd3109b03509d525cc60a9e4ffb09ccdd10f56e",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/adv_Jybeam_lower.fits",
+        "path_type": "hardlink",
+        "sha256": "6b4ad7748311787f5248165ef123ccc50fa82369d3b99db52972102b60d1fa42",
+        "sha256_in_prefix": "6b4ad7748311787f5248165ef123ccc50fa82369d3b99db52972102b60d1fa42",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/adv_Jybeam_whitespace.fits",
+        "path_type": "hardlink",
+        "sha256": "705c69f8a7086c3bdf1da0e93c52ea5c7a38e715b9a9b0293e632f5b5f0213ac",
+        "sha256_in_prefix": "705c69f8a7086c3bdf1da0e93c52ea5c7a38e715b9a9b0293e632f5b5f0213ac",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/adv_beams.fits",
+        "path_type": "hardlink",
+        "sha256": "490fa540ae6f108e1fe6cfeabaee4caa72d6baee4590638ea0870a52853d1ef3",
+        "sha256_in_prefix": "490fa540ae6f108e1fe6cfeabaee4caa72d6baee4590638ea0870a52853d1ef3",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/advs.fits",
+        "path_type": "hardlink",
+        "sha256": "0c82991e88e6215d2027217069616ef214fa102299c49d4817455af89bf4967b",
+        "sha256_in_prefix": "0c82991e88e6215d2027217069616ef214fa102299c49d4817455af89bf4967b",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/cubewcs1.hdr",
+        "path_type": "hardlink",
+        "sha256": "42cb0ec24f25e3c9123ad4617aebd0a60ca1ead5eb04d410935f7642b48d88d9",
+        "sha256_in_prefix": "42cb0ec24f25e3c9123ad4617aebd0a60ca1ead5eb04d410935f7642b48d88d9",
+        "size_in_bytes": 2605
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/cubewcs2.hdr",
+        "path_type": "hardlink",
+        "sha256": "5ed4faad09fd9bc93f112e9d03c27eba080d5916d3a57242480e1334c69014a4",
+        "sha256_in_prefix": "5ed4faad09fd9bc93f112e9d03c27eba080d5916d3a57242480e1334c69014a4",
+        "size_in_bytes": 2605
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/dvsa.fits",
+        "path_type": "hardlink",
+        "sha256": "a00758f80876ac4695509014be54a0496c24b56f926579f16ade324fdd4b6515",
+        "sha256_in_prefix": "a00758f80876ac4695509014be54a0496c24b56f926579f16ade324fdd4b6515",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/example_cube.fits",
+        "path_type": "hardlink",
+        "sha256": "cc8d76c9600704e2ec5f364e404204f8bc1fabfd351a1329de7017787376daf1",
+        "sha256_in_prefix": "cc8d76c9600704e2ec5f364e404204f8bc1fabfd351a1329de7017787376daf1",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/example_cube.lmv",
+        "path_type": "hardlink",
+        "sha256": "fc31c07b2cba8267b06f7a02cbf7a3afa89a09bf4dde2d4e8e6ee78521b547d3",
+        "sha256_in_prefix": "fc31c07b2cba8267b06f7a02cbf7a3afa89a09bf4dde2d4e8e6ee78521b547d3",
+        "size_in_bytes": 8192
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/fk5.reg",
+        "path_type": "hardlink",
+        "sha256": "15e29f6905b6a94ff0e1147da9a15e9fb83edb1b03979b20b6dcec9b99d67e23",
+        "sha256_in_prefix": "15e29f6905b6a94ff0e1147da9a15e9fb83edb1b03979b20b6dcec9b99d67e23",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/greisen2006.hdr",
+        "path_type": "hardlink",
+        "sha256": "f367d7c3c4e5a3ca35a329b8d55a989e75a4cbd2bb8586dc2e60063fd2383a4b",
+        "sha256_in_prefix": "f367d7c3c4e5a3ca35a329b8d55a989e75a4cbd2bb8586dc2e60063fd2383a4b",
+        "size_in_bytes": 2265
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/header_jybeam.hdr",
+        "path_type": "hardlink",
+        "sha256": "fadbaeda357d36b1fc75dea7333bc57593031a129ab3af92b935586c350b7369",
+        "sha256_in_prefix": "fadbaeda357d36b1fc75dea7333bc57593031a129ab3af92b935586c350b7369",
+        "size_in_bytes": 3520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/image.reg",
+        "path_type": "hardlink",
+        "sha256": "0995b06da7ad9660280441422f16e39af043338e5a678abbb6b5efd724a8a326",
+        "sha256_in_prefix": "0995b06da7ad9660280441422f16e39af043338e5a678abbb6b5efd724a8a326",
+        "size_in_bytes": 211
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/make_test_cubes.py",
+        "path_type": "hardlink",
+        "sha256": "59b7d2c2154b1fa9b474b62705e34cc178c0905325145433aad0b4dc743a3e4a",
+        "sha256_in_prefix": "59b7d2c2154b1fa9b474b62705e34cc178c0905325145433aad0b4dc743a3e4a",
+        "size_in_bytes": 5860
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/make_test_cubes.pyc",
+        "path_type": "hardlink",
+        "sha256": "9dc4c15a8ae49ef8b1fc03610f7f3c216b414809fa6120c1b69a851f20ffe16c",
+        "sha256_in_prefix": "9dc4c15a8ae49ef8b1fc03610f7f3c216b414809fa6120c1b69a851f20ffe16c",
+        "size_in_bytes": 5060
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/no_overlap_fk5.reg",
+        "path_type": "hardlink",
+        "sha256": "d49b6d6980b41c38e886421a5e7d7c1f74eb53c48d6c0dae35c6d3d9340a4c64",
+        "sha256_in_prefix": "d49b6d6980b41c38e886421a5e7d7c1f74eb53c48d6c0dae35c6d3d9340a4c64",
+        "size_in_bytes": 234
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/no_overlap_image.reg",
+        "path_type": "hardlink",
+        "sha256": "34fb1fb3781c16723470c16504b09061100cc55c1bfba0d020a77df58757fcac",
+        "sha256_in_prefix": "34fb1fb3781c16723470c16504b09061100cc55c1bfba0d020a77df58757fcac",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/partial_overlap_fk5.reg",
+        "path_type": "hardlink",
+        "sha256": "5df3e7e40347740e140abb3fdf9ccba9c2f4f9183ada57dfd668e522983e0797",
+        "sha256_in_prefix": "5df3e7e40347740e140abb3fdf9ccba9c2f4f9183ada57dfd668e522983e0797",
+        "size_in_bytes": 234
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/partial_overlap_image.reg",
+        "path_type": "hardlink",
+        "sha256": "46dd999f2883bab2774f40b1817014303a81f23dd94fcbf10083027ed8cc3819",
+        "sha256_in_prefix": "46dd999f2883bab2774f40b1817014303a81f23dd94fcbf10083027ed8cc3819",
+        "size_in_bytes": 211
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/sadv.fits",
+        "path_type": "hardlink",
+        "sha256": "74f045eb8bea84e7ed8d2a9dfa829c06fcc081aaa1a1b0e9339726b1d3bedc6c",
+        "sha256_in_prefix": "74f045eb8bea84e7ed8d2a9dfa829c06fcc081aaa1a1b0e9339726b1d3bedc6c",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/sdav.fits",
+        "path_type": "hardlink",
+        "sha256": "1ae285414deb6504ecc0e7fdc8bf3307d82e4791805d9443c928cc4d65e159d0",
+        "sha256_in_prefix": "1ae285414deb6504ecc0e7fdc8bf3307d82e4791805d9443c928cc4d65e159d0",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/sdav_beams.fits",
+        "path_type": "hardlink",
+        "sha256": "d3a2726da8d4b8c609de1c70515336e0e305639f8004fc672ac94eb0a9542b6a",
+        "sha256_in_prefix": "d3a2726da8d4b8c609de1c70515336e0e305639f8004fc672ac94eb0a9542b6a",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vad.fits",
+        "path_type": "hardlink",
+        "sha256": "04df01aa100907cfc2874f1a15e31fef0ce8dc0d747c8982b6e679ac926668a2",
+        "sha256_in_prefix": "04df01aa100907cfc2874f1a15e31fef0ce8dc0d747c8982b6e679ac926668a2",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vda.fits",
+        "path_type": "hardlink",
+        "sha256": "ae5bc14ec875309fdd434d4327be6dc16295f7a8afa4f654f58fe6b4eea9cb18",
+        "sha256_in_prefix": "ae5bc14ec875309fdd434d4327be6dc16295f7a8afa4f654f58fe6b4eea9cb18",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vda_JYBEAM_upper.fits",
+        "path_type": "hardlink",
+        "sha256": "06617da717a51ea8afc65f49093757c6dcdb8ec15f9699036ae8d09c38bba649",
+        "sha256_in_prefix": "06617da717a51ea8afc65f49093757c6dcdb8ec15f9699036ae8d09c38bba649",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vda_Jybeam_lower.fits",
+        "path_type": "hardlink",
+        "sha256": "a52efe91808c80eb58b7d841ba964bb9c95bd449a675ef664043706fb35f8a52",
+        "sha256_in_prefix": "a52efe91808c80eb58b7d841ba964bb9c95bd449a675ef664043706fb35f8a52",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vda_Jybeam_whitespace.fits",
+        "path_type": "hardlink",
+        "sha256": "fe0ed3ab42f5187d8081eef6818027c6309be42e5aa6e9e517eda2f304f1187b",
+        "sha256_in_prefix": "fe0ed3ab42f5187d8081eef6818027c6309be42e5aa6e9e517eda2f304f1187b",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vda_beams.fits",
+        "path_type": "hardlink",
+        "sha256": "1e2085005a800923c00c08aa01bc96aedbeabe34ed42db93b32c4442e4e986a7",
+        "sha256_in_prefix": "1e2085005a800923c00c08aa01bc96aedbeabe34ed42db93b32c4442e4e986a7",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/data/vsad.fits",
+        "path_type": "hardlink",
+        "sha256": "b7c202b5e1c6be2b03557dcef58d800b7eafbc3166c1878ddf7d4a34df652ad4",
+        "sha256_in_prefix": "b7c202b5e1c6be2b03557dcef58d800b7eafbc3166c1878ddf7d4a34df652ad4",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "b2baa14bff9f0515e42402b1c2615e231b74fbd32cadecdb8641443f936e0717",
+        "sha256_in_prefix": "b2baa14bff9f0515e42402b1c2615e231b74fbd32cadecdb8641443f936e0717",
+        "size_in_bytes": 673
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/helpers.pyc",
+        "path_type": "hardlink",
+        "sha256": "9d840e22c32cbe90e16ba2de293dece8eeb787e268b84504db743ec706902922",
+        "sha256_in_prefix": "9d840e22c32cbe90e16ba2de293dece8eeb787e268b84504db743ec706902922",
+        "size_in_bytes": 922
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "d0bda2baae16f8d2b5e9006318d8511c34ef33619f8d753c1f3a7ddcc72ed6f4",
+        "sha256_in_prefix": "d0bda2baae16f8d2b5e9006318d8511c34ef33619f8d753c1f3a7ddcc72ed6f4",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "d014a5ec567fa9af3257542e39ff71b2ff4a89dda711f1e170767de97fc4f51e",
+        "sha256_in_prefix": "d014a5ec567fa9af3257542e39ff71b2ff4a89dda711f1e170767de97fc4f51e",
+        "size_in_bytes": 581
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_analysis_functions.py",
+        "path_type": "hardlink",
+        "sha256": "03f2cbbe6e065923b95b6b43d6dd7a6732b2101e685a6cb34b68ffa1f35a5ce3",
+        "sha256_in_prefix": "03f2cbbe6e065923b95b6b43d6dd7a6732b2101e685a6cb34b68ffa1f35a5ce3",
+        "size_in_bytes": 10609
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_analysis_functions.pyc",
+        "path_type": "hardlink",
+        "sha256": "0cefa625631a8f052ca6e66227f9594127d222cf7c437d3ff54cf4a6187ba0cf",
+        "sha256_in_prefix": "0cefa625631a8f052ca6e66227f9594127d222cf7c437d3ff54cf4a6187ba0cf",
+        "size_in_bytes": 7902
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_casafuncs.py",
+        "path_type": "hardlink",
+        "sha256": "91ae33df7f081d3de46700bf084bf85b0b8d017bb9cf54b631ae4460e0b39db3",
+        "sha256_in_prefix": "91ae33df7f081d3de46700bf084bf85b0b8d017bb9cf54b631ae4460e0b39db3",
+        "size_in_bytes": 2821
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_casafuncs.pyc",
+        "path_type": "hardlink",
+        "sha256": "be52c42a3e30ef1efd8c405a1127ea3fb87e20174756d1c4a280c142816e933c",
+        "sha256_in_prefix": "be52c42a3e30ef1efd8c405a1127ea3fb87e20174756d1c4a280c142816e933c",
+        "size_in_bytes": 3225
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_cube_utils.py",
+        "path_type": "hardlink",
+        "sha256": "7e2c5196819455edcf29a301ce365f90bfb19c412bcae73e57b7fcb19edb248d",
+        "sha256_in_prefix": "7e2c5196819455edcf29a301ce365f90bfb19c412bcae73e57b7fcb19edb248d",
+        "size_in_bytes": 459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_cube_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "88b80308ab11bb57ef14654742e19067eceebb54635242ef348ff6aec953ac3b",
+        "sha256_in_prefix": "88b80308ab11bb57ef14654742e19067eceebb54635242ef348ff6aec953ac3b",
+        "size_in_bytes": 1021
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_io.py",
+        "path_type": "hardlink",
+        "sha256": "49054c7c8a5ffd2a822b6084ebd692e024d6614856a8f539116fc87e193f6028",
+        "sha256_in_prefix": "49054c7c8a5ffd2a822b6084ebd692e024d6614856a8f539116fc87e193f6028",
+        "size_in_bytes": 2812
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_io.pyc",
+        "path_type": "hardlink",
+        "sha256": "095a4558c1db99e2321149fcc0a53eb0815bc58a322efefab43f483159b15150",
+        "sha256_in_prefix": "095a4558c1db99e2321149fcc0a53eb0815bc58a322efefab43f483159b15150",
+        "size_in_bytes": 4195
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_masks.py",
+        "path_type": "hardlink",
+        "sha256": "01612cfe30125b4d8bfcfccf25cb1657f882f62904d8228d971a4b5502523ee6",
+        "sha256_in_prefix": "01612cfe30125b4d8bfcfccf25cb1657f882f62904d8228d971a4b5502523ee6",
+        "size_in_bytes": 19301
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_masks.pyc",
+        "path_type": "hardlink",
+        "sha256": "738f7b795c2fc7c5fba1f4be1dfc6cf6bd05d7025afcdece076831358e3e9e17",
+        "sha256_in_prefix": "738f7b795c2fc7c5fba1f4be1dfc6cf6bd05d7025afcdece076831358e3e9e17",
+        "size_in_bytes": 22026
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_moments.py",
+        "path_type": "hardlink",
+        "sha256": "f1fbc9e533ece10d92fa14187fab640750da81e60352ddd68fc5dfd381d5b141",
+        "sha256_in_prefix": "f1fbc9e533ece10d92fa14187fab640750da81e60352ddd68fc5dfd381d5b141",
+        "size_in_bytes": 7009
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_moments.pyc",
+        "path_type": "hardlink",
+        "sha256": "0123c261185ac02aef2154320704b7f60a9845da290f3c365365a8de2f064a5a",
+        "sha256_in_prefix": "0123c261185ac02aef2154320704b7f60a9845da290f3c365365a8de2f064a5a",
+        "size_in_bytes": 7998
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_performance.py",
+        "path_type": "hardlink",
+        "sha256": "e742c311e9f6a3dcb09de4dc5d2d0f59914882b71d9c9143ba730f362c0f6681",
+        "sha256_in_prefix": "e742c311e9f6a3dcb09de4dc5d2d0f59914882b71d9c9143ba730f362c0f6681",
+        "size_in_bytes": 3631
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_performance.pyc",
+        "path_type": "hardlink",
+        "sha256": "396a1404ecd0ea314bd97fe49ab0a4de11c7957c08cb745ec143bc6513e171d8",
+        "sha256_in_prefix": "396a1404ecd0ea314bd97fe49ab0a4de11c7957c08cb745ec143bc6513e171d8",
+        "size_in_bytes": 4296
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_projection.py",
+        "path_type": "hardlink",
+        "sha256": "d4fdae171b18563907d8b2cf6201858ba37603407a2c3e5d435ab6707f8fe649",
+        "sha256_in_prefix": "d4fdae171b18563907d8b2cf6201858ba37603407a2c3e5d435ab6707f8fe649",
+        "size_in_bytes": 15348
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_projection.pyc",
+        "path_type": "hardlink",
+        "sha256": "f82dd071d9d37a326284e878d286de6b41a5ec8d9c2ee9151a74dd12e2bc9722",
+        "sha256_in_prefix": "f82dd071d9d37a326284e878d286de6b41a5ec8d9c2ee9151a74dd12e2bc9722",
+        "size_in_bytes": 19036
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_regrid.py",
+        "path_type": "hardlink",
+        "sha256": "185d991e696b34128a6ec7c0bd590f5027577f30e5f5cdc293d83e1966693b20",
+        "sha256_in_prefix": "185d991e696b34128a6ec7c0bd590f5027577f30e5f5cdc293d83e1966693b20",
+        "size_in_bytes": 10659
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_regrid.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b0f79540e0023e11c4f67d90bd609f9bc6e53caea95ada4f9e9025c9cf5859a",
+        "sha256_in_prefix": "7b0f79540e0023e11c4f67d90bd609f9bc6e53caea95ada4f9e9025c9cf5859a",
+        "size_in_bytes": 10645
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_axis.py",
+        "path_type": "hardlink",
+        "sha256": "ad8ed9f31cc6e7befd51c3cb3b9640938ee5809b6130d7ddda0bf8d4bd312f91",
+        "sha256_in_prefix": "ad8ed9f31cc6e7befd51c3cb3b9640938ee5809b6130d7ddda0bf8d4bd312f91",
+        "size_in_bytes": 24689
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_axis.pyc",
+        "path_type": "hardlink",
+        "sha256": "75a146da81b0dcc78edcc9456aa2472b4ee4264e86f9424516a84e9149f0d10f",
+        "sha256_in_prefix": "75a146da81b0dcc78edcc9456aa2472b4ee4264e86f9424516a84e9149f0d10f",
+        "size_in_bytes": 16942
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_cube.py",
+        "path_type": "hardlink",
+        "sha256": "99b93a145e746bbf270243d860ebb1ed08970a3abc5a38b5b7524b2dd769393d",
+        "sha256_in_prefix": "99b93a145e746bbf270243d860ebb1ed08970a3abc5a38b5b7524b2dd769393d",
+        "size_in_bytes": 61920
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_spectral_cube.pyc",
+        "path_type": "hardlink",
+        "sha256": "fb7947cc13320487a1e909ff98d3adce5a46760c1f6a8af9f3d0cc505c822099",
+        "sha256_in_prefix": "fb7947cc13320487a1e909ff98d3adce5a46760c1f6a8af9f3d0cc505c822099",
+        "size_in_bytes": 69794
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_stokes_spectral_cube.py",
+        "path_type": "hardlink",
+        "sha256": "9624b657d782f170ec44e07dbc867a5917fd477eec341beae90951410a9070ec",
+        "sha256_in_prefix": "9624b657d782f170ec44e07dbc867a5917fd477eec341beae90951410a9070ec",
+        "size_in_bytes": 7158
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_stokes_spectral_cube.pyc",
+        "path_type": "hardlink",
+        "sha256": "f65a76bd2cef5cae39c71e4b1f1eb783bb0e1dae1b27f3a2b5d3d420a2a10e57",
+        "sha256_in_prefix": "f65a76bd2cef5cae39c71e4b1f1eb783bb0e1dae1b27f3a2b5d3d420a2a10e57",
+        "size_in_bytes": 8743
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_subcubes.py",
+        "path_type": "hardlink",
+        "sha256": "938111382ae3de96f17a750a6370ebefb3a63b87e9c8e2c2d3c7064bb0cd5a24",
+        "sha256_in_prefix": "938111382ae3de96f17a750a6370ebefb3a63b87e9c8e2c2d3c7064bb0cd5a24",
+        "size_in_bytes": 3290
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_subcubes.pyc",
+        "path_type": "hardlink",
+        "sha256": "9d681d81b58e5db0926252554746ace22e2a6dd0ce36f580f5f418cc2dd6ca5c",
+        "sha256_in_prefix": "9d681d81b58e5db0926252554746ace22e2a6dd0ce36f580f5f418cc2dd6ca5c",
+        "size_in_bytes": 3704
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_visualization.py",
+        "path_type": "hardlink",
+        "sha256": "e6686c5495d82d6acd819390a2b74b678f0175fc100c77262787356918927467",
+        "sha256_in_prefix": "e6686c5495d82d6acd819390a2b74b678f0175fc100c77262787356918927467",
+        "size_in_bytes": 1637
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_visualization.pyc",
+        "path_type": "hardlink",
+        "sha256": "e700570b8edd6107937754b8666152a2148945f24eb1916128fa4adea5c8b7a3",
+        "sha256_in_prefix": "e700570b8edd6107937754b8666152a2148945f24eb1916128fa4adea5c8b7a3",
+        "size_in_bytes": 2829
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_wcs_utils.py",
+        "path_type": "hardlink",
+        "sha256": "e6cec1050bc327b077870b3262286e20e3fd5ba0b0b26871b5bc3ffa65d9970d",
+        "sha256_in_prefix": "e6cec1050bc327b077870b3262286e20e3fd5ba0b0b26871b5bc3ffa65d9970d",
+        "size_in_bytes": 5761
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/test_wcs_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "300154275b8cb363f23590ff733e02afabbfccc5309fd0f628118d5d49696c2b",
+        "sha256_in_prefix": "300154275b8cb363f23590ff733e02afabbfccc5309fd0f628118d5d49696c2b",
+        "size_in_bytes": 6934
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/utilities.py",
+        "path_type": "hardlink",
+        "sha256": "fb10d434f8866ed50c912b42e32540d0d77d40212bff6b0adbf7dd6e5986377a",
+        "sha256_in_prefix": "fb10d434f8866ed50c912b42e32540d0d77d40212bff6b0adbf7dd6e5986377a",
+        "size_in_bytes": 3468
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/tests/utilities.pyc",
+        "path_type": "hardlink",
+        "sha256": "6378c98332ae5c5aed2fd6a2431798282a7e1520516eee01bbd7f83c1531878b",
+        "sha256_in_prefix": "6378c98332ae5c5aed2fd6a2431798282a7e1520516eee01bbd7f83c1531878b",
+        "size_in_bytes": 3655
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/utils.py",
+        "path_type": "hardlink",
+        "sha256": "ab901c9184855acc17a1b7d0340fe3e9a0532668b22e97db0fd09a96f4886a87",
+        "sha256_in_prefix": "ab901c9184855acc17a1b7d0340fe3e9a0532668b22e97db0fd09a96f4886a87",
+        "size_in_bytes": 2025
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "65796f978677b7892d86cc094a3af01dbe1f5cc075657a0323aff8c2f308f460",
+        "sha256_in_prefix": "65796f978677b7892d86cc094a3af01dbe1f5cc075657a0323aff8c2f308f460",
+        "size_in_bytes": 3143
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/version.py",
+        "path_type": "hardlink",
+        "sha256": "7757307e2cf9790e5e28f82675404840843d06c21b2d0062973b23d62f946264",
+        "sha256_in_prefix": "7757307e2cf9790e5e28f82675404840843d06c21b2d0062973b23d62f946264",
+        "size_in_bytes": 7318
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "a24b0cc1317b143ba2cc89051e1ea47934504201dfe918827f8734930e043140",
+        "sha256_in_prefix": "a24b0cc1317b143ba2cc89051e1ea47934504201dfe918827f8734930e043140",
+        "size_in_bytes": 5794
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/visualization-tools.py",
+        "path_type": "hardlink",
+        "sha256": "7de46c9b67f94878740673af2203adfa5a9a1bf90ee25aede79d0d8765313d7a",
+        "sha256_in_prefix": "7de46c9b67f94878740673af2203adfa5a9a1bf90ee25aede79d0d8765313d7a",
+        "size_in_bytes": 5155
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/visualization-tools.pyc",
+        "path_type": "hardlink",
+        "sha256": "217b9a002a02962a6c643d6af583c9f7ab7e7a8ee51a6504bc6bfa2ed87bb9b7",
+        "sha256_in_prefix": "217b9a002a02962a6c643d6af583c9f7ab7e7a8ee51a6504bc6bfa2ed87bb9b7",
+        "size_in_bytes": 4916
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/wcs_utils.py",
+        "path_type": "hardlink",
+        "sha256": "e72a5934bdca4a59625e73133324216c9e12a260155b0f4e1831a82e2f05535e",
+        "sha256_in_prefix": "e72a5934bdca4a59625e73133324216c9e12a260155b0f4e1831a82e2f05535e",
+        "size_in_bytes": 14496
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/wcs_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "3c452a356a673bda56dc12979e33efe0c8eb89a833fc5233ef1bfd93f4afb38d",
+        "sha256_in_prefix": "3c452a356a673bda56dc12979e33efe0c8eb89a833fc5233ef1bfd93f4afb38d",
+        "size_in_bytes": 12486
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/ytcube.py",
+        "path_type": "hardlink",
+        "sha256": "1bb0235f0f2088d82b39a774229031708b89dbf6233ca02ed2b5a9bba55346b7",
+        "sha256_in_prefix": "1bb0235f0f2088d82b39a774229031708b89dbf6233ca02ed2b5a9bba55346b7",
+        "size_in_bytes": 11190
+      },
+      {
+        "_path": "lib/python2.7/site-packages/spectral_cube/ytcube.pyc",
+        "path_type": "hardlink",
+        "sha256": "7184f4914a7fc38bb06f556e557c8d16ec035c37cbce78a0b9b265360299c3ea",
+        "sha256_in_prefix": "7184f4914a7fc38bb06f556e557c8d16ec035c37cbce78a0b9b265360299c3ea",
+        "size_in_bytes": 11413
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 245512,
+  "subdir": "linux-64",
+  "timestamp": 1544820046395,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/spectral-cube-0.4.3-py27_0.tar.bz2",
+  "version": "0.4.3"
+}

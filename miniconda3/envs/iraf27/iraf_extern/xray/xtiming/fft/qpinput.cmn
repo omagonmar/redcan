@@ -1,0 +1,13 @@
+pointer	ltcio
+#pointer	binpars
+pointer	gbegs
+pointer	gends
+pointer minmax
+pointer	expptr
+pointer	colptr
+#pointer	srcfile
+#pointer	bkfile
+int	num_gintvs
+	common	/qpinput/colptr,expptr,gbegs,gends,minmax,num_gintvs,ltcio
+#			srcfile, bkfile
+

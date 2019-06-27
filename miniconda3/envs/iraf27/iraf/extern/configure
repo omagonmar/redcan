@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "This configure script does nothing.  All of the external packages available"
+echo "for IRAF have already been bundled with Ureka."
+echo
+echo "See README for more details."

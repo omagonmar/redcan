@@ -1,0 +1,247 @@
+# $Header: /home/pros/xray/xspectral/doc/RCS/pspc_fitting.hlp,v 11.0 1997/11/06 16:41:21 prosb Exp $
+# $Log: pspc_fitting.hlp,v $
+# Revision 11.0  1997/11/06 16:41:21  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:28:30  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/11/16  06:59:59  janet
+#Initial revision
+#
+.help pspc_fitting Jun94 xray.xspectral
+.ih
+NAME
+PSPC_fitting -- discussion of PSPC spectral response and fitting
+.ih
+\fRPSPC SPECTRAL RESPONSE FILES
+
+As a consequence  of the ongoing, inflight calibration effort, there have
+been several officially released versions of the response matrix and
+effective area files (with and without the boron filter) for the two 
+PSPC's. The PSPC-C was  destroyed  Jan '91 when spacecraft attitude
+control was lost  and  the  telescope  transited  the  sun.  The PSPC-B 
+has been used ever since. The area files contain the effective area
+of the PSPC's on-axis, and at 13 angles off-axis (in increments 
+of 5 arcminutes). All the calibration files are in the directory 
+"xspectraldata$" and were designed to be used in the following combinations:
+
+
+.nf
+Response matrix   area file   filter area file      Comments
+___________________________________________________________________
+
+                   PSPC-B        PSPC-B   (used since Jan 1991)
+                   PSPC-C        PSPC-C   (used prior to Jan 1991)
+___________________________________________________________________
+___________________________________________________________________
+
+dtmat.ieee       offar.ieee      filter.ieee      Default in PROS 1.0
+                                                  Pre-flight versions.
+                                                  non-detector specific
+
+dtmat_5.ieee     offar.ieee      filter.ieee      First post launch matrix
+                                                  non-detector specific
+
+dtmat_6.ieee     offar2_5.ieee   filter2_5.ieee   Default in PROS 2.0
+                 offar1_5.ieee   filter1_5.ieee   Same as pspcb_mar11 
+                                                  and pspcc_mar11 in XSPEC.
+
+dtmat_36.ieee    offar2_6.ieee   filter 2_5.ieee  Default in PROS 2.2 and 2.3
+                 offar1_6.ieee   filter 1_5.ieee  same as 93jan12 in XSPEC.
+_____________________________________________________________________
+.fi
+
+It is recommended that the default calibration files in PROS 2.0 be used
+for PSPC data taken before the gain change on Oct 14,1991 and that the
+default calibration files in PROS 2.2 be used for PSPC data taken after
+this time.  The start and stop time of the observation is stored
+in the header in the keywords, \fIDATE-OBS\fR and \fIDATE-END\fR.  These
+can be viewed from the QPOE file using the task \fIimheader\fR long+.
+but the xray.xspectral pkgpars parameter  controlling  this  can  be
+changed  by  the user.  For example, to change back to the
+PROS 1.0 default, type:
+
+.nf
+   cl> xray
+   cl> xspectral
+   cl> pkgpars.ros_dtmat = "xspectraldata$dtmat.ieee"
+   cl> pkgpars.ros_offar = "xspectraldata$offar.ieee"
+.fi
+
+In default mode, the PSPC-B area files are used. Data taken with 
+the boron filter are automatically fit using the correct area files.
+If the  user is analyzing data taken with the PSPC-C, the user must
+set the appropriate area files.
+
+When the photons are extracted from a source region using qpspec,
+an off-axis  histogram of all the extracted photons is generated
+and included  in the header of the "_obs.tab"  file.
+The task "fit" then uses the off-axis  histogram combined with
+the "offar" files to generate a vignetting-corrected area
+file which is applied to the specified model.
+.ih
+\fRBINNING SCHEMES
+
+Although the PSPC  detectors  have  256  channels  of  pulse  height
+information,  these  are  "down-binned"  into  34  channels for SASS
+spectral   analysis.    The   correspondence   between    the    256
+(gain-corrected)  "pi"  channels and the 34 "pi" bins is given below.
+Since  the   PROS   spectral   analysis  uses  the  same algorithms 
+as SASS, the response matrices in PROS (as described above) are 
+based  upon  this 34-bin "compressed" scheme.
+
+.nf
+34-bin   Energy    256-channels     34-bin    Energy     256-channels
+number  Low - High   included       number   Low - High    included
+------ ----- -----  ----------      ------  ----- -----   -----------
+# 1 #  0.07 - 0.09   # 7 - 8 #        18    0.84 - 0.91    84 - 90
+# 2 #  0.09 - 0.11   # 9 - 10#        19    0.91 - 0.99    91 - 98
+  3    0.11 - 0.14    11 - 13         20    0.99 - 1.07    99 - 106
+  4    0.14 - 0.17    14 - 16         21    1.07 - 1.15   107 - 114
+  5    0.17 - 0.20    17 - 19         22    1.15 - 1.23   115 - 122
+  6    0.20 - 0.24    20 - 23         23    1.23 - 1.32   123 - 131
+  7    0.24 - 0.28    24 - 27         24    1.32 - 1.41   132 - 140
+  8    0.28 - 0.32    28 - 31         25    1.41 - 1.50   141 - 149
+  9    0.32 - 0.37    32 - 36         26    1.50 - 1.60   150 - 159
+ 10    0.37 - 0.42    37 - 41         27    1.60 - 1.70   160 - 169
+ 11    0.42 - 0.47    42 - 46         28    1.70 - 1.80   170 - 179
+ 12    0.47 - 0.52    47 - 51         29    1.80 - 1.91   180 - 190
+ 13    0.52 - 0.58    52 - 57         30    1.91 - 2.02   191 - 201
+ 14    0.58 - 0.64    58 - 63         31    2.02 - 2.13   202 - 212
+ 15    0.64 - 0.70    64 - 69         32    2.13 - 2.24   213 - 223
+ 16    0.70 - 0.77    70 - 76         33    2.24 - 2.36   224 - 235
+ 17    0.77 - 0.84    77 - 83         34    2.36 - 2.48   236 - 247
+______________________________________________________________________
+
+.fi
+.nf
+Note:  It is recommended that channels 1 and 2 be excluded from 
+       spectral analysis.
+.fi
+.ih
+\fRLOW NET COUNTS
+
+If  the  number of net counts is less than ~100 it is impractical to
+fit the data in all 34 energy bins.  There  is  a  hidden  parameter
+"rebin"  in  fit  that will bin all the data into one energy channel
+before fitting the data.  If rebin=yes then the  user  must  specify
+all  the  parameters  in  the  chosen  model  as  fixed  except  the
+normalization.  Fit will than calculate the normalization of this 
+model, then  xflux can be used to determine the flux and luminosity 
+of the source.
+.ih
+\fREXTENDED OBJECTS AND DIFFUSE BACKGROUND ANALYSIS
+
+When analyzing extended sources, the background is usually obtained
+from a region well separated from the source where the effective area
+of the mirror is different.  When extracting PSPC spectra of extended
+objects with the task 'qpspec' the user can correct for differential
+vignetting and remove charged particles, which are not vignetted, by
+setting the qpspec parameter vign_correct=yes (and setting the value
+of the hidden parameter avg_mvr; see below).  The task will calculate
+an effective area weighted normalization factor for the background
+(effective area at source position / effective area at background
+position) in each of the energy bins and remove the charged particle
+contributions from the source and background.  The net counts will
+then be calculated as:
+
+.nf
+    net = (source - source_particles) - norm *
+          effective_area_norm * (background - background_particles)
+
+.fi
+where norm includes all the scalar normalization factors (user, time,
+source area to background area), and all the other variables are
+vectors over the energy bins.
+
+To subtract the charged particle background in PSPC spectra with
+qpspec, the user must first determine the time-averaged master veto
+(MV) rate during their observation.  Details on this are given in the
+next section.  A MV rate of 0.0 will inhibit the calculation of charged
+particle backgrounds.
+
+The charged particle modeling follows the paper "An Updated Calibration 
+of the ROSAT PSPC Particle Background", Plucinsky et al. 1993, ApJ, 418, 
+519.
+
+There are some simplifications in this implementation that the user
+should be aware of.  The charged particle contribution is calculated over
+all 256 PSPC PI channels, including channels where the equations are
+not applicable.  Users should not fit over these channels (PI < 8
+before 1 Jun 91; PI < 18 afterwards, this requires eliminating bins <=
+5 in fitting data aquired after 1 Jun 91).  The coefficients to the
+charged particle modeling are in the table
+"xspectraldata$particle_bkgd.tab", which can be viewed using tprint.
+The coefficients are extracted from the table according to the
+beginning date of the observation in the QPOE header; if the
+observation spans more than one set of columns the user can override
+the default data with the parameter "particle_data_column".  Also, the
+modeling does not take into account the spatial regions where the model
+is invalid.  The user can improve this approximation by adding the
+filter [detx=(458:7780),dety=(760:7098)] to their QPOE file.
+
+See \fIhelp qpspec\fR for more information on the parameters discussed in
+this section.
+.ih
+\fRFILTERED OBSERVATIONS
+
+The task 'fit' now automatically uses the off-axis histogram to
+correctly apply or not apply the filter area file to sources inside or
+outside the filter.  There is one caveat: a source that partially
+falls under the filter is probably not correctly handled, but 'fit'
+will not account for this.  The user should check that the off-axis
+histogram (in the _soh.tab file, or in the header of a pre-RDF _obs.tab 
+file) is completely above or below histogram bin nine (9).
+.ih
+\fRAVERAGE MASTER VETO RATE
+
+To subtract the charged particle background in PSPC spectra with
+qpspec, the user must first determine the time-averaged master veto
+(MV) rate during the observation.  The MV rate is contained in the
+events rate file (extension _evr.tab). The mean during the observation 
+can be determined with tasks in the tables package.  In "Analysis 
+Procedures for ROSAT XRT/PSPC Observations of Extended Objects and the 
+Diffuse X-Ray Background", Snowden et al. 1994, ApJ, 424, 714, it is 
+suggested that all time when the MV rate is greater than 170 be eliminated 
+from the data.  Here is an example of how to compute the mean MV rate 
+for the sequence rp110590.
+
+.nf
+        # Use RFITS2PROS or RARC2PROS to convert the evr file from
+        # FITS into table format.  Pre-RDF, a separate table for 
+	# each OBI was produced.  If your sequence contains more 
+        # than 1 OBI you must execute the next step to merge these 
+	# files.  If you are analyzing RDF (REV 1+) data or pre-RDF 
+	# data with a single OBI, then skip to the next step.
+
+ tmerge rp110590_evr01.tab,rp110590_evr02.tab,... total_evr.tab append
+
+        # append all the tables into one table called total_evr.tab.
+
+ tstat total_evr.tab <column-name>
+
+	# column-name = IAC_EVR for pre-RDF US data,
+	# column-name = MV_AC0 for RDF data,
+	# column-name = EE_MV for pre-RDF MPE data
+        # This task will calculate the mean MV rate during the 
+	# 	observation.
+.fi
+
+NOTE: If you want to calculate the mean MV rate during a certain time
+interval you can use the graphics editor "gtedit" to produce a table
+that only contains the MV rate during specific times.  Then use the
+task "tstat" to calculate the mean.  Also see 'help tabfilter' for a
+method to generate QPOE time filters for intervals selected from the
+MV.
+.ih
+SEE ALSO
+  
+The Rosat Users Handbook available via anonymous ftp from
+legacy.gsfc.nasa.gov contains more detailed information on the
+development of the response matrices.
+
+\fI help xdata\fR for a complete description of the data files
+\fI help tabfilter\fR for a complete description of using table data
+	to generate QPOE filters
+.endhelp

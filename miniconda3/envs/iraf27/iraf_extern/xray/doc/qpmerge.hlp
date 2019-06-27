@@ -1,0 +1,113 @@
+#$Header: /home/pros/xray/doc/RCS/qpmerge.hlp,v 11.0 1997/11/06 16:18:47 prosb Exp $
+#$Log: qpmerge.hlp,v $
+#Revision 11.0  1997/11/06 16:18:47  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:24:52  prosb
+#General Release 2.4
+#
+#Revision 8.2  1995/06/28  18:22:41  prosb
+#JCC - fixed typos.
+#
+#Revision 8.0  1994/06/27  13:42:10  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/17  18:40:30  wendy
+#Pre-Release check-in.
+#
+#
+#Revision 7.0  93/12/27  18:06:29  prosb
+#General Release 2.3
+#
+#Revision 1.2  93/12/16  16:44:51  mo
+#DEH updates
+#
+.help qpmerge Dec93 xray
+.ih
+NAME
+QPMERGE  --  How to combine a set of ROSAT observing segments.
+
+	At the present time (12/93; PROS 2.3), PROS offers no solution
+to the general problem of merging distinct qpoe files whose
+fields-of-view overlap in an arbitrary manner: 'qpmerge' is NOT a
+pros task.  However, it is possible to merge qpoe files which share
+the same pointing direction (e.g.  current SASS processing no longer
+combines data segments if they come from dates more than a few months
+apart.)
+
+	There are two problems normally confronting the observer: 
+
+1) How to provide an absolute celestial reference (e.g. to align the
+image with an optical or radio map), and 
+
+2) How to align the several time segments so that they are correctly
+registered.
+
+	The first problem requires editing the World Coordinate System
+(WCS) parameters in qpoe file headers, and is best solved with
+qphedit/wcsqpedit provided some measurable x-ray feature can be
+associated with an object of known position.  Here we will deal with
+the second problem, the process of aligning the various time segments
+to obtain a better x-ray image.  Obviously, one needs some fiducial
+feature (preferably an unresolved source near the field center) for
+which a position can be measured in each qpoe file of the observation.
+These positions may then be used to calculate the relative pixel shift
+required to properly register each qpoe file.  [NB: Although rotations
+may be required, the necessary information (two or more reference
+sources instead of the single feature needed for a simple translation)
+is normally not available.  Rotation errors are usually unimportant
+for the field center, but if you need to register for the outer field
+and there are several strong sources, refer to the help file for
+qplintran.]
+
+	For the case of simple translations:
+
+	Overlay two segments, A and B so that the celestial
+coordinates are aligned.  If the reference source on B lies to the NW
+of the source position on A, then to bring B on top of A will require
+it to shift to lower pixel values in each coordinate.  Hence, the
+desired signs for delta x and delta y (in \fIqpshift\fR) are negative.
+For 0.5" pixels, if source A is at RA=3h, DEC=20d, and source B is
+found to be at RA=2h 59m 59.4s, DEC=20d 00' 5.4", then the shift to
+move B to align with A is delta x = 0.6xcos(DEC)x15x2= -16.91 pixels
+and delta y = 2x5.4= -10.8 pixels.
+
+Run \fIqpshift\fR for each segment qpoe file with the desired shifts
+(in pixels) and with whatever region descriptors and output size are
+required.
+
+Then make an ASCII list of all files which are to be merged, with that
+segment coming first which has the best correspondence between pixels
+and RA, DEC; i.e. the one that best aligns with the real sky.  This is
+because the WCS information on the output file will be that of the
+first input file.
+
+Then run \fIqpappend\fR with the input '@filename' (the ASCII file).
+One has again the option of choosing a region.  When using the
+resultant qpoe file for further analysis, remember that the coordinate
+system is still defined for the whole field, regardless of limiting
+the number of photons with spatial regions.  
+
+When merging qpoes in PRE-RDF format with qpoes in RDF format, 
+screening that utilizes the temporal status interval (TSI) information 
+must be performed on the individual qpoe segments. 
+
+SEE ALSO 
+
+Documentation on the \fI help qpshift\fR task for a description of how
+to adjust the registration of a pair of QPOE files.
+
+Documentation on the \fI help qpappend\fR task for a description
+of how to adjust the registration of a pair of QPOE files.
+
+Documentation on the \fI help qplintran\fR task for a description
+of how to adjust the registration of a pair of QPOE files.
+
+Documentation on the \fI help wcsqpedit\fR task for a description
+of how to alter invalid WCS parameters.
+
+Documentation on the \fI help qphedit\fR task for a description
+of how to alter any other QPOE header parameters, that may be 
+causing rejection of the MERGE.
+
+

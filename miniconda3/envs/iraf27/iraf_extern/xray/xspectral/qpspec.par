@@ -1,0 +1,137 @@
+#$Header: /home/pros/xray/xspectral/RCS/qpspec.par,v 11.0 1997/11/06 16:43:48 prosb Exp $
+#$Log: qpspec.par,v $
+#Revision 11.0  1997/11/06 16:43:48  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:27:51  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:16  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/05/18  17:57:13  dennis
+#Removed "extended" parameter, as part of removing all restrictions on 
+#allowed regions.
+#
+#Revision 7.0  93/12/27  18:59:21  prosb
+#General Release 2.3
+#
+#Revision 6.7  93/12/16  16:24:31  mo
+#MC	12/15/93	Change timenorm default to 'yes'
+#
+#Revision 6.6  93/12/08  17:44:10  mo
+#MC/DENNIS	12/8/93		Fix the filename for ros_pi_offar and
+#				update default DX/DY parameter names to
+#				DETX and DETY for RDF
+#
+#Revision 6.5  93/12/02  14:06:49  dennis
+#Added parameter ros_pi_offar, for corrected vignetting correction (by PI).
+#
+#Revision 6.4  93/11/04  17:09:13  dennis
+#Restored avg_mvr to having no default value.
+#
+#Revision 6.3  93/11/02  17:22:57  dennis
+#Provided default value of 0.0 for avg_mvr.
+#
+#Revision 6.2  93/10/22  20:20:11  dennis
+#Added parameters for DSRI's HEPC1, LEPC1 instruments.
+#
+#Revision 6.1  93/09/28  17:50:48  dennis
+#Changed prompts for table and clobber, to indicate multiple output files.
+#(Part of RDF upgrade.)
+#
+#Revision 6.0  93/05/24  16:46:44  prosb
+#General Release 2.2
+#
+#Revision 5.3  93/05/04  16:42:13  orszak
+#jso - i fixed the column reading so the parameters changed.
+#
+#Revision 5.1  92/11/17  10:57:20  prosb
+#jso - changed a comment to reflect improved knowledge of units.
+#
+#Revision 5.0  92/10/29  22:47:23  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:26:19  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/03/05  13:05:33  orszak
+#jso - changes for new qpspec
+#
+#Revision 3.1  91/08/06  11:01:16  prosb
+#jso - instrument specific binning paramters are implemented.
+#
+#Revision 3.0  91/08/02  01:52:54  prosb
+#General Release 1.1
+#
+#Revision 2.8  91/07/26  12:48:24  prosb
+#jso - change default binning type from pha to pi for ROSAT observations
+#      this should become instrument specific.
+#
+#Revision 2.7  91/07/12  14:54:28  prosb
+#jso - change for pset implementation
+#
+#Revision 2.6  91/03/25  10:59:09  pros
+#jso - fixing unmatched quote
+#
+#Revision 2.5  91/03/22  13:55:20  pros
+#jso - last change for default case.
+#
+#Revision 2.2  91/03/15  13:05:26  pros
+#jso - continuation of last change
+#
+#Revision 2.1  91/03/15  12:29:19  pros
+#jso - change to allow other instruments to work
+#
+#Revision 2.0  91/03/06  22:54:40  pros
+#General Release 1.0
+#
+#
+#  Parameters for the qpspec task
+#
+source,s,a,"",,,"source qpoe file"
+region,s,a,"",,,"source region descriptor"
+exposure,s,h,"NONE",,,"source exposure mask or NONE"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion in source"
+bkgd,s,a,"",,,"background qpoe file"
+bkgdregion,s,a,"",,,"bkgd region descriptor"
+bkgdexposure,s,h,"NONE",,,"bkgd exposure mask or NONE"
+bkgdthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion in bkgd"
+table,s,a,"",,,"root name for output files [root_obs.tab, etc.]"
+pkgpars,pset,h,"",,,Spectral package parameters
+clobber,b,h,n,,,"delete old copies of table files?"
+display,i,h,1,0,5,"0=no disp, 1=spectral info, 2=QPOE info"
+full,b,h,n,,,"produce full channel spectrum?"
+timenorm,b,h,yes,,,"normalize by time?"
+normfactor,r,h,1.0,,,"user-specified normalization factor"
+syserr,s,h,"",,,"systematic error"
+detx,s,h,"detx",,,"type of binning"
+dety,s,h,"dety",,,"type of binning"
+# instrument-specific parameters
+# Einstein IPC
+ein_ipc_binning,s,h,"pha",,,"type of binning for Einstein IPC"
+bal_histo,s,h,"",,,"bal histo{bal,percent,...}"
+# Einstein HRI
+ein_hri_binning,s,h,"pha",,,"type of binning for Einstein HRI"
+# ROSAT PSPC
+ros_pspc_binning,s,h,"pi",,,"type of binning for ROSAT PSPC"
+vign_correct,b,h,n,,,"perform vignetting correction on background?"
+ros_pi_offar,s,h,"xspectraldata$ros_pi_offar.ieee",,,"offaxis effective area coefficients by PI bin"
+avg_mvr,r,h,,,,"average master veto rate"
+particle_data_column,s,h,"",,,"coeff column"
+particle_table,s,h,"xspectraldata$particle_bkgd.tab",,,"part bkgd cal table"
+# ROSAT HRI
+ros_hri_binning,s,h,"pha",,,"type of binning for ROSAT HRI"
+# SRG/SODART
+srg_lepc1_binning,s,h,"pi",,,"type of binning for SRG LEPC1"
+srg_hepc1_binning,s,h,"pi",,,"type of binning for SRG HEPC1"
+# other instruments
+channels,i,h,16,,,"number of channels or bins"
+binning,s,h,"pha",,,"type of binning"
+inst_syserr,s,h,"0.0",,,"default inst. systematic error"
+radius,r,h,3.0,,,"point source radius for other instrument"
+noah,i,h,0,,,"number of off axis histogram bins"
+oahelements,i,h,1,,,"max. no. of off axis histogram elements per line"
+oah1,s,h,"0",,,"oah angles, in units of degrees"
+xdopti,r,h,0,,,"x offset for optical axis, detector coor."
+ydopti,r,h,0,,,"y offset for optical axis, detector coor."

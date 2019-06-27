@@ -1,0 +1,247 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stsci.convolve-2.2.2-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7-nspkg.pth",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/namespace_packages.txt",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/stsci/convolve/__init__.py",
+    "lib/python2.7/site-packages/stsci/convolve/__init__.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/_correlate.so",
+    "lib/python2.7/site-packages/stsci/convolve/_lineshape.so",
+    "lib/python2.7/site-packages/stsci/convolve/convolve.py",
+    "lib/python2.7/site-packages/stsci/convolve/convolve.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/iraf_frame.py",
+    "lib/python2.7/site-packages/stsci/convolve/iraf_frame.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/lineshape.py",
+    "lib/python2.7/site-packages/stsci/convolve/lineshape.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/tests/__init__.py",
+    "lib/python2.7/site-packages/stsci/convolve/tests/__init__.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/tests/test_convolve.py",
+    "lib/python2.7/site-packages/stsci/convolve/tests/test_convolve.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/tests/test_irafframe.py",
+    "lib/python2.7/site-packages/stsci/convolve/tests/test_irafframe.pyc",
+    "lib/python2.7/site-packages/stsci/convolve/version.py",
+    "lib/python2.7/site-packages/stsci/convolve/version.pyc"
+  ],
+  "fn": "stsci.convolve-2.2.2-py27_1.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stsci.convolve-2.2.2-py27_1",
+    "type": 1
+  },
+  "md5": "2640efffe59067d098559c34b6dc62de",
+  "name": "stsci.convolve",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stsci.convolve-2.2.2-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7-nspkg.pth",
+        "path_type": "hardlink",
+        "sha256": "fc9b03b1454807574f3b84adc2c56f5b3be1a581534670c45abff3495645ad4f",
+        "sha256_in_prefix": "fc9b03b1454807574f3b84adc2c56f5b3be1a581534670c45abff3495645ad4f",
+        "size_in_bytes": 534
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "9f671936b1e2604ddb2c4907bdfc359b8f21f2c21f1fd112e40cca0a45ec5b6c",
+        "sha256_in_prefix": "9f671936b1e2604ddb2c4907bdfc359b8f21f2c21f1fd112e40cca0a45ec5b6c",
+        "size_in_bytes": 702
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "3fd5e974c6813bddb137a71ff415f38c36265c7d87f750e339abdf024db6b846",
+        "sha256_in_prefix": "3fd5e974c6813bddb137a71ff415f38c36265c7d87f750e339abdf024db6b846",
+        "size_in_bytes": 680
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/namespace_packages.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "ed257f55d8270dc467fd23d8804ab20ef40163d7eb4d1c34ab7485f2aeef8f58",
+        "sha256_in_prefix": "ed257f55d8270dc467fd23d8804ab20ef40163d7eb4d1c34ab7485f2aeef8f58",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.convolve-2.2.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "268089c815e4d0b7ce6c084197b459c32592587a86427e952ab0d045b0857ff0",
+        "sha256_in_prefix": "268089c815e4d0b7ce6c084197b459c32592587a86427e952ab0d045b0857ff0",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "9245e226e3d8b26fef8d6d329adb8ca1efaa55c606341fc8583cfde44fca0b18",
+        "sha256_in_prefix": "9245e226e3d8b26fef8d6d329adb8ca1efaa55c606341fc8583cfde44fca0b18",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/_correlate.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.14/_dispatch/miniconda/conda-bld/stsci.convolve_1552592719344/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "7fd90adb04f693a374083a57c7814bbc681eb6c84401a156b5222a91df7469a7",
+        "sha256_in_prefix": "b632acc78ff881592d87cc2c8af055b6909d726cc324667e455e8f9f7986c3f2",
+        "size_in_bytes": 76304
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/_lineshape.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.14/_dispatch/miniconda/conda-bld/stsci.convolve_1552592719344/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "79984ce56f90d0e9b6738993151c8ff8e219eb67178aea0b83a62204b55a6c5d",
+        "sha256_in_prefix": "bdd6d9831d6289721a6e91184bd9bc886a67b2f3497db897873b3349d885ebb0",
+        "size_in_bytes": 61664
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/convolve.py",
+        "path_type": "hardlink",
+        "sha256": "369f1b340ab878b3d628573fff0cfd5ea3d5220010e6afa9aa8fd2ccc3a841db",
+        "sha256_in_prefix": "369f1b340ab878b3d628573fff0cfd5ea3d5220010e6afa9aa8fd2ccc3a841db",
+        "size_in_bytes": 16167
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/convolve.pyc",
+        "path_type": "hardlink",
+        "sha256": "6cae9d6b83f2176bce29c3aa50f519fd7e9087453e58221daefc238a2a191a49",
+        "sha256_in_prefix": "6cae9d6b83f2176bce29c3aa50f519fd7e9087453e58221daefc238a2a191a49",
+        "size_in_bytes": 16736
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/iraf_frame.py",
+        "path_type": "hardlink",
+        "sha256": "4e5dbb3e138a460070dbf9e5802191e65760643f3f65d8b7827b18a79e2a9edd",
+        "sha256_in_prefix": "4e5dbb3e138a460070dbf9e5802191e65760643f3f65d8b7827b18a79e2a9edd",
+        "size_in_bytes": 6644
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/iraf_frame.pyc",
+        "path_type": "hardlink",
+        "sha256": "2be73ec381f1f966d0038cbdeb853c00d3dec02928e79357e43af8f782bea58f",
+        "sha256_in_prefix": "2be73ec381f1f966d0038cbdeb853c00d3dec02928e79357e43af8f782bea58f",
+        "size_in_bytes": 7738
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/lineshape.py",
+        "path_type": "hardlink",
+        "sha256": "40a9d1b8fdbbcc6629a34ab451c531a0f8e65fd1887366d52b169f395913791f",
+        "sha256_in_prefix": "40a9d1b8fdbbcc6629a34ab451c531a0f8e65fd1887366d52b169f395913791f",
+        "size_in_bytes": 3524
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/lineshape.pyc",
+        "path_type": "hardlink",
+        "sha256": "777a373faa19fb985f7ef4f0bbd25cafadfbb4c3d5cd93e478da15c9bc1690ef",
+        "sha256_in_prefix": "777a373faa19fb985f7ef4f0bbd25cafadfbb4c3d5cd93e478da15c9bc1690ef",
+        "size_in_bytes": 3460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ea82749f078d165c25e416770cdc46fec20da09f9b14a2cfdc4f5d3af913912a",
+        "sha256_in_prefix": "ea82749f078d165c25e416770cdc46fec20da09f9b14a2cfdc4f5d3af913912a",
+        "size_in_bytes": 32
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "74a259e2a981f9e77297954c1cd41ed8dbc0a5129a52025896d3fea5d3bc89b0",
+        "sha256_in_prefix": "74a259e2a981f9e77297954c1cd41ed8dbc0a5129a52025896d3fea5d3bc89b0",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/tests/test_convolve.py",
+        "path_type": "hardlink",
+        "sha256": "76022274a2fc7cae7ac67f0471188710524e326b4dbed2bd24e473134fb6c176",
+        "sha256_in_prefix": "76022274a2fc7cae7ac67f0471188710524e326b4dbed2bd24e473134fb6c176",
+        "size_in_bytes": 11465
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/tests/test_convolve.pyc",
+        "path_type": "hardlink",
+        "sha256": "ec645766444420cd5a6d16144793b731d2462b45a6cccf5379dce400fdd2bd51",
+        "sha256_in_prefix": "ec645766444420cd5a6d16144793b731d2462b45a6cccf5379dce400fdd2bd51",
+        "size_in_bytes": 16404
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/tests/test_irafframe.py",
+        "path_type": "hardlink",
+        "sha256": "9800eb13e6e1c1db78e41535eabff43c59e2ac54fc3e05cb863ac2fa685c9bfb",
+        "sha256_in_prefix": "9800eb13e6e1c1db78e41535eabff43c59e2ac54fc3e05cb863ac2fa685c9bfb",
+        "size_in_bytes": 3029
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/tests/test_irafframe.pyc",
+        "path_type": "hardlink",
+        "sha256": "d03d2980d3c7557411d8c54619061eb06ce1351f62413f5943e2c230a981a0c6",
+        "sha256_in_prefix": "d03d2980d3c7557411d8c54619061eb06ce1351f62413f5943e2c230a981a0c6",
+        "size_in_bytes": 3857
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/version.py",
+        "path_type": "hardlink",
+        "sha256": "b1bea838c1f7cb77f233ec487a3d9a85099208d5628a5ec065de9ff48344a493",
+        "sha256_in_prefix": "b1bea838c1f7cb77f233ec487a3d9a85099208d5628a5ec065de9ff48344a493",
+        "size_in_bytes": 2802
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/convolve/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "0b94b9c453d3d866e8bc60050647f6a5ebaca2a8ab1a5b40d7e2e474dea55afb",
+        "sha256_in_prefix": "0b94b9c453d3d866e8bc60050647f6a5ebaca2a8ab1a5b40d7e2e474dea55afb",
+        "size_in_bytes": 2055
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 68881,
+  "subdir": "linux-64",
+  "timestamp": 1552592914504,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stsci.convolve-2.2.2-py27_1.tar.bz2",
+  "version": "2.2.2"
+}

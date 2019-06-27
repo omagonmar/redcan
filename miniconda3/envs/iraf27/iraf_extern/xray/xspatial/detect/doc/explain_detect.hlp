@@ -1,0 +1,582 @@
+.help explain_detect Dec93 xray.xspatial.detect
+.ih
+NAME
+explain_detect -- description of detect tasks and algorithms
+.ih
+USAGE
+This document describes tasks and algorithms used in the detect package.
+.ih
+DESCRIPTION
+.nf
+
+Summary
+-------
+
+This document provides a brief description of the point source
+detection tasks currently available in the DETECT package, and offers
+suggestions on their proper use and the interpretation of their
+results.
+
+
+I. Overview
+-----------
+
+The DETECT package provides a simple set of tools for detecting
+discrete sources in x-ray images. The package uses techniques similar
+to those used in the standard processing of Einstein Observatory IPC
+and HRI data and in the Level 1 processing of ROSAT HRI data.  The
+current DETECT package is intended to provide a basic source detection
+capability in regions of x-ray images where the point response
+function and the exposure change only slowly.  DETECT takes advantage
+of existing IRAF or PROS tasks to provide a set of simple tools which
+can be combined flexibly by the user to meet different source
+detection needs. An IRAF task (ldetect) is also provided to execute
+DETECT tasks in sequence.
+
+New features in this version (PROS 2.2) of DETECT include:
+
+   Revised algorithm for calculating signal-to-noise (see section II
+   below) in SNRMAP.
+
+   New task LMATCHSRC, that matches sources between and within different 
+   detect cell sizes.
+
+   Added 6 & 9 arc-second detect cell sizes for ROSAT HRI and Eintein HRI.
+
+   Updated the soft/hard and broad band definitions for the ROSAT PSPC.
+
+In the remainder of this document we discuss in more detail the basic
+algorithms employed by the current DETECT tasks.  We offer some sug-
+gestions for choosing parameters for the tasks and interpreting
+results.  In the final section we discuss limitations of the current
+implementation.
+
+
+II. Basic Algorithms
+--------------------
+
+DETECT scans an x-ray image with a square "detect cell" of side d,
+placed at locations separated by d/3 in each dimension. At each
+location, the signal-to-noise ratio of a source assumed to be centered
+in the detect cell is calculated, with background estimated from a
+frame of width d/3 immediately surrounding the detect cell.  Locations
+containing local peaks in the signal-to-noise ratio above a threshold
+are identified, and maximum likelihood positions for sources
+corresponding to each local peak are determined. A final
+signal-to-noise ratio in a detect cell centered on each final position
+is calculated, and all locations with signal-to-noise ratios greater
+than the snr threshold (bepos.snr_thresh) are labeled as sources.
+
+
+    There are 5 basic tasks in the current DETECT package:
+
+        CELLMAP -       prepares x-ray qp file for DETECT. The qp file
+                        is blocked into an image of resolution d/3. An
+                        X-ray PI or PHA filter along with an image section 
+                        to keep the central 512x512 image are also applied.
+
+        SNRMAP  -       computes the signal-to-noise ratio (snr) map
+                        for the image prepared by CELLMAP. 
+
+        LPEAKS  -       scans the snr map line by line for local peaks
+                        above a user-specified threshold.
+
+        BKDEN   -       computes the mean background density in
+                        counts/sq. arcmin. in a user-defined region of
+                        the image prepared by CELLMAP. Image pixels with
+                        values which deviate from the mean by more than
+                        a user-defined threshold are rejected.
+
+        BEPOS   -       determines the maximum likelihood position for
+                        each peak identified by LPEAKS, using the original
+                        qp file. Signal-to-noise ratios in detect cells
+                        centered on the final positions are computed and
+                        positions with snr's greater than a user-specified
+                        threshold are identified as sources.
+
+In addition, the following auxiliary tasks are provided:
+
+        LDETECT  -      runs the above 5 tasks in sequence, for a single
+                        detect cell size and a single snr threshold.
+
+        DETMKREG -      makes a region file with LPEAKS and BEPOS positions.
+                        The file, when overlayed onto SAOIMAGE is a visual
+                        tool indicating where source detection in the image 
+                        was determined, along with the cellsize as indicated 
+                        by the size of the region.
+
+        LBMAP    -      generates background and background variance maps
+                        at the same resolution as in CELLMAP. These maps
+                        are for illustrative purposes only and are not
+                        used in other DETECT tasks.  The equations used to
+                        build the background map use the same algorithms as 
+                        implemented in bepos.
+
+
+    More detailed help on running each task may be found in the
+    individual task help files. We describe below the important
+    details in SNRMAP, BEPOS, and BKDEN.
+
+
+SNRMAP Algorithm
+----------------
+
+This task borrows heavily from the algebra derived for the Einstein
+IPC Rev. 1 LDETECT programs, as described in Harnden et al. (1984, SAO
+Special Report 393). The input x-ray image is that prepared in
+CELLMAP. Defining
+
+        S       = Expected total source counts,
+        B       = Expected background counts in detect cell,
+        C       = Total counts in square detect cell of size d
+                  (a 3x3 box in image of resolution d/3),
+        T       = total counts in detect cell plus surrounding
+                  background frame (a 5x5 box at d/3 resolution),
+        Q       = T - C,
+        alpha   = Integral of point response function over detect cell,
+        beta    = Integral of point response function over detect
+                  cell plus surrounding background frame,
+
+    we have
+
+        C       = alpha * S + B
+        T       = beta  * S + (25/9) * B.
+
+
+    Solving for B,
+
+        B  = [(alpha-beta)*C+alpha*Q]/[(25/9)*alpha-beta],	(1)
+
+
+    and
+
+        var(B) = [(alpha-beta)**2*var(C)+alpha**2*var(Q)] /	(2)
+                 [(25/9)*alpha-beta]**2.
+
+    Solving for S,
+
+         S  = [(16/9)*C - Q]/[(25/9)*alpha-beta], 		(3)
+
+    and
+
+         snr = S/sqrt[var(S)]					(4a) 
+
+For bright sources, C and Q may be sufficiently large (> ~40) that the
+Gaussian limits var(C)=(C) and var(Q)=(Q) may be used in determining
+var(S). However, for fainter sources, Poisson rather than Gaussian
+statistics apply, and the above definitions for var(C) and var(Q) are 
+underestimates, leading to an overestimate of the snr.  This is 
+particularly important for Q, which is likely to contain only a few 
+(mostly background) counts for faint sources in short exposures.  To 
+properly deal with small number statistics requires a more sophisticated 
+treatment than is possible with our simple snr algorithm. We attempt to 
+compensate for the deficiency, as was done in the Einstein IPC reprocessing 
+system, by defining
+
+	var(Q) = QP
+
+where
+
+	QP = (SQRT(Q) + 1)**2		Q > 40
+
+	QP = [q84 - Q]**2		Q<= 40
+
+and q84 is the 84.13% confidence level quantile for a Poisson distribution
+with a mean of Q. Values of q84 are tabulated in, for example, 
+Regner, V.H. 1951, Phys. Rev., 84, 161L. Thus,
+ 
+	snr = [(16/9)*C - Q]/sqrt[(16/9)**2*C + QP] 		(4b)
+
+
+As can be seen above, calculation of S and B depend on the values of
+alpha and beta, which may be poorly modeled. However, determination
+of the signal-to-noise is independent of these quantities.
+SNRMAP uses the IRAF IMAGES CONVOLVE task to generate the C and T
+maps, by convolving the input image with 3x3 and 5x5 boxcar functions
+of amplitude 1.0.  The B, var(B), and snr maps are calculated using
+image arithmetic with the PROS IMCALC task.
+
+
+BEPOS Algorithm
+---------------
+
+BEPOS uses the likelihood ratio parameter estimation technique (Cash,
+1979, Ap. J., v. 228, 939) to determine the best estimate and 90%
+confidence uncertainty in source position. BEPOS uses code similar to
+that used in the ROSAT Level 1 HRI processing system.  A Gaussian
+point response function is assumed. At present, the sigma of the point
+may be input by the user if known. Otherwise, the value is estimated
+from the position of the source in the image, using the relations
+discussed in section III. Currently, the off-axis angle is calculated
+from the image center.
+
+Once the value of sigma has been determined, the maximum likelihood
+position is determined from events in a circular region of radius
+ROPT*sigma, where ROPT is a user-defined parameter (OPT_RADIUS_SIGMA).
+This region is calculated once for each input position (output of lpeaks).
+
+An initial estimate of the background is required for the position
+calculation. BEPOS uses a constant (i.e. field average) value for
+this quantity, as determined from BKDEN.
+
+BEPOS also estimates the position uncertainty by incrementing the x,y
+positions about the maximum likelihood position until the C-statistic
+(-2*ln(likelihood ratio) has increased by the appropriate amount for
+the desired confidence level.
+
+BEPOS calculates the signal-to-noise ratio at the final source position 
+(snr), using the counts in a detect cell centered on that position and 
+the counts in the background frame surrounding that cell.  The 
+signal-to-noise ratio is defined in the same manner as in SNRMAP, 
+i.e., as in eq. 4b above.
+
+Sources with snr below a user-defined threshold are rejected.  A figure 
+of merit is also calculated (pconf and fsflag), to describe how well the 
+photon distribution matches that expected for the point response function.  
+Sources which do not match the point response function well are identified 
+in the output.
+
+Finally, BEPOS estimates the total source counts (srccnts) and background 
+counts (bkcnts) in the detect cell, using eqns. 1 and 3 above. The 
+quantities alpha and beta, previously required as input, are now calculated 
+by BEPOS from the PRF sigma, under the assumption of a gaussian PRF.
+
+
+BKDEN Algorithm
+---------------
+
+BKDEN calculates the average background in a user-specified region of
+the image prepared by CELLMAP. A simple average of the values in all
+image pixels in the region is calculated and pixels with values
+greater than a threshold are rejected. The process is then repeated
+for all unrejected pixels until either no further pixels are rejected
+or a maximum number of iterations is reached. The threshold is
+determined by calculating the probability, P, of a pixel having more
+that T counts, assuming the values are distributed according to
+Poisson statistics with a mean given by the average for the iteration.
+The product of P and N, the number of pixels in the region, will be
+required to be less than F, the number of acceptable fluctuations
+greater than T in the region. For the full field, F defaults to 1.
+
+If M is the mean pixel value in a given iteration, T is determined by
+the relation
+
+                m=T
+       N * [1 - SUM{exp(-M)*M**m/m!}] < F,                            (5)
+                m=0
+
+    or
+                m=T
+                SUM{M**m/m!} > exp(M) * (N-F)/N.                      (6)
+                m=0
+
+
+III. Choosing Detect Cell Sizes
+-------------------------------
+
+Experience with the Einstein Observatory detection software indicates
+that the optimum cell size is approximately 3.6 times the sigma of the
+point response function (Harnden, 1984).
+
+The ROSAT instrument+mirror point response function varies strongly
+with THETA, the distance from the optical axis (off-axis angle). In
+addition, the PSPC instrument point response function varies with
+energy. Therefore, different detect cell sizes may be appropriate for
+different regions or energy bands. Although DETECT will, by default,
+operate on the entire image, the user is advised to run DETECT
+separately with different detect cell sizes for different annular
+regions or energy bands (if appropriate), or, at the least, to
+consider the results as valid only for the region or energy band
+appropriate to the detect cell used.
+
+We have used the following parameters to describe the ROSAT point
+response function vs. energy, E, and off-axis angle, THETA (obtained
+in late '91 from Martin Zombeck [SAO] and Gunther Hasinger [MPE]).
+For both instruments, we assume a single gaussian point response
+function. More accurate models have since become available (see ROSAT
+Status Reports #22 and 23) but at present these models only apply to
+sources on-axis. The adequacy of the single gaussian model will be
+discussed further in sections VI and VII below.
+
+ROSAT HRI:
+----------
+	
+    FWHM = 2.355*sqrt[sigma(HRI)**2 + sigma(aspect)**2 +          (7)
+               (sigma(mirror)+0.0205*THETA**2.349)**2]
+
+       	sigma(HRI)    = 0.74"
+       	sigma(aspect) = 1.0"
+       	sigma(mirror) = 1.3"
+
+
+ROSAT PSPC:
+-----------
+
+       	FWHM(PSPC)    = sqrt(409.65/E + 69.28*E**2.88 + 66.29)
+       	FWHM(mirror)  = 0.29*THETA**1.74
+       	FWHM(aspect)  = 2.355*1.5
+
+    Total FWHM = sqrt(FWHM(PSPC)**2 + FWHM(mirror)**2 + FWHM(aspect)**2)  (8)
+
+
+Here, THETA is in arc-minutes, E in keV, and the result in arc-seconds.
+
+We use these functions to calculate an average point response function
+sigma for various annular regions. For the PSPC, we use a Crab-like
+spectrum to calculate the average energy in the standard PSPC energy
+bands, and use that to calculate FWHM(PSPC). The results, shown in the
+following table, should guide the user on the appropriate regions and
+energy bands for various detect cell sizes. The detect cell data for
+the Einstein HRI and IPC are shown for comparison. We have also
+included ALPHA and BETA, the fractions of the point response functions
+contained in the detect cell and in the cell and surrounding
+background frame. The PSPC energy bands are 0.1-0.4 keV (soft), 0.4 -
+2.4 keV (hard), and 0.1 - 2.4 keV (broad).
+
+
+    ROSAT HRI:
+    ==========
+
+    cell    prfsig  region                  ALPHA           BETA
+    ----------------------------------------------------------------
+    9"x9"   3.3"    0<THETA<10'             0.684           0.954
+    ----------------------------------------------------------------
+    12      3.3     0<THETA<10              0.867           0.995
+    ----------------------------------------------------------------
+    24      7.6     9<THETA<13.5            0.783           0.983
+    ----------------------------------------------------------------
+    36      12.0    12.5<THETA<16.0         0.751           0.975
+    ----------------------------------------------------------------
+    48      16.0    15.0<THETA<18.0         0.753           0.976
+    ----------------------------------------------------------------
+
+    ROSAT PSPC:
+    ===========
+
+    cell    band    prfsig  region          ALPHA           BETA
+    ----------------------------------------------------------------
+    45      s       14.9"   0<THETA<10'     0.755           0.976
+    ----------------------------------------------------------------
+    30      h/b     10.4    0<THETA<10      0.724           0.968
+    ----------------------------------------------------------------
+    60      s       20.6    10<THETA<20     0.731           0.970
+    ----------------------------------------------------------------
+    60      h/b     17.4    10<THETA<20     0.838           0.992
+    ----------------------------------------------------------------
+    120     s       36.8    20<THETA<30     0.805           0.987
+    ----------------------------------------------------------------
+    120     h/b     35.2    20<THETA<30     0.831           0.991
+
+
+    ----------------------------------------------------------------
+
+    Einstein HRI:
+    =============
+
+    cell    region          ALPHA           BETA
+    ------------------------------------------------
+    12      0<THETA<5'      0.623           0.745
+    ------------------------------------------------
+    24      0<THETA<5       0.774           0.853
+    ------------------------------------------------
+    48      0<THETA<5       0.882           0.956
+    ------------------------------------------------
+
+    Einstein IPC:
+    =============
+
+    cell    pi bands        ALPHA           BETA
+    ------------------------------------------------
+    144     h/b             0.883           1.0
+    ------------------------------------------------
+    240     s               0.883           1.0
+    ------------------------------------------------
+
+
+IV. Setting DETECT thresholds
+-----------------------------
+
+The user must set signal-to-noise thresholds in LPEAKS and BEPOS.  We
+recommend that thresholds be set to the values between 2.75 and 3.0
+sigma for LPEAKS (default = 2.75) and 3 sigma for BEPOS (default=3.0).
+The threshold in LPEAKS is defaulted below that in BEPOS, since LPEAKS 
+sources of lesser significance may yield a more significant source when 
+the detect cell is centered on the final source position.  Our experience 
+indicates that an LPEAKS threshold of 2.75 will include most sources with 
+a final BEPOS signal-to-noise ratio of 3.5 or more.  (The user may, of 
+course, set a lower LPEAKS threshold, but doing so will increase run-time.)
+
+Without applicable simulations, the detection efficiency at threshold
+is poorly determined.  Thresholds for Einstein and ROSAT Level-1
+processing were set on the basis of simulations that allowed on
+average one false source per field, but because of differences in
+instruments and algorithms, these results are not universally
+applicable.  In view of this, the user may wish to explore the
+significance of some sources (especially faint ones) with
+circular/annular regions, as opposed to the square cells used by
+DETECT, using a tool such as the xray.ximage task imcnts.
+
+
+V. Choosing the Background Region
+---------------------------------
+
+In general, the ROSAT background changes only slowly, so BKDEN can be
+run in any region. However, in observations which include regions of
+diffuse emission, BKDEN should be run in the same region in which the
+user wishes to detect sources, to obtain background values consistent
+with the "local" background values used in SNRMAP. The threshold
+number of fluctuations, used to reject source pixels, should be set to
+1, at most.
+
+
+VI. Estimating Source Intensities
+---------------------------------
+
+BEPOS uses eq. 3 above to estimate total source counts for each
+source.  To do this, the program must determine alpha and beta, the
+integrals of the PRF over the detect cell and the cell plus background
+frame.  Previously, these quantities were required as user input, but
+in the current release, they are calculated, assuming a gaussian PRF
+with a sigma which is either input by the user, or calculated from
+eqns. 7 or 8 above.
+
+At least for the HRI (both ROSAT and Einstein), this assumption may
+lead to significant errors in computing total source counts. We have
+examined ROSAT HRI calibration sequences for AR Lac at various off-
+axis angles. We find that the PRF may be roughly modeled by a core
+gaussian with sigma of 2.83", independent of off-axis angle, and
+(presumably gaussian) wings, which increase in size and amplitude with
+off-axis angle. The PRF model in eq. 7 includes contributions from
+both components.  However, we find that neither this model nor a core
+gaussian alone can accurately reproduce alpha and beta for all detect
+cells and off-axis angles, as determined empirically from the AR Lac
+data.  Therefore, we offer the following tables of multiplicative
+correction factors to apply to total source counts as determined by
+BEPOS for the ROSAT HRI.
+
+If BEPOS is run with a constant PRF sigma of 2.83" (core gaussian):
+
+
+			Detect Cell
+                        -----------
+
+        Theta       9"     12"     24"     36"     48"
+        -----     ----    ----    ----    ----    ----
+        2'        1.06    1.14    1.10    1.09    1.08
+        3'        1.05    1.11    1.10    1.09    1.09
+        6'        1.00    1.11    1.10    1.09    1.08
+        8'        1.78    1.48    1.12    1.10    1.09
+        10'       2.58    2.46    1.24    1.09    1.08
+        12'       3.19    3.14    1.76    1.24    1.12
+        14'       5.59    5.33    3.00    1.67    1.23
+        16'       7.50    7.51    4.44    2.69    1.58
+        18'      16.11   21.24   12.18    4.87    2.61
+
+
+If BEPOS calculates the PRF sigma as a function of off-axis angle:
+
+
+			Detect Cell
+			-----------
+        Theta       9"     12"     24"     36"     48"
+        -----     ----    ----    ----    ----    ----
+        2'        1.55    1.27    1.10    1.09    1.08
+        3'        1.43    1.23    1.10    1.09    1.09
+        6'        0.95    1.08    1.10    1.09    1.08
+        8'        0.84    0.95    1.10    1.10    1.09
+        10'       0.45    0.73    1.07    1.08    1.08
+        12'       0.18    0.35    1.02    1.11    1.10
+        14'       0.10    0.21    0.90    1.12    1.10
+        16'       0.04    0.11    0.61    1.08    1.06
+        18'       0.04    0.11    0.74    1.04    1.14
+
+
+The user should multiply the value of source counts determined by
+BEPOS by the value in the appropriate table for the detect cell and
+off-axis angle of interest. Columns of the tables may be interpolated
+for other off-axis angles.
+
+A similar table is provided for the Einstein HRI. In this case, the
+default PRF sigma calculated by BEPOS is 4.25" at all off-axis angles
+(chosen to yield approximately correct source intensities for the 12"
+detect cell).
+
+			Detect Cell
+                        -----------
+            Theta      12"     24"     48"
+            -----     ----    ----    ----
+            All       1.02    1.35    1.19
+
+
+VII. Limitations
+----------------
+
+i. Assumption of a Gaussian PRF 
+------------------------------- 
+
+As mentioned above, this approximation may only be valid for the ROSAT
+HRI on-axis. Although the approximation is not expected to affect the
+final source position significantly, it may affect the calculated
+uncertainty or the determination of how well the source distribution
+matches the point response function. In the current implementation, it
+also requires ad hoc procedures, as discussed in the previous section,
+to determine source intensities. In particular, the description of the
+ROSAT HRI PRF vs. off-axis angle suffers from this problem. The model
+described in eq. 7 accurately describes the 50 percent power radius
+vs. off-axis angle. Under the assumption of a gaussian PRF, this model
+may be recast as PRF sigma vs. off-axis angle. However, as discussed
+above, the integrals of that model PRF (e.g. alpha or beta) do not
+agree with the integrals of the true PRF for that off-axis angle.
+
+Extensive analysis of the PSPC PRF on-axis indicates that it too
+contains more than a single gaussian component, although at 1 keV,
+approximately 85% of the photons may be described by a single gaussian
+(see ROSAT Status Report #23, Newsletter 7, and Office for Guest
+Investigator Programs calibration memo CAL/ROS/92-001). However, the
+applicability of a single gaussian model for the PSPC PRF off-axis and
+the implication for the calculation of source intensities remains to
+be fully explored.
+
+ii. Determination of Off-axis Angle
+-----------------------------------
+
+At present, the off-axis angle is defined to be the angular separation
+of the source from the image center. Boresight offsets are not
+accounted for and, if large, may lead to significant errors in PRF
+sigma, especially for sources far off-axis, where the PRF varies
+rapidly with off-axis angle.
+
+iii. Resolution of Nearby Sources
+---------------------------------
+
+A task (lmatchsrc) is provided to match nearby sources from either the 
+same or different LDETECT runs using the same QPOE file.  Detection
+efficiency as a functions of angular separation for nearby sources
+will be examined as part of a future simulation study.
+
+iv. Contamination from Near-by Sources
+--------------------------------------
+
+No correction is made in BEPOS for such contamination. If accurate
+source intensities are desired in crowded regions, the user is advised
+to calculate them separately, using a source region large enough to
+include all source counts despite uncertainties in the point response
+function, and to exclude regions where source contamination exists.
+The IMCNTS task (xray.ximages) is recommended.
+
+v. Detection in Regions of Rapidly Varying Exposure
+---------------------------------------------------
+
+No attempt is made to handle such cases, and users are advised to
+treat sources detected near instrument edges or shadows due to rib
+support structures with caution.
+
+vi. Determination of Background Counts in Detect Cell
+-----------------------------------------------------
+
+This quantity is determined using eq. 1. However, it also suffers from
+the difficulties in calculating alpha and beta assuming a gaussian
+PRF. It should therefore be considered unreliable in the current
+implementation.  
+.fi
+

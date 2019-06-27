@@ -1,0 +1,14 @@
+imagetyp	imagetyp
+amp		imageid
+subset		filter
+
+'dome flat'	flat
+'sky flat'	flat
+'proj flat'	flat
+
+# Extension name translations to IMAGEID.
+ccd0     1
+ccd1     2
+ccd2     3
+ccd3     4
+

@@ -1,0 +1,19 @@
+#
+# Author: Lasse Collin
+#
+# This file has been put into the public domain.
+# You can do whatever you want with this file.
+#
+
+prefix=/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3
+exec_prefix=/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3
+libdir=/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/lib
+includedir=/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://tukaani.org/xz/
+Version: 5.2.4
+Cflags: -I${includedir}
+Libs: -L${libdir} -llzma
+Libs.private: -pthread -lrt  

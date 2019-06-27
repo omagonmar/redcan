@@ -1,0 +1,3 @@
+output,s,q,,,,Output file name (common part)
+n1,i,h,128,1,,Array size in the first dim.
+n2,i,h,128,1,,Array size in the second dim. 

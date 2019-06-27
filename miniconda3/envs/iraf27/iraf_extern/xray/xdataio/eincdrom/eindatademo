@@ -1,0 +1,68 @@
+\O=NOAO/IRAF V2.10EXPORT dvs@astoria.harvard.edu Mon 11:59:04 23-May-94
+\T=xterm
+\G=xtermr
+\n\{%8000
+                    Einstein data 
+This will demonstrate the unscreened Einstein IPC data by
+comparing an unscreened sequence with its screened counterpart.
+
+Note: you must have SAOimage or some other appropriate image
+displaying tool running for this demo to work properly.\}\n
+cd\simdir\n
+\{%500
+        [Loading the relevant packages.]\}\n
+xray\n
+xplot\n
+xdataio\n
+ximages\n
+\{%500
+        [Unlearning parameters for all tasks to be used.]\}\n
+unlearn\sxdisplay\n
+unlearn\shkfilter\n
+unlearn\sqpcopy\n
+\{%500
+        [Demonstrating data for IPC sequence 5803.]\}\n
+\{%500
+        [Displaying standard screened events file.]
+\}\n
+xdisplay\s"eincdromdemo$i5803.qp[bl=2]"\szrange=no\sz1=0\sz2=5\n
+\{%500
+        [Displaying unscreened photon file.]
+        [Notice the source on the edge which can now be 
+         more fully analyzed.  Notice also the bright edges.]
+\}\n
+xdisplay\s"eincdromdemo$i5803u.qp[bl=2]"\szrange=no\sz1=0\sz2=5\n
+\{%500
+        [Filtering out bad times with hkfilter and qpcopy.]
+\}\n
+hkfilter\s"eincdromdemo$i5803u.qp[failed=0]"\sfiltname=i5803hk.flt\n
+qpcopy\s"eincdromdemo$i5803u.qp[@i5803hk.flt]"\sregion="NONE"\sqpoe=i5803u_gt.qp\
+    \seventdef=""\n
+\{%500
+        [Displaying new qpoe with only good times.]
+\}\n
+xdisplay\s"i5803u_gt.qp[bl=2]"\szrange=no\sz1=0\sz2=5\n
+\{%500
+        [Displaying new qpoe with spatial screening also applied.]
+        [Note that this is the same as the standard screened events file.]
+\}\n
+xdisplay\s"i5803u_gt.qp[bl=2,status=0]"\szrange=no\sz1=0\sz2=5\n
+\{%500
+        [Displaying unscreened photon file in raw coordinates.]
+\}\n
+xdisplay\s"eincdromdemo$i5803u.qp[bl=2,key=(s16,s18)]"\szrange=no\sz1=0\sz2=\
+    5\n
+\{%500
+        [Displaying unscreened photon file in detector coordinates.]
+\}\n
+xdisplay\s"eincdromdemo$i5803u.qp[bl=2,key=(s20,s22)]"\szrange=no\sz1=0\sz2=\
+    5\n
+\{%500
+        [Deleting temporary files...]\}\n
+delete\si5803u_gt.qp\n
+delete\si5803hk.flt\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+

@@ -1,0 +1,259 @@
+# $Header: /home/pros/xray/xspatial/doc/RCS/prfroshri.hlp,v 11.0 1997/11/06 16:29:56 prosb Exp $
+# $Log: prfroshri.hlp,v $
+# Revision 11.0  1997/11/06 16:29:56  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:37:42  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:56:53  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/02/23  14:15:04  janet
+#jd - kristin update at rick's request.
+#
+#Revision 7.0  93/12/27  18:29:05  prosb
+#General Release 2.3
+#
+#Revision 6.3  93/12/22  15:13:16  mo
+#MC	12/22/93	KEK/FRH updates for AO5
+#
+#Revision 6.3  93/12/13  12:53:34  kristin
+# lpd, frh, kek added off-axis PRF details
+#
+#Revision 6.2  93/10/29  14:12:54  janet
+#updated table error, rh110258/rharlac_06.qp => (3089,3380)
+#
+#Revision 6.1  93/10/01  16:38:45  dennis
+#Corrected typo in centroid coordinate.
+#
+#Revision 6.0  93/05/24  16:11:18  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:28:59  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:35:11  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/24  13:53:11  mo
+#New PROS help file
+#
+.help prfroshri Dec93 xray.xspatial
+.ih
+NAME
+prfroshri -- Description of the point response functions (PRF) for ROSAT HRI
+.ih
+USAGE
+This document describes the PRF of the ROSAT HRI and gives tables of 
+in-orbit calibration images available in PROS.  The data files can be found 
+in the IRAF directory xrcal$.
+.ih
+DESCRIPTION
+.ih
+ 1.0 ON-AXIS POINT RESPONSE FUNCTION 
+
+The functional form given below provides a good description of the 
+combined mirror/HRI on-axis PRF: 
+.nf
+
+PRF = A1*EXP(-0.5*(R/S1)**2) + A2*EXP(-0.5*(R/S2)**2) + A3*EXP(-R/S3),
+
+     where the radial distance R, S1, S2, S3 are in arcseconds, and
+
+              A1 =  0.96379391
+	      S1 =  2.18575551
+	      A2 =  0.17975701
+	      S2 =  4.04192030
+              A3 =  0.00116751
+              S3 = 31.68980665
+
+.fi
+Using flight data from Capella, Sirius, HZ43, Cyg X-2, LMC X-1 and LMC X-3,
+the calibration team found that broader-than-expected components are
+needed (in addition to the expected gaussian-like core) to fit the HRI
+response (the exponential term above).  This so-called "halo" is now known 
+to be caused by the presence of the electrostatic shield in the HRI.  
+
+The complete ground-based calibration tests with the HRI in the focal plane
+of the ROSAT mirrors were performed in Neuried, Germany in the spring and 
+summer of 1989. Analysis of these test data showed that the HRI had a high 
+background count rate so an electrostatic shield was placed in front of the 
+microchannel plates, greatly reducing the HRI background. Several stand 
+alone tests, including multiple flat field images and pin hole measurements,
+were then performed with the flight model HRI in Dec. 1989, shortly before 
+being installed into the telescope.  The HRI halo appears in all data taken 
+with the flight model HRI (that is, with the electrostatic shield), but is 
+absent in data taken with the original HRI during the Neuried Telescope 
+Tests.
+
+Laboratory tests with the HRI backup model have now been performed and 
+indicate that the halo is definitely produced by the electrostatic shield. 
+The shield is 0.3 micron polypropylene, coated on the side not facing the 
+microchannel plate (MCP) with 300 Angstroms of aluminum and is positioned 
+about 1 mm from the front surface of the MCP, held at the same electrical 
+potential as the front MCP surface.  Photoelectrons produced from x-rays 
+interacting in the front area of the MCP are able to travel a considerable 
+distance from the interaction site in the field-free region between the MCP 
+and the electrostatic shield.  When these electrons are finally "captured" 
+in an MCP pore and initiate an electron avalanche, the event position no 
+longer corresponds to the x-ray position.  The resultant halo, whose 
+intensity is relatively energy-independent, redistributes roughly 10 percent
+of point-source photons beyond ~10".  Mirror scattering introduces an 
+additional, energy-dependent redistribution, e.g., at 1 keV about 6% of the 
+photons are redistributed beyond 10 arc seconds by scattering.  ROSAT 
+observations must be interpreted accordingly (i.e., with the above PRF
+function).
+.ih
+ 2.0 OFF-AXIS POINT RESPONSE FUNCTION
+
+A good approximation to the azimuthally averaged off-axis PRF of the HRI can
+be obtained by allowing the width of the lager gaussian to vary with 
+off-axis angle in the following manner:
+
+.nf
+ S2 = 3.3 + (0.19 * theta) - (0.016 * theta**2) + (0.0044 * theta**3)
+.fi
+
+where theta is in units of arcminutes.
+.ih
+ 3.0 SKY CALS
+
+There are no ground CALS available for the flight model of the HRI due to 
+the installation of the electrostatic shield after the ground calibration 
+had been performed.  We have compiled a sample of boresight calibration 
+observations of unresolved sources with a range of off-axis angles and 
+energy distributions.  These sequences are intended to aid the user in 
+analyzing their own observations.  A summary of the observations is given 
+in the table below, and the qpoe files have been loaded into a directory 
+that can be accessed with the environment variable "xrcal" (e.g., "cd 
+xrcal$").  The files have names rhNNNNNnn.qp where NNNNN is a 5 character
+(or less) string of the source name, and nn is the approximate off-axis 
+distance in arcmin. 
+
+The table below has been divided into two parts for easier screen reading.
+The source positions are taken from the SASS processing output; source 
+counts are calculated using IMCNTS on a 5' circle using the stated 
+background level (see note below); the size of the wobble is measured by 
+displaying the image in detector coordinates; peak coordinates are 
+determined using the unblocked (full resolution) image; and centroid 
+coordinates are calculated using LDETECT with a cellsize of 12", except for 
+rhhz43_18 and rhlmcx1_19 which require a cellsize of 30" to find the source.
+
+.nf
+                             source        source   off-axis  src cnts*
+sequence   filename        RA (h m s)    Dec (d ' ") arcmin    (r<5')  
+--------   ------------   -----------   ------------  ------ ---------
+ 110196    rhhz43_02.qp   13 16 22.29   29 05 57.67    1.7      2966
+ 110198    rhhz43_04.qp   13 16 22.18   29 05 56.41    3.9      3728
+ 110205    rhhz43_06.qp   13 16 22.41   29 05 59.68    6.0      4340
+ 110197    rhhz43_08.qp   13 16 21.91   29 05 59.71    7.8      8541
+ 110213    rhhz43_11.qp   13 16 22.58   29 05 56.90   10.8      4383
+ 110207    rhhz43_12.qp   13 16 21.88   29 06 02.83   12.3      7221
+ 110209    rhhz43_15.qp   13 16 21.75   29 06 01.67   14.5      3158
+ 110211    rhhz43_16.qp   13 16 21.82   29 05 53.17   16.4      6045
+ 110216    rhhz43_18.qp   13 16 21.84   29 06 05.39   18.2      3980 *
+                   				
+ 110249    rharlac_02.qp  22 08 40.91   45 44 27.66    1.8      1246
+ 110253    rharlac_03.qp  22 08 41.14   45 44 27.21    3.2      3332
+ 110258    rharlac_06.qp  22 08 40.96   45 44 25.42    5.9      2448
+ 110254    rharlac_08.qp  22 08 41.40   45 44 31.68    7.9      2453
+ 110260    rharlac_10.qp  22 08 41.45   45 44 28.31   10.1      1690
+ 110267    rharlac_12.qp  22 08 38.31   45 31 27.04   11.9      2215
+ 110262    rharlac_14.qp  22 08 41.50   45 44 33.24   14.1      2517
+ 110271    rharlac_18.qp  22 08 41.12   45 44 35.73   18.4      1226 *
+                   			                        
+ 110277    rhlmcx1_03.qp  05 39 39.72  -69 44 36.03    3.1      8218
+ 110273    rhlmcx1_04.qp  05 39 39.76  -69 44 35.84    3.7     12360
+ 110282    rhlmcx1_06.qp  05 39 40.13  -69 44 39.13    6.3      7383
+ 110279    rhlmcx1_08.qp  05 39 39.15  -69 44 35.22    8.5     13225
+ 110275    rhlmcx1_09.qp  05 39 39.27  -69 44 35.84    9.1      7295
+ 110280    rhlmcx1_11.qp  05 39 38.85  -69 44 37.29   10.9      8764
+ 110287    rhlmcx1_14.qp  05 39 39.29  -69 44 33.57   13.5      6353
+ 110292	   rhlmcx1_15.qp  05 39 39.95  -69 44 38.52   15.0      7430
+ 110288    rhlmcx1_16.qp  05 39 39.27  -69 44 37.70   16.3      5099
+ 110294    rhlmcx1_19.qp  05 39 41.51  -69 44 37.48   18.7      1283 *
+
+.....................   second part of the table   ...................
+
+         
+          bkgd used  roll    peak-peak       peak	    centroid
+sequence (cnts/pix)  angle    wobble (')    x    y     x      y
+--------  ---------  -----   -----------   ---- ----  ------ ------
+ 110196    8.66E-5    325       3.3        3795 4686  3794.6 4687.0
+ 110198    3.57E-5    330       4.3        3567 4345  3568.1 4346.8
+ 110205    8.15E-5    325       3.9        3449 5101  3446.4 5104.4
+ 110197    1.38E-4    340       4.3        4545 3918  4545.8 3920.1
+ 110213    1.43E-4    325       4.4        3130 5529  3125.9 5533.7
+ 110207    1.48E-4    340       4.8        5225 3599  5223.2 3599.3
+ 110209    1.38E-4    330       4.7        4785 3093  4784.7 3092.9
+ 110211    1.78E-4    325       4.8        2709 3070  2704.6 3076.1
+ 110216    2.09E-4    335       4.8        5853 3405  5864.0 3461.1
+        		           		  
+ 110249    4.48E-4    215       4.1        3699 3614  3703.5 3614.9
+ 110253    7.74E-4    215       4.4        3488 3957  3486.8 3958.9
+ 110258    4.53E-4    235       4.5        3090 3380  3088.5 3380.4
+ 110254    6.42E-4    215       4.5        3982 4682  3984.2 4687.1
+ 110260    4.59E-4    225       4.3        3231 4969  3229.1 4971.5
+ 110267    8.71E-4    235       4.4        2323 4388  2322.2 4390.7
+ 110262    9.83E-4    220       4.4        4835 5050  4836.1 5051.4
+ 110271    5.36E-4    220      3.6 (edge)  5862 4225  5903.4 4265.9
+        		           		  
+ 110277    6.93E-4    260       4.8        3585 4430  3584.7 4431.1
+ 110273    1.21E-3    260       4.8        3483 3996  3484.6 3998.2
+ 110282    6.37E-4    265       4.4        2885 3991  2882.7 3989.2
+ 110279	   1.38E-3    255       4.3        4607 3783  4611.2 3784.2
+ 110275	   1.20E-3    255       4.3	   4658 4213  4660.8 4215.2
+ 110280	   8.81E-4    265       4.3	   4092 4071  4092.4 4070.1
+ 110287    8.20E-4    266       4.9        5011 3353  5010.4 3354.4
+ 110292	   6.01E-4    240       4.9	   3159 5653  3158.1 5650.4
+ 110288    1.03E-3    265       4.8        4237 2270  4238.0 2267.1
+ 110294    6.46E-4    261       on (edge)  5772 4336  5823.6 4424.6
+.fi
+Notes to table:
+
+* To measure source counts correctly for sources on the edge of the
+detector the source region must not contain area beyond the edge of
+the detector, and the background counts must be measured on the edge
+of the detector near the source to account for exposure time lost when
+the source region wobbles off the edge.
+.ih
+ 4.0 GENERAL COMMENTS ABOUT THE HRI PRF
+
+The on-axis PRF given above was determined from a long observation of HZ43 
+which produced 100,000 net counts.  Analysis of a sample of point sources
+observed nearly on-axis, shows that the HRI PSF varies from observation to 
+observation (due to residual errors in the aspect solution). Sometimes 
+errors in the aspect solution produce images which have an "egg" shape.
+Fitting the above functional form of the PRF to this larger sample shows 
+that the best fit value of S1 varies from 2.0 to 3.5 arcseconds, and S2 
+varies from 3.6 to 4.3 arcseconds.  Due to small variations in the HRI PRF 
+from observation to observation, the user should, when possible, use the 
+image of a known point source within 5' of their target as a template for 
+the HRI PSF.
+
+The off-axis generalization of the HRI PRF was derived based on 8 
+observations of HZ43, spanning a range of 2' to 16' off-axis.  The peak 
+surface brightness was used as the origin, since this generates a 
+monotonically decreasing profile.  The set of 8 HZ43 surface brightness 
+profiles were first fit to the on-axis PSF, treating the normalization and
+width of the two gaussians as free parameters (the photon statistics in 
+these data were insufficient to fit the exponential term).  We found that 
+the best fit values of the smaller gaussian were essentially independent of 
+the angle off-axis.  We then refit the set of 8 profiles treating only the 
+width of the broader gaussian as a free parameter.  The best fit values of 
+s2 are well parameterized by the  cubic polynomial in the off-axis angle 
+given above.
+
+NB: We do not force this expression to reproduce the on-axis value given 
+above.  The fact that this expression gives s2 = 3.3 for theta=0, compared 
+to the on-axis value of 4.0 given above, reflects the variation in aspect 
+quality from observation to observation.
+
+Users should note that point sources observed off-axis exhibit significant 
+amounts of nonazimuthal symmetry.  The above expression is useful for
+determining scattering corrections and for use in detect algorithms, but 
+should not be used for image deconvolution.  There are a large number of 
+sequences in the PROS calibration directory xrcal$ containing several 
+objects observed at different angles off-axis.  The actual HRI data should 
+be used for any two-dimensional image deconvolution.

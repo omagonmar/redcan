@@ -1,0 +1,22 @@
+# Help directory for the FINDER package.
+
+$defdir		= "finder$src/"
+$doc		= "finder$doc/"
+
+catpars		hlp=doc$catpars.hlp,	src=catpars.par
+cdrfits		hlp=doc$cdrfits.hlp,	src=t_cdrfits.x
+disppars	hlp=doc$disppars.hlp
+dssfinder	hlp=doc$dssfinder.hlp,	src=dssfinder.cl
+finderlog	hlp=doc$finderlog.hlp,	src=finderlog.cl
+gscfind		hlp=doc$gscfind.hlp,	src=t_gscfind.x
+hydrahints	hlp=doc$hydrahints.hlp
+mkgscindex	hlp=doc$mkgscindex.hlp,	src=mkgscindex.cl
+mkgsctab	hlp=doc$mkgsctab.hlp,	src=mkgsctab.cl
+mkobjtab	hlp=doc$mkobjtab.hlp,	src=mkobjtab.cl
+objlist		hlp=doc$objlist.hlp,	src=objlist.cl
+selectpars	hlp=doc$selectpars.hlp,	src=selectpars.par
+tastrom		hlp=doc$tastrom.hlp,	src=tastrom.cl
+tfield		hlp=doc$tfield.hlp,	src=t_tfield.x
+tfinder		hlp=doc$tfinder.hlp,	src=tfinder.cl
+tpeak		hlp=doc$tpeak.hlp,	src=t_tpeak.x
+tpltsol		hlp=doc$tpltsol.hlp,	src=tpltsol.cl

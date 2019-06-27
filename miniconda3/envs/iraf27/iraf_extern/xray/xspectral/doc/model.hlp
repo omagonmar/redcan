@@ -1,0 +1,24 @@
+The general syntax for applying absorption to a component is:
+   absorption(log galactic_Nh [, other params]) * component(params)
+
+The general syntax for multiple model components is:
+   abs(params) * component1(params) + abs(params) * component2(params) + ...
+
+Possible components and arguments are:
+powerlaw          log(normalization), energy index
+bremsstrahlung    log(normalization), temperature [keV]
+exponential       log(normalization), temperature [keV]
+blackbody         log(normalization), temperature [keV]
+raymond           log(normalization), temperature [keV], abundance table,
+                                        abundance percent
+line model        log(normalization), line-energy [keV],
+                                        line-width [FWHM, in keV]
+
+Unique abbreviations are recognized (e.g. pow=powerlaw, ray=raymond,
+co=cosmic).  Parameters are specified by a single value (fixed) or a range
+separated by ":" (free).  Free (log) normalization of component1 is
+requested by omitting the normalization for component1.  Normalization(s)
+of any subsequent component(s) is (are) specified and computed as
+log(fraction) of that of component1.  Other parameters may be linked.
+
+For more information, return to cl and type "help models_spectral".

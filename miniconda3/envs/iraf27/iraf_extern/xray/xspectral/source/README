@@ -1,0 +1,7 @@
+The following f77 files are part of the spectral source code and are NOT
+post-processed files from the SPP processor.  Do not delete these file!:
+
+contour.f gaunt.f powmin.f
+
+Also the files in libextra.a are routines that we must replace some day.  The
+f77 files the directory "extra" should not be deleted either.

@@ -1,0 +1,40 @@
+imagetyp	obstype
+amp		imageid
+subset		filter
+
+'dome flat'	flat
+'sky flat'	flat
+'proj flat'	flat
+
+# Extension name translations to IMAGEID.
+im1     1
+im2     2
+im3     3
+im4     4
+
+# Default values for real-time display.
+
+det1    detsec  [1:1024,1:4096]
+det2    detsec  [1025:2048,1:4096]
+det3    detsec  [2049:3072,1:4096]
+det4    detsec  [3073:4096,1:4096]
+
+dat1    datasec [1:1024,1:4096]
+dat2    datasec [65:1088,1:4096]
+dat3    datasec [1:1024,1:4096]
+dat4    datasec [65:1088,1:4096]
+
+bias1   biassec [1025:1088,1:4096]
+bias2   biassec [1:64,1:4096]
+bias3   biassec [1025:1088,1:4096]
+bias4   biassec [1:64,1:4096]
+
+size1   rawsize "1088 4096"
+size2   rawsize "1088 4096"
+size3   rawsize "1088 4096"
+size4   rawsize "1088 4096"
+
+ccd1    ccdname "SITe #8061FBR05-02 (NOAO 20)"
+ccd2    ccdname "SITe #8061FBR05-02 (NOAO 20)"
+ccd3    ccdname "SITe #8061FBR05-07 (NOAO 19)"
+ccd4    ccdname "SITe #8061FBR05-07 (NOAO 19)"

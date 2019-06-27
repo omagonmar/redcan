@@ -1,0 +1,85 @@
+#$Header: /home/pros/xray/lib/RCS/mkpkg.inc.release,v 1.2 1998/05/11 20:42:56 prosb Exp $
+#$Log: mkpkg.inc.release,v $
+#Revision 1.2  1998/05/11 20:42:56  prosb
+#JCC - check MACH: ifeq 'redhat,linux,freebsd', remove the '-q' flag
+#      from the XFLAGS/LFLAGS defs, having this in produces
+#      unrunnable binaries on linux.
+#
+#Revision 1.1  1998/05/07 16:33:57  prosb
+#Initial revision
+#
+#Revision 11.1  1998/05/06 19:58:12  prosb
+#JCC(4/23/98)-updated for debugger compilation under 
+#             iraf.2.11.p1 at sao site.
+#
+#Revision 11.0  1997/11/06 16:25:41  prosb
+#General Release 2.5
+#
+#Revision 3.11  1997/10/01 16:13:45  wendy
+#added "-p xray" to all flags
+#
+#Revision 3.10  1995/08/07 17:42:32  prosb
+#jcc - add the header on the top.
+#
+# Global MKPKG definitions for the XRAY packages.
+
+### Development version at SAO ###
+# 	compile flags
+# 	The '-v' will show the path name to the compiler
+#jcc $set XFLAGS = "$(XFLAGS) -/temp=/pool1 -c -F -g -q -v -p tables"
+#$set XFLAGS     = "$(XFLAGS) -/temp=/pros -c -F -g -q -p tables"
+#4/15/97    $set XFLAGS     = "$(XFLAGS) -/temp=/pool1 -c -F -g -q -p tables"
+#4/15/97    $set XVFLAGS    = "$(XVFLAGS) -p tables"
+#4/15/97    # 	link flags
+#4/15/97    $set LFLAGS	= "$(LFLAGS) -d -g -q -p tables"
+####  
+#$set XFLAGS     = "$(XFLAGS) -c -F -g -q -v -p xray -p tables"
+#$set XVFLAGS    = "$(XVFLAGS) -p xray -p tables"
+##4/23/98 $set LFLAGS     = "$(LFLAGS) -d -g -q -p xray -p tables"
+#$set LFLAGS     = "$(LFLAGS) -d -z -g -/xildoff -q -p xray -p tables"
+####
+
+### Installation version ( Optimized) at SAO ###
+# 	compile flags
+#$set XFLAGS    = "$(XFLAGS)  -c -O -q -p xray -p tables"
+#$set XVFLAGS	= "$(XVFLAGS) -p xray -p tables"
+#	link flags 
+#$set LFLAGS	= "$(LFLAGS) -O -q -p xray -p tables"
+
+
+### Installation version ( Optimized) at sites ###
+# 	compile flags
+$ifeq (MACH, ddec) then
+$set XFLAGS     = "-c -g2 -q -p xray -p tables"
+$else $ifeq (MACH,dsux) then
+$set XFLAGS     = "-c -g2 -q -p xray -p tables"
+$else $ifeq (MACH, linux, redhat, freebsd) then
+$set XFLAGS     = "-c -g2 -p xray -p tables"
+$else
+$set XFLAGS     = "$(XFLAGS) -c -O -q -p xray -p tables"
+$end
+$set XVFLAGS	= "$(XVFLAGS) -p xray -p tables"
+# 	link flags 
+$ifeq (MACH, redhat) then
+$set LFLAGS	= "$(LFLAGS) -O -p xray -p tables"
+$else
+$set LFLAGS	= "$(LFLAGS) -O -q -p xray -p tables"
+$end
+
+$ifeq (MACH, sparc) then
+$include "xray$lib/mkpkg.sf.SUN4"
+$else $ifeq (MACH, i386) then
+$include "xray$lib/mkpkg.sf.I386"
+$else $ifeq (MACH, f68881) then
+$include "xray$lib/mkpkg.sf.SUN3"
+$else $ifeq (MACH, ffpa) then
+$include "xray$lib/mkpkg.sf.SUN3"
+$else $ifeq (MACH, vms) then
+$include "xray$lib/mkpkg.sf.VMS"
+$else $ifeq (MACH, dsux) then
+$include "xray$lib/mkpkg.sf.DSUX"
+$else $ifeq (MACH, ddec) then
+$include "xray$lib/mkpkg.sf.DSUX"
+$else $ifeq (MACH, dmip) then
+$include "xray$lib/mkpkg.sf.DMIP"
+$end

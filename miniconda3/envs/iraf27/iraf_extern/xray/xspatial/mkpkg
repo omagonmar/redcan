@@ -1,0 +1,126 @@
+#$Header: /home/pros/xray/xspatial/RCS/mkpkg,v 11.0 1997/11/06 16:31:41 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:31:41  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:35:38  prosb
+#General Release 2.4
+#
+#Revision 8.3  1995/08/07  19:32:23  prosb
+#jcc - ci for pros2.4.
+#
+#Revision 8.2  94/09/07  17:29:29  janet
+#jd - created spatlib with routines common to task in the spatial pkg.
+#
+#Revision 8.1  94/07/07  16:37:12  dvs
+#Added eintools subpackage
+#
+#Revision 8.0  94/06/27  14:55:37  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:30:51  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  17:49:17  mo
+#add task
+#
+#Revision 6.0  93/05/24  16:09:52  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:20  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:33:39  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.4  92/04/09  18:52:37  mo
+#MC	4/9/92		Add FIXSAOREG task
+#
+#Revision 3.3  92/03/25  11:16:12  mo
+#MC	3/25/92		Make each library a separate directory so update *.a
+#			will work
+#			Also add the DETECT subpackage
+#
+#Revision 3.2  92/02/13  12:22:19  janet
+#added new task isoreg.
+#
+#Revision 3.1  92/02/03  14:33:32  mo
+#MC	2/4/92		Update the 'update' command so all libs get remade always
+#
+#Revision 3.0  91/08/02  01:26:39  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/09  17:20:57  mo
+#MC	7/9/91		Updated for the new PROS directory structure
+#
+#Revision 2.0  91/03/06  23:11:03  pros
+#General Release 1.0
+#
+#
+#	mkpkg for the xspatial directory
+#
+$call   relink
+$exit
+
+update:
+	$call relink
+        $echo "-------------- XSPATIAL/DETECT ----------------"
+        @detect
+        $echo "-------------- XSPATIAL/EINTOOLS ----------------"
+        @eintools
+	$call install
+	;
+
+relink:
+	$set    LIBS = "-lscan -lpros -ltbtables" 
+	$update libmodel.a
+	$update libim.a
+	$update libmd.a
+	$update libfft.a
+        $update libspatial.a
+	$update libpkg.a
+	$omake  x_xspatial.x
+	$omake  debug.x
+	$link   x_xspatial.o debug.o libpkg.a libspatial.a $(LIBS) -o xx_xspatial.e        
+
+	$set    LIBS = "-lscan -lpros -ltbtables" 
+	$omake  x_immodel.x
+	$link   x_immodel.o debug.o libmodel.a libfft.a libmd.a libim.a $(LIBS) -o xx_immodel.e    
+	;
+		 
+install:
+	$move   xx_xspatial.e xraybin$x_xspatial.e
+	$move   xx_immodel.e xraybin$x_immodel.e
+	;
+
+libmodel.a:
+	@immodel
+	;
+
+libfft.a:
+	@imfft
+	;
+
+libim.a:
+	@im
+	;
+
+libmd.a:
+	@immd
+	;
+
+libspatial.a:
+	@spatlib
+	;
+										libpkg.a:
+	@fixsaoreg	
+	@imcnts
+	@improj
+	@imdisp
+        @isoreg
+	@makevig
+	@errcreate
+	@skypix
+        @simevt
+        @srcechk
+	;

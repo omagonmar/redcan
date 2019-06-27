@@ -1,0 +1,24 @@
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default dumb]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+PATH: /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mem0/
+
+Make helpdb for package mem0
+  1            root (mem0$lib/root.hd): 1 help modules
+  2        rootmem0 (mem0$lib/rootmem0.hd): 1 help modules
+  3            mem0 (mem0$mem0.hd): 7 help modules
+  0                 (_index): 3 help modules
+
+Total of 12 help modules in 3 packages, file size 3128 bytes
+
+Make apropos.db for package mem0
+  1            root (mem0$lib/root.hd): 1 help modules
+  2        rootmem0 (mem0$lib/rootmem0.hd): 1 help modules
+  3            mem0 (mem0$mem0.hd): 7 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+

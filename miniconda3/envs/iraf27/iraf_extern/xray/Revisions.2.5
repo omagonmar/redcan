@@ -1,0 +1,761 @@
+1. /pros/xray/xspatial/imcnts/imcntsubs.x                   11/17/95 JCC 
+   Updated to display the count as double when it exceeds the 
+   MAX_INT limit. [ pros #E768 ]
+
+2. /pros/xray/xlocal/mkpkg                                   12/1/95 JCC 
+   Updated to compile imdetect,imbepos 
+
+3. /pros/xray/lib/tbset.h                                    12/1/95 MC
+   Get the new version from TABLES.  
+
+4. /pros/xray/mkpkg -                                        5/9/97 Wendy/JCC
+   added alpha architecture and commented out "xlocal 
+   & xobsolete" for the release 2.5. 
+   (ref:  "co  mkpkg.alpha.version" from RCS library)
+
+5. /pros/xray/xinstall/fits2spat.cl                          12/12/95 JCC 
+   Change "hdummy.qp" to "xspatialdata$hdummy.qp" and
+   call "datarep" at the end of the code.
+
+6. /pros/xray/xtiming/ksplot.cl                              1/4/96   JCC
+   The plot was scaled and labelled incorrect when running 
+   ksplot.cl for more than ONE time. Each time users needed
+   to log out IRAF, then logged back in to get a right plot.
+   Solution: Set append=no for the first call to "igi" in ksplot.cl.
+
+7. /pros/xray/xtiming/data/scc_to_utc.tab                    1/22/96  JCC
+   Changed NCOE to NCOEFF. 
+
+8. Changes made for asc :                                    2/12/96  Joan
+   /pros/xray/lib/pros/xhist.x 
+   Added two new routines for this program to allow table
+   files as input. [ put_tabhistory() & disp_tabhistory()]
+
+9  Changes made for asc :                                    2/12/96  JCC
+    /pros/xray/lib/pros/missions.x  
+    /pros/xray/lib/pros/xhead.x    
+    /pros/xray/lib/axaf.h        
+    /pros/xray/lib/qpoe.h         
+    Added new keywords to the qpoe header for asc 
+      [ keywords include:  mission/telescope/instrument ] 
+
+9.1. First Clean build for pros since last release.         2/13/96 Wendy/JCC 
+     (baseline(11/6/96) + fits images kernel for solaris 5.4. )
+9.2  Test rarc2pros on solaris and sun : 'qp_psize' parameter 
+        can't be found for hri data; but it's ok for pspc data.  
+     Test fits2qp on solaris and sun : work fine with hri/pspc.
+
+10. /pros/xray/lib/pros/xhist.x                           3/4/96  Joan
+     Changed the calling sequence in the third case statement 
+     of the put_history() routine because one of the tables 
+     routines (tbhadt) was not working correctly.
+
+11. delete 38 par files in pros directories               3/4/96 JCC
+     /pros/old_file/par/*.par + remove_pros_par.lis + *.lis
+  
+    Add "/pros/doc/SPP/PROS_CLEAN_BUILD" -writeup for clean build
+
+12. delete more than 150 files in pros directories        3/10/96 JCC
+     /pros/old_file/misc2/moveOldFile
+     /pros/old_file/misc/
+
+13. changes made for asc -                                3/11/96 MC/Janet
+     add check that the input file is QPOE format.   
+          /pros/xray/lib/qpcreate/qpcreate.x
+     (from /proj/ascds/staff/scidev/scidev/sciops/cal/sac/hrc/fineposqp/src/)
+
+14. changes made for asc -                                3/11/96 MC/Janet
+     added code to skip writing wcs when info unavailable.
+         /pros/xray/lib/pros/qpwcs.x
+    (from /proj/ascds/staff/scidev/scidev/sciops/cal/sac/hrc/fineposqp/src/)
+
+15. Invoking PL_NEEDCOMPRESS(pm) needs to be made           3/12/96 JCC/Denis
+    conditional on PL_LLOP(pm) being non-zero to 
+    avoid a "divide by zero" possibility.
+    ( The PL_LLOP() macro is defined in the same IRAF 
+      header file (<plio.h>) as PL_NEEDCOMPRESS() )
+
+      /pros/xray/lib/regions/rgop.x  --> procedure rg_flush()
+
+16. changes made for asc -                                  3/14/96  JD 
+     commented out error when xdim != ydim; found no
+     dependence in code when tested; required for AXAF 
+     gratings detection.
+
+      /pros/xray/xspatial/detect/lpeaks/lpeaksubs.x
+
+*************************************************************************
+17. pre-packaged an internal release of PROS -              3/17/96 Wendy
+    denoted PROS 2.4-p1, for distribution to IRAFX 
+    and ASCDS.
+*************************************************************************
+
+18. Created a new image file and a new fits file for          4/4/96 JCC
+    hri_qegeom and put them in /pros/xray/xspatial/data/
+    (for iraf, updated them in /iraf/xray/xspatial/data/ )
+    (   and in /iraf/proscal/)
+    (for irafx, updated them in /irafx/proscal/ )
+    (   and /irafx/xray/xspatial/data/ == pros version )
+
+    Updated the example in srcinten.hlp to accomodate          4/5/96 JCC
+    with the new QE map (hp#18); Added BUG for using
+    arcminutes(') & arcseconds(") in the region descriptor.
+
+    Make sure put hri_qegeom.fits in the next PROS release...(NOT yet)
+    And delete hri_qegeom.*.pros2.4 
+
+19. changes made to fix the problem when build xray on LINUX   4/16/96 JCC
+     /pros/xray/ximages/qplintran/qplintran.x (procedure rot_get())
+     [ERROR on line 491 of qplintran.f: parse error]
+
+20. changes made to fix the problem when build xray on LINUX   4/16/96 JCC
+      /pros/xray/xtiming/fft/input_bins.x (procedure tb_rd_hd())
+      [ Replaced "call ltc_rd_hd()" with "temp = ltc_rd_hd()" ]
+
+21. Replaced "bool strncmp()" with "int strncmp()" in          4/16/96 JCC
+    find_row_by_fits() to fix the compiling problem on LINUX.
+       /pros/xray/xdataio/eincdrom/ecdinfo/eci_tools.x 
+        [ procedure  find_row_by_fits() ]
+
+22. clean build of pros on solaris 2.5                         4/22/96 JCC
+    /pros/xray/lib/mkpkg.inc  - add "-v" to xflags
+    /pros/.cshrc  (NOT .cshrc.user)
+        - add path of new F77 compiler 
+        - need to put the original back
+    /pros/.cshrc.user 
+        - after the line of setirafd
+        - source /home/pros/extra/irafxsao.config/irafuser_irafx.csh
+
+The old files have been saved as mkpkg.inc.hold, .cshrc.hold, .cshrc.user.hold
+
+23. Updated to run fits2qp & qp2fits for AXAF data              7/2/96 JCC 
+   -----------------
+   xhead.x/wqphwcs- * Use QP_CTYPE to skip "EQUINOX + RADECSYS" for acis data.
+   xhead.x/wqph4  - * Use QP_CTYPE to skip ""RA_NOM + DEC_NOM" for acis data.
+                  - * Use the combination of QP_REVISION & QP_FORMAT to skip  
+                      XS-XPT,XS-YPT,XS-XDET,XS-YDET,XS-FOV,XS-INPXX,XS-INPXY
+               (more) ROLL_NOM, OPTAXISX, OPTAXISY,PHACHANS,PICHANS,MINPI,
+                      MAXPI,MINPHA,MAXPHA
+   xhead.x/wqph1  - * Use the combination of QP_REVISION & QP_FORMAT to skip
+                      ROR_NUM
+
+   qpwcs.x   - add "print" statements
+   fits2qp.x - add "print" statements
+   ft_nxtext.x-
+       - * Commented out "call ft_addparam" for cases 200-220
+       - * Added A new case 3002 for "format" : if "format" exists in a card
+           file, then set format (QP_FORMAT) to 3.
+       - * Added a new case 3003 for "TELESCOP" : if "TELESCOP" exists in a 
+           card file and its value is equal to "XRCF-HRMA" in the fits
+           header, then set format (QP_FORMAT) to 3.
+       - * Added a conditional statement to skip "call assign_wcs_ratfits" 
+           for acis/hrc_lev0 data
+   wcsraw.cards,  qpoeraw.cards  - updated
+   -------------------
+
+24. Updated scc_to_utc.tab & jdleap.tab for hp19.               6/13/96 JCC
+    ( The fits files are also in /pros/xray/xtiming/data/ )
+
+25. Install a new package from NOAO called IMMATCH for more     6/25/96 Wendy
+general image/wcs conversions (in irafx).
+
+26. Updated the tasks of fits2qp & qp2fits for AXAF.            7/2/96  JCC 
+    /pros/xray/lib/pros/xhead.x  (old: Revision 9.2)    
+    /pros/xray/lib/pros/times.x  (old: Revision 9.0)    
+    /pros/xray/lib/qpcreate/qpfitsout.x (old: Revision 9.0)   
+    /pros/xray/xdataio/qp2fits/qp2fits_subs.x (old: Revision 9.0)  
+    /pros/xray/xdataio/fits2qp/ft_nxtext.x  (old: Revision 9.0)   
+
+    Added two new cards to run fits2qp & qp2fits for AXAF.
+    /pros/xray/xdataio/qpoeraw.cards    
+    /pros/xray/xdataio/wcsraw.cards     
+
+    Clean rebuild for irafD on Solaris 2.5        
+
+27. Updated the following for AXAF/wcs                        8/6/96 MC/JCC
+
+    /pros/xray/xdataio/fits2qp/ft_nxtext.x        
+      (from  /pool7/jcc/fits2qp_rel/fits2qp/ft_nxtext.x.tmp2 
+    /pros/xray/xdataio/qpoexrcf.cards             
+      (from  /pool7/jcc/fits2qp_tmp/qpoexrcf.cards.sav )
+    /pros/xray/xdataio/wcsxrcf.cards              
+      (from /pool7/jcc/fits2qp_tmp/wcsxrcf.cards.sav  )
+
+  *rebuild  bin.ssun/x_xdataio.e                   
+
+28. Updated the following for AXAF/qpsort                     8/7/96 MC/JCC
+
+    /pros/xray/lib/qpcreate/qpcreate.x 
+    /pros/xray/lib/qpcreate/qpfitsout.x 
+
+    Clean build for irafd except x_imcalc.e
+		(imcalc.x copied from ASCDS - no yaccer on HEAD/SOLARIS)
+****************************************************************
+		snapshot to ASC   8/7/96
+******************************************************************
+
+
+29. Updated the following for AXAF/qpsort                     8/21/96  JCC
+    Increase the length of prosdef_out for XS-EVENTS to 
+    solve the problem of the table-columns truncated.
+
+   prosdef_in/out + irafdef_in/out should be sized as SZ_TYPEDEF
+   (/pros/xray/lib/evmacro.h--SZ_TYPEDEF==1024)
+   (/iraf/iraf_5.4/unix/hlib/iraf.h--SZ_LINE==161)
+    /pros/xray/lib/qpcreate/qpcreate.h  
+    /pros/xray/lib/qpcreate/qpcreate.x 
+    /pros/xray/lib/qpcreate/qpcdriver.x 
+
+   Clean build for irafd.
+
+30. Replaced three qpoe cards for AXAF/fits2qp             9/11/96  MC/JCC
+    /pros/xray/xdataio/qpoe.cards
+    /pros/xray/xdataio/qpoeraw.cards
+    /pros/xray/xdataio/qpoexrcf.cards
+   (/proj/ascds/staff/scidev/scidev/sciops/cal/xrcf/analysis/fitsconfig)
+
+31. Updated wqph5/xhead.x for AXAF data.                   9/16/96  JCC 
+    /pros/xray/lib/pros/xhead.x
+
+    Clean build for irafd.
+****************************************************************
+         the PATCH UPDATE 3 to the ASC   9/18/96
+****************************************************************
+
+32. remove all the references to /temp=/pool1              9/30/96 MC/JCC
+    /pros/xray/lib/mkpkg.inc
+
+33. /pros/xray/lib/qpcreate/qpcisqpoe.x                    10/8/96 MC/JCC 
+        - replace the code with the one in qpappend/qpc_subs.x
+
+    /pros/xray/xdataio/qpappend/qpc_subs.x  -
+        - move "qpc_isqpoe" from qpappend/qpc_subs.x
+                            to   lib/qpcreate/qpcisqpoe.x
+        - remove local qpcreate.x from qpappend
+        - update qpappend/mkpkg
+        - add a few lines in qpc_subs.x/mergehead for AXAF
+
+    we now have only ONE version of "procedure qpc_isqpoe".
+
+    Do the clean build.
+
+34.  Update 						10/10/96  MC
+	/pros/xray/xdataio/qpappend/qpc_subs.x
+to correct the DATE-OBS/TIME-OBS DATE-END/TIME-END updates
+from numerical copy to string copy
+
+============================================================================
+	Release patch to ASC		10/10/96 - P4
+============================================================================
+
+35. /pros/xray/lib/pros/xhead.x - put_qphead()          10/18/96 MC/JCC 
+      - add code to put_qphead that calls wqph5 ONLY when 
+        xheadtype=1 (it has QPOE specific calls that DIE 
+        when writing a table file - e.g. qpspec)
+
+        did RCS and the clean build on 10/22/96 .
+
+============================================================================
+	Release patch to ASC		10/23/96 - P5
+============================================================================
+
+36.  Add a new task imdetect to the package detect.     11/5/96  MC/JCC
+     New codes:
+          /pros/xray/xspatial/detect/imdetect/log2phy.x
+          /pros/xray/xspatial/detect/imdetect/calc_curr_block.x
+
+     Updated routines (The originals are in xray/xlocal/imdetect/) :
+          /pros/xray/xspatial/detect/imdetect/imdetect.x
+          /pros/xray/xspatial/detect/imdetect/get_window.x
+          /pros/xray/xspatial/detect/imdetect/smooth_image.x
+          /pros/xray/xspatial/detect/imdetect/imcomp.x
+          /pros/xray/xspatial/detect/imdetect/checks.f
+          /pros/xray/xspatial/detect/imdetect/calc_pos.f
+          /pros/xray/xspatial/detect/imdetect/resolve_srcs.f
+          /pros/xray/xspatial/detect/imdetect/ck_peaks.f
+          /pros/xray/xspatial/detect/imdetect/ck_blob_size.f
+          /pros/xray/xspatial/detect/imdetect/get_net_cts.f
+
+          /pros/xray/xspatial/detect/imdetect/mkpkg
+
+     Copied from xray/xlocal/imdetect/ without any of changes :
+       /pros/xray/xspatial/detect/imdetect/x_imdetect.x
+       /pros/xray/xspatial/detect/imdetect/detect.inc
+       /pros/xray/xspatial/detect/imdetect/detect.h
+       /pros/xray/xspatial/detect/imdetect/include/*
+       /pros/xray/xspatial/detect/imdetect/colgen/gen/*
+       /pros/xray/xspatial/detect/imdetect/colgen/*
+       /pros/xray/xspatial/detect/imdetect/mkpkg (create libdet.a,libcolgen.a)
+
+     Updated to add a new task imdetect :    
+       /pros/xray/xspatial/detect/x_detect.x (define "imdetect)
+       /pros/xray/xspatial/detect/mkpkg      (add imdetect,lscan,libdet)
+       /pros/xray/xspatial/detect/detect.hd
+       /pros/xray/xspatial/detect/detect.cl
+
+       /pros/xray/xspatial/detect/imdetect.par       (for snr_144*)
+       (notes: xcenter/ycenter & xdetsize/ydetsize have been removed)
+
+    ----- did the clean build on 11/5/96 -----------
+
+37.  Change the output column names from (xcell,ycell) to       11/12/96 JCC
+     (cellx,celly) in imdetect/xspatial, so it can be used 
+     as an input to bepos.
+
+     rebuild the detect package
+
+
+38.  Display a warning message when the input is not QPOE       11/14/96 JCC
+     /pros/xray/xspatial/detect/bepos/imbepos.x 
+
+     rebuild the detect package
+
+39.  Updated imdetect to be able to read the prf coeff. table   12/5/96 JCC
+       ( /pros/xray/xspatial/detect/imdetect/imdetect.x )
+
+     other related files :
+        Add two new rows for AXAF in                            12/5/96 JCC
+        /pros/xray/xspatial/data/prfcoeffs.tab
+          (move the original one to prfcoeffs.tab.hold)
+
+        /pros/xray/xspatial/detect/imdetect.par   (11/15/96) 
+          add "prf_sigma, energy & prf_table" for prfcoeffs.tab 
+          (if prf_sig=0.5, then prfcoeffs.tab will not be used.)
+
+40.  updated /pros/xray/xspatial/detect/imdetect/checks.f       12/6/96 JCC
+     -fix the problem with wrong cellx/celly in output ruf table.
+     -"call resolve_src" also change "debug", save it first
+
+     --- rebuild x_detect.e on 12/6/96 -----
+
+41.  updated the following files for imdetect/AXAF              1/24/97 JCC
+
+       /pros/xray/xspatial/detect/imdetect/mkpkg
+       /pros/xray/xspatial/detect/imdetect/imdetect.x
+       /pros/xray/xspatial/detect/imdetect/imcomp.x
+       /pros/xray/xspatial/detect/imdetect/log2phy.x
+       /pros/xray/xspatial/detect/imdetect/flag1s.f
+       /pros/xray/xspatial/detect/imdetect/contig.f
+       /pros/xray/xspatial/detect/imdetect/calc_pos.f
+       /pros/xray/xspatial/detect/imdetect/checks.f
+       /pros/xray/xspatial/detect/imdetect/ck_peaks.f
+       /pros/xray/xspatial/detect/imdetect/com_snrthresh.f
+       /pros/xray/xspatial/detect/imdetect/scan_on.f
+       /pros/xray/xspatial/detect/imdetect/find_on.f
+
+     --- rebuild x_detect.e on 1/24/97 -------
+
+42. updated "scc_to_utc.tab" in                              2/6/97 JDS/WENDY
+         /iraf/xray/xtiming/data/    
+         /pros/xraydata/xray/xtiming/data/ 
+     (scc_to_utc.tab  dated Jan 31 09:59)
+     (scc_to_utc.fits dated Jan 21 16:30)
+
+43. updated imdetect for AXAF(& nobkg)                      2/10/97 JCC
+       /pros/xray/xspatial/detect/imdetect.par      
+       /pros/xray/xspatial/detect/imdetect/detect.h   
+       /pros/xray/xspatial/detect/imdetect/detect.inc 
+       /pros/xray/xspatial/detect/imdetect/imdetect.x 
+       /pros/xray/xspatial/detect/imdetect/imcomp.x   
+       /pros/xray/xspatial/detect/imdetect/get_window.x 
+       /pros/xray/xspatial/detect/imdetect/checks.f     
+       /pros/xray/xspatial/detect/imdetect/com_snrthresh.f     
+       /pros/xray/xspatial/detect/imdetect/contig.f     
+       /pros/xray/xspatial/detect/imdetect/find_on.f    
+       /pros/xray/xspatial/detect/imdetect/flag1s.f    
+       /pros/xray/xspatial/detect/imdetect/get_net_cts.f    
+       /pros/xray/xspatial/detect/imdetect/resolve_srcs.f    
+       /pros/xray/xspatial/detect/imdetect/up_centroid.f  
+       /pros/xray/xspatial/detect/imdetect/calc_pos.f     
+       /pros/xray/xspatial/detect/imdetect/scan_on.f      
+       /pros/xray/xspatial/detect/imdetect/log2phy.x      
+
+       /pros/xray/xspatial/detect/imdetect/get_snrcoeff.x      1/27/97 JCC
+       ( force cell_area = 144 = snr_144_* to simplify the test )
+      -----------
+       ( need to remove  *.*.irafd   and   *.*.tmp in the release ,
+       but keep them for now   ) 
+      -----------
+     [ the following have been unchanged in irafd. (ie. no need to do RCS )
+         detect.h, detect.inc, get_snrcoeff.x, com_snrthresh.f, contig.f, 
+         find_on.f, flag1s.f, get_net_cts.f, up_centroid.f, scan_on.f  ]
+
+     [ others have been changed for xshift & yshift in 44 :
+         imdetect.x, imcomp.x, get_window.x, checks.f, 
+         resolve_srcs.f, calc_pos.f        ]
+
+44.  changes made for xshift & yshift (AXAF) :                    2/19/97 JCC
+        /pros/xray/xspatial/detect/imdetect/log2phy.x
+        /pros/xray/xspatial/detect/imdetect/calc_curr_block.x
+        /pros/xray/xspatial/detect/imdetect/get_window.x
+        /pros/xray/xspatial/detect/imdetect/checks.f
+        /pros/xray/xspatial/detect/imdetect/resolve_srcs.f
+        /pros/xray/xspatial/detect/imdetect/ck_peaks.f
+        /pros/xray/xspatial/detect/imdetect/calc_pos.f
+        /pros/xray/xspatial/detect/imdetect/imdetect.x
+        /pros/xray/xspatial/detect/imdetect/smooth_image.x
+        /pros/xray/xspatial/detect/imdetect/imcomp.x
+
+       [ RCS, rebuild x_detect.e ] )
+
+45.   limit display to 3 instead of 5 (AXAF) :                    2/21/97 JCC
+        /pros/xray/xspatial/detect/imdetect.par
+
+46.   Add the package name to imcalc in the following scripts     2/28/97 JCC
+     ( distinguish it betw ximages & stsdas ) -
+
+        /pros/xray/xdataio/_rarc2pros0.cl  
+        /pros/xray/xplot/pspc_hrcolor.cl   
+        /pros/xray/xspatial/rosprf.cl   
+        /pros/xray/xspatial/savigdata.cl   
+        /pros/xray/xspatial/srcinten.cl   
+        /pros/xray/xspatial/vigdata.cl   
+        /pros/xray/xspatial/vigmodel.cl   
+        /pros/xray/xspatial/detect/lbmap.cl   
+        /pros/xray/xspatial/detect/snrmap.cl   
+
+     --- the test with srcinten.cl is completely -----
+
+47.   Cell area is no longer forced to be 144.                     3/4/97 JCC
+          /pros/xray/xspatial/detect/imdetect/get_snrcoeff.x
+      Updated /pros/xray/xspatial/detect/imdetect.par
+          set default of xcellsize/ycellsize to 8 ;
+          add snr_16_* and snr_64_*  ;
+          remove snr_144_* from imdetect.par.
+      Update /pros/xray/xspatial/detect/imdetect/imcomp.x 
+          to allocate "obuf" to MAX_SUBCELLS*MAX_SUBCELLS
+      Update /pros/xray/xspatial/detect/imdetect/detect.h & detect.inc:  
+          MAX_SUBCELLS 4100 --> 4097
+
+48. /pros/xray/xplot/imcontour/imc_utils.x [ has_wcs() ]           3/5/97 JCC
+     - use mw_open to set the wcs flag in has_wcs()
+
+     --- irafd clean build ---
+
+49. Updated the following files to make sure all variables         3/7/97 JCC
+    are defined in the codes :
+
+       /pros/xray/xspatial/detect/imdetect/
+            wrlog.f
+            up_centroid.f
+            setup_blob.f
+            scan_on.f
+            get_net_cts.f
+            com_snrthresh.f
+            ck_blob_size.f
+            ck_peaks.f
+            resolve_srcs.f
+            calc_pos.f
+            checks.f
+            ck_overlap.f
+            contig.f
+            find_on.f
+            flag1s.f
+            init_blob.f
+            merge_blob.f
+            comp_cell_snr.f
+
+    ---- rebuild x_detect.e   -----
+
+50. Update to check the range of input energies for flux.(rsdc)    3/11/97 JCC
+    Redefine HIEN & LOEN.
+        /pros/xray/xspectral/source/flux_do.x
+
+    ---- rebuild x_xspectral.e ----
+
+51. Update to fix the build error for irafx
+        /pros/xray/xdataio/eincdrom/ecdinfo/ecdinfo.x
+        /pros/xray/xdataio/eincdrom/source/spectools.x
+    
+    ---- rebuild x_eincdrom.e  -----
+
+    ********************************************* 
+    *        clean IRAFX build                  * 
+    ********************************************* 
+
+52. Rename the procedure name in the following files               3/13/97 JCC
+       /pros/xray/xspatial/detect/imdetect/ck_peaks.f 
+       /pros/xray/xspatial/detect/imdetect/ck_blob_size.f
+       /pros/xray/xspatial/detect/imdetect/resolve_srcs.f
+       /pros/xray/xspatial/detect/imdetect/checks.f
+    Change the dimension of colptr to 10 instead of 11
+       /pros/xray/xspatial/detect/imdetect/imdetect.x
+       /pros/xray/xspatial/detect/imdetect/out_rough.x
+
+    ---- rebuild x_detect.e ------
+
+53. initialize row count in imdetect.x to fix "flpr";             3/21/97 JCC
+    convert checks.f  to  chk_all.x ;
+    redocument and redefine variables 
+    remove ycellsize from out_rough.x, chk_all.x
+       /pros/xray/xspatial/detect/imdetect/
+        mkpkg
+        ck_blob_size.f
+        resolve_srcs.f
+        calc_pos.f
+        contig.f
+        find_on.f
+        init_blob.f
+        merge_blob.f
+        get_window.x
+        imcomp.x 
+        imdetect.x
+        out_rough.x
+        smooth_image.x
+        chk_all.x
+   ------ rebuild x_detect.e ------
+
+   Add snr_144* in xspatial/detect/imdetect.par for rosat data    3/25/97 JCC
+
+54. rename imdetect to hri_detect in the xlocal package           3/27/97 JCC
+       in xlocal directory:
+              detect.cl    
+              imdetect.par --> hri_detect.par
+              mkpkg
+              x_imdetect.x --> x_hri_detect.x 
+              xlocal.cl
+              xlocal.men
+              xx_imdetect.e  -->  xx_hri_detect.e
+              change dir   imdetect --> hri_detect
+       in hri_detect  directory :
+              imdetect.x --> hri_detect.x
+              mkpkg
+50. Rename flxd_do.x to flux_density.x ;                          3/27/97 JCC
+    Update flux_density.x to check the range of the input energy 
+        /pros/xray/xspectral/source/flux_density.x
+        /pros/xray/xspectral/source/flux_do.x
+        /pros/xray/xspectral/source/xflux.x
+        /pros/xray/xspectral/source/mkpkg
+
+    ---- rebuild x_xspectral.e ----
+
+56. Redefine the variables in imdetect/xspatial                    4/8/97 JCC
+
+    ---- rebuild irafx with new iraf2.11.beta ---                 4/9/97 wendy
+
+57.  /pros/xray/lib/mkpkg.inc for iraf2.11.beta
+    ---- rebuild irafd with new iraf 2.11.beta ---                4/15/97 JCC
+
+58. fix typos for "documentatioin" for /pros/xray/doc/filter.hlp   4/23/97 JCC
+
+59. updated the following to incorporate with IRAF2.11/display     4/24/97 JCC
+        /pros/xray/xplot/xdisplay.cl 
+        /pros/xray/xplot/tvimcontour.cl
+        /pros/xray/xplot/tvproj.cl 
+        /pros/xray/xplot/tvlabel.cl 
+
+60. added a few comments in ft_nxtext.x and nextcard.x             5/7/97 JCC
+
+61. update imdetect.par, add display for imdetect.x,               5/22/97JCC
+
+        ---- draft of release notes for pros 2.5 --
+
+62.                                                               6/11/97 JCC
+    - lib/pros/xhead.x - comment out printf statements for ONTIME &   
+                         LIVETIME in get_qphead() & wqph3()        (done RCS)
+    - xdataio/fits2qp/ft_addparam.x -comment out "printf" for ONTIME (done RCS)
+
+    - lib/pros/times.x - comment out the print statements for get_filttimes()
+                                                                   (done RCS)
+    - There is a bad copy of an IRAF routine in PROS.  Do the following:
+	a) delete /pros/xray/lib/qpcreate/qpaddf.x and irafqpoe.h   (done RCS!)
+                   (save the old ones as qpaddf.x.pros2.4  + irafqpoe.h in RCS )
+	b) copy mo's qpaddf.x to /pros/xray/lib/qpcreate/  (done RCS!)
+        c) replace /pros/xray/lib/tbset.h  with mo's copy (==old one)
+	e) clean build PROS   (done)
+
+    - xdataio/fits2qp/nextcard.x :
+          updated  valpar() to have DOUBLE for ONTIME in the rejected qpoe.
+
+    ----    test fails for the following changes, put the        ----
+    ----    old ones back for fits2qp.x (-r9.0) and ft_header.x(-r9.0) ----
+    - updated /pros/xray/xdataio/fits2qp/fits2qp.x.hold, 
+               - to read fits.cards AND qpoe.cards before   
+               - the call to ft_header()   [ because ONTIME only in qpoe.cards ]
+    - updated  /pros/xray/xdataio/fits2qp/ft_header.x.hold 
+               - add case 2005, because qpoe card has it. 
+   
+====> test failed for the following changes (irafd has the old version for now )
+    --- updated fits2qp.x to have ONTIME=EXPTIME for rejected events 
+       ( fits2qp.x.mo - does not work for standard events anymore)
+
+    - reset IRAFULIB=/pool14/moiraf/irafbin (test ok)
+
+63. INDEFD & INDEFR are no longer same in iraf 2.11.beta, updates below:
+      /pros/xray/lib/pros/times.x (RCS done)
+      /pros/xray/xplot/imcontour/imc_clevels.x (RCS done)
+      /pros/xray/xplot/imcontour/imc_utils.x (RCS done)
+      /pros/xray/xplot/newwcslab/wcslab.x  (RCS done) 
+      /pros/xray/xspectral/source/xflux.x  (RCS done) 
+      /pros/xray/xspatial/eintools/geotran/t_geotran.x  (RCS done)
+      /pros/xray/xspatial/eintools/source/im_geo.x  (RCS done) 
+
+64.   /pros/xray/xplot/xexamine/xesubs.x                    6/19/97 JCC
+      - iraf2.11 has fixed the inconsistency between the QPOE
+        and IMAGE coordinate systems. Therefore, the factor of 
+        0.5 pixel is no longer needed in xexamine.
+
+65.   /pros/xray/xdataio/qpappend/qpappend.x                6/12/97 JCC
+       - in app_tsiaux()
+       - qpappend failed when TSIREC formats are different  
+       - rebuild xdataio  
+
+     --- clean build for irafd and irafx using iraf 2.11.(July 8, 97)----
+
+66.  -Allow user to input a max src number.
+     -Remove field_ul_x
+     -Convert a few fortran codes to spp. 
+       resolve_src.x get_net_cts.x ck_peaks.x ck_blob_size.x calc_pos.x
+
+
+67.  fits2qp & qp2fits for ASC                                   8/11/97 JCC
+     -(xhead.x/fits2qp)updated to check ROR_NUM before reading it
+     -(qp2fits_subs.x + qp2fits.h)
+      add make_lookup3 and update make_lookup1 (qp2fits_subs.x) 
+     -add "comment" to fits primary header    (qp2fits_subs.x)
+
+     ---- clean build for irafd under tables2.0.beta (8/11/97)
+
+
+68.  update qp2fits.x & qp2fits_subs.x/put_difference            8/18/97 JCC
+     - if INSTRUME==HRI, write STDQLM to fits primary header 
+       [ ROSAT/PSPC & ASC data don't need STDQLM in fits hd ]
+
+69.  /pros/xray/xdataio/fits2qp/fits_params.x/wft_encode_date    8/18/97 JCC
+     -change the DATE format from dd-mm-yy to dd/mm/yy for fits header.
+      [ used in a3d_main_header/qp2fits  ]
+
+ ---- irafx build for qp2fits only (x_xdataio.e  9/2/97) -------
+
+
+71. rebuild  x_imbepos.e  and x_hri_detect.e for jds (9/4/97)
+
+
+72.  add setirafdd in .cshrc
+     .cshrc:   alias setirafd "source /iraf/iraf/local/irafd.csh
+
+74. [ don't do anything . use the same ones as irafx   (9/12/97) ]
+   obsolete below:
+    mv /pros/xray/lib/qpcreate/qpaddf.x and irafqpoe.h to  *.7.28.97
+    cp /stage/irafxx_real/sys/qpoe/qpaddf.x to lib/qpcreate/.
+       [ need to change include file & procedure name after the copy ]
+    irafqpoe.h in pros 7.28.97 = qpoe.h in iraf2.11. 4.4.97
+
+75. add qpappend_tsi for jds
+    this task does not append TSI record if user requests so
+      /pros/xray/xdataio/
+         mkpkg x_xdataio.x xdataio.cl xdataio.hd xdataio.men
+      /pros/xray/xdataio/qpappend_tsi/mkpkg, qpappend_tsi.x, 
+      /pros/xray/xdataio/qpappend_tsi.par
+
+76.  rosat has problem with OPTAXISX/Y + XS-INPXX/INPXY        9/15/97 JCC
+     - update fits2qp.x to add a flag for asc data and passed
+       to ft_nxtext. update ft_nxtext.x from r9.6(=9.3) to 
+       "call ft_addparam" for case 200-220 if it's not an ASC data
+       [ Rosat needs OPTAXISX/Y + XS-INPXX/XS-INPXY for qpspec  ]
+       [ ft_nxtext.x(-r9.5 has never used) ]
+
+77.  -Updated qp2fits to clear buffers for outcomt/buf         9/17/97 JCC
+     [blank_buf()] in put_difference
+     -make_lookup3 is used for AXAF only                       9/18/97 JCC
+     -copy diff.out to fits hdr in put_difference for AXAF only
+      [ rosat used to copy "COMMENT=diff.out" to fits hdr, no need]
+
+78.  remove unwanted keyword from qpoe for axaf only.          9/18/97 JCC
+     xhead.x- add rmkey_axaf()  (xhead.x.9.9 ) 
+     [ need to recompile qpcreate lib for qpsort, timsort ]
+
+79.  spectraldemo/bal_plot and fit fail in table2.0/iraf2.11   9/18/97 JCC 
+     -change the format of "sprintf" in dos_getbal()
+      to get the string "bal_1" without a blank.            
+
+
+80. updated fits / table                                       9/19/97 JCC
+/home/pros/xray/xtiming/data/jdleap.fits     (1-JUL-1997 )
+/home/pros/xray/xtiming/data/jdleap.tab
+/home/pros/xray/xtiming/data/scc_to_utc.fits
+/home/pros/xray/xtiming/data/scc_to_utc.tab
+/home/pros/xray/xspatial/data/hri_qegeom.fits
+/home/pros/xray/xspatial/data/hri_qegeom.imh (hri_qegeom.pix)
+
+cp /home/pros/xray/xspatial/data/hdummy.fits  /iraf/proscal/hdummy.fits
+cp /home/pros/xray/xspatial/data/hdummy.qp 
+
+/home/pros/xray/xspatial/data/asc_hrc.fits  ( /iraf/proscal/asc_hrc.fits )
+/home/pros/xray/xspatial/data/asc_hrc.imh/pix (example in the imdetect-help)
+
+/home/pros/xray/xinstall/fits_asc.cl
+
+81.
+take out qpappend_tsi for now
+remove the print statements in QP2FITS (QP_MISSTR=)  not yet
+
+81.  move imdetect from xspatial to xproto
+/pros/xray/xspatial/detect/    (not removed imdetect yet, and ci )
+     detect.cl:   (ci)
+     detect.hd:    (ci)
+     detect.men:    (ci)
+     imdetect.par:  (deleted)
+     mkpkg:         (ci)
+     x_detect.x:     (ci)
+
+/pros/xray/xproto/       (done with ci )
+     x_xproto.x
+     mkpkg
+     xproto.men
+     xproto.hd
+     xproto.cl
+
+82. for scc_to_utc.tab
+  change NCOEFF_NAME in lib/bary.h from NCOEFF to NCOE
+  xtiming/timlib/sccut_subs.x:  call tim_initcol(tp, NCOEFF_NAME, cp[4])
+
+  test xtiming/timcor/apply_bary/apply_bary.x: call sccut2_init(Memc[s2u_fname])
+       xtiming/timcor/scc_to_utc/scc_to_utc.x: call sccut2_init(Memc[tbl_fname])
+
+83. for jdleap.tab  - change column name from JDLEAP to JD
+ xtiming/timcor/calc_bary/jdleap_init.x-change column name from JDLEAP to JD
+ xtiming/timcor/calc_bary/calc_bary.x - change the comments only
+ xtiming/timcor/calc_bary/clcbary_subs.x - change the comments only
+
+*****irafx clean build 9/30/97 using iraf2.11/table2.0.beta ************
+
+84. changes made for strfits in table2.0.beta   (done in RCS)   JCC(10/4/97) 
+    in  xdataio :  
+         _rarc2pros0.cl     _rdfarc2pros.cl     _rdfarc2pros_c.cl    
+         _rdffits2pros.cl   _rdfrall.cl         _rfits2pros0.cl 
+         xrfits.cl         
+    in  xinstall : 
+         calr_fits2qp.cl    fits2bin.cl     fits2ein.cl    
+         fits2ephem.cl      fits2snr.cl     fits2spat.cl
+         fits_asc.cl
+    in xlocal :  rvv2pros.cl   
+    in xdataio.eincdrom :   _ein_strfits.cl
+
+82. mkpkg in xray :    
+       comment out xlocal before the release.
+       remove xlocal src code from irafx.
+
+83. rename qpappend_tsi  to  qpappend_ftsi   
+         x_xdataio.x 
+         xdataio.cl 
+         xdataio.hd
+         xdataio.men 
+    add its help file
+        qpappend_ftsi.hlp
+
+84. update bugs,     
+    scc_to_utc.hlp, 
+    release.pros.2.5 
+    imdetect.hlp    
+
+85. fits2ephem.cl to create image file for ASC and test imdetect ok.
+                                                           JCC(10/6/97)    
+86  Updated fits2ephem.cl to create the ASC image file.    JCC(10/6/97)
+
+87. don't load "xlocal" and "einobsolete" for the followings:  JCC(10/10/97)
+        xinstall/spatialdemo 
+        xinstall/spectraldemo 
+        xinstall/gspectral
+=========== irafx clean build on 10/8/97 ==================
+=========== iraf clean build on 10/10/97 (=PROS2.5) ========

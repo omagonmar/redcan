@@ -1,0 +1,211 @@
+#$Header: /home/pros/xray/RCS/xray.hd,v 11.0 1997/11/06 16:46:37 prosb Exp $
+#$Log: xray.hd,v $
+#Revision 11.0  1997/11/06 16:46:37  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16  18:24:19  prosb
+#General Release 2.4
+#
+#Revision 8.4  1995/10/18  14:56:27  prosb
+#JCC - Add a new help file "wcsbug.hlp".
+#
+#Revision 8.3  1995/10/11  17:35:21  prosb
+#JCC - Add a new help file "rosat_files.hlp".
+#
+#Revision 8.2  1995/09/28  21:28:35  prosb
+#jcc - comment out "adass" for the release.
+#
+#Revision 8.1  1995/08/08  14:35:04  prosb
+#jcc - ci for pros2.4.
+#
+#Revision 8.0  94/06/27  13:41:15  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/06/17  18:48:36  wendy
+#Pre-Release check-in.
+#
+#Revision 7.1  94/05/20  14:13:25  janet
+#jd - added xspec_interface description
+#
+#Revision 7.0  93/12/27  18:50:16  prosb
+#General Release 2.3
+#
+#Revision 6.1  94/02/18  15:26:00  wendy
+#pre-release check-in (late.. doing it with a kludge)
+#
+#Revision 6.0  93/05/24  15:35:08  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/21  18:49:20  mo
+#Add help file and remove ADASS
+#
+#Revision 5.0  92/10/29  22:39:05  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/21  16:14:46  mo
+#MC	10/21/92	Add new tasks
+#
+#Revision 4.1  92/10/15  19:09:16  mo
+#MC	10/14/92		Add new task 'getdevdim'
+#
+#Revision 4.0  92/04/27  14:05:53  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 2.4  92/04/21  13:32:55  jmoran
+#JMORAN added xinstall package
+#
+#Revision 2.3  92/03/05  13:14:21  mo
+#MC	Jan 91	Change the xray_release to release_xray so
+#		it doesn't conflict with just xray
+#
+#Revision 2.2  91/07/30  20:35:37  mo
+# MC   7/30/91         Updated for new PROS package structure
+#
+#Revision 2.1  91/07/21  19:16:26  mo
+# MC   7/21/91         Updated for package restructuring
+#
+#Revision 2.0  91/03/07  02:17:48  pros
+#General Release 1.0
+#
+# Help directory for the XRAY package(s).
+
+$xdoc		= "./doc/"
+$xdataio	= "./xdataio/"
+$ximages	= "./ximages/"
+$xplot		= "./xplot/"
+$xproto		= "./xproto/"
+$xinstall       = "./xinstall/"
+$xlocal		= "./xlocal/"
+$xobsolete	= "./xobsolete/"
+$xspatial	= "./xspatial/"
+$xspectral	= "./xspectral/"
+$xtiming	= "./xtiming/"
+#$adass		= "./adass/"
+
+# define the release notes
+release_xray	hlp = README
+
+# define the help files for general PROS information
+bugs		hlp = xdoc$bugs.hlp
+coords		hlp = xdoc$coords.hlp
+explain_errors  hlp = xdoc$explain_errors.hlp
+explain_screens hlp = xdoc$explain_screens.hlp
+explain_xdata   hlp = xdoc$explain_xdata.hlp
+exposure	hlp = xdoc$exposure.hlp
+extensions	hlp = xdoc$extensions.hlp
+file_compare    hlp = xdoc$file_compare.hlp
+filter		hlp = xdoc$filter.hlp
+headfmts	hlp = xdoc$headfmts.hlp
+hrifmts		hlp = xdoc$hrifmts.hlp
+iraf_beta       hlp = xdoc$iraf_beta.hlp
+missions	hlp = xdoc$missions.hlp
+pros		hlp = xdoc$pros.hlp
+pspcfmts	hlp = xdoc$pspcfmts.hlp
+qpoe		hlp = xdoc$qpoe.hlp
+qpmerge         hlp = xdoc$qpmerge.hlp
+rosat_files     hlp = xdoc$rosat_files.hlp
+regions		hlp = xdoc$regions.hlp
+reggeometry	hlp = xdoc$reggeometry.hlp
+regalgebra	hlp = xdoc$regalgebra.hlp
+regcoords	hlp = xdoc$regcoords.hlp
+regdefinitions	hlp = xdoc$regdefinitions.hlp
+wcsbug          hlp = xdoc$wcsbug.hlp
+xspec_interface hlp = xdoc$xspec_interface.hlp
+
+# define help files for the packages
+
+xdataio		men = xdataio$xdataio.men,
+		hlp = ..,
+		sys = xdataio$xdataio.hlp,
+		pkg = xdataio$xdataio.hd,
+		src = xdataio$xdataio.cl
+
+xproto		men = xproto$xproto.men,
+		hlp = ..,
+		sys = xproto$xproto.hlp,
+		pkg = xproto$xproto.hd,
+		src = xproto$xproto.cl
+
+xinstall        men = xinstall$xinstall.men,
+                hlp = ..,
+                sys = xinstall$xinstall.hlp,
+                pkg = xinstall$xinstall.hd,
+                src = xinstall$xinstall.cl
+
+xlocal		men = xlocal$xlocal.men,
+		hlp = ..,
+		sys = xlocal$xlocal.hlp,
+		pkg = xlocal$xlocal.hd,
+		src = xlocal$xlocal.cl
+
+xobsolete	men = xobsolete$xobsolete.men,
+		hlp = ..,
+		sys = xobsolete$xobsolete.hlp,
+		pkg = xobsolete$xobsolete.hd,
+		src = xobsolete$xobsolete.cl
+
+ximages		men = ximages$ximages.men,
+		hlp = ..,
+		sys = ximages$ximages.hlp,
+		pkg = ximages$ximages.hd,
+		src = ximages$ximages.cl
+
+xplot		men = xplot$xplot.men,
+		hlp = ..,
+		sys = xplot$xplot.hlp,
+		pkg = xplot$xplot.hd,
+		src = xplot$xplot.cl
+
+xspatial	men = xspatial$xspatial.men,
+		hlp = ..,
+		sys = xspatial$xspatial.hlp,
+		pkg = xspatial$xspatial.hd,
+		src = xspatial$xspatial.cl
+
+xspectral	men = xspectral$xspectral.men,
+		hlp = ..,
+		sys = xspectral$xspectral.hlp,
+		pkg = xspectral$xspectral.hd,
+		src = xspectral$xspectral.cl
+
+xtiming		men = xtiming$xtiming.men,
+		hlp = ..,
+		sys = xtiming$xtiming.hlp,
+		pkg = xtiming$xtiming.hd,
+		src = xtiming$xtiming.cl
+
+#adass     men = adass$adass.men,
+#		hlp = ..,
+#               sys = adass$adass.hlp,
+#	        pkg = adass$adass.hd,
+#               src = adass$adass.cl
+
+# general tasks
+
+$doc		= "./doc/"
+$src		= "./xraytasks/"
+
+tapes		hlp = doc$tapes.hlp
+
+xapropos	hlp = doc$xapropos.hlp,
+		src = src$xapropos.cl
+
+rtname		hlp = doc$rtname.hlp,
+		src = src$rtname.x
+
+clobname	hlp = doc$clobname.hlp,
+		src = src$clobname.x
+
+fnlname		hlp = doc$fnlname.hlp,
+		src = src$fnlname.x
+
+imgimage	hlp = doc$imgimage.hlp,
+		src = src$imgimage.x
+
+imgclust	hlp = doc$imgclust.hlp,
+		src = src$imgclust.x
+
+getdevdim	hlp = doc$getdevdim.hlp,
+		src = src$getdevdim.x
+
+#revisions	hlp = Revisions

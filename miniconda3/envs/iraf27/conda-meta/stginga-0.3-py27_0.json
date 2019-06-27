@@ -1,0 +1,504 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=2",
+    "ginga >=2.7",
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "scipy"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stginga-0.3-py27_0",
+  "features": "",
+  "files": [
+    "bin/stginga",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/stginga/__init__.py",
+    "lib/python2.7/site-packages/stginga/__init__.pyc",
+    "lib/python2.7/site-packages/stginga/_astropy_init.py",
+    "lib/python2.7/site-packages/stginga/_astropy_init.pyc",
+    "lib/python2.7/site-packages/stginga/conftest.py",
+    "lib/python2.7/site-packages/stginga/conftest.pyc",
+    "lib/python2.7/site-packages/stginga/data/dqflags_acs.txt",
+    "lib/python2.7/site-packages/stginga/data/dqflags_hstgen.txt",
+    "lib/python2.7/site-packages/stginga/data/dqflags_jwst.txt",
+    "lib/python2.7/site-packages/stginga/data/dqflags_wfc3.txt",
+    "lib/python2.7/site-packages/stginga/examples/configs/channel_Image.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/general.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/ginga_config.py",
+    "lib/python2.7/site-packages/stginga/examples/configs/ginga_config.pyc",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_BackgroundSub.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_BadPixCorr.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_Contents.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_DQInspect.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_Mosaic.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_SNRCalc.cfg",
+    "lib/python2.7/site-packages/stginga/examples/configs/plugin_Thumbs.cfg",
+    "lib/python2.7/site-packages/stginga/gingawrapper.py",
+    "lib/python2.7/site-packages/stginga/gingawrapper.pyc",
+    "lib/python2.7/site-packages/stginga/plugin_info.py",
+    "lib/python2.7/site-packages/stginga/plugin_info.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/BackgroundSub.py",
+    "lib/python2.7/site-packages/stginga/plugins/BackgroundSub.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/BadPixCorr.py",
+    "lib/python2.7/site-packages/stginga/plugins/BadPixCorr.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/DQInspect.py",
+    "lib/python2.7/site-packages/stginga/plugins/DQInspect.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/MosaicAuto.py",
+    "lib/python2.7/site-packages/stginga/plugins/MosaicAuto.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/SNRCalc.py",
+    "lib/python2.7/site-packages/stginga/plugins/SNRCalc.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/__init__.py",
+    "lib/python2.7/site-packages/stginga/plugins/__init__.pyc",
+    "lib/python2.7/site-packages/stginga/plugins/local_plugin_mixin.py",
+    "lib/python2.7/site-packages/stginga/plugins/local_plugin_mixin.pyc",
+    "lib/python2.7/site-packages/stginga/tests/__init__.py",
+    "lib/python2.7/site-packages/stginga/tests/__init__.pyc",
+    "lib/python2.7/site-packages/stginga/tests/coveragerc",
+    "lib/python2.7/site-packages/stginga/tests/setup_package.py",
+    "lib/python2.7/site-packages/stginga/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/stginga/tests/test_utils.py",
+    "lib/python2.7/site-packages/stginga/tests/test_utils.pyc",
+    "lib/python2.7/site-packages/stginga/utils.py",
+    "lib/python2.7/site-packages/stginga/utils.pyc",
+    "lib/python2.7/site-packages/stginga/version.py",
+    "lib/python2.7/site-packages/stginga/version.pyc"
+  ],
+  "fn": "stginga-0.3-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stginga-0.3-py27_0",
+    "type": 1
+  },
+  "md5": "3b1bd8f35088cc42e3c8d994b1b9a763",
+  "name": "stginga",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stginga-0.3-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/stginga",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "7b2028168f991829d016756f7a1a4be83bbafb6ae39ab2f7c5d41cc24b302bb5",
+        "sha256_in_prefix": "389765663c621da7018feff17fb2d4797f15158b23cab07aa85b916b401e57b5",
+        "size_in_bytes": 403
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "303f9011a223d753272a60fc94122e1dab45ccae63704a6f8a1082a7a67be363",
+        "sha256_in_prefix": "303f9011a223d753272a60fc94122e1dab45ccae63704a6f8a1082a7a67be363",
+        "size_in_bytes": 666
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "9d543aef632ed2da11dd7324c404a2457eb6ca02a1955a0d1fa1d3a743a5bcdc",
+        "sha256_in_prefix": "9d543aef632ed2da11dd7324c404a2457eb6ca02a1955a0d1fa1d3a743a5bcdc",
+        "size_in_bytes": 8946
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "3e0be39809242530a5b57977033ee4182c840b82e54d364a59c842eb05bef942",
+        "sha256_in_prefix": "3e0be39809242530a5b57977033ee4182c840b82e54d364a59c842eb05bef942",
+        "size_in_bytes": 56
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "f51c3c4658a6f7c04dc93b771451c22e18246eb6985f50411c6fa9ec24bf3798",
+        "sha256_in_prefix": "f51c3c4658a6f7c04dc93b771451c22e18246eb6985f50411c6fa9ec24bf3798",
+        "size_in_bytes": 34
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga-0.3-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "683bcf1760c1b256e4e8062cbd88aecaae8d4fc0e0bf7b1d1a4ed32b0e526073",
+        "sha256_in_prefix": "683bcf1760c1b256e4e8062cbd88aecaae8d4fc0e0bf7b1d1a4ed32b0e526073",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "58bf2e94269e8b2deb3fc1d5f062b56d36a8ea1921c3b748f97503acbbd0350b",
+        "sha256_in_prefix": "58bf2e94269e8b2deb3fc1d5f062b56d36a8ea1921c3b748f97503acbbd0350b",
+        "size_in_bytes": 533
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "19500cee2ac14e90d652f1a4f98f552d9187ae174dd3dd7c7c9d78dc3204692c",
+        "sha256_in_prefix": "19500cee2ac14e90d652f1a4f98f552d9187ae174dd3dd7c7c9d78dc3204692c",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/_astropy_init.py",
+        "path_type": "hardlink",
+        "sha256": "8e7d106a339750cffb5189fa64d90680db23dd19e2d12a33f200f2b9fe18ffa3",
+        "sha256_in_prefix": "8e7d106a339750cffb5189fa64d90680db23dd19e2d12a33f200f2b9fe18ffa3",
+        "size_in_bytes": 5432
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/_astropy_init.pyc",
+        "path_type": "hardlink",
+        "sha256": "dfa8aadd4d0a0511d05c98a69d0e3f7da2215b7de9ad33bc30aa0b6c8532fce4",
+        "sha256_in_prefix": "dfa8aadd4d0a0511d05c98a69d0e3f7da2215b7de9ad33bc30aa0b6c8532fce4",
+        "size_in_bytes": 5338
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "57c25200f4a2aac4c6e5c073d91f2df89a15e9cb929a8cc49ca8bf16b154488d",
+        "sha256_in_prefix": "57c25200f4a2aac4c6e5c073d91f2df89a15e9cb929a8cc49ca8bf16b154488d",
+        "size_in_bytes": 1200
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "ddabe30e87010716b71af4ace45cdb1df58c831e3173fd018b27212cc054e9fd",
+        "sha256_in_prefix": "ddabe30e87010716b71af4ace45cdb1df58c831e3173fd018b27212cc054e9fd",
+        "size_in_bytes": 658
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/data/dqflags_acs.txt",
+        "path_type": "hardlink",
+        "sha256": "a2a5dbbf8709a718b68ed494112d54e48923c840d777206a0a3e7f4f28d3cb0e",
+        "sha256_in_prefix": "a2a5dbbf8709a718b68ed494112d54e48923c840d777206a0a3e7f4f28d3cb0e",
+        "size_in_bytes": 1041
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/data/dqflags_hstgen.txt",
+        "path_type": "hardlink",
+        "sha256": "899b9851b13bf8acd4a126b3b3017a40bf00db96d51c72ede8ecd2a0862582a8",
+        "sha256_in_prefix": "899b9851b13bf8acd4a126b3b3017a40bf00db96d51c72ede8ecd2a0862582a8",
+        "size_in_bytes": 908
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/data/dqflags_jwst.txt",
+        "path_type": "hardlink",
+        "sha256": "e1e8916ccfc2d0b0ca966cec6a8731f405b7a7a1e00feaa8712938d5b5985c60",
+        "sha256_in_prefix": "e1e8916ccfc2d0b0ca966cec6a8731f405b7a7a1e00feaa8712938d5b5985c60",
+        "size_in_bytes": 819
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/data/dqflags_wfc3.txt",
+        "path_type": "hardlink",
+        "sha256": "4482ccfdd230330a7f6ef4a33d069422b8e1a203a7df46dd267e438ba12853a3",
+        "sha256_in_prefix": "4482ccfdd230330a7f6ef4a33d069422b8e1a203a7df46dd267e438ba12853a3",
+        "size_in_bytes": 1120
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/channel_Image.cfg",
+        "path_type": "hardlink",
+        "sha256": "8c85cb05371a3e1d0476e49de69303f1c9e25cd67ae7d373bf70d8ffbd9d2e6f",
+        "sha256_in_prefix": "8c85cb05371a3e1d0476e49de69303f1c9e25cd67ae7d373bf70d8ffbd9d2e6f",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/general.cfg",
+        "path_type": "hardlink",
+        "sha256": "1bd47bafcf3d494f938653fcd40d6b132d98b46d75c0f9769ed44eb2a0b5605d",
+        "sha256_in_prefix": "1bd47bafcf3d494f938653fcd40d6b132d98b46d75c0f9769ed44eb2a0b5605d",
+        "size_in_bytes": 2114
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/ginga_config.py",
+        "path_type": "hardlink",
+        "sha256": "98a629f6aed5aa10133d221bec941bd2b45e4ffa644fc5fcd50480f7f8b75b43",
+        "sha256_in_prefix": "98a629f6aed5aa10133d221bec941bd2b45e4ffa644fc5fcd50480f7f8b75b43",
+        "size_in_bytes": 776
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/ginga_config.pyc",
+        "path_type": "hardlink",
+        "sha256": "d2563a44ec3ecc342f636c774a2d944efe53749ebca6dd84d51cdf57b18189a1",
+        "sha256_in_prefix": "d2563a44ec3ecc342f636c774a2d944efe53749ebca6dd84d51cdf57b18189a1",
+        "size_in_bytes": 1364
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_BackgroundSub.cfg",
+        "path_type": "hardlink",
+        "sha256": "d24fedec862df3f33b94f7b6852606ae8846abe4876fe2a6b654091bcecd86d5",
+        "sha256_in_prefix": "d24fedec862df3f33b94f7b6852606ae8846abe4876fe2a6b654091bcecd86d5",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_BadPixCorr.cfg",
+        "path_type": "hardlink",
+        "sha256": "8fb453d2ae158fdf736acf8aa0e754bddb0173972e9df552c83ac46dc65aa3c0",
+        "sha256_in_prefix": "8fb453d2ae158fdf736acf8aa0e754bddb0173972e9df552c83ac46dc65aa3c0",
+        "size_in_bytes": 819
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_Contents.cfg",
+        "path_type": "hardlink",
+        "sha256": "92dfde93edc12a60de04fee48b5cbf0546206a8bb0b9f8fec36497704328f176",
+        "sha256_in_prefix": "92dfde93edc12a60de04fee48b5cbf0546206a8bb0b9f8fec36497704328f176",
+        "size_in_bytes": 421
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_DQInspect.cfg",
+        "path_type": "hardlink",
+        "sha256": "e8c0447cbc82c5f5eee9347f8517892c6d6ddc6939ddf1ab8c624c7f5abed74d",
+        "sha256_in_prefix": "e8c0447cbc82c5f5eee9347f8517892c6d6ddc6939ddf1ab8c624c7f5abed74d",
+        "size_in_bytes": 659
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_Mosaic.cfg",
+        "path_type": "hardlink",
+        "sha256": "e8e6150b04c3e5c6e97ead7cb951d548b8077368813a151725e25cedfc1a4b7f",
+        "sha256_in_prefix": "e8e6150b04c3e5c6e97ead7cb951d548b8077368813a151725e25cedfc1a4b7f",
+        "size_in_bytes": 804
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_SNRCalc.cfg",
+        "path_type": "hardlink",
+        "sha256": "f0890d95e6ba0aa509dc2c4c9dfeec166a9676d325f5c6e7ce754e538942f83c",
+        "sha256_in_prefix": "f0890d95e6ba0aa509dc2c4c9dfeec166a9676d325f5c6e7ce754e538942f83c",
+        "size_in_bytes": 801
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/examples/configs/plugin_Thumbs.cfg",
+        "path_type": "hardlink",
+        "sha256": "e4f45293f9e8e37670f9b18a6d279be39515d318c281c7388492874b87ca9eff",
+        "sha256_in_prefix": "e4f45293f9e8e37670f9b18a6d279be39515d318c281c7388492874b87ca9eff",
+        "size_in_bytes": 487
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/gingawrapper.py",
+        "path_type": "hardlink",
+        "sha256": "c40795911fc89ea1988b1e2c4cfafa993e26d7863028b59ef3fbfbfd0f238a98",
+        "sha256_in_prefix": "c40795911fc89ea1988b1e2c4cfafa993e26d7863028b59ef3fbfbfd0f238a98",
+        "size_in_bytes": 2299
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/gingawrapper.pyc",
+        "path_type": "hardlink",
+        "sha256": "0d5c597cc7a0c70b9257dc6329f9ff82bfa004a9e02daa4825676cd738d92c52",
+        "sha256_in_prefix": "0d5c597cc7a0c70b9257dc6329f9ff82bfa004a9e02daa4825676cd738d92c52",
+        "size_in_bytes": 2460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugin_info.py",
+        "path_type": "hardlink",
+        "sha256": "261ec24b686e1717e6b85c1ea403c4f6b04dba3e90092a31adfcaea1e99b2442",
+        "sha256_in_prefix": "261ec24b686e1717e6b85c1ea403c4f6b04dba3e90092a31adfcaea1e99b2442",
+        "size_in_bytes": 1999
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugin_info.pyc",
+        "path_type": "hardlink",
+        "sha256": "3fb181bf66c137b569585db5ecdd0151c2be3c6f0d1b5cea7056a25a77a9d645",
+        "sha256_in_prefix": "3fb181bf66c137b569585db5ecdd0151c2be3c6f0d1b5cea7056a25a77a9d645",
+        "size_in_bytes": 2174
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/BackgroundSub.py",
+        "path_type": "hardlink",
+        "sha256": "3eb8d70ee716be02f774f9bb72c4d71b928adad2c926885d7083b10a8b4bcaa7",
+        "sha256_in_prefix": "3eb8d70ee716be02f774f9bb72c4d71b928adad2c926885d7083b10a8b4bcaa7",
+        "size_in_bytes": 29341
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/BackgroundSub.pyc",
+        "path_type": "hardlink",
+        "sha256": "1f40fa9c5b73aef095ae871b7b26a7e1a4e7881af6703535dd33f31202581b68",
+        "sha256_in_prefix": "1f40fa9c5b73aef095ae871b7b26a7e1a4e7881af6703535dd33f31202581b68",
+        "size_in_bytes": 27863
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/BadPixCorr.py",
+        "path_type": "hardlink",
+        "sha256": "6fcccc9f5fa92d9c7bbe7b4053bfa779312fe0fe9a38b5263a0b14e23cc02c7b",
+        "sha256_in_prefix": "6fcccc9f5fa92d9c7bbe7b4053bfa779312fe0fe9a38b5263a0b14e23cc02c7b",
+        "size_in_bytes": 36278
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/BadPixCorr.pyc",
+        "path_type": "hardlink",
+        "sha256": "8965a1210ef6f5b71834452f720a86f174be6d51b657d9740912801a387e2f12",
+        "sha256_in_prefix": "8965a1210ef6f5b71834452f720a86f174be6d51b657d9740912801a387e2f12",
+        "size_in_bytes": 31517
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/DQInspect.py",
+        "path_type": "hardlink",
+        "sha256": "98c62089168a594dbf4ba69f88a32ba38ac70771b64552d6e7028050b8e06774",
+        "sha256_in_prefix": "98c62089168a594dbf4ba69f88a32ba38ac70771b64552d6e7028050b8e06774",
+        "size_in_bytes": 23903
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/DQInspect.pyc",
+        "path_type": "hardlink",
+        "sha256": "52ed6b79db3a9022fb17f43d0fb4d2312367cfa36fb1178bfbc5f97bb7e6a427",
+        "sha256_in_prefix": "52ed6b79db3a9022fb17f43d0fb4d2312367cfa36fb1178bfbc5f97bb7e6a427",
+        "size_in_bytes": 21447
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/MosaicAuto.py",
+        "path_type": "hardlink",
+        "sha256": "9515d976759f21a39475273f4e6cca810fd5630c369e9f81a3ed60cc0e6bd48f",
+        "sha256_in_prefix": "9515d976759f21a39475273f4e6cca810fd5630c369e9f81a3ed60cc0e6bd48f",
+        "size_in_bytes": 19242
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/MosaicAuto.pyc",
+        "path_type": "hardlink",
+        "sha256": "3ddccd0eb1e1169db6ed5bff8bc34ee4ad94c1c4f33069e81da27cedf5d4a7c8",
+        "sha256_in_prefix": "3ddccd0eb1e1169db6ed5bff8bc34ee4ad94c1c4f33069e81da27cedf5d4a7c8",
+        "size_in_bytes": 17029
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/SNRCalc.py",
+        "path_type": "hardlink",
+        "sha256": "1969223a62316b95034ccef7b525dee9eb56ed68dda24a7e3ef66ec5855561b2",
+        "sha256_in_prefix": "1969223a62316b95034ccef7b525dee9eb56ed68dda24a7e3ef66ec5855561b2",
+        "size_in_bytes": 40140
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/SNRCalc.pyc",
+        "path_type": "hardlink",
+        "sha256": "b42d2232a51aa79e260a85d765ae6373acc3c832f4eb4b394db8241098470594",
+        "sha256_in_prefix": "b42d2232a51aa79e260a85d765ae6373acc3c832f4eb4b394db8241098470594",
+        "size_in_bytes": 37108
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa4d08554b56cc38056335c969c5761f649cdd440574b53e301dafe7a5aa7665",
+        "sha256_in_prefix": "fa4d08554b56cc38056335c969c5761f649cdd440574b53e301dafe7a5aa7665",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/local_plugin_mixin.py",
+        "path_type": "hardlink",
+        "sha256": "c6aa129688047be67cf9e4a2f88a21e9e16e243933b821e1cde07488bab1ed88",
+        "sha256_in_prefix": "c6aa129688047be67cf9e4a2f88a21e9e16e243933b821e1cde07488bab1ed88",
+        "size_in_bytes": 9349
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/plugins/local_plugin_mixin.pyc",
+        "path_type": "hardlink",
+        "sha256": "0660022d81e14c1271a05602ff7f0138866df060895968ff729debeda90cf653",
+        "sha256_in_prefix": "0660022d81e14c1271a05602ff7f0138866df060895968ff729debeda90cf653",
+        "size_in_bytes": 11200
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "sha256_in_prefix": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "f16e6d11773788294bca32349ae72e807cc95b3acbef7c532f1daaf86ff0bf60",
+        "sha256_in_prefix": "f16e6d11773788294bca32349ae72e807cc95b3acbef7c532f1daaf86ff0bf60",
+        "size_in_bytes": 235
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/coveragerc",
+        "path_type": "hardlink",
+        "sha256": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "sha256_in_prefix": "528684b8fa1cf90016465aeb201b03332708c305a860cce51df1b92a8f95ecd4",
+        "size_in_bytes": 768
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "8c25c16519338244366296c9e1e69e25fc1752b6106171eb5ecd60413d814979",
+        "sha256_in_prefix": "8c25c16519338244366296c9e1e69e25fc1752b6106171eb5ecd60413d814979",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "0f0a1459537668a1dce8f24d282a48aa43480d5d8c12d3286bf7cd39daaf4a26",
+        "sha256_in_prefix": "0f0a1459537668a1dce8f24d282a48aa43480d5d8c12d3286bf7cd39daaf4a26",
+        "size_in_bytes": 395
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/test_utils.py",
+        "path_type": "hardlink",
+        "sha256": "7988923cf75c1a9b75e887dd1d94311161e16af8308657f19566b7372d63de7b",
+        "sha256_in_prefix": "7988923cf75c1a9b75e887dd1d94311161e16af8308657f19566b7372d63de7b",
+        "size_in_bytes": 3902
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/tests/test_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "1c938ee86053c998e251d5b2fee363b2705e8d74a19ad50229548db6ebf31a89",
+        "sha256_in_prefix": "1c938ee86053c998e251d5b2fee363b2705e8d74a19ad50229548db6ebf31a89",
+        "size_in_bytes": 6174
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/utils.py",
+        "path_type": "hardlink",
+        "sha256": "931fa08bf76d9eeb104a24472fa76ece756ab86b2eddea06057b71f3f592a9ad",
+        "sha256_in_prefix": "931fa08bf76d9eeb104a24472fa76ece756ab86b2eddea06057b71f3f592a9ad",
+        "size_in_bytes": 10651
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "bc7e69ddeec421c7617dd11c5ebfe8018c91292931af826f32c40e810a8ea192",
+        "sha256_in_prefix": "bc7e69ddeec421c7617dd11c5ebfe8018c91292931af826f32c40e810a8ea192",
+        "size_in_bytes": 10560
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/version.py",
+        "path_type": "hardlink",
+        "sha256": "813eacfd8610a923fa52b283c8679934d5a78c20ffbc84b5d47b3b61562fb012",
+        "sha256_in_prefix": "813eacfd8610a923fa52b283c8679934d5a78c20ffbc84b5d47b3b61562fb012",
+        "size_in_bytes": 7300
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stginga/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "9292be389c6ec2d67027a7ad41e02934c5dae747a653f0d09f744f3cbab3a04c",
+        "sha256_in_prefix": "9292be389c6ec2d67027a7ad41e02934c5dae747a653f0d09f744f3cbab3a04c",
+        "size_in_bytes": 5872
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 82422,
+  "subdir": "linux-64",
+  "timestamp": 1519808705856,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stginga-0.3-py27_0.tar.bz2",
+  "version": "0.3"
+}

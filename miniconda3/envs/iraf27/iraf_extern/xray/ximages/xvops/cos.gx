@@ -1,0 +1,41 @@
+#$Header: /tmp_mnt/home/pros/xray/ximages/xvops/RCS/cos.gx,v 8.0 94/06/27 14:46:36 prosb Rel $
+#$Log:	cos.gx,v $
+#Revision 8.0  94/06/27  14:46:36  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:27:46  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:08:32  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:27:58  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:32:02  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:18:16  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:34:00  pros
+#General Release 1.0
+#
+# COS -- Compute the cos of a vector (generic).
+
+procedure cos$t (a, b, npix)
+
+PIXEL	a[ARB], b[ARB]
+int	npix, i
+
+begin
+	do i = 1, npix {
+		    $if (datatype == rdx)
+			b[i] = cos (a[i])
+		    $else $if (datatype == l)
+			b[i] = cos (double (a[i]))
+		    $else
+			b[i] = cos (real (a[i]))
+		    $endif $endif
+	}
+end

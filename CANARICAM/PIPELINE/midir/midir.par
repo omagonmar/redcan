@@ -1,0 +1,4 @@
+# Package parameters for the midir package
+ 
+logfile,s,h,"midir.log",,,"Logfile for tasks in the midir package"
+version,s,h,"28Jul2009",,,"Package version date"

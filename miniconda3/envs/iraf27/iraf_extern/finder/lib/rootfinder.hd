@@ -1,0 +1,8 @@
+# Root task entry for the FINDER package help tree.  Defines `finder'
+# as both a task and a package in the finder help database.
+
+finder		men  = finder$finder.men,
+		hlp  = finder$finder.men,
+		sys  = finder$finder.hlp,
+		pkg  = finder$finder.hd,
+		src  = finder$finder.cl

@@ -1,0 +1,91 @@
+#$Header: /home/pros/xray/ximages/RCS/ximages.hd,v 11.0 1997/11/06 16:29:25 prosb Exp $
+#$Log: ximages.hd,v $
+#Revision 11.0  1997/11/06 16:29:25  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:32:59  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:42:44  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:26:20  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:04:24  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/20  09:29:54  mo
+#MC	5/20/93	Add new tasks and fix 'imcompress' references
+#
+#Revision 5.0  92/10/29  21:26:36  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:15:12  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/24  14:34:00  mo
+#MC	4/24/92		Add missing ,
+#
+#Revision 3.0  91/08/02  01:15:38  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  18:59:21  mo
+#MC	7/21/91		Updated for package restructuring
+#
+#Revision 2.0  91/03/06  23:48:56  pros
+#General Release 1.0
+#
+# Help directory for the XIMAGES package
+
+$imcalc	= "./imcalc/"
+$doc = "./doc/"
+$plcreate = "./plcreate/"
+$pllist   = "./pllist/"
+$qpcopy   = "./qpcopy/"
+$qplist   = "./qplist/"
+$qphedit  = "./qphedit/"
+$qprotate = "./qprotate/"
+$qpsort   = "./qpsort/"
+$xhadd    = "./xhadd/"
+$xhdisp   = "./xhdisp/"
+$imcompress = "./imcompress/"
+$imcreate   = "./imcreate/"
+$imnode     = "./imnode/"
+$imreplicate= "./imreplicate/"
+$script	    = "./"
+
+imcalc          hlp = doc$imcalc.hlp,
+		src = imcalc$imcalc.yy
+plcreate        hlp = doc$plcreate.hlp,
+		src = plcreate$plcreate.x
+pllist          hlp = doc$pllist.hlp,
+		src = pllist$pllist.x
+qpcopy          hlp = doc$qpcopy.hlp,
+		src = qpcopy$qpcopy.x
+qplist          hlp = doc$qplist.hlp,
+		src = qplist$qplist.x
+qphedit         hlp = doc$qphedit.hlp,
+		src = qphedit$qphedit.x
+qplintran       hlp = doc$qplintran.hlp,
+		src = qplintran$qplintran.x
+qprotate        hlp = doc$qprotate.hlp,
+		src = script$qprotate.cl
+qpshift         hlp = doc$qpshift.hlp,
+		src = script$qpshift.cl
+qpsort          hlp = doc$qpsort.hlp,
+		src = qpsort$qpsort.x
+xhadd           hlp = doc$xhadd.hlp,
+		src = xhadd$xhadd.x
+xhdisp          hlp = doc$xhdisp.hlp,
+		src = xhdisp$xhdisp.x
+imcompress	src = script$imcompress.cl,
+		hlp = doc$imcompress.hlp
+imcreate	hlp = doc$imcreate.hlp,
+		src = imcreate$imcreate.x
+imnode		hlp = doc$imnode.hlp,
+		src = imnode$imnode.x
+imreplicate	hlp = doc$imreplicate.hlp,
+		src = script$imreplicate.cl
+revisions	hlp = Revisions
+

@@ -1,0 +1,295 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "python >=2.7,<2.8.0a0",
+    "spherical-geometry >=1.2.2",
+    "stsci.imagestats",
+    "stsci.tools",
+    "stwcs"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stsci.skypac-0.9.15-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/PKG-INFO",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/SOURCES.txt",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/dependency_links.txt",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/not-zip-safe",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/requires.txt",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/top_level.txt",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/__init__.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/__init__.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/__init__.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/__init__.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/hstinfo.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/hstinfo.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pamutils.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pamutils.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pars/skymatch.cfg",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pars/skymatch.cfgspc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/parseat.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/parseat.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/region.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/region.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skyline.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skyline.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skymatch.help",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skymatch.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skymatch.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skystatistics.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skystatistics.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/utils.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/utils.pyc",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/version.py",
+    "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/version.pyc",
+    "lib/python2.7/site-packages/stsci.skypac.pth"
+  ],
+  "fn": "stsci.skypac-0.9.15-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stsci.skypac-0.9.15-py27_0",
+    "type": 1
+  },
+  "md5": "69a45db47a6199b81445ed3ea7dc7bfd",
+  "name": "stsci.skypac",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stsci.skypac-0.9.15-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "94324d22278caa99046ce5074e8325e8d0863282ff9db5ea6c4c891e1f7fc2b8",
+        "sha256_in_prefix": "94324d22278caa99046ce5074e8325e8d0863282ff9db5ea6c4c891e1f7fc2b8",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "229df078d399031746b4999692df564e24c4da19ad7ceb62023472f003d01f58",
+        "sha256_in_prefix": "229df078d399031746b4999692df564e24c4da19ad7ceb62023472f003d01f58",
+        "size_in_bytes": 895
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "e8855a8f9f5ea2f86e27fbaecea5ec43e32dec3b94159b35f634e8f13d23461a",
+        "sha256_in_prefix": "e8855a8f9f5ea2f86e27fbaecea5ec43e32dec3b94159b35f634e8f13d23461a",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/EGG-INFO/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4dafca177548df2bd9067445fdcde3400c502f650026d8fff554690bccabe4dc",
+        "sha256_in_prefix": "4dafca177548df2bd9067445fdcde3400c502f650026d8fff554690bccabe4dc",
+        "size_in_bytes": 476
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "77973b992bbaf79de27d23f0ceb14ba8ee287f5ba67b441a57cb21e7f16d732c",
+        "sha256_in_prefix": "77973b992bbaf79de27d23f0ceb14ba8ee287f5ba67b441a57cb21e7f16d732c",
+        "size_in_bytes": 362
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ff49af6ca167f19b9fac996a42ca25bb07de66d245c340c3a540707c39bcd9ae",
+        "sha256_in_prefix": "ff49af6ca167f19b9fac996a42ca25bb07de66d245c340c3a540707c39bcd9ae",
+        "size_in_bytes": 788
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "181a82cf33c4d47796c985f08f798e5a87c5e5e00bbbe280d7343c92ded54505",
+        "sha256_in_prefix": "181a82cf33c4d47796c985f08f798e5a87c5e5e00bbbe280d7343c92ded54505",
+        "size_in_bytes": 1280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/hstinfo.py",
+        "path_type": "hardlink",
+        "sha256": "6a4ac9e0a9be2bd0883b977f362fabb3a2a32e39e72b18357dc1470ab087a0d6",
+        "sha256_in_prefix": "6a4ac9e0a9be2bd0883b977f362fabb3a2a32e39e72b18357dc1470ab087a0d6",
+        "size_in_bytes": 903
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/hstinfo.pyc",
+        "path_type": "hardlink",
+        "sha256": "ab5e0876a796dfed2bed85fc111062241a3094a51286b428da3487ca43ef9938",
+        "sha256_in_prefix": "ab5e0876a796dfed2bed85fc111062241a3094a51286b428da3487ca43ef9938",
+        "size_in_bytes": 935
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pamutils.py",
+        "path_type": "hardlink",
+        "sha256": "a9a8a28f65cc21d1b6e6ea2c1f1728eca72ec30eb84033c52e7e5ef196c7e988",
+        "sha256_in_prefix": "a9a8a28f65cc21d1b6e6ea2c1f1728eca72ec30eb84033c52e7e5ef196c7e988",
+        "size_in_bytes": 11570
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pamutils.pyc",
+        "path_type": "hardlink",
+        "sha256": "e23463a1e27ca44f437e3934ff8ba5a29aab95d5ebec6b79d2d7be0ccf782021",
+        "sha256_in_prefix": "e23463a1e27ca44f437e3934ff8ba5a29aab95d5ebec6b79d2d7be0ccf782021",
+        "size_in_bytes": 11675
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pars/skymatch.cfg",
+        "path_type": "hardlink",
+        "sha256": "c3d571563b077657981d1bb0a678c4e772aa68306b3a3dfb3bbb818968f6caae",
+        "sha256_in_prefix": "c3d571563b077657981d1bb0a678c4e772aa68306b3a3dfb3bbb818968f6caae",
+        "size_in_bytes": 397
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/pars/skymatch.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "c491e4a1a87b752d964a17a3d20d012595338240f5703f8b5215b41f218a4da7",
+        "sha256_in_prefix": "c491e4a1a87b752d964a17a3d20d012595338240f5703f8b5215b41f218a4da7",
+        "size_in_bytes": 2363
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/parseat.py",
+        "path_type": "hardlink",
+        "sha256": "4bb5cd4596470f8bc17ea4825958753e89c34757562c042c80fb41012a49f99a",
+        "sha256_in_prefix": "4bb5cd4596470f8bc17ea4825958753e89c34757562c042c80fb41012a49f99a",
+        "size_in_bytes": 78081
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/parseat.pyc",
+        "path_type": "hardlink",
+        "sha256": "4ce5d91c55f0e58dc560b3ee140d53b5988b9803b33a5ed5fabe02c7eb9ab350",
+        "sha256_in_prefix": "4ce5d91c55f0e58dc560b3ee140d53b5988b9803b33a5ed5fabe02c7eb9ab350",
+        "size_in_bytes": 60175
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/region.py",
+        "path_type": "hardlink",
+        "sha256": "2761001ee3e499cf7996d346c4820b3f238a07ff430cc3da8365226896c5e0fb",
+        "sha256_in_prefix": "2761001ee3e499cf7996d346c4820b3f238a07ff430cc3da8365226896c5e0fb",
+        "size_in_bytes": 13091
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/region.pyc",
+        "path_type": "hardlink",
+        "sha256": "17bd4e7f88bf05f0619ddbffab794198d6688f905de3ca1006d68fc65e4ed7ef",
+        "sha256_in_prefix": "17bd4e7f88bf05f0619ddbffab794198d6688f905de3ca1006d68fc65e4ed7ef",
+        "size_in_bytes": 14224
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skyline.py",
+        "path_type": "hardlink",
+        "sha256": "ed727be7e1c0c719907f1ea8150334e546d3accc78018036196a6ddc9b521df7",
+        "sha256_in_prefix": "ed727be7e1c0c719907f1ea8150334e546d3accc78018036196a6ddc9b521df7",
+        "size_in_bytes": 47558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skyline.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a01986b1fe45185568de0d45d93679faa1f9f2a323836c30bc82321a33e03c1",
+        "sha256_in_prefix": "9a01986b1fe45185568de0d45d93679faa1f9f2a323836c30bc82321a33e03c1",
+        "size_in_bytes": 43571
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skymatch.help",
+        "path_type": "hardlink",
+        "sha256": "9c5d6863f45a5f866a52d51035a1a131e461670fdbb59a34e91689e611607187",
+        "sha256_in_prefix": "9c5d6863f45a5f866a52d51035a1a131e461670fdbb59a34e91689e611607187",
+        "size_in_bytes": 26755
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skymatch.py",
+        "path_type": "hardlink",
+        "sha256": "229c6904fcf1f378fe96d1b998e7783bf0a1a52ee7efc8f4f1c73052a225ffe0",
+        "sha256_in_prefix": "229c6904fcf1f378fe96d1b998e7783bf0a1a52ee7efc8f4f1c73052a225ffe0",
+        "size_in_bytes": 72460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skymatch.pyc",
+        "path_type": "hardlink",
+        "sha256": "775b19bfc13ec87cb88ac5ed57a58d32b8b10a38cec538908cafa9823191a1d1",
+        "sha256_in_prefix": "775b19bfc13ec87cb88ac5ed57a58d32b8b10a38cec538908cafa9823191a1d1",
+        "size_in_bytes": 60281
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skystatistics.py",
+        "path_type": "hardlink",
+        "sha256": "78c4764f92b6e4d20dd3aa9635fbf8a7064acf06f48c6b5fd5c98fe49a825b08",
+        "sha256_in_prefix": "78c4764f92b6e4d20dd3aa9635fbf8a7064acf06f48c6b5fd5c98fe49a825b08",
+        "size_in_bytes": 3039
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/skystatistics.pyc",
+        "path_type": "hardlink",
+        "sha256": "dc9c16f36c0dc65b9b8e8fc658e599b9fdc1e53da28728c2c14d6108bb11d880",
+        "sha256_in_prefix": "dc9c16f36c0dc65b9b8e8fc658e599b9fdc1e53da28728c2c14d6108bb11d880",
+        "size_in_bytes": 4102
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/utils.py",
+        "path_type": "hardlink",
+        "sha256": "a450b4b5479db8c12a0d745a865a47252d62fa984acf37838768b13e7c97b5f3",
+        "sha256_in_prefix": "a450b4b5479db8c12a0d745a865a47252d62fa984acf37838768b13e7c97b5f3",
+        "size_in_bytes": 80499
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "1785d78fa103f724f2f5f4aea04cd6945b8fa7ec8f60ff36196ce564b50ab53a",
+        "sha256_in_prefix": "1785d78fa103f724f2f5f4aea04cd6945b8fa7ec8f60ff36196ce564b50ab53a",
+        "size_in_bytes": 67620
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/version.py",
+        "path_type": "hardlink",
+        "sha256": "7b5e4c6b5129a84298ad82e149aaaca6974ec751df10cd43d1f956779ddd1746",
+        "sha256_in_prefix": "7b5e4c6b5129a84298ad82e149aaaca6974ec751df10cd43d1f956779ddd1746",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac-0.9.15-py2.7.egg/stsci/skypac/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "a6a931a579325f46291bd85ef0876457e2d09d68172722c528eb9852de5ab0e4",
+        "sha256_in_prefix": "a6a931a579325f46291bd85ef0876457e2d09d68172722c528eb9852de5ab0e4",
+        "size_in_bytes": 774
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.skypac.pth",
+        "path_type": "hardlink",
+        "sha256": "d54acaae0bb9345e8f6ae88f221fdc0b0fe6e08671997d45c9cbdb0788c68cc9",
+        "sha256_in_prefix": "d54acaae0bb9345e8f6ae88f221fdc0b0fe6e08671997d45c9cbdb0788c68cc9",
+        "size_in_bytes": 32
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 118769,
+  "subdir": "linux-64",
+  "timestamp": 1533629086071,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stsci.skypac-0.9.15-py27_0.tar.bz2",
+  "version": "0.9.15"
+}

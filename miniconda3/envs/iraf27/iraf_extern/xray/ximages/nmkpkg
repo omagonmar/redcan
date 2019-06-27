@@ -1,0 +1,88 @@
+#$Header: /tmp_mnt/home/pros/xray/ximages/RCS/mkpkg,v 6.0 93/05/24 16:03:38 prosb Rel $
+#$Log:	mkpkg,v $
+#Revision 6.0  93/05/24  16:03:38  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/04/23  14:55:15  jmoran
+#*** empty log message ***
+#
+#Revision 5.0  92/10/29  21:26:01  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/23  09:41:05  mo
+#Mc
+#
+#Revision 4.1  92/09/30  16:46:36  mo
+#no changes
+#
+#Revision 4.0  92/04/27  14:14:06  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.3  92/02/27  11:46:49  mo
+#MC	Jan 92		Make separate directories for each library
+#
+#Revision 3.2  92/01/23  12:14:36  mo
+#MC	1/23/92		Force remake of all libraries with 'relink'
+#
+#Revision 3.1  91/08/02  09:31:56  mo
+#MC	8/2/91		Updated for new PROS structure
+#
+#Revision 2.0  91/03/06  22:32:05  pros
+#General Release 1.0
+#
+#
+#	mkpkg for the ximages directory
+#
+
+$call   relink
+$exit
+
+update:
+	@imcalc
+	@xvops
+	$call relink
+	$call install
+	;
+
+
+relink:
+	$set    LIBS = "-lpros -ltbtables" 
+	$update libpkg.a
+	$update libcalc.a
+	$update libxvops.a
+	$omake  x_ximages.x
+	$omake  debug.x
+	$link   x_ximages.o debug.o libpkg.a $(LIBS) -o xx_ximages.e
+
+	$omake  x_imcalc.x
+	$link   x_imcalc.o debug.o libcalc.a libxvops.a $(LIBS) -o xx_imcalc.e
+	;
+
+install:
+	$move   xx_ximages.e xraybin$x_ximages.e
+	$move   xx_imcalc.e xraybin$x_imcalc.e
+	;
+
+										libcalc.a:
+	@imcalc
+	;
+
+libxvops.a:
+	@xvops
+	;
+
+libpkg.a:
+	@imcompress
+	@imcreate
+	@imnode
+	@imreplicate
+	@plcreate
+	@pllist
+	@qpcopy
+	@qphedit
+	@qplist
+	@qplintran
+	@qpsort
+	@xhadd
+	@xhdisp
+	;

@@ -1,0 +1,5 @@
+rgbdisplay - Display an RGB image (color)
+ rgbdither - Create an 8-bit RGB dithered image (color)
+    rgbsun - Create a Sun 24-bit RGB rasterfile (color)
+    rgbto8 - Create an 8-bit RGB image with special color map (color)
+   package - Guide to color image display (color)

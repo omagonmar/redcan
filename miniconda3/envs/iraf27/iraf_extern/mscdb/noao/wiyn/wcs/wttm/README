@@ -1,0 +1,14 @@
+Astrometric solution for R, B, V and I band filters 
+computed by F. Pierfederici on 12-05-2003.
+
+rpoly33B.dat	solution for B filter
+rpoly33I.dat	solution for I filter
+rpoly33R.dat	solution for R filter
+rpoly33V.dat	solution for V filter
+
+The default solution is the one for R
+(no particular reason for that).
+
+One last note: the catalogue used was
+USNO-A.
+

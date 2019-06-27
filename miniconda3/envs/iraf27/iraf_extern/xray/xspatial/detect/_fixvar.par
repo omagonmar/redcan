@@ -1,0 +1,26 @@
+# $Header: /home/pros/xray/xspatial/detect/RCS/_fixvar.par,v 11.0 1997/11/06 16:32:17 prosb Exp $
+# $Log: _fixvar.par,v $
+# Revision 11.0  1997/11/06 16:32:17  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:50:04  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:11:15  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:34:39  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:12:51  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/05/13  11:38:19  janet
+#Initial revision
+#
+#  Parameters for the bkden task
+#
+in_image,s,a,"",,,"Input Image"
+out_image,s,a,"",,,"Output Image"
+display,i,h,1,,,"Display Level"
+clobber,b,h,no,,,"Clobber file if it exists"

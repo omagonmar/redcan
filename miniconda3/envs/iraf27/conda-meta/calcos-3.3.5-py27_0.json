@@ -1,0 +1,595 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "scipy",
+    "stsci.tools"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/calcos-3.3.5-py27_0",
+  "features": "",
+  "files": [
+    "bin/calcos",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/native_libs.txt",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/requires.txt",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/scripts/calcos",
+    "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/calcos/__init__.py",
+    "lib/python2.7/site-packages/calcos/__init__.pyc",
+    "lib/python2.7/site-packages/calcos/accum.py",
+    "lib/python2.7/site-packages/calcos/accum.pyc",
+    "lib/python2.7/site-packages/calcos/airglow.py",
+    "lib/python2.7/site-packages/calcos/airglow.pyc",
+    "lib/python2.7/site-packages/calcos/average.py",
+    "lib/python2.7/site-packages/calcos/average.pyc",
+    "lib/python2.7/site-packages/calcos/burst.py",
+    "lib/python2.7/site-packages/calcos/burst.pyc",
+    "lib/python2.7/site-packages/calcos/calcos.help",
+    "lib/python2.7/site-packages/calcos/calcos.py",
+    "lib/python2.7/site-packages/calcos/calcos.pyc",
+    "lib/python2.7/site-packages/calcos/calcosparam.py",
+    "lib/python2.7/site-packages/calcos/calcosparam.pyc",
+    "lib/python2.7/site-packages/calcos/ccos.py",
+    "lib/python2.7/site-packages/calcos/ccos.pyc",
+    "lib/python2.7/site-packages/calcos/ccos.so",
+    "lib/python2.7/site-packages/calcos/concurrent.py",
+    "lib/python2.7/site-packages/calcos/concurrent.pyc",
+    "lib/python2.7/site-packages/calcos/cosutil.py",
+    "lib/python2.7/site-packages/calcos/cosutil.pyc",
+    "lib/python2.7/site-packages/calcos/dispersion.py",
+    "lib/python2.7/site-packages/calcos/dispersion.pyc",
+    "lib/python2.7/site-packages/calcos/extract.py",
+    "lib/python2.7/site-packages/calcos/extract.pyc",
+    "lib/python2.7/site-packages/calcos/findshift1.py",
+    "lib/python2.7/site-packages/calcos/findshift1.pyc",
+    "lib/python2.7/site-packages/calcos/fpavg.py",
+    "lib/python2.7/site-packages/calcos/fpavg.pyc",
+    "lib/python2.7/site-packages/calcos/getinfo.py",
+    "lib/python2.7/site-packages/calcos/getinfo.pyc",
+    "lib/python2.7/site-packages/calcos/orbit.py",
+    "lib/python2.7/site-packages/calcos/orbit.pyc",
+    "lib/python2.7/site-packages/calcos/osmstep.py",
+    "lib/python2.7/site-packages/calcos/osmstep.pyc",
+    "lib/python2.7/site-packages/calcos/pars/calcos.cfg",
+    "lib/python2.7/site-packages/calcos/pars/calcos.cfgspc",
+    "lib/python2.7/site-packages/calcos/phot.py",
+    "lib/python2.7/site-packages/calcos/phot.pyc",
+    "lib/python2.7/site-packages/calcos/shiftfile.py",
+    "lib/python2.7/site-packages/calcos/shiftfile.pyc",
+    "lib/python2.7/site-packages/calcos/splittag.py",
+    "lib/python2.7/site-packages/calcos/splittag.pyc",
+    "lib/python2.7/site-packages/calcos/spwcs.py",
+    "lib/python2.7/site-packages/calcos/spwcs.pyc",
+    "lib/python2.7/site-packages/calcos/timeline.py",
+    "lib/python2.7/site-packages/calcos/timeline.pyc",
+    "lib/python2.7/site-packages/calcos/timetag.py",
+    "lib/python2.7/site-packages/calcos/timetag.pyc",
+    "lib/python2.7/site-packages/calcos/trace.py",
+    "lib/python2.7/site-packages/calcos/trace.pyc",
+    "lib/python2.7/site-packages/calcos/version.py",
+    "lib/python2.7/site-packages/calcos/version.pyc",
+    "lib/python2.7/site-packages/calcos/wavecal.py",
+    "lib/python2.7/site-packages/calcos/wavecal.pyc",
+    "lib/python2.7/site-packages/calcos/x1d.py",
+    "lib/python2.7/site-packages/calcos/x1d.pyc",
+    "lib/python2.7/site-packages/calcos/xd_search.py",
+    "lib/python2.7/site-packages/calcos/xd_search.pyc"
+  ],
+  "fn": "calcos-3.3.5-py27_0.tar.bz2",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/calcos-3.3.5-py27_0",
+    "type": 1
+  },
+  "md5": "3bf4e59527753b90a079667017a4eafa",
+  "name": "calcos",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/calcos-3.3.5-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/calcos",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "c99d8d46da3b2c087a6e14b12e71d9beefd0558cd78b0b56bc7b799648ceed69",
+        "sha256_in_prefix": "cd508708cc937c4629786afdc52feddfd747213e79a627402db5a671fd148f7e",
+        "size_in_bytes": 191
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "4b1b8ca056ffe8c960879179f25bd6d515859ce34c75c0125931b79d9ef950a9",
+        "sha256_in_prefix": "4b1b8ca056ffe8c960879179f25bd6d515859ce34c75c0125931b79d9ef950a9",
+        "size_in_bytes": 638
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "60b780879955e4d05bd5cfb4854c51a2d446cf6444b361abefeeed86cec50371",
+        "sha256_in_prefix": "60b780879955e4d05bd5cfb4854c51a2d446cf6444b361abefeeed86cec50371",
+        "size_in_bytes": 933
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/native_libs.txt",
+        "path_type": "hardlink",
+        "sha256": "d90f44a60ff404859d97e549fa65aedfaa0397300edd1b4a47ef6cba041bfef1",
+        "sha256_in_prefix": "d90f44a60ff404859d97e549fa65aedfaa0397300edd1b4a47ef6cba041bfef1",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "f58834168c8c277123098dca10c9b6b5961a97b4f8fb188d5b33a9674208127a",
+        "sha256_in_prefix": "f58834168c8c277123098dca10c9b6b5961a97b4f8fb188d5b33a9674208127a",
+        "size_in_bytes": 41
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/scripts/calcos",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "6eef4ff5d5ae1a6d0fec18ff20fcb9a6aa866d76b574acb60cbae9d0f2fd1eeb",
+        "sha256_in_prefix": "e5b673da8fb8dfbb8871f2eb481d0e42e7a761f4649b75eb3adbc25d2637a397",
+        "size_in_bytes": 188
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos-3.3.5-py2.7-linux-x86_64.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "92539d430f5c8799e0af6174651fb7059f3fb2db3f16e2e7961dbc5e894c64c7",
+        "sha256_in_prefix": "92539d430f5c8799e0af6174651fb7059f3fb2db3f16e2e7961dbc5e894c64c7",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5d49a884be250f2ee3d8d97e261eab6ed9b7af29d566c8caa1d2deab13868c82",
+        "sha256_in_prefix": "5d49a884be250f2ee3d8d97e261eab6ed9b7af29d566c8caa1d2deab13868c82",
+        "size_in_bytes": 5008
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5ecc957ca1231a8368e7824df6680d2d08c2050ae7086cc304f127d0e0d4ec1d",
+        "sha256_in_prefix": "5ecc957ca1231a8368e7824df6680d2d08c2050ae7086cc304f127d0e0d4ec1d",
+        "size_in_bytes": 4280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/accum.py",
+        "path_type": "hardlink",
+        "sha256": "a0201f3f2ff9c982c9995df1f2697e66d34c8c21d2eb3f9631b830de3637ff51",
+        "sha256_in_prefix": "a0201f3f2ff9c982c9995df1f2697e66d34c8c21d2eb3f9631b830de3637ff51",
+        "size_in_bytes": 25391
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/accum.pyc",
+        "path_type": "hardlink",
+        "sha256": "3386bbb74b512e54dd773fb99b2deb61f4636b6a34c813db632fc5ed8881abd5",
+        "sha256_in_prefix": "3386bbb74b512e54dd773fb99b2deb61f4636b6a34c813db632fc5ed8881abd5",
+        "size_in_bytes": 22230
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/airglow.py",
+        "path_type": "hardlink",
+        "sha256": "c9e0cf30d97df3023aae62a2f501b01c187a06ec5479aa09612cf0bac783f2fc",
+        "sha256_in_prefix": "c9e0cf30d97df3023aae62a2f501b01c187a06ec5479aa09612cf0bac783f2fc",
+        "size_in_bytes": 3548
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/airglow.pyc",
+        "path_type": "hardlink",
+        "sha256": "65c8d259d1435cb0011301d146b0847a5981be9a991f82b4514c0a3798e8029e",
+        "sha256_in_prefix": "65c8d259d1435cb0011301d146b0847a5981be9a991f82b4514c0a3798e8029e",
+        "size_in_bytes": 3069
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/average.py",
+        "path_type": "hardlink",
+        "sha256": "088593c476c4612ba1dceb067937ff7199795596516865e765d9fd344dcafa2f",
+        "sha256_in_prefix": "088593c476c4612ba1dceb067937ff7199795596516865e765d9fd344dcafa2f",
+        "size_in_bytes": 5262
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/average.pyc",
+        "path_type": "hardlink",
+        "sha256": "8bf31cd2c0326574465e1f5b888b214cc100ec56c899d40f4ceb0d6084ccbb53",
+        "sha256_in_prefix": "8bf31cd2c0326574465e1f5b888b214cc100ec56c899d40f4ceb0d6084ccbb53",
+        "size_in_bytes": 3841
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/burst.py",
+        "path_type": "hardlink",
+        "sha256": "d25c6de0b7ec4ee2e739b6476160b1f92affb6c3d825210051752953d1502ed4",
+        "sha256_in_prefix": "d25c6de0b7ec4ee2e739b6476160b1f92affb6c3d825210051752953d1502ed4",
+        "size_in_bytes": 13155
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/burst.pyc",
+        "path_type": "hardlink",
+        "sha256": "9d2f04f3ae72073132460b6da1e320b092fa1d1a1fea92be9e513a65f8745c99",
+        "sha256_in_prefix": "9d2f04f3ae72073132460b6da1e320b092fa1d1a1fea92be9e513a65f8745c99",
+        "size_in_bytes": 10101
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/calcos.help",
+        "path_type": "hardlink",
+        "sha256": "dcdd0ec1b6596d51dc12fc5880e89b4a5fb222da2f6c352a7663b83b6fe77b37",
+        "sha256_in_prefix": "dcdd0ec1b6596d51dc12fc5880e89b4a5fb222da2f6c352a7663b83b6fe77b37",
+        "size_in_bytes": 7611
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/calcos.py",
+        "path_type": "hardlink",
+        "sha256": "2fe24ec6b9c53b183765bd6fcb36c2f6368b2d966db58eb6624da154db0e418f",
+        "sha256_in_prefix": "2fe24ec6b9c53b183765bd6fcb36c2f6368b2d966db58eb6624da154db0e418f",
+        "size_in_bytes": 132149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/calcos.pyc",
+        "path_type": "hardlink",
+        "sha256": "d9aa24dc692c1d8baa6a3699f13dc04b1d165483d1e3fb7966a0471be9e5f156",
+        "sha256_in_prefix": "d9aa24dc692c1d8baa6a3699f13dc04b1d165483d1e3fb7966a0471be9e5f156",
+        "size_in_bytes": 96271
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/calcosparam.py",
+        "path_type": "hardlink",
+        "sha256": "0374e456aa02c5348afc3dde1ee487faffac172b99f7ff8bb742649bafe130d8",
+        "sha256_in_prefix": "0374e456aa02c5348afc3dde1ee487faffac172b99f7ff8bb742649bafe130d8",
+        "size_in_bytes": 6707
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/calcosparam.pyc",
+        "path_type": "hardlink",
+        "sha256": "74ba218120b8b7954a467521db7722469d4c507f3bba8ba836117c6bdfd62b83",
+        "sha256_in_prefix": "74ba218120b8b7954a467521db7722469d4c507f3bba8ba836117c6bdfd62b83",
+        "size_in_bytes": 5174
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/ccos.py",
+        "path_type": "hardlink",
+        "sha256": "047ea1b9f652e602391e69b2d9f6206eda461a3a8ea65ebb9a35d3586edaf02f",
+        "sha256_in_prefix": "047ea1b9f652e602391e69b2d9f6206eda461a3a8ea65ebb9a35d3586edaf02f",
+        "size_in_bytes": 280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/ccos.pyc",
+        "path_type": "hardlink",
+        "sha256": "1662d20b8cb8fd70d79b270717c51a754a21e51fad4f60f14ae97bea54b6198a",
+        "sha256_in_prefix": "1662d20b8cb8fd70d79b270717c51a754a21e51fad4f60f14ae97bea54b6198a",
+        "size_in_bytes": 602
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/ccos.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.14/_dispatch/miniconda/conda-bld/calcos_1552598242081/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "6ab1962908def0a512ffe9af8564f2a8996ce3a600d70f7fcfb90c73d2d5ccbf",
+        "sha256_in_prefix": "2c416dc4678a0870f834147876cc2073c76f36f23c8dad6fed2635b632f3ffe6",
+        "size_in_bytes": 170336
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/concurrent.py",
+        "path_type": "hardlink",
+        "sha256": "5d0d963a4844cd3a298013b757c4edf237eabc0b14c4bde9b39ac05a6633d79f",
+        "sha256_in_prefix": "5d0d963a4844cd3a298013b757c4edf237eabc0b14c4bde9b39ac05a6633d79f",
+        "size_in_bytes": 81828
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/concurrent.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ef49a05883642e97291ed6cb68f5a70d0de24c1fdbbd3452e858afbc06a2fd3",
+        "sha256_in_prefix": "9ef49a05883642e97291ed6cb68f5a70d0de24c1fdbbd3452e858afbc06a2fd3",
+        "size_in_bytes": 57236
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/cosutil.py",
+        "path_type": "hardlink",
+        "sha256": "13c12eb31ef16aea3aef9bcbe408ccbf29db3d051f9e6aaced8cbf0d9a9c5166",
+        "sha256_in_prefix": "13c12eb31ef16aea3aef9bcbe408ccbf29db3d051f9e6aaced8cbf0d9a9c5166",
+        "size_in_bytes": 126234
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/cosutil.pyc",
+        "path_type": "hardlink",
+        "sha256": "2b66fbc367fab00c6639c26a9b8a9d369a0f25c8282ae270e2503aa14581db0d",
+        "sha256_in_prefix": "2b66fbc367fab00c6639c26a9b8a9d369a0f25c8282ae270e2503aa14581db0d",
+        "size_in_bytes": 109301
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/dispersion.py",
+        "path_type": "hardlink",
+        "sha256": "9cb535ec0e7d97bcd8144034736ef1b0abd5af62ad5cff5fa14a2ca4568bb6dd",
+        "sha256_in_prefix": "9cb535ec0e7d97bcd8144034736ef1b0abd5af62ad5cff5fa14a2ca4568bb6dd",
+        "size_in_bytes": 6713
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/dispersion.pyc",
+        "path_type": "hardlink",
+        "sha256": "f216ad26dd90278e9bf58ebdd9b1b58da09ab639a6c56583ebcd94f14db93782",
+        "sha256_in_prefix": "f216ad26dd90278e9bf58ebdd9b1b58da09ab639a6c56583ebcd94f14db93782",
+        "size_in_bytes": 7186
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/extract.py",
+        "path_type": "hardlink",
+        "sha256": "07c191f4ed7556400133f79cadd65fe67bce6eeb6438622ffc2cc4f943b78861",
+        "sha256_in_prefix": "07c191f4ed7556400133f79cadd65fe67bce6eeb6438622ffc2cc4f943b78861",
+        "size_in_bytes": 112258
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/extract.pyc",
+        "path_type": "hardlink",
+        "sha256": "df9233694185bf575584fb004e89564e85ac2e4f62f8498a63562e0c3f793841",
+        "sha256_in_prefix": "df9233694185bf575584fb004e89564e85ac2e4f62f8498a63562e0c3f793841",
+        "size_in_bytes": 73538
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/findshift1.py",
+        "path_type": "hardlink",
+        "sha256": "6d123183b1bcf9e7fae78599da4ccf9423fbe13c37925b72483d6f87d66656e0",
+        "sha256_in_prefix": "6d123183b1bcf9e7fae78599da4ccf9423fbe13c37925b72483d6f87d66656e0",
+        "size_in_bytes": 35355
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/findshift1.pyc",
+        "path_type": "hardlink",
+        "sha256": "7f74f28562d3e875f442108cfeab1906366985599484331e00c0031496efd80d",
+        "sha256_in_prefix": "7f74f28562d3e875f442108cfeab1906366985599484331e00c0031496efd80d",
+        "size_in_bytes": 25493
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/fpavg.py",
+        "path_type": "hardlink",
+        "sha256": "de622885f1e68361a29437e8ac65881c5f70069cccbaa45f83ab85d08c36edd3",
+        "sha256_in_prefix": "de622885f1e68361a29437e8ac65881c5f70069cccbaa45f83ab85d08c36edd3",
+        "size_in_bytes": 45688
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/fpavg.pyc",
+        "path_type": "hardlink",
+        "sha256": "7f37748064400dbc37d9e16f5d18b12dac83f963a064ce0c327e588becbd0711",
+        "sha256_in_prefix": "7f37748064400dbc37d9e16f5d18b12dac83f963a064ce0c327e588becbd0711",
+        "size_in_bytes": 34857
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/getinfo.py",
+        "path_type": "hardlink",
+        "sha256": "23f7f221a03b18abfedf8cd4cdd9c9bfeea58b424cfcb5423ed798374207e6c6",
+        "sha256_in_prefix": "23f7f221a03b18abfedf8cd4cdd9c9bfeea58b424cfcb5423ed798374207e6c6",
+        "size_in_bytes": 13126
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/getinfo.pyc",
+        "path_type": "hardlink",
+        "sha256": "a26b3454fe2817aff8ebbbda7ebdcc4c5659980ccab21c25d089451fec8d0059",
+        "sha256_in_prefix": "a26b3454fe2817aff8ebbbda7ebdcc4c5659980ccab21c25d089451fec8d0059",
+        "size_in_bytes": 10586
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/orbit.py",
+        "path_type": "hardlink",
+        "sha256": "1c454a83e3ab10523e97d0c184bd36e87636a22604c7cac7257c0f8b86cc7d40",
+        "sha256_in_prefix": "1c454a83e3ab10523e97d0c184bd36e87636a22604c7cac7257c0f8b86cc7d40",
+        "size_in_bytes": 6296
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/orbit.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a7c0cba2da2b97f325ab3e620ed1dac1f48afc2cac9e0c1ce092edbb76dfc9e",
+        "sha256_in_prefix": "5a7c0cba2da2b97f325ab3e620ed1dac1f48afc2cac9e0c1ce092edbb76dfc9e",
+        "size_in_bytes": 4952
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/osmstep.py",
+        "path_type": "hardlink",
+        "sha256": "8b730cda251976973af292821856bd5a5a4b1322e6e754f76cedafa9a82a393b",
+        "sha256_in_prefix": "8b730cda251976973af292821856bd5a5a4b1322e6e754f76cedafa9a82a393b",
+        "size_in_bytes": 6393
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/osmstep.pyc",
+        "path_type": "hardlink",
+        "sha256": "0752f9d7e47636c099ce1e2343c3662ac90c6b0f33489f736ede5652f03c56d4",
+        "sha256_in_prefix": "0752f9d7e47636c099ce1e2343c3662ac90c6b0f33489f736ede5652f03c56d4",
+        "size_in_bytes": 8443
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/pars/calcos.cfg",
+        "path_type": "hardlink",
+        "sha256": "e1407d3cb8a74cb0b51b7609410769282ffef851fa2d1f2df3df69d61b076666",
+        "sha256_in_prefix": "e1407d3cb8a74cb0b51b7609410769282ffef851fa2d1f2df3df69d61b076666",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/pars/calcos.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "09a6d336df8c17cb6490a60a13ea96dcbd351412612ce50487c9cbe84d1d0ee7",
+        "sha256_in_prefix": "09a6d336df8c17cb6490a60a13ea96dcbd351412612ce50487c9cbe84d1d0ee7",
+        "size_in_bytes": 1472
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/phot.py",
+        "path_type": "hardlink",
+        "sha256": "1431a3457ba6b9ee52a717a88d3f16416a1324584f68de79c3c2913862a1a3b2",
+        "sha256_in_prefix": "1431a3457ba6b9ee52a717a88d3f16416a1324584f68de79c3c2913862a1a3b2",
+        "size_in_bytes": 5149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/phot.pyc",
+        "path_type": "hardlink",
+        "sha256": "26bf48b5d686752bd07367d99ca79a1ce43e99465925a74314b641201eb645bc",
+        "sha256_in_prefix": "26bf48b5d686752bd07367d99ca79a1ce43e99465925a74314b641201eb645bc",
+        "size_in_bytes": 4864
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/shiftfile.py",
+        "path_type": "hardlink",
+        "sha256": "f6fd4832124244e964e622956a6137389a7d1689ce86287d8f244b3cbeea4307",
+        "sha256_in_prefix": "f6fd4832124244e964e622956a6137389a7d1689ce86287d8f244b3cbeea4307",
+        "size_in_bytes": 4765
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/shiftfile.pyc",
+        "path_type": "hardlink",
+        "sha256": "b34b1ed101933f73e0c1a1483316c594708254208f9926031224ea31962e3fe4",
+        "sha256_in_prefix": "b34b1ed101933f73e0c1a1483316c594708254208f9926031224ea31962e3fe4",
+        "size_in_bytes": 4288
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/splittag.py",
+        "path_type": "hardlink",
+        "sha256": "252032c6a8867affcf8866c636902e7b7c11bd7654a0b932c2284a46d06e8c3f",
+        "sha256_in_prefix": "252032c6a8867affcf8866c636902e7b7c11bd7654a0b932c2284a46d06e8c3f",
+        "size_in_bytes": 23257
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/splittag.pyc",
+        "path_type": "hardlink",
+        "sha256": "205164421a13749d88a67f7812a6d05f14bcbaab96486bb87a097d45ecfb066d",
+        "sha256_in_prefix": "205164421a13749d88a67f7812a6d05f14bcbaab96486bb87a097d45ecfb066d",
+        "size_in_bytes": 20050
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/spwcs.py",
+        "path_type": "hardlink",
+        "sha256": "9dfc9d97673b7df86bda81c6b0cc8b6daebb44ae2c2654cf66c4923b77504f37",
+        "sha256_in_prefix": "9dfc9d97673b7df86bda81c6b0cc8b6daebb44ae2c2654cf66c4923b77504f37",
+        "size_in_bytes": 21291
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/spwcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ffe6b3c2aaeb9fb8aaedf06a7c360c1818041a601011cea507635aa82ac60c0",
+        "sha256_in_prefix": "9ffe6b3c2aaeb9fb8aaedf06a7c360c1818041a601011cea507635aa82ac60c0",
+        "size_in_bytes": 15479
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/timeline.py",
+        "path_type": "hardlink",
+        "sha256": "35ddb61b5443a825e4136c78c0c8814ac0a2a1b659904942aced8fb7619378a6",
+        "sha256_in_prefix": "35ddb61b5443a825e4136c78c0c8814ac0a2a1b659904942aced8fb7619378a6",
+        "size_in_bytes": 25889
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/timeline.pyc",
+        "path_type": "hardlink",
+        "sha256": "e990bfcbaf344fac71e90d18fa273c7b54cf47e4140bf499c2d5ded873f59e5c",
+        "sha256_in_prefix": "e990bfcbaf344fac71e90d18fa273c7b54cf47e4140bf499c2d5ded873f59e5c",
+        "size_in_bytes": 23368
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/timetag.py",
+        "path_type": "hardlink",
+        "sha256": "e4da57e2b518f5cf1bdca89ce81c6781f50b5ab75a508f502a11485902963b5c",
+        "sha256_in_prefix": "e4da57e2b518f5cf1bdca89ce81c6781f50b5ab75a508f502a11485902963b5c",
+        "size_in_bytes": 177316
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/timetag.pyc",
+        "path_type": "hardlink",
+        "sha256": "f0bd7b4b38a950ffaa3a3bd83c2d5d14f9d36a4bcec92f7e27fc01e537b27af7",
+        "sha256_in_prefix": "f0bd7b4b38a950ffaa3a3bd83c2d5d14f9d36a4bcec92f7e27fc01e537b27af7",
+        "size_in_bytes": 129403
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/trace.py",
+        "path_type": "hardlink",
+        "sha256": "857277634440a0b7497290a5dfa1de2ded8fbe3ccd10f12822fa68e6f78a3523",
+        "sha256_in_prefix": "857277634440a0b7497290a5dfa1de2ded8fbe3ccd10f12822fa68e6f78a3523",
+        "size_in_bytes": 27796
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/trace.pyc",
+        "path_type": "hardlink",
+        "sha256": "6ef551d60bf0fefad0d5fe8c6b49a16a073e52ea91e8716bf56423daea00d6e6",
+        "sha256_in_prefix": "6ef551d60bf0fefad0d5fe8c6b49a16a073e52ea91e8716bf56423daea00d6e6",
+        "size_in_bytes": 19309
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/version.py",
+        "path_type": "hardlink",
+        "sha256": "6a5ae6692b33687bd9365189fa2b61af02d29fa0a391230f0a8c7162483a262a",
+        "sha256_in_prefix": "6a5ae6692b33687bd9365189fa2b61af02d29fa0a391230f0a8c7162483a262a",
+        "size_in_bytes": 2799
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "6b25845af7e5e2ba23c80f5d8dc715b9caa96799c4025c270b91781b30f36312",
+        "sha256_in_prefix": "6b25845af7e5e2ba23c80f5d8dc715b9caa96799c4025c270b91781b30f36312",
+        "size_in_bytes": 2110
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/wavecal.py",
+        "path_type": "hardlink",
+        "sha256": "e7d3cae2c2e57385f5ebc89846a3bac52c632b1640f8d99f104ff9f1c7624c5f",
+        "sha256_in_prefix": "e7d3cae2c2e57385f5ebc89846a3bac52c632b1640f8d99f104ff9f1c7624c5f",
+        "size_in_bytes": 37959
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/wavecal.pyc",
+        "path_type": "hardlink",
+        "sha256": "c95344359c7f71e35c042ed1d0951e1827746417f11b7998da5bff293dd24739",
+        "sha256_in_prefix": "c95344359c7f71e35c042ed1d0951e1827746417f11b7998da5bff293dd24739",
+        "size_in_bytes": 30541
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/x1d.py",
+        "path_type": "hardlink",
+        "sha256": "c755aa7b10e84ada1759b43f2c2ca52a23468a4ebd8c137e3598c6ddf9837a55",
+        "sha256_in_prefix": "c755aa7b10e84ada1759b43f2c2ca52a23468a4ebd8c137e3598c6ddf9837a55",
+        "size_in_bytes": 21305
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/x1d.pyc",
+        "path_type": "hardlink",
+        "sha256": "bd0cdb23849d20474a2d56db29798bd1c344cbac30f9101085646e33ab781ea2",
+        "sha256_in_prefix": "bd0cdb23849d20474a2d56db29798bd1c344cbac30f9101085646e33ab781ea2",
+        "size_in_bytes": 18717
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/xd_search.py",
+        "path_type": "hardlink",
+        "sha256": "bdb865173d5daabb690c1ca9ca32f5a4b96db4fd0e7a0a8ced0d19efe42aa932",
+        "sha256_in_prefix": "bdb865173d5daabb690c1ca9ca32f5a4b96db4fd0e7a0a8ced0d19efe42aa932",
+        "size_in_bytes": 12077
+      },
+      {
+        "_path": "lib/python2.7/site-packages/calcos/xd_search.pyc",
+        "path_type": "hardlink",
+        "sha256": "5d1b2d4bc70f0004bae8e378e21e54980cbf00cd0dced9e69b253d3c63833c44",
+        "sha256_in_prefix": "5d1b2d4bc70f0004bae8e378e21e54980cbf00cd0dced9e69b253d3c63833c44",
+        "size_in_bytes": 9964
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 421656,
+  "subdir": "linux-64",
+  "timestamp": 1552598469353,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/calcos-3.3.5-py27_0.tar.bz2",
+  "version": "3.3.5"
+}

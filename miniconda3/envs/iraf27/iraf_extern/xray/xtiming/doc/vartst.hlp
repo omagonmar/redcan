@@ -1,0 +1,213 @@
+# $Header: /home/pros/xray/xtiming/doc/RCS/vartst.hlp,v 11.0 1997/11/06 16:44:19 prosb Exp $
+# $Log: vartst.hlp,v $
+# Revision 11.0  1997/11/06 16:44:19  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:33:22  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:39:11  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:00:27  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/21  12:25:47  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:56:18  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/05/20  11:49:57  mo
+#Initial revision
+#
+#
+.help vartst Dec93 xray.xtiming
+.ih
+NAME
+vartst -  non-parametric statistical tests for source variability
+.ih
+USAGE
+vartst source_file var_file 
+.ih
+DESCRIPTION
+
+VARTST computes test statistics for the Kolmogorov-Smirnov (KS) and
+Cramer-von Mises (CvM) one-sample goodness-of-fit tests, in order to
+test the null hypothesis of constant source intensity.  These
+non-parametric statistical tests compare the observed cumulative
+distribution function (cdf) of photon arrival times with a model cdf
+expected for a constant source. In each test, the hypothesis of
+constant source intensity may be rejected at the confidence level C if
+the test statistic exceeds the (1-C) quantile for the appropriate
+distribution.  Arrival times are automatically corrected for data
+gaps, and energy channels and time intervals to be tested may be
+specified on the command line.
+
+The KS test used is the "two-sided" test, so called because deviations
+of the observed cdf both above and below the model cdf are considered.
+The test statistic is the supremum of the absolute value of the
+difference between the observed and model cdf's. Large N
+approximations for the quantiles of the KS test statistic are used.
+These approximations are generally considered valid for N > 40 events,
+but comparisons of approximate and tabulated quantiles for 90%, 95%,
+and 99% confidence levels indicate that the approximate values differ
+from the tabulated ones by no more than 0.5% for N as small as 10
+events. Confidence bands for the unknown true cdf are also computed.
+These bands form an "envelope" about the observed cdf and may be used
+to test non-constant source models. Any model cdf which lies wholly
+within the region defined by a band may be considered consistent with
+the data at the confidence level appropriate to that band.
+
+The CvM test provides an alternative to the KS test. Whereas the
+latter considers only the maximum difference between the observed and
+model cdf's, the CvM test uses the sum of the squares of the
+differences between the two distributions (plus a small number of
+order 1/N) as its test statistic. Again, large N approximations for
+quantiles of the CvM test statistic are used, and comparisons of
+approximate and tabulated values for N=10 indicate differences of less
+than 2% for 90% and 95% confidence level quantiles, and 5% for the 99%
+quantile.
+
+The  output consists of the values of the KS and CvM test statistics
+plus the 90%, 95%, and 99% quantiles for each statistic. An STSDAS
+table file containing more detailed information (see below) is also
+output. Results of the KS test may be plotted with the task KSPLOT.
+
+
+.ih
+PARAMETERS
+.ls source_file =		prompt = Input Source Timing File
+
+Required input in time ordered QPOE format.  The file is created by
+running TIMSORT on a specified source region.  The file may be
+specified by supplying the rootname and a "_sti.qp" extension will be
+appended by the task before looking for the file.  For example input
+"i6757" is interpreted as "i6757_sti.qp".
+.le
+.ls var_file =		       prompt = root name for output files
+.nf
+				        [root(_var.tab,_ig1,_ig2.cmd)]
+.fi
+
+Required Output filename root.  Three files are output.  The statistic
+results are written in  table format, and a "_var.tab" extension will
+be appended..  For example input "i6757" becomes "i6757_ltc.tab".  
+Each row in the table represents the statistics for each photon of
+data. The column titles and definitions are as follows:
+.nf
+
+	time ----------- degapped photon arrival time 
+	dist ----------- vertical distance between the model and data
+        model ---------- cumulative distribution function of model
+	cdf ------------ cumulative distribution function of data
+	cdfplus -------- upper confidence band 
+	cdfminus ------- lower confidence band 
+
+.fi
+A table file header is also written.  It consists of parameters copied
+from the input QPOE file and parameters recorded from running this
+task.
+
+Also 2 plot command files are written.  The ascii files consist of igi 
+plot commnds.  root_ig1.cmd = plot commands for the integral and max 
+diff plot, and root_ig2.cmd consists of the commands to overlay the
+confidence bands.
+.le
+.ls (bandwidth = 95.0)		prompt = cdf confidence band width
+
+The bandwidth for the confidence band computation.  Choices are 90.0,
+95.0, 99.0.  95.0 is the default.
+.le
+.ls (display = 1) [int]
+
+The display level.  Input 0 for no output and 5 for the maximum level.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the table file can be overwritten
+if it already exists.
+.le
+.ls (get_gintvs = yes) [boolean]
+
+Boolean flag specifying whether to filter the input events through the  
+good time intervals stored in the QPOE file.  It is useful to turn this 
+parameter off when analyzing lab data where good intervals are not applicable 
+or in a file without the intervals, but otherwise the value should remain
+set to yes.
+.le
+.ih
+EXAMPLES
+.nf
+Type `help timfilter` and `help timsort` for information concerning
+input files.
+
+.fi
+1.  Test whether the source is variable over the entire observation.
+Write the cumulative distribution of arrival times, with 95% confidence 
+bands to rp110590_var.tab.  The statistics displayed below are written
+to the table header.  Write the igi plot command files to rp110590_ig1.cmd, 
+and rp110590_ig2.cmd.
+.nf
+
+	xt> vartst
+	Input Source Timing File (root_sti.qp): rp110590_sti.qp
+	Root name for output files [root(_var.tab,_ig1,_ig2.cmd)]: .
+	Number of Events = 1749
+
+  	Ks-test Thresh. :  90% = 0.02906,  95% = 0.03240,  99% = 0.03883
+  	Max diff = 0.02017, No Variability detected
+
+  	CvM Thresh. :  90% = 0.34700,  95% = 0.46100,  99% = 0.74300
+  	CvM = 0.07542, No Variability detected
+
+	Creating igi Ksplot cmd file: ./rp110590_ig1.cmd
+	Creating igi Conf band cmd file: ./rp110590_ig2.cmd
+	Creating Var file: ./rp110590_var.tab
+
+        (The data can be plotted with task 'ksplot')
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS 
+No Corrections are being applied for Fractional Spatial Exposure.
+
+Since these tests deal with individual events, they are unable to 
+distinguish between source and background. However, since these tests are 
+only useful in testing the simple null hypothesis of constant intensity, 
+this is not an issue unless the background itself is variable. In such cases 
+the tests may indicate variability when there is none. The ability to deal 
+with background variability will be added in a later release.
+
+.ih
+SEE ALSO
+Documentation on vartst plotting (\fIhelp ksplot\fR) for a
+description of the plotting task.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on QPOE filtering (\fIhelp qpoe\fR) for a description of
+the QPOE filter user interface.
+ 
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+
+For an in-depth discussion of the KS and CvM tests, the user is
+referred to W. J. Conover 'Practical Nonparametric Statistics', 1971
+(Wiley), and W.  W.  Daniel 'Applied Nonparametric Statistics', 2nd
+edition, 1990 (PWS-Kent). For tabulations of test statistic quantiles
+for finite sample sizes, the user is referred to L. H. Miller, J.
+Amer. Statist. Assoc., 1956, v. 51, pp. 111-121 for the KS test
+statistic, and M. A. Stevens and U. R. Maag, Biometrika, 1968, v. 55,
+pp. 428-430 for the CvM test statistic.
+    
+We are grateful to Prof. Eric D. Feigelson of Penn State for his help
+in developing this task.
+
+.endhelp

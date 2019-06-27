@@ -1,0 +1,221 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/qprotate.hlp,v 11.0 1997/11/06 16:25:55 prosb Exp $
+#$Log: qprotate.hlp,v $
+#Revision 11.0  1997/11/06 16:25:55  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:25  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:43:30  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/06/08  11:38:10  prosb
+#Modified eventdef parameter description.
+#
+#Revision 7.1  94/06/08  11:27:59  prosb
+#Brought help file up to date.
+#
+#Revision 7.0  93/12/27  18:23:24  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:05:09  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/20  11:48:14  mo
+#MC	5/20/93		Updated for new task implementation
+#
+#
+.help qprotate Jun94 xray.ximages
+.ih
+NAME
+qprotate -- apply rotation to a qpoe file through filters 
+.ih
+USAGE
+qprotate input_qpoe region qpoe eventdef angle 
+.ih
+DESCRIPTION
+\fIqprotate\fR transforms a qpoe file according to the specified rotation
+angle.  Position X1,Y1 is changed to:
+.nf
+
+  X2 = CRPIX1 + (X1-CRPIX1)*cos(Angle) - (Y1-CRPIX2)*sin(Angle)
+  Y2 = CRPIX2 + (Y1-CRPIX2)*cos(Angle) + (X1-CRPIX1)*sin(Angle)
+
+.fi
+Here, CRPIX1 and CRPIX2 are reference values from the MWCS header.
+The angle is given in degrees and is measured counter-clockwise.
+
+Any type of filtering can be applied to the input qpoe file, including
+region filtering.  In addition, the size of the output event record
+can be different from the size of the input event record.  (Of course,
+usually one makes the output record equal to or smaller than the
+input.  If the output record size is made greater than the input
+record, a warning is issued and the "extra" part of the record is
+undefined.)
+.ih
+PARAMETERS
+.ls qpoe = ""		prompt = input qpoe filename
+
+The input qpoe file name.  The extension ".qp" will be added to the
+file if there is no extension.  Qpoe filters
+can be applied using the bracket notation to filter the input photons.
+.le
+.ls region = ""		prompt = region descriptor
+
+The region descriptor.  If null is input, the entire field is copied
+(subject to the qpoe filters specified with the input file name).
+Otherwise only those photons are copied which pass the spatial region
+filter.
+.le
+.ls oqpoe = ""		prompt = output qpoe filename
+
+The output qpoe file name.  The extension ".qp" will be added to the
+file if there is no extension.  The output file
+can be the same as the input file.
+.le
+.ls eventdef = ""       prompt = event definition
+
+The event definition of the output QPOE file.  If the user enters the
+empty string, "", the event definition will be copied from the input
+QPOE file.  See 'help qpoe' for information on modifying the event
+definition.
+.le
+.ls angle = 0.		prompt = angle through which to rotate(degrees)
+
+The rotation angle to apply to the data, where positive angles signify
+counter-clockwise rotation.  
+.le
+.ls (clob = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file can be overwritten,
+if it already exists.
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A display level
+of 1 generates a display of header information.
+.le
+.ls (mwcs = yes)  [bool]	
+
+Normally, the transformation done to the image, must be reflected in
+the reference coordinate grid.  However, if the transformation is to
+correct an ERROR in the original grid, then this option should be
+turned off.
+.le
+.ls (random = yes)	  [bool]	
+
+Apply a random number fraction to transformation before truncation.
+Smooths out digitization affects.  Turning to 'no' is helpful for
+debugging.
+.le
+.ls (sort = yes) [boolean]
+
+Flag if events are to be sorted.  If true, the type of sort is determined
+by the \fIsorttype\fR parameter.
+.le
+.ls (sorttype = "position") [string]
+
+The type of sort to perform.  This string consists of a list of event
+element names that specifies the order in which to sort the event
+record.  For example, "y x time" will sort on the "y" element as the
+primary key, the "x" element as the secondary key, and "time" as the
+tertiary key.  If sorting is not to be performed, this parameter can
+be used as a string that will go into the x_sort qpoe param to
+indicate the type of sorting of the events. For example, if the events
+are already sorted by time, and are not to be resorted, one can set
+\fIsort\fR to false and \fIsorttype\fR to "time", and the qpoe file
+will be indistinguishable from one whose events were sorted by time.
+.le
+.ls (sortsize = 1000000) [int]
+
+The number of bytes that are to be sorted at a time.  This allows
+users to tailor the task to the amount of available memory.  If there
+is a lot of memory available, \fIsortsize\fR should be set large
+enough so that the task will do an in-core sort.  (This requires
+knowing the approximate number of events and the byte size of each
+event.)  If only a small amount of memory is available, use a smaller
+number.  In this case, several core loads will be sorted and written
+to temp files, which are then merged.
+.le
+.ls (qpi = yes) [boolean]
+
+Boolean flag controlling whether the internal qpoe parameters (see
+below) are prompted for, or whether they are defaulted to internally
+hardwired values.  This parameter is not usually changed by the user.
+(Prompting is normally turned off during stand-alone debugging only.)
+.ls (psize = 1024) [int]
+
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (bsize = 2048) [int]
+
+Bucket length for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (mkindex = yes) [boolean]
+
+Boolean flag that an index should be made for the qpoe file.
+This parameter is internal to qpoe and should not normally be changed.
+.le
+.ls (key = "y x") [string]
+
+Key on which to make the qpoe index.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (debug = 0) [int]
+
+Debug level for qpoe internals.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+
+.ih
+EXAMPLES
+1. Rotate the field 27.2 degrees conter-clockwise.  Make the resulting qpoe 
+file of size medium. (The 'invalid event's come from photons in the corners 
+of the input image which were rotated out of the field.)
+.nf
+
+	cl> qprotate xdata$rp110590.qp "" rp_rot.qp "medium" 27.2
+	 display=1 
+	** WARNING ** invalid event: 7851 -824 - discarded
+	** WARNING ** invalid event: 7986 -747 - discarded
+	** WARNING ** invalid event: 8374 -536 - discarded
+	** WARNING ** invalid event: 8120 -644 - discarded
+	   .
+	   .
+	   .
+	** WARNING ** invalid event: 6102 15400 - discarded
+	** WARNING ** invalid event: 6083 15413 - discarded
+	** WARNING ** invalid event: 6097 15459 - discarded
+
+	xdata$rp110590.qp (; no exp.) -> rp_rot.qp (xin=7681.00 
+	  yin=7681.00 xrot=27.20 yrot=27.20 xout=7681.00 yout=7681.00)
+	Creating QPOE output file: rp_rot.qp
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+For large QPOE files (> 25MBytes) it will be necessary to optimize
+the QPOE internal parameters.
+.ih
+SEE ALSO
+
+The task \fIQPLINTRAN\fR which is the utility called by this task.
+
+The task \fIGEOMAP\fR can be used to determine correction factors to align
+to distorted images.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on qpoe filtering (\fIhelp qpoe\fR) for a description of
+the qpoe filter user interface.
+
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

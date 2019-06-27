@@ -1,0 +1,41 @@
+#$Header: /home/pros/xray/xtiming/RCS/timfilter.par,v 11.0 1997/11/06 16:46:01 prosb Exp $
+#$Log: timfilter.par,v $
+#Revision 11.0  1997/11/06 16:46:01  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:32:38  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:37:44  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:04:31  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:55:03  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  23:06:46  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:30:25  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/23  18:01:52  janet
+#removed filter parameter.
+#
+#Revision 3.0  91/08/02  01:59:59  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  22:32:17  pros
+#General Release 1.0
+#
+#
+#  TIMFILTER.PAR 
+#  time filter task parameters
+#
+qpoe_file,s,a,,,,"Input Qpoe File"
+time_file,s,a,,,,"Ouput Time Filter list"
+merge,b,h,no,,,"merge"
+display,i,h,1,0,5,"Display Level"
+clobber,b,h,no,,,"clobber"

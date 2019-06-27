@@ -1,0 +1,219 @@
+check out file `libccdred.a = /u2/valdes/iraf/mscred/iraf214/mscred5.0/mscred/bin.redhat/libccdred.a'
+copy `ccdred.h' to `generic/ccdred.h'
+copy ccdred.h to /u2/valdes/iraf/mscred/iraf214/mscred5.0/mscred/src/ccdred/src/generic/ccdred.h
+generic -k proc.gx -o generic/proc.x 
+xc -c -w -p mscred cor.x proc.x
+cor.x:
+   cor1s:
+   cor1flats:
+   cor2s:
+   cor2flats:
+   cor1r:
+   cor1flatr:
+   cor2r:
+   cor2flatr:
+proc.x:
+   proc1s:
+   proc2s:
+   find_overscans:
+   procmeans:
+   proc1r:
+   proc2r:
+   find_overscanr:
+   procmeanr:
+cor.f:
+   cor1s:
+   cor1fs:
+   cor2s:
+   cor2fs:
+   cor1r:
+   cor1fr:
+   cor2r:
+   cor2fr:
+proc.f:
+   proc1s:
+   proc2s:
+   findos:
+   procms:
+   proc1r:
+   proc2r:
+   findor:
+   procmr:
+ar r /u2/valdes/iraf/mscred/iraf214/mscred5.0/mscred/bin.redhat/libccdred.a cor.o proc.o
+xc -c -w -p mscred bleed.x calimage.x ccdcache.x ccdcheck.x ccdlog.x ccdproc.x doproc.x setbpmask.x setdark.x setfixpix.x setflat.x setfringe.x setheader.x setillum.x setinmask.x setnoi.x setoutput.x setoverscan.x setproc.x setreadcor.x setsaturate.x setsections.x setsflat.x settrim.x setzero.x t_ccdproc.x t_ccdtool.x xtfixpix.x
+bleed.x:
+   bld_open:
+   bld_close:
+   bld_mask:
+   bld_interp:
+calimage.x:
+   cal_image:
+   cal_open:
+   cal_close:
+   cal_list:
+   cal_scan:
+   cal_get:
+ccdcache.x:
+   ccd_cache:
+   ccd_open:
+   ccd_unmap:
+   ccd_flush:
+   ccd_close:
+   ccd_glr:
+   ccd_gls:
+ccdcheck.x:
+   ccdcheck:
+ccdlog.x:
+   ccdlog_open:
+   ccdlog_close:
+   ccdlog:
+   ccdlog_flush:
+   ccdlog_clear:
+ccdproc.x:
+   ccdproc:
+   ccdproc1:
+   ccdproc2:
+doproc.x:
+   doproc:
+setbpmask.x:
+   set_bpmask:
+setdark.x:
+   set_dark:
+setfixpix.x:
+   set_fixpix:
+   set_fp:
+setflat.x:
+   set_flat:
+setfringe.x:
+   set_fringe:
+setheader.x:
+   set_header:
+setillum.x:
+   set_illum:
+setinmask.x:
+   set_inmask:
+setnoi.x:
+   set_noi:
+setoutput.x:
+   set_output:
+setoverscan.x:
+   set_overscan:
+   fit_overscan:
+   trim_overscan:
+setproc.x:
+   set_proc:
+   free_proc:
+setreadcor.x:
+   set_readcor:
+setsaturate.x:
+   set_saturate:
+   set_bldval:
+setsections.x:
+   set_sections:
+   set_calsection:
+setsflat.x:
+   set_sflat:
+settrim.x:
+   set_trim:
+setzero.x:
+   set_zero:
+t_ccdproc.x:
+   t_ccdproc:
+t_ccdtool.x:
+   t_ccdtool:
+xtfixpix.x:
+   xx_fpinit:
+   xx_fpsinterp:
+   xx_fpfree:
+bleed.f:
+   bldopn:
+   bldcle:
+   bldmak:
+   bldinp:
+calimage.f:
+   calime:
+   calopn:
+   calcle:
+   callit:
+   calscn:
+   calget:
+ccdcache.f:
+   ccdcae:
+   ccdopn:
+   ccdunp:
+   ccdflh:
+   ccdcle:
+   ccdglr:
+   ccdgls:
+ccdcheck.f:
+   ccdchk:
+ccdlog.f:
+   ccdlon:
+   ccdloe:
+   ccdlog:
+   ccdloh:
+   ccdlor:
+ccdproc.f:
+   ccdprc:
+   ccdpr1:
+   ccdpr2:
+doproc.f:
+   doproc:
+setbpmask.f:
+   setbpk:
+setdark.f:
+   setdak:
+setfixpix.f:
+   setfix:
+   setfp:
+setflat.f:
+   setflt:
+setfringe.f:
+   setfre:
+setheader.f:
+   sether:
+setillum.f:
+   setilm:
+setinmask.f:
+   setink:
+setnoi.f:
+   setnoi:
+setoutput.f:
+   setout:
+setoverscan.f:
+   setovn:
+   fitovn:
+   trimon:
+setproc.f:
+   setprc:
+   freepc:
+setreadcor.f:
+   setrer:
+setsaturate.f:
+   setsae:
+   setbll:
+setsections.f:
+   setses:
+   setcan:
+setsflat.f:
+   setsft:
+settrim.f:
+   settrm:
+setzero.f:
+   setzeo:
+t_ccdproc.f:
+   tccdpc:
+t_ccdtool.f:
+   tccdtl:
+xtfixpix.f:
+   xxfpit:
+   xxfpsp:
+   xxfpfe:
+ar r /u2/valdes/iraf/mscred/iraf214/mscred5.0/mscred/bin.redhat/libccdred.a bleed.o calimage.o ccdcache.o ccdcheck.o ccdlog.o ccdproc.o doproc.o setbpmask.o setdark.o setfixpix.o setflat.o setfringe.o setheader.o setillum.o setinmask.o setnoi.o setoutput.o setoverscan.o setproc.o setreadcor.o setsaturate.o setsections.o setsflat.o settrim.o setzero.o t_ccdproc.o t_ccdtool.o xtfixpix.o
+ranlib /u2/valdes/iraf/mscred/iraf214/mscred5.0/mscred/bin.redhat/libccdred.a
+Updated 30 files in libccdred.a
+check file `libccdred.a' into `mscbin$'
+check out file `x_ccdred.o = /u2/valdes/iraf/mscred/iraf214/mscred5.0/mscred/bin.redhat/x_ccdred.o'
+Object x_ccdred.o is up to date
+xc -Nz -p mscred  x_ccdred.o -lccdred -lcombine   -lxtools -lcurfit -lgsurfit -lncar -lgks -o xx_ccdred.e
+check file `x_ccdred.o' into `mscbin$'

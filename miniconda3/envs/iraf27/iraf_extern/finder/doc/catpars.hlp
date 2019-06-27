@@ -1,0 +1,73 @@
+.help catpars Jan91 finder
+.ih
+NAME
+catpars -- Catalog description pset for the finder package
+.ih
+USAGE
+catpars
+.ih
+PARAMETERS
+.ls cat_epoch = "2000."
+Coordinates epoch for the catalog.
+.le
+
+.ls ra_col = "RA_DEG"
+The column containing the right ascension (in degrees) for each source.
+.le
+.ls dec_col = "DEC_DEG"
+The column containing the declination (in degrees) for each source.
+.le
+
+.ls region_col = "REGION"
+The column containing the GSC region number.
+.le
+
+.ls xpred_col = "X_PRED"
+The column containing the predicted X coordinates for each source.
+.le
+.ls ypred_col = "Y_PRED"
+The column containing the predicted Y coordinates for each source.
+.le
+
+.ls xcen_col = "X_CENTER"
+The column containing the centered X coordinates for each source.
+.le
+.ls ycen_col = "Y_CENTER"
+The column containing the centered Y coordinates for each source.
+.le
+.ls cerr_col = "CEN_ERR"
+The column containing the RMS centering errors for the X,Y coordinates.
+.le
+
+.ls datatype = "real"
+The data type for the new X,Y columns.
+"real|double|int"
+.le
+.ls format = "%8.2f"
+The print format for the X,Y columns.
+.le
+.ls units = "pixels"
+The units for the X,Y columns.
+.le
+
+.ls sub_col = "SUB_FLAG"
+The subset selection flag column name.
+.le
+.ls cen_col = "CEN_FLAG"
+The good centering flag column name.
+.le
+.ls obj_col = "OBJ_FLAG"
+The program object flag column name.
+.le
+
+.ls id_col = "GSC_ID"
+The column containing the Guide Star Catalog ID number.
+.le
+.ih
+DESCRIPTION
+CATPARS is a pset that contains the information needed by the finder
+package to access the catalog in question.  The defaults are correct for
+the Space Telescope Guide Star Catalog.
+.ih
+SEE ALSO
+.endhelp

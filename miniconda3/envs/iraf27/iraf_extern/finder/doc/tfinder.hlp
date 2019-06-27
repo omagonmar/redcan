@@ -1,0 +1,287 @@
+.help tfinder Feb2000 finder
+.ih
+NAME
+tfinder -- search the GSC catalog - predict, center & fit coords
+.ih
+USAGE
+tfinder image
+.ih
+PARAMETERS
+.ls image
+The image name for field information.  The right ascension, declination,
+and equinox are read from the image header unless the values are overridden
+by the \fIra\fR, \fIdec\fR, or \fIequinox\fR parameters, below.  The
+image's size in the X and Y directions (axis 1 or 2, respectively) is
+used with the \fIscale\fR factor to calculate the field size.  Only two
+dimensional images are supported.
+.le
+.ls rootname = ""
+An optional rootname for the output files.  If \fIrootname\fR is left
+blank, the \fIimage\fR parameter will be used to name the output files.
+The output files consist of an extended HST Guide Start Catalog format
+table of catalog and program object sources, a logfile that provides
+access to the basic information for each source, and a CCMAP format
+database file containing the plate solution for a fit that may have
+been performed.
+.le
+.ls objects = ""
+An optional input list of program object X,Y coordinates and an integer
+ID field.  If the ID field is omitted, the objects will receive an ID
+equivalent to their table row number.  Program objects do not participate
+in calculating a plate solution, but rather will have their coordinates
+generated if a plate solution is performed on the catalog objects.
+.le
+.ls scale
+The plate or image scale in arcseconds per pixel.
+.le
+.ls north = "top"
+The direction of North in the field, either [top|left|bottom|right].
+.le
+.ls east = "left"
+The direction of East in the field, either [top|left|bottom|right].
+.le
+.ls ra = INDEF
+The right ascension (in hours) of the reference point.
+If \fIra\fR is not INDEF, the value will override the value
+from the \fIimage\fR header.
+.le
+.ls dec = INDEF
+The declination (in degrees) of the reference point.
+If \fIdec\fR is not INDEF, the value will override the value
+from the \fIimage\fR header.
+.le
+.ls equinox = INDEF
+The equinox of the coordinates.
+If \fIequinox\fR is not INDEF, the value will override the value
+from the \fIimage\fR header.
+.le
+.ls xref = INDEF
+The X coordinate of the reference point.
+If \fIxref\fR = INDEF, the X coordinate of the reference point will be
+assumed to lie either on the center of the image, or on the position of
+the optical axis, depending on the value of the \fIopaxis\fR parameter.
+.le
+.ls yref = INDEF
+The Y coordinate of the reference point.
+If \fIyref\fR = INDEF, the Y coordinate of the reference point will be
+assumed to lie either on the center of the image, or on the position of
+the optical axis, depending on the value of the \fIopaxis\fR parameter.
+.le
+.ls date_obs = ""
+Date of the observation (YYYY-MM-DD).  A value provided for \fIdate_obs\fR
+will override the value of the DATE-OBS keyword from the \fIimage\fR header.
+.le
+.ls update = no
+Update image header WCS following fit?
+.le
+.ls interactive = yes
+Enter interactive image cursor loop?
+.le
+.ls autocenter = no
+When entering the task, automatically center at the catalog coordinates?
+.le
+.ls reselect = yes
+When entering the task, override previously selected subset using the
+SELECTPARS parameters?
+.le
+.ls autodisplay = yes
+Automatically redisplay after any all-source keystroke command?
+.le
+.ls verbose = yes
+Print a running commentary?
+.le
+.ls rotate = 0.
+The field's relative position angle.
+.le
+.ls boxsize = 9
+The centering box fullwidth in pixels.
+.le
+.ls edge = 200.
+The edge buffer width in pixels.
+.le
+.ls opaxis = no
+Is the reference point on the optical axis?  If \fIopaxis\fR = yes, the
+parameters \fIxref\fR and \fIyref\fR are ignored (i.e., the reference
+point is assumed to be wherever the optical axis is).
+.le
+.ls del_ra = 0.
+The RA offset of the field center from the optical axis in degrees.
+.le
+.ls del_dec = 0.
+The declination offset of the field center from the optical axis
+in degrees.
+.le
+.ih
+DESCRIPTION
+The TFINDER task provides the capability to generate a table of
+HST Guide Star Catalog sources that overlap the field of the input
+image.  The X and Y coordinates of the catalog sources are predicted
+based on the field information contained in the image header or in the
+\fIscale\fR, \fInorth\fR, \fIeast\fR, \fIra\fR, \fIdec\fR, \fIequinox\fR
+and other parameters.  TFINDER will then enter an interactive image
+display cursor loop that will allow recentering the predicted
+coordinates, selecting sources based on GSC plate ID (for instance), and
+finally fitting a plate solution (using the immatch package CCMAP task).
+
+Program object coordinates can be entered using the \fIobjects\fR
+parameter when the task is first executed, or manually using the "x"
+keystroke.
+
+The output files include an HST Guide Star Catalog format table that has
+been entended to include X,Y centering information and flags that indicate
+whether a particular source has been centered, whether the source is a
+program object, and whether the source has been excluded from the plate
+solution using SELECTPARS.  The table will contain the sources that lie
+within the field of view of the image (including the edge buffer).  All
+catalog sources within this field will be included in the table, but
+only those that have been selected using the SELECTPARS pset will be
+flagged for use in the plate solution by either the TASTROM or TPLTSOL
+task.
+.ih
+KEYSTROKE COMMANDS
+.nf
+			     TPEAK Commands
+			     --------------
+
+			Cursor Keystroke Summary
+
+		  "good" = centered, "bad" = uncentered
+
+ a All source toggle			 j Center from the current coords
+ b Redisplay only bad sources		 k Center with one keystroke
+ c Recenter good sources		 l Center with two keystrokes
+ d Delete source(s)			 o Overlay the raw coordinates
+ e Fit good sources, reposition bad	 p Recenter program objects (as `k')
+ f Fit good sources, find object coords	 r Redisplay good and bad sources
+ g Redisplay only good sources		 u Undelete source(s)
+ i Initialize to the raw coordinates	 x Add an extra source
+
+ q Exit the task			 ? Get this help
+
+
+			  Colon Command Summary
+
+	    autodisplay    badcolor     boxsize        eparam
+	    goodcolor      marker       omarker        replace
+	    rotate         scale        shift          show
+	    subsample      update
+
+
+			Cursor Keystroke Commands
+
+ a  All source toggle for d/i/j/k/l/u keys.  Entering `a' before one of
+    these keystrokes will make the action apply either to all sources for
+    d[elete] or u[ndelete], or to all currently uncentered (bad) sources
+    for i[nitialize] and the three centering keys:  `j', `k', or `l'.
+
+ b  Redisplay only the bad (uncentered) sources.
+ c  Recenter the list of sources with good (previously centered) positions.
+ d  Delete the source(s).  (Mark as uncentered.)
+ e  Fit good source list, reposition bad (uncentered) sources to match.
+ f  Fit good source list, calculate program object coordinates.
+    If ":update" is "yes", write the resulting world coordinate system
+    (WCS) into the input image header.
+ g  Redisplay only the good (centered) sources.
+ i  Initialize the source(s) to their raw coordinates.
+
+ j  Center the source(s) at the current coordinates.
+ k  Center the source(s) shifted to the cursor, using one keystroke.
+ l  Center the source(s) shifted to the cursor, using two keystrokes.
+
+    The `l' key allows an initial source selection keystroke for
+    crowded fields (first 'l' selects source marker, second 'l'
+    selects pixel coordinates).  The `k' key selects and shifts
+    using only one cursor position (nearest marker to pixel).
+    The `j' key only uses the cursor position for selecting the
+    source marker to be centered from the catalog coordinates.
+
+ o  Overlay the raw catalog coordinates using the omarker and the badcolor.
+ p  Recenter program object(s) shifted to the cursor, using one keystroke.
+ q  Exit the task.
+ r  Redisplay both the good and bad (centered and uncentered) sources.
+ u  Undelete the source(s).  (Mark as centered - no further centering done.)
+ x  Add an extra program object.
+ ?  Get this help.
+
+
+			Colon Commands
+
+Issue a command with an argument of the specified type to set the
+corresponding value, or with no argument to print the current setting.
+Commands and arguments may be abbreviated.
+
+ :autodisplay	[y/n]	Redisplay automatically after "all source" command?
+ :boxsize	[int]	Centering box fullwidth
+ :show		[file]	List plate, region and coordinate info [to a file]
+ :subsample	[int]	Overlay subsampling factor for display only
+
+ :badcolor	[str]	Color for bad (uncentered) positions
+ :goodcolor	[str]	Color for good (centered) positions
+ :marker	[str]	Marker for current positions
+ :omarker	[str]	Marker for initial positions
+
+		Colors:   [black|white|red|green|blue|yellow]
+		Markers:  [point|circle|cross|plus|rectangle]
+
+The "f" keystroke will perform a plate solution using the current list
+of centered catalog sources.  This plate solution will be used to calculate
+the celestial coordinates for the program object list, but can also
+optionally be used to update the world coordinate system (WCS) in the
+image header.  The WCS information can be used by a variety of IRAF tasks.
+If ":update" is yes, the image header WCS will be updated following the
+next fit.  If ":update" is no, the WCS will not be updated.
+
+ :update	[y/n]	Update input image WCS after next fit?
+
+
+The catalog sources (not program objects) can be repositioned from the
+current coordinates by specifying a relative shift in each axis or a
+rotation or percent scaling factor(s) that will be applied to all catalog
+sources relative to the center of the frame.  If only one argument is
+specified to :scale, both coordinates are rescaled by the same factor.
+
+Note that each time rotate, scale or shift is specified, the coordinates
+will be recomputed relative to the current coordinates, centered or not.
+These commands will often best be applied to the original predicted
+coordinates immediately after entering the task or after reinitializing
+the coordinates using the "a" and "i" keystrokes.  No centering is
+performed following these commands, and the catalog sources will be
+marked as uncentered afterwards.
+
+ :rotate	[real]	Angle relative to current coordinates
+ :scale [x [y]] [real]	Percent scale factor (can specify each axis)
+ :shift [x y]	[int]	X,Y shifts relative to current coordinates
+
+Special circumstances may benefit from updating the original predicted
+coordinates provided by TFIELD.  The :replace command will reset these
+coordinates to the current coordinates.  This operation should not
+normally need to be performed.
+
+ :replace		Replace the predicted coords with the current coords
+
+Note that the "predicted" program object coordinates will be updated also.
+
+
+Various parameters from the three tasks called by TPEAK may be adjusted
+to tweak the behavior of the task:
+
+ :eparam	[task]	Edit parameters for DISPLAY, IMCENTROID,
+			SELECTPARS, TPLTSOL or TVMARK
+
+All the parameters of DISPLAY are adjustable (excluding the image name
+and frame number which are set by TPEAK) and most of the parameters of
+TVMARK are adjustable.  This allows control over the appearance of the
+display.  The IMCENTROID parameters can be tweaked to refine the
+centering algorithm and the TPLTSOL parameters to refine the interactive
+coordinate fitting algorithm.  Editing SELECTPARS will result in a new
+subset of the catalog file being taken as eparam is exited.
+
+One useful technique is to set tvmark.outimage before redisplaying the
+good (and/or bad) sources for the last time (reset tvmark.outimage
+before exiting the task).  This provides a snapshot of the overlayed
+sources suitable for hardcopy.
+.fi
+.ih
+SEE ALSO
+dssfinder, stsdas.gasp
+.endhelp

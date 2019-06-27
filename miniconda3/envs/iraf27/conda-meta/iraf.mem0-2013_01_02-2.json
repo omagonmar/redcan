@@ -1,0 +1,484 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.mem0-2013_01_02-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.mem0-post-link.sh",
+    "bin/.iraf.mem0-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/mem0/README",
+    "iraf_extern/mem0/Revisions",
+    "iraf_extern/mem0/bin",
+    "iraf_extern/mem0/bin.linux/x_mem0.e",
+    "iraf_extern/mem0/build_log",
+    "iraf_extern/mem0/conda_build.sh",
+    "iraf_extern/mem0/help_log",
+    "iraf_extern/mem0/lib/apropos.db",
+    "iraf_extern/mem0/lib/helpdb.mip",
+    "iraf_extern/mem0/lib/mkpkg.inc",
+    "iraf_extern/mem0/lib/mkpkg.sf.SUN3",
+    "iraf_extern/mem0/lib/root.hd",
+    "iraf_extern/mem0/lib/rootmem0.hd",
+    "iraf_extern/mem0/lib/strip.mem0",
+    "iraf_extern/mem0/lib/zzsetenv.def",
+    "iraf_extern/mem0/mem0.cl",
+    "iraf_extern/mem0/mem0.hd",
+    "iraf_extern/mem0/mem0.men",
+    "iraf_extern/mem0/mem0.par",
+    "iraf_extern/mem0/mem0c.notes",
+    "iraf_extern/mem0/mem0c.readme",
+    "iraf_extern/mem0/mkpkg",
+    "iraf_extern/mem0/src/.cshrc",
+    "iraf_extern/mem0/src/convx.x",
+    "iraf_extern/mem0/src/doc/imconv.hlp",
+    "iraf_extern/mem0/src/doc/immake.hlp",
+    "iraf_extern/mem0/src/doc/irfftes.hlp",
+    "iraf_extern/mem0/src/doc/irme0.hlp",
+    "iraf_extern/mem0/src/doc/pfactor.hlp",
+    "iraf_extern/mem0/src/fft/mkpkg",
+    "iraf_extern/mem0/src/fft/ncarfft.f",
+    "iraf_extern/mem0/src/fft_ncar.x",
+    "iraf_extern/mem0/src/fftdata.x",
+    "iraf_extern/mem0/src/imconv.par",
+    "iraf_extern/mem0/src/immake.par",
+    "iraf_extern/mem0/src/irfftes.par",
+    "iraf_extern/mem0/src/irme0.com",
+    "iraf_extern/mem0/src/irme0.par",
+    "iraf_extern/mem0/src/libpkg.a",
+    "iraf_extern/mem0/src/mkpkg",
+    "iraf_extern/mem0/src/outx.x",
+    "iraf_extern/mem0/src/pfactor.par",
+    "iraf_extern/mem0/src/t_imconv.x",
+    "iraf_extern/mem0/src/t_immake.x",
+    "iraf_extern/mem0/src/t_irfftes.x",
+    "iraf_extern/mem0/src/t_irme0.x",
+    "iraf_extern/mem0/src/t_pfactor.x",
+    "iraf_extern/mem0/src/x_mem0.o",
+    "iraf_extern/mem0/src/x_mem0.x",
+    "iraf_extern/mem0/ur_extern.pkg",
+    "iraf_extern/mem0/ur_mkpkg_patterns"
+  ],
+  "fn": "iraf.mem0-2013_01_02-2.tar.bz2",
+  "license": "IRAF MIT/X11 variant",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.mem0-2013_01_02-2",
+    "type": 1
+  },
+  "md5": "00300806a09b12d90abbac414f27952a",
+  "name": "iraf.mem0",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.mem0-2013_01_02-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.mem0-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "abd22640b44341b01b8a92d8622c97b2b86edbbe3cd9a7efc8a6597f44d6d2e0",
+        "sha256_in_prefix": "abd22640b44341b01b8a92d8622c97b2b86edbbe3cd9a7efc8a6597f44d6d2e0",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "bin/.iraf.mem0-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "4677a7deb6ef7583ec71710793927385ac72e88662c34e3af2d839f56908e388",
+        "sha256_in_prefix": "4677a7deb6ef7583ec71710793927385ac72e88662c34e3af2d839f56908e388",
+        "size_in_bytes": 63
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "sha256_in_prefix": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "sha256_in_prefix": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/mem0/README",
+        "path_type": "hardlink",
+        "sha256": "15d712e327ef64f761b5731baff3fa27f21829426a52bd35aa32275e610cd45d",
+        "sha256_in_prefix": "15d712e327ef64f761b5731baff3fa27f21829426a52bd35aa32275e610cd45d",
+        "size_in_bytes": 419
+      },
+      {
+        "_path": "iraf_extern/mem0/Revisions",
+        "path_type": "hardlink",
+        "sha256": "2fe284589902b763334d3dd698072d1f62dd96206a854eb09e141e91007bf1b4",
+        "sha256_in_prefix": "2fe284589902b763334d3dd698072d1f62dd96206a854eb09e141e91007bf1b4",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "iraf_extern/mem0/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/mem0/bin.linux/x_mem0.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mem0_1553892048106/_h_env_plac",
+        "sha256": "0fb8a6f8be0bc377fe745c4cc84e19676cd5d8067d1b9c38d0c9df8e439ae2a7",
+        "sha256_in_prefix": "961a8ccc7b6e08db4b169f4912c99620af6efbd6e83e7be0856a3fa654273f9d",
+        "size_in_bytes": 2857575
+      },
+      {
+        "_path": "iraf_extern/mem0/build_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "36eea059e413b82f65f474f123624553311d6a897f866aa5297704818c63f285",
+        "sha256_in_prefix": "4aec7592277a0a07582a656e0e49d00e8fb260f2963e1cc129d01d7d4d7be3ee",
+        "size_in_bytes": 2040
+      },
+      {
+        "_path": "iraf_extern/mem0/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4f18959420eb75a340cb927442d75d0253795dc7dbecff3d04ef849a5abc81b3",
+        "sha256_in_prefix": "4731880cdf2c5899453fb887156e583a682a22ac9b373b5ee54058128359c1cc",
+        "size_in_bytes": 2394
+      },
+      {
+        "_path": "iraf_extern/mem0/help_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "94defbc40319efbd61d71bbb5c765d795f5affa3c6ce234ca8314ecaee858d83",
+        "sha256_in_prefix": "a172fc20116f4cbc9106527049abe252bc4e61fe84ee98684eb3845708ab10a1",
+        "size_in_bytes": 917
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/apropos.db",
+        "path_type": "hardlink",
+        "sha256": "1c9443a1dcbb993ddb5d33a52e1cb2fed915a6edc71b6f0eea6ce1184dacb61d",
+        "sha256_in_prefix": "1c9443a1dcbb993ddb5d33a52e1cb2fed915a6edc71b6f0eea6ce1184dacb61d",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/helpdb.mip",
+        "path_type": "hardlink",
+        "sha256": "a5420113ca0bb4f09fa964742668910fa6dca0bb93286a8a9b083265e75b9c33",
+        "sha256_in_prefix": "a5420113ca0bb4f09fa964742668910fa6dca0bb93286a8a9b083265e75b9c33",
+        "size_in_bytes": 3128
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "0f34ee1875f2eecae1574ffc3caec837f8dce93edc33ba2032bbfc0fbecaf655",
+        "sha256_in_prefix": "0f34ee1875f2eecae1574ffc3caec837f8dce93edc33ba2032bbfc0fbecaf655",
+        "size_in_bytes": 254
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/mkpkg.sf.SUN3",
+        "path_type": "hardlink",
+        "sha256": "5212e616825d7f6a36d17529cefecae6d3b04a9b59eee5f957ca90760af58de8",
+        "sha256_in_prefix": "5212e616825d7f6a36d17529cefecae6d3b04a9b59eee5f957ca90760af58de8",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/root.hd",
+        "path_type": "hardlink",
+        "sha256": "f3ac53fe7d7f8b4e3113e9b3f3bc046948009c6cd5c9dd00536209e49f84eb25",
+        "sha256_in_prefix": "f3ac53fe7d7f8b4e3113e9b3f3bc046948009c6cd5c9dd00536209e49f84eb25",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/rootmem0.hd",
+        "path_type": "hardlink",
+        "sha256": "89a920e47785c31af90c406b9fa56f9ced704449281c3ce86d5f93f9b7678cc5",
+        "sha256_in_prefix": "89a920e47785c31af90c406b9fa56f9ced704449281c3ce86d5f93f9b7678cc5",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/strip.mem0",
+        "path_type": "hardlink",
+        "sha256": "985a2bd96ad3f9bbfe8c48f2671db78f352bd344c360960be370d4adfb4da280",
+        "sha256_in_prefix": "985a2bd96ad3f9bbfe8c48f2671db78f352bd344c360960be370d4adfb4da280",
+        "size_in_bytes": 335
+      },
+      {
+        "_path": "iraf_extern/mem0/lib/zzsetenv.def",
+        "path_type": "hardlink",
+        "sha256": "7b645ebd2b939db6fcbcbb35867d393f7e2a93626289b653bcf6ae27624ee070",
+        "sha256_in_prefix": "7b645ebd2b939db6fcbcbb35867d393f7e2a93626289b653bcf6ae27624ee070",
+        "size_in_bytes": 157
+      },
+      {
+        "_path": "iraf_extern/mem0/mem0.cl",
+        "path_type": "hardlink",
+        "sha256": "b9e33776fae6c1fb645bcdc29210735457b7cab5c51f2cc1630c349d54781e45",
+        "sha256_in_prefix": "b9e33776fae6c1fb645bcdc29210735457b7cab5c51f2cc1630c349d54781e45",
+        "size_in_bytes": 382
+      },
+      {
+        "_path": "iraf_extern/mem0/mem0.hd",
+        "path_type": "hardlink",
+        "sha256": "9af4447cf267d6fd48e85f685b7954337301fb4fa8dcae6557af829423c3a453",
+        "sha256_in_prefix": "9af4447cf267d6fd48e85f685b7954337301fb4fa8dcae6557af829423c3a453",
+        "size_in_bytes": 403
+      },
+      {
+        "_path": "iraf_extern/mem0/mem0.men",
+        "path_type": "hardlink",
+        "sha256": "3a9be04e3bac4e362c01bef1c9f11b7237adb2b38710a1292f6e195119ce6407",
+        "sha256_in_prefix": "3a9be04e3bac4e362c01bef1c9f11b7237adb2b38710a1292f6e195119ce6407",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "iraf_extern/mem0/mem0.par",
+        "path_type": "hardlink",
+        "sha256": "0d6b2a06d2d7210d7e57e87eb29cc3ee4ecedb61f6f40f9bce489217109c5ab7",
+        "sha256_in_prefix": "0d6b2a06d2d7210d7e57e87eb29cc3ee4ecedb61f6f40f9bce489217109c5ab7",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "iraf_extern/mem0/mem0c.notes",
+        "path_type": "hardlink",
+        "sha256": "49a761b49f03692374dd082c0b804e946e9dd49f8c12a715f473a510b47b5ad8",
+        "sha256_in_prefix": "49a761b49f03692374dd082c0b804e946e9dd49f8c12a715f473a510b47b5ad8",
+        "size_in_bytes": 709
+      },
+      {
+        "_path": "iraf_extern/mem0/mem0c.readme",
+        "path_type": "hardlink",
+        "sha256": "a38bc42ea6938b7f4dd701d0c4fb01b748c53fdcd3e4a60b709822a36dc76981",
+        "sha256_in_prefix": "a38bc42ea6938b7f4dd701d0c4fb01b748c53fdcd3e4a60b709822a36dc76981",
+        "size_in_bytes": 5764
+      },
+      {
+        "_path": "iraf_extern/mem0/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "c121ebb15b587ba91ce2aa2d95c898573086dc3589aedecd0a1cbc9ce27bdfde",
+        "sha256_in_prefix": "c121ebb15b587ba91ce2aa2d95c898573086dc3589aedecd0a1cbc9ce27bdfde",
+        "size_in_bytes": 3373
+      },
+      {
+        "_path": "iraf_extern/mem0/src/.cshrc",
+        "path_type": "hardlink",
+        "sha256": "b9f5ffbd4877123da2059010327392de3f06f2547933ce61f55b3c51dae83bbb",
+        "sha256_in_prefix": "b9f5ffbd4877123da2059010327392de3f06f2547933ce61f55b3c51dae83bbb",
+        "size_in_bytes": 35
+      },
+      {
+        "_path": "iraf_extern/mem0/src/convx.x",
+        "path_type": "hardlink",
+        "sha256": "abea3599cbe1e821faaca6bbcb93e7642764c2d4ec158bcad45bd558295e16f5",
+        "sha256_in_prefix": "abea3599cbe1e821faaca6bbcb93e7642764c2d4ec158bcad45bd558295e16f5",
+        "size_in_bytes": 3022
+      },
+      {
+        "_path": "iraf_extern/mem0/src/doc/imconv.hlp",
+        "path_type": "hardlink",
+        "sha256": "58ef44e10a32fc6863b345c91e457461dbd492d0b25e5079636a84d3c4578344",
+        "sha256_in_prefix": "58ef44e10a32fc6863b345c91e457461dbd492d0b25e5079636a84d3c4578344",
+        "size_in_bytes": 1467
+      },
+      {
+        "_path": "iraf_extern/mem0/src/doc/immake.hlp",
+        "path_type": "hardlink",
+        "sha256": "566db2decec9faf671bde1682157e0c9173dd88abd41897762c98d51a5cfe2b4",
+        "sha256_in_prefix": "566db2decec9faf671bde1682157e0c9173dd88abd41897762c98d51a5cfe2b4",
+        "size_in_bytes": 2656
+      },
+      {
+        "_path": "iraf_extern/mem0/src/doc/irfftes.hlp",
+        "path_type": "hardlink",
+        "sha256": "50d92b770b25ac4f0052bcaf3be2d8c4ae035c110e76a875eb27c78613781f79",
+        "sha256_in_prefix": "50d92b770b25ac4f0052bcaf3be2d8c4ae035c110e76a875eb27c78613781f79",
+        "size_in_bytes": 3883
+      },
+      {
+        "_path": "iraf_extern/mem0/src/doc/irme0.hlp",
+        "path_type": "hardlink",
+        "sha256": "a9a5b660671d51f5bc9b0e0668c38a551ddcb767772cf447a62c3f5787639f79",
+        "sha256_in_prefix": "a9a5b660671d51f5bc9b0e0668c38a551ddcb767772cf447a62c3f5787639f79",
+        "size_in_bytes": 18187
+      },
+      {
+        "_path": "iraf_extern/mem0/src/doc/pfactor.hlp",
+        "path_type": "hardlink",
+        "sha256": "47bffe0894a78ec5021b2d9d9c59afec02fbee110e7ccb332243231e430e8da8",
+        "sha256_in_prefix": "47bffe0894a78ec5021b2d9d9c59afec02fbee110e7ccb332243231e430e8da8",
+        "size_in_bytes": 497
+      },
+      {
+        "_path": "iraf_extern/mem0/src/fft/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "47c23b646ec10ebccdc5d347fcff2c9ea9237b5e648f28b9bfe029596d2d0237",
+        "sha256_in_prefix": "47c23b646ec10ebccdc5d347fcff2c9ea9237b5e648f28b9bfe029596d2d0237",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "iraf_extern/mem0/src/fft/ncarfft.f",
+        "path_type": "hardlink",
+        "sha256": "1a75708271d41a577de2d3bc984cd9684c2bd7c479c7c454fe0a0e2d004e9617",
+        "sha256_in_prefix": "1a75708271d41a577de2d3bc984cd9684c2bd7c479c7c454fe0a0e2d004e9617",
+        "size_in_bytes": 26533
+      },
+      {
+        "_path": "iraf_extern/mem0/src/fft_ncar.x",
+        "path_type": "hardlink",
+        "sha256": "4e3c19c88edfe64fce6195fb785a8792bab041813497fa415226a1ce7a39a723",
+        "sha256_in_prefix": "4e3c19c88edfe64fce6195fb785a8792bab041813497fa415226a1ce7a39a723",
+        "size_in_bytes": 3580
+      },
+      {
+        "_path": "iraf_extern/mem0/src/fftdata.x",
+        "path_type": "hardlink",
+        "sha256": "930b970f7cb346ae7ca61cdbe5e749a778fd810e83d3466c7fa77bc59f8e9891",
+        "sha256_in_prefix": "930b970f7cb346ae7ca61cdbe5e749a778fd810e83d3466c7fa77bc59f8e9891",
+        "size_in_bytes": 734
+      },
+      {
+        "_path": "iraf_extern/mem0/src/imconv.par",
+        "path_type": "hardlink",
+        "sha256": "be77c0db9875e713b2ebfdb68764fad68349cb2c5e58ce2c4e59d07e12d05bcd",
+        "sha256_in_prefix": "be77c0db9875e713b2ebfdb68764fad68349cb2c5e58ce2c4e59d07e12d05bcd",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "iraf_extern/mem0/src/immake.par",
+        "path_type": "hardlink",
+        "sha256": "548415e0a322edada5da35f01b03464ab4b3975237b0bcf08e82896bf158934e",
+        "sha256_in_prefix": "548415e0a322edada5da35f01b03464ab4b3975237b0bcf08e82896bf158934e",
+        "size_in_bytes": 563
+      },
+      {
+        "_path": "iraf_extern/mem0/src/irfftes.par",
+        "path_type": "hardlink",
+        "sha256": "6e72ab9b4bb39b293188b616018537fd28a6fec7721ddf632734342b48fb13b2",
+        "sha256_in_prefix": "6e72ab9b4bb39b293188b616018537fd28a6fec7721ddf632734342b48fb13b2",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "iraf_extern/mem0/src/irme0.com",
+        "path_type": "hardlink",
+        "sha256": "19708de5d1a52aebeffaa4b88f62e1758885449904fdbbddfbe27e7198cc3818",
+        "sha256_in_prefix": "19708de5d1a52aebeffaa4b88f62e1758885449904fdbbddfbe27e7198cc3818",
+        "size_in_bytes": 945
+      },
+      {
+        "_path": "iraf_extern/mem0/src/irme0.par",
+        "path_type": "hardlink",
+        "sha256": "6de1f7b16b47dfea566c6795766b04f10a12d0adec8e5359aaf815816ef98976",
+        "sha256_in_prefix": "6de1f7b16b47dfea566c6795766b04f10a12d0adec8e5359aaf815816ef98976",
+        "size_in_bytes": 1153
+      },
+      {
+        "_path": "iraf_extern/mem0/src/libpkg.a",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mem0_1553892048106/_h_env_plac",
+        "sha256": "37c7159cf3b16d7c4fa575f6f1045aac2b2e6f6af9b6dd11a70c98bddac33b6f",
+        "sha256_in_prefix": "e2b28c696a37a99a57513a88bb776d0a35bde343e62a05bca009e877270823e9",
+        "size_in_bytes": 204224
+      },
+      {
+        "_path": "iraf_extern/mem0/src/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "02a7c33fae32c13b5b53430c18c51ddaf515916145f10b1a61f6ce10e19b458c",
+        "sha256_in_prefix": "02a7c33fae32c13b5b53430c18c51ddaf515916145f10b1a61f6ce10e19b458c",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "iraf_extern/mem0/src/outx.x",
+        "path_type": "hardlink",
+        "sha256": "aaa96ed7d29a8e3af20f89ab3549108e3652e8f30e2130194d3d7c884ab6fe7f",
+        "sha256_in_prefix": "aaa96ed7d29a8e3af20f89ab3549108e3652e8f30e2130194d3d7c884ab6fe7f",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "iraf_extern/mem0/src/pfactor.par",
+        "path_type": "hardlink",
+        "sha256": "5349dc1049491d30d95e72754449ca49c3c378c429d9e62f1d40d6251ec26972",
+        "sha256_in_prefix": "5349dc1049491d30d95e72754449ca49c3c378c429d9e62f1d40d6251ec26972",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "iraf_extern/mem0/src/t_imconv.x",
+        "path_type": "hardlink",
+        "sha256": "6a716267c27b75f2acaa0ad160de2ec450b311059d169fc51d6e77db9b14ffe3",
+        "sha256_in_prefix": "6a716267c27b75f2acaa0ad160de2ec450b311059d169fc51d6e77db9b14ffe3",
+        "size_in_bytes": 4761
+      },
+      {
+        "_path": "iraf_extern/mem0/src/t_immake.x",
+        "path_type": "hardlink",
+        "sha256": "d84b7d0a9205d2ed5148d5e41dd5c6ad6574ae332c248a51c8093221f7079ab2",
+        "sha256_in_prefix": "d84b7d0a9205d2ed5148d5e41dd5c6ad6574ae332c248a51c8093221f7079ab2",
+        "size_in_bytes": 3555
+      },
+      {
+        "_path": "iraf_extern/mem0/src/t_irfftes.x",
+        "path_type": "hardlink",
+        "sha256": "7762af93bb76bdbc7ef84f493dc2e9e715557fc7ab7fe29d8c6e3317128814f2",
+        "sha256_in_prefix": "7762af93bb76bdbc7ef84f493dc2e9e715557fc7ab7fe29d8c6e3317128814f2",
+        "size_in_bytes": 5900
+      },
+      {
+        "_path": "iraf_extern/mem0/src/t_irme0.x",
+        "path_type": "hardlink",
+        "sha256": "7aab1a5c68b21c1e4700830f91a166f3735206a03fc112c1c85fcf19b26295b3",
+        "sha256_in_prefix": "7aab1a5c68b21c1e4700830f91a166f3735206a03fc112c1c85fcf19b26295b3",
+        "size_in_bytes": 41006
+      },
+      {
+        "_path": "iraf_extern/mem0/src/t_pfactor.x",
+        "path_type": "hardlink",
+        "sha256": "c1de807a0e02d1cb7543c9d874ba519c0a0e417bec086e884b8ea5269e390832",
+        "sha256_in_prefix": "c1de807a0e02d1cb7543c9d874ba519c0a0e417bec086e884b8ea5269e390832",
+        "size_in_bytes": 2365
+      },
+      {
+        "_path": "iraf_extern/mem0/src/x_mem0.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mem0_1553892048106/_h_env_plac",
+        "sha256": "435f3704aac6b9fce86ad53715c0f40252a8fd65f6be298792c712ac92c8d824",
+        "sha256_in_prefix": "b06906a4204f3a4baa911c171d1c3c554f80b941ac897ec96a338126d62fb54c",
+        "size_in_bytes": 8752
+      },
+      {
+        "_path": "iraf_extern/mem0/src/x_mem0.x",
+        "path_type": "hardlink",
+        "sha256": "9728330c7be7f8b2f896e3fc26e8d40a9d117d812a05611bd3671dfe77407e02",
+        "sha256_in_prefix": "9728330c7be7f8b2f896e3fc26e8d40a9d117d812a05611bd3671dfe77407e02",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "iraf_extern/mem0/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "c2a2651b38e0f2de6bdc635afcc7b4dbd17ee324357818739af919b21f011de4",
+        "sha256_in_prefix": "c2a2651b38e0f2de6bdc635afcc7b4dbd17ee324357818739af919b21f011de4",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "iraf_extern/mem0/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 1046516,
+  "subdir": "linux-64",
+  "timestamp": 1553892111695,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.mem0-2013_01_02-2.tar.bz2",
+  "version": "2013_01_02"
+}

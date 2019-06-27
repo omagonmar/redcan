@@ -1,0 +1,1442 @@
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: you should use --build, --host, --target
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether to enable debug build options... no
+checking whether to enable compiler optimizer... (assumed) yes
+checking whether to enable strict compiler warnings... no
+checking whether to enable curl debug memory tracking... no
+checking whether to enable c-ares for DNS lookups... no
+checking for sed... /bin/sed
+checking for grep... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ar... /usr/bin/ar
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking curl version... 7.20.1
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for sys/types.h... yes
+checking for stdint.h... yes
+checking for inttypes.h... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... yes
+checking size of long... 4
+checking size of void*... 4
+checking for 64-bit curl_off_t data type... int64_t
+checking size of curl_off_t... 8
+checking formatting string directive for curl_off_t... "ld"
+checking formatting string directive for unsigned curl_off_t... "lu"
+checking constant suffix string for curl_off_t... LL
+checking constant suffix string for unsigned curl_off_t... ULL
+checking if OS is AIX (to define _ALL_SOURCE)... no
+checking if _THREAD_SAFE is already defined... no
+checking if _THREAD_SAFE is actually needed... no
+checking if _THREAD_SAFE is onwards defined... no
+checking if _REENTRANT is already defined... no
+checking if _REENTRANT is actually needed... no
+checking if _REENTRANT is onwards defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking if arch-OS host is AMD64-Linux/FreeBSD (to build static libraries with PIC)... yes
+checking if compiler is icc (to build with PIC)... no
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... gcc
+checking if the linker (gcc) is GNU ld... no
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for gcc option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... /usr/bin/ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (gcc -m elf_i386) supports shared libraries... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... unsupported
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... no
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking if we need -mimpure-text... no
+checking if we need BUILDING_LIBCURL... no
+checking whether make sets $(MAKE)... (cached) yes
+checking for inline... inline
+checking if compiler is DEC/Compaq/HP C... no
+checking if compiler is HP-UX C... no
+checking if compiler is IBM C... no
+checking if compiler is Intel C... no
+checking if compiler is clang... no
+checking if compiler is GNU C... yes
+checking if compiler is LCC... no
+checking if compiler is SGI MIPSpro C... no
+checking if compiler is SGI MIPS C... no
+checking if compiler is SunPro C... no
+checking if compiler is Tiny C... no
+checking if compiler is Watcom C... no
+checking if compiler accepts debug disabling options... yes
+configure: compiler options added: -g0
+checking if compiler optimizer assumed setting might be used... yes
+checking if compiler accepts optimizer enabling options... yes
+configure: compiler options added: -O2
+checking if compiler accepts strict warning options... yes
+configure: compiler options added: -Wno-system-headers 
+checking if compiler halts on compilation errors... yes
+checking if compiler halts on negative sized arrays... yes
+checking if shared libraries need -no-undefined... no
+checking for windows.h... no
+checking whether build target is a native Windows one... no
+checking whether build target supports WIN32 file API... no
+checking whether to support http... yes
+checking whether to support ftp... no
+checking whether to support file... no
+checking whether to support ldap... no
+checking whether to support ldaps... no
+checking whether to support rtsp... yes
+checking whether to support proxies... no
+checking whether to support dict... no
+checking whether to support telnet... no
+checking whether to support tftp... no
+checking whether to support pop3... yes
+checking whether to support imap... yes
+checking whether to support smtp... yes
+checking whether to provide built-in manual... no
+checking if X/Open network library is required... no
+checking for gethostbyname... yes
+checking for strcasecmp... yes
+checking for windows.h... (cached) no
+checking for winsock.h... (cached) no
+checking for winsock2.h... (cached) no
+checking for connect in libraries... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/types.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for monotonic clock_gettime... yes
+checking for clock_gettime in libraries... -lrt
+checking if monotonic clock_gettime works... yes
+checking whether to use libgcc... no
+checking whether to enable ipv6... no
+checking if argv can be written to... yes
+checking if Kerberos4 support is requested... no
+checking if SPNEGO support is requested... no
+checking if GSSAPI support is requested... no
+configure: WARNING: zlib disabled
+configure: WARNING: SSL disabled, you will not be able to use HTTPS, FTPS, NTLM and more.
+configure: WARNING: Use --with-ssl, --with-gnutls or --with-nss to address this.
+checking default CA cert bundle/path... /etc/pki/tls/certs/ca-bundle.crt
+checking whether to build with libidn... no
+checking for ANSI C header files... (cached) yes
+checking for malloc.h... yes
+checking for memory.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/uio.h... yes
+checking for assert.h... yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for limits.h... yes
+checking for arpa/inet.h... yes
+checking for net/if.h... yes
+checking for netinet/in.h... yes
+checking for sys/un.h... yes
+checking for netinet/tcp.h... yes
+checking for netdb.h... yes
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking for sys/param.h... yes
+checking for termios.h... yes
+checking for termio.h... yes
+checking for sgtty.h... yes
+checking for fcntl.h... yes
+checking for alloca.h... yes
+checking for time.h... (cached) yes
+checking for io.h... no
+checking for pwd.h... yes
+checking for utime.h... yes
+checking for sys/utime.h... no
+checking for sys/poll.h... yes
+checking for poll.h... yes
+checking for socket.h... no
+checking for sys/resource.h... yes
+checking for libgen.h... yes
+checking for locale.h... yes
+checking for errno.h... yes
+checking for stdbool.h... yes
+checking for arpa/tftp.h... yes
+checking for sys/filio.h... no
+checking for setjmp.h... yes
+checking for an ANSI C-conforming const... yes
+checking for compiler support of C99 variadic macro style... yes
+checking for compiler support of old gcc variadic macro style... yes
+checking for size_t... yes
+checking whether time.h and sys/time.h may both be included... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for time.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for struct timeval... yes
+checking run-time libs availability... fine
+checking size of size_t... 4
+checking size of long... (cached) 4
+checking size of int... 4
+checking size of short... 2
+checking size of time_t... 4
+checking size of off_t... 8
+checking for long long... yes
+checking if numberLL works... yes
+checking for ssize_t... yes
+checking for bool... yes
+checking for windows.h... (cached) no
+checking for winsock2.h... (cached) no
+checking for ws2tcpip.h... (cached) no
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for curl_socklen_t data type... socklen_t
+checking size of curl_socklen_t... 4
+checking for in_addr_t... yes
+checking for struct sockaddr_storage... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for sig_atomic_t... yes
+checking if sig_atomic_t is already defined as volatile... no
+checking return type of signal handlers... void
+checking for sys/select.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for select... yes
+checking types of args and return type for select... int,fd_set *,struct timeval *,int
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for recv... yes
+checking types of args and return type for recv... int,void *,size_t,int,int
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for recvfrom... yes
+checking types of args and return type for recvfrom... int,void *,size_t,int,struct sockaddr *,socklen_t *,int
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for send... yes
+checking types of args and return type for send... int,const void *,size_t,int,int
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for MSG_NOSIGNAL... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking if alarm can be linked... yes
+checking if alarm is prototyped... yes
+checking if alarm is compilable... yes
+checking if alarm usage allowed... yes
+checking if alarm might be used... yes
+checking for sys/types.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for libgen.h... (cached) yes
+checking if basename can be linked... yes
+checking if basename is prototyped... yes
+checking if basename is compilable... yes
+checking if basename usage allowed... yes
+checking if basename might be used... yes
+checking for sys/types.h... (cached) yes
+checking for socket.h... (cached) no
+checking if closesocket can be linked... no
+checking if closesocket might be used... no
+checking if CloseSocket can be linked... no
+checking if CloseSocket might be used... no
+checking if connect can be linked... yes
+checking if connect is prototyped... yes
+checking if connect is compilable... yes
+checking if connect usage allowed... yes
+checking if connect might be used... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for fcntl.h... (cached) yes
+checking if fcntl can be linked... yes
+checking if fcntl is prototyped... yes
+checking if fcntl is compilable... yes
+checking if fcntl usage allowed... yes
+checking if fcntl might be used... yes
+checking if fcntl O_NONBLOCK is compilable... yes
+checking if fcntl O_NONBLOCK usage allowed... yes
+checking if fcntl O_NONBLOCK might be used... yes
+checking for sys/types.h... (cached) yes
+checking for stdio.h... yes
+checking if fdopen can be linked... yes
+checking if fdopen is prototyped... yes
+checking if fdopen is compilable... yes
+checking if fdopen usage allowed... yes
+checking if fdopen might be used... yes
+checking for sys/types.h... (cached) yes
+checking for netdb.h... (cached) yes
+checking if freeaddrinfo can be linked... yes
+checking if freeaddrinfo is prototyped... yes
+checking if freeaddrinfo is compilable... yes
+checking if freeaddrinfo usage allowed... yes
+checking if freeaddrinfo might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for ifaddrs.h... yes
+checking if freeifaddrs can be linked... yes
+checking if freeifaddrs is prototyped... yes
+checking if freeifaddrs is compilable... yes
+checking if freeifaddrs usage allowed... yes
+checking if freeifaddrs might be used... yes
+checking if ftruncate can be linked... yes
+checking if ftruncate is prototyped... yes
+checking if ftruncate is compilable... yes
+checking if ftruncate usage allowed... yes
+checking if ftruncate might be used... yes
+checking for sys/types.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking if getaddrinfo can be linked... yes
+checking if getaddrinfo is prototyped... yes
+checking if getaddrinfo is compilable... yes
+checking if getaddrinfo seems to work... yes
+checking if getaddrinfo usage allowed... yes
+checking if getaddrinfo might be used... yes
+checking if getaddrinfo is threadsafe... yes
+checking if gethostbyaddr can be linked... yes
+checking if gethostbyaddr is prototyped... yes
+checking if gethostbyaddr is compilable... yes
+checking if gethostbyaddr usage allowed... yes
+checking if gethostbyaddr might be used... yes
+checking if gethostbyaddr_r can be linked... yes
+checking if gethostbyaddr_r is prototyped... yes
+checking if gethostbyaddr_r takes 5 args.... no
+checking if gethostbyaddr_r takes 7 args.... no
+checking if gethostbyaddr_r takes 8 args.... yes
+checking if gethostbyaddr_r is compilable... yes
+checking if gethostbyaddr_r usage allowed... yes
+checking if gethostbyaddr_r might be used... yes
+checking if gethostbyname can be linked... yes
+checking if gethostbyname is prototyped... yes
+checking if gethostbyname is compilable... yes
+checking if gethostbyname usage allowed... yes
+checking if gethostbyname might be used... yes
+checking if gethostbyname_r can be linked... yes
+checking if gethostbyname_r is prototyped... yes
+checking if gethostbyname_r takes 3 args.... no
+checking if gethostbyname_r takes 5 args.... no
+checking if gethostbyname_r takes 6 args.... yes
+checking if gethostbyname_r is compilable... yes
+checking if gethostbyname_r usage allowed... yes
+checking if gethostbyname_r might be used... yes
+checking if gethostname can be linked... yes
+checking if gethostname is prototyped... yes
+checking if gethostname is compilable... yes
+checking if gethostname usage allowed... yes
+checking if gethostname might be used... yes
+checking if getifaddrs can be linked... yes
+checking if getifaddrs is prototyped... yes
+checking if getifaddrs is compilable... yes
+checking if getifaddrs seems to work... yes
+checking if getifaddrs usage allowed... yes
+checking if getifaddrs might be used... yes
+checking if getservbyport_r can be linked... yes
+checking if getservbyport_r is prototyped... yes
+checking if getservbyport_r takes 4 args.... no
+checking if getservbyport_r takes 5 args.... no
+checking if getservbyport_r takes 6 args.... yes
+checking if getservbyport_r is compilable... yes
+checking if getservbyport_r usage allowed... yes
+checking if getservbyport_r might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for time.h... (cached) yes
+checking if gmtime_r can be linked... yes
+checking if gmtime_r is prototyped... yes
+checking if gmtime_r is compilable... yes
+checking if gmtime_r seems to work... yes
+checking if gmtime_r usage allowed... yes
+checking if gmtime_r might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for arpa/inet.h... (cached) yes
+checking if inet_ntoa_r can be linked... no
+checking if inet_ntoa_r might be used... no
+checking if inet_ntop can be linked... yes
+checking if inet_ntop is prototyped... yes
+checking if inet_ntop is compilable... yes
+checking if inet_ntop seems to work... yes
+checking if inet_ntop usage allowed... yes
+checking if inet_ntop might be used... yes
+checking if inet_pton can be linked... yes
+checking if inet_pton is prototyped... yes
+checking if inet_pton is compilable... yes
+checking if inet_pton seems to work... yes
+checking if inet_pton usage allowed... yes
+checking if inet_pton might be used... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for sys/ioctl.h... (cached) yes
+checking for stropts.h... yes
+checking if ioctl can be linked... yes
+checking if ioctl is prototyped... yes
+checking if ioctl is compilable... yes
+checking if ioctl usage allowed... yes
+checking if ioctl might be used... yes
+checking if ioctl FIONBIO is compilable... yes
+checking if ioctl FIONBIO usage allowed... yes
+checking if ioctl FIONBIO might be used... yes
+checking if ioctl SIOCGIFADDR is compilable... yes
+checking if ioctl SIOCGIFADDR usage allowed... yes
+checking if ioctl SIOCGIFADDR might be used... yes
+checking if ioctlsocket can be linked... no
+checking if ioctlsocket might be used... no
+checking if IoctlSocket can be linked... no
+checking if IoctlSocket might be used... no
+checking if localtime_r can be linked... yes
+checking if localtime_r is prototyped... yes
+checking if localtime_r is compilable... yes
+checking if localtime_r seems to work... yes
+checking if localtime_r usage allowed... yes
+checking if localtime_r might be used... yes
+checking if memrchr can be linked... yes
+checking if memrchr is prototyped... no
+checking if memrchr might be used... no
+checking for sys/types.h... (cached) yes
+checking for poll.h... (cached) yes
+checking for sys/poll.h... (cached) yes
+checking if poll can be linked... yes
+checking if poll is prototyped... yes
+checking if poll is compilable... yes
+checking if poll seems to work... yes
+checking if poll usage allowed... yes
+checking if poll might be used... yes
+checking if setsockopt can be linked... yes
+checking if setsockopt is prototyped... yes
+checking if setsockopt is compilable... yes
+checking if setsockopt usage allowed... yes
+checking if setsockopt might be used... yes
+checking if setsockopt SO_NONBLOCK is compilable... no
+checking if setsockopt SO_NONBLOCK might be used... no
+checking for sys/types.h... (cached) yes
+checking for signal.h... (cached) yes
+checking if sigaction can be linked... yes
+checking if sigaction is prototyped... yes
+checking if sigaction is compilable... yes
+checking if sigaction usage allowed... yes
+checking if sigaction might be used... yes
+checking if siginterrupt can be linked... yes
+checking if siginterrupt is prototyped... yes
+checking if siginterrupt is compilable... yes
+checking if siginterrupt usage allowed... yes
+checking if siginterrupt might be used... yes
+checking if signal can be linked... yes
+checking if signal is prototyped... yes
+checking if signal is compilable... yes
+checking if signal usage allowed... yes
+checking if signal might be used... yes
+checking for sys/types.h... (cached) yes
+checking for setjmp.h... (cached) yes
+checking if sigsetjmp can be linked... no
+checking if sigsetjmp seems a macro... yes
+checking if sigsetjmp is compilable... yes
+checking if sigsetjmp usage allowed... yes
+checking if sigsetjmp might be used... yes
+checking if socket can be linked... yes
+checking if socket is prototyped... yes
+checking if socket is compilable... yes
+checking if socket usage allowed... yes
+checking if socket might be used... yes
+checking if strcasecmp can be linked... yes
+checking if strcasecmp is prototyped... yes
+checking if strcasecmp is compilable... yes
+checking if strcasecmp usage allowed... yes
+checking if strcasecmp might be used... yes
+checking if strcasestr can be linked... yes
+checking if strcasestr is prototyped... no
+checking if strcasestr might be used... no
+checking if strcmpi can be linked... no
+checking if strcmpi might be used... no
+checking if strdup can be linked... yes
+checking if strdup is prototyped... yes
+checking if strdup is compilable... yes
+checking if strdup usage allowed... yes
+checking if strdup might be used... yes
+checking if strerror_r can be linked... yes
+checking if strerror_r is prototyped... yes
+checking if strerror_r is compilable... yes
+checking if strerror_r is glibc like... no
+checking if strerror_r is POSIX like... yes
+checking if strerror_r seems to work... yes
+checking if strerror_r usage allowed... yes
+checking if strerror_r might be used... yes
+checking if stricmp can be linked... no
+checking if stricmp might be used... no
+checking if strlcat can be linked... no
+checking if strlcat might be used... no
+checking if strncasecmp can be linked... yes
+checking if strncasecmp is prototyped... yes
+checking if strncasecmp is compilable... yes
+checking if strncasecmp usage allowed... yes
+checking if strncasecmp might be used... yes
+checking if strncmpi can be linked... no
+checking if strncmpi might be used... no
+checking if strnicmp can be linked... no
+checking if strnicmp might be used... no
+checking if strstr can be linked... yes
+checking if strstr is prototyped... yes
+checking if strstr is compilable... yes
+checking if strstr usage allowed... yes
+checking if strstr might be used... yes
+checking if strtok_r can be linked... yes
+checking if strtok_r is prototyped... yes
+checking if strtok_r is compilable... yes
+checking if strtok_r usage allowed... yes
+checking if strtok_r might be used... yes
+checking if strtoll can be linked... yes
+checking if strtoll is prototyped... yes
+checking if strtoll is compilable... yes
+checking if strtoll usage allowed... yes
+checking if strtoll might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/uio.h... (cached) yes
+checking if writev can be linked... yes
+checking if writev is prototyped... yes
+checking if writev is compilable... yes
+checking if writev usage allowed... yes
+checking if writev might be used... yes
+checking for fork... yes
+checking for geteuid... yes
+checking for getpass_r... no
+checking deeper for getpass_r... but still no
+checking for getppid... yes
+checking for getprotobyname... yes
+checking for getpwuid... yes
+checking for getrlimit... yes
+checking for gettimeofday... yes
+checking for inet_addr... yes
+checking for perror... yes
+checking for pipe... yes
+checking for setlocale... yes
+checking for setmode... no
+checking deeper for setmode... but still no
+checking for setrlimit... yes
+checking for uname... yes
+checking for utime... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netdb.h... (cached) yes
+checking for getnameinfo... yes
+checking types of arguments for getnameinfo... const struct sockaddr *,socklen_t,size_t,unsigned int
+checking whether to enable non-blocking communications... yes
+checking how to set a socket into non-blocking mode... fcntl O_NONBLOCK
+checking for perl... /usr/bin/perl
+checking for gnroff... /usr/bin/gnroff
+checking how to use *nroff to get plain text from man pages... -man
+checking whether to enable verbose strings... yes
+checking whether to enable SSPI support (Windows native builds only)... no
+checking whether to enable cryptographic authentication methods... no
+checking whether to enable support for cookies... yes
+checking whether to enable hidden symbols in the library... no
+checking whether to enforce SONAME bump... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/examples/Makefile
+config.status: creating docs/libcurl/Makefile
+config.status: creating include/Makefile
+config.status: creating include/curl/Makefile
+config.status: creating src/Makefile
+config.status: creating lib/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/data/Makefile
+config.status: creating tests/server/Makefile
+config.status: creating tests/libtest/Makefile
+config.status: creating packages/Makefile
+config.status: creating packages/Win32/Makefile
+config.status: creating packages/Win32/cygwin/Makefile
+config.status: creating packages/Linux/Makefile
+config.status: creating packages/Linux/RPM/Makefile
+config.status: creating packages/Linux/RPM/curl.spec
+config.status: creating packages/Linux/RPM/curl-ssl.spec
+config.status: creating packages/Solaris/Makefile
+config.status: creating packages/EPM/curl.list
+config.status: creating packages/EPM/Makefile
+config.status: creating packages/vms/Makefile
+config.status: creating packages/AIX/Makefile
+config.status: creating packages/AIX/RPM/Makefile
+config.status: creating packages/AIX/RPM/curl.spec
+config.status: creating curl-config
+config.status: creating libcurl.pc
+config.status: creating lib/curl_config.h
+config.status: creating src/curl_config.h
+config.status: creating include/curl/curlbuild.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: Configured to build curl/libcurl:
+
+  curl version:    7.20.1
+  Host setup:      x86_64-unknown-linux-gnu
+  Install prefix:  /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient
+  Compiler:        gcc
+  SSL support:     no      (--with-ssl / --with-gnutls / --with-nss)
+  SSH support:     no      (--with-libssh2)
+  zlib support:    no      (--with-zlib)
+  krb4 support:    no      (--with-krb4*)
+  GSSAPI support:  no      (--with-gssapi)
+  SPNEGO support:  no      (--with-spnego)
+  c-ares support:  no      (--enable-ares)
+  ipv6 support:    no      (--enable-ipv6)
+  IDN support:     no      (--with-libidn)
+  Build libcurl:   Shared=no, Static=yes
+  Built-in manual: no      (--enable-manual)
+  Verbose errors:  enabled (--disable-verbose)
+  SSPI support:    no      (--enable-sspi)
+  ca cert bundle:  /etc/pki/tls/certs/ca-bundle.crt
+  ca cert path:    no
+  LDAP support:    no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
+  LDAPS support:   no      (--enable-ldaps)
+  RTSP support:    enabled
+  Protocols:       HTTP IMAP POP3 RTSP SMTP
+
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+Making clean in src
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+ rm -f curl curl
+test -z "hugehelp.c" || rm -f hugehelp.c
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+Making clean in lib
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+test -z "vc6libcurl.dsp libcurl.vcproj" || rm -f vc6libcurl.dsp libcurl.vcproj
+test -z "libcurl.la" || rm -f libcurl.la
+rm -f "./so_locations"
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+Making clean in .
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+rm -rf .libs _libs
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+Making clean in libtest
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/libtest'
+rm -rf .libs _libs
+ rm -f lib500 lib500
+ rm -f lib501 lib501
+ rm -f lib502 lib502
+ rm -f lib503 lib503
+ rm -f lib504 lib504
+ rm -f lib505 lib505
+ rm -f lib506 lib506
+ rm -f lib507 lib507
+ rm -f lib508 lib508
+ rm -f lib510 lib510
+ rm -f lib511 lib511
+ rm -f lib512 lib512
+ rm -f lib513 lib513
+ rm -f lib514 lib514
+ rm -f lib515 lib515
+ rm -f lib516 lib516
+ rm -f lib517 lib517
+ rm -f lib518 lib518
+ rm -f lib519 lib519
+ rm -f lib520 lib520
+ rm -f lib521 lib521
+ rm -f lib523 lib523
+ rm -f lib524 lib524
+ rm -f lib525 lib525
+ rm -f lib526 lib526
+ rm -f lib527 lib527
+ rm -f lib529 lib529
+ rm -f lib530 lib530
+ rm -f lib532 lib532
+ rm -f lib533 lib533
+ rm -f lib536 lib536
+ rm -f lib537 lib537
+ rm -f lib540 lib540
+ rm -f lib541 lib541
+ rm -f lib542 lib542
+ rm -f lib543 lib543
+ rm -f lib544 lib544
+ rm -f lib545 lib545
+ rm -f lib547 lib547
+ rm -f lib548 lib548
+ rm -f lib549 lib549
+ rm -f lib552 lib552
+ rm -f lib553 lib553
+ rm -f lib554 lib554
+ rm -f lib555 lib555
+ rm -f lib556 lib556
+ rm -f lib539 lib539
+ rm -f lib557 lib557
+ rm -f lib558 lib558
+ rm -f lib559 lib559
+ rm -f lib560 lib560
+ rm -f lib562 lib562
+ rm -f lib564 lib564
+ rm -f lib565 lib565
+ rm -f lib566 lib566
+ rm -f lib567 lib567
+ rm -f lib568 lib568
+ rm -f lib569 lib569
+ rm -f lib570 lib570
+ rm -f lib571 lib571
+ rm -f lib572 lib572
+rm -f *.o
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/libtest'
+Making clean in server
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/server'
+rm -rf .libs _libs
+ rm -f getpart getpart
+ rm -f resolve resolve
+ rm -f rtspd rtspd
+ rm -f sockfilt sockfilt
+ rm -f sws sws
+ rm -f tftpd tftpd
+rm -f *.o
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/server'
+Making clean in data
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/data'
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/data'
+Making clean in .
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+test -z ".http.pid .https.pid .ftp.pid .ftps.pid" || rm -f .http.pid .https.pid .ftp.pid .ftps.pid
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+Making clean in libcurl
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+test -z "curl_easy_cleanup.html curl_easy_getinfo.html curl_easy_init.html curl_easy_perform.html curl_easy_setopt.html curl_easy_duphandle.html curl_formadd.html curl_formfree.html curl_getdate.html curl_getenv.html curl_slist_append.html curl_slist_free_all.html curl_version.html curl_version_info.html curl_escape.html curl_unescape.html curl_free.html curl_strequal.html curl_mprintf.html curl_global_init.html curl_global_cleanup.html curl_multi_add_handle.html curl_multi_cleanup.html curl_multi_fdset.html curl_multi_info_read.html curl_multi_init.html curl_multi_perform.html curl_multi_remove_handle.html curl_share_cleanup.html curl_share_init.html curl_share_setopt.html libcurl.html libcurl-multi.html libcurl-easy.html libcurl-share.html libcurl-errors.html curl_easy_strerror.html curl_multi_strerror.html curl_share_strerror.html curl_global_init_mem.html libcurl-tutorial.html curl_easy_reset.html curl_easy_escape.html curl_easy_unescape.html curl_multi_setopt.html curl_multi_socket.html curl_multi_timeout.html curl_formget.html curl_multi_assign.html curl_easy_pause.html curl_easy_recv.html curl_easy_send.html curl_multi_socket_action.html curl_easy_cleanup.pdf curl_easy_getinfo.pdf curl_easy_init.pdf curl_easy_perform.pdf curl_easy_setopt.pdf curl_easy_duphandle.pdf curl_formadd.pdf curl_formfree.pdf curl_getdate.pdf curl_getenv.pdf curl_slist_append.pdf curl_slist_free_all.pdf curl_version.pdf curl_version_info.pdf curl_escape.pdf curl_unescape.pdf curl_free.pdf curl_strequal.pdf curl_mprintf.pdf curl_global_init.pdf curl_global_cleanup.pdf curl_multi_add_handle.pdf curl_multi_cleanup.pdf curl_multi_fdset.pdf curl_multi_info_read.pdf curl_multi_init.pdf curl_multi_perform.pdf curl_multi_remove_handle.pdf curl_share_cleanup.pdf curl_share_init.pdf curl_share_setopt.pdf libcurl.pdf libcurl-multi.pdf libcurl-easy.pdf libcurl-share.pdf libcurl-errors.pdf curl_easy_strerror.pdf curl_multi_strerror.pdf curl_share_strerror.pdf curl_global_init_mem.pdf libcurl-tutorial.pdf curl_easy_reset.pdf curl_easy_escape.pdf curl_easy_unescape.pdf curl_multi_setopt.pdf curl_multi_socket.pdf curl_multi_timeout.pdf curl_formget.pdf curl_multi_assign.pdf curl_easy_pause.pdf curl_easy_recv.pdf curl_easy_send.pdf curl_multi_socket_action.pdf" || rm -f curl_easy_cleanup.html curl_easy_getinfo.html curl_easy_init.html curl_easy_perform.html curl_easy_setopt.html curl_easy_duphandle.html curl_formadd.html curl_formfree.html curl_getdate.html curl_getenv.html curl_slist_append.html curl_slist_free_all.html curl_version.html curl_version_info.html curl_escape.html curl_unescape.html curl_free.html curl_strequal.html curl_mprintf.html curl_global_init.html curl_global_cleanup.html curl_multi_add_handle.html curl_multi_cleanup.html curl_multi_fdset.html curl_multi_info_read.html curl_multi_init.html curl_multi_perform.html curl_multi_remove_handle.html curl_share_cleanup.html curl_share_init.html curl_share_setopt.html libcurl.html libcurl-multi.html libcurl-easy.html libcurl-share.html libcurl-errors.html curl_easy_strerror.html curl_multi_strerror.html curl_share_strerror.html curl_global_init_mem.html libcurl-tutorial.html curl_easy_reset.html curl_easy_escape.html curl_easy_unescape.html curl_multi_setopt.html curl_multi_socket.html curl_multi_timeout.html curl_formget.html curl_multi_assign.html curl_easy_pause.html curl_easy_recv.html curl_easy_send.html curl_multi_socket_action.html curl_easy_cleanup.pdf curl_easy_getinfo.pdf curl_easy_init.pdf curl_easy_perform.pdf curl_easy_setopt.pdf curl_easy_duphandle.pdf curl_formadd.pdf curl_formfree.pdf curl_getdate.pdf curl_getenv.pdf curl_slist_append.pdf curl_slist_free_all.pdf curl_version.pdf curl_version_info.pdf curl_escape.pdf curl_unescape.pdf curl_free.pdf curl_strequal.pdf curl_mprintf.pdf curl_global_init.pdf curl_global_cleanup.pdf curl_multi_add_handle.pdf curl_multi_cleanup.pdf curl_multi_fdset.pdf curl_multi_info_read.pdf curl_multi_init.pdf curl_multi_perform.pdf curl_multi_remove_handle.pdf curl_share_cleanup.pdf curl_share_init.pdf curl_share_setopt.pdf libcurl.pdf libcurl-multi.pdf libcurl-easy.pdf libcurl-share.pdf libcurl-errors.pdf curl_easy_strerror.pdf curl_multi_strerror.pdf curl_share_strerror.pdf curl_global_init_mem.pdf libcurl-tutorial.pdf curl_easy_reset.pdf curl_easy_escape.pdf curl_easy_unescape.pdf curl_multi_setopt.pdf curl_multi_socket.pdf curl_multi_timeout.pdf curl_formget.pdf curl_multi_assign.pdf curl_easy_pause.pdf curl_easy_recv.pdf curl_easy_send.pdf curl_multi_socket_action.pdf
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+Making clean in examples
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+ rm -f 10-at-a-time 10-at-a-time
+ rm -f anyauthput anyauthput
+ rm -f cookie_interface cookie_interface
+ rm -f debug debug
+ rm -f fileupload fileupload
+ rm -f fopen fopen
+ rm -f ftpget ftpget
+ rm -f ftpgetresp ftpgetresp
+ rm -f ftpupload ftpupload
+ rm -f getinfo getinfo
+ rm -f getinmemory getinmemory
+ rm -f http-post http-post
+ rm -f httpput httpput
+ rm -f https https
+ rm -f multi-app multi-app
+ rm -f multi-debugcallback multi-debugcallback
+ rm -f multi-double multi-double
+ rm -f multi-post multi-post
+ rm -f multi-single multi-single
+ rm -f persistant persistant
+ rm -f post-callback post-callback
+ rm -f postit2 postit2
+ rm -f sepheaders sepheaders
+ rm -f simple simple
+ rm -f simplepost simplepost
+ rm -f simplessl simplessl
+ rm -f sendrecv sendrecv
+ rm -f httpcustomheader httpcustomheader
+ rm -f certinfo certinfo
+ rm -f chkspeed chkspeed
+ rm -f ftpgetinfo ftpgetinfo
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+Making clean in .
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+test -z "curl.html curl-config.html curl.pdf curl-config.pdf" || rm -f curl.html curl-config.html curl.pdf curl-config.pdf
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+rm -f *.lo
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+Making all in lib
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+make  all-am
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT file.lo -MD -MP -MF ".deps/file.Tpo" -c -o file.lo file.c; \
+	then mv -f ".deps/file.Tpo" ".deps/file.Plo"; else rm -f ".deps/file.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT file.lo -MD -MP -MF .deps/file.Tpo -c file.c  -fPIC -DPIC -o file.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT timeval.lo -MD -MP -MF ".deps/timeval.Tpo" -c -o timeval.lo timeval.c; \
+	then mv -f ".deps/timeval.Tpo" ".deps/timeval.Plo"; else rm -f ".deps/timeval.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT timeval.lo -MD -MP -MF .deps/timeval.Tpo -c timeval.c  -fPIC -DPIC -o timeval.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT base64.lo -MD -MP -MF ".deps/base64.Tpo" -c -o base64.lo base64.c; \
+	then mv -f ".deps/base64.Tpo" ".deps/base64.Plo"; else rm -f ".deps/base64.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT base64.lo -MD -MP -MF .deps/base64.Tpo -c base64.c  -fPIC -DPIC -o base64.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostip.lo -MD -MP -MF ".deps/hostip.Tpo" -c -o hostip.lo hostip.c; \
+	then mv -f ".deps/hostip.Tpo" ".deps/hostip.Plo"; else rm -f ".deps/hostip.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostip.lo -MD -MP -MF .deps/hostip.Tpo -c hostip.c  -fPIC -DPIC -o hostip.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT progress.lo -MD -MP -MF ".deps/progress.Tpo" -c -o progress.lo progress.c; \
+	then mv -f ".deps/progress.Tpo" ".deps/progress.Plo"; else rm -f ".deps/progress.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT progress.lo -MD -MP -MF .deps/progress.Tpo -c progress.c  -fPIC -DPIC -o progress.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT formdata.lo -MD -MP -MF ".deps/formdata.Tpo" -c -o formdata.lo formdata.c; \
+	then mv -f ".deps/formdata.Tpo" ".deps/formdata.Plo"; else rm -f ".deps/formdata.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT formdata.lo -MD -MP -MF .deps/formdata.Tpo -c formdata.c  -fPIC -DPIC -o formdata.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT cookie.lo -MD -MP -MF ".deps/cookie.Tpo" -c -o cookie.lo cookie.c; \
+	then mv -f ".deps/cookie.Tpo" ".deps/cookie.Plo"; else rm -f ".deps/cookie.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT cookie.lo -MD -MP -MF .deps/cookie.Tpo -c cookie.c  -fPIC -DPIC -o cookie.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http.lo -MD -MP -MF ".deps/http.Tpo" -c -o http.lo http.c; \
+	then mv -f ".deps/http.Tpo" ".deps/http.Plo"; else rm -f ".deps/http.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http.lo -MD -MP -MF .deps/http.Tpo -c http.c  -fPIC -DPIC -o http.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT sendf.lo -MD -MP -MF ".deps/sendf.Tpo" -c -o sendf.lo sendf.c; \
+	then mv -f ".deps/sendf.Tpo" ".deps/sendf.Plo"; else rm -f ".deps/sendf.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT sendf.lo -MD -MP -MF .deps/sendf.Tpo -c sendf.c  -fPIC -DPIC -o sendf.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ftp.lo -MD -MP -MF ".deps/ftp.Tpo" -c -o ftp.lo ftp.c; \
+	then mv -f ".deps/ftp.Tpo" ".deps/ftp.Plo"; else rm -f ".deps/ftp.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ftp.lo -MD -MP -MF .deps/ftp.Tpo -c ftp.c  -fPIC -DPIC -o ftp.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT url.lo -MD -MP -MF ".deps/url.Tpo" -c -o url.lo url.c; \
+	then mv -f ".deps/url.Tpo" ".deps/url.Plo"; else rm -f ".deps/url.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT url.lo -MD -MP -MF .deps/url.Tpo -c url.c  -fPIC -DPIC -o url.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT dict.lo -MD -MP -MF ".deps/dict.Tpo" -c -o dict.lo dict.c; \
+	then mv -f ".deps/dict.Tpo" ".deps/dict.Plo"; else rm -f ".deps/dict.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT dict.lo -MD -MP -MF .deps/dict.Tpo -c dict.c  -fPIC -DPIC -o dict.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT if2ip.lo -MD -MP -MF ".deps/if2ip.Tpo" -c -o if2ip.lo if2ip.c; \
+	then mv -f ".deps/if2ip.Tpo" ".deps/if2ip.Plo"; else rm -f ".deps/if2ip.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT if2ip.lo -MD -MP -MF .deps/if2ip.Tpo -c if2ip.c  -fPIC -DPIC -o if2ip.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT speedcheck.lo -MD -MP -MF ".deps/speedcheck.Tpo" -c -o speedcheck.lo speedcheck.c; \
+	then mv -f ".deps/speedcheck.Tpo" ".deps/speedcheck.Plo"; else rm -f ".deps/speedcheck.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT speedcheck.lo -MD -MP -MF .deps/speedcheck.Tpo -c speedcheck.c  -fPIC -DPIC -o speedcheck.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ldap.lo -MD -MP -MF ".deps/ldap.Tpo" -c -o ldap.lo ldap.c; \
+	then mv -f ".deps/ldap.Tpo" ".deps/ldap.Plo"; else rm -f ".deps/ldap.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ldap.lo -MD -MP -MF .deps/ldap.Tpo -c ldap.c  -fPIC -DPIC -o ldap.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ssluse.lo -MD -MP -MF ".deps/ssluse.Tpo" -c -o ssluse.lo ssluse.c; \
+	then mv -f ".deps/ssluse.Tpo" ".deps/ssluse.Plo"; else rm -f ".deps/ssluse.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ssluse.lo -MD -MP -MF .deps/ssluse.Tpo -c ssluse.c  -fPIC -DPIC -o ssluse.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT version.lo -MD -MP -MF ".deps/version.Tpo" -c -o version.lo version.c; \
+	then mv -f ".deps/version.Tpo" ".deps/version.Plo"; else rm -f ".deps/version.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT version.lo -MD -MP -MF .deps/version.Tpo -c version.c  -fPIC -DPIC -o version.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT getenv.lo -MD -MP -MF ".deps/getenv.Tpo" -c -o getenv.lo getenv.c; \
+	then mv -f ".deps/getenv.Tpo" ".deps/getenv.Plo"; else rm -f ".deps/getenv.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT getenv.lo -MD -MP -MF .deps/getenv.Tpo -c getenv.c  -fPIC -DPIC -o getenv.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT escape.lo -MD -MP -MF ".deps/escape.Tpo" -c -o escape.lo escape.c; \
+	then mv -f ".deps/escape.Tpo" ".deps/escape.Plo"; else rm -f ".deps/escape.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT escape.lo -MD -MP -MF .deps/escape.Tpo -c escape.c  -fPIC -DPIC -o escape.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT mprintf.lo -MD -MP -MF ".deps/mprintf.Tpo" -c -o mprintf.lo mprintf.c; \
+	then mv -f ".deps/mprintf.Tpo" ".deps/mprintf.Plo"; else rm -f ".deps/mprintf.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT mprintf.lo -MD -MP -MF .deps/mprintf.Tpo -c mprintf.c  -fPIC -DPIC -o mprintf.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT telnet.lo -MD -MP -MF ".deps/telnet.Tpo" -c -o telnet.lo telnet.c; \
+	then mv -f ".deps/telnet.Tpo" ".deps/telnet.Plo"; else rm -f ".deps/telnet.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT telnet.lo -MD -MP -MF .deps/telnet.Tpo -c telnet.c  -fPIC -DPIC -o telnet.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT netrc.lo -MD -MP -MF ".deps/netrc.Tpo" -c -o netrc.lo netrc.c; \
+	then mv -f ".deps/netrc.Tpo" ".deps/netrc.Plo"; else rm -f ".deps/netrc.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT netrc.lo -MD -MP -MF .deps/netrc.Tpo -c netrc.c  -fPIC -DPIC -o netrc.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT getinfo.lo -MD -MP -MF ".deps/getinfo.Tpo" -c -o getinfo.lo getinfo.c; \
+	then mv -f ".deps/getinfo.Tpo" ".deps/getinfo.Plo"; else rm -f ".deps/getinfo.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT getinfo.lo -MD -MP -MF .deps/getinfo.Tpo -c getinfo.c  -fPIC -DPIC -o getinfo.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT transfer.lo -MD -MP -MF ".deps/transfer.Tpo" -c -o transfer.lo transfer.c; \
+	then mv -f ".deps/transfer.Tpo" ".deps/transfer.Plo"; else rm -f ".deps/transfer.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT transfer.lo -MD -MP -MF .deps/transfer.Tpo -c transfer.c  -fPIC -DPIC -o transfer.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strequal.lo -MD -MP -MF ".deps/strequal.Tpo" -c -o strequal.lo strequal.c; \
+	then mv -f ".deps/strequal.Tpo" ".deps/strequal.Plo"; else rm -f ".deps/strequal.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strequal.lo -MD -MP -MF .deps/strequal.Tpo -c strequal.c  -fPIC -DPIC -o strequal.o
+strequal.c:79:59: warning: "/*" within comment
+strequal.c:81:1: warning: "/*" within comment
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT easy.lo -MD -MP -MF ".deps/easy.Tpo" -c -o easy.lo easy.c; \
+	then mv -f ".deps/easy.Tpo" ".deps/easy.Plo"; else rm -f ".deps/easy.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT easy.lo -MD -MP -MF .deps/easy.Tpo -c easy.c  -fPIC -DPIC -o easy.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT security.lo -MD -MP -MF ".deps/security.Tpo" -c -o security.lo security.c; \
+	then mv -f ".deps/security.Tpo" ".deps/security.Plo"; else rm -f ".deps/security.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT security.lo -MD -MP -MF .deps/security.Tpo -c security.c  -fPIC -DPIC -o security.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT krb4.lo -MD -MP -MF ".deps/krb4.Tpo" -c -o krb4.lo krb4.c; \
+	then mv -f ".deps/krb4.Tpo" ".deps/krb4.Plo"; else rm -f ".deps/krb4.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT krb4.lo -MD -MP -MF .deps/krb4.Tpo -c krb4.c  -fPIC -DPIC -o krb4.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT krb5.lo -MD -MP -MF ".deps/krb5.Tpo" -c -o krb5.lo krb5.c; \
+	then mv -f ".deps/krb5.Tpo" ".deps/krb5.Plo"; else rm -f ".deps/krb5.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT krb5.lo -MD -MP -MF .deps/krb5.Tpo -c krb5.c  -fPIC -DPIC -o krb5.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT memdebug.lo -MD -MP -MF ".deps/memdebug.Tpo" -c -o memdebug.lo memdebug.c; \
+	then mv -f ".deps/memdebug.Tpo" ".deps/memdebug.Plo"; else rm -f ".deps/memdebug.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT memdebug.lo -MD -MP -MF .deps/memdebug.Tpo -c memdebug.c  -fPIC -DPIC -o memdebug.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_chunks.lo -MD -MP -MF ".deps/http_chunks.Tpo" -c -o http_chunks.lo http_chunks.c; \
+	then mv -f ".deps/http_chunks.Tpo" ".deps/http_chunks.Plo"; else rm -f ".deps/http_chunks.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_chunks.lo -MD -MP -MF .deps/http_chunks.Tpo -c http_chunks.c  -fPIC -DPIC -o http_chunks.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strtok.lo -MD -MP -MF ".deps/strtok.Tpo" -c -o strtok.lo strtok.c; \
+	then mv -f ".deps/strtok.Tpo" ".deps/strtok.Plo"; else rm -f ".deps/strtok.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strtok.lo -MD -MP -MF .deps/strtok.Tpo -c strtok.c  -fPIC -DPIC -o strtok.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT connect.lo -MD -MP -MF ".deps/connect.Tpo" -c -o connect.lo connect.c; \
+	then mv -f ".deps/connect.Tpo" ".deps/connect.Plo"; else rm -f ".deps/connect.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT connect.lo -MD -MP -MF .deps/connect.Tpo -c connect.c  -fPIC -DPIC -o connect.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT llist.lo -MD -MP -MF ".deps/llist.Tpo" -c -o llist.lo llist.c; \
+	then mv -f ".deps/llist.Tpo" ".deps/llist.Plo"; else rm -f ".deps/llist.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT llist.lo -MD -MP -MF .deps/llist.Tpo -c llist.c  -fPIC -DPIC -o llist.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hash.lo -MD -MP -MF ".deps/hash.Tpo" -c -o hash.lo hash.c; \
+	then mv -f ".deps/hash.Tpo" ".deps/hash.Plo"; else rm -f ".deps/hash.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hash.lo -MD -MP -MF .deps/hash.Tpo -c hash.c  -fPIC -DPIC -o hash.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT multi.lo -MD -MP -MF ".deps/multi.Tpo" -c -o multi.lo multi.c; \
+	then mv -f ".deps/multi.Tpo" ".deps/multi.Plo"; else rm -f ".deps/multi.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT multi.lo -MD -MP -MF .deps/multi.Tpo -c multi.c  -fPIC -DPIC -o multi.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT content_encoding.lo -MD -MP -MF ".deps/content_encoding.Tpo" -c -o content_encoding.lo content_encoding.c; \
+	then mv -f ".deps/content_encoding.Tpo" ".deps/content_encoding.Plo"; else rm -f ".deps/content_encoding.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT content_encoding.lo -MD -MP -MF .deps/content_encoding.Tpo -c content_encoding.c  -fPIC -DPIC -o content_encoding.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT share.lo -MD -MP -MF ".deps/share.Tpo" -c -o share.lo share.c; \
+	then mv -f ".deps/share.Tpo" ".deps/share.Plo"; else rm -f ".deps/share.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT share.lo -MD -MP -MF .deps/share.Tpo -c share.c  -fPIC -DPIC -o share.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_digest.lo -MD -MP -MF ".deps/http_digest.Tpo" -c -o http_digest.lo http_digest.c; \
+	then mv -f ".deps/http_digest.Tpo" ".deps/http_digest.Plo"; else rm -f ".deps/http_digest.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_digest.lo -MD -MP -MF .deps/http_digest.Tpo -c http_digest.c  -fPIC -DPIC -o http_digest.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT md5.lo -MD -MP -MF ".deps/md5.Tpo" -c -o md5.lo md5.c; \
+	then mv -f ".deps/md5.Tpo" ".deps/md5.Plo"; else rm -f ".deps/md5.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT md5.lo -MD -MP -MF .deps/md5.Tpo -c md5.c  -fPIC -DPIC -o md5.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_rand.lo -MD -MP -MF ".deps/curl_rand.Tpo" -c -o curl_rand.lo curl_rand.c; \
+	then mv -f ".deps/curl_rand.Tpo" ".deps/curl_rand.Plo"; else rm -f ".deps/curl_rand.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_rand.lo -MD -MP -MF .deps/curl_rand.Tpo -c curl_rand.c  -fPIC -DPIC -o curl_rand.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_negotiate.lo -MD -MP -MF ".deps/http_negotiate.Tpo" -c -o http_negotiate.lo http_negotiate.c; \
+	then mv -f ".deps/http_negotiate.Tpo" ".deps/http_negotiate.Plo"; else rm -f ".deps/http_negotiate.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_negotiate.lo -MD -MP -MF .deps/http_negotiate.Tpo -c http_negotiate.c  -fPIC -DPIC -o http_negotiate.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_ntlm.lo -MD -MP -MF ".deps/http_ntlm.Tpo" -c -o http_ntlm.lo http_ntlm.c; \
+	then mv -f ".deps/http_ntlm.Tpo" ".deps/http_ntlm.Plo"; else rm -f ".deps/http_ntlm.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT http_ntlm.lo -MD -MP -MF .deps/http_ntlm.Tpo -c http_ntlm.c  -fPIC -DPIC -o http_ntlm.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT inet_pton.lo -MD -MP -MF ".deps/inet_pton.Tpo" -c -o inet_pton.lo inet_pton.c; \
+	then mv -f ".deps/inet_pton.Tpo" ".deps/inet_pton.Plo"; else rm -f ".deps/inet_pton.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT inet_pton.lo -MD -MP -MF .deps/inet_pton.Tpo -c inet_pton.c  -fPIC -DPIC -o inet_pton.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strtoofft.lo -MD -MP -MF ".deps/strtoofft.Tpo" -c -o strtoofft.lo strtoofft.c; \
+	then mv -f ".deps/strtoofft.Tpo" ".deps/strtoofft.Plo"; else rm -f ".deps/strtoofft.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strtoofft.lo -MD -MP -MF .deps/strtoofft.Tpo -c strtoofft.c  -fPIC -DPIC -o strtoofft.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strerror.lo -MD -MP -MF ".deps/strerror.Tpo" -c -o strerror.lo strerror.c; \
+	then mv -f ".deps/strerror.Tpo" ".deps/strerror.Plo"; else rm -f ".deps/strerror.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strerror.lo -MD -MP -MF .deps/strerror.Tpo -c strerror.c  -fPIC -DPIC -o strerror.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostares.lo -MD -MP -MF ".deps/hostares.Tpo" -c -o hostares.lo hostares.c; \
+	then mv -f ".deps/hostares.Tpo" ".deps/hostares.Plo"; else rm -f ".deps/hostares.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostares.lo -MD -MP -MF .deps/hostares.Tpo -c hostares.c  -fPIC -DPIC -o hostares.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostasyn.lo -MD -MP -MF ".deps/hostasyn.Tpo" -c -o hostasyn.lo hostasyn.c; \
+	then mv -f ".deps/hostasyn.Tpo" ".deps/hostasyn.Plo"; else rm -f ".deps/hostasyn.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostasyn.lo -MD -MP -MF .deps/hostasyn.Tpo -c hostasyn.c  -fPIC -DPIC -o hostasyn.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostip4.lo -MD -MP -MF ".deps/hostip4.Tpo" -c -o hostip4.lo hostip4.c; \
+	then mv -f ".deps/hostip4.Tpo" ".deps/hostip4.Plo"; else rm -f ".deps/hostip4.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostip4.lo -MD -MP -MF .deps/hostip4.Tpo -c hostip4.c  -fPIC -DPIC -o hostip4.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostip6.lo -MD -MP -MF ".deps/hostip6.Tpo" -c -o hostip6.lo hostip6.c; \
+	then mv -f ".deps/hostip6.Tpo" ".deps/hostip6.Plo"; else rm -f ".deps/hostip6.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostip6.lo -MD -MP -MF .deps/hostip6.Tpo -c hostip6.c  -fPIC -DPIC -o hostip6.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostsyn.lo -MD -MP -MF ".deps/hostsyn.Tpo" -c -o hostsyn.lo hostsyn.c; \
+	then mv -f ".deps/hostsyn.Tpo" ".deps/hostsyn.Plo"; else rm -f ".deps/hostsyn.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostsyn.lo -MD -MP -MF .deps/hostsyn.Tpo -c hostsyn.c  -fPIC -DPIC -o hostsyn.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostthre.lo -MD -MP -MF ".deps/hostthre.Tpo" -c -o hostthre.lo hostthre.c; \
+	then mv -f ".deps/hostthre.Tpo" ".deps/hostthre.Plo"; else rm -f ".deps/hostthre.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hostthre.lo -MD -MP -MF .deps/hostthre.Tpo -c hostthre.c  -fPIC -DPIC -o hostthre.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT inet_ntop.lo -MD -MP -MF ".deps/inet_ntop.Tpo" -c -o inet_ntop.lo inet_ntop.c; \
+	then mv -f ".deps/inet_ntop.Tpo" ".deps/inet_ntop.Plo"; else rm -f ".deps/inet_ntop.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT inet_ntop.lo -MD -MP -MF .deps/inet_ntop.Tpo -c inet_ntop.c  -fPIC -DPIC -o inet_ntop.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT parsedate.lo -MD -MP -MF ".deps/parsedate.Tpo" -c -o parsedate.lo parsedate.c; \
+	then mv -f ".deps/parsedate.Tpo" ".deps/parsedate.Plo"; else rm -f ".deps/parsedate.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT parsedate.lo -MD -MP -MF .deps/parsedate.Tpo -c parsedate.c  -fPIC -DPIC -o parsedate.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT select.lo -MD -MP -MF ".deps/select.Tpo" -c -o select.lo select.c; \
+	then mv -f ".deps/select.Tpo" ".deps/select.Plo"; else rm -f ".deps/select.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT select.lo -MD -MP -MF .deps/select.Tpo -c select.c  -fPIC -DPIC -o select.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT gtls.lo -MD -MP -MF ".deps/gtls.Tpo" -c -o gtls.lo gtls.c; \
+	then mv -f ".deps/gtls.Tpo" ".deps/gtls.Plo"; else rm -f ".deps/gtls.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT gtls.lo -MD -MP -MF .deps/gtls.Tpo -c gtls.c  -fPIC -DPIC -o gtls.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT sslgen.lo -MD -MP -MF ".deps/sslgen.Tpo" -c -o sslgen.lo sslgen.c; \
+	then mv -f ".deps/sslgen.Tpo" ".deps/sslgen.Plo"; else rm -f ".deps/sslgen.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT sslgen.lo -MD -MP -MF .deps/sslgen.Tpo -c sslgen.c  -fPIC -DPIC -o sslgen.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT tftp.lo -MD -MP -MF ".deps/tftp.Tpo" -c -o tftp.lo tftp.c; \
+	then mv -f ".deps/tftp.Tpo" ".deps/tftp.Plo"; else rm -f ".deps/tftp.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT tftp.lo -MD -MP -MF .deps/tftp.Tpo -c tftp.c  -fPIC -DPIC -o tftp.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT splay.lo -MD -MP -MF ".deps/splay.Tpo" -c -o splay.lo splay.c; \
+	then mv -f ".deps/splay.Tpo" ".deps/splay.Plo"; else rm -f ".deps/splay.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT splay.lo -MD -MP -MF .deps/splay.Tpo -c splay.c  -fPIC -DPIC -o splay.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strdup.lo -MD -MP -MF ".deps/strdup.Tpo" -c -o strdup.lo strdup.c; \
+	then mv -f ".deps/strdup.Tpo" ".deps/strdup.Plo"; else rm -f ".deps/strdup.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strdup.lo -MD -MP -MF .deps/strdup.Tpo -c strdup.c  -fPIC -DPIC -o strdup.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT socks.lo -MD -MP -MF ".deps/socks.Tpo" -c -o socks.lo socks.c; \
+	then mv -f ".deps/socks.Tpo" ".deps/socks.Plo"; else rm -f ".deps/socks.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT socks.lo -MD -MP -MF .deps/socks.Tpo -c socks.c  -fPIC -DPIC -o socks.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ssh.lo -MD -MP -MF ".deps/ssh.Tpo" -c -o ssh.lo ssh.c; \
+	then mv -f ".deps/ssh.Tpo" ".deps/ssh.Plo"; else rm -f ".deps/ssh.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT ssh.lo -MD -MP -MF .deps/ssh.Tpo -c ssh.c  -fPIC -DPIC -o ssh.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT nss.lo -MD -MP -MF ".deps/nss.Tpo" -c -o nss.lo nss.c; \
+	then mv -f ".deps/nss.Tpo" ".deps/nss.Plo"; else rm -f ".deps/nss.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT nss.lo -MD -MP -MF .deps/nss.Tpo -c nss.c  -fPIC -DPIC -o nss.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT qssl.lo -MD -MP -MF ".deps/qssl.Tpo" -c -o qssl.lo qssl.c; \
+	then mv -f ".deps/qssl.Tpo" ".deps/qssl.Plo"; else rm -f ".deps/qssl.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT qssl.lo -MD -MP -MF .deps/qssl.Tpo -c qssl.c  -fPIC -DPIC -o qssl.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT rawstr.lo -MD -MP -MF ".deps/rawstr.Tpo" -c -o rawstr.lo rawstr.c; \
+	then mv -f ".deps/rawstr.Tpo" ".deps/rawstr.Plo"; else rm -f ".deps/rawstr.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT rawstr.lo -MD -MP -MF .deps/rawstr.Tpo -c rawstr.c  -fPIC -DPIC -o rawstr.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_addrinfo.lo -MD -MP -MF ".deps/curl_addrinfo.Tpo" -c -o curl_addrinfo.lo curl_addrinfo.c; \
+	then mv -f ".deps/curl_addrinfo.Tpo" ".deps/curl_addrinfo.Plo"; else rm -f ".deps/curl_addrinfo.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_addrinfo.lo -MD -MP -MF .deps/curl_addrinfo.Tpo -c curl_addrinfo.c  -fPIC -DPIC -o curl_addrinfo.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT socks_gssapi.lo -MD -MP -MF ".deps/socks_gssapi.Tpo" -c -o socks_gssapi.lo socks_gssapi.c; \
+	then mv -f ".deps/socks_gssapi.Tpo" ".deps/socks_gssapi.Plo"; else rm -f ".deps/socks_gssapi.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT socks_gssapi.lo -MD -MP -MF .deps/socks_gssapi.Tpo -c socks_gssapi.c  -fPIC -DPIC -o socks_gssapi.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT socks_sspi.lo -MD -MP -MF ".deps/socks_sspi.Tpo" -c -o socks_sspi.lo socks_sspi.c; \
+	then mv -f ".deps/socks_sspi.Tpo" ".deps/socks_sspi.Plo"; else rm -f ".deps/socks_sspi.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT socks_sspi.lo -MD -MP -MF .deps/socks_sspi.Tpo -c socks_sspi.c  -fPIC -DPIC -o socks_sspi.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_sspi.lo -MD -MP -MF ".deps/curl_sspi.Tpo" -c -o curl_sspi.lo curl_sspi.c; \
+	then mv -f ".deps/curl_sspi.Tpo" ".deps/curl_sspi.Plo"; else rm -f ".deps/curl_sspi.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_sspi.lo -MD -MP -MF .deps/curl_sspi.Tpo -c curl_sspi.c  -fPIC -DPIC -o curl_sspi.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT slist.lo -MD -MP -MF ".deps/slist.Tpo" -c -o slist.lo slist.c; \
+	then mv -f ".deps/slist.Tpo" ".deps/slist.Plo"; else rm -f ".deps/slist.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT slist.lo -MD -MP -MF .deps/slist.Tpo -c slist.c  -fPIC -DPIC -o slist.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT nonblock.lo -MD -MP -MF ".deps/nonblock.Tpo" -c -o nonblock.lo nonblock.c; \
+	then mv -f ".deps/nonblock.Tpo" ".deps/nonblock.Plo"; else rm -f ".deps/nonblock.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT nonblock.lo -MD -MP -MF .deps/nonblock.Tpo -c nonblock.c  -fPIC -DPIC -o nonblock.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_memrchr.lo -MD -MP -MF ".deps/curl_memrchr.Tpo" -c -o curl_memrchr.lo curl_memrchr.c; \
+	then mv -f ".deps/curl_memrchr.Tpo" ".deps/curl_memrchr.Plo"; else rm -f ".deps/curl_memrchr.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_memrchr.lo -MD -MP -MF .deps/curl_memrchr.Tpo -c curl_memrchr.c  -fPIC -DPIC -o curl_memrchr.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT imap.lo -MD -MP -MF ".deps/imap.Tpo" -c -o imap.lo imap.c; \
+	then mv -f ".deps/imap.Tpo" ".deps/imap.Plo"; else rm -f ".deps/imap.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT imap.lo -MD -MP -MF .deps/imap.Tpo -c imap.c  -fPIC -DPIC -o imap.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT pop3.lo -MD -MP -MF ".deps/pop3.Tpo" -c -o pop3.lo pop3.c; \
+	then mv -f ".deps/pop3.Tpo" ".deps/pop3.Plo"; else rm -f ".deps/pop3.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT pop3.lo -MD -MP -MF .deps/pop3.Tpo -c pop3.c  -fPIC -DPIC -o pop3.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT smtp.lo -MD -MP -MF ".deps/smtp.Tpo" -c -o smtp.lo smtp.c; \
+	then mv -f ".deps/smtp.Tpo" ".deps/smtp.Plo"; else rm -f ".deps/smtp.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT smtp.lo -MD -MP -MF .deps/smtp.Tpo -c smtp.c  -fPIC -DPIC -o smtp.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT pingpong.lo -MD -MP -MF ".deps/pingpong.Tpo" -c -o pingpong.lo pingpong.c; \
+	then mv -f ".deps/pingpong.Tpo" ".deps/pingpong.Plo"; else rm -f ".deps/pingpong.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT pingpong.lo -MD -MP -MF .deps/pingpong.Tpo -c pingpong.c  -fPIC -DPIC -o pingpong.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT rtsp.lo -MD -MP -MF ".deps/rtsp.Tpo" -c -o rtsp.lo rtsp.c; \
+	then mv -f ".deps/rtsp.Tpo" ".deps/rtsp.Plo"; else rm -f ".deps/rtsp.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT rtsp.lo -MD -MP -MF .deps/rtsp.Tpo -c rtsp.c  -fPIC -DPIC -o rtsp.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_threads.lo -MD -MP -MF ".deps/curl_threads.Tpo" -c -o curl_threads.lo curl_threads.c; \
+	then mv -f ".deps/curl_threads.Tpo" ".deps/curl_threads.Plo"; else rm -f ".deps/curl_threads.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curl_threads.lo -MD -MP -MF .deps/curl_threads.Tpo -c curl_threads.c  -fPIC -DPIC -o curl_threads.o
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../lib    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT warnless.lo -MD -MP -MF ".deps/warnless.Tpo" -c -o warnless.lo warnless.c; \
+	then mv -f ".deps/warnless.Tpo" ".deps/warnless.Plo"; else rm -f ".deps/warnless.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I../include/curl -I../include -I../include -I../lib -I../lib -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT warnless.lo -MD -MP -MF .deps/warnless.Tpo -c warnless.c  -fPIC -DPIC -o warnless.o
+/bin/sh ../libtool --tag=CC --mode=link gcc  -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers   -o libcurl.la -rpath /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib  -version-info 6:0:2  -lrt file.lo timeval.lo base64.lo hostip.lo progress.lo formdata.lo cookie.lo http.lo sendf.lo ftp.lo url.lo dict.lo if2ip.lo speedcheck.lo ldap.lo ssluse.lo version.lo getenv.lo escape.lo mprintf.lo telnet.lo netrc.lo getinfo.lo transfer.lo strequal.lo easy.lo security.lo krb4.lo krb5.lo memdebug.lo http_chunks.lo strtok.lo connect.lo llist.lo hash.lo multi.lo content_encoding.lo share.lo http_digest.lo md5.lo curl_rand.lo http_negotiate.lo http_ntlm.lo inet_pton.lo strtoofft.lo strerror.lo hostares.lo hostasyn.lo hostip4.lo hostip6.lo hostsyn.lo hostthre.lo inet_ntop.lo parsedate.lo select.lo gtls.lo sslgen.lo tftp.lo splay.lo strdup.lo socks.lo ssh.lo nss.lo qssl.lo rawstr.lo curl_addrinfo.lo socks_gssapi.lo socks_sspi.lo curl_sspi.lo slist.lo nonblock.lo curl_memrchr.lo imap.lo pop3.lo smtp.lo pingpong.lo rtsp.lo curl_threads.lo warnless.lo   
+libtool: link: /usr/bin/ar cru .libs/libcurl.a  file.o timeval.o base64.o hostip.o progress.o formdata.o cookie.o http.o sendf.o ftp.o url.o dict.o if2ip.o speedcheck.o ldap.o ssluse.o version.o getenv.o escape.o mprintf.o telnet.o netrc.o getinfo.o transfer.o strequal.o easy.o security.o krb4.o krb5.o memdebug.o http_chunks.o strtok.o connect.o llist.o hash.o multi.o content_encoding.o share.o http_digest.o md5.o curl_rand.o http_negotiate.o http_ntlm.o inet_pton.o strtoofft.o strerror.o hostares.o hostasyn.o hostip4.o hostip6.o hostsyn.o hostthre.o inet_ntop.o parsedate.o select.o gtls.o sslgen.o tftp.o splay.o strdup.o socks.o ssh.o nss.o qssl.o rawstr.o curl_addrinfo.o socks_gssapi.o socks_sspi.o curl_sspi.o slist.o nonblock.o curl_memrchr.o imap.o pop3.o smtp.o pingpong.o rtsp.o curl_threads.o warnless.o
+libtool: link: ranlib .libs/libcurl.a
+libtool: link: ( cd ".libs" && rm -f "libcurl.la" && ln -s "../libcurl.la" "libcurl.la" )
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+Making all in src
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+echo "/* built-in manual is disabled, blank function */" > hugehelp.c
+echo '#include "hugehelp.h"' >> hugehelp.c
+echo "void hugehelp(void) {}" >>hugehelp.c
+make  all-am
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT hugehelp.o -MD -MP -MF ".deps/hugehelp.Tpo" -c -o hugehelp.o hugehelp.c; \
+	then mv -f ".deps/hugehelp.Tpo" ".deps/hugehelp.Po"; else rm -f ".deps/hugehelp.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT urlglob.o -MD -MP -MF ".deps/urlglob.Tpo" -c -o urlglob.o urlglob.c; \
+	then mv -f ".deps/urlglob.Tpo" ".deps/urlglob.Po"; else rm -f ".deps/urlglob.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT writeout.o -MD -MP -MF ".deps/writeout.Tpo" -c -o writeout.o writeout.c; \
+	then mv -f ".deps/writeout.Tpo" ".deps/writeout.Po"; else rm -f ".deps/writeout.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT writeenv.o -MD -MP -MF ".deps/writeenv.Tpo" -c -o writeenv.o writeenv.c; \
+	then mv -f ".deps/writeenv.Tpo" ".deps/writeenv.Po"; else rm -f ".deps/writeenv.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT getpass.o -MD -MP -MF ".deps/getpass.Tpo" -c -o getpass.o getpass.c; \
+	then mv -f ".deps/getpass.Tpo" ".deps/getpass.Po"; else rm -f ".deps/getpass.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT homedir.o -MD -MP -MF ".deps/homedir.Tpo" -c -o homedir.o homedir.c; \
+	then mv -f ".deps/homedir.Tpo" ".deps/homedir.Po"; else rm -f ".deps/homedir.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT curlutil.o -MD -MP -MF ".deps/curlutil.Tpo" -c -o curlutil.o curlutil.c; \
+	then mv -f ".deps/curlutil.Tpo" ".deps/curlutil.Po"; else rm -f ".deps/curlutil.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT os-specific.o -MD -MP -MF ".deps/os-specific.Tpo" -c -o os-specific.o os-specific.c; \
+	then mv -f ".deps/os-specific.Tpo" ".deps/os-specific.Po"; else rm -f ".deps/os-specific.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strtoofft.o -MD -MP -MF ".deps/strtoofft.Tpo" -c -o strtoofft.o `test -f '../lib/strtoofft.c' || echo './'`../lib/strtoofft.c; \
+	then mv -f ".deps/strtoofft.Tpo" ".deps/strtoofft.Po"; else rm -f ".deps/strtoofft.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT strdup.o -MD -MP -MF ".deps/strdup.Tpo" -c -o strdup.o `test -f '../lib/strdup.c' || echo './'`../lib/strdup.c; \
+	then mv -f ".deps/strdup.Tpo" ".deps/strdup.Po"; else rm -f ".deps/strdup.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT rawstr.o -MD -MP -MF ".deps/rawstr.Tpo" -c -o rawstr.o `test -f '../lib/rawstr.c' || echo './'`../lib/rawstr.c; \
+	then mv -f ".deps/rawstr.Tpo" ".deps/rawstr.Po"; else rm -f ".deps/rawstr.Tpo"; exit 1; fi
+if gcc -DHAVE_CONFIG_H  -I../include/curl -I../include -I../include -I../lib -I../src -I../lib -I../src    -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers -MT nonblock.o -MD -MP -MF ".deps/nonblock.Tpo" -c -o nonblock.o `test -f '../lib/nonblock.c' || echo './'`../lib/nonblock.c; \
+	then mv -f ".deps/nonblock.Tpo" ".deps/nonblock.Po"; else rm -f ".deps/nonblock.Tpo"; exit 1; fi
+/bin/sh ../libtool --tag=CC --mode=link gcc  -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -L./ -Wall -DLinux -isystem ../include/ -isystem ./ -L./ -g0 -O2 -Wno-system-headers   -o curl  main.o hugehelp.o urlglob.o writeout.o writeenv.o getpass.o homedir.o curlutil.o os-specific.o strtoofft.o strdup.o rawstr.o nonblock.o  ../lib/libcurl.la  
+libtool: link: gcc -m32 -Wall -DLinux -isystem ../../lib/ -isystem ./ -Wall -DLinux -isystem ../include/ -isystem ./ -g0 -O2 -Wno-system-headers -o curl main.o hugehelp.o urlglob.o writeout.o writeenv.o getpass.o homedir.o curlutil.o os-specific.o strtoofft.o strdup.o rawstr.o nonblock.o  -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl/src ../lib/.libs/libcurl.a -L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl/lib -lrt
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+Making install in lib
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib"
+ /bin/sh ../libtool --mode=install /usr/bin/install -c  'libcurl.la' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/libcurl.la'
+libtool: install: /usr/bin/install -c .libs/libcurl.lai /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/libcurl.la
+libtool: install: /usr/bin/install -c .libs/libcurl.a /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/libcurl.a
+libtool: install: chmod 644 /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/libcurl.a
+libtool: install: ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/libcurl.a
+libtool: finish: PATH="/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work//bin_directory:/usr/kerberos/bin:/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin:/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27:/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin:/rtfproc/anaconda2_4.2.0/bin:/home/rtfuser/git_local/bin:/home/rtfuser/gvs:/bin:/usr/bin:/sbin" ldconfig -n /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+Making install in src
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make  install-am
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin"
+  /bin/sh ../libtool --mode=install /usr/bin/install -c 'curl' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin/curl'
+libtool: install: /usr/bin/install -c curl /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin/curl
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin"
+ /usr/bin/install -c 'curl-config' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/bin/curl-config'
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/pkgconfig" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/pkgconfig"
+ /usr/bin/install -c -m 644 'libcurl.pc' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib/pkgconfig/libcurl.pc'
+make  install-data-hook
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+cd include && make install
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include'
+Making install in curl
+make[7]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include/curl'
+make[8]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include/curl'
+make[8]: Nothing to be done for `install-exec-am'.
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl"
+ /usr/bin/install -c -m 644 'curl.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/curl.h'
+ /usr/bin/install -c -m 644 'curlver.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/curlver.h'
+ /usr/bin/install -c -m 644 'easy.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/easy.h'
+ /usr/bin/install -c -m 644 'mprintf.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/mprintf.h'
+ /usr/bin/install -c -m 644 'stdcheaders.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/stdcheaders.h'
+ /usr/bin/install -c -m 644 'types.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/types.h'
+ /usr/bin/install -c -m 644 'multi.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/multi.h'
+ /usr/bin/install -c -m 644 'typecheck-gcc.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/typecheck-gcc.h'
+ /usr/bin/install -c -m 644 'curlbuild.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/curlbuild.h'
+ /usr/bin/install -c -m 644 'curlrules.h' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/include/curl/curlrules.h'
+make[8]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include/curl'
+make[7]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include/curl'
+make[7]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include'
+make[8]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include'
+make[8]: Nothing to be done for `install-exec-am'.
+make[8]: Nothing to be done for `install-data-am'.
+make[8]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include'
+make[7]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include'
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/include'
+cd docs && make install
+make[6]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+Making install in examples
+make[7]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+make[8]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+make[8]: Nothing to be done for `install-exec-am'.
+make[8]: Nothing to be done for `install-data-am'.
+make[8]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+make[7]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+Making install in libcurl
+make[7]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+make[8]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+make[8]: Nothing to be done for `install-exec-am'.
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3"
+ /usr/bin/install -c -m 644 './curl_easy_cleanup.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_cleanup.3'
+ /usr/bin/install -c -m 644 './curl_easy_getinfo.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_getinfo.3'
+ /usr/bin/install -c -m 644 './curl_easy_init.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_init.3'
+ /usr/bin/install -c -m 644 './curl_easy_perform.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_perform.3'
+ /usr/bin/install -c -m 644 './curl_easy_setopt.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_setopt.3'
+ /usr/bin/install -c -m 644 './curl_easy_duphandle.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_duphandle.3'
+ /usr/bin/install -c -m 644 './curl_formadd.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_formadd.3'
+ /usr/bin/install -c -m 644 './curl_formfree.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_formfree.3'
+ /usr/bin/install -c -m 644 './curl_getdate.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_getdate.3'
+ /usr/bin/install -c -m 644 './curl_getenv.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_getenv.3'
+ /usr/bin/install -c -m 644 './curl_slist_append.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_slist_append.3'
+ /usr/bin/install -c -m 644 './curl_slist_free_all.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_slist_free_all.3'
+ /usr/bin/install -c -m 644 './curl_version.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_version.3'
+ /usr/bin/install -c -m 644 './curl_version_info.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_version_info.3'
+ /usr/bin/install -c -m 644 './curl_escape.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_escape.3'
+ /usr/bin/install -c -m 644 './curl_unescape.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_unescape.3'
+ /usr/bin/install -c -m 644 './curl_free.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_free.3'
+ /usr/bin/install -c -m 644 './curl_strequal.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_strequal.3'
+ /usr/bin/install -c -m 644 './curl_mprintf.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_mprintf.3'
+ /usr/bin/install -c -m 644 './curl_global_init.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_global_init.3'
+ /usr/bin/install -c -m 644 './curl_global_cleanup.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_global_cleanup.3'
+ /usr/bin/install -c -m 644 './curl_multi_add_handle.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_add_handle.3'
+ /usr/bin/install -c -m 644 './curl_multi_cleanup.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_cleanup.3'
+ /usr/bin/install -c -m 644 './curl_multi_fdset.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_fdset.3'
+ /usr/bin/install -c -m 644 './curl_multi_info_read.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_info_read.3'
+ /usr/bin/install -c -m 644 './curl_multi_init.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_init.3'
+ /usr/bin/install -c -m 644 './curl_multi_perform.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_perform.3'
+ /usr/bin/install -c -m 644 './curl_multi_remove_handle.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_remove_handle.3'
+ /usr/bin/install -c -m 644 './curl_share_cleanup.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_share_cleanup.3'
+ /usr/bin/install -c -m 644 './curl_share_init.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_share_init.3'
+ /usr/bin/install -c -m 644 './curl_share_setopt.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_share_setopt.3'
+ /usr/bin/install -c -m 644 './libcurl.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/libcurl.3'
+ /usr/bin/install -c -m 644 './libcurl-easy.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/libcurl-easy.3'
+ /usr/bin/install -c -m 644 './libcurl-multi.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/libcurl-multi.3'
+ /usr/bin/install -c -m 644 './libcurl-share.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/libcurl-share.3'
+ /usr/bin/install -c -m 644 './libcurl-errors.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/libcurl-errors.3'
+ /usr/bin/install -c -m 644 './curl_easy_strerror.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_strerror.3'
+ /usr/bin/install -c -m 644 './curl_multi_strerror.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_strerror.3'
+ /usr/bin/install -c -m 644 './curl_share_strerror.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_share_strerror.3'
+ /usr/bin/install -c -m 644 './curl_global_init_mem.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_global_init_mem.3'
+ /usr/bin/install -c -m 644 './libcurl-tutorial.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/libcurl-tutorial.3'
+ /usr/bin/install -c -m 644 './curl_easy_reset.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_reset.3'
+ /usr/bin/install -c -m 644 './curl_easy_escape.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_escape.3'
+ /usr/bin/install -c -m 644 './curl_easy_unescape.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_unescape.3'
+ /usr/bin/install -c -m 644 './curl_multi_setopt.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_setopt.3'
+ /usr/bin/install -c -m 644 './curl_multi_socket.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_socket.3'
+ /usr/bin/install -c -m 644 './curl_multi_timeout.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_timeout.3'
+ /usr/bin/install -c -m 644 './curl_formget.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_formget.3'
+ /usr/bin/install -c -m 644 './curl_multi_assign.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_assign.3'
+ /usr/bin/install -c -m 644 './curl_easy_pause.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_pause.3'
+ /usr/bin/install -c -m 644 './curl_easy_recv.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_recv.3'
+ /usr/bin/install -c -m 644 './curl_easy_send.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_easy_send.3'
+ /usr/bin/install -c -m 644 './curl_multi_socket_action.3' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man3/curl_multi_socket_action.3'
+make[8]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+make[7]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+make[7]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[8]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[8]: Nothing to be done for `install-exec-am'.
+test -z "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man1" || mkdir -p -- "/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man1"
+ /usr/bin/install -c -m 644 './curl.1' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man1/curl.1'
+ /usr/bin/install -c -m 644 './curl-config.1' '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/share/man/man1/curl-config.1'
+make[8]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[7]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[6]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+Making clean in src
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+ rm -f curl curl
+test -z "hugehelp.c" || rm -f hugehelp.c
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/src'
+Making clean in lib
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+test -z "vc6libcurl.dsp libcurl.vcproj" || rm -f vc6libcurl.dsp libcurl.vcproj
+test -z "libcurl.la" || rm -f libcurl.la
+rm -f "./so_locations"
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/lib'
+Making clean in .
+make[3]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+rm -rf .libs _libs
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+Making clean in libtest
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/libtest'
+rm -rf .libs _libs
+ rm -f lib500 lib500
+ rm -f lib501 lib501
+ rm -f lib502 lib502
+ rm -f lib503 lib503
+ rm -f lib504 lib504
+ rm -f lib505 lib505
+ rm -f lib506 lib506
+ rm -f lib507 lib507
+ rm -f lib508 lib508
+ rm -f lib510 lib510
+ rm -f lib511 lib511
+ rm -f lib512 lib512
+ rm -f lib513 lib513
+ rm -f lib514 lib514
+ rm -f lib515 lib515
+ rm -f lib516 lib516
+ rm -f lib517 lib517
+ rm -f lib518 lib518
+ rm -f lib519 lib519
+ rm -f lib520 lib520
+ rm -f lib521 lib521
+ rm -f lib523 lib523
+ rm -f lib524 lib524
+ rm -f lib525 lib525
+ rm -f lib526 lib526
+ rm -f lib527 lib527
+ rm -f lib529 lib529
+ rm -f lib530 lib530
+ rm -f lib532 lib532
+ rm -f lib533 lib533
+ rm -f lib536 lib536
+ rm -f lib537 lib537
+ rm -f lib540 lib540
+ rm -f lib541 lib541
+ rm -f lib542 lib542
+ rm -f lib543 lib543
+ rm -f lib544 lib544
+ rm -f lib545 lib545
+ rm -f lib547 lib547
+ rm -f lib548 lib548
+ rm -f lib549 lib549
+ rm -f lib552 lib552
+ rm -f lib553 lib553
+ rm -f lib554 lib554
+ rm -f lib555 lib555
+ rm -f lib556 lib556
+ rm -f lib539 lib539
+ rm -f lib557 lib557
+ rm -f lib558 lib558
+ rm -f lib559 lib559
+ rm -f lib560 lib560
+ rm -f lib562 lib562
+ rm -f lib564 lib564
+ rm -f lib565 lib565
+ rm -f lib566 lib566
+ rm -f lib567 lib567
+ rm -f lib568 lib568
+ rm -f lib569 lib569
+ rm -f lib570 lib570
+ rm -f lib571 lib571
+ rm -f lib572 lib572
+rm -f *.o
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/libtest'
+Making clean in server
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/server'
+rm -rf .libs _libs
+ rm -f getpart getpart
+ rm -f resolve resolve
+ rm -f rtspd rtspd
+ rm -f sockfilt sockfilt
+ rm -f sws sws
+ rm -f tftpd tftpd
+rm -f *.o
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/server'
+Making clean in data
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/data'
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests/data'
+Making clean in .
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+test -z ".http.pid .https.pid .ftp.pid .ftps.pid" || rm -f .http.pid .https.pid .ftp.pid .ftps.pid
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/tests'
+make[4]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+Making clean in libcurl
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+test -z "curl_easy_cleanup.html curl_easy_getinfo.html curl_easy_init.html curl_easy_perform.html curl_easy_setopt.html curl_easy_duphandle.html curl_formadd.html curl_formfree.html curl_getdate.html curl_getenv.html curl_slist_append.html curl_slist_free_all.html curl_version.html curl_version_info.html curl_escape.html curl_unescape.html curl_free.html curl_strequal.html curl_mprintf.html curl_global_init.html curl_global_cleanup.html curl_multi_add_handle.html curl_multi_cleanup.html curl_multi_fdset.html curl_multi_info_read.html curl_multi_init.html curl_multi_perform.html curl_multi_remove_handle.html curl_share_cleanup.html curl_share_init.html curl_share_setopt.html libcurl.html libcurl-multi.html libcurl-easy.html libcurl-share.html libcurl-errors.html curl_easy_strerror.html curl_multi_strerror.html curl_share_strerror.html curl_global_init_mem.html libcurl-tutorial.html curl_easy_reset.html curl_easy_escape.html curl_easy_unescape.html curl_multi_setopt.html curl_multi_socket.html curl_multi_timeout.html curl_formget.html curl_multi_assign.html curl_easy_pause.html curl_easy_recv.html curl_easy_send.html curl_multi_socket_action.html curl_easy_cleanup.pdf curl_easy_getinfo.pdf curl_easy_init.pdf curl_easy_perform.pdf curl_easy_setopt.pdf curl_easy_duphandle.pdf curl_formadd.pdf curl_formfree.pdf curl_getdate.pdf curl_getenv.pdf curl_slist_append.pdf curl_slist_free_all.pdf curl_version.pdf curl_version_info.pdf curl_escape.pdf curl_unescape.pdf curl_free.pdf curl_strequal.pdf curl_mprintf.pdf curl_global_init.pdf curl_global_cleanup.pdf curl_multi_add_handle.pdf curl_multi_cleanup.pdf curl_multi_fdset.pdf curl_multi_info_read.pdf curl_multi_init.pdf curl_multi_perform.pdf curl_multi_remove_handle.pdf curl_share_cleanup.pdf curl_share_init.pdf curl_share_setopt.pdf libcurl.pdf libcurl-multi.pdf libcurl-easy.pdf libcurl-share.pdf libcurl-errors.pdf curl_easy_strerror.pdf curl_multi_strerror.pdf curl_share_strerror.pdf curl_global_init_mem.pdf libcurl-tutorial.pdf curl_easy_reset.pdf curl_easy_escape.pdf curl_easy_unescape.pdf curl_multi_setopt.pdf curl_multi_socket.pdf curl_multi_timeout.pdf curl_formget.pdf curl_multi_assign.pdf curl_easy_pause.pdf curl_easy_recv.pdf curl_easy_send.pdf curl_multi_socket_action.pdf" || rm -f curl_easy_cleanup.html curl_easy_getinfo.html curl_easy_init.html curl_easy_perform.html curl_easy_setopt.html curl_easy_duphandle.html curl_formadd.html curl_formfree.html curl_getdate.html curl_getenv.html curl_slist_append.html curl_slist_free_all.html curl_version.html curl_version_info.html curl_escape.html curl_unescape.html curl_free.html curl_strequal.html curl_mprintf.html curl_global_init.html curl_global_cleanup.html curl_multi_add_handle.html curl_multi_cleanup.html curl_multi_fdset.html curl_multi_info_read.html curl_multi_init.html curl_multi_perform.html curl_multi_remove_handle.html curl_share_cleanup.html curl_share_init.html curl_share_setopt.html libcurl.html libcurl-multi.html libcurl-easy.html libcurl-share.html libcurl-errors.html curl_easy_strerror.html curl_multi_strerror.html curl_share_strerror.html curl_global_init_mem.html libcurl-tutorial.html curl_easy_reset.html curl_easy_escape.html curl_easy_unescape.html curl_multi_setopt.html curl_multi_socket.html curl_multi_timeout.html curl_formget.html curl_multi_assign.html curl_easy_pause.html curl_easy_recv.html curl_easy_send.html curl_multi_socket_action.html curl_easy_cleanup.pdf curl_easy_getinfo.pdf curl_easy_init.pdf curl_easy_perform.pdf curl_easy_setopt.pdf curl_easy_duphandle.pdf curl_formadd.pdf curl_formfree.pdf curl_getdate.pdf curl_getenv.pdf curl_slist_append.pdf curl_slist_free_all.pdf curl_version.pdf curl_version_info.pdf curl_escape.pdf curl_unescape.pdf curl_free.pdf curl_strequal.pdf curl_mprintf.pdf curl_global_init.pdf curl_global_cleanup.pdf curl_multi_add_handle.pdf curl_multi_cleanup.pdf curl_multi_fdset.pdf curl_multi_info_read.pdf curl_multi_init.pdf curl_multi_perform.pdf curl_multi_remove_handle.pdf curl_share_cleanup.pdf curl_share_init.pdf curl_share_setopt.pdf libcurl.pdf libcurl-multi.pdf libcurl-easy.pdf libcurl-share.pdf libcurl-errors.pdf curl_easy_strerror.pdf curl_multi_strerror.pdf curl_share_strerror.pdf curl_global_init_mem.pdf libcurl-tutorial.pdf curl_easy_reset.pdf curl_easy_escape.pdf curl_easy_unescape.pdf curl_multi_setopt.pdf curl_multi_socket.pdf curl_multi_timeout.pdf curl_formget.pdf curl_multi_assign.pdf curl_easy_pause.pdf curl_easy_recv.pdf curl_easy_send.pdf curl_multi_socket_action.pdf
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/libcurl'
+Making clean in examples
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+ rm -f 10-at-a-time 10-at-a-time
+ rm -f anyauthput anyauthput
+ rm -f cookie_interface cookie_interface
+ rm -f debug debug
+ rm -f fileupload fileupload
+ rm -f fopen fopen
+ rm -f ftpget ftpget
+ rm -f ftpgetresp ftpgetresp
+ rm -f ftpupload ftpupload
+ rm -f getinfo getinfo
+ rm -f getinmemory getinmemory
+ rm -f http-post http-post
+ rm -f httpput httpput
+ rm -f https https
+ rm -f multi-app multi-app
+ rm -f multi-debugcallback multi-debugcallback
+ rm -f multi-double multi-double
+ rm -f multi-post multi-post
+ rm -f multi-single multi-single
+ rm -f persistant persistant
+ rm -f post-callback post-callback
+ rm -f postit2 postit2
+ rm -f sepheaders sepheaders
+ rm -f simple simple
+ rm -f simplepost simplepost
+ rm -f simplessl simplessl
+ rm -f sendrecv sendrecv
+ rm -f httpcustomheader httpcustomheader
+ rm -f certinfo certinfo
+ rm -f chkspeed chkspeed
+ rm -f ftpgetinfo ftpgetinfo
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs/examples'
+Making clean in .
+make[5]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+test -z "curl.html curl-config.html curl.pdf curl-config.pdf" || rm -f curl.html curl-config.html curl.pdf curl-config.pdf
+rm -rf .libs _libs
+rm -f *.lo
+make[5]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+make[4]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1/docs'
+rm -f *.lo
+make[3]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'
+make[2]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/common/curl-7.20.1'

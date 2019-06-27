@@ -1,0 +1,917 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR",
+    "iraf.tables"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.finder-2.2-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.finder-post-link.sh",
+    "bin/.iraf.finder-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/finder/Revisions",
+    "iraf_extern/finder/VERSION",
+    "iraf_extern/finder/bin",
+    "iraf_extern/finder/bin.linux/x_finder.e",
+    "iraf_extern/finder/build_log",
+    "iraf_extern/finder/conda_build.sh",
+    "iraf_extern/finder/doc/catpars.hlp",
+    "iraf_extern/finder/doc/cdrfits.hlp",
+    "iraf_extern/finder/doc/disppars.hlp",
+    "iraf_extern/finder/doc/dssfinder.hlp",
+    "iraf_extern/finder/doc/finderlog.hlp",
+    "iraf_extern/finder/doc/gscfind.hlp",
+    "iraf_extern/finder/doc/hydrahints.hlp",
+    "iraf_extern/finder/doc/mkgscindex.hlp",
+    "iraf_extern/finder/doc/mkgsctab.hlp",
+    "iraf_extern/finder/doc/mkobjtab.hlp",
+    "iraf_extern/finder/doc/objlist.hlp",
+    "iraf_extern/finder/doc/selectpars.hlp",
+    "iraf_extern/finder/doc/tastrom.hlp",
+    "iraf_extern/finder/doc/tfield.hlp",
+    "iraf_extern/finder/doc/tfinder.hlp",
+    "iraf_extern/finder/doc/tpeak.hlp",
+    "iraf_extern/finder/doc/tpltsol.hlp",
+    "iraf_extern/finder/finder.cl",
+    "iraf_extern/finder/finder.hd",
+    "iraf_extern/finder/finder.men",
+    "iraf_extern/finder/finder.par",
+    "iraf_extern/finder/help_log",
+    "iraf_extern/finder/lib/apropos.db",
+    "iraf_extern/finder/lib/astrom.SAVE",
+    "iraf_extern/finder/lib/cdfile.gsc",
+    "iraf_extern/finder/lib/helpdb.mip",
+    "iraf_extern/finder/lib/index.hhh",
+    "iraf_extern/finder/lib/index.tab",
+    "iraf_extern/finder/lib/index.tab.OLD",
+    "iraf_extern/finder/lib/mkpkg.inc",
+    "iraf_extern/finder/lib/regions.tbl",
+    "iraf_extern/finder/lib/root.hd",
+    "iraf_extern/finder/lib/rootfinder.hd",
+    "iraf_extern/finder/lib/scr/tpeak.key",
+    "iraf_extern/finder/lib/strip.finder",
+    "iraf_extern/finder/lib/zzsetenv.def",
+    "iraf_extern/finder/mkpkg",
+    "iraf_extern/finder/src/_qpars.par",
+    "iraf_extern/finder/src/catpars.par",
+    "iraf_extern/finder/src/cdrfits.par",
+    "iraf_extern/finder/src/cdrfits/esc_dash.x",
+    "iraf_extern/finder/src/cdrfits/find_simple.x",
+    "iraf_extern/finder/src/cdrfits/fits_read.x",
+    "iraf_extern/finder/src/cdrfits/fits_rheader.x",
+    "iraf_extern/finder/src/cdrfits/fits_rimage.x",
+    "iraf_extern/finder/src/cdrfits/fits_rpixels.x",
+    "iraf_extern/finder/src/cdrfits/fits_rtable.x",
+    "iraf_extern/finder/src/cdrfits/ftb_gfsub.x",
+    "iraf_extern/finder/src/cdrfits/ftb_putrow.x",
+    "iraf_extern/finder/src/cdrfits/ftb_rheader.x",
+    "iraf_extern/finder/src/cdrfits/mkpkg",
+    "iraf_extern/finder/src/cdrfits/obsolete/find_simple.x",
+    "iraf_extern/finder/src/cdrfits/obsolete/fits_rheader.x",
+    "iraf_extern/finder/src/cdrfits/obsolete/fits_rpixels.x",
+    "iraf_extern/finder/src/cdrfits/rfits.com",
+    "iraf_extern/finder/src/cdrfits/rfits.h",
+    "iraf_extern/finder/src/cdrfits/rft_subs.x",
+    "iraf_extern/finder/src/cdrfits/t_rfits.x",
+    "iraf_extern/finder/src/cdrfits/tab.com",
+    "iraf_extern/finder/src/cdrfits/wfits.h",
+    "iraf_extern/finder/src/cdrfits/wft_encodec.x",
+    "iraf_extern/finder/src/disppars.par",
+    "iraf_extern/finder/src/dssfinder.cl",
+    "iraf_extern/finder/src/finderlog.cl",
+    "iraf_extern/finder/src/fprecess.x",
+    "iraf_extern/finder/src/ftimes.x",
+    "iraf_extern/finder/src/gscfind.par",
+    "iraf_extern/finder/src/libpkg.a",
+    "iraf_extern/finder/src/mkgscindex.cl",
+    "iraf_extern/finder/src/mkgsctab.cl",
+    "iraf_extern/finder/src/mkobjtab.cl",
+    "iraf_extern/finder/src/mkpkg",
+    "iraf_extern/finder/src/objlist.cl",
+    "iraf_extern/finder/src/select/allrows.x",
+    "iraf_extern/finder/src/select/change.x",
+    "iraf_extern/finder/src/select/mjd.x",
+    "iraf_extern/finder/src/select/mkpkg",
+    "iraf_extern/finder/src/select/reloperr.h",
+    "iraf_extern/finder/src/select/select.x",
+    "iraf_extern/finder/src/select/tbleval.x",
+    "iraf_extern/finder/src/select/tblterm.com",
+    "iraf_extern/finder/src/select/tblterm.x",
+    "iraf_extern/finder/src/selectpars.par",
+    "iraf_extern/finder/src/t_gscfind.x",
+    "iraf_extern/finder/src/t_tfield.x",
+    "iraf_extern/finder/src/t_tpeak.x",
+    "iraf_extern/finder/src/tastrom.cl",
+    "iraf_extern/finder/src/tfield.par",
+    "iraf_extern/finder/src/tfinder.cl",
+    "iraf_extern/finder/src/tpeak.par",
+    "iraf_extern/finder/src/tpltsol.cl",
+    "iraf_extern/finder/src/tvmark_.cl",
+    "iraf_extern/finder/src/tvmark_.par",
+    "iraf_extern/finder/src/x_finder.o",
+    "iraf_extern/finder/src/x_finder.x",
+    "iraf_extern/finder/ur_extern.pkg",
+    "iraf_extern/finder/ur_manifest",
+    "iraf_extern/finder/ur_mkpkg_cmd",
+    "iraf_extern/finder/ur_mkpkg_patterns"
+  ],
+  "fn": "iraf.finder-2.2-2.tar.bz2",
+  "license": "IRAF MIT/X11 variant, STSDAS US government notice",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.finder-2.2-2",
+    "type": 1
+  },
+  "md5": "17eb9862f4f6fe5d9b7ddfb2517633a8",
+  "name": "iraf.finder",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.finder-2.2-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.finder-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "5d846450c720b90bcb7f37b2b16c7d3fb316d06ee9bd4907887abfd1ac00cfdd",
+        "sha256_in_prefix": "5d846450c720b90bcb7f37b2b16c7d3fb316d06ee9bd4907887abfd1ac00cfdd",
+        "size_in_bytes": 114
+      },
+      {
+        "_path": "bin/.iraf.finder-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "8212afeceb1b387d0c14b80b642a6e2e7e653a432d03378cca66588345e70dd3",
+        "sha256_in_prefix": "8212afeceb1b387d0c14b80b642a6e2e7e653a432d03378cca66588345e70dd3",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "cdd02c4e98667c61ac04c5903b9b3b480675afb1f8ad61da19ecf644ee35f679",
+        "sha256_in_prefix": "cdd02c4e98667c61ac04c5903b9b3b480675afb1f8ad61da19ecf644ee35f679",
+        "size_in_bytes": 2348
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "2c46fdf8e889a99965bd101b5d40178ebcf43a5c5ea8872226e87107079750e9",
+        "sha256_in_prefix": "2c46fdf8e889a99965bd101b5d40178ebcf43a5c5ea8872226e87107079750e9",
+        "size_in_bytes": 8285
+      },
+      {
+        "_path": "iraf_extern/finder/Revisions",
+        "path_type": "hardlink",
+        "sha256": "320e29e2d18f7af431844c8d88c64a6d610c28988a3b9f047dffe9ae4c900622",
+        "sha256_in_prefix": "320e29e2d18f7af431844c8d88c64a6d610c28988a3b9f047dffe9ae4c900622",
+        "size_in_bytes": 5541
+      },
+      {
+        "_path": "iraf_extern/finder/VERSION",
+        "path_type": "hardlink",
+        "sha256": "5f7e920cabab477fa6454371fb14c95720ca1fcc1b73033dded0d47ebe9c7055",
+        "sha256_in_prefix": "5f7e920cabab477fa6454371fb14c95720ca1fcc1b73033dded0d47ebe9c7055",
+        "size_in_bytes": 37
+      },
+      {
+        "_path": "iraf_extern/finder/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/finder/bin.linux/x_finder.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.finder_1553891125279/_h_env_pl",
+        "sha256": "8fd811753b89d02c9854bb6b49bc84f42123d1dea766ba99f94170f47ab0087d",
+        "sha256_in_prefix": "acab44a2153ca582e3a0872d4ea460706d87d111c8505bf38997278c1cdc5a87",
+        "size_in_bytes": 5618573
+      },
+      {
+        "_path": "iraf_extern/finder/build_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "d8a6073040d527f3cbd6621c622001f20d4f40f63959edde8565eaccc130533a",
+        "sha256_in_prefix": "616d8be55c59525a8e6f2c94f7e5dea0a4dead98435fc9ef2684ce022900a6fd",
+        "size_in_bytes": 4718
+      },
+      {
+        "_path": "iraf_extern/finder/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "51823a0fa63714afd71370ce6821bab0b666f90930431567bcefea5f0ee1f3e7",
+        "sha256_in_prefix": "0f1a411eafed59685aa7f59e1caba7eb697f07121ed7d81be832d5ae43a9155c",
+        "size_in_bytes": 2393
+      },
+      {
+        "_path": "iraf_extern/finder/doc/catpars.hlp",
+        "path_type": "hardlink",
+        "sha256": "67714dbd04e62cb457710f14c4ab81865cb8e0e692714f5ea92a33d32460b61d",
+        "sha256_in_prefix": "67714dbd04e62cb457710f14c4ab81865cb8e0e692714f5ea92a33d32460b61d",
+        "size_in_bytes": 1656
+      },
+      {
+        "_path": "iraf_extern/finder/doc/cdrfits.hlp",
+        "path_type": "hardlink",
+        "sha256": "bfc841e9baa5dbbb2de97be3af297e33e0668c70f488d19575c4cb974ea71e79",
+        "sha256_in_prefix": "bfc841e9baa5dbbb2de97be3af297e33e0668c70f488d19575c4cb974ea71e79",
+        "size_in_bytes": 668
+      },
+      {
+        "_path": "iraf_extern/finder/doc/disppars.hlp",
+        "path_type": "hardlink",
+        "sha256": "8fe3cccf87e2bd633d16c82bcd12c9907e1f029ea02a2f546cd8a7986113def6",
+        "sha256_in_prefix": "8fe3cccf87e2bd633d16c82bcd12c9907e1f029ea02a2f546cd8a7986113def6",
+        "size_in_bytes": 749
+      },
+      {
+        "_path": "iraf_extern/finder/doc/dssfinder.hlp",
+        "path_type": "hardlink",
+        "sha256": "532e5d419a9ab8367a5feff16f62c3346e1124fd29c4d7b8d0bde435ef236b18",
+        "sha256_in_prefix": "532e5d419a9ab8367a5feff16f62c3346e1124fd29c4d7b8d0bde435ef236b18",
+        "size_in_bytes": 2597
+      },
+      {
+        "_path": "iraf_extern/finder/doc/finderlog.hlp",
+        "path_type": "hardlink",
+        "sha256": "ad619e581b406aeeae606421f52abc8ab9167788bd938fa2229256707fd9129e",
+        "sha256_in_prefix": "ad619e581b406aeeae606421f52abc8ab9167788bd938fa2229256707fd9129e",
+        "size_in_bytes": 372
+      },
+      {
+        "_path": "iraf_extern/finder/doc/gscfind.hlp",
+        "path_type": "hardlink",
+        "sha256": "1d94ce9b9fb438f1046cc634aefc440f1e03985d86458398855e4d1429b07008",
+        "sha256_in_prefix": "1d94ce9b9fb438f1046cc634aefc440f1e03985d86458398855e4d1429b07008",
+        "size_in_bytes": 2517
+      },
+      {
+        "_path": "iraf_extern/finder/doc/hydrahints.hlp",
+        "path_type": "hardlink",
+        "sha256": "bff1f92ba79daf0f460d6e664078c75d501cc96fcfcc3ea7141c8253255048c6",
+        "sha256_in_prefix": "bff1f92ba79daf0f460d6e664078c75d501cc96fcfcc3ea7141c8253255048c6",
+        "size_in_bytes": 9615
+      },
+      {
+        "_path": "iraf_extern/finder/doc/mkgscindex.hlp",
+        "path_type": "hardlink",
+        "sha256": "500523658853077abd8c1aa8cd18879844b191ca9a24d60b17eac16d2b56d1bc",
+        "sha256_in_prefix": "500523658853077abd8c1aa8cd18879844b191ca9a24d60b17eac16d2b56d1bc",
+        "size_in_bytes": 889
+      },
+      {
+        "_path": "iraf_extern/finder/doc/mkgsctab.hlp",
+        "path_type": "hardlink",
+        "sha256": "99f58a7b3cbfacf70caeb5121653d4adbfa80a30cf116ada7cd9a5a0f20c6c25",
+        "sha256_in_prefix": "99f58a7b3cbfacf70caeb5121653d4adbfa80a30cf116ada7cd9a5a0f20c6c25",
+        "size_in_bytes": 1880
+      },
+      {
+        "_path": "iraf_extern/finder/doc/mkobjtab.hlp",
+        "path_type": "hardlink",
+        "sha256": "f9b4b64db6e1988a2ac2c1061829798353c67f0a9f171bfd231251088c83f985",
+        "sha256_in_prefix": "f9b4b64db6e1988a2ac2c1061829798353c67f0a9f171bfd231251088c83f985",
+        "size_in_bytes": 1602
+      },
+      {
+        "_path": "iraf_extern/finder/doc/objlist.hlp",
+        "path_type": "hardlink",
+        "sha256": "4a6b11e3ff48ee7a258ba787b20d0dcab4b40588df1bb99c8aa7dfa2f365b2f1",
+        "sha256_in_prefix": "4a6b11e3ff48ee7a258ba787b20d0dcab4b40588df1bb99c8aa7dfa2f365b2f1",
+        "size_in_bytes": 535
+      },
+      {
+        "_path": "iraf_extern/finder/doc/selectpars.hlp",
+        "path_type": "hardlink",
+        "sha256": "22eb5afe57158af6e39afa881bc258673daf4e07ab33ac094ad66c0aeb21a9fa",
+        "sha256_in_prefix": "22eb5afe57158af6e39afa881bc258673daf4e07ab33ac094ad66c0aeb21a9fa",
+        "size_in_bytes": 1929
+      },
+      {
+        "_path": "iraf_extern/finder/doc/tastrom.hlp",
+        "path_type": "hardlink",
+        "sha256": "00b4e37bef588d9d5e961520cbe56e62c53058beff98dfd31751906d8c95bf63",
+        "sha256_in_prefix": "00b4e37bef588d9d5e961520cbe56e62c53058beff98dfd31751906d8c95bf63",
+        "size_in_bytes": 1603
+      },
+      {
+        "_path": "iraf_extern/finder/doc/tfield.hlp",
+        "path_type": "hardlink",
+        "sha256": "09bdb6758e2f33d88c72256f736fedb5b280ecbecc5cf3faaaf7c103b4e24213",
+        "sha256_in_prefix": "09bdb6758e2f33d88c72256f736fedb5b280ecbecc5cf3faaaf7c103b4e24213",
+        "size_in_bytes": 3202
+      },
+      {
+        "_path": "iraf_extern/finder/doc/tfinder.hlp",
+        "path_type": "hardlink",
+        "sha256": "79efb71d1d9fa384dae8f1dc9190cbe5ab15e649346665e74c1737d59bd2351a",
+        "sha256_in_prefix": "79efb71d1d9fa384dae8f1dc9190cbe5ab15e649346665e74c1737d59bd2351a",
+        "size_in_bytes": 11630
+      },
+      {
+        "_path": "iraf_extern/finder/doc/tpeak.hlp",
+        "path_type": "hardlink",
+        "sha256": "0e3b03fe17802e5ad9d1013f1277b7b5c1495e5839e7a0be03970ffb2b86f2ec",
+        "sha256_in_prefix": "0e3b03fe17802e5ad9d1013f1277b7b5c1495e5839e7a0be03970ffb2b86f2ec",
+        "size_in_bytes": 5800
+      },
+      {
+        "_path": "iraf_extern/finder/doc/tpltsol.hlp",
+        "path_type": "hardlink",
+        "sha256": "d8a9db320bec3f38a8f829ed55227675e9d988fa245000bb9f75e47b961bff61",
+        "sha256_in_prefix": "d8a9db320bec3f38a8f829ed55227675e9d988fa245000bb9f75e47b961bff61",
+        "size_in_bytes": 1825
+      },
+      {
+        "_path": "iraf_extern/finder/finder.cl",
+        "path_type": "hardlink",
+        "sha256": "c7be5369607462cee9e02a31a78a2c6e9301463c90dd8462642bc03f110b6e2c",
+        "sha256_in_prefix": "c7be5369607462cee9e02a31a78a2c6e9301463c90dd8462642bc03f110b6e2c",
+        "size_in_bytes": 941
+      },
+      {
+        "_path": "iraf_extern/finder/finder.hd",
+        "path_type": "hardlink",
+        "sha256": "bbcb357e25fe57584a3c1087a49aec9dd0b52e3200551af53bb8f033d04ef456",
+        "sha256_in_prefix": "bbcb357e25fe57584a3c1087a49aec9dd0b52e3200551af53bb8f033d04ef456",
+        "size_in_bytes": 856
+      },
+      {
+        "_path": "iraf_extern/finder/finder.men",
+        "path_type": "hardlink",
+        "sha256": "0fb7d12c2740df6a38676fba7d3e02dce684b26424585afa1b5e7c53084a6140",
+        "sha256_in_prefix": "0fb7d12c2740df6a38676fba7d3e02dce684b26424585afa1b5e7c53084a6140",
+        "size_in_bytes": 1120
+      },
+      {
+        "_path": "iraf_extern/finder/finder.par",
+        "path_type": "hardlink",
+        "sha256": "18d35e5530b55f3d82738a98fc12a35bc08a7fbb50dc8c2b2c3ad2fb9009cccd",
+        "sha256_in_prefix": "18d35e5530b55f3d82738a98fc12a35bc08a7fbb50dc8c2b2c3ad2fb9009cccd",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "iraf_extern/finder/help_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "43d111b5366c46331b3e69a37f020b635d1a0acfc7a87ffc4092a0b88c36555b",
+        "sha256_in_prefix": "4e998a6fe93778d0a3df43634acbe2f93f6fcb9e493769bf74712fbc31d169b9",
+        "size_in_bytes": 945
+      },
+      {
+        "_path": "iraf_extern/finder/lib/apropos.db",
+        "path_type": "hardlink",
+        "sha256": "fbbb97f901cce754ef7917158085b76309b6c412757ab3facb67f0dd09e4aafb",
+        "sha256_in_prefix": "fbbb97f901cce754ef7917158085b76309b6c412757ab3facb67f0dd09e4aafb",
+        "size_in_bytes": 1178
+      },
+      {
+        "_path": "iraf_extern/finder/lib/astrom.SAVE",
+        "path_type": "hardlink",
+        "sha256": "e2513f1316ee8418a6529c9e809eb0d8c3bdf950d0a81ea53be963ec43f79607",
+        "sha256_in_prefix": "e2513f1316ee8418a6529c9e809eb0d8c3bdf950d0a81ea53be963ec43f79607",
+        "size_in_bytes": 802
+      },
+      {
+        "_path": "iraf_extern/finder/lib/cdfile.gsc",
+        "path_type": "hardlink",
+        "sha256": "5e1f2244135829b5702ce06476191edbffc0b98ccf8c2ad5d10f7d9b9b4f52b4",
+        "sha256_in_prefix": "5e1f2244135829b5702ce06476191edbffc0b98ccf8c2ad5d10f7d9b9b4f52b4",
+        "size_in_bytes": 390
+      },
+      {
+        "_path": "iraf_extern/finder/lib/helpdb.mip",
+        "path_type": "hardlink",
+        "sha256": "e336b4e6a3fb61c23bebc2ac227f9e6694046179ff313240e8aa29314c56af81",
+        "sha256_in_prefix": "e336b4e6a3fb61c23bebc2ac227f9e6694046179ff313240e8aa29314c56af81",
+        "size_in_bytes": 3810
+      },
+      {
+        "_path": "iraf_extern/finder/lib/index.hhh",
+        "path_type": "hardlink",
+        "sha256": "0acf794142bc62e5865473999abc6c072de68b76d390a0c5cd4c94400ea53f9f",
+        "sha256_in_prefix": "0acf794142bc62e5865473999abc6c072de68b76d390a0c5cd4c94400ea53f9f",
+        "size_in_bytes": 6885
+      },
+      {
+        "_path": "iraf_extern/finder/lib/index.tab",
+        "path_type": "hardlink",
+        "sha256": "b34e86d6238cb2a61b1a411ceb7f705ffa3559db6522f19ece1cf5e347d62bec",
+        "sha256_in_prefix": "b34e86d6238cb2a61b1a411ceb7f705ffa3559db6522f19ece1cf5e347d62bec",
+        "size_in_bytes": 459136
+      },
+      {
+        "_path": "iraf_extern/finder/lib/index.tab.OLD",
+        "path_type": "hardlink",
+        "sha256": "7b7b7c381569afba834ea667f68590825737d9341d04401a3a0809b373ffe131",
+        "sha256_in_prefix": "7b7b7c381569afba834ea667f68590825737d9341d04401a3a0809b373ffe131",
+        "size_in_bytes": 497284
+      },
+      {
+        "_path": "iraf_extern/finder/lib/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "42dd0525f174a5e8dea0be31e1150d9a26c89b5375a0cfba55726891187f2946",
+        "sha256_in_prefix": "42dd0525f174a5e8dea0be31e1150d9a26c89b5375a0cfba55726891187f2946",
+        "size_in_bytes": 440
+      },
+      {
+        "_path": "iraf_extern/finder/lib/regions.tbl",
+        "path_type": "hardlink",
+        "sha256": "f999f71b04eabeb752dbca62511ab445eafeea40a24ac3f9cef454088c998c8b",
+        "sha256_in_prefix": "f999f71b04eabeb752dbca62511ab445eafeea40a24ac3f9cef454088c998c8b",
+        "size_in_bytes": 472320
+      },
+      {
+        "_path": "iraf_extern/finder/lib/root.hd",
+        "path_type": "hardlink",
+        "sha256": "8807ddf52cb11f1581e5a0e406ab68070f16b2a69efa7137748d30add70dbd6d",
+        "sha256_in_prefix": "8807ddf52cb11f1581e5a0e406ab68070f16b2a69efa7137748d30add70dbd6d",
+        "size_in_bytes": 260
+      },
+      {
+        "_path": "iraf_extern/finder/lib/rootfinder.hd",
+        "path_type": "hardlink",
+        "sha256": "05c44fc8348f4e28ec3172cdb3899be986fd3e7573ec98075a1287e460f370e8",
+        "sha256_in_prefix": "05c44fc8348f4e28ec3172cdb3899be986fd3e7573ec98075a1287e460f370e8",
+        "size_in_bytes": 274
+      },
+      {
+        "_path": "iraf_extern/finder/lib/scr/tpeak.key",
+        "path_type": "hardlink",
+        "sha256": "e04bf83234a4be07e9b6b5aa2edc8cb00db8729cd92678b5c667bf6d00181df4",
+        "sha256_in_prefix": "e04bf83234a4be07e9b6b5aa2edc8cb00db8729cd92678b5c667bf6d00181df4",
+        "size_in_bytes": 6317
+      },
+      {
+        "_path": "iraf_extern/finder/lib/strip.finder",
+        "path_type": "hardlink",
+        "sha256": "1d71ea2f2b30d3beb29f06010dab0cba5c12135c6ca76ff2c741d7d48e5d70ac",
+        "sha256_in_prefix": "1d71ea2f2b30d3beb29f06010dab0cba5c12135c6ca76ff2c741d7d48e5d70ac",
+        "size_in_bytes": 185
+      },
+      {
+        "_path": "iraf_extern/finder/lib/zzsetenv.def",
+        "path_type": "hardlink",
+        "sha256": "351be5f7f85ca70de7c2ca75134fe2ccf7cabe45eb26fb3dfd4a1bad0c6b4810",
+        "sha256_in_prefix": "351be5f7f85ca70de7c2ca75134fe2ccf7cabe45eb26fb3dfd4a1bad0c6b4810",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "iraf_extern/finder/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "9d7bf6137ee1a8976640cd1d07ae7ad657d5a318e954621c266c93f272447d34",
+        "sha256_in_prefix": "9d7bf6137ee1a8976640cd1d07ae7ad657d5a318e954621c266c93f272447d34",
+        "size_in_bytes": 4330
+      },
+      {
+        "_path": "iraf_extern/finder/src/_qpars.par",
+        "path_type": "hardlink",
+        "sha256": "926b7ed26ab937eb7659654db300eda92026712f35aeabd3a62c5dc8c135cf50",
+        "sha256_in_prefix": "926b7ed26ab937eb7659654db300eda92026712f35aeabd3a62c5dc8c135cf50",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "iraf_extern/finder/src/catpars.par",
+        "path_type": "hardlink",
+        "sha256": "936165fdbe380418bac0ae0bf4452a16fdc32965a1bfc2dd9d7ebc555b5b672a",
+        "sha256_in_prefix": "936165fdbe380418bac0ae0bf4452a16fdc32965a1bfc2dd9d7ebc555b5b672a",
+        "size_in_bytes": 935
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits.par",
+        "path_type": "hardlink",
+        "sha256": "69cf1a6f41882166f65617278012d0b15c959799f5d0a9651b08c2c5cd93bee9",
+        "sha256_in_prefix": "69cf1a6f41882166f65617278012d0b15c959799f5d0a9651b08c2c5cd93bee9",
+        "size_in_bytes": 491
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/esc_dash.x",
+        "path_type": "hardlink",
+        "sha256": "960810d0b2bb37c4c6bcadafaad95ae8fd7e1d9c678f5705775ee81e093d09fe",
+        "sha256_in_prefix": "960810d0b2bb37c4c6bcadafaad95ae8fd7e1d9c678f5705775ee81e093d09fe",
+        "size_in_bytes": 1203
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/find_simple.x",
+        "path_type": "hardlink",
+        "sha256": "4da4807b1606f638fdcdb3428ca7f895fc34c1f72c298f67cb27db4613d58a75",
+        "sha256_in_prefix": "4da4807b1606f638fdcdb3428ca7f895fc34c1f72c298f67cb27db4613d58a75",
+        "size_in_bytes": 909
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/fits_read.x",
+        "path_type": "hardlink",
+        "sha256": "69212fda70f88aa81ff1b9f292aa13b1d9b74609f0a4ce8b4ef90b24f73a83a8",
+        "sha256_in_prefix": "69212fda70f88aa81ff1b9f292aa13b1d9b74609f0a4ce8b4ef90b24f73a83a8",
+        "size_in_bytes": 14907
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/fits_rheader.x",
+        "path_type": "hardlink",
+        "sha256": "b6a5c5fe8175c9a1ec8d3d7ccb36de5918d75a282520db7ec060b047d957e980",
+        "sha256_in_prefix": "b6a5c5fe8175c9a1ec8d3d7ccb36de5918d75a282520db7ec060b047d957e980",
+        "size_in_bytes": 12097
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/fits_rimage.x",
+        "path_type": "hardlink",
+        "sha256": "969f6269345cfc936a7ce93bd9a54db4f183d4ec04c245340f842feee3a29d5a",
+        "sha256_in_prefix": "969f6269345cfc936a7ce93bd9a54db4f183d4ec04c245340f842feee3a29d5a",
+        "size_in_bytes": 11364
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/fits_rpixels.x",
+        "path_type": "hardlink",
+        "sha256": "69ec603d419e80a2dc5da5e5b4e61507715337632ba6187ba1069db7a1ee3415",
+        "sha256_in_prefix": "69ec603d419e80a2dc5da5e5b4e61507715337632ba6187ba1069db7a1ee3415",
+        "size_in_bytes": 4543
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/fits_rtable.x",
+        "path_type": "hardlink",
+        "sha256": "ecfd98dadf7881da19f937be9725cafae974895303bf211f643c0f1796118bc2",
+        "sha256_in_prefix": "ecfd98dadf7881da19f937be9725cafae974895303bf211f643c0f1796118bc2",
+        "size_in_bytes": 1649
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/ftb_gfsub.x",
+        "path_type": "hardlink",
+        "sha256": "f28f9f94d0f24ded589ff30d65950df84369c6fe22ae8ef15ef7a4b7d0e23201",
+        "sha256_in_prefix": "f28f9f94d0f24ded589ff30d65950df84369c6fe22ae8ef15ef7a4b7d0e23201",
+        "size_in_bytes": 1746
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/ftb_putrow.x",
+        "path_type": "hardlink",
+        "sha256": "85a925e49a9e60b4393bdd9eb7dbf8f91b094a39eecad09963aff608fa7223b6",
+        "sha256_in_prefix": "85a925e49a9e60b4393bdd9eb7dbf8f91b094a39eecad09963aff608fa7223b6",
+        "size_in_bytes": 1556
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/ftb_rheader.x",
+        "path_type": "hardlink",
+        "sha256": "0085790cb9a90ad70a2ef3e1ec594ef6de2bc959f65873167d1eab3697de56b8",
+        "sha256_in_prefix": "0085790cb9a90ad70a2ef3e1ec594ef6de2bc959f65873167d1eab3697de56b8",
+        "size_in_bytes": 12108
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "129d46c9785e503609b2ff201571400c10896027dc85b6c94b479ea14e3b7e7c",
+        "sha256_in_prefix": "129d46c9785e503609b2ff201571400c10896027dc85b6c94b479ea14e3b7e7c",
+        "size_in_bytes": 803
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/obsolete/find_simple.x",
+        "path_type": "hardlink",
+        "sha256": "db475f12ee7349e0abffb5b80e56ef05aec6a465bf8f3fdb128d3284bc291f1c",
+        "sha256_in_prefix": "db475f12ee7349e0abffb5b80e56ef05aec6a465bf8f3fdb128d3284bc291f1c",
+        "size_in_bytes": 2021
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/obsolete/fits_rheader.x",
+        "path_type": "hardlink",
+        "sha256": "988f42f805fd42850fa70b66be1bde7400e5c120478d569d03950cb4337774b5",
+        "sha256_in_prefix": "988f42f805fd42850fa70b66be1bde7400e5c120478d569d03950cb4337774b5",
+        "size_in_bytes": 12280
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/obsolete/fits_rpixels.x",
+        "path_type": "hardlink",
+        "sha256": "2c932bc2673c89aefc4eb880e31e5a6e43bed655e06f71309965a3e213983e66",
+        "sha256_in_prefix": "2c932bc2673c89aefc4eb880e31e5a6e43bed655e06f71309965a3e213983e66",
+        "size_in_bytes": 4609
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/rfits.com",
+        "path_type": "hardlink",
+        "sha256": "84a8467abe169cfd367d39c517962020db7dc4a3de20545644a301fba9816662",
+        "sha256_in_prefix": "84a8467abe169cfd367d39c517962020db7dc4a3de20545644a301fba9816662",
+        "size_in_bytes": 570
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/rfits.h",
+        "path_type": "hardlink",
+        "sha256": "4f41d804cb69cd3a942c71f43f7cf2b53489f8df11da5618fc261dcf29d10d2a",
+        "sha256_in_prefix": "4f41d804cb69cd3a942c71f43f7cf2b53489f8df11da5618fc261dcf29d10d2a",
+        "size_in_bytes": 3686
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/rft_subs.x",
+        "path_type": "hardlink",
+        "sha256": "33a9a622198c6707f1b569490605e679ac3bedb0a76e369c6dffcf2f68ea2984",
+        "sha256_in_prefix": "33a9a622198c6707f1b569490605e679ac3bedb0a76e369c6dffcf2f68ea2984",
+        "size_in_bytes": 9498
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/t_rfits.x",
+        "path_type": "hardlink",
+        "sha256": "a155e852d82bdee5654f67accf015bdb8c0bc6a04f5283838e771db2e81306d0",
+        "sha256_in_prefix": "a155e852d82bdee5654f67accf015bdb8c0bc6a04f5283838e771db2e81306d0",
+        "size_in_bytes": 6078
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/tab.com",
+        "path_type": "hardlink",
+        "sha256": "82ff5485aeb32b751caba97a2f39433cff75ff72b2f323a5ef23d29ff54f4256",
+        "sha256_in_prefix": "82ff5485aeb32b751caba97a2f39433cff75ff72b2f323a5ef23d29ff54f4256",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/wfits.h",
+        "path_type": "hardlink",
+        "sha256": "eb1282677a4bf3d74ae7d2c27b531777352f27b639363b08d72b7c682b43a1f9",
+        "sha256_in_prefix": "eb1282677a4bf3d74ae7d2c27b531777352f27b639363b08d72b7c682b43a1f9",
+        "size_in_bytes": 3889
+      },
+      {
+        "_path": "iraf_extern/finder/src/cdrfits/wft_encodec.x",
+        "path_type": "hardlink",
+        "sha256": "0377e6ecb434de2c740dd527957b920c27ee307923f30c4d2c953b0be690cc23",
+        "sha256_in_prefix": "0377e6ecb434de2c740dd527957b920c27ee307923f30c4d2c953b0be690cc23",
+        "size_in_bytes": 959
+      },
+      {
+        "_path": "iraf_extern/finder/src/disppars.par",
+        "path_type": "hardlink",
+        "sha256": "d0c57c67424f9f29284193ee7935f2a9a9aecc18c087cb1fb2505bf2dd26a623",
+        "sha256_in_prefix": "d0c57c67424f9f29284193ee7935f2a9a9aecc18c087cb1fb2505bf2dd26a623",
+        "size_in_bytes": 559
+      },
+      {
+        "_path": "iraf_extern/finder/src/dssfinder.cl",
+        "path_type": "hardlink",
+        "sha256": "261b2fb0aa4e1f5a53c240ea156d0636bde6949c45a1c2f69e3f1ca0c9f9f01a",
+        "sha256_in_prefix": "261b2fb0aa4e1f5a53c240ea156d0636bde6949c45a1c2f69e3f1ca0c9f9f01a",
+        "size_in_bytes": 9894
+      },
+      {
+        "_path": "iraf_extern/finder/src/finderlog.cl",
+        "path_type": "hardlink",
+        "sha256": "4629d9a3b4bccc9ecbcf2cf72a2f101c7feaa0502756d616c890e5ef23f7ac98",
+        "sha256_in_prefix": "4629d9a3b4bccc9ecbcf2cf72a2f101c7feaa0502756d616c890e5ef23f7ac98",
+        "size_in_bytes": 2826
+      },
+      {
+        "_path": "iraf_extern/finder/src/fprecess.x",
+        "path_type": "hardlink",
+        "sha256": "a326fb5129efe2fc823198b84c2dda16a204cbacd78a6c3da2c431b177e888fd",
+        "sha256_in_prefix": "a326fb5129efe2fc823198b84c2dda16a204cbacd78a6c3da2c431b177e888fd",
+        "size_in_bytes": 3625
+      },
+      {
+        "_path": "iraf_extern/finder/src/ftimes.x",
+        "path_type": "hardlink",
+        "sha256": "09a6f3025585992f25bf89d040a8942be61c2e0b0a0020ec4e25f55571d9b165",
+        "sha256_in_prefix": "09a6f3025585992f25bf89d040a8942be61c2e0b0a0020ec4e25f55571d9b165",
+        "size_in_bytes": 3654
+      },
+      {
+        "_path": "iraf_extern/finder/src/gscfind.par",
+        "path_type": "hardlink",
+        "sha256": "2ddf556288fbfcefbcf89ff25f97a94d24f9b7b734f3369a7a450486eeef12e8",
+        "sha256_in_prefix": "2ddf556288fbfcefbcf89ff25f97a94d24f9b7b734f3369a7a450486eeef12e8",
+        "size_in_bytes": 1267
+      },
+      {
+        "_path": "iraf_extern/finder/src/libpkg.a",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.finder_1553891125279/_h_env_pl",
+        "sha256": "0055a2e7f9b5a3e73f35d51f33bbe48d6ae14891f42583ebdbea5e90ba843f4d",
+        "sha256_in_prefix": "6471639c11a69e02c4394ae9938dcba0636a4afcc52089ce66c4eab552f0a710",
+        "size_in_bytes": 503602
+      },
+      {
+        "_path": "iraf_extern/finder/src/mkgscindex.cl",
+        "path_type": "hardlink",
+        "sha256": "db627da4bf0cfd937dbc056fd8c608b902453fd8045f459cd20492242d0cc474",
+        "sha256_in_prefix": "db627da4bf0cfd937dbc056fd8c608b902453fd8045f459cd20492242d0cc474",
+        "size_in_bytes": 1146
+      },
+      {
+        "_path": "iraf_extern/finder/src/mkgsctab.cl",
+        "path_type": "hardlink",
+        "sha256": "8690dcad7b6eaeaa7c14ab14bbf431f00a2919efc97cb7cdf494cc4f6869a6ab",
+        "sha256_in_prefix": "8690dcad7b6eaeaa7c14ab14bbf431f00a2919efc97cb7cdf494cc4f6869a6ab",
+        "size_in_bytes": 2664
+      },
+      {
+        "_path": "iraf_extern/finder/src/mkobjtab.cl",
+        "path_type": "hardlink",
+        "sha256": "e452fff2cef081a3797f5527857ac6a688f474fec0470ee626ad787843dea477",
+        "sha256_in_prefix": "e452fff2cef081a3797f5527857ac6a688f474fec0470ee626ad787843dea477",
+        "size_in_bytes": 1875
+      },
+      {
+        "_path": "iraf_extern/finder/src/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "317766448782d5797764be15297ed8f028f8b38a059c9c9168dc5a3c0dcbf166",
+        "sha256_in_prefix": "317766448782d5797764be15297ed8f028f8b38a059c9c9168dc5a3c0dcbf166",
+        "size_in_bytes": 598
+      },
+      {
+        "_path": "iraf_extern/finder/src/objlist.cl",
+        "path_type": "hardlink",
+        "sha256": "8e830ff39aaa3fbbff4ffaebbd6d592a65596475e099c72c9d319152deca2dc0",
+        "sha256_in_prefix": "8e830ff39aaa3fbbff4ffaebbd6d592a65596475e099c72c9d319152deca2dc0",
+        "size_in_bytes": 1584
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/allrows.x",
+        "path_type": "hardlink",
+        "sha256": "4886a317a4648825d46cb0731811f0fcfbedbce112bf89cd5bc275cb30f5a43b",
+        "sha256_in_prefix": "4886a317a4648825d46cb0731811f0fcfbedbce112bf89cd5bc275cb30f5a43b",
+        "size_in_bytes": 636
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/change.x",
+        "path_type": "hardlink",
+        "sha256": "330b4deb9a0319b4bac98eaa15b5d23b3a673d2db61d3a8198d6952061123921",
+        "sha256_in_prefix": "330b4deb9a0319b4bac98eaa15b5d23b3a673d2db61d3a8198d6952061123921",
+        "size_in_bytes": 14507
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/mjd.x",
+        "path_type": "hardlink",
+        "sha256": "aea68feac6df655fe1a5d4e510bb77f787f564c796d152ad69e3b389047b6873",
+        "sha256_in_prefix": "aea68feac6df655fe1a5d4e510bb77f787f564c796d152ad69e3b389047b6873",
+        "size_in_bytes": 2441
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "8d9ca3f5fb310b8e5305aafc236507f91f248f878ad4660bc862aa664ad6648f",
+        "sha256_in_prefix": "8d9ca3f5fb310b8e5305aafc236507f91f248f878ad4660bc862aa664ad6648f",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/reloperr.h",
+        "path_type": "hardlink",
+        "sha256": "8d411f36db286717cbb1578eaffdebb4c5bbd6e80160ba4f8f7dc818f03ea547",
+        "sha256_in_prefix": "8d411f36db286717cbb1578eaffdebb4c5bbd6e80160ba4f8f7dc818f03ea547",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/select.x",
+        "path_type": "hardlink",
+        "sha256": "c54f9662d30b6d4067b07b6b0cba39d97f8e73f5cdf682e0e9d0988cb7f67998",
+        "sha256_in_prefix": "c54f9662d30b6d4067b07b6b0cba39d97f8e73f5cdf682e0e9d0988cb7f67998",
+        "size_in_bytes": 2546
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/tbleval.x",
+        "path_type": "hardlink",
+        "sha256": "fea095dfaa7490db1c8e2e468781b1757583da0fe163132f0d0e19812062e5fb",
+        "sha256_in_prefix": "fea095dfaa7490db1c8e2e468781b1757583da0fe163132f0d0e19812062e5fb",
+        "size_in_bytes": 4156
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/tblterm.com",
+        "path_type": "hardlink",
+        "sha256": "57c024be2ad14761c5a42d7c67ea4a48d979b01a33d7f27e7cafb07d557842b0",
+        "sha256_in_prefix": "57c024be2ad14761c5a42d7c67ea4a48d979b01a33d7f27e7cafb07d557842b0",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "iraf_extern/finder/src/select/tblterm.x",
+        "path_type": "hardlink",
+        "sha256": "73f0466bdeea1eb04cb16ddb0b0251718faf6db1d72573d084b1dba5d54715d6",
+        "sha256_in_prefix": "73f0466bdeea1eb04cb16ddb0b0251718faf6db1d72573d084b1dba5d54715d6",
+        "size_in_bytes": 4547
+      },
+      {
+        "_path": "iraf_extern/finder/src/selectpars.par",
+        "path_type": "hardlink",
+        "sha256": "101bfe4fbb64593a76c549801dee6589b45e0cd7cdd989b6111cdc5c0e2c8d50",
+        "sha256_in_prefix": "101bfe4fbb64593a76c549801dee6589b45e0cd7cdd989b6111cdc5c0e2c8d50",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "iraf_extern/finder/src/t_gscfind.x",
+        "path_type": "hardlink",
+        "sha256": "fb09254fe7a58a5d0fd5edb72999b6c1e4bddea8c881e68067941f8eb1b167b2",
+        "sha256_in_prefix": "fb09254fe7a58a5d0fd5edb72999b6c1e4bddea8c881e68067941f8eb1b167b2",
+        "size_in_bytes": 11640
+      },
+      {
+        "_path": "iraf_extern/finder/src/t_tfield.x",
+        "path_type": "hardlink",
+        "sha256": "a895977fae4267ba5fdb01f0e734e478951629543433ee55422329b2f69691b1",
+        "sha256_in_prefix": "a895977fae4267ba5fdb01f0e734e478951629543433ee55422329b2f69691b1",
+        "size_in_bytes": 18751
+      },
+      {
+        "_path": "iraf_extern/finder/src/t_tpeak.x",
+        "path_type": "hardlink",
+        "sha256": "4e02ba3418b45f994c17b96e4abb86949c8fb9d993d7dbf71bc1a62241deb07e",
+        "sha256_in_prefix": "4e02ba3418b45f994c17b96e4abb86949c8fb9d993d7dbf71bc1a62241deb07e",
+        "size_in_bytes": 66105
+      },
+      {
+        "_path": "iraf_extern/finder/src/tastrom.cl",
+        "path_type": "hardlink",
+        "sha256": "d76f8dc441596a2268303cceff6d9a08daa140377e3b31180e44f83a646af10f",
+        "sha256_in_prefix": "d76f8dc441596a2268303cceff6d9a08daa140377e3b31180e44f83a646af10f",
+        "size_in_bytes": 6115
+      },
+      {
+        "_path": "iraf_extern/finder/src/tfield.par",
+        "path_type": "hardlink",
+        "sha256": "fbe238c1fd6cd2b6e15ae8dcfa74c21284311a06012a776845ef986600aedfe1",
+        "sha256_in_prefix": "fbe238c1fd6cd2b6e15ae8dcfa74c21284311a06012a776845ef986600aedfe1",
+        "size_in_bytes": 1290
+      },
+      {
+        "_path": "iraf_extern/finder/src/tfinder.cl",
+        "path_type": "hardlink",
+        "sha256": "8e6f266088b4e9d40bbb7fa09cc9ec42f1a50d19b1994b5a5398ca92e6286b9b",
+        "sha256_in_prefix": "8e6f266088b4e9d40bbb7fa09cc9ec42f1a50d19b1994b5a5398ca92e6286b9b",
+        "size_in_bytes": 8686
+      },
+      {
+        "_path": "iraf_extern/finder/src/tpeak.par",
+        "path_type": "hardlink",
+        "sha256": "8059dca9b9a16e9188440ce35f1d2bde141c76e86deaf6ae416d4342c98009cb",
+        "sha256_in_prefix": "8059dca9b9a16e9188440ce35f1d2bde141c76e86deaf6ae416d4342c98009cb",
+        "size_in_bytes": 1131
+      },
+      {
+        "_path": "iraf_extern/finder/src/tpltsol.cl",
+        "path_type": "hardlink",
+        "sha256": "dcd6052ac2d7ae9e76b4e8f852f948343cd9d9de462dab627648b144c0a5952f",
+        "sha256_in_prefix": "dcd6052ac2d7ae9e76b4e8f852f948343cd9d9de462dab627648b144c0a5952f",
+        "size_in_bytes": 11373
+      },
+      {
+        "_path": "iraf_extern/finder/src/tvmark_.cl",
+        "path_type": "hardlink",
+        "sha256": "a0c4832b3ef7cbbef2b81f73e113fe3e32157b520c78555aaf644164a898c7ce",
+        "sha256_in_prefix": "a0c4832b3ef7cbbef2b81f73e113fe3e32157b520c78555aaf644164a898c7ce",
+        "size_in_bytes": 335
+      },
+      {
+        "_path": "iraf_extern/finder/src/tvmark_.par",
+        "path_type": "hardlink",
+        "sha256": "9668a75454cd55421944b860148f46226ab7c6d7ce50517b24289c6cfe25df01",
+        "sha256_in_prefix": "9668a75454cd55421944b860148f46226ab7c6d7ce50517b24289c6cfe25df01",
+        "size_in_bytes": 558
+      },
+      {
+        "_path": "iraf_extern/finder/src/x_finder.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.finder_1553891125279/_h_env_pl",
+        "sha256": "3b59104a86eff2ca1f4ec6b59616a4704b91ff318840d75a25501d50020e371d",
+        "sha256_in_prefix": "0f02eb25ed00160b8edf4c6de0350e82fd9ef69825529b5c3b2c1a0918fb51a3",
+        "size_in_bytes": 8568
+      },
+      {
+        "_path": "iraf_extern/finder/src/x_finder.x",
+        "path_type": "hardlink",
+        "sha256": "e774777caa1c41d8aa78a1e00f9c65b5fc2a59c127dee22e3312ea9b3d2c2810",
+        "sha256_in_prefix": "e774777caa1c41d8aa78a1e00f9c65b5fc2a59c127dee22e3312ea9b3d2c2810",
+        "size_in_bytes": 83
+      },
+      {
+        "_path": "iraf_extern/finder/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "25a54cebfc24b6a709302784075739529bcaec74e0f21f1eb72615a4567f0bff",
+        "sha256_in_prefix": "25a54cebfc24b6a709302784075739529bcaec74e0f21f1eb72615a4567f0bff",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "iraf_extern/finder/ur_manifest",
+        "path_type": "hardlink",
+        "sha256": "76fd4152347406e6e21a99a7e3c181ca6b61840cd9ef3c22a9ec7f4c3de1f6c0",
+        "sha256_in_prefix": "76fd4152347406e6e21a99a7e3c181ca6b61840cd9ef3c22a9ec7f4c3de1f6c0",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "iraf_extern/finder/ur_mkpkg_cmd",
+        "path_type": "hardlink",
+        "sha256": "72824daab9e0f68d440cd325c1afc97eaac9f51fb3fced95fbe6c0b15c4965b5",
+        "sha256_in_prefix": "72824daab9e0f68d440cd325c1afc97eaac9f51fb3fced95fbe6c0b15c4965b5",
+        "size_in_bytes": 34
+      },
+      {
+        "_path": "iraf_extern/finder/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 2175991,
+  "subdir": "linux-64",
+  "timestamp": 1553891206059,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.finder-2.2-2.tar.bz2",
+  "version": "2.2"
+}

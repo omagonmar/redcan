@@ -1,0 +1,9 @@
+{
+  "cxx_compiler": "gxx",
+  "c_compiler": "gcc",
+  "xz": "5",
+  "glib": "2.56",
+  "VERBOSE_AT": "V=1",
+  "gstreamer": "1.12",
+  "zlib": "1.2"
+}

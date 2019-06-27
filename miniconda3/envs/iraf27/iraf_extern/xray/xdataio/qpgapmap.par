@@ -1,0 +1,51 @@
+#$Header: /home/pros/xray/xdataio/RCS/qpgapmap.par,v 11.0 1997/11/06 16:37:37 prosb Exp $
+#$Log: qpgapmap.par,v $
+#Revision 11.0  1997/11/06 16:37:37  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:57:05  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:17:41  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/15  16:02:50  janet
+#jd - added xoptaxis, yoptaxis parameters for recentering of opt axis.
+#
+#Revision 7.0  93/12/27  18:50:33  prosb
+#General Release 2.3
+#
+#Revision 1.1  93/12/17  12:52:31  mo
+#Initial revision
+#
+#  Parameters for the qpgapmap task
+#
+input_qpoe,s,a,"",,,"input qpoe filename"
+region,s,a,"",,,"region descriptor"
+exposure,s,h,"NONE",,,"exposure mask"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion"
+qpoe,s,a,"",,,"output qpoe file name"
+eventdef,s,a,full,,,"event definition"
+gapmap,s,h,"xspatialdata$283cgapmap4.ieee",,,"name of gapmap file"
+detx,s,h,"detx",,,"name of output detector x coordinate"
+dety,s,h,"dety",,,"name of output detector y coordinate"
+rawx,s,h,"rawx",,,"name of input raw x coordinate"
+rawy,s,h,"rawy",,,"name of input raw y coordinate"
+pha,s,h,"pha",,,"name of input pha coordinate"
+random,b,h,yes,,,"apply random number continuity correction"
+xoffset,r,h,2047.5D0,,,"x offset to apply after degapping"
+yoffset,r,h,2047.5D0,,,"y offset to apply after degapping"
+xoptaxis,r,h,4048.4D0,,,"x optical axis qpoe header update"
+yoptaxis,r,h,4157.1D0,,,"y optical axis qpoe header update"
+clobber,b,h,no,,,"delete old copy of output file"
+display,i,h,1,0,5,"0=no disp, 1=header"
+sort,b,h,y,,,"sort events?"
+sorttype,s,h,"y x",,,"type of sort"
+sortsize,i,h,1000000,,,"bytes to alloc. per sort"
+qp_internals,b,h,yes,,,"prompt for qpoe internals?"
+qp_pagesize,i,h,2048,,,"page size for qpoe file"
+qp_bucketlen,i,h,4096,,,"bucket length for qpoe file"
+qp_blockfactor,i,h,1,,,"block factor for imio"
+qp_mkindex,b,h,y,,,"make an index on y, x"
+qp_key,s,h,"",,,"key on which to make index"
+qp_debug,i,h,0,,,"qpoe debug level"

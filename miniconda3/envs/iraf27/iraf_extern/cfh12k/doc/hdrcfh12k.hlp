@@ -1,0 +1,83 @@
+.help hdrcfh12k Mar01 cfh12k
+.ih
+NAME
+hdrcfh12k -- translate CFH12K mosaic raw headers for use with MSCRED
+.ih
+SYNOPSIS
+CHF12K  raw headers are modified for use with MSCRED.  This includes
+fixing a couple of wrongly formatted keywords, adding some missing
+keywords, and setting the WCS from a database astrometric solution.
+.ih
+USAGE	
+hdrcfh12k input
+.ih
+PARAMETERS
+.ls input
+List of raw CFH12K multiextension (MEF) files to be modified.  This task
+knows if a file has been previously modified so it is ok to include
+such files in a wildcard template.
+.le
+.ls wcsdb = "cfh12k$lib/db//Rwcs.db"
+Database file containing the world coordinate system (WCS) information.
+.le
+.ls redo = no
+Redo a previously modified header?  If no then only files without the
+FIXHDR keyword will be operated upon.  If yes then those files previously
+modified will be modified again.  In either case the step to copy the
+file to expand the header space is skipped.
+.le
+.ih
+DESCRIPTION
+CFH12K provides a header update of raw multiextension format (MEF)
+files so that the MSCRED task may be used.  This includes
+fixing a couple of wrongly formatted keywords, adding some missing
+keywords, and setting the WCS from a database astrometric solution.
+
+The task first checks for the keyword FIXHDR in the primary header to
+determine if the task has been run previously.  Depending on the \fIredo\fR
+parameter, files with the keyword will be ignored or the updates will be
+done again excluding the step of copying the file to expand the header
+space.
+
+When the task is run on data without the FIXHDR keyword the FITS files
+are copied leaving additional header space for new keywords.  This
+is the slowest step of the task so be patient.
+
+A check is made for the presence of the EXTNAME keywords.  Normally the
+keywords should be present in the raw data but there may be cases where
+it is missing.  The standard extension names are added in the expected
+order of the extensions if they are not present.
+
+Next the DETSEC keywords are reset for extensions chip00, chip01, and
+chip07.  The original sizes are one pixel off which causes problems.
+CCDSEC keywords are added for all the extensions.  This is needed to
+be able to define the reference coordinate system for things like the
+world coordinates.  Related to this is the addition of LTV1 and LTV2
+keywords.
+
+Finally the task MSCSETWCS is run to set world coordinates.  This
+is done by using solutions contained in the file specified by the
+\fIwcsdb\fR parameter.  The default value is a solution provided with
+the package.  It was derived from a standard star field taken 2000-12-29.
+A solution is added to each extension and the reference point, which
+translates the solution to the telescope position of the observation,
+is set from the RA and DEC keywords in the headers.  During the
+data reductions this initial coordinate system will be calibrated
+further.
+.ih
+EXAMPLES
+1. Set the headers for a set of raw CFH12K files.
+
+.nf
+    cl> hdrcfh12k *.fits
+.fi
+
+.ih
+REVISIONS
+.ls HDRCFH12K - V1 external package
+First release.
+.le
+.ih
+SEE ALSO
+mscred package documentation
+.endhelp

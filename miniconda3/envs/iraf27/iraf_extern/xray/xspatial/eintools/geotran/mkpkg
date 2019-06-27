@@ -1,0 +1,30 @@
+# $Header: /home/pros/xray/xspatial/eintools/geotran/RCS/mkpkg,v 11.0 1997/11/06 16:31:14 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:31:14  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:49:17  prosb
+# General Release 2.4
+#
+# Revision 1.1  1994/08/04  15:20:16  dvs
+# Initial revision
+#
+# Library for the GEOMETRIC TRANSFORMATION tasks
+
+# [COPIED FROM images/geometry/mkpkg]
+
+$checkout libgeotran.a ../
+$update libgeotran.a
+$checkin libgeotran.a ../
+$exit
+
+
+libgeotran.a:
+	t_geotran.x	geotran.h <imhdr.h> <imset.h> <math.h> \
+			<math/gsurfit.h> <mwset.h>
+	geofit.x	geomap.h <mach.h> <math/gsurfit.h>
+	geotran.x	geotran.h <imhdr.h> <imset.h> <math/gsurfit.h> \
+			<mach.h> <math/iminterp.h>
+	geotimtran.x	geotran.h <imhdr.h> <imset.h> <math/gsurfit.h> \
+			<mach.h> <math/iminterp.h>
+	;

@@ -1,0 +1,11 @@
+prefix=/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/fitsutil/lib/cfitsio
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: cfitsio
+Description: FITS File Subroutine Library
+Version: 3.21
+Libs: -L${libdir} -lcfitsio 
+Libs.private: -lm
+Cflags: -I${includedir}

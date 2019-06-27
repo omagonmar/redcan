@@ -1,0 +1,89 @@
+#$Header: /home/pros/xray/xspatial/doc/RCS/errcreate.hlp,v 11.0 1997/11/06 16:29:42 prosb Exp $
+#$Log: errcreate.hlp,v $
+#Revision 11.0  1997/11/06 16:29:42  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:37:23  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:56:20  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:28:32  prosb
+#General Release 2.3
+#
+#Revision 1.1  93/12/15  11:37:07  mo
+#Initial revision
+#
+#
+.help errcreate Dec93 xray.xspatial
+.ih
+NAME
+errcreate -- generate a PROS error image (sq of errors) from data image
+.ih
+USAGE
+errcreate input_image output_errimage 
+.ih
+DESCRIPTION
+\fIErrcreate\fR generates a PROS-style error image from an input data
+image.  A PROS-style error image actually contains the SQUARE
+of the error values.  Two algorithms are implemented: a Poisson error 
+approximation and a pure Gaussian calculation.  The algorithm
+activated is determined by the value of the header keyword, POISSERR. 
+If absent, or set to 'T' the Poisson approximation will be used, if
+set to 'F' a pure Gaussian calculation will be performed.  This
+parameter value can be set by using either \fIqphedit\fR or
+\fIhedit\fR for the cases of input QPOE and IMAGE input files,
+respectively.
+
+.ih
+PARAMETERS
+.ls input_image = "xdata$snr.qp[bl=2]"	prompt = name of input image
+
+The image file for which errors are to be calculated.  (This can include
+an image section or be a QPOE data file name)
+
+.le
+.ls output_errimage = "."    prompt = root name for output file [root_err.imh]
+
+The name of the output file.  The output file is a standard IRAF image file
+with real*4 data.  Its dimensions will be that of the input (after any
+section and/or blocking reductions).
+.le
+.ls (clobber = no) [boolean]
+
+Overwrite the existing image file if one exists with the same name as that
+given by output_image.
+.le
+
+.ls (display = 1) [int]
+   
+Level of feedback and debug option.  If 0, \fIerrcreate\fR prints no messages
+as it processes the image errors.  A level of 1, prints the history
+message and the output filename.
+.le
+.ih
+EXAMPLE
+.nf
+sp> errcreate xdata$snr.qp[bl=2] .
+        writing error array to: smi296_err
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+.ih
+SEE ALSO
+Documentation on the error algorithms is available in
+\fIhelp explain_errors\fR 
+
+\fI help qphedit\fR for information on changing the
+POISSERR keyword in QPOE files
+
+\fI help hedit\fR for information on changing the
+POISSERR keyword in IMAGE files
+
+Documentition on Documentation on imsmooth(which allows an input error image).
+
+Documentation on imcontoour(which allows an input error image).
+
+.endhelp

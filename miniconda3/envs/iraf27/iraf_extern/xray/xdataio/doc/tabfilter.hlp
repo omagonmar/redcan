@@ -1,0 +1,404 @@
+# Copyright (c) 1993 The Regents of the University of California
+# H+
+# 	Title	:  dqselect.hlp
+# 	Author	:  akeith
+# 	Date	:  04/24/92
+# 	Synopsis:  
+# 	Keywords:
+# 		@(#) dqselect.hlp  04/24/92 UCB SSL CEA EGOCS
+# 	Revisions:
+# 	mm/dd/yy   name		description
+# 	11/02/92   akeith	oops, the clear command doesn't exist anymore, so I got rid of it.
+# 	11/02/92   akeith	changed completely
+# 	07/27/92   annem	Correct syntax to conform with xray package.
+# 	06/30/92   lgauvin	fixed spelling mistakes, and format problems
+# 	06/22/92   annem	First rewrite under 1.0
+# 	05/05/92   lgauvin	fixed some typos
+# 	04/30/92   lgauvin	fixed the eu to the euv
+# 	04/30/92   lgauvin	fixed gareth's problem spots
+# 	04/30/92   lgauvin	put in an example
+# 	04/30/92   lgauvin	fixed a format mistake
+# 	04/30/92   akeith	expanded on some of the command explainations.
+# 	04/30/92   lgauvin	fixed spelling mistakes
+# 	04/30/92   akeith	added text
+# 	04/28/92   lgauvin	nothing much
+# 	04/27/92   lgauvin	don't ask
+# 	04/27/92   akeith	rough draft writeup.
+# 	04/24/92   lgauvin	test
+# 	04/24/92   lgauvin	fixed header
+# 	04/24/92   akeith	date and time created 92/04/24 13:04:16 by akeith
+# H-
+# 
+#
+.help tabfilter Dec93 xray.xdataio
+.ih
+NAME
+tabfilter - An interactive data quality selection and display task for
+TABLES.
+.ih
+USAGE
+tabfilter tables
+.ih
+DESCRIPTION
+TABFILTER is a data quality selection task that allows the user to 
+interactively display time dependent data stored in TABLES.  The TABLE 
+can be displayed and graphically edited to select data.  The result is 
+a time filter that can be written to the QPOE as a macro definition.  
+Macro definitions are time filters that are stored in the QPOE header. 
+The basis of this macro task is the EUV task DQSELECT.  
+.ih
+PARAMETERS
+.ls tables  
+List of TABLES used for display and data quality selection.
+Table names may be specified using wildcards such
+as table[1-7], which loads all existing TABLES from table1.tab to table7.tab.
+.le
+.ls limits = ""
+An optional TABLES containing hi/low limits for any number of monitors.
+.le
+.ls gap = 5
+Allowed number of missing nominal time intervals before considering the gap in
+reported data as a major gap. A nominal time interval
+is defined for each table from the difference of the first two values
+of the time column unless specified in the TABLE by the header keyword
+\fBDELTIME\fR.
+.le
+.ls imode = "line"
+Initial interactive mode, either \fBgcur\fR or \fBline\fR mode.
+.le
+.ls format = "f"
+Valid time interval format.
+.le
+.ls device = "stdgraph"
+Output graphics device: one of \fBstdgraph\fR, \fBstdplot\fR,  \fBstdvdm\fR,
+or device name.
+.le
+.ih
+FULL DESCRIPTION
+
+This task is a data quality selection task allowing the user to
+interactively display time dependent data stored in TABLES
+and create time filters according to user-supplied limits.
+Once the ST tables are loaded by tabfilter, a variety of commands
+are available to the user to display and utilize the information
+contain within the ST tables.
+
+Tabfilter will work with any ST table, though at this point it is 
+best adapted for indexed ST tables containing a monotonically
+increasing index or time column. The indexed ST table has a few
+features which are taken advantage of by tabfilter.
+
+.ls o
+Each TABLE must have an index or time column to represent the
+independent data set for the subsequent columns of the TABLE.
+Tabfilter assumes that the first column of the TABLE
+serves as the index column, unless the index column name is
+specified by the TABLE header keyword \fBTIME\fR.
+All other columns of the TABLE are considered monitors that are
+dependents of the index/time column.
+.le
+
+.ls o
+Tabfilter assumes the existence of a nominal time interval
+for each TABLE. The time interval is derived from the first two
+values of the index/time column unless the numerical value
+is specified by the TABLE header keyword \fBDELTIME\fR.
+.le
+
+.ls o
+Data which should be treated as rates can also be indicated within
+an indexed TABLE using the \fBRATE000\fR header keyword. Such columns
+will have their values divided by the nominal time interval to
+produce rate values.
+.le
+
+Using indexed TABLES allows tabfilter to display each of the columns
+correctly.
+
+Tabfilter's main purpose is to assist in data quality selection.
+This consist of generating good time filters on the basis of data
+quality. Where a monitor describes the
+quality of data recorded by an instrument, limits can be set when
+data quality is suspect. Based on these limits, filters can be generated
+for use in filtering out the poor quality data produce by the instrument.
+
+To take a specific example, consider an instrument which is kept track
+of by various monitors. Each monitor reports its value at regular time
+intervals and is stored in a column of an indexed TABLE.
+Here the time that each value is reported acts as the index column.
+If a monitor conveys the state of the  health, then
+certain values of the monitor define the borders of a healthy
+instrument.
+These values define the \fBlimits\fR for which the monitor
+indicates the instrument is in good health.
+The corresponding times for which the monitor values are within
+the limits are called \fBgood times\fR. By generating start and
+end times for all the good time intervals, a time filter is created
+which can be used to filter out questionable data reported by the
+instrument. Tabfilter has a variety of commands designed to help generate
+good time filters. The command \fBedit\fR is designed to set limits. The
+command \fBgtgen\fR is designed to generate good time intervals from
+those limits.
+
+In addition to the concepts of monitors, limits and good times, there
+is the concept of \fBday gaps\fR. Even though a monitor may report on a
+regular bases, it may not report at all during extended periods of time.
+These times are considered \fBday gaps\fR and can be recognized by tabfilter
+in terms of the number of regular intervals the monitor did not report.
+This number can be set using the tabfilter command \fBgap\fR.
+
+Below is a list of the valid tabfilter commands each with its own description.
+
+.ih
+COMMANDS
+
+.ls display <monitor_name>
+
+Display plots the named monitor against the time column of the
+corresponding TABLE. In those cases where the number of rows of the TABLE
+exceeds what can be displayed by the graphics device, a sampling of the 
+data is plotted representing every N'th point of the real data.
+Up to four monitors may be displayed at any one time with repeated calls 
+to display.
+.le
+
+.ls hide <monitor_name>
+
+Removes the specified monitor from the display. If the monitor name is 
+given as \fBall\fR, the screen will be cleared of all monitors.
+.le
+
+.ls mode <imode>
+
+Mode changes the input mode to either \fBline\fR, for typing commands in
+a text window  or \fBgcur\fR for using the cursor in a graphics
+display. In \fBgcursor\fR mode, each command is executed as a colon command.
+For example, \fB:mode line\fR would return the input mode back to the text
+window.
+.le
+
+.ls list <table_name>
+
+Lists the column names of the named TABLE.
+.le
+
+.ls window
+
+Window is an interactive command allowing the user to resize the selected
+window. As an interactive command, the window command must be quit by issuing
+a \fBq\fR command. This returns the user to the current input mode.
+When more then one window is displayed, a window must be selected
+by placing the graphics cursor over the desired window and pressing a key
+or mouse button. All subsequent window commands will be directed toward
+the selected window. The following window commands are available.
+
+.nf
+	a     Autoscale x and y axes
+    *   b     Set bottom edge of window
+    *   c     Center window at cursor position
+	d     Shift window down
+    *   e     Expand window
+	f     Flip x axis
+	g     Flip y axis
+    *   j     Set left edge of window
+    *   k     Set right edge of window
+	l     Shift window left
+	m     Autoscale x axis
+	n     Autoscale y axis
+    *   p     Pan x and y axes about cursor
+	r     Shift window right
+    *   t     Set top edge of window
+        q     quit
+	u     Shift window up
+    *   y     Zoom y axis about cursor
+    *   z     Zoom x and y axes about cursor
+.fi
+
+  * Uses the cursor position at the time the command is issued.
+.le
+
+.ls gap <gap_number>
+
+Gap sets the allowed integer number of missing nominal time intervals
+before considering the gap in reported data as a day gap.
+A nominal time interval is defined for each table from the
+difference of the first two values of the time column unless
+specified in the TABLE by the header keyword \fBDELTIME\fR.
+In either case, a day gap is an extended period of time in which
+no information is reported. Setting the gap number allows the
+user to define what is meant by an extended period of time.  Major
+gaps are identified in plotted monitors as gaps between connected
+line segments. Major gaps are also excluded time intervals in the
+generation of valid time filters.
+.le
+
+.ls edit <monitor_name>
+
+Edits the specified monitor's limits. Once this command is given, tabfilter
+enters \fBgcursor\fR mode and waits for 
+two graphics cursor entries (keystrokes or mouse clicks), 
+marking the new upper and lower limits. 
+The limits may be entered in either order. Both cursor commands and/or
+colon commands of the form:
+
+		:y limit_value
+
+are excepted. The cursor x-position is not used.
+Any combination of the two entry methods is allowed. 
+Limits set in this way remain enforce until removed with a delete command.
+.le
+
+.ls delete <monitor_name>
+
+Deletes a monitor's limits. However, if \fBgtgen\fR was previously executed,
+the previously computed valid times still exist. In order to remove the
+valid times produced by with these limits, \fBgtnew\fR should be executed.
+.le
+
+.ls limsave <table>
+
+Saves the current limits in an TABLE which consists of three columns,
+name, low and high. The name column holds the monitor name, low holds the
+low limit value and high the high limit value.
+.le
+
+.ls limload <table>
+
+Loads an existing TABLE containing limits that is of the same format as
+those produced by the \fBlimsave\fR command.
+.le
+
+.ls showlim <monitor>
+
+Show the limit markers of the displayed monitor.
+.le
+
+.ls hidelim <monitor>
+
+Hide the limit markers of the displayed monitor.
+.le
+
+.ls gtnew
+
+Clears the list of valid times intervals.
+.le
+
+.ls gtgen
+
+Generates \fBvalid time\fR  intervals.  For  each  monitor  for  which
+limits  have  been  defined, \fBgtgen\fR generates a set of valid time
+intervals. The set of valid time intervals for a  given  monitor
+are  defined by the start and end times between which the values
+of the monitor are within the set limits.
+
+Once this set of intervals is defined, the intersection between this set and
+the compliment of the set of \fBmajor gap\fR intervals is taken.
+See the description of the gap command for a discussion of major 
+gaps. The interval set for each monitor is then intersected with the others 
+to produce a single set of valid time intervals. These valid times are 
+stored in memory.
+
+For each execution of \fBgtgen\fR, the intersection is taken between
+the resulting  set  valid  time  intervals  and  the  previously
+generated  or  loaded  set  of  valid time intervals, unless the
+\fBgtnew\fR command is executed.
+.le
+
+.ls gtsave <table>
+
+Save internally stored valid time intervals to an TABLE.
+The TABLE has a start time column, \fBstime\fR and an
+end time column, \fBetime\fR. Each row consists of a single
+valid time interval.
+.le
+
+.ls gtload <table>
+
+Loads a TABLE containing valid time intervals of the same
+format as those saved by \fBgtsave\fR.
+.le
+
+.ls filter <qpoe_file> <filter_name>
+
+Stores a filter as a macro in the  named  qpoe  file  under  the
+filter name.  The filter is stored in the form "1023.34:1090.60,
+2178.43:2218.75".
+
+.le
+
+.ls redraw
+
+Clears the screen.
+.le
+
+.ls quit
+
+Quits dqselect.
+
+.le
+
+.ls help <command>
+
+Produces a short help message on the specified command.
+If no command name is given, prints a short summary of all commands.
+.le
+
+.ih
+HINTS
+
+.ls o
+\fBGtgen\fR stores the resulting valid time intervals within memory which may
+slow down the performance of tabfilter. Once the set of valid time intervals
+have served their usefulness, the use of \fBgtnew\fR will alleivate the 
+pressure on the memory.
+.le
+
+.ls o
+Be sure to delete any existing  limits  and  execute  the  gtnew
+command  before  attempting  to generate a completely new set of
+valid times for a set of monitors.
+.le
+
+.ih
+EXAMPLES
+This task displays the TABLE in a graphical form and therefore
+the example that follows is very basic.  The user is strongly encouraged
+to simply experiment with the task in order to learn how to use it.
+
+1. Load a ROSAT PSPC Event-rate TABLE, and select on Master-Veto rate.
+
+.nf
+xp> tabfilter rp800020_evr.tab
+
+    Loading table: rp800020_evr.tab 
+
+  Command> list rp800020_evr.tab   ... lists table column names
+  Command> disp mv_aco             ... tex window display
+  Command> window                  ... manipulate graphics window
+  Command> edit mv_aco             ... choose min/max from graph
+  Command> gtnew                   ... init time filter
+  Command> gtgen                   ... generate time filter
+                                       from selections
+  Command> filter rp800020.qp mvbk ... add time filter to header
+                                       as macro definition
+  Command> q                       ... exit
+
+xp> imhead rp800020.qp long+       ... to see the macro def in hdr
+
+xp> qpcopy 'rp800020.qp[time=(mvbk)]'  ... to create a new QPOE
+					   with filtered events
+
+
+
+.fi 
+	Tasks such as QPCOPY accept either ASCII filter files or 
+QPOE filter macros to screen the events according to the time 
+intervals expressed.
+.ih
+BUGS
+    There is no ability to display the full resolution of a  large  data
+    set.
+.ih
+SEE ALSO
+dqselect, tfilter, splot
+.endhelp

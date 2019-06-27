@@ -1,0 +1,131 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "backports",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/configparser-3.7.4-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/backports/configparser/__init__.py",
+    "lib/python2.7/site-packages/backports/configparser/__init__.pyc",
+    "lib/python2.7/site-packages/backports/configparser/helpers.py",
+    "lib/python2.7/site-packages/backports/configparser/helpers.pyc",
+    "lib/python2.7/site-packages/configparser-3.7.4.dist-info/INSTALLER",
+    "lib/python2.7/site-packages/configparser-3.7.4.dist-info/LICENSE",
+    "lib/python2.7/site-packages/configparser-3.7.4.dist-info/METADATA",
+    "lib/python2.7/site-packages/configparser-3.7.4.dist-info/RECORD",
+    "lib/python2.7/site-packages/configparser-3.7.4.dist-info/WHEEL",
+    "lib/python2.7/site-packages/configparser-3.7.4.dist-info/top_level.txt",
+    "lib/python2.7/site-packages/configparser.py",
+    "lib/python2.7/site-packages/configparser.pyc"
+  ],
+  "fn": "configparser-3.7.4-py27_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/configparser-3.7.4-py27_0",
+    "type": 1
+  },
+  "md5": "1c0f1671dc44b87a6eaf05370d515ae8",
+  "name": "configparser",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/configparser-3.7.4-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/backports/configparser/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4acbd27951c1909895c46d8ecfdd707a6b9ef9e355f2c38f1976602da7f04432",
+        "sha256_in_prefix": "4acbd27951c1909895c46d8ecfdd707a6b9ef9e355f2c38f1976602da7f04432",
+        "size_in_bytes": 55398
+      },
+      {
+        "_path": "lib/python2.7/site-packages/backports/configparser/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "4e07a86f91381077e99602f357b76c93d031d61a6f95c063a6b7d166d86e4a9d",
+        "sha256_in_prefix": "4e07a86f91381077e99602f357b76c93d031d61a6f95c063a6b7d166d86e4a9d",
+        "size_in_bytes": 55413
+      },
+      {
+        "_path": "lib/python2.7/site-packages/backports/configparser/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "18cb2f7e933ab37d0156188c55b860d7e603edcda0620f9e79ad3e520657b8d3",
+        "sha256_in_prefix": "18cb2f7e933ab37d0156188c55b860d7e603edcda0620f9e79ad3e520657b8d3",
+        "size_in_bytes": 7648
+      },
+      {
+        "_path": "lib/python2.7/site-packages/backports/configparser/helpers.pyc",
+        "path_type": "hardlink",
+        "sha256": "9778ea3e8b9aedda8b9ce7b5c57663a64d45f9a47e3d0e83a1d35138065294ae",
+        "sha256_in_prefix": "9778ea3e8b9aedda8b9ce7b5c57663a64d45f9a47e3d0e83a1d35138065294ae",
+        "size_in_bytes": 10342
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser-3.7.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "sha256_in_prefix": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "size_in_bytes": 4
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser-3.7.4.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a55e2ffe9b44998e621d51d8c094bed09acc4b5236ee73d7df395a33ba3c18fd",
+        "sha256_in_prefix": "a55e2ffe9b44998e621d51d8c094bed09acc4b5236ee73d7df395a33ba3c18fd",
+        "size_in_bytes": 1050
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser-3.7.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "5f919354322a27693e62fc70551eb1892b56c1d99046f16f924e433cbe3477c5",
+        "sha256_in_prefix": "5f919354322a27693e62fc70551eb1892b56c1d99046f16f924e433cbe3477c5",
+        "size_in_bytes": 11011
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser-3.7.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "9d37ceb47d1456ca440542d873af1d99c6e38d899f0bdce92dd5c46b71acad69",
+        "sha256_in_prefix": "9d37ceb47d1456ca440542d873af1d99c6e38d899f0bdce92dd5c46b71acad69",
+        "size_in_bytes": 969
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser-3.7.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "1d7faff7e9e8524c94a31c99d4f312b92edab94c43011e1505da182ea0f4c70b",
+        "sha256_in_prefix": "1d7faff7e9e8524c94a31c99d4f312b92edab94c43011e1505da182ea0f4c70b",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser-3.7.4.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "988b3c81a8ddedcbc45a1565bafe2eea871a1f0fd327daceae9919105bfeec77",
+        "sha256_in_prefix": "988b3c81a8ddedcbc45a1565bafe2eea871a1f0fd327daceae9919105bfeec77",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser.py",
+        "path_type": "hardlink",
+        "sha256": "360a299deecbdf356844e07ed9929cdd39514fa5e285ce42414bb42996c7b17b",
+        "sha256_in_prefix": "360a299deecbdf356844e07ed9929cdd39514fa5e285ce42414bb42996c7b17b",
+        "size_in_bytes": 1560
+      },
+      {
+        "_path": "lib/python2.7/site-packages/configparser.pyc",
+        "path_type": "hardlink",
+        "sha256": "db68261abc1026d558065c0fedf32d0e0a9993028beaa0262a9cb628f98d19fb",
+        "sha256_in_prefix": "db68261abc1026d558065c0fedf32d0e0a9993028beaa0262a9cb628f98d19fb",
+        "size_in_bytes": 1876
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 42477,
+  "subdir": "linux-64",
+  "timestamp": 1556052027827,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/configparser-3.7.4-py27_0.tar.bz2",
+  "version": "3.7.4"
+}

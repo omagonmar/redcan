@@ -1,0 +1,5 @@
+# Root help directory for the FINDER packages.  This dummy package is
+# necessary in order to have `finder' appear as a module in some package,
+# so that the user can type "help finder" (with `finder' given as a task).
+
+_finder		pkg = finder$lib/rootfinder.hd

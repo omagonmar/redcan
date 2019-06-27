@@ -1,0 +1,71 @@
+;
+; selecting observations of the same object
+;
+selec = 100
+selec2 = indgen(n_elements(ra_target(0,*)))
+FOR i =0, n_elements(ra_target(0,*)) -1 DO BEGIN
+    ll = WHERE( selec eq i)
+    IF ll(0) lt 0 THEN BEGIN
+    	aux3 = 100
+    	FOR j = 0, n_elements(selec) -1 DO BEGIN
+    	    au = WHERE( selec2 ne selec(j))
+    	    IF aux3(0) eq 100 THEN aux3 = au ELSE  aux3 = [aux3,au]
+    	ENDFOR	
+    	nobj = WHERE(   abs( ra_target(0,aux3) -ra_target(0,i))  lt 0.1  and abs(dec_target(0,aux3) -dec_target(0,i)) lt 0.1 )
+    	IF nobj(0) ge 0 THEN BEGIN
+    	    IF selec(0) eq 100 THEN selec = nobj ELSE selec = [selec, nobj] 
+    	    print, "      "
+	    print,"Combining the spectra of :   ", name_target(0,nobj(0)), ",  the files are:   "
+	    FOR j = 0, n_elements(nobj) -1 DO print,j, filename_target(nobj(j)), format = '(I10, A20)'
+    	    print, "      "
+    	    ;
+    	    ; Combining spectra  
+    	    ;
+    	    spec_stacked = fltarr(n_elements(RADIAL_PROFILE),n_elements(Master_std(0,0,*)))
+    	    FOR j = 0, n_elements(RADIAL_PROFILE) -1 DO FOR i = 0, n_elements(spec_stacked(0,*)) -1 DO spec_stacked(j,i) = mean(spec_total(nobj,j,i))
+    	    ;aux3 = WHERE(spec_stacked(*,*) gt 0.)
+    	    redshift = redshift_target(0,nobj(0))
+	    IF redshift eq 0. THEN print, "Warning:   Redshift too low! ( z = ",redshift, " )." 
+    	    !p.multi = 0
+    	    xth = xth * (1.-redshift)
+    	    yran = [mean(spec_stacked) - 2.*stddev(spec_stacked), mean(spec_stacked) + 4.*stddev(spec_stacked)]
+    	    plot,   1.E-4*xth, spec_stacked(0,*), color = 0, thick = 3, /ystyle, /xstyle, yrange =  yran ,$
+    	    	xtitle = "Wavelength (um)", ytitle = "Fv (Jy)",charsize = 1.3,/nodata
+
+    	    pru = fltarr(n_elements(spec_stacked(0,*)))
+    	    ;
+	    ; plotting spectra for each extraction if more than one (method = 3)
+	    ;
+	    FOR j = 0,n_elements(spec_stacked(*,0)) -1 DO BEGIN
+    	    	FOR m = 0,n_elements(pru) -1 DO pru(m) = spec_stacked(j,m)
+    	    	plotsym, 0, /fill
+    	    	oplot,   1.E-4*xth, spec_stacked(j,*), psym = 8, symsize = 0.8, color = 50*(j+1)
+    	    	oplot,   1.E-4*xth, spec_stacked(j,*), linestyle = 0, color = 50*(j+1)
+    	    	pru = median(pru, 10)
+    	    	; selecting to fit to a 4th order polyfit
+		aux3 = where(xth lt  9.E4 and xth gt 8.E4)
+    	    	aux3 = [aux3, where(xth lt  10.3E4 and xth gt 9.8E4)]
+    	    	aux3 = [aux3, where(xth lt  11.0E4 and xth gt 10.7E4)]
+    	    	aux3 = [aux3, where(xth lt  12.7E4 and xth gt 11.5E4)]
+    	    	av =  poly_fit(xth(aux3),pru(aux3),4, yfit = yyfit) 
+    	    	yyfit = av(0) + av(1)*xth + av(2)*xth*xth + av(3)*xth*xth*xth + av(4)*xth*xth*xth*xth 
+    	    	oplot, 1.E-4*xth, yyfit, linestyle = 0, color = 50*(j+1),thick =2
+    	    	;xyouts, 0.2,0.9 - 0.05*j, strtrim(string(radial_profile(j)),1),/normal
+    	    ENDFOR
+	    ;
+	    ; plotting tentative lines... 
+    	    ;
+	    tentative_lines = [8.6,9.7, 10.51, 11.3, 12.81]
+    	    tentative_names = ["PAH","Si","[S IV]","PAH","[Ne II]"]
+    	    FOR j = 0,n_elements(tentative_lines) -1 DO oplot, [tentative_lines(j),tentative_lines(j)], yran,linestyle = 2, thick =2
+    	    xyouts ,tentative_lines - 0.1, replicate(1.01*yran(1),n_elements(tentative_lines)), tentative_names, /data 
+    	    psterm, file = "PRODUCTS/Spec_m"+strtrim(string(method),1)+"_"+prefix+'_'+name_target(nobj(0))+'.ps', /noplot
+    	    ;
+    	    ; Writing results
+    	    ;
+    	    openw,1, "OUTPUTS/Spec_m"+strtrim(string(method),1)+"_"+prefix+'_'+name_target(nobj(0))+'.dat'
+    	    	FOR j = 0 , n_elements(xth)-1 DO printf,1, xth(j), spec_stacked(*,j)
+    	    close,1
+    	ENDIF
+    ENDIF
+ENDFOR

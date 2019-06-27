@@ -1,0 +1,49 @@
+#$Header: /home/pros/xray/xspatial/eintools/doc/RCS/explain_cat.hlp,v 11.0 1997/11/06 16:30:37 prosb Exp $
+#$Log: explain_cat.hlp,v $
+#Revision 11.0  1997/11/06 16:30:37  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:48:12  prosb
+#General Release 2.4
+#
+#Revision 1.1  1994/08/15  11:27:12  dvs
+#Initial revision
+#
+.help explain_cat Jul94 xray.xspatial.eintools
+.ih
+NAME
+explain_cat -- an explanation of the contents of the Constant Aspect Table.
+.ih
+CONSTANT ASPECT TABLE
+The constant aspect table is an intermediate file used by the eintools
+package in creating an exposure map.  The table is created by \fIcat_make\fR,
+storing aspect information about the observation.
+The aspect is described in a WCS format as a mapping from detector
+coordinates to sky coordinates.
+This table is then used by \fIcat2exp\fR to make an exposure map.  
+
+The main columns are as follows:
+
+.ls LIVTI
+
+The length of time the observation was at the aspect 
+described in this row.  Correction for dead-time correction is
+included.
+
+.le
+.ls RCRVL1,RCRVL2
+
+Two keywords used in the WCS description of the aspect for the row.  These
+correspond to the sky coordinates which the reference pixel (header 
+keywords RCRPX1 and RCRPX2) will map to in the transformation.  
+
+.le
+.ls RCROT2
+
+A keyword used in the WCS description of the aspect for the row.  This
+value describes the angle of rotation between detector coordinates and the
+final sky position.
+
+.le
+
+.endhelp

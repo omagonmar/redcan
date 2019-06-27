@@ -1,0 +1,27 @@
+image,s,a,,,,"Image name"
+table,s,a,,,,"Table for initial and centered coords"
+database,s,h,"tpeak.db",,,"Database file name for astrometric fit"
+objects,s,h,"",,,"List of program object X,Y coordinates\n"
+
+ra_ref,s,h,"",,,"Plate center RA (hours)"
+dec_ref,s,h,"",,,"Plate center Dec (degrees)"
+eq_ref,r,h,INDEF,,,"Plate center coordinate equinox\n"
+
+update,b,h,no,,,"Update image header WCS following fit?"
+interactive,b,h,yes,,,"Enter interactive image cursor loop?"
+autocenter,b,h,no,,,"Center at the catalog coords when entering task?"
+reselect,b,h,no,,,"Override previous subset when entering task?"
+autodisplay,b,h,yes,,,"Redisplay after all-source keystroke command?\n"
+
+boxsize,i,h,9,1,,"Centering box fullwidth"
+rotate,r,h,0.,,,"Relative position angle of the field (CCW positive)"
+xscale,r,h,100,,,"Relative X scale factor, percent"
+yscale,r,h,100,,,"Relative Y scale factor, percent"
+xshift,i,h,0,,,"Relative X axis shift"
+yshift,i,h,0,,,"Relative Y axis shift\n"
+
+catpars,pset,h,"",,,"Catalog keyword description pset"
+disppars,pset,h,"",,,"Display preferences pset"
+imcur,*imcur,h,"",,,"Image cursor\n"
+
+mode,s,h,"ql"

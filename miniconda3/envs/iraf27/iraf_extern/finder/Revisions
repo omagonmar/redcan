@@ -1,0 +1,139 @@
+tastrom.cl
+    - Added user queries in the case that ASTROM input/output files exist
+    from a previous run.  Added parameter "silent" to allow user to turn
+    off most of these by default.
+    - Tastrom now includes the function of redo.cl to perform a new fit
+    after manually editing the ASTROM input file.
+    - Removed confusing "table empty" message in the case that no object
+    coordinates are specified.
+    - Removed dependency on sed to format ASTROM input file.  The astrom.x
+    executable is now called directly and the "astrom" foreign task has
+    been removed.  With these two changes, sites can install their own
+    version of ASTROM as long as the user has the binaries on her path.
+    No SunOS specific dependency remains.
+    - Task only requires one input parameter now, defaulting the ASTROM
+    input/output rootname to the table name.
+    - RA/Dec tangent coordinate parameters are now real instead of
+    string.  No special formatting is required for sexigesimal numbers.
+    - Renamed epoch parameters as corresponding equinox names.  These
+    are now strings, permitting Besselian ("B") or Julian ("J") prefixes
+    to specify FK4 or FK5 values, respectively.
+    - Added "geometry" parameter that is passed through as the ASTROM
+    telescope type.  Allowed values are ASTR, SCHM, and some values for
+    specific telescopes.  (Seaman, 1997-05-07)
+
+t_tpeak.x
+    Removed requirement for index column in object files, only the X and
+    Y coordinates are now required.  If the index ID is omitted, the ID
+    will be equivalent to the current row number in the table.
+    (Seaman, 1997-06-18)
+
+tpltsol.cl
+    Removed "reopen database" query - all database activity is now
+    appended to the file.  (Seaman, 1997-08-04)
+
+tfinder.cl, dssfinder.cl
+    Changed default reselect value to yes.  Changed prompt to be more
+    obvious.  (Seaman, 1997-08-04)
+
+tastrom.cl, tfinder.cl, dssfinder.cl
+    Inverted various prompts from "reopen" to "overwrite".
+    (Seaman, 1997-08-04)
+
+t_tpeak.x
+    Added ":selectpars" command as an alias for ":eparam selectpars".
+    Removed requirement to double AND single quote string values in
+    selectpars.  Table column names as entered by the user are now
+    checked for validity.  Malformed selection criteria are omitted.
+    The final selection expression is printed on the terminal.
+    (Seaman, 1997-08-04)
+
+selectpars.par
+    Reworded prompts to remove no longer necessary string quoting advice.
+    Note that old format still works for backwards compatibility.
+    (Seaman, 1997-08-04)
+
+package zzsetenv.def
+    Added environment variables, gscnorth and gscsouth, to provide
+    default values for the gscfind task pointers to the GSC CD-ROMS.
+    This will make it more straightforward to configure the package
+    outside of the Tucson headquarters (e.g., on Kitt Peak).
+    (Seaman, 1997-08-04)
+
+t_tpeak.x
+    Deleted program objects are now removed permanently via the "d"
+    keystroke.  The "cjklp" keystrokes now check explicitly whether
+    the cursor is positioned closest to a catalog source or a program
+    object.  (Seaman, 1997-08-05)
+
+dssfinder.cl
+    The EPOCH will now be used to generate a DATE-OBS if the DATE-OBS
+    is missing.  This is intended to support the Quick V (?) format.
+    Not obvious if this is the only difference between the two formats.
+    Tfinder does not do this, since the EPOCH really means EQUINOX to
+    the FITS standard.  (Seaman, 1997-08-05)
+
+tpltsol.cl
+    The task previously only checked for empty table input before
+    entering the ccmap fitting routine.  Now tables with fewer than
+    three centered catalog sources will generate an error message
+    due to insufficient degrees of freedom.  Tables with three and
+    four sources will generate warning messages.  There remains no
+    protection against users who manually select a higher order fit
+    than the data will support.  Users will ideally center at least
+    five objects before entering the "e" keystroke (for instance).
+    (Seaman, 1997-08-05)
+
+t_tpeak.x, tastrom.cl
+    Fixed a few more places where the coordinates were formatted real,
+    not double.  These were likely not of numeric significance.
+    (Seaman, 1997-08-05)
+
+finder$lib/tbset.h (removed)
+    This local copy was unnecessary and broke when Phil Hodge changed
+    some buffer sizes.
+    (Seaman, 2000-02-02)
+
+t_tfield.x
+    Added an access test on the output file.  Rearranged the tf_open
+    routine to make it a bit more robust.
+    (Seaman, 2000-02-02)
+
+tfinder.cl, dssfinder.cl
+    Replaced references to trename with rename.  A printf was missing
+    the argument required by its format string.
+    (Seaman, 2000-02-02)
+
+t_tpeak.x
+    Removed some debug statements.
+    (Seaman, 2000-02-02)
+
+tastrom.cl
+    Inger Jorgenson supplied a fix for tastrom under the v2.1 tprint behavior.
+    (Seaman, 2000-02-02)
+
+tfinder.cl, dssfinder.cl, t_tfield.x, tfield.par
+    Tweaked the Y2K fixes.
+    (Seaman, 2000-02-03)
+
+VERSION, finder.par
+    updated version to v2.1
+    (Seaman, 2000-02-03)
+
+doc$tfinder.hlp, doc$tfield.hlp
+    Corrected some out of date references to EPOCH (now EQUINOX) and
+    DATE-OBS.
+    (Seaman, 2000-02-03)
+
+t_tfield.x
+    Fixed a problem predicting coordinate locations for transposed
+    image options - especially for non-square transposed images.
+    (R. Seaman, 2000-02-10)
+
+t_tfield.x
+    Commented out some now superfluous variable declarations.
+    (R. Seaman, 2000-02-11)
+
+VERSION, finder.par
+    updated version to v2.2
+    (Seaman, 2000-02-11)

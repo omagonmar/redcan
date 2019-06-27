@@ -1,0 +1,101 @@
+#$Header: /home/pros/xray/lib/doc/RCS/is_imhead.hlp,v 11.0 1997/11/06 16:22:57 prosb Exp $
+#$Log: is_imhead.hlp,v $
+#Revision 11.0  1997/11/06 16:22:57  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:59  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:49  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:38  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:06  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:51  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:53  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:48  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:33  pros
+#General Release 1.0
+#
+.help is_imhead May90 PROS_Library
+NAME
+.in 4
+is_imhead - determine if a standard PROS header exists in a image file
+.sp
+.in -4
+USAGE
+.in 4
+got = is_imhead(im)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	im		pointer		im handle
+
+Return Arguments:
+	got		int		YES if a PROS header is available
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function is_imhead checks the existence of
+several parameters in the image file to
+determine if the file contains a "standard" PROS header.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how to get, put, and display the X-ray
+header information in a image file.
+.in 8
+.nf
+procedure foo()
+
+char	imname[SZ_FNAME]	# image name
+int	display			# display level
+pointer im			# image handle
+pointer	imhead			# image header pointer
+pointer	immap()			# open a image file
+int	clgeti()		# get cl param
+int	is_imhead()		# get image header
+
+begin
+	call clgstr("image", imname, SZ_FNAME)
+	display = clgeti("display")
+	# open the image file
+	im = immap(imname, READ_ONLY, NULL)
+	# read in the X-ray header information
+	if( is_imhead(im) == YES ){
+	    call get_imhead(im, imhead)
+	    ... (manipulate the header) ...
+	    # write out the header information
+	    call put_imhead(im, imhead)
+	    # display, if necessary
+	    if( display >0 ){
+		call disp_imhead(imhead)
+	    }
+	}
+	# close the file
+	call imunmap(im)
+end
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+image.h (which defines the struct into which image header is read)

@@ -1,0 +1,36 @@
+      packages:
+       xdataio - Tasks to convert data to/from FITS format
+         xplot - Plotting routines for XRAY data
+        xproto - Crude tasks, currently under development
+     xobsolete - Tasks that will soon be removed from the system
+       ximages - Additions to IRAF images package
+      xspatial - X-ray spatial analysis package
+     xspectral - X-ray spectral analysis package
+       xtiming - X-ray timing analysis package
+         tasks:
+      xapropos - List all tasks related to a given subject
+
+( Type help <topic> for info on any of the following: )
+      pros           -  overview of all IRAF/PROS tasks
+      bugs           -  description of known IRAF/PROS bugs
+      coords         -  description of IRAF coordinates used in PROS
+      exposure       -  description of PROS exposure correction support
+      explain_errors -  description of PROS error computations for low 
+                        count/bin data
+      explain_xdata  -  description of new RDF file formats
+      explain_screen -  description of PROS support for temporal screening
+      extensions     -  description of conventions for PROS file extensions
+      file_compare   -  comparison of new/RDF formats to OLD formats in PROS
+      filter         -  description of filtering options in PROS
+      missions       -  list of missions and instruments support by PROS
+      prf 	     -  information on the Point Response Function (or psf)
+      qpoe           -  description of the QPOE data file and user interface
+      rosat_files    -  description of ROSAT data files which can be input
+                        to PROS
+      regions        -  description of PROS region masks
+      release_xray   -  release notes for this build
+      wcsbug         -  Logical/physical coordinate conversion incorrect 
+                        for derived images
+      xspec_interface-  description of how to convert data into XSPEC
+                        PHA files
+

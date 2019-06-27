@@ -1,0 +1,241 @@
+#$Header: /home/pros/xray/xspatial/doc/RCS/imdisp.hlp,v 11.0 1997/11/06 16:29:39 prosb Exp $
+#$Log: imdisp.hlp,v $
+#Revision 11.0  1997/11/06 16:29:39  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:37:28  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:56:28  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:28:40  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:10:49  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:28:38  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:34:36  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/23  16:39:42  janet
+#updated for apr 92 release.
+#
+#Revision 3.0  91/08/02  01:27:07  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/03  15:25:40  prosb
+#xray.xspatial   7/3/91
+#
+#Revision 2.0  91/03/06  23:22:37  pros
+#General Release 1.0
+#
+.help imdisp Apr89 xray.xspatial
+.ih
+NAME
+imdisp -- pixel display of photons in the specified regions of an image
+.ih
+USAGE
+imdisp  image
+.ih
+DESCRIPTION
+\fIimdisp\fR displays the pixel values of an array of photons in the
+specified source regions. Exposure filtering can be applied if a PLIO
+exposure mask and a threshold value are supplied by the user.  The
+\fInrows\fR and \fIncols\fR parameters determine the size of the
+display on the screen as well as the dimensions of the table.  The
+image is blocked (compressed) to fit into a display buffer of
+dimensions \fIncols\fR by \fInrows\fR. The right and bottom sides of
+the image are clipped to fit into this display buffer, if necessary.
+The display also contains information about the blocking factors,
+scale, bias, and flip orientation.
+
+Note that the width of each displayed pixel is determined by the data
+type of the file (e.g. int data is displayed using a "%5d " format,
+while float data is displayed using a "%7.2f " format) so that the
+number of columns to be displayed may have to be adjusted (or the
+screen size made larger if a re-sizable window is being used) to avoid
+overflowing the screen size.  In addition, scale and bias can be used
+to scale the blocked data before being displayed to avoid overflow.
+
+A table file can be created that contains the same information as the
+display.  Column names are c<xxx>, where <xxx> is the pixel number of
+the start of each column.  For example, a 10x10 image with 3 columns
+will have column names c1, c4, and c7.  The header of the table
+contains the x and y blocking factors, scale, bias, and flip
+orientation, as well as mask and exposure information.
+
+The display (and table) can be flipped so that the last row is
+displayed first.  Visually, the display will look "correct", that is,
+north will be up for Einstein images.  However, in such a case, the
+first row of the table will be the last row of the image data.
+
+If the image is a large-dimension qpoe (e.g., HRI), it is much faster
+to block the image using the qpoe \fIblock\fR filter than to have the
+task do the blocking to fit the display.  That is:
+.nf
+
+		imdisp "hri.qp[block=85]" ncols=16 nrows=16
+
+will be much faster than
+
+		imdisp hri.qp ncols=16 nrows=16
+
+.fi
+The display will be the same, except that the block factor will be
+displayed as 1 in the former case, and as 85 in the latter.
+.ih
+PARAMETERS
+.ls image = ""		prompt = image file to display
+
+The image data file. This can be any IRAF image file, including X-ray
+QPOE files.  In the latter case, all QPOE filters are available to the
+user, although it is not recommended that the MASK specifier be used
+directly in the QPOE filter specification.  Note, however, that
+\fIimdisp\fR only displays a 1-D or 2-D section of an image.  Images
+of dimension greater than two must use the IRAF section specification
+to reduce the dimensionality of the data to be displayed.
+.le
+.ls (region = "") [string]
+
+The ASCII region descriptor or pixel mask file name.
+.le
+.ls (exposure = "NONE") [string]
+
+The PLIO mask containing exposure information for the specified image.
+If the null string is input, the name will be the same root as the
+image file with a "_exp.pl" extension.  If "NONE" is input (the
+default), no exposure filtering is performed.
+.le
+.ls (expthresh = 0.) [real]
+
+The percentage of total exposure required for a given pixel to pass
+the exposure filter, (if an exposure mask is present).  For example,
+if expthresh is 50.0, then only pixels whose exposure time is >= 50%
+will be used.  An exposure threshold of 0% allows all photons to pass
+the exposure filter.
+.le
+.ls (scale = 1.) [real]
+
+The multiplicative scale factor to be applied to the blocked data.
+This is useful if the data overflows the format of the display.
+.le
+.ls (bias = 0.) [real]
+
+The additive bias to be applied to the blocked data.
+.le
+.ls (flip = yes) [boolean]
+
+Boolean flag that determines whether the data is displayed in reverse
+row order.  If flip is true, the data is displayed (and also entered
+into the table) such that the first row of data is at the bottom of the
+display (table).  This is how data is normally displayed by ximage and
+corresponds to the fact that the IRAF coordinate origin is in the lower
+left.  However, when flip is true, the first row of table data is actually
+the last row of data from the image.
+.le
+.ls (ncols = 12) [int]
+
+The number of columns to display.  The image is blocked (compressed)
+in the first dimension to fit this display size.
+.le
+.ls (nrows = 12) [int]
+
+The number of rows to display.  The image is blocked (compressed) in the second
+dimension to fit this display size.
+.le
+.ls (disp_header = no) [boolean]
+
+Boolean flag that determines whether the X-ray header information is
+displayed (if such information is available).
+.le
+.ls (table = "NONE") [string]
+
+Name of the STScI table file to create. If the null string is input,
+the table file name defaults to the root of the qpoe file with a
+"_imd.tab" extension.  The extension can be omitted in the
+specification.  The table file contains \fIncols\fR columns of data,
+each column containing \fInrows\fR values. If the string "NONE" is
+input (the default), no table file is created.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the table file can be
+overwritten, if it already exists.
+.le
+.ih
+EXAMPLES
+1. Display the image file i296 through a mask i296.pl consisting of
+the following regions:
+.nf
+
+	annulus(449.74,409.2,0,200,n=3)&pie(449.74,409.2,0,360,n=3)
+
+.fi
+Mask the data through an exposure mask with the threshold of exposure
+set at 99 percent. Create a table named i296_imd.tab.
+.nf
+
+cl> imdisp i296 i296.pl "" 99.0 "" nrows=12 ncols=12
+
+image:		i296
+mask_name:	in memory & i296_exp.pl
+mask_type:	region & exposure
+ref_file:	i296
+xdim:		1024
+ydim:		1024
+scale:		none
+regions:	ANNULUS(449.74,409.20,0.00,200.00,n=3.00) &
+		PIE(449.74,409.20,0.00,360.00,n=3.00)
+exposure threshold:	99.0000000
+
+blocking factors (x,y):	85 85
+scale factor:	 1.00
+bias factor:	 0.00
+display is flipped
+
+    0     0     0     0     0     0     0     0     0     0     0     0 
+    0     0     0     0     0     0     0     0     0     0     0     0 
+    0     0     0     0     0     0     0     0     0     0     0     0 
+    0     0     0     0     0     0     0     0     0     0     0     0 
+    0     0     0     0   142   601    18     0     0     0     0     0 
+    0     0     0   255  3561  7496  7727   392     0     0     0     0 
+    0     0     0  1268  3838 13381  9062  2424     0     0     0     0 
+    0     0     0   669  1925  7932  3489  1023     0     0     0     0 
+    0     0     0     3   693  1340  1779   445     0     0     0     0 
+    0     0     0     0   329    21     0     0     0     0     0     0 
+    0     0     0     0     0     0     0     0     0     0     0     0 
+    0     0     0     0     0     0     0     0     0     0     0     0 
+
+total counts:			 69813
+max value at pixel (6,6):	 13381
+(pixel (1,1) is in lower left corner)
+
+The i296_imd.tab file can be displayed using tprint.
+.fi
+.ih
+TIME REQUIREMENTS
+The time required depends on the speed of the mask I/O, and is
+proportional to the number of photons being filtered.  Also, if a
+region description is input rather than an already existing pixel mask,
+for source and/or bkgd region, the pixel mask must be created at run
+time.  This only takes a few seconds.
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on QPOE filtering (\fIhelp qpoe\fR) for a description of
+the QPOE filter user interface.
+
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

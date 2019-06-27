@@ -1,0 +1,63 @@
+#$Header: /tmp_mnt/home/pros/xray/ximages/xvops/RCS/mkpkg,v 8.0 94/06/27 14:46:59 prosb Rel $
+#$Log:	mkpkg,v $
+#Revision 8.0  94/06/27  14:46:59  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:28:05  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:08:53  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:28:15  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:32:30  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:18:22  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:34:12  pros
+#General Release 1.0
+#
+# Make more VOPS vector operators library.
+
+update:
+$checkout libxvops.a ..
+$update   libxvops.a
+$checkin  libxvops.a ..
+$exit
+ 
+tfiles:
+	$set	GA   = "$$generic -k -p gen/"
+
+	# Each of the following generic files is expanded for each of the
+	# datatypes listed in the -t flag.
+
+	$ifolder (gen/math.h, math.h )     cp  math.h gen       	$endif
+	$ifolder (gen/landi.x, land.gx )   $(GA) -t  silrdx  land.gx	$endif
+ 	$ifolder (gen/lori.x, lor.gx )     $(GA) -t  silrdx  lor.gx	$endif
+	$ifolder (gen/landki.x, landk.gx ) $(GA) -t  silrdx  landk.gx	$endif
+ 	$ifolder (gen/lorki.x, lork.gx )   $(GA) -t  silrdx  lork.gx	$endif
+	$ifolder (gen/lnoti.x, lnot.gx )   $(GA) -t  silrdx  lnot.gx	$endif
+	$ifolder (gen/selki.x, selk.gx )   $(GA) -t  silrdx  selk.gx	$endif
+	$ifolder (gen/selkvi.x, selkv.gx ) $(GA) -t  silrdx  selkv.gx	$endif
+	$ifolder (gen/sel2i.x, sel2.gx )   $(GA) -t  silrdx  sel2.gx	$endif
+	$ifolder (gen/prni.x, prn.gx )     $(GA) -t  silrdx  prn.gx	$endif
+	$ifolder (gen/sini.x, sin.gx )     $(GA) -t  silrdx  sin.gx	$endif
+	$ifolder (gen/cosi.x, cos.gx )     $(GA) -t  silrdx  cos.gx	$endif
+	$ifolder (gen/tani.x, tan.gx )     $(GA) -t  silrdx  tan.gx	$endif
+	$ifolder (gen/asini.x, asin.gx )   $(GA) -t  silrdx  asin.gx	$endif
+	$ifolder (gen/acosi.x, acos.gx )   $(GA) -t  silrdx  acos.gx	$endif
+	$ifolder (gen/atani.x, atan.gx )   $(GA) -t  silrdx  atan.gx	$endif
+	$ifolder (gen/atn2i.x, atn2.gx )   $(GA) -t  silrdx  atn2.gx	$endif
+	$ifolder (gen/expi.x, exp.gx )     $(GA) -t  silrdx  exp.gx	$endif
+	$ifolder (gen/ninti.x, nint.gx )   $(GA) -t  silrdx  nint.gx	$endif
+	;
+
+libxvops.a:
+	$ifeq (USE_GENERIC, yes) $call tfiles $endif
+	$set XFLAGS = "$(XVFLAGS)"
+	@gen
+	;

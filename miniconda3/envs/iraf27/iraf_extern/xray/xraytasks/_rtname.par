@@ -1,0 +1,35 @@
+#$Header: /home/pros/xray/xraytasks/RCS/_rtname.par,v 11.0 1997/11/06 16:46:28 prosb Exp $
+#$Log: _rtname.par,v $
+#Revision 11.0  1997/11/06 16:46:28  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:36:59  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:46:17  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:08:06  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  17:02:53  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  23:08:32  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:43:38  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:26:09  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:23:51  pros
+#General Release 1.0
+#
+#
+#  Parameters for the _rootname task
+#
+infilename,s,a,"",,,"input filename"
+outfilename,s,a,"",,,"output filename or template"
+ext,s,a,"",,,"requested extension"

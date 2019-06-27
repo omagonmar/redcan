@@ -1,0 +1,1480 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.mtools-2013_01_02-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.mtools-post-link.sh",
+    "bin/.iraf.mtools-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/mtools/NOTE.2003",
+    "iraf_extern/mtools/README.install",
+    "iraf_extern/mtools/airchart/README",
+    "iraf_extern/mtools/airchart/Revisions",
+    "iraf_extern/mtools/airchart/airchart.hlp",
+    "iraf_extern/mtools/airchart/airchart.o",
+    "iraf_extern/mtools/airchart/airchart.par",
+    "iraf_extern/mtools/airchart/airchart.x",
+    "iraf_extern/mtools/airchart/astprecess.o",
+    "iraf_extern/mtools/airchart/astprecess.x",
+    "iraf_extern/mtools/airchart/asttimes.o",
+    "iraf_extern/mtools/airchart/asttimes.x",
+    "iraf_extern/mtools/airchart/example",
+    "iraf_extern/mtools/airchart/glabax.h",
+    "iraf_extern/mtools/airchart/glabax.o",
+    "iraf_extern/mtools/airchart/glabax.x",
+    "iraf_extern/mtools/airchart/glabax.x.orig",
+    "iraf_extern/mtools/airchart/glbencode.o",
+    "iraf_extern/mtools/airchart/glbencode.x",
+    "iraf_extern/mtools/airchart/glbencode.x.orig",
+    "iraf_extern/mtools/airchart/mkpkg",
+    "iraf_extern/mtools/bin",
+    "iraf_extern/mtools/bin.linux/x_airchart.e",
+    "iraf_extern/mtools/bin.linux/x_chart.e",
+    "iraf_extern/mtools/bin.linux/x_format.e",
+    "iraf_extern/mtools/bin.linux/x_gki2mng.e",
+    "iraf_extern/mtools/bin.linux/x_mysplot.e",
+    "iraf_extern/mtools/bin.linux/x_pca.e",
+    "iraf_extern/mtools/build_log",
+    "iraf_extern/mtools/chart/NOTES",
+    "iraf_extern/mtools/chart/README",
+    "iraf_extern/mtools/chart/Revisions",
+    "iraf_extern/mtools/chart/chart.h",
+    "iraf_extern/mtools/chart/chart.hlp",
+    "iraf_extern/mtools/chart/chart.key",
+    "iraf_extern/mtools/chart/chart.mc",
+    "iraf_extern/mtools/chart/chart.o",
+    "iraf_extern/mtools/chart/chart.par",
+    "iraf_extern/mtools/chart/chart.x",
+    "iraf_extern/mtools/chart/chfuncs.x",
+    "iraf_extern/mtools/chart/colon.x",
+    "iraf_extern/mtools/chart/cursor.x",
+    "iraf_extern/mtools/chart/cutoff.h",
+    "iraf_extern/mtools/chart/database.h",
+    "iraf_extern/mtools/chart/dbio.gx",
+    "iraf_extern/mtools/chart/dbio.x",
+    "iraf_extern/mtools/chart/dbmisc.x",
+    "iraf_extern/mtools/chart/evaluate.gx",
+    "iraf_extern/mtools/chart/evaluate.x",
+    "iraf_extern/mtools/chart/example/README",
+    "iraf_extern/mtools/chart/example/database",
+    "iraf_extern/mtools/chart/example/database2",
+    "iraf_extern/mtools/chart/example/dbformat",
+    "iraf_extern/mtools/chart/example/dbformat2",
+    "iraf_extern/mtools/chart/example/keys",
+    "iraf_extern/mtools/chart/example/keys2",
+    "iraf_extern/mtools/chart/example/nessie.fmt",
+    "iraf_extern/mtools/chart/example/pds.fmt",
+    "iraf_extern/mtools/chart/example/reds.dat",
+    "iraf_extern/mtools/chart/example/redshifts.fmt",
+    "iraf_extern/mtools/chart/format.x",
+    "iraf_extern/mtools/chart/gettoken.x",
+    "iraf_extern/mtools/chart/graph.x",
+    "iraf_extern/mtools/chart/gtools.h",
+    "iraf_extern/mtools/chart/histogram.key",
+    "iraf_extern/mtools/chart/histogram.x",
+    "iraf_extern/mtools/chart/libpkg.a",
+    "iraf_extern/mtools/chart/mark.x",
+    "iraf_extern/mtools/chart/markers.h",
+    "iraf_extern/mtools/chart/misc.x",
+    "iraf_extern/mtools/chart/mkpkg",
+    "iraf_extern/mtools/chart/nearest.x",
+    "iraf_extern/mtools/chart/new/database.h",
+    "iraf_extern/mtools/chart/new/format.x",
+    "iraf_extern/mtools/chart/new/readdb.x",
+    "iraf_extern/mtools/chart/pager.x",
+    "iraf_extern/mtools/chart/palomar.x",
+    "iraf_extern/mtools/chart/parse.x",
+    "iraf_extern/mtools/chart/pointer.h",
+    "iraf_extern/mtools/chart/postfix.h",
+    "iraf_extern/mtools/chart/printit.x",
+    "iraf_extern/mtools/chart/rcursor.x",
+    "iraf_extern/mtools/chart/readdb.x",
+    "iraf_extern/mtools/chart/readmarks.x",
+    "iraf_extern/mtools/chart/replace.x",
+    "iraf_extern/mtools/chart/select.x",
+    "iraf_extern/mtools/chart/spitlist.x",
+    "iraf_extern/mtools/chart/tables.x",
+    "iraf_extern/mtools/chart/token.h",
+    "iraf_extern/mtools/chart/unmark.x",
+    "iraf_extern/mtools/conda_build.sh",
+    "iraf_extern/mtools/gki2mng/gkgfuncs.o",
+    "iraf_extern/mtools/gki2mng/gkgfuncs.x",
+    "iraf_extern/mtools/gki2mng/gki2mng.hlp",
+    "iraf_extern/mtools/gki2mng/gki2mng.o",
+    "iraf_extern/mtools/gki2mng/gki2mng.par",
+    "iraf_extern/mtools/gki2mng/gki2mng.x",
+    "iraf_extern/mtools/gki2mng/mkpkg",
+    "iraf_extern/mtools/help_log",
+    "iraf_extern/mtools/lib/apropos.db",
+    "iraf_extern/mtools/lib/helpdb.mip",
+    "iraf_extern/mtools/lib/mkpkg.inc",
+    "iraf_extern/mtools/lib/root.hd",
+    "iraf_extern/mtools/lib/rootmtools.hd",
+    "iraf_extern/mtools/lib/strip.mtools",
+    "iraf_extern/mtools/lib/zzsetenv.def",
+    "iraf_extern/mtools/misc/defitize.cl",
+    "iraf_extern/mtools/misc/defitize.hlp",
+    "iraf_extern/mtools/misc/fitize.cl",
+    "iraf_extern/mtools/misc/fitize.hlp",
+    "iraf_extern/mtools/misc/format.hlp",
+    "iraf_extern/mtools/misc/format.o",
+    "iraf_extern/mtools/misc/format.par",
+    "iraf_extern/mtools/misc/format.x",
+    "iraf_extern/mtools/misc/mkpkg",
+    "iraf_extern/mtools/mkpkg",
+    "iraf_extern/mtools/mtools.cl",
+    "iraf_extern/mtools/mtools.hd",
+    "iraf_extern/mtools/mtools.men",
+    "iraf_extern/mtools/mtools.par",
+    "iraf_extern/mtools/mysplot/README",
+    "iraf_extern/mtools/mysplot/eqwidth.x",
+    "iraf_extern/mtools/mysplot/eqwidth.x.orig",
+    "iraf_extern/mtools/mysplot/eqwidthcp.x",
+    "iraf_extern/mtools/mysplot/eqwidthcp.x.orig",
+    "iraf_extern/mtools/mysplot/gfit.x",
+    "iraf_extern/mtools/mysplot/gfit.x.orig",
+    "iraf_extern/mtools/mysplot/glabax.h",
+    "iraf_extern/mtools/mysplot/glabax.x",
+    "iraf_extern/mtools/mysplot/glabax.x.orig",
+    "iraf_extern/mtools/mysplot/gtlabax.x",
+    "iraf_extern/mtools/mysplot/gtlabax.x.orig",
+    "iraf_extern/mtools/mysplot/gtools.h",
+    "iraf_extern/mtools/mysplot/gtswind.x",
+    "iraf_extern/mtools/mysplot/gtswind.x.orig",
+    "iraf_extern/mtools/mysplot/libpkg.a",
+    "iraf_extern/mtools/mysplot/linelist.x",
+    "iraf_extern/mtools/mysplot/mark.h",
+    "iraf_extern/mtools/mysplot/mark.x",
+    "iraf_extern/mtools/mysplot/mkpkg",
+    "iraf_extern/mtools/mysplot/mysplot.hlp",
+    "iraf_extern/mtools/mysplot/mysplot.par",
+    "iraf_extern/mtools/mysplot/nearest.x",
+    "iraf_extern/mtools/mysplot/replot.x",
+    "iraf_extern/mtools/mysplot/replot.x.orig",
+    "iraf_extern/mtools/mysplot/rest.dat",
+    "iraf_extern/mtools/mysplot/shifted.dat",
+    "iraf_extern/mtools/mysplot/splot.key",
+    "iraf_extern/mtools/mysplot/splot.key.orig",
+    "iraf_extern/mtools/mysplot/splot.log",
+    "iraf_extern/mtools/mysplot/splot.o",
+    "iraf_extern/mtools/mysplot/splot.par.orig",
+    "iraf_extern/mtools/mysplot/splot.x",
+    "iraf_extern/mtools/mysplot/splot.x.orig",
+    "iraf_extern/mtools/mysplot/stshelp.key",
+    "iraf_extern/mtools/mysplot/stshelp.key.orig",
+    "iraf_extern/mtools/numrec_list.txt",
+    "iraf_extern/mtools/pca/mh.f",
+    "iraf_extern/mtools/pca/mh.f.orig",
+    "iraf_extern/mtools/pca/mh.o",
+    "iraf_extern/mtools/pca/mkpkg",
+    "iraf_extern/mtools/pca/output.o",
+    "iraf_extern/mtools/pca/output.x",
+    "iraf_extern/mtools/pca/pca.hlp",
+    "iraf_extern/mtools/pca/pca.o",
+    "iraf_extern/mtools/pca/pca.par",
+    "iraf_extern/mtools/pca/pca.x",
+    "iraf_extern/mtools/splot.log",
+    "iraf_extern/mtools/ur_extern.pkg",
+    "iraf_extern/mtools/ur_mkpkg_cmd",
+    "iraf_extern/mtools/ur_mkpkg_patterns"
+  ],
+  "fn": "iraf.mtools-2013_01_02-2.tar.bz2",
+  "license": "IRAF MIT/X11 variant, Numerical Recipes",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.mtools-2013_01_02-2",
+    "type": 1
+  },
+  "md5": "414d0aedddf6b55939ce0485164fb329",
+  "name": "iraf.mtools",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.mtools-2013_01_02-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.mtools-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "27e441c7effa03f2ebaa5afa66e2df043d41d8ee21c789532c90b6598213924e",
+        "sha256_in_prefix": "27e441c7effa03f2ebaa5afa66e2df043d41d8ee21c789532c90b6598213924e",
+        "size_in_bytes": 114
+      },
+      {
+        "_path": "bin/.iraf.mtools-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "b7b4f036c87651375d2c0c7062cc8cef7d767d82b094c188164d8ab583333308",
+        "sha256_in_prefix": "b7b4f036c87651375d2c0c7062cc8cef7d767d82b094c188164d8ab583333308",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "sha256_in_prefix": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "sha256_in_prefix": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/mtools/NOTE.2003",
+        "path_type": "hardlink",
+        "sha256": "bdf8b4180a7a25a95a4a22766229d87ba0da73c7c14a998734b73a29c87a78ec",
+        "sha256_in_prefix": "bdf8b4180a7a25a95a4a22766229d87ba0da73c7c14a998734b73a29c87a78ec",
+        "size_in_bytes": 708
+      },
+      {
+        "_path": "iraf_extern/mtools/README.install",
+        "path_type": "hardlink",
+        "sha256": "fb51c6b92f032014e259eb6647faa6452039acc39a761f6cad88f16c2c4b3a3a",
+        "sha256_in_prefix": "fb51c6b92f032014e259eb6647faa6452039acc39a761f6cad88f16c2c4b3a3a",
+        "size_in_bytes": 8247
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/README",
+        "path_type": "hardlink",
+        "sha256": "302854f395d76feb298196974799be975142ff0a8f7c057423d9593d6db1377c",
+        "sha256_in_prefix": "302854f395d76feb298196974799be975142ff0a8f7c057423d9593d6db1377c",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/Revisions",
+        "path_type": "hardlink",
+        "sha256": "9fbf3ef663dfb9d2dcda2badb8515958d102eb19c71f16ad8c4bb6b4b6e0bd20",
+        "sha256_in_prefix": "9fbf3ef663dfb9d2dcda2badb8515958d102eb19c71f16ad8c4bb6b4b6e0bd20",
+        "size_in_bytes": 337
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/airchart.hlp",
+        "path_type": "hardlink",
+        "sha256": "7bcaf6a755106a7e3613c00babc888b3e2ccfe521d703ca731cbe62cc59c2f2d",
+        "sha256_in_prefix": "7bcaf6a755106a7e3613c00babc888b3e2ccfe521d703ca731cbe62cc59c2f2d",
+        "size_in_bytes": 2503
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/airchart.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "8a5ccd8f0172f84cd9fd899ce57f9ea42304271ab00d0b310e7afefd580ab248",
+        "sha256_in_prefix": "baca7e9a16c7aeb037bcb351625ef4112d2e528447d05a4e6323056bbc7f9480",
+        "size_in_bytes": 44040
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/airchart.par",
+        "path_type": "hardlink",
+        "sha256": "441825bd0b3b5902dd5fde50f6f989636de9ffe9d674b7bfaab0451c7f735a01",
+        "sha256_in_prefix": "441825bd0b3b5902dd5fde50f6f989636de9ffe9d674b7bfaab0451c7f735a01",
+        "size_in_bytes": 377
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/airchart.x",
+        "path_type": "hardlink",
+        "sha256": "90fed18cd13bdbae5e85f3ebf6675ec343fa239912973b68ed35691ac5f6a208",
+        "sha256_in_prefix": "90fed18cd13bdbae5e85f3ebf6675ec343fa239912973b68ed35691ac5f6a208",
+        "size_in_bytes": 17360
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/astprecess.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "4723f7341c2ebac01f15f2f1ebdf6113cbf2e175d7a117d6195cbc080f2fc3a9",
+        "sha256_in_prefix": "6f77146f81fa3306b307d9e65716abc6025d9631db5e1b027e39932d9c3a37bb",
+        "size_in_bytes": 6900
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/astprecess.x",
+        "path_type": "hardlink",
+        "sha256": "760464d062851bddae018d5bc97864c6aea44f9924867cc9bd9f1fd6c39a5e88",
+        "sha256_in_prefix": "760464d062851bddae018d5bc97864c6aea44f9924867cc9bd9f1fd6c39a5e88",
+        "size_in_bytes": 3425
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/asttimes.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "3f40fb7edef10df6e362504278868b2d891becd58c34b028f9965d5174616b40",
+        "sha256_in_prefix": "bc57851b71e851caa121310562d3be28ec8c7beaaf3f078c3eda45632077db2e",
+        "size_in_bytes": 9944
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/asttimes.x",
+        "path_type": "hardlink",
+        "sha256": "bdc260a101325cefd3cb9b68ccc35234688ac220fed9846202aef2af567d1be8",
+        "sha256_in_prefix": "bdc260a101325cefd3cb9b68ccc35234688ac220fed9846202aef2af567d1be8",
+        "size_in_bytes": 3648
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/example",
+        "path_type": "hardlink",
+        "sha256": "83571951cb522707309b2a3079d78d06e28033cb4b8756d83de08e90d3202ef8",
+        "sha256_in_prefix": "83571951cb522707309b2a3079d78d06e28033cb4b8756d83de08e90d3202ef8",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glabax.h",
+        "path_type": "hardlink",
+        "sha256": "c085d1300687d4050331d0e8ca08b1bc71e2da8d45b4e83c7d82cae6282bc2e7",
+        "sha256_in_prefix": "c085d1300687d4050331d0e8ca08b1bc71e2da8d45b4e83c7d82cae6282bc2e7",
+        "size_in_bytes": 2246
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glabax.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "f3041ff9a7c3c8188e7b585f9d899ec84f1a410d2a8ed96e9b06684c6832c40a",
+        "sha256_in_prefix": "8477497051f9e2d435a818e9a2c2f93ae0c540ab8cb59c494933fb7369214d21",
+        "size_in_bytes": 14656
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glabax.x",
+        "path_type": "hardlink",
+        "sha256": "aec40b78e749e0940af39388e075de3563f0a53939df501f62fc60fb15f108f8",
+        "sha256_in_prefix": "aec40b78e749e0940af39388e075de3563f0a53939df501f62fc60fb15f108f8",
+        "size_in_bytes": 8706
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glabax.x.orig",
+        "path_type": "hardlink",
+        "sha256": "81e5fca4f01780c35c866f3b77dd116f18c211eecfbdb53d2cc3cd36b80128c5",
+        "sha256_in_prefix": "81e5fca4f01780c35c866f3b77dd116f18c211eecfbdb53d2cc3cd36b80128c5",
+        "size_in_bytes": 8444
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glbencode.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "3bd0dfb809e2b39708d3dd68013154b651e1c85e5e40d624c6722829561da8f1",
+        "sha256_in_prefix": "5d47052038cd3550ab1179c02740bbc4d2dbd7161a272d0c66ebb4a2e5baa5e7",
+        "size_in_bytes": 5044
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glbencode.x",
+        "path_type": "hardlink",
+        "sha256": "3c418ad26a3f330cff0d9026de2d8492905ca3b7e744e80ed27d3504841024fa",
+        "sha256_in_prefix": "3c418ad26a3f330cff0d9026de2d8492905ca3b7e744e80ed27d3504841024fa",
+        "size_in_bytes": 1956
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/glbencode.x.orig",
+        "path_type": "hardlink",
+        "sha256": "b4f2464c906062c28fec7be26d648b2e556eb50139f00c795996f3d345e56c45",
+        "sha256_in_prefix": "b4f2464c906062c28fec7be26d648b2e556eb50139f00c795996f3d345e56c45",
+        "size_in_bytes": 1773
+      },
+      {
+        "_path": "iraf_extern/mtools/airchart/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "a0461f218c42812b65dfd408271df289b2a741faf03a7575f6b117731bcbd2a9",
+        "sha256_in_prefix": "a0461f218c42812b65dfd408271df289b2a741faf03a7575f6b117731bcbd2a9",
+        "size_in_bytes": 407
+      },
+      {
+        "_path": "iraf_extern/mtools/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/mtools/bin.linux/x_airchart.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "671d006283b7eccd5ecc33caa079ecd80f22a4caca719ff44775f42f70854536",
+        "sha256_in_prefix": "3ad214f930fb3eb7229b2eb35f037a3b136a3dd32c66fd5ea41929e4bd642ea9",
+        "size_in_bytes": 1154863
+      },
+      {
+        "_path": "iraf_extern/mtools/bin.linux/x_chart.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "996c4691be8c99384444fed7cea2e2ffd3d5e9b83475b8fb0544be71fcec87ae",
+        "sha256_in_prefix": "bc25c2a96ce0ee47a17bc10951f28cefab08acd6ec1cee54d4ae86295e6710f5",
+        "size_in_bytes": 1698429
+      },
+      {
+        "_path": "iraf_extern/mtools/bin.linux/x_format.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "df5d9477b30475dceffc01b32a20f2e9da97ee5d41b91aad1650fdbded2a3ffe",
+        "sha256_in_prefix": "7aa37954976f5296f3421bf93936e07a89fa87a9f3da1c24e813279a210eabac",
+        "size_in_bytes": 904000
+      },
+      {
+        "_path": "iraf_extern/mtools/bin.linux/x_gki2mng.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "7a926a99e4771fff09d36489cdb76e62dfdf883c7188a0c15be20d2644a5a77c",
+        "sha256_in_prefix": "577ad48b3ac00c2781fc8d90ac2c4b7e1efdeaae3ab1c2d7dca8038c446da05c",
+        "size_in_bytes": 936966
+      },
+      {
+        "_path": "iraf_extern/mtools/bin.linux/x_mysplot.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "65a4e22c45a9531b9de75403e03f25bd94ce3c71ce0bddafc8210a4d3a367ad8",
+        "sha256_in_prefix": "32e523fe7696302cb5e6c912db1038d21e4a5262a99f1ae8dd86811ecaa9c28d",
+        "size_in_bytes": 7408911
+      },
+      {
+        "_path": "iraf_extern/mtools/bin.linux/x_pca.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "fe5e6299c9ea78260b5a402f97ec9a94fba30167e891146182f00636b697c12a",
+        "sha256_in_prefix": "b836d44115ae4ade86b9dc4cab4bb4177099f3fdb62b4cddaa1323a0afea2b31",
+        "size_in_bytes": 934094
+      },
+      {
+        "_path": "iraf_extern/mtools/build_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "06bb2319dc792c8e8c1e5bc9dc14cd3d96df844f0a36033d25ecfff3d932e60a",
+        "sha256_in_prefix": "3020481f5788d685a7008a5a2ae86e22cddf5f1b0bace49c2e6c339cdb306264",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/NOTES",
+        "path_type": "hardlink",
+        "sha256": "53e0770e7b7bfe83f671825152475254f93aebc6705ce3a4c33ee74e2fbb244a",
+        "sha256_in_prefix": "53e0770e7b7bfe83f671825152475254f93aebc6705ce3a4c33ee74e2fbb244a",
+        "size_in_bytes": 522
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/README",
+        "path_type": "hardlink",
+        "sha256": "b57ff49e70b39718af2831e0bf551313ea149406bda6818d06f2d30be0727246",
+        "sha256_in_prefix": "b57ff49e70b39718af2831e0bf551313ea149406bda6818d06f2d30be0727246",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/Revisions",
+        "path_type": "hardlink",
+        "sha256": "b451ce8084c2792b728d25a571c989cc118c76de86649f9a3f843f862d0f9760",
+        "sha256_in_prefix": "b451ce8084c2792b728d25a571c989cc118c76de86649f9a3f843f862d0f9760",
+        "size_in_bytes": 9855
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.h",
+        "path_type": "hardlink",
+        "sha256": "74fa30d73c208a4da7b7c2ba1b408d644779e517fec71ff33e2002e61905c562",
+        "sha256_in_prefix": "74fa30d73c208a4da7b7c2ba1b408d644779e517fec71ff33e2002e61905c562",
+        "size_in_bytes": 3286
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.hlp",
+        "path_type": "hardlink",
+        "sha256": "5f44b48584854e9bab7642e58b24def6c1dfbdc1c326532341654ebbd6b71d85",
+        "sha256_in_prefix": "5f44b48584854e9bab7642e58b24def6c1dfbdc1c326532341654ebbd6b71d85",
+        "size_in_bytes": 43090
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.key",
+        "path_type": "hardlink",
+        "sha256": "d7f6c533a5180597e6df542b413063147536bbaec755004206faac759d35d8eb",
+        "sha256_in_prefix": "d7f6c533a5180597e6df542b413063147536bbaec755004206faac759d35d8eb",
+        "size_in_bytes": 4889
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.mc",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "fdfb16ddb3cf1030519f91ac2af1db0c73bce1be0d1f53492c4a6e7fb4fc98c0",
+        "sha256_in_prefix": "c343ff5a6c0b8211fbe56b18330b994b3289d9c1c6ec8156faeeddb9703f0d7c",
+        "size_in_bytes": 12440
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.par",
+        "path_type": "hardlink",
+        "sha256": "fe65978fb174185af60ca28c1eb342e8f8c1b542c18b05aa629d868662d848a3",
+        "sha256_in_prefix": "fe65978fb174185af60ca28c1eb342e8f8c1b542c18b05aa629d868662d848a3",
+        "size_in_bytes": 2506
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chart.x",
+        "path_type": "hardlink",
+        "sha256": "50458dc74f95e1c59bb41274bc1b2eff55632cdc321b17b1db0ed6ab9f05cc05",
+        "sha256_in_prefix": "50458dc74f95e1c59bb41274bc1b2eff55632cdc321b17b1db0ed6ab9f05cc05",
+        "size_in_bytes": 1484
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/chfuncs.x",
+        "path_type": "hardlink",
+        "sha256": "02d41efc9e114cacc23c5b627ccf39fa347596e5b75153350ebfc75d7d09cfa5",
+        "sha256_in_prefix": "02d41efc9e114cacc23c5b627ccf39fa347596e5b75153350ebfc75d7d09cfa5",
+        "size_in_bytes": 17258
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/colon.x",
+        "path_type": "hardlink",
+        "sha256": "0df6a9218d872fa2f787335d31c5be35d08e0a8f0bc30d30bd8906197c4ebb55",
+        "sha256_in_prefix": "0df6a9218d872fa2f787335d31c5be35d08e0a8f0bc30d30bd8906197c4ebb55",
+        "size_in_bytes": 13879
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/cursor.x",
+        "path_type": "hardlink",
+        "sha256": "8fcac26de75156813103791be37bc034b083785845f249b8a30ba80e62bb459a",
+        "sha256_in_prefix": "8fcac26de75156813103791be37bc034b083785845f249b8a30ba80e62bb459a",
+        "size_in_bytes": 15635
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/cutoff.h",
+        "path_type": "hardlink",
+        "sha256": "f46045f03c968412e1be86f4ddb866df7afb526a3cd1591b4a5d1d076e99a022",
+        "sha256_in_prefix": "f46045f03c968412e1be86f4ddb866df7afb526a3cd1591b4a5d1d076e99a022",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/database.h",
+        "path_type": "hardlink",
+        "sha256": "43287695a6e9d20dde419b28d0828bc45de20c0d7482d832cc254db157f7f834",
+        "sha256_in_prefix": "43287695a6e9d20dde419b28d0828bc45de20c0d7482d832cc254db157f7f834",
+        "size_in_bytes": 1743
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/dbio.gx",
+        "path_type": "hardlink",
+        "sha256": "ca3f679f215b4a8837df80424f626d5c66b94a8644729e01f2ffc65db2c36243",
+        "sha256_in_prefix": "ca3f679f215b4a8837df80424f626d5c66b94a8644729e01f2ffc65db2c36243",
+        "size_in_bytes": 2755
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/dbio.x",
+        "path_type": "hardlink",
+        "sha256": "d62e92a2997aeee6f15d0245c70887291dc583700be83f76c715af52f3cb89cd",
+        "sha256_in_prefix": "d62e92a2997aeee6f15d0245c70887291dc583700be83f76c715af52f3cb89cd",
+        "size_in_bytes": 4943
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/dbmisc.x",
+        "path_type": "hardlink",
+        "sha256": "63f689fc491b237a7b8fd44b4407b0b0c3010e77563830aa3c697e91c723da55",
+        "sha256_in_prefix": "63f689fc491b237a7b8fd44b4407b0b0c3010e77563830aa3c697e91c723da55",
+        "size_in_bytes": 5222
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/evaluate.gx",
+        "path_type": "hardlink",
+        "sha256": "79a3a3ea188764400a57f61d95a996f20a0b749fa8dc7318fc66b1c4d2460059",
+        "sha256_in_prefix": "79a3a3ea188764400a57f61d95a996f20a0b749fa8dc7318fc66b1c4d2460059",
+        "size_in_bytes": 15824
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/evaluate.x",
+        "path_type": "hardlink",
+        "sha256": "7d3f25b70468305a17edc0da8a793b490cb6e660c7e1389d20fe62dfc7b46f11",
+        "sha256_in_prefix": "7d3f25b70468305a17edc0da8a793b490cb6e660c7e1389d20fe62dfc7b46f11",
+        "size_in_bytes": 22542
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/README",
+        "path_type": "hardlink",
+        "sha256": "4a57437487c9a28c65c285ffc7eb308d42a0d2b445ee0c6128157c8dfd5d408d",
+        "sha256_in_prefix": "4a57437487c9a28c65c285ffc7eb308d42a0d2b445ee0c6128157c8dfd5d408d",
+        "size_in_bytes": 359
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/database",
+        "path_type": "hardlink",
+        "sha256": "963ebdbdb98496f1cc2bc5bf7bcac21474543fc99beb21ef88b5eb3f5eca85ad",
+        "sha256_in_prefix": "963ebdbdb98496f1cc2bc5bf7bcac21474543fc99beb21ef88b5eb3f5eca85ad",
+        "size_in_bytes": 1418
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/database2",
+        "path_type": "hardlink",
+        "sha256": "e733124bb339e9c03a379661436112811f4ca0b92d8231b68f95c605a20bdce7",
+        "sha256_in_prefix": "e733124bb339e9c03a379661436112811f4ca0b92d8231b68f95c605a20bdce7",
+        "size_in_bytes": 2221
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/dbformat",
+        "path_type": "hardlink",
+        "sha256": "a09cc600b35b84b6d0ff2f59e1a8b7b37da0d1e64c966d7b534aad80eae98c32",
+        "sha256_in_prefix": "a09cc600b35b84b6d0ff2f59e1a8b7b37da0d1e64c966d7b534aad80eae98c32",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/dbformat2",
+        "path_type": "hardlink",
+        "sha256": "592339570c4349b543861f6b34b780ac93bb0a8816d575e6087b971366bb24a9",
+        "sha256_in_prefix": "592339570c4349b543861f6b34b780ac93bb0a8816d575e6087b971366bb24a9",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/keys",
+        "path_type": "hardlink",
+        "sha256": "cac826e1261442a6e6e87db1ffdd5b1448c804db88be3cc1fa57ca78ffe3fbd1",
+        "sha256_in_prefix": "cac826e1261442a6e6e87db1ffdd5b1448c804db88be3cc1fa57ca78ffe3fbd1",
+        "size_in_bytes": 235
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/keys2",
+        "path_type": "hardlink",
+        "sha256": "b02b954e0dae6b822283f6a5bb32ed36576ee125ee306dd741467d4ae75083bf",
+        "sha256_in_prefix": "b02b954e0dae6b822283f6a5bb32ed36576ee125ee306dd741467d4ae75083bf",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/nessie.fmt",
+        "path_type": "hardlink",
+        "sha256": "ac9b326c6bee2e984af3db01940f0c4a5edf33798ab046ab2aa521a56ab9287e",
+        "sha256_in_prefix": "ac9b326c6bee2e984af3db01940f0c4a5edf33798ab046ab2aa521a56ab9287e",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/pds.fmt",
+        "path_type": "hardlink",
+        "sha256": "b5c6fbaecd33c39c8d130c2227ce3e861f6baab92f15557db9cf4412f1f58917",
+        "sha256_in_prefix": "b5c6fbaecd33c39c8d130c2227ce3e861f6baab92f15557db9cf4412f1f58917",
+        "size_in_bytes": 127
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/reds.dat",
+        "path_type": "hardlink",
+        "sha256": "7c009f986747cd43aade5b61b6a46432ece6da050a1e2791bb1006b06031049e",
+        "sha256_in_prefix": "7c009f986747cd43aade5b61b6a46432ece6da050a1e2791bb1006b06031049e",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/example/redshifts.fmt",
+        "path_type": "hardlink",
+        "sha256": "e97d6199ca91e686ffca6618ab35e943e48cd36b20c93737c25b0653f0468e2d",
+        "sha256_in_prefix": "e97d6199ca91e686ffca6618ab35e943e48cd36b20c93737c25b0653f0468e2d",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/format.x",
+        "path_type": "hardlink",
+        "sha256": "4907fd81dfda333f4b732eee3eed9f1e4abb6f08b295aa85c755e1170c262f56",
+        "sha256_in_prefix": "4907fd81dfda333f4b732eee3eed9f1e4abb6f08b295aa85c755e1170c262f56",
+        "size_in_bytes": 4935
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/gettoken.x",
+        "path_type": "hardlink",
+        "sha256": "02f5c00025fb9231ecd15d29e43c437e34abcead5bbf675e9718b90c443177c4",
+        "sha256_in_prefix": "02f5c00025fb9231ecd15d29e43c437e34abcead5bbf675e9718b90c443177c4",
+        "size_in_bytes": 7345
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/graph.x",
+        "path_type": "hardlink",
+        "sha256": "b03bc2c226654d7ae7afc0fa603729691bfcae5edeacf703aa3a3dbf31018606",
+        "sha256_in_prefix": "b03bc2c226654d7ae7afc0fa603729691bfcae5edeacf703aa3a3dbf31018606",
+        "size_in_bytes": 8339
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/gtools.h",
+        "path_type": "hardlink",
+        "sha256": "fb71b054eb53fba2b98cb8df57cfffe39ee33b5a75ef4d47cfd3b605c23cffbd",
+        "sha256_in_prefix": "fb71b054eb53fba2b98cb8df57cfffe39ee33b5a75ef4d47cfd3b605c23cffbd",
+        "size_in_bytes": 4964
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/histogram.key",
+        "path_type": "hardlink",
+        "sha256": "c613e8275e04a02ef53710c2ddf314fe3b70b937769bf2acffee91f77f8b4d35",
+        "sha256_in_prefix": "c613e8275e04a02ef53710c2ddf314fe3b70b937769bf2acffee91f77f8b4d35",
+        "size_in_bytes": 3564
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/histogram.x",
+        "path_type": "hardlink",
+        "sha256": "cdf466c92672137743375a1943202b63ad6092354f8baa5046d10e050cf39a9d",
+        "sha256_in_prefix": "cdf466c92672137743375a1943202b63ad6092354f8baa5046d10e050cf39a9d",
+        "size_in_bytes": 19058
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/libpkg.a",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "5a2b6d6adf1037399b997c497d7db08dc3c81f3c9b230ead865c39a95d6a9be0",
+        "sha256_in_prefix": "73ce21e5f7c0fd93709748165f870f29ea741c10e77f43556b92fb3b25a715f5",
+        "size_in_bytes": 525666
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/mark.x",
+        "path_type": "hardlink",
+        "sha256": "d89fc3aff9719b0e4045fddd2c92044a7ea7c30a26b783209264f73583c7b041",
+        "sha256_in_prefix": "d89fc3aff9719b0e4045fddd2c92044a7ea7c30a26b783209264f73583c7b041",
+        "size_in_bytes": 3112
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/markers.h",
+        "path_type": "hardlink",
+        "sha256": "b58653e5de3bbf2fccafb8bc0268ad1bae18d3e0076ff12f077a6395626aa6b8",
+        "sha256_in_prefix": "b58653e5de3bbf2fccafb8bc0268ad1bae18d3e0076ff12f077a6395626aa6b8",
+        "size_in_bytes": 423
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/misc.x",
+        "path_type": "hardlink",
+        "sha256": "da1e6375eeaf85c02e43e7d7c7c6606fb32bfbbd2c91b346f385b756fa5f8512",
+        "sha256_in_prefix": "da1e6375eeaf85c02e43e7d7c7c6606fb32bfbbd2c91b346f385b756fa5f8512",
+        "size_in_bytes": 1667
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "04289a3fba6c5e9c2f81281d9431df6213a9d7079298c070d9ada4588b48888d",
+        "sha256_in_prefix": "04289a3fba6c5e9c2f81281d9431df6213a9d7079298c070d9ada4588b48888d",
+        "size_in_bytes": 2264
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/nearest.x",
+        "path_type": "hardlink",
+        "sha256": "05fa227beecfda02c3209f442e2069cc0d3e4adff4c0e1b542e1618947aaf731",
+        "sha256_in_prefix": "05fa227beecfda02c3209f442e2069cc0d3e4adff4c0e1b542e1618947aaf731",
+        "size_in_bytes": 1922
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/new/database.h",
+        "path_type": "hardlink",
+        "sha256": "ffc29a74b27934026c4c3fddc9017e65aa2a8d6e25ad5bc5598e3454548b8de6",
+        "sha256_in_prefix": "ffc29a74b27934026c4c3fddc9017e65aa2a8d6e25ad5bc5598e3454548b8de6",
+        "size_in_bytes": 1483
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/new/format.x",
+        "path_type": "hardlink",
+        "sha256": "df85460309754f9a65fefb37ec815c04f3526fe6b4a4396c00af327402444b11",
+        "sha256_in_prefix": "df85460309754f9a65fefb37ec815c04f3526fe6b4a4396c00af327402444b11",
+        "size_in_bytes": 3904
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/new/readdb.x",
+        "path_type": "hardlink",
+        "sha256": "8ccbe41f871343ac92a8f597742e9d5b3327c0af73a9f45b8fc9355f35b0ef5b",
+        "sha256_in_prefix": "8ccbe41f871343ac92a8f597742e9d5b3327c0af73a9f45b8fc9355f35b0ef5b",
+        "size_in_bytes": 2585
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/pager.x",
+        "path_type": "hardlink",
+        "sha256": "3fe45ba0cbad2626c0e1affa429635a7dc629909b2d6be54828b26cbfdbf615f",
+        "sha256_in_prefix": "3fe45ba0cbad2626c0e1affa429635a7dc629909b2d6be54828b26cbfdbf615f",
+        "size_in_bytes": 5396
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/palomar.x",
+        "path_type": "hardlink",
+        "sha256": "15e9c581ce8842144d835dfeb63c5fc459a52802d8ba31250ce7da68d03ab78d",
+        "sha256_in_prefix": "15e9c581ce8842144d835dfeb63c5fc459a52802d8ba31250ce7da68d03ab78d",
+        "size_in_bytes": 6006
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/parse.x",
+        "path_type": "hardlink",
+        "sha256": "a749b8a723030aee8dcda61a63a78906f298e205e4d3b7b81d76a062cd005b9a",
+        "sha256_in_prefix": "a749b8a723030aee8dcda61a63a78906f298e205e4d3b7b81d76a062cd005b9a",
+        "size_in_bytes": 21227
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/pointer.h",
+        "path_type": "hardlink",
+        "sha256": "e7275af31bfd8d0f893051842bf5c5a5b0c8261ce71e02c27d8073ae9f285b05",
+        "sha256_in_prefix": "e7275af31bfd8d0f893051842bf5c5a5b0c8261ce71e02c27d8073ae9f285b05",
+        "size_in_bytes": 231
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/postfix.h",
+        "path_type": "hardlink",
+        "sha256": "62707eaf2b7eb765a1c7998dd041fbc70b81673ac894ec8938c1c014fded212a",
+        "sha256_in_prefix": "62707eaf2b7eb765a1c7998dd041fbc70b81673ac894ec8938c1c014fded212a",
+        "size_in_bytes": 3026
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/printit.x",
+        "path_type": "hardlink",
+        "sha256": "f2b4872d1a471bc6eb00a216a970aebcb819e80012fb8b77f0ad917c1b01e57d",
+        "sha256_in_prefix": "f2b4872d1a471bc6eb00a216a970aebcb819e80012fb8b77f0ad917c1b01e57d",
+        "size_in_bytes": 7442
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/rcursor.x",
+        "path_type": "hardlink",
+        "sha256": "da3d1ae9666065a4df2bfe640a314164c275169a650cd7ce5063bd2ef553442a",
+        "sha256_in_prefix": "da3d1ae9666065a4df2bfe640a314164c275169a650cd7ce5063bd2ef553442a",
+        "size_in_bytes": 17121
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/readdb.x",
+        "path_type": "hardlink",
+        "sha256": "7b1ecc487e18d416f8ac35cb1d060ea4d3f1c948d8dbc68abcf09da900aa9f87",
+        "sha256_in_prefix": "7b1ecc487e18d416f8ac35cb1d060ea4d3f1c948d8dbc68abcf09da900aa9f87",
+        "size_in_bytes": 3313
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/readmarks.x",
+        "path_type": "hardlink",
+        "sha256": "7340c3fd2ab3d19ea669bfdb1104052586ae1205f1d6751e75d99b758c9ff796",
+        "sha256_in_prefix": "7340c3fd2ab3d19ea669bfdb1104052586ae1205f1d6751e75d99b758c9ff796",
+        "size_in_bytes": 2136
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/replace.x",
+        "path_type": "hardlink",
+        "sha256": "b73a78f470b6c67c5bb62a38467f4557a4bd2d76400e354966e2c6b835f37b08",
+        "sha256_in_prefix": "b73a78f470b6c67c5bb62a38467f4557a4bd2d76400e354966e2c6b835f37b08",
+        "size_in_bytes": 5192
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/select.x",
+        "path_type": "hardlink",
+        "sha256": "e0c3638df0e3d82641182c46ad53d065f651387953df601e3d71f9162b26e3ef",
+        "sha256_in_prefix": "e0c3638df0e3d82641182c46ad53d065f651387953df601e3d71f9162b26e3ef",
+        "size_in_bytes": 15146
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/spitlist.x",
+        "path_type": "hardlink",
+        "sha256": "55194315fa2534cc4441001eebfa7cbc743ccd9921caeb447b7844ced6405181",
+        "sha256_in_prefix": "55194315fa2534cc4441001eebfa7cbc743ccd9921caeb447b7844ced6405181",
+        "size_in_bytes": 468
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/tables.x",
+        "path_type": "hardlink",
+        "sha256": "49b48dc202930caa592aac88b39470a479492275bd09bd813e0fcbc9d56ac797",
+        "sha256_in_prefix": "49b48dc202930caa592aac88b39470a479492275bd09bd813e0fcbc9d56ac797",
+        "size_in_bytes": 3878
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/token.h",
+        "path_type": "hardlink",
+        "sha256": "d87c050a03c70a9e210aa61a84d05d567fbe90c6fe64fa1573e13eb09face326",
+        "sha256_in_prefix": "d87c050a03c70a9e210aa61a84d05d567fbe90c6fe64fa1573e13eb09face326",
+        "size_in_bytes": 1856
+      },
+      {
+        "_path": "iraf_extern/mtools/chart/unmark.x",
+        "path_type": "hardlink",
+        "sha256": "993dccd99c1c15ca8b127f2e2df9dcb8fa09f42b152650727aec661b70661e89",
+        "sha256_in_prefix": "993dccd99c1c15ca8b127f2e2df9dcb8fa09f42b152650727aec661b70661e89",
+        "size_in_bytes": 3221
+      },
+      {
+        "_path": "iraf_extern/mtools/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "3648e5f9c54f7e46d85865f281c519052373359cf268bba70254fe736954b469",
+        "sha256_in_prefix": "473bf41a360499d646b6eec5832a70a84c03574eb4fcdd981ad2e0adc7ee5074",
+        "size_in_bytes": 2400
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/gkgfuncs.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "e830181a97910cd9f98dea618b598699fd5082c5ec1e738b3d06e31cdcba9db7",
+        "sha256_in_prefix": "d419341e89f233159a921f18df4a3b6920de9b0069c08af00071211c25699371",
+        "size_in_bytes": 24764
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/gkgfuncs.x",
+        "path_type": "hardlink",
+        "sha256": "37f10d9cbaff04e04be46d90b714ec076daf18bacb5bed1bb3105825008bf26f",
+        "sha256_in_prefix": "37f10d9cbaff04e04be46d90b714ec076daf18bacb5bed1bb3105825008bf26f",
+        "size_in_bytes": 13983
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/gki2mng.hlp",
+        "path_type": "hardlink",
+        "sha256": "2729f87114087d7cb2805c05d43c30a4c2275c84fd9e94750d009679d680125e",
+        "sha256_in_prefix": "2729f87114087d7cb2805c05d43c30a4c2275c84fd9e94750d009679d680125e",
+        "size_in_bytes": 624
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/gki2mng.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "317b75187fa67924be43f521ba29a3db286068a21f7f878ce262dfb05fb46bc4",
+        "sha256_in_prefix": "d1329b575d721cdc67c3ea286350e5240b162852767b150babb7940fed390c0e",
+        "size_in_bytes": 10724
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/gki2mng.par",
+        "path_type": "hardlink",
+        "sha256": "c4dad6ba939890f31c0f5a30bba6b90670451d67794b0fe499328207cb7b4a8f",
+        "sha256_in_prefix": "c4dad6ba939890f31c0f5a30bba6b90670451d67794b0fe499328207cb7b4a8f",
+        "size_in_bytes": 33
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/gki2mng.x",
+        "path_type": "hardlink",
+        "sha256": "a32b9742ed488b7097a6f304601b671f801c8851f488d0b048918a4b48fee642",
+        "sha256_in_prefix": "a32b9742ed488b7097a6f304601b671f801c8851f488d0b048918a4b48fee642",
+        "size_in_bytes": 1256
+      },
+      {
+        "_path": "iraf_extern/mtools/gki2mng/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "3620968bcb88067364924fb5aa12b0504c7c65b6b2050176e39252e03c30af49",
+        "sha256_in_prefix": "3620968bcb88067364924fb5aa12b0504c7c65b6b2050176e39252e03c30af49",
+        "size_in_bytes": 363
+      },
+      {
+        "_path": "iraf_extern/mtools/help_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "72773cadd317beef4a2426ceacbf40344a2034f93b2bc767b7dde6d72203130f",
+        "sha256_in_prefix": "26e8eae8f76b3684da320cab4abe57527d2e475459de4e411a16da2f74378958",
+        "size_in_bytes": 943
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/apropos.db",
+        "path_type": "hardlink",
+        "sha256": "102ba421f81ca70a488067d72e18c6c6015d2b3e8f9e776db41d601574762559",
+        "sha256_in_prefix": "102ba421f81ca70a488067d72e18c6c6015d2b3e8f9e776db41d601574762559",
+        "size_in_bytes": 525
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/helpdb.mip",
+        "path_type": "hardlink",
+        "sha256": "dbf0ca626c425d85a5c9a7b01dfb89977f1bf0ea6cc0f5332321cf7b299b8223",
+        "sha256_in_prefix": "dbf0ca626c425d85a5c9a7b01dfb89977f1bf0ea6cc0f5332321cf7b299b8223",
+        "size_in_bytes": 3396
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "be33da85f882457599a5b4825eee3936f9f190cfa3e8e948b3156da6a1c2eb5f",
+        "sha256_in_prefix": "be33da85f882457599a5b4825eee3936f9f190cfa3e8e948b3156da6a1c2eb5f",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/root.hd",
+        "path_type": "hardlink",
+        "sha256": "5cf988a32f74275d58ffb987c34da2ba286f6962c19f1409e2e21d44a359482c",
+        "sha256_in_prefix": "5cf988a32f74275d58ffb987c34da2ba286f6962c19f1409e2e21d44a359482c",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/rootmtools.hd",
+        "path_type": "hardlink",
+        "sha256": "e0ca403056920ad63b9a033238ffa869bc762fd1cfe24274baf0dffd8e91424d",
+        "sha256_in_prefix": "e0ca403056920ad63b9a033238ffa869bc762fd1cfe24274baf0dffd8e91424d",
+        "size_in_bytes": 269
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/strip.mtools",
+        "path_type": "hardlink",
+        "sha256": "84b681507828e4845a7bbe862aa15c57ba04bb6a90f73cd88ef19aa2617a3493",
+        "sha256_in_prefix": "84b681507828e4845a7bbe862aa15c57ba04bb6a90f73cd88ef19aa2617a3493",
+        "size_in_bytes": 648
+      },
+      {
+        "_path": "iraf_extern/mtools/lib/zzsetenv.def",
+        "path_type": "hardlink",
+        "sha256": "fd123f031432fda591e3769cdbe673e5d72c1e79d383754374d0fb2c638653f3",
+        "sha256_in_prefix": "fd123f031432fda591e3769cdbe673e5d72c1e79d383754374d0fb2c638653f3",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/defitize.cl",
+        "path_type": "hardlink",
+        "sha256": "2160301c9c70a77f646bf54d56d5ecbccaacf5982a54939c205b9be482392b17",
+        "sha256_in_prefix": "2160301c9c70a77f646bf54d56d5ecbccaacf5982a54939c205b9be482392b17",
+        "size_in_bytes": 569
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/defitize.hlp",
+        "path_type": "hardlink",
+        "sha256": "fea354f4f0aafd6c5eb43bdf6858fc6227bfd481b8965a6b728e776f0dcf4a1b",
+        "sha256_in_prefix": "fea354f4f0aafd6c5eb43bdf6858fc6227bfd481b8965a6b728e776f0dcf4a1b",
+        "size_in_bytes": 667
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/fitize.cl",
+        "path_type": "hardlink",
+        "sha256": "e6ce25789cb32c80064907da94670bf383b7c558266692f16cb23a8127494975",
+        "sha256_in_prefix": "e6ce25789cb32c80064907da94670bf383b7c558266692f16cb23a8127494975",
+        "size_in_bytes": 775
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/fitize.hlp",
+        "path_type": "hardlink",
+        "sha256": "3cfe1edb94954a1851a03e7ef450e3c4ce7e68413840f464117b2b0b9afffcf4",
+        "sha256_in_prefix": "3cfe1edb94954a1851a03e7ef450e3c4ce7e68413840f464117b2b0b9afffcf4",
+        "size_in_bytes": 535
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/format.hlp",
+        "path_type": "hardlink",
+        "sha256": "f462aafb7d29a0c2ecc8a7079bcd72c260da0264dc2daf49995a6e3bdd8faf53",
+        "sha256_in_prefix": "f462aafb7d29a0c2ecc8a7079bcd72c260da0264dc2daf49995a6e3bdd8faf53",
+        "size_in_bytes": 769
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/format.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "41d3aecaa60c562fd769aca61f25c703f394b6f24366adeb5cc851f556416023",
+        "sha256_in_prefix": "9c770170842f99a5f081aaa9968d3d13ac335163c23a93dc5c1b57cd2b7659a6",
+        "size_in_bytes": 11568
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/format.par",
+        "path_type": "hardlink",
+        "sha256": "6f4c06678c64dd64042d0f2eb6ea0fbce7569a1e7c26afbf1e0445148da1a7ce",
+        "sha256_in_prefix": "6f4c06678c64dd64042d0f2eb6ea0fbce7569a1e7c26afbf1e0445148da1a7ce",
+        "size_in_bytes": 55
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/format.x",
+        "path_type": "hardlink",
+        "sha256": "bb325f38fc1bc1e4dd94019fff71d403cf66edc42eae5f5620494bbdca8e7d86",
+        "sha256_in_prefix": "bb325f38fc1bc1e4dd94019fff71d403cf66edc42eae5f5620494bbdca8e7d86",
+        "size_in_bytes": 1037
+      },
+      {
+        "_path": "iraf_extern/mtools/misc/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "e93f79c3c8d98537303ba6a2e7cf4716fcfd4ac187584e9e6caa3147709122d3",
+        "sha256_in_prefix": "e93f79c3c8d98537303ba6a2e7cf4716fcfd4ac187584e9e6caa3147709122d3",
+        "size_in_bytes": 244
+      },
+      {
+        "_path": "iraf_extern/mtools/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "2e6e7bd2ee852304b54c83bf481f376e41f373eec4d3adef9e88daf52bedfe00",
+        "sha256_in_prefix": "2e6e7bd2ee852304b54c83bf481f376e41f373eec4d3adef9e88daf52bedfe00",
+        "size_in_bytes": 4620
+      },
+      {
+        "_path": "iraf_extern/mtools/mtools.cl",
+        "path_type": "hardlink",
+        "sha256": "d8bcb5a4c5b2ac3478d055db9bc28faceb600e885ac0774cc9e320dc2aa957e7",
+        "sha256_in_prefix": "d8bcb5a4c5b2ac3478d055db9bc28faceb600e885ac0774cc9e320dc2aa957e7",
+        "size_in_bytes": 465
+      },
+      {
+        "_path": "iraf_extern/mtools/mtools.hd",
+        "path_type": "hardlink",
+        "sha256": "53b5eaf6e8315da9187d4af369a78469efb36b1e4f0c922cb8fb8d09ce8dc93d",
+        "sha256_in_prefix": "53b5eaf6e8315da9187d4af369a78469efb36b1e4f0c922cb8fb8d09ce8dc93d",
+        "size_in_bytes": 585
+      },
+      {
+        "_path": "iraf_extern/mtools/mtools.men",
+        "path_type": "hardlink",
+        "sha256": "1843f69b154c6b610d48071b3b2177091b37ab0977fe66e1ce0683a9a48a5147",
+        "sha256_in_prefix": "1843f69b154c6b610d48071b3b2177091b37ab0977fe66e1ce0683a9a48a5147",
+        "size_in_bytes": 465
+      },
+      {
+        "_path": "iraf_extern/mtools/mtools.par",
+        "path_type": "hardlink",
+        "sha256": "a1494dfbf708f8f536fd08808348f43358cc46e863ceb1b75e8b19e4db95430c",
+        "sha256_in_prefix": "a1494dfbf708f8f536fd08808348f43358cc46e863ceb1b75e8b19e4db95430c",
+        "size_in_bytes": 66
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/README",
+        "path_type": "hardlink",
+        "sha256": "2e7468840fd83573b9c9fc24eb36cfa747231c49ae619a1a815edd49d4bb068c",
+        "sha256_in_prefix": "2e7468840fd83573b9c9fc24eb36cfa747231c49ae619a1a815edd49d4bb068c",
+        "size_in_bytes": 1147
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/eqwidth.x",
+        "path_type": "hardlink",
+        "sha256": "4599da56203908506317014a43e00b0985a5bc146a2a883dab46d0b75ac30946",
+        "sha256_in_prefix": "4599da56203908506317014a43e00b0985a5bc146a2a883dab46d0b75ac30946",
+        "size_in_bytes": 2520
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/eqwidth.x.orig",
+        "path_type": "hardlink",
+        "sha256": "725aea543edeca86afc5ed2c7e0198bc10ce39f7725d8081aa568cfb31b36faf",
+        "sha256_in_prefix": "725aea543edeca86afc5ed2c7e0198bc10ce39f7725d8081aa568cfb31b36faf",
+        "size_in_bytes": 2490
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/eqwidthcp.x",
+        "path_type": "hardlink",
+        "sha256": "52f30c3eeeb6b4c0301b01e0f0d470bf2f1bf0acc40513a8048a5f1e7c372e39",
+        "sha256_in_prefix": "52f30c3eeeb6b4c0301b01e0f0d470bf2f1bf0acc40513a8048a5f1e7c372e39",
+        "size_in_bytes": 5580
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/eqwidthcp.x.orig",
+        "path_type": "hardlink",
+        "sha256": "9eb1e74aed4833cf7f78b6735679e6c8b966dc6e0fb81c8a8990aba1d36f5769",
+        "sha256_in_prefix": "9eb1e74aed4833cf7f78b6735679e6c8b966dc6e0fb81c8a8990aba1d36f5769",
+        "size_in_bytes": 5536
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gfit.x",
+        "path_type": "hardlink",
+        "sha256": "676de61fb496ea63fe7dd3e721c0b926628bb96551569f1673de46a422d80259",
+        "sha256_in_prefix": "676de61fb496ea63fe7dd3e721c0b926628bb96551569f1673de46a422d80259",
+        "size_in_bytes": 11004
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gfit.x.orig",
+        "path_type": "hardlink",
+        "sha256": "e801565a464237b917275bb2c98ca647d564a236192bb84585d6400bc0c1441c",
+        "sha256_in_prefix": "e801565a464237b917275bb2c98ca647d564a236192bb84585d6400bc0c1441c",
+        "size_in_bytes": 10962
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/glabax.h",
+        "path_type": "hardlink",
+        "sha256": "c085d1300687d4050331d0e8ca08b1bc71e2da8d45b4e83c7d82cae6282bc2e7",
+        "sha256_in_prefix": "c085d1300687d4050331d0e8ca08b1bc71e2da8d45b4e83c7d82cae6282bc2e7",
+        "size_in_bytes": 2246
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/glabax.x",
+        "path_type": "hardlink",
+        "sha256": "72bd29a22dce5c4fefaabde2c66d94a57a1f19a355fe10413bfa8f14f2ee7aa5",
+        "sha256_in_prefix": "72bd29a22dce5c4fefaabde2c66d94a57a1f19a355fe10413bfa8f14f2ee7aa5",
+        "size_in_bytes": 8683
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/glabax.x.orig",
+        "path_type": "hardlink",
+        "sha256": "81e5fca4f01780c35c866f3b77dd116f18c211eecfbdb53d2cc3cd36b80128c5",
+        "sha256_in_prefix": "81e5fca4f01780c35c866f3b77dd116f18c211eecfbdb53d2cc3cd36b80128c5",
+        "size_in_bytes": 8444
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gtlabax.x",
+        "path_type": "hardlink",
+        "sha256": "6d8767a4df1cd6f7f700993e3beb7fd02a2e998bc35e7ed7d69a53364467478c",
+        "sha256_in_prefix": "6d8767a4df1cd6f7f700993e3beb7fd02a2e998bc35e7ed7d69a53364467478c",
+        "size_in_bytes": 2830
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gtlabax.x.orig",
+        "path_type": "hardlink",
+        "sha256": "784770bad7db6b9e0bdc68a5445be38a8d73486b96bd360ec3791f26c6aea2c0",
+        "sha256_in_prefix": "784770bad7db6b9e0bdc68a5445be38a8d73486b96bd360ec3791f26c6aea2c0",
+        "size_in_bytes": 2790
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gtools.h",
+        "path_type": "hardlink",
+        "sha256": "fb71b054eb53fba2b98cb8df57cfffe39ee33b5a75ef4d47cfd3b605c23cffbd",
+        "sha256_in_prefix": "fb71b054eb53fba2b98cb8df57cfffe39ee33b5a75ef4d47cfd3b605c23cffbd",
+        "size_in_bytes": 4964
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gtswind.x",
+        "path_type": "hardlink",
+        "sha256": "3dcc65a39a1bfe514c6b4243822165de494ebff525b17039f826ae0c5b2a8f93",
+        "sha256_in_prefix": "3dcc65a39a1bfe514c6b4243822165de494ebff525b17039f826ae0c5b2a8f93",
+        "size_in_bytes": 1970
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/gtswind.x.orig",
+        "path_type": "hardlink",
+        "sha256": "cdb502f0d110559c092401840b3105caf8f52115d6fdf3524b4ce83b4d841785",
+        "sha256_in_prefix": "cdb502f0d110559c092401840b3105caf8f52115d6fdf3524b4ce83b4d841785",
+        "size_in_bytes": 1349
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/libpkg.a",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "32268d1c0189e6d41ca94d842082ac19d60e3b663bdbbb83ba188868ad1330e1",
+        "sha256_in_prefix": "eefcda4cfff7a07c9686f07344b856f953c0840053d2bc84c3d41ac2e4679d73",
+        "size_in_bytes": 4079550
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/linelist.x",
+        "path_type": "hardlink",
+        "sha256": "a567057a0a413d9a7f1414e3d5b00aa49b5206814ba44b94be0c019f4d44cd5b",
+        "sha256_in_prefix": "a567057a0a413d9a7f1414e3d5b00aa49b5206814ba44b94be0c019f4d44cd5b",
+        "size_in_bytes": 1350
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/mark.h",
+        "path_type": "hardlink",
+        "sha256": "09d76ce8de81ff1cf63c8b867289aa672947a108acec171b9ae9803246f9cba5",
+        "sha256_in_prefix": "09d76ce8de81ff1cf63c8b867289aa672947a108acec171b9ae9803246f9cba5",
+        "size_in_bytes": 299
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/mark.x",
+        "path_type": "hardlink",
+        "sha256": "f2ba344cc250af8bcdb251554d9b1197b17f452b66ec2a10228872e6f2303959",
+        "sha256_in_prefix": "f2ba344cc250af8bcdb251554d9b1197b17f452b66ec2a10228872e6f2303959",
+        "size_in_bytes": 2124
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "ecba8c551cb8b0e459294acecc49e6d68a324eba77d96273ee3b5240687f80af",
+        "sha256_in_prefix": "ecba8c551cb8b0e459294acecc49e6d68a324eba77d96273ee3b5240687f80af",
+        "size_in_bytes": 1566
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/mysplot.hlp",
+        "path_type": "hardlink",
+        "sha256": "3dacece10cf007ce7580a5670731a487d0c39fe53c6cf466bde49a15dada2f9c",
+        "sha256_in_prefix": "3dacece10cf007ce7580a5670731a487d0c39fe53c6cf466bde49a15dada2f9c",
+        "size_in_bytes": 7086
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/mysplot.par",
+        "path_type": "hardlink",
+        "sha256": "a3bfe5ee2f52d760c527dcf589894197b0370d193266e602bd63c45d68b70cb0",
+        "sha256_in_prefix": "a3bfe5ee2f52d760c527dcf589894197b0370d193266e602bd63c45d68b70cb0",
+        "size_in_bytes": 2354
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/nearest.x",
+        "path_type": "hardlink",
+        "sha256": "2d2b3c3fbefe947b43981b1a5b4bad69bb62f4bf4672c58ffa46a025753877a7",
+        "sha256_in_prefix": "2d2b3c3fbefe947b43981b1a5b4bad69bb62f4bf4672c58ffa46a025753877a7",
+        "size_in_bytes": 1327
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/replot.x",
+        "path_type": "hardlink",
+        "sha256": "ecdb5f2affaef00d443de9c48c848282d2f4a050c6ef86052d7f9f82f36b5b56",
+        "sha256_in_prefix": "ecdb5f2affaef00d443de9c48c848282d2f4a050c6ef86052d7f9f82f36b5b56",
+        "size_in_bytes": 451
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/replot.x.orig",
+        "path_type": "hardlink",
+        "sha256": "fac40a8d9d1cddf89f70811af4f3d37e9830eec9c089caaaf2053c33cf715a46",
+        "sha256_in_prefix": "fac40a8d9d1cddf89f70811af4f3d37e9830eec9c089caaaf2053c33cf715a46",
+        "size_in_bytes": 445
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/rest.dat",
+        "path_type": "hardlink",
+        "sha256": "f946e4ff2db513a67ed54a73e4f5f57d97fcb0875dfb867af6226e21ea70ea3b",
+        "sha256_in_prefix": "f946e4ff2db513a67ed54a73e4f5f57d97fcb0875dfb867af6226e21ea70ea3b",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/shifted.dat",
+        "path_type": "hardlink",
+        "sha256": "9a796948a950ca7534d4addd1cfc20441feeeed1f9c010695cc806c63f6534e1",
+        "sha256_in_prefix": "9a796948a950ca7534d4addd1cfc20441feeeed1f9c010695cc806c63f6534e1",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.key",
+        "path_type": "hardlink",
+        "sha256": "84e7d50b96fa2d02d4076dc46823a09953f3c126496c8c85d12548bc248f2f1d",
+        "sha256_in_prefix": "84e7d50b96fa2d02d4076dc46823a09953f3c126496c8c85d12548bc248f2f1d",
+        "size_in_bytes": 6047
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.key.orig",
+        "path_type": "hardlink",
+        "sha256": "96890a864aac4901389de5f506d0b2580f8990d4e0ba642a6b819a6bd5ef5439",
+        "sha256_in_prefix": "96890a864aac4901389de5f506d0b2580f8990d4e0ba642a6b819a6bd5ef5439",
+        "size_in_bytes": 5537
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.log",
+        "path_type": "hardlink",
+        "sha256": "d7e4622997a011f4c309b2cb772cd2e302a3d4fe6565a4e3ead33d89fe84f281",
+        "sha256_in_prefix": "d7e4622997a011f4c309b2cb772cd2e302a3d4fe6565a4e3ead33d89fe84f281",
+        "size_in_bytes": 1423
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "66895c0b727b7979e58fbdb1d98ad44b5b0fd89a78dc99f9d3bf0e8fab027896",
+        "sha256_in_prefix": "145943531adf0d8ea73e040ac10e9efc585856dc1303ec74c2471c73141f1c22",
+        "size_in_bytes": 65272
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.par.orig",
+        "path_type": "hardlink",
+        "sha256": "c4c0e676a9ed3cd9142e6b11817378ed1b2a2934cbf873b347c40ae08d661fdc",
+        "sha256_in_prefix": "c4c0e676a9ed3cd9142e6b11817378ed1b2a2934cbf873b347c40ae08d661fdc",
+        "size_in_bytes": 1973
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.x",
+        "path_type": "hardlink",
+        "sha256": "657d6e200a05494766ce4d02e41008227fb2264dc49ba0631fac3adbcf530dbb",
+        "sha256_in_prefix": "657d6e200a05494766ce4d02e41008227fb2264dc49ba0631fac3adbcf530dbb",
+        "size_in_bytes": 24745
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/splot.x.orig",
+        "path_type": "hardlink",
+        "sha256": "7308a0fc8b982b7f6eea3c110766419e5b1f8ba4f1c5c1415de7c14be9561f67",
+        "sha256_in_prefix": "7308a0fc8b982b7f6eea3c110766419e5b1f8ba4f1c5c1415de7c14be9561f67",
+        "size_in_bytes": 16942
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/stshelp.key",
+        "path_type": "hardlink",
+        "sha256": "826575ee1458fc05e51d1bb7cd7ecb56993ab11991ab3e863cb9187bebfe4301",
+        "sha256_in_prefix": "826575ee1458fc05e51d1bb7cd7ecb56993ab11991ab3e863cb9187bebfe4301",
+        "size_in_bytes": 638
+      },
+      {
+        "_path": "iraf_extern/mtools/mysplot/stshelp.key.orig",
+        "path_type": "hardlink",
+        "sha256": "4af70ef3b3d0f98ddb2bfe89b4c0abf8baab6656a540d90996ae10d174796cb7",
+        "sha256_in_prefix": "4af70ef3b3d0f98ddb2bfe89b4c0abf8baab6656a540d90996ae10d174796cb7",
+        "size_in_bytes": 461
+      },
+      {
+        "_path": "iraf_extern/mtools/numrec_list.txt",
+        "path_type": "hardlink",
+        "sha256": "011e4fe2226077be7fad910c49c3ba82d3710bc41d4e71c2e249a036d5e8d399",
+        "sha256_in_prefix": "011e4fe2226077be7fad910c49c3ba82d3710bc41d4e71c2e249a036d5e8d399",
+        "size_in_bytes": 17
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/mh.f",
+        "path_type": "hardlink",
+        "sha256": "a4bf9a9c0225fa8b8902370867f4f32fd56e063c884c5164d8308e35f5f3068e",
+        "sha256_in_prefix": "a4bf9a9c0225fa8b8902370867f4f32fd56e063c884c5164d8308e35f5f3068e",
+        "size_in_bytes": 15839
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/mh.f.orig",
+        "path_type": "hardlink",
+        "sha256": "57987c90263b2ece83c056547e9629a1ecd7d6189a5c1be317186109422058a4",
+        "sha256_in_prefix": "57987c90263b2ece83c056547e9629a1ecd7d6189a5c1be317186109422058a4",
+        "size_in_bytes": 20219
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/mh.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "e2ddd848161ecadc53acd60c1d30b628785811992b96ae6d0c424856a8b719f9",
+        "sha256_in_prefix": "95793c537a8c83def3e85303a138de6e7344279a01af34f3d5d063ff607640c4",
+        "size_in_bytes": 23140
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "1466fc20fc64f2ca679e571cecd101b4858a22cded87c929db7fc67f8b329a22",
+        "sha256_in_prefix": "1466fc20fc64f2ca679e571cecd101b4858a22cded87c929db7fc67f8b329a22",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/output.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "01fbf7f549f73d4bbe8ea0c084f93a5dbf4b42bd42c37f5cf2d141699810df79",
+        "sha256_in_prefix": "d4c600d23e9eddd85b62b3326d7c22cff4f48dae870de7c77f866b8f9af5cd2d",
+        "size_in_bytes": 14660
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/output.x",
+        "path_type": "hardlink",
+        "sha256": "60c0e024606cae47a83ffd0e8eff591858d0a044684f4f1ce3062b7660a59dab",
+        "sha256_in_prefix": "60c0e024606cae47a83ffd0e8eff591858d0a044684f4f1ce3062b7660a59dab",
+        "size_in_bytes": 4324
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/pca.hlp",
+        "path_type": "hardlink",
+        "sha256": "b3e4cbd727307bc93e8169d48986ae6b23aaba347aac4fb8ecad913c4c9b1f0f",
+        "sha256_in_prefix": "b3e4cbd727307bc93e8169d48986ae6b23aaba347aac4fb8ecad913c4c9b1f0f",
+        "size_in_bytes": 698
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/pca.o",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.mtools_1553892443477/_h_env_pl",
+        "sha256": "9a34ff9dbb929c5906fdde741cf5d26d5d789532a245d374d1a86637f1f15e1d",
+        "sha256_in_prefix": "d1c6855d2287a6aaff39f8bb7b1c720ef53c229549a5890e2f3dfb4a234482bd",
+        "size_in_bytes": 14136
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/pca.par",
+        "path_type": "hardlink",
+        "sha256": "be87ccfc90ef53448b18b451c3ac3def60b76da0663515006ddf009513aae47a",
+        "sha256_in_prefix": "be87ccfc90ef53448b18b451c3ac3def60b76da0663515006ddf009513aae47a",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "iraf_extern/mtools/pca/pca.x",
+        "path_type": "hardlink",
+        "sha256": "ebc5cc401257eb4ceaacc36c148a59d7f9aed96b4f39466ac2f41103dac49f5f",
+        "sha256_in_prefix": "ebc5cc401257eb4ceaacc36c148a59d7f9aed96b4f39466ac2f41103dac49f5f",
+        "size_in_bytes": 2190
+      },
+      {
+        "_path": "iraf_extern/mtools/splot.log",
+        "path_type": "hardlink",
+        "sha256": "b5cb6b5bc6241f69b53872a9f2499a9cee17213056848a982f7b6a2011897eaa",
+        "sha256_in_prefix": "b5cb6b5bc6241f69b53872a9f2499a9cee17213056848a982f7b6a2011897eaa",
+        "size_in_bytes": 169
+      },
+      {
+        "_path": "iraf_extern/mtools/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "308a801e38cd6ab97ed3722963e70ef478099ad5308132d2b45b264f3dc92efa",
+        "sha256_in_prefix": "308a801e38cd6ab97ed3722963e70ef478099ad5308132d2b45b264f3dc92efa",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "iraf_extern/mtools/ur_mkpkg_cmd",
+        "path_type": "hardlink",
+        "sha256": "3d738153a15c3841c783e50ea40371d306c852956f36e7259d5aeecb9e2e3298",
+        "sha256_in_prefix": "3d738153a15c3841c783e50ea40371d306c852956f36e7259d5aeecb9e2e3298",
+        "size_in_bytes": 21
+      },
+      {
+        "_path": "iraf_extern/mtools/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "d1b2aaa4a6818d429bd8e4440322a7f01ae5625f0493e12ceaefe2e645d19e49",
+        "sha256_in_prefix": "d1b2aaa4a6818d429bd8e4440322a7f01ae5625f0493e12ceaefe2e645d19e49",
+        "size_in_bytes": 61
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 6045176,
+  "subdir": "linux-64",
+  "timestamp": 1553892516452,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.mtools-2013_01_02-2.tar.bz2",
+  "version": "2013_01_02"
+}

@@ -1,0 +1,212 @@
+							July 7, 1989
+
+	The July 1, 1989 build of the PROS has been installed in the
+experimental IRAFX system and resides in the iraf/irafx/local/tasks/xray
+directory.  The xray package is a sub-package of local, containing the
+sub-packages einstein, nimages, spatial, spectral, and timing.
+
+I) NEW PROS AND QPOE FEATURES
+
+	Several tasks, including imcalc, qpdisp, plcreate, pldisp, and
+qpcopy were moved from the spatial package into the xray package.  These
+tasks are of general use to pros and it was inconvenient to have to
+load the spatial package (or nimages) in order to use them.
+
+	The QPOE file format has remained stable over the last three
+months.  We are not anticipating any major change to the QPOE format,
+except for the addition of world-coordinate information in the fall.
+
+II) NEW TASKS AND PACKAGES
+
+	The timing package has been expanded in this build.  Three new tasks, 
+fft, timplot, and timprint have been added to the package.  Qptime which was 
+in the timing package in the previous build has been moved into the xray
+package and is replaced by timing task Timdata.  Timdata creates time sorted 
+source and background qpoe files from selected regions.
+
+	The prototype FFT task performs a fast fourier transform on a time 
+series.  Task Timplot plots a timing table file.  Output table files from 
+ltcurv, fft, and eventually all the timing tasks will be graphically displayed 
+using this task.  Task Timprint displays the timing table files in a tabular 
+format on a 132 character width screen.
+
+	A ROSAT package has also been started.  Eventually it will contain
+the tasks necessary to convert the output of ROSAT processing to
+PROS format.  Currently it contains just one task, TOE2QP, which will
+convert the ROSAT event file to PROS qpoe format.
+
+	A gzm2im task has been added to create an IRAF image from a gzoom
+file.  This task will create a proper X-ray header for the image, as well
+as flipping it to conform to IRAF coordinate conventions.
+
+III) MAJOR MODIFICATIONS TO EXISTING TASKS
+
+	Ltcurv has been updated to ensure success on infinitely long input 
+files.  A background normalization factor has been added, and the mean of each 
+column of the lightcurve has been computed and saved in the table header.
+
+	Error handling has been added to Imcompress & Imreplicate.  The user
+now has the option of running on the associated error arrays of an image.
+
+	The improj task has been enhanced to run faster, and it no longer
+writes temporary files.
+
+	The imcounts task has up to 4 new columns in the table output,
+describing the inner and outer radii for annular regions, and start and end
+angles for pie slices.  This allows plotting of counts vs radius, counts vs
+angle, etc.
+
+	The qpcreate library, which forms the basis for tasks such as
+xpr2qp, img2qp, toe2qp, qpcopy, and qprotate, has been modified to use
+memory more sparingly.  Temporary files are now written without padding
+in the temp event records.  This should make it easier to convert Einstein
+or ROSAT data to QPOE format.
+
+IV) EXISTING XRAY PACKAGES AND TASKS
+
+	The xray package contains the following sub-packages and tasks
+(* denotes a new task, + denotes major modifications to a task, and -
+denotes that the task has changed packages):
+
+package		tasks		description
+
+xray
+- 		imcalc		image calculator for IRAF arrays
+- 	        plcreate	create a pixel list from a region (no
+				reference image)
+- 	        pldisp		display a pixel list
+- 		qpcopy		qcopy a qpoe file to another qpoe file
+- 	        qpdisp		display information in a qpoe file
+- 		qptime		sort a qpoe file by time
+- 		xhadd		add an X-ray history record to qpoe or image
+- 		xhdisp		display X-ray history
+
+nimages
+		imcreate	create an IRAF array from a binary file
++		imcompress	compress an image through pixel summation
++		imreplicate	expand an image through pixel replication
+
+spatial
++ 	        imcnts		count photons (with bkgd subtraction) in
+				regions
+ 		imcontour	display a contour map of an image
+ 	        imdisp		display pixel values in regions
+	        immodel		create a model array from a source list
++		improj		perform rectangular projections on an image
+ 	        imsmooth	smooth an image
+ 		qprotate	rotate a qpoe file to another qpoe file
+ 		vigndata        apply the vignetting corrections to an IRAF 
+				data (image) file
+ 	        vignmask	generate vignetting corrections in PMIO mask
+				format
+	        vignmodel	apply the effect from telescope vignetting to 
+				the model data
+
+einstein
+	        eos2tab		make a source table from the Einstein Observ.
+				Source DBase
+ 	        expmask		convert an Einstein exposure map to a PMIO mask
+*		gzm2im		convert an Einstein gzoom file into a IRAF 
+				image file
+ 		img2qp		convert Einstein image data to a QPOE file
+ 	        xpr2qp		convert Einstein XPR data to a QPOE file
+
+rosat
+*		toe2qp		convert ROSAT TOE data to a QPOE file
+
+timing
+*		fft		performs an FFT on a time series
++		ltcurv		create a light curve (table) from a 
+				time-ordered qpoe file
+*		timdata		creates time sorted source & bkgd files from
+				selected regions
+*		timplot		plots a timing table file
+*		timprint	displays a timing table file
+
+spectral	<various>	see Diana W.
+
+
+	There are help pages for all tasks.  In addition, there is help for
+spatial filtering ("help regions"), PROS/IRAF coordinates ("help coords"),
+QPOE filtering ("help qpoe") and PROS file name conventions ("help extensions")
+in the xray package.
+
+V) SETTING UP TO USE THE XRAY PACKAGE
+
+	To run the new xray package, users must use the IRAFX version of IRAF.
+This is an experimental IRAF 2.7 with support for QPOE I/O.  To run IRAFX
+type "clx" instead of "cl".
+
+	Also, users who wish to perform QPOE filtering should add the
+following setenv command to their unix .login file:
+
+	setenv qmfiles /iraf/irafx/local/tasks/xray/QPDEFS
+
+This QPDEFS file defines various filter name aliases and sets QPOE defaults.
+
+	To use eos2tab, one must be given access to the eoscat data base.
+After permission is granted, the following entry must be placed in the unix
+.login file:
+
+	setenv ING_HOME	~ingres
+
+and ~ingres/bin must be included in the set path entry of your .cshrc file.
+Finally, ingnetdef must be run.  See Paul Grant for details.
+
+	Users should reset the parameter values of all xray tasks to their
+initial defaults if they were using the apr89 build.  See help on the iraf
+task "unlearn" for more information.
+
+VI) TEST DATA FILES
+
+	To gain some familiarity with the system, there are some Einstein
+data files available.  The directory /pros/einstein contains the necessary
+data files for the Einstein sequences:
+
+		296 (IPC) and 1043 (HRI)
+
+	The -.mhdr, -.tgr, -.xpr, and -.img files are input to the xpr2qp 
+or img2qp task to produce an IRAF qpoe file.  The -.exp file is input to
+the expmask task to produce the corresponding exposure mask.
+
+	The directory /pros/qpoe contains QPOE files for i296 and h1043. 
+
+VII) XIMAGE
+
+	A new version of ximage that fully supports region filtering now
+exists. This ximage has many new features and works with the IRAF tv.display
+task.  To run ximage in this mode, execute:
+
+		ximage -pros
+
+and then use tv.display, as with imtool.  See Mike VanHilst for more
+details and the new manual.
+
+VIII) KNOWN BUGS
+
+	Due to a bug in QPOE, xhadd cannot be used to add history to a
+qpoe file. This will be fixed in a future build.
+
+	The img2qp and xpr2qp tasks still can have trouble with memory.
+If these tasks run and seem to take an extremely long time (>10 minutes
+for 100000 photons) or give strange error messages ("can't delete file"),
+try using a smaller sortsize buffer.
+
+IX) NEXT BUILD
+
+	The next build will be in October 1989.  In the next several months
+areas of focus will consist of the following:  
+
+	Timing -   Upgrade the fft and timplot tasks.  
+		   Add New task Light curve folding.  
+		 
+	Spectral - Upgrade the Spectral package. 
+		 
+	Spatial -  Updgrade task Imcontour.
+
+        Misc -     Define additional QPOE Header information.
+
+
+	We welcome comments, suggestions, and especially, bug reports.
+
+

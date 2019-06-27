@@ -1,0 +1,34 @@
+# STRIP.XRAY -- Rmfiles command script, used to strip the XRAY directories
+# of all files not required for ordinary runtime use of the system.
+
+xdataio		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip .cards .tab
+ximages		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+xplot		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+xspatial	-allbut _motd .hlp .hd .men .cl .par .key .dat .mip .tab .ieee
+xtiming		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip .tab
+xlocal		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+xproto		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+xobsolete	-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+
+xspectral/doc		-allbut _motd .hlp .hd .men .cl .par .key .dat .mip 
+xspectral/qpspec	-allbut _motd .hlp .hd .men .cl .par .key .dat .mip 
+xspectral/source	-allbut _motd .hlp .hd .men .cl .par .key .dat .mip 
+xspectral/downspecrdf	-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+xspectral/upspecrdf	-allbut _motd .hlp .hd .men .cl .par .key .dat .mip
+-file xspectral/debug.f
+-file xspectral/debug.o
+-file xspectral/debug.x
+-file xspectral/x_xspectral.f
+-file xspectral/x_xspectral.o
+-file xspectral/x_xspectral.x
+-file xspectral/libpkg.a
+-file xspectral/libdown.a
+-file xspectral/libup.a
+# onedspec/doc/sys -all
+# filterphot	-only .hlp
+# -file noao/digiphot/apphot/Ap.hlp
+
+# Sun/IRAF only.
+# ---------------
+#-file bin.68881/OBJS.arc
+#-file bin.ffpa/OBJS.arc

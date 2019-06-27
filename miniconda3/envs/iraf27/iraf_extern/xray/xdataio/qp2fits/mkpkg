@@ -1,0 +1,9 @@
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+	qp2fits.x          	<qpc.h> <error.h> <ext.h> <qpoe.h> "qp2fits.h"
+	qp2fits_subs.x	 	<imhdr.h> <imio.h> <qpoe.h> "qp2fits.h"	
+	;

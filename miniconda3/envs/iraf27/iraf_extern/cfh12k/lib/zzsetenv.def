@@ -1,0 +1,8 @@
+# Global environment definitions for the package.
+
+reset	cfh12kbin		= "cfh12k$bin(arch)/"
+reset	cfh12ksrc		= "cfh12k$src/"
+reset	cfh12klib		= "cfh12k$lib/"
+reset	pkglibs			= "cfh12kbin$"
+
+keep

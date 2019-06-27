@@ -1,0 +1,32 @@
+# $Header: /home/pros/xray/xspatial/detect/fixvar/RCS/mkpkg,v 11.0 1997/11/06 16:32:20 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:32:20  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:51:31  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:13:47  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:34:02  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:19:09  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/05/22  20:54:39  mo
+#Initial revision
+#
+#
+# Make control package.
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+	fixvar.x <ext.h> <imhdr.h> <fset.h>
+        setvar.x <ext.h> <imhdr.h> <fset.h>
+        ;

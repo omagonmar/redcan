@@ -1,0 +1,207 @@
+# $Header: /home/pros/xray/xproto/doc/RCS/wcsqpedit.hlp,v 11.0 1997/11/06 16:39:05 prosb Exp $
+# $Log: wcsqpedit.hlp,v $
+# Revision 11.0  1997/11/06 16:39:05  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:26:58  prosb
+# General Release 2.4
+#
+#Revision 8.1  1995/08/08  14:23:48  prosb
+#jcc - ci for pros2.4.
+#
+#Revision 8.0  1994/06/27  17:26:27  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:51:30  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/08/19  12:17:48  mo
+#MC	8/20/93		Update for new CROTA2 parameter
+#
+#Revision 6.0  93/05/24  16:43:54  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:41:31  prosb
+#General Release 2.1
+#
+#Revision 1.1  92/10/23  09:52:48  mo
+#Initial revision
+#
+.help wcsqpedit Apr95 xray.xproto
+.ih
+NAME
+wcsqpedit -- Edit the WCS parameters in a QPOE file.
+.ih
+USAGE
+wcsqpedit input_qpoe crval1 crval2 crpix1 crpix2 equinox radecsys
+.ih
+DESCRIPTION
+\fIwcsqpedit\fR allows users to modify any of 7 WCS keywords in the
+QPOE file.  The available values are CRPIX1, CRPIX2, CRVAL1, CRVAL2,
+CROTA2, EQUINOX and RADECSYS.
+These values appear as simple keywords in a long \fIimheader\fR listing,
+but are inaccessible as header parameters using either hedit or qphedit.
+Users should exercise caution when making these modifications, since
+all knowledge of the original coordinate system is then lost.
+.ih
+PARAMETERS
+.ls qpfile = ""		prompt = QPOE file to change
+
+The input qpoe file name to modify.  User must have both read and write
+permission on the file.  The file will be modified in place.
+.le
+.ls cdelt1 = "-999.9"	prompt = cdelt1 (-999.9 no change)
+
+This is the value to be assigned to the axis 1 pixel size (in degrees).  
+This is stored as a double precision real value, so be sure to express the 
+value accurately.  A value of -999.9 indicates the value currently in the QPOE
+file should NOT be changed.
+.le
+.ls cdelt2 = "-999.9"	prompt = cdelt2 (-999.9 no change)
+
+This is the value to be assigned to the axis 2 pixel size (in degrees).  
+This is stored as a double precision real value, so be sure to express the 
+value accurately.  A value of -999.9 indicates the value currently in the QPOE
+file should NOT be changed.
+.le
+.ls crval1 = "-1"	prompt = CRVAL1
+
+This is the value to be assigned to the axis 1 reference pixel.  Normally
+this would be the Celestial RA.  This is stored as a double precision
+real value, so be sure to express the value accurately.  Only positive values 
+are currently allowed.  A value of -1 indicates the value currently in the QPOE
+file should NOT be changed.
+.le
+.ls crval2 = "-100"	prompt = CRVAL2
+
+This is the value corresponding to the axis 2 reference pixel.  Normally
+this would be the Celestial Dec.  This is stored as a double precision
+real value, so be sure to express the value accurately.  Only values between 
+-90.0 and +90.0 degrees are allowed.  A value of -100, indicates the value 
+currently in the QPOE file should NOT be changed.
+.le
+.ls crota2 = "-1000.0"	prompt = CROTA2
+
+This is the value corresponding to the image rotation relative to north.  
+This is stored as a double precision
+real value, so be sure to express the value accurately.  Only values between 
+-360.0 and +360.0 degrees are allowed.  A value of -1000.0, indicates the value 
+currently in the QPOE file should NOT be changed.
+.le
+.ls crpix1 = "-1"	prompt = CRPIX1
+
+This is the number of the reference pixel.  It is the point in the physical
+data file to which the CRVAL1 value corresponds.  It is often a value
+near the center of the axis, though this is not rEQUIRed.  This is stored
+as a double precision real value, so be sure to express the value
+accurately.  A value of -1 indicates that the value currently in the
+QPOE file should NOT be changed.
+.le
+.ls crpix2 = "-1"	prompt = CRPIX2
+
+This is the number of the reference pixel.  It is the point in the physical
+data file to which the CRVAL2 value corresponds.  It is often a value
+near the center of the axis, though this is not required.  This is stored
+as a double precision real value, so be sure to express the value
+accurately.  A value of -1 indicates that the value currently in the
+QPOE file should NOT be changed.
+.le
+.ls equinox = "-1"	prompt = EQUINOX
+
+This is the year of the EQUINOX.  Often either 1950. or 2000. 
+A value of -1 will cause the existing value in the file to be retained.
+.le
+.ls ctype1 = ""	prompt = ctype1 (null - no change) 
+
+This is the name of the axis 1 coordinate system.  Some possible values
+are RA---TAN, RA---SIN, LINEAR.  
+.le
+.ls ctype2 = ""	prompt = ctype2 (null - no change) 
+
+This is the name of the axis 1 coordinate system.  Some possible values
+are DEC--TAN, DEC--SIN, LINEAR.  
+.le
+.ls radecsys = ""	prompt = RADECSYS
+
+Label for the Coordinate system FK4 = B1950. FK5 = J2000. 
+A NULL string will cause the current value in the file to be retained.
+.le
+.ls axlen1 = ""	prompt = X dimension (0  - no change) 
+
+This is the length of the axis 1 coordinate system.  
+.le
+.ls axlen2 = ""	prompt = Y dimension (0  - no change) 
+
+This is the length of the axis 2 coordinate system.  
+.le
+.ls (display = 1) [int]
+
+This is the display level.  A value of 1 or greater will display the value 
+currently in the file before prompting for a new value. A value of 2
+or greater will display the value to be writtin to the file.
+.le
+.ih
+EXAMPLES
+
+1.  Change the WCS in the file from B1950 coordinates to J2000 coordinates.
+Note this changes the reference point only and does NOT reproject the data.
+.nf
+	cl> xray
+	xr> ximages
+	xi> qpcopy xdata$snr.qp "" snr.qp ""
+	xi> xspatial
+	xs> skypix oformat="degrees"
+	input cooordinate system (xdata$snr.qp[bl=8]): xdata$snr.qp
+	output cooordinate system (xdata$snr.qp): J2000
+	input file list (STDIN): 
+
+	Converting from xdata$snr.qp is 
+                TANGENT 512. 513. -0.002222222 0.002222222 = 
+                22:58:55.66 58:36:47.5 0.
+                   EQUATORIAL B1950.   in pixels
+             to    EQUATORIAL J2000.   in degrees
+
+
+	(Terminate interactive list with <cntl>-D)
+	512. 513.
+	  345.2539            58.882            
+	xp> wcsqpedit snr.qp
+	current CDELT1: -0.002222222000 
+	cdelt1 (-999.9 no change) (-999.9): -0.0025
+	current CDELT2: 0.002222222000 
+	cdelt2 (-999.9 no change) (-999.9):       
+	current CRVAL1: 344.731900000000   (22:58:55.6560)
+	CRVAL1 (-1.0 no change) (-1.:360.) (-1.): 345.2539
+	current CRVAL2: 58.613190000000   (58:36:47.4840)
+	CRVAL2 (-100.0 no change) (-100.:90.) (-100.): 58.882
+	current CROTA2: 0.000000
+	CROTA2 (-1000.0 no change) (-1000.:360.) (-1000.): 
+	current CRPIX1: 512.0000   
+	CRPIX1 (-1.0 no change) (-1.): 
+	current CRPIX2: 513.0000   
+	CRPIX2 (-1.0 no change) (-1.): 
+	current EQUINOX: 1950.0000   
+	EQUINOX (-1.0 no change) (-1.): 
+	current CTYPE1: RA---TAN   
+	ctype1 (null - no change): 
+	current CTYPE2: DEC--TAN   
+	ctype2 (null - no change): 
+	current RADECSYS: FK4   
+	RADECSYS( e.g. FK4,FK5) (NULL - no change): FK5
+	current AXLEN1: 1024   
+	X dimension (0 = no change) (0): 
+	current AXLEN2: 1024   
+	Y dimension (0 = no change) (0): 
+.fi
+.ih
+TIME REQUIREMENTS
+neglible
+.ih
+BUGS
+.ih
+SEE ALSO
+The documention for task \fIskypix\fR and the task \fIwcsedit\fR
+
+.endhelp
+
+	 wcsqpedit

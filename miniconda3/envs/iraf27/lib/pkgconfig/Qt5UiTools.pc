@@ -1,0 +1,14 @@
+prefix=/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt
+
+
+Name: Qt5 UiTools
+Description: Qt UiTools module
+Version: 5.9.7
+Libs: -L${libdir} -lQt5UiTools 
+Libs.private: -L/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/lib -L/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/lib -lQt5Widgets -lQt5Gui -lQt5Core -lpthread -lQt5Widgets -L/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/lib -L/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/lib -lQt5Gui -lQt5Core -lpthread -lGL 
+Cflags: -I${includedir}/QtUiTools -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+

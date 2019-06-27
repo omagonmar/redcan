@@ -1,0 +1,2653 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "future",
+    "numpy",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/mdp-3.5-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/MDP-3.5.dist-info/INSTALLER",
+    "lib/python2.7/site-packages/MDP-3.5.dist-info/METADATA",
+    "lib/python2.7/site-packages/MDP-3.5.dist-info/RECORD",
+    "lib/python2.7/site-packages/MDP-3.5.dist-info/WHEEL",
+    "lib/python2.7/site-packages/MDP-3.5.dist-info/top_level.txt",
+    "lib/python2.7/site-packages/bimdp/__init__.py",
+    "lib/python2.7/site-packages/bimdp/__init__.pyc",
+    "lib/python2.7/site-packages/bimdp/biclassifier.py",
+    "lib/python2.7/site-packages/bimdp/biclassifier.pyc",
+    "lib/python2.7/site-packages/bimdp/biflow.py",
+    "lib/python2.7/site-packages/bimdp/biflow.pyc",
+    "lib/python2.7/site-packages/bimdp/binode.py",
+    "lib/python2.7/site-packages/bimdp/binode.pyc",
+    "lib/python2.7/site-packages/bimdp/hinet/__init__.py",
+    "lib/python2.7/site-packages/bimdp/hinet/__init__.pyc",
+    "lib/python2.7/site-packages/bimdp/hinet/biflownode.py",
+    "lib/python2.7/site-packages/bimdp/hinet/biflownode.pyc",
+    "lib/python2.7/site-packages/bimdp/hinet/bihtmlvisitor.py",
+    "lib/python2.7/site-packages/bimdp/hinet/bihtmlvisitor.pyc",
+    "lib/python2.7/site-packages/bimdp/hinet/bilayer.py",
+    "lib/python2.7/site-packages/bimdp/hinet/bilayer.pyc",
+    "lib/python2.7/site-packages/bimdp/hinet/biswitchboard.py",
+    "lib/python2.7/site-packages/bimdp/hinet/biswitchboard.pyc",
+    "lib/python2.7/site-packages/bimdp/inspection/__init__.py",
+    "lib/python2.7/site-packages/bimdp/inspection/__init__.pyc",
+    "lib/python2.7/site-packages/bimdp/inspection/facade.py",
+    "lib/python2.7/site-packages/bimdp/inspection/facade.pyc",
+    "lib/python2.7/site-packages/bimdp/inspection/slideshow.py",
+    "lib/python2.7/site-packages/bimdp/inspection/slideshow.pyc",
+    "lib/python2.7/site-packages/bimdp/inspection/tracer.py",
+    "lib/python2.7/site-packages/bimdp/inspection/tracer.pyc",
+    "lib/python2.7/site-packages/bimdp/inspection/utils.py",
+    "lib/python2.7/site-packages/bimdp/inspection/utils.pyc",
+    "lib/python2.7/site-packages/bimdp/nodes/__init__.py",
+    "lib/python2.7/site-packages/bimdp/nodes/__init__.pyc",
+    "lib/python2.7/site-packages/bimdp/nodes/autogen.py",
+    "lib/python2.7/site-packages/bimdp/nodes/autogen.pyc",
+    "lib/python2.7/site-packages/bimdp/nodes/gradient.py",
+    "lib/python2.7/site-packages/bimdp/nodes/gradient.pyc",
+    "lib/python2.7/site-packages/bimdp/nodes/miscnodes.py",
+    "lib/python2.7/site-packages/bimdp/nodes/miscnodes.pyc",
+    "lib/python2.7/site-packages/bimdp/parallel/__init__.py",
+    "lib/python2.7/site-packages/bimdp/parallel/__init__.pyc",
+    "lib/python2.7/site-packages/bimdp/parallel/parallelbiflow.py",
+    "lib/python2.7/site-packages/bimdp/parallel/parallelbiflow.pyc",
+    "lib/python2.7/site-packages/bimdp/parallel/parallelbihinet.py",
+    "lib/python2.7/site-packages/bimdp/parallel/parallelbihinet.pyc",
+    "lib/python2.7/site-packages/bimdp/test/__init__.py",
+    "lib/python2.7/site-packages/bimdp/test/__init__.pyc",
+    "lib/python2.7/site-packages/bimdp/test/_tools.py",
+    "lib/python2.7/site-packages/bimdp/test/_tools.pyc",
+    "lib/python2.7/site-packages/bimdp/test/conftest.py",
+    "lib/python2.7/site-packages/bimdp/test/conftest.pyc",
+    "lib/python2.7/site-packages/bimdp/test/ide_run.py",
+    "lib/python2.7/site-packages/bimdp/test/ide_run.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_biflow.py",
+    "lib/python2.7/site-packages/bimdp/test/test_biflow.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_bihinet.py",
+    "lib/python2.7/site-packages/bimdp/test/test_bihinet.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_binode.py",
+    "lib/python2.7/site-packages/bimdp/test/test_binode.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_gradient.py",
+    "lib/python2.7/site-packages/bimdp/test/test_gradient.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_namespace_fixups.py",
+    "lib/python2.7/site-packages/bimdp/test/test_namespace_fixups.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_parallelbiflow.py",
+    "lib/python2.7/site-packages/bimdp/test/test_parallelbiflow.pyc",
+    "lib/python2.7/site-packages/bimdp/test/test_parallelbihinet.py",
+    "lib/python2.7/site-packages/bimdp/test/test_parallelbihinet.pyc",
+    "lib/python2.7/site-packages/mdp/__init__.py",
+    "lib/python2.7/site-packages/mdp/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/caching/__init__.py",
+    "lib/python2.7/site-packages/mdp/caching/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/caching/caching_extension.py",
+    "lib/python2.7/site-packages/mdp/caching/caching_extension.pyc",
+    "lib/python2.7/site-packages/mdp/classifier_node.py",
+    "lib/python2.7/site-packages/mdp/classifier_node.pyc",
+    "lib/python2.7/site-packages/mdp/configuration.py",
+    "lib/python2.7/site-packages/mdp/configuration.pyc",
+    "lib/python2.7/site-packages/mdp/extension.py",
+    "lib/python2.7/site-packages/mdp/extension.pyc",
+    "lib/python2.7/site-packages/mdp/graph/__init__.py",
+    "lib/python2.7/site-packages/mdp/graph/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/graph/graph.py",
+    "lib/python2.7/site-packages/mdp/graph/graph.pyc",
+    "lib/python2.7/site-packages/mdp/helper_funcs.py",
+    "lib/python2.7/site-packages/mdp/helper_funcs.pyc",
+    "lib/python2.7/site-packages/mdp/hinet/__init__.py",
+    "lib/python2.7/site-packages/mdp/hinet/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/hinet/flownode.py",
+    "lib/python2.7/site-packages/mdp/hinet/flownode.pyc",
+    "lib/python2.7/site-packages/mdp/hinet/hinet.css",
+    "lib/python2.7/site-packages/mdp/hinet/htmlvisitor.py",
+    "lib/python2.7/site-packages/mdp/hinet/htmlvisitor.pyc",
+    "lib/python2.7/site-packages/mdp/hinet/layer.py",
+    "lib/python2.7/site-packages/mdp/hinet/layer.pyc",
+    "lib/python2.7/site-packages/mdp/hinet/switchboard.py",
+    "lib/python2.7/site-packages/mdp/hinet/switchboard.pyc",
+    "lib/python2.7/site-packages/mdp/hinet/switchboard_factory.py",
+    "lib/python2.7/site-packages/mdp/hinet/switchboard_factory.pyc",
+    "lib/python2.7/site-packages/mdp/linear_flows.py",
+    "lib/python2.7/site-packages/mdp/linear_flows.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/__init__.py",
+    "lib/python2.7/site-packages/mdp/nodes/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/classifier_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/classifier_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/convolution_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/convolution_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/em_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/em_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/expansion_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/expansion_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/fda_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/fda_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/ica_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/ica_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/isfa_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/isfa_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/jade.py",
+    "lib/python2.7/site-packages/mdp/nodes/jade.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/libsvm_classifier.py",
+    "lib/python2.7/site-packages/mdp/nodes/libsvm_classifier.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/lle_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/lle_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/misc_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/misc_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/neural_gas_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/neural_gas_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/nipals.py",
+    "lib/python2.7/site-packages/mdp/nodes/nipals.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/pca_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/pca_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/rbm_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/rbm_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/regression_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/regression_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/scikits_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/scikits_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/sfa_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/sfa_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/shogun_svm_classifier.py",
+    "lib/python2.7/site-packages/mdp/nodes/shogun_svm_classifier.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/svm_classifiers.py",
+    "lib/python2.7/site-packages/mdp/nodes/svm_classifiers.pyc",
+    "lib/python2.7/site-packages/mdp/nodes/xsfa_nodes.py",
+    "lib/python2.7/site-packages/mdp/nodes/xsfa_nodes.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/__init__.py",
+    "lib/python2.7/site-packages/mdp/parallel/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/parallelclassifiers.py",
+    "lib/python2.7/site-packages/mdp/parallel/parallelclassifiers.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/parallelflows.py",
+    "lib/python2.7/site-packages/mdp/parallel/parallelflows.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/parallelhinet.py",
+    "lib/python2.7/site-packages/mdp/parallel/parallelhinet.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/parallelnodes.py",
+    "lib/python2.7/site-packages/mdp/parallel/parallelnodes.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/pp_slave_script.py",
+    "lib/python2.7/site-packages/mdp/parallel/pp_slave_script.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/pp_slave_wrapper.py",
+    "lib/python2.7/site-packages/mdp/parallel/pp_slave_wrapper.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/pp_support.py",
+    "lib/python2.7/site-packages/mdp/parallel/pp_support.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/process_schedule.py",
+    "lib/python2.7/site-packages/mdp/parallel/process_schedule.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/scheduling.py",
+    "lib/python2.7/site-packages/mdp/parallel/scheduling.pyc",
+    "lib/python2.7/site-packages/mdp/parallel/thread_schedule.py",
+    "lib/python2.7/site-packages/mdp/parallel/thread_schedule.pyc",
+    "lib/python2.7/site-packages/mdp/repo_revision.py",
+    "lib/python2.7/site-packages/mdp/repo_revision.pyc",
+    "lib/python2.7/site-packages/mdp/signal_node.py",
+    "lib/python2.7/site-packages/mdp/signal_node.pyc",
+    "lib/python2.7/site-packages/mdp/test/__init__.py",
+    "lib/python2.7/site-packages/mdp/test/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/test/_tools.py",
+    "lib/python2.7/site-packages/mdp/test/_tools.pyc",
+    "lib/python2.7/site-packages/mdp/test/benchmark_mdp.py",
+    "lib/python2.7/site-packages/mdp/test/benchmark_mdp.pyc",
+    "lib/python2.7/site-packages/mdp/test/conftest.py",
+    "lib/python2.7/site-packages/mdp/test/conftest.pyc",
+    "lib/python2.7/site-packages/mdp/test/ide_run.py",
+    "lib/python2.7/site-packages/mdp/test/ide_run.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_AdaptiveCutoffNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_AdaptiveCutoffNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_Convolution2DNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_Convolution2DNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_CutoffNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_CutoffNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_EtaComputerNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_EtaComputerNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_FANode.py",
+    "lib/python2.7/site-packages/mdp/test/test_FANode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_FDANode.py",
+    "lib/python2.7/site-packages/mdp/test/test_FDANode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_GaussianClassifier.py",
+    "lib/python2.7/site-packages/mdp/test/test_GaussianClassifier.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_GeneralExpansionNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_GeneralExpansionNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_GrowingNeuralGasNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_GrowingNeuralGasNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_HistogramNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_HistogramNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_HitParadeNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_HitParadeNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_ICANode.py",
+    "lib/python2.7/site-packages/mdp/test/test_ICANode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_ISFANode.py",
+    "lib/python2.7/site-packages/mdp/test/test_ISFANode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_KNNClassifier.py",
+    "lib/python2.7/site-packages/mdp/test/test_KNNClassifier.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_LinearRegressionNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_LinearRegressionNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_NearestMeanClassifier.py",
+    "lib/python2.7/site-packages/mdp/test/test_NearestMeanClassifier.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_NeuralGasNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_NeuralGasNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_NoiseNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_NoiseNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_PCANode.py",
+    "lib/python2.7/site-packages/mdp/test/test_PCANode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_PolynomialExpansionNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_PolynomialExpansionNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_PreseverDimNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_PreseverDimNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_RBFExpansionNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_RBFExpansionNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_RBM.py",
+    "lib/python2.7/site-packages/mdp/test/test_RBM.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_SFA2Node.py",
+    "lib/python2.7/site-packages/mdp/test/test_SFA2Node.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_SFANode.py",
+    "lib/python2.7/site-packages/mdp/test/test_SFANode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_TimeDelayNodes.py",
+    "lib/python2.7/site-packages/mdp/test/test_TimeDelayNodes.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_TimeFrameNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_TimeFrameNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_VariadicCumulator.py",
+    "lib/python2.7/site-packages/mdp/test/test_VariadicCumulator.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_WhiteningNode.py",
+    "lib/python2.7/site-packages/mdp/test/test_WhiteningNode.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_caching.py",
+    "lib/python2.7/site-packages/mdp/test/test_caching.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_classifier.py",
+    "lib/python2.7/site-packages/mdp/test/test_classifier.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_config.py",
+    "lib/python2.7/site-packages/mdp/test/test_config.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_contrib.py",
+    "lib/python2.7/site-packages/mdp/test/test_contrib.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_copying.py",
+    "lib/python2.7/site-packages/mdp/test/test_copying.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_extension.py",
+    "lib/python2.7/site-packages/mdp/test/test_extension.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_fastica.py",
+    "lib/python2.7/site-packages/mdp/test/test_fastica.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_flows.py",
+    "lib/python2.7/site-packages/mdp/test/test_flows.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_graph.py",
+    "lib/python2.7/site-packages/mdp/test/test_graph.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_hinet.py",
+    "lib/python2.7/site-packages/mdp/test/test_hinet.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_hinet_generic.py",
+    "lib/python2.7/site-packages/mdp/test/test_hinet_generic.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_metaclass_and_extensions.py",
+    "lib/python2.7/site-packages/mdp/test/test_metaclass_and_extensions.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_namespace_fixups.py",
+    "lib/python2.7/site-packages/mdp/test/test_namespace_fixups.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_node_covariance.py",
+    "lib/python2.7/site-packages/mdp/test/test_node_covariance.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_node_metaclass.py",
+    "lib/python2.7/site-packages/mdp/test/test_node_metaclass.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_node_operations.py",
+    "lib/python2.7/site-packages/mdp/test/test_node_operations.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_nodes_generic.py",
+    "lib/python2.7/site-packages/mdp/test/test_nodes_generic.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_parallelclassifiers.py",
+    "lib/python2.7/site-packages/mdp/test/test_parallelclassifiers.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_parallelflows.py",
+    "lib/python2.7/site-packages/mdp/test/test_parallelflows.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_parallelhinet.py",
+    "lib/python2.7/site-packages/mdp/test/test_parallelhinet.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_parallelnodes.py",
+    "lib/python2.7/site-packages/mdp/test/test_parallelnodes.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_pp_local.py",
+    "lib/python2.7/site-packages/mdp/test/test_pp_local.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_pp_remote.py",
+    "lib/python2.7/site-packages/mdp/test/test_pp_remote.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_process_schedule.py",
+    "lib/python2.7/site-packages/mdp/test/test_process_schedule.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_reload.py",
+    "lib/python2.7/site-packages/mdp/test/test_reload.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_schedule.py",
+    "lib/python2.7/site-packages/mdp/test/test_schedule.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_scikits.py",
+    "lib/python2.7/site-packages/mdp/test/test_scikits.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_seed.py",
+    "lib/python2.7/site-packages/mdp/test/test_seed.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_svm_classifier.py",
+    "lib/python2.7/site-packages/mdp/test/test_svm_classifier.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_tempdir.py",
+    "lib/python2.7/site-packages/mdp/test/test_tempdir.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_utils.py",
+    "lib/python2.7/site-packages/mdp/test/test_utils.pyc",
+    "lib/python2.7/site-packages/mdp/test/test_utils_generic.py",
+    "lib/python2.7/site-packages/mdp/test/test_utils_generic.pyc",
+    "lib/python2.7/site-packages/mdp/utils/__init__.py",
+    "lib/python2.7/site-packages/mdp/utils/__init__.pyc",
+    "lib/python2.7/site-packages/mdp/utils/_ordered_dict.py",
+    "lib/python2.7/site-packages/mdp/utils/_ordered_dict.pyc",
+    "lib/python2.7/site-packages/mdp/utils/_symeig.py",
+    "lib/python2.7/site-packages/mdp/utils/_symeig.pyc",
+    "lib/python2.7/site-packages/mdp/utils/covariance.py",
+    "lib/python2.7/site-packages/mdp/utils/covariance.pyc",
+    "lib/python2.7/site-packages/mdp/utils/introspection.py",
+    "lib/python2.7/site-packages/mdp/utils/introspection.pyc",
+    "lib/python2.7/site-packages/mdp/utils/progress_bar.py",
+    "lib/python2.7/site-packages/mdp/utils/progress_bar.pyc",
+    "lib/python2.7/site-packages/mdp/utils/quad_forms.py",
+    "lib/python2.7/site-packages/mdp/utils/quad_forms.pyc",
+    "lib/python2.7/site-packages/mdp/utils/routines.py",
+    "lib/python2.7/site-packages/mdp/utils/routines.pyc",
+    "lib/python2.7/site-packages/mdp/utils/slideshow.css",
+    "lib/python2.7/site-packages/mdp/utils/slideshow.py",
+    "lib/python2.7/site-packages/mdp/utils/slideshow.pyc",
+    "lib/python2.7/site-packages/mdp/utils/templet.py",
+    "lib/python2.7/site-packages/mdp/utils/templet.pyc",
+    "lib/python2.7/site-packages/mdp/utils/temporarydir.py",
+    "lib/python2.7/site-packages/mdp/utils/temporarydir.pyc"
+  ],
+  "fn": "mdp-3.5-py27_1.tar.bz2",
+  "license": "BSD",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/mdp-3.5-py27_1",
+    "type": 1
+  },
+  "md5": "a041d4e8fe53094c4bc50015abb7ff57",
+  "name": "mdp",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/mdp-3.5-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/MDP-3.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "sha256_in_prefix": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "size_in_bytes": 4
+      },
+      {
+        "_path": "lib/python2.7/site-packages/MDP-3.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "eba48f3d57ac6b60ea240cdcfb88dbacc6ba39a80338aa2d5e9ab67d2887a9d0",
+        "sha256_in_prefix": "eba48f3d57ac6b60ea240cdcfb88dbacc6ba39a80338aa2d5e9ab67d2887a9d0",
+        "size_in_bytes": 4966
+      },
+      {
+        "_path": "lib/python2.7/site-packages/MDP-3.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "17e60aba8e65871e81841a0ff450169fb5cb64feb876889866d55c68eab7697a",
+        "sha256_in_prefix": "17e60aba8e65871e81841a0ff450169fb5cb64feb876889866d55c68eab7697a",
+        "size_in_bytes": 18935
+      },
+      {
+        "_path": "lib/python2.7/site-packages/MDP-3.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "81dbae3f206f149412434cddcb117b934cf29c35db21bbe0e59047a17ba6e6e9",
+        "sha256_in_prefix": "81dbae3f206f149412434cddcb117b934cf29c35db21bbe0e59047a17ba6e6e9",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/python2.7/site-packages/MDP-3.5.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "1d0f8daab095fd4ce641eb1b8f24199926ba917e07d0adafe5abdb1123d53c97",
+        "sha256_in_prefix": "1d0f8daab095fd4ce641eb1b8f24199926ba917e07d0adafe5abdb1123d53c97",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "29ba1babcd7a300ca38009d6f330b13263598dec08895ba2befd5e21d0bb874a",
+        "sha256_in_prefix": "29ba1babcd7a300ca38009d6f330b13263598dec08895ba2befd5e21d0bb874a",
+        "size_in_bytes": 3983
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "245ed603e92f95987a537e4cc95a0afda75556e250632a764675b6a352f729ee",
+        "sha256_in_prefix": "245ed603e92f95987a537e4cc95a0afda75556e250632a764675b6a352f729ee",
+        "size_in_bytes": 2906
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/biclassifier.py",
+        "path_type": "hardlink",
+        "sha256": "4057ea2a4e5b1afe73d16daf19b9beaaddb1d8d858d6001c812b2f6873d483d1",
+        "sha256_in_prefix": "4057ea2a4e5b1afe73d16daf19b9beaaddb1d8d858d6001c812b2f6873d483d1",
+        "size_in_bytes": 1534
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/biclassifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "5714b126f8cc758de0048a621dd69974c0da6e5a0368d281da9a3087213827cc",
+        "sha256_in_prefix": "5714b126f8cc758de0048a621dd69974c0da6e5a0368d281da9a3087213827cc",
+        "size_in_bytes": 1689
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/biflow.py",
+        "path_type": "hardlink",
+        "sha256": "ca0a311450827ff7cda229190b54691525ed1d4f5b462fdbbb085ececdfb54ec",
+        "sha256_in_prefix": "ca0a311450827ff7cda229190b54691525ed1d4f5b462fdbbb085ececdfb54ec",
+        "size_in_bytes": 26184
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/biflow.pyc",
+        "path_type": "hardlink",
+        "sha256": "528f2155179d5d5cb5cb28868f8c186b75aa06c33308b2b6236757403154662b",
+        "sha256_in_prefix": "528f2155179d5d5cb5cb28868f8c186b75aa06c33308b2b6236757403154662b",
+        "size_in_bytes": 19380
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/binode.py",
+        "path_type": "hardlink",
+        "sha256": "add8e9e36cc005280846fae47d9580dfe051b80d2e242c5353080569e2d19c95",
+        "sha256_in_prefix": "add8e9e36cc005280846fae47d9580dfe051b80d2e242c5353080569e2d19c95",
+        "size_in_bytes": 23031
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/binode.pyc",
+        "path_type": "hardlink",
+        "sha256": "b978cd89e5f21d42ad12bf7ea4a47c1900e248ff24bc5db1bd5c054a6733d8f7",
+        "sha256_in_prefix": "b978cd89e5f21d42ad12bf7ea4a47c1900e248ff24bc5db1bd5c054a6733d8f7",
+        "size_in_bytes": 20235
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "830da0fd2582f87543972cde990ec1d57acdf703bd2eabefab00bddabc9f5400",
+        "sha256_in_prefix": "830da0fd2582f87543972cde990ec1d57acdf703bd2eabefab00bddabc9f5400",
+        "size_in_bytes": 245
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "fe6d5fff6668b8ac489ad158b2a4bd20e4d88f6d90a444bf54cdae582d09dfa2",
+        "sha256_in_prefix": "fe6d5fff6668b8ac489ad158b2a4bd20e4d88f6d90a444bf54cdae582d09dfa2",
+        "size_in_bytes": 450
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/biflownode.py",
+        "path_type": "hardlink",
+        "sha256": "708b83cafdac0ca8db54ca7a3f0918d02800bc46f25d555e9fdf1c8e2a78f966",
+        "sha256_in_prefix": "708b83cafdac0ca8db54ca7a3f0918d02800bc46f25d555e9fdf1c8e2a78f966",
+        "size_in_bytes": 10373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/biflownode.pyc",
+        "path_type": "hardlink",
+        "sha256": "9b5ef51cf7e16231bfffb5c7a9176b4cc52e6df64dc0e643e9518a6a35043bde",
+        "sha256_in_prefix": "9b5ef51cf7e16231bfffb5c7a9176b4cc52e6df64dc0e643e9518a6a35043bde",
+        "size_in_bytes": 7850
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/bihtmlvisitor.py",
+        "path_type": "hardlink",
+        "sha256": "789b1b66d89b6cb00e3e1f7813996533bba69aabb6979699ec2d73dae3294aad",
+        "sha256_in_prefix": "789b1b66d89b6cb00e3e1f7813996533bba69aabb6979699ec2d73dae3294aad",
+        "size_in_bytes": 4497
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/bihtmlvisitor.pyc",
+        "path_type": "hardlink",
+        "sha256": "b3cd39ec2825d305c19c5238151f94b96ec2c3c2554215abf0f8c24f015e2ac2",
+        "sha256_in_prefix": "b3cd39ec2825d305c19c5238151f94b96ec2c3c2554215abf0f8c24f015e2ac2",
+        "size_in_bytes": 5007
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/bilayer.py",
+        "path_type": "hardlink",
+        "sha256": "fe0caff6e3d76eb3501c7d9de4e439c0dac8e3533f7d459dd07b602f18fbcd0a",
+        "sha256_in_prefix": "fe0caff6e3d76eb3501c7d9de4e439c0dac8e3533f7d459dd07b602f18fbcd0a",
+        "size_in_bytes": 13231
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/bilayer.pyc",
+        "path_type": "hardlink",
+        "sha256": "eba39584fd0ec13db60626eea988de60d30b143ed9b4f65876072cf5dddcfd7c",
+        "sha256_in_prefix": "eba39584fd0ec13db60626eea988de60d30b143ed9b4f65876072cf5dddcfd7c",
+        "size_in_bytes": 10760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/biswitchboard.py",
+        "path_type": "hardlink",
+        "sha256": "8f027c1f18ef37f0ac4ea92cb54050ff46d75c241fb6fe35f9592c3389c001ac",
+        "sha256_in_prefix": "8f027c1f18ef37f0ac4ea92cb54050ff46d75c241fb6fe35f9592c3389c001ac",
+        "size_in_bytes": 5209
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/hinet/biswitchboard.pyc",
+        "path_type": "hardlink",
+        "sha256": "1b3dbc5c5b91cfe7af9e28569a3f0e04158483a90056a435ec18c9653a30e1f6",
+        "sha256_in_prefix": "1b3dbc5c5b91cfe7af9e28569a3f0e04158483a90056a435ec18c9653a30e1f6",
+        "size_in_bytes": 5102
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "05bedb366ff941548bd55a9471818da5939abce921ea3db355dbf86c2f01b159",
+        "sha256_in_prefix": "05bedb366ff941548bd55a9471818da5939abce921ea3db355dbf86c2f01b159",
+        "size_in_bytes": 742
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "026136d001315f1133dc13c56afe6f9b965e3fcd3994bd537ea8e54299ee89ef",
+        "sha256_in_prefix": "026136d001315f1133dc13c56afe6f9b965e3fcd3994bd537ea8e54299ee89ef",
+        "size_in_bytes": 1055
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/facade.py",
+        "path_type": "hardlink",
+        "sha256": "c623a8e835b5161029243988ab27b873c0fbe8f690821e335b748b55974cbdfb",
+        "sha256_in_prefix": "c623a8e835b5161029243988ab27b873c0fbe8f690821e335b748b55974cbdfb",
+        "size_in_bytes": 16557
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/facade.pyc",
+        "path_type": "hardlink",
+        "sha256": "daafbd364e913e12b9370aa521854ac543f57f92b8e058df0901d4ff1e6aea6e",
+        "sha256_in_prefix": "daafbd364e913e12b9370aa521854ac543f57f92b8e058df0901d4ff1e6aea6e",
+        "size_in_bytes": 13245
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/slideshow.py",
+        "path_type": "hardlink",
+        "sha256": "55f19fa8709bdd63d5b006eda49ee7b1c9727a399a6aa9e0bd8d3a3b49dee49a",
+        "sha256_in_prefix": "55f19fa8709bdd63d5b006eda49ee7b1c9727a399a6aa9e0bd8d3a3b49dee49a",
+        "size_in_bytes": 8365
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/slideshow.pyc",
+        "path_type": "hardlink",
+        "sha256": "bc148662ec9d9bd9277a8c095fd6f28e69ba7480aabb5782cd56d4585881434d",
+        "sha256_in_prefix": "bc148662ec9d9bd9277a8c095fd6f28e69ba7480aabb5782cd56d4585881434d",
+        "size_in_bytes": 7877
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/tracer.py",
+        "path_type": "hardlink",
+        "sha256": "1ca8ff5af83c89c247799f6ea98213e513f34369785562e520ad05d2edd0f2f6",
+        "sha256_in_prefix": "1ca8ff5af83c89c247799f6ea98213e513f34369785562e520ad05d2edd0f2f6",
+        "size_in_bytes": 38901
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/tracer.pyc",
+        "path_type": "hardlink",
+        "sha256": "8997035ba4d6acd3b066a0c9b6854a63099001fb74a96fe97928b619069a9a7e",
+        "sha256_in_prefix": "8997035ba4d6acd3b066a0c9b6854a63099001fb74a96fe97928b619069a9a7e",
+        "size_in_bytes": 29500
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/utils.py",
+        "path_type": "hardlink",
+        "sha256": "7fc97954d7f4fbb9b5ced737d387f87a20c8c03f200b9a5a65cd048648ba45de",
+        "sha256_in_prefix": "7fc97954d7f4fbb9b5ced737d387f87a20c8c03f200b9a5a65cd048648ba45de",
+        "size_in_bytes": 2801
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/inspection/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "4748f4eb244ecf63756ca424eef4283327ab3d42876f8f50392b792f2e874ec7",
+        "sha256_in_prefix": "4748f4eb244ecf63756ca424eef4283327ab3d42876f8f50392b792f2e874ec7",
+        "size_in_bytes": 3531
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "51239fb2a7e021bcc8dd76d960ef0839a51cc252f15b7bd16086a9b72146d2e5",
+        "sha256_in_prefix": "51239fb2a7e021bcc8dd76d960ef0839a51cc252f15b7bd16086a9b72146d2e5",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "8aac9cf5abccf4f83945414f37cc10005a77d211127ceac64f5297b7ba66eeaa",
+        "sha256_in_prefix": "8aac9cf5abccf4f83945414f37cc10005a77d211127ceac64f5297b7ba66eeaa",
+        "size_in_bytes": 456
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/autogen.py",
+        "path_type": "hardlink",
+        "sha256": "f496c33946545fd268d98fc2f7d6e6a78b6c1b6c15f01f73ce4952e9dedff3c6",
+        "sha256_in_prefix": "f496c33946545fd268d98fc2f7d6e6a78b6c1b6c15f01f73ce4952e9dedff3c6",
+        "size_in_bytes": 5456
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/autogen.pyc",
+        "path_type": "hardlink",
+        "sha256": "897da087aae35acf30b8b0a6ba393285f779f01691b05d93603aab5bacd44f9a",
+        "sha256_in_prefix": "897da087aae35acf30b8b0a6ba393285f779f01691b05d93603aab5bacd44f9a",
+        "size_in_bytes": 6699
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/gradient.py",
+        "path_type": "hardlink",
+        "sha256": "569676eba630b6f667704e3dbc8062dae32586a9579bae18c0cf3dff6312c724",
+        "sha256_in_prefix": "569676eba630b6f667704e3dbc8062dae32586a9579bae18c0cf3dff6312c724",
+        "size_in_bytes": 5833
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/gradient.pyc",
+        "path_type": "hardlink",
+        "sha256": "2bf375a1764e6c641027c9070d3880a42a515daf9a523e5067a5f3b991529734",
+        "sha256_in_prefix": "2bf375a1764e6c641027c9070d3880a42a515daf9a523e5067a5f3b991529734",
+        "size_in_bytes": 6083
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/miscnodes.py",
+        "path_type": "hardlink",
+        "sha256": "5e6a9b498ca4a82e0a344aca2a5bec88baab6d77e561d6e2bc8887376bd27a82",
+        "sha256_in_prefix": "5e6a9b498ca4a82e0a344aca2a5bec88baab6d77e561d6e2bc8887376bd27a82",
+        "size_in_bytes": 785
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/nodes/miscnodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "df0dd1949742f7e2e8ea860c44ed574e9d3d1d920c9f3b5a9ff519341c16f98d",
+        "sha256_in_prefix": "df0dd1949742f7e2e8ea860c44ed574e9d3d1d920c9f3b5a9ff519341c16f98d",
+        "size_in_bytes": 1307
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/parallel/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d983c628b854d1bd9fb9109d91ae779b304e605156bf0eebca3d081fb637c38a",
+        "sha256_in_prefix": "d983c628b854d1bd9fb9109d91ae779b304e605156bf0eebca3d081fb637c38a",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/parallel/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "bbc6cac2cf17cf709444029d3118a9ff90838df0aef791192b365305de79d8fa",
+        "sha256_in_prefix": "bbc6cac2cf17cf709444029d3118a9ff90838df0aef791192b365305de79d8fa",
+        "size_in_bytes": 444
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/parallel/parallelbiflow.py",
+        "path_type": "hardlink",
+        "sha256": "c7065db4e8d1a90e63e9f392c24619f7b41c5faa771efd64a82cdb73705da711",
+        "sha256_in_prefix": "c7065db4e8d1a90e63e9f392c24619f7b41c5faa771efd64a82cdb73705da711",
+        "size_in_bytes": 30540
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/parallel/parallelbiflow.pyc",
+        "path_type": "hardlink",
+        "sha256": "b3e5cf89e33bbe2c599a7df0abf3e7aa44bbb806585c3332d0e03a767166bb32",
+        "sha256_in_prefix": "b3e5cf89e33bbe2c599a7df0abf3e7aa44bbb806585c3332d0e03a767166bb32",
+        "size_in_bytes": 22106
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/parallel/parallelbihinet.py",
+        "path_type": "hardlink",
+        "sha256": "0d84bfbc7f7154f9dd8276fa6a2873539c749952ab4a49184943de9e02bf64f1",
+        "sha256_in_prefix": "0d84bfbc7f7154f9dd8276fa6a2873539c749952ab4a49184943de9e02bf64f1",
+        "size_in_bytes": 2773
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/parallel/parallelbihinet.pyc",
+        "path_type": "hardlink",
+        "sha256": "79cdf2eb5b01195d96c0873abc308ec43cc93ffe563204328bf9fd06ce398731",
+        "sha256_in_prefix": "79cdf2eb5b01195d96c0873abc308ec43cc93ffe563204328bf9fd06ce398731",
+        "size_in_bytes": 3179
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "29eb80add55b3adbbe5c2f54918342d86e36499b151bd7d9762d9822cb1abca1",
+        "sha256_in_prefix": "29eb80add55b3adbbe5c2f54918342d86e36499b151bd7d9762d9822cb1abca1",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "628b75526cca50009de68645894a2861ee67c4a575f8558551c308e67c904d13",
+        "sha256_in_prefix": "628b75526cca50009de68645894a2861ee67c4a575f8558551c308e67c904d13",
+        "size_in_bytes": 509
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/_tools.py",
+        "path_type": "hardlink",
+        "sha256": "be02ecc0e1fbc346d95490c54751e0fb224af611da198141dfbc025bdd85be67",
+        "sha256_in_prefix": "be02ecc0e1fbc346d95490c54751e0fb224af611da198141dfbc025bdd85be67",
+        "size_in_bytes": 5149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/_tools.pyc",
+        "path_type": "hardlink",
+        "sha256": "61e595808e02234b48a250448790b3ee480bad18fae763297ccbc73cb33adcf2",
+        "sha256_in_prefix": "61e595808e02234b48a250448790b3ee480bad18fae763297ccbc73cb33adcf2",
+        "size_in_bytes": 7060
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "c7c067d440f411357f15ede04c11252d72e0f33f5c0c7422fdd69388d577e9ec",
+        "sha256_in_prefix": "c7c067d440f411357f15ede04c11252d72e0f33f5c0c7422fdd69388d577e9ec",
+        "size_in_bytes": 2520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "7aa7d615c7d4cd5b695ce293d9a76a0c65107be7533c08cc341b4d5e535bbdca",
+        "sha256_in_prefix": "7aa7d615c7d4cd5b695ce293d9a76a0c65107be7533c08cc341b4d5e535bbdca",
+        "size_in_bytes": 3002
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/ide_run.py",
+        "path_type": "hardlink",
+        "sha256": "7813202cea67863a97b455d1475bf99b80f2e4910199318c8e9da14d8020ab36",
+        "sha256_in_prefix": "7813202cea67863a97b455d1475bf99b80f2e4910199318c8e9da14d8020ab36",
+        "size_in_bytes": 237
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/ide_run.pyc",
+        "path_type": "hardlink",
+        "sha256": "f8fc9785c3dc6233e5e7be4368d3474bfa116bc220039a3a897a56f21d63083f",
+        "sha256_in_prefix": "f8fc9785c3dc6233e5e7be4368d3474bfa116bc220039a3a897a56f21d63083f",
+        "size_in_bytes": 395
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_biflow.py",
+        "path_type": "hardlink",
+        "sha256": "458eea7862886abd61d80cead6b6070d96e5bcc83fc2cdcce00dbe5e32664785",
+        "sha256_in_prefix": "458eea7862886abd61d80cead6b6070d96e5bcc83fc2cdcce00dbe5e32664785",
+        "size_in_bytes": 11153
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_biflow.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f2dbad1987e577f496f232f030205997740c01ff27eb8859671ff09721f7e9a",
+        "sha256_in_prefix": "8f2dbad1987e577f496f232f030205997740c01ff27eb8859671ff09721f7e9a",
+        "size_in_bytes": 10086
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_bihinet.py",
+        "path_type": "hardlink",
+        "sha256": "633cde5232c62414540e5e16406f675d22653482d86c8956fa31ff28f13f9d36",
+        "sha256_in_prefix": "633cde5232c62414540e5e16406f675d22653482d86c8956fa31ff28f13f9d36",
+        "size_in_bytes": 6897
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_bihinet.pyc",
+        "path_type": "hardlink",
+        "sha256": "3aaf7018d21b762d0f0f929aa131e17994eb670519c9c39f275499cca400e3de",
+        "sha256_in_prefix": "3aaf7018d21b762d0f0f929aa131e17994eb670519c9c39f275499cca400e3de",
+        "size_in_bytes": 8308
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_binode.py",
+        "path_type": "hardlink",
+        "sha256": "3f0d8122f932b757c17aeed8faf89eb5ed7d2d2248246aac42aa92e2da49911e",
+        "sha256_in_prefix": "3f0d8122f932b757c17aeed8faf89eb5ed7d2d2248246aac42aa92e2da49911e",
+        "size_in_bytes": 16770
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_binode.pyc",
+        "path_type": "hardlink",
+        "sha256": "022fadaca5898c47abd556bbcef06988eae9c260da422ae907ebc09dcaf35734",
+        "sha256_in_prefix": "022fadaca5898c47abd556bbcef06988eae9c260da422ae907ebc09dcaf35734",
+        "size_in_bytes": 23931
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_gradient.py",
+        "path_type": "hardlink",
+        "sha256": "1ee8edd83ef1588b9a7a3faac411eb1ff72db4b726b8c70d0465320e108886dc",
+        "sha256_in_prefix": "1ee8edd83ef1588b9a7a3faac411eb1ff72db4b726b8c70d0465320e108886dc",
+        "size_in_bytes": 9643
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_gradient.pyc",
+        "path_type": "hardlink",
+        "sha256": "7396f8b956e5f3b7bd14b8ea74c33369683fa62968713108e659e230dee5359c",
+        "sha256_in_prefix": "7396f8b956e5f3b7bd14b8ea74c33369683fa62968713108e659e230dee5359c",
+        "size_in_bytes": 9962
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_namespace_fixups.py",
+        "path_type": "hardlink",
+        "sha256": "6528a2fda54bd423839897bdf8e3abb096bc5dbca52ad1c12e41c8b9fd801b4a",
+        "sha256_in_prefix": "6528a2fda54bd423839897bdf8e3abb096bc5dbca52ad1c12e41c8b9fd801b4a",
+        "size_in_bytes": 310
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_namespace_fixups.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d35ceb519c6b4673f0d2e0fa64c97642b76636dcfe03012398329832e5ecde7",
+        "sha256_in_prefix": "7d35ceb519c6b4673f0d2e0fa64c97642b76636dcfe03012398329832e5ecde7",
+        "size_in_bytes": 571
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_parallelbiflow.py",
+        "path_type": "hardlink",
+        "sha256": "500fddc975a916d777723dbb55eb74d41a9285cba353ef74c2d7fecc3760398a",
+        "sha256_in_prefix": "500fddc975a916d777723dbb55eb74d41a9285cba353ef74c2d7fecc3760398a",
+        "size_in_bytes": 3551
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_parallelbiflow.pyc",
+        "path_type": "hardlink",
+        "sha256": "e873f46c421be75d8f7df8cbe8a4b672dbf751dc3852ab0d996ac042bc18c876",
+        "sha256_in_prefix": "e873f46c421be75d8f7df8cbe8a4b672dbf751dc3852ab0d996ac042bc18c876",
+        "size_in_bytes": 4143
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_parallelbihinet.py",
+        "path_type": "hardlink",
+        "sha256": "216bd3016ab39ca0ba2f15067e0cd1c02f87a1dccb849bc86fb2f87bc7948bb1",
+        "sha256_in_prefix": "216bd3016ab39ca0ba2f15067e0cd1c02f87a1dccb849bc86fb2f87bc7948bb1",
+        "size_in_bytes": 1236
+      },
+      {
+        "_path": "lib/python2.7/site-packages/bimdp/test/test_parallelbihinet.pyc",
+        "path_type": "hardlink",
+        "sha256": "96afd536045b63718365a0e17cc923fd65ecf8a7274e20ceb8b0f865073e49f6",
+        "sha256_in_prefix": "96afd536045b63718365a0e17cc923fd65ecf8a7274e20ceb8b0f865073e49f6",
+        "size_in_bytes": 1763
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e9af2f9695ab540ed21c291bf4756bbe5c302316a5e26c0b043179d3aac0d7b9",
+        "sha256_in_prefix": "e9af2f9695ab540ed21c291bf4756bbe5c302316a5e26c0b043179d3aac0d7b9",
+        "size_in_bytes": 9020
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "23011f137a39112c48251d06e3db16381873b4aca32bc31aaefda5235e3074d9",
+        "sha256_in_prefix": "23011f137a39112c48251d06e3db16381873b4aca32bc31aaefda5235e3074d9",
+        "size_in_bytes": 8434
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/caching/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "67fb0acb96010363f4dc36b0cf6ab0aee93dfb8834d7155f4456c7a000d0b3f2",
+        "sha256_in_prefix": "67fb0acb96010363f4dc36b0cf6ab0aee93dfb8834d7155f4456c7a000d0b3f2",
+        "size_in_bytes": 383
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/caching/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5dd9961265c9c531647d191f37966adb53e613798a7a4458e672d723e0e0ff82",
+        "sha256_in_prefix": "5dd9961265c9c531647d191f37966adb53e613798a7a4458e672d723e0e0ff82",
+        "size_in_bytes": 524
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/caching/caching_extension.py",
+        "path_type": "hardlink",
+        "sha256": "f983f53d1ab6f53b448c7f34696cb96dd9f2228c990d8e611685be536d9157b6",
+        "sha256_in_prefix": "f983f53d1ab6f53b448c7f34696cb96dd9f2228c990d8e611685be536d9157b6",
+        "size_in_bytes": 7296
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/caching/caching_extension.pyc",
+        "path_type": "hardlink",
+        "sha256": "a774f8892f3e0b1d72b83bda1df8a973d3a0140c6cd672b9cbb48b9debde87ce",
+        "sha256_in_prefix": "a774f8892f3e0b1d72b83bda1df8a973d3a0140c6cd672b9cbb48b9debde87ce",
+        "size_in_bytes": 6783
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/classifier_node.py",
+        "path_type": "hardlink",
+        "sha256": "90602f2d26832038d690948575908455ac1f27cc67dd2a94f0edeec375aac38c",
+        "sha256_in_prefix": "90602f2d26832038d690948575908455ac1f27cc67dd2a94f0edeec375aac38c",
+        "size_in_bytes": 5430
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/classifier_node.pyc",
+        "path_type": "hardlink",
+        "sha256": "1c2c4e9688ac97e70fd222d46ff9cd031acbb8b3f5c954f7d41ff8fa84cadd06",
+        "sha256_in_prefix": "1c2c4e9688ac97e70fd222d46ff9cd031acbb8b3f5c954f7d41ff8fa84cadd06",
+        "size_in_bytes": 6504
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/configuration.py",
+        "path_type": "hardlink",
+        "sha256": "3b1c8d919442f34fce6403b381faf7dd2203aa7cef3cbbf252ec7325ec71f51b",
+        "sha256_in_prefix": "3b1c8d919442f34fce6403b381faf7dd2203aa7cef3cbbf252ec7325ec71f51b",
+        "size_in_bytes": 16356
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/configuration.pyc",
+        "path_type": "hardlink",
+        "sha256": "706136068692685259faa887c384952f72a068d07807223ec4893a515cad853c",
+        "sha256_in_prefix": "706136068692685259faa887c384952f72a068d07807223ec4893a515cad853c",
+        "size_in_bytes": 14372
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/extension.py",
+        "path_type": "hardlink",
+        "sha256": "a6540b1e4f2775d9a0728a0f3ae946a19b7fa3f966b6aa5b9ece9ebe27acbf91",
+        "sha256_in_prefix": "a6540b1e4f2775d9a0728a0f3ae946a19b7fa3f966b6aa5b9ece9ebe27acbf91",
+        "size_in_bytes": 21429
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/extension.pyc",
+        "path_type": "hardlink",
+        "sha256": "78e55f6b065a10ae1cb55fb7533e7bbc84fb312f4c0c01dc2d26a9aa5678b285",
+        "sha256_in_prefix": "78e55f6b065a10ae1cb55fb7533e7bbc84fb312f4c0c01dc2d26a9aa5678b285",
+        "size_in_bytes": 15697
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/graph/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "da9ed26ac579b52e2f04604216973b916e9dac36d59682dac0d8659eadd887d9",
+        "sha256_in_prefix": "da9ed26ac579b52e2f04604216973b916e9dac36d59682dac0d8659eadd887d9",
+        "size_in_bytes": 467
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/graph/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f07648a13a2957b46ee6235b5e27b5a11fe35f34895fc309af5032e1ac9b563",
+        "sha256_in_prefix": "5f07648a13a2957b46ee6235b5e27b5a11fe35f34895fc309af5032e1ac9b563",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/graph/graph.py",
+        "path_type": "hardlink",
+        "sha256": "41120da1cfc181b0a628c954b2d6bad3fab7d44c7e3acc0a2afee3e7ca9b7658",
+        "sha256_in_prefix": "41120da1cfc181b0a628c954b2d6bad3fab7d44c7e3acc0a2afee3e7ca9b7658",
+        "size_in_bytes": 13062
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/graph/graph.pyc",
+        "path_type": "hardlink",
+        "sha256": "bbe9911db9eebd05c7c5719177e975efe108fc4801154ed83f18fd33298fc75d",
+        "sha256_in_prefix": "bbe9911db9eebd05c7c5719177e975efe108fc4801154ed83f18fd33298fc75d",
+        "size_in_bytes": 14926
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/helper_funcs.py",
+        "path_type": "hardlink",
+        "sha256": "a33b829d822ed8e280355417994254a4f7cdc133d492300979b74963509c72f9",
+        "sha256_in_prefix": "a33b829d822ed8e280355417994254a4f7cdc133d492300979b74963509c72f9",
+        "size_in_bytes": 1011
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/helper_funcs.pyc",
+        "path_type": "hardlink",
+        "sha256": "98d079993184ea1a7e8161b39acdad08e231b2f46b86bbbcd54be866e7aaa6cd",
+        "sha256_in_prefix": "98d079993184ea1a7e8161b39acdad08e231b2f46b86bbbcd54be866e7aaa6cd",
+        "size_in_bytes": 1405
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9acd8ce12b902f074bf124f7c88c123ad147964ac3c735222f8653c2f59909f1",
+        "sha256_in_prefix": "9acd8ce12b902f074bf124f7c88c123ad147964ac3c735222f8653c2f59909f1",
+        "size_in_bytes": 2954
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "04c946cb6b45495e8dfbaae7d219b0e64e6fc849dfa3079cd566c8a0b6afe26e",
+        "sha256_in_prefix": "04c946cb6b45495e8dfbaae7d219b0e64e6fc849dfa3079cd566c8a0b6afe26e",
+        "size_in_bytes": 2995
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/flownode.py",
+        "path_type": "hardlink",
+        "sha256": "52cb382649e2968f582bf3de497506a28592390f6f748114438067d06e2fcd5b",
+        "sha256_in_prefix": "52cb382649e2968f582bf3de497506a28592390f6f748114438067d06e2fcd5b",
+        "size_in_bytes": 8574
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/flownode.pyc",
+        "path_type": "hardlink",
+        "sha256": "bce85f0e71b9ee289b6a4ce77ae789e84d16c2bf184bd6825f97fa63d72df263",
+        "sha256_in_prefix": "bce85f0e71b9ee289b6a4ce77ae789e84d16c2bf184bd6825f97fa63d72df263",
+        "size_in_bytes": 8514
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/hinet.css",
+        "path_type": "hardlink",
+        "sha256": "d99a200bf1e20cc46ecfe1cb112469e768aaadcaa47c0a7d67ba136bb17f065e",
+        "sha256_in_prefix": "d99a200bf1e20cc46ecfe1cb112469e768aaadcaa47c0a7d67ba136bb17f065e",
+        "size_in_bytes": 1141
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/htmlvisitor.py",
+        "path_type": "hardlink",
+        "sha256": "6493e68a7a58ecc6d5bc5c5e499db26777ea24b1ef722cf89a700fb08a42185c",
+        "sha256_in_prefix": "6493e68a7a58ecc6d5bc5c5e499db26777ea24b1ef722cf89a700fb08a42185c",
+        "size_in_bytes": 12302
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/htmlvisitor.pyc",
+        "path_type": "hardlink",
+        "sha256": "59cea9ca7653f7c75f3afe9832043315e8986e22dfa3384508741305468e88a4",
+        "sha256_in_prefix": "59cea9ca7653f7c75f3afe9832043315e8986e22dfa3384508741305468e88a4",
+        "size_in_bytes": 14704
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/layer.py",
+        "path_type": "hardlink",
+        "sha256": "19d488e7ee950cb5aca96b171055e02d1422619171f269f21676c40f01262df9",
+        "sha256_in_prefix": "19d488e7ee950cb5aca96b171055e02d1422619171f269f21676c40f01262df9",
+        "size_in_bytes": 12611
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/layer.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a6b31d00e7f4e463cfb61399c71a481f3374a11e95d2c398205d481a9ebf4f4",
+        "sha256_in_prefix": "7a6b31d00e7f4e463cfb61399c71a481f3374a11e95d2c398205d481a9ebf4f4",
+        "size_in_bytes": 12671
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/switchboard.py",
+        "path_type": "hardlink",
+        "sha256": "ba421abb439afad50ebd53947b71225565df5a688f54fd53d640273c671034b2",
+        "sha256_in_prefix": "ba421abb439afad50ebd53947b71225565df5a688f54fd53d640273c671034b2",
+        "size_in_bytes": 31127
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/switchboard.pyc",
+        "path_type": "hardlink",
+        "sha256": "4f0e8907b3fa0f442d61bc35f013ede7c3a57f4779b3bb589c3c8974e9963adf",
+        "sha256_in_prefix": "4f0e8907b3fa0f442d61bc35f013ede7c3a57f4779b3bb589c3c8974e9963adf",
+        "size_in_bytes": 23504
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/switchboard_factory.py",
+        "path_type": "hardlink",
+        "sha256": "c5ea180de838e6d590e33f0137739147393715a1fe250feee7c5ba77b1f05269",
+        "sha256_in_prefix": "c5ea180de838e6d590e33f0137739147393715a1fe250feee7c5ba77b1f05269",
+        "size_in_bytes": 5741
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/hinet/switchboard_factory.pyc",
+        "path_type": "hardlink",
+        "sha256": "ed48b59623184e7fd6a10168f3788e86cb68306c184456407bbc678cacb71e7c",
+        "sha256_in_prefix": "ed48b59623184e7fd6a10168f3788e86cb68306c184456407bbc678cacb71e7c",
+        "size_in_bytes": 5159
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/linear_flows.py",
+        "path_type": "hardlink",
+        "sha256": "c6d7a9681ab20a1d1a7f9093c1369e3449444eae828f120f52d650ecc81681b6",
+        "sha256_in_prefix": "c6d7a9681ab20a1d1a7f9093c1369e3449444eae828f120f52d650ecc81681b6",
+        "size_in_bytes": 27573
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/linear_flows.pyc",
+        "path_type": "hardlink",
+        "sha256": "554b3324c955e47ec268aa76c5afa703c89514727382739d91f43b9f93fb7266",
+        "sha256_in_prefix": "554b3324c955e47ec268aa76c5afa703c89514727382739d91f43b9f93fb7266",
+        "size_in_bytes": 25939
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6db9aff722f8857ee33c2ca3722ad35273a9df15febf8f1d4c701e9f15ef9e69",
+        "sha256_in_prefix": "6db9aff722f8857ee33c2ca3722ad35273a9df15febf8f1d4c701e9f15ef9e69",
+        "size_in_bytes": 4424
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f48504c9bf24f6c05e97527335c168f324573fc7f2949c218d0a47f8c9b301f",
+        "sha256_in_prefix": "5f48504c9bf24f6c05e97527335c168f324573fc7f2949c218d0a47f8c9b301f",
+        "size_in_bytes": 3791
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/classifier_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "7c980de9ad520114e8ca104078d6d07a45f66699a413871f5142f1d73fb1c4b9",
+        "sha256_in_prefix": "7c980de9ad520114e8ca104078d6d07a45f66699a413871f5142f1d73fb1c4b9",
+        "size_in_bytes": 24858
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/classifier_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "3eae3e2577fcdc6189be0eb2fea54888fec9797c702ada6dcbd43d2bd4c2e731",
+        "sha256_in_prefix": "3eae3e2577fcdc6189be0eb2fea54888fec9797c702ada6dcbd43d2bd4c2e731",
+        "size_in_bytes": 24985
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/convolution_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "a7e398e6569500b7734b13f9ee7e67f6db686645fa2b68b96edec6b7016796fe",
+        "sha256_in_prefix": "a7e398e6569500b7734b13f9ee7e67f6db686645fa2b68b96edec6b7016796fe",
+        "size_in_bytes": 8555
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/convolution_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "43fb7adda039985162896d382657b9bb7ee467d30ebc7ea2399d198018d292ef",
+        "sha256_in_prefix": "43fb7adda039985162896d382657b9bb7ee467d30ebc7ea2399d198018d292ef",
+        "size_in_bytes": 8784
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/em_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "444196bc870b13ee82d2be166e24a70dd382a261d70fc5f8f44ffea160f3ae76",
+        "sha256_in_prefix": "444196bc870b13ee82d2be166e24a70dd382a261d70fc5f8f44ffea160f3ae76",
+        "size_in_bytes": 7851
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/em_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "f4fe0998a402e7b891972b4b45024d5f6d2e2e3ffd39f2aee78378c62608f0b8",
+        "sha256_in_prefix": "f4fe0998a402e7b891972b4b45024d5f6d2e2e3ffd39f2aee78378c62608f0b8",
+        "size_in_bytes": 6693
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/expansion_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "ba7dd97c281e2b78b3d5cd5ac655b00b5a11202eb9f9527fc5d489aeacf2d0ba",
+        "sha256_in_prefix": "ba7dd97c281e2b78b3d5cd5ac655b00b5a11202eb9f9527fc5d489aeacf2d0ba",
+        "size_in_bytes": 15071
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/expansion_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "8df42f083b891b152f02706904131c504f4ce91b56ad4e8a6534f306c6a7beca",
+        "sha256_in_prefix": "8df42f083b891b152f02706904131c504f4ce91b56ad4e8a6534f306c6a7beca",
+        "size_in_bytes": 16622
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/fda_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "2bc5aa1081ab1045832cdee2ba6f084a388fa60604c6427c0b7bbf43caf069d9",
+        "sha256_in_prefix": "2bc5aa1081ab1045832cdee2ba6f084a388fa60604c6427c0b7bbf43caf069d9",
+        "size_in_bytes": 6393
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/fda_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "81677833665cc89ae43b7ddd5cdd0e946aa5f7947a0583c1be0602f029353106",
+        "sha256_in_prefix": "81677833665cc89ae43b7ddd5cdd0e946aa5f7947a0583c1be0602f029353106",
+        "size_in_bytes": 6839
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/ica_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "b6922e60d516de3badbcf7098322bc9ced3f8268c60e75803005bc0dfb47b88e",
+        "sha256_in_prefix": "b6922e60d516de3badbcf7098322bc9ced3f8268c60e75803005bc0dfb47b88e",
+        "size_in_bytes": 42329
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/ica_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "9b0217c0c865550e00d30efbcfa24848a48a9b9ea9be0a485f78ce9460269ad8",
+        "sha256_in_prefix": "9b0217c0c865550e00d30efbcfa24848a48a9b9ea9be0a485f78ce9460269ad8",
+        "size_in_bytes": 28340
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/isfa_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "c3adbbcbd19cfca73984bd57b845f2fddbc19f04cafc1742adb87f9cf2b57e23",
+        "sha256_in_prefix": "c3adbbcbd19cfca73984bd57b845f2fddbc19f04cafc1742adb87f9cf2b57e23",
+        "size_in_bytes": 32244
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/isfa_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "8ae8148682b7fd9f7bedaf51304020b45ee307a0bbe36cc8a5e3fe57a103afb8",
+        "sha256_in_prefix": "8ae8148682b7fd9f7bedaf51304020b45ee307a0bbe36cc8a5e3fe57a103afb8",
+        "size_in_bytes": 22730
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/jade.py",
+        "path_type": "hardlink",
+        "sha256": "fcea4139e5d3227529e0b66bef99899e090c915e679182734d60afaa6318ad25",
+        "sha256_in_prefix": "fcea4139e5d3227529e0b66bef99899e090c915e679182734d60afaa6318ad25",
+        "size_in_bytes": 8906
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/jade.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ba43fc89c0dee11f5bc0b525ed004cf03611d0367a40f547f8ab6906f008e55",
+        "sha256_in_prefix": "2ba43fc89c0dee11f5bc0b525ed004cf03611d0367a40f547f8ab6906f008e55",
+        "size_in_bytes": 6803
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/libsvm_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "adf6a72e2f0e86e11b38c7cca2907b1184419a766a7bc73d4fbd7ae2c32d1c82",
+        "sha256_in_prefix": "adf6a72e2f0e86e11b38c7cca2907b1184419a766a7bc73d4fbd7ae2c32d1c82",
+        "size_in_bytes": 5006
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/libsvm_classifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "252c15c85979e93ca4c1027678607d13b2b113adcb3070505c2cf63f273d00ce",
+        "sha256_in_prefix": "252c15c85979e93ca4c1027678607d13b2b113adcb3070505c2cf63f273d00ce",
+        "size_in_bytes": 5745
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/lle_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "2a1835b3501eafb5a2341f5e0a642200d8fd21f0a98330b041a9f7d808dc2c2f",
+        "sha256_in_prefix": "2a1835b3501eafb5a2341f5e0a642200d8fd21f0a98330b041a9f7d808dc2c2f",
+        "size_in_bytes": 21065
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/lle_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "1e171547702295834d07e038e03b79c4d7088c6b0375de9efc89a0453417e2df",
+        "sha256_in_prefix": "1e171547702295834d07e038e03b79c4d7088c6b0375de9efc89a0453417e2df",
+        "size_in_bytes": 13398
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/misc_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "8ea0bb37c2cbecbb42b356c0b2e2ce2a93b6bd862f0d1e92fc06770448485fce",
+        "sha256_in_prefix": "8ea0bb37c2cbecbb42b356c0b2e2ce2a93b6bd862f0d1e92fc06770448485fce",
+        "size_in_bytes": 28701
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/misc_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "71d12b8bc8ee0bd3bf0ab467e54d8242e644ef270e3a43b0b0d1d64d65468b5b",
+        "sha256_in_prefix": "71d12b8bc8ee0bd3bf0ab467e54d8242e644ef270e3a43b0b0d1d64d65468b5b",
+        "size_in_bytes": 31919
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/neural_gas_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "32356c4c92d641bf4c8a165d8ecf63f62a9d984676bc96bcb9aa94a60ac3b87a",
+        "sha256_in_prefix": "32356c4c92d641bf4c8a165d8ecf63f62a9d984676bc96bcb9aa94a60ac3b87a",
+        "size_in_bytes": 17160
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/neural_gas_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "19aa002a11709e83507a217f71213a26e5f343a3665fe1455fbeb523fab9ce94",
+        "sha256_in_prefix": "19aa002a11709e83507a217f71213a26e5f343a3665fe1455fbeb523fab9ce94",
+        "size_in_bytes": 16008
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/nipals.py",
+        "path_type": "hardlink",
+        "sha256": "b7451dd0327841b616b3050c9b990a18bb23f7498dbc40e1fc47f6ab35650f1b",
+        "sha256_in_prefix": "b7451dd0327841b616b3050c9b990a18bb23f7498dbc40e1fc47f6ab35650f1b",
+        "size_in_bytes": 5034
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/nipals.pyc",
+        "path_type": "hardlink",
+        "sha256": "f9a17911a3702f2712c53564c2bd2a5f18b702a1e817edf88f805b23ef6cbee9",
+        "sha256_in_prefix": "f9a17911a3702f2712c53564c2bd2a5f18b702a1e817edf88f805b23ef6cbee9",
+        "size_in_bytes": 4859
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/pca_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "e7b4dd2f4f7dd34637896a09f183d2cdbb7763aa143bb0946afa23c5156ccd53",
+        "sha256_in_prefix": "e7b4dd2f4f7dd34637896a09f183d2cdbb7763aa143bb0946afa23c5156ccd53",
+        "size_in_bytes": 12854
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/pca_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "cfd7983cc290c188dfa5843157aecc190f6c80f585d23af4f7d219068fbed8c2",
+        "sha256_in_prefix": "cfd7983cc290c188dfa5843157aecc190f6c80f585d23af4f7d219068fbed8c2",
+        "size_in_bytes": 11080
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/rbm_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "8c66e10e39a6a746da9b4d1f0a2ab8bfeba95201bcdf7325b78fabd58641b528",
+        "sha256_in_prefix": "8c66e10e39a6a746da9b4d1f0a2ab8bfeba95201bcdf7325b78fabd58641b528",
+        "size_in_bytes": 14715
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/rbm_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "389d86252d22804cb6b8b5cd1b86746579eac04c5472b29d7693338ee3339bbc",
+        "sha256_in_prefix": "389d86252d22804cb6b8b5cd1b86746579eac04c5472b29d7693338ee3339bbc",
+        "size_in_bytes": 15710
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/regression_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "80dd924780b9d101b28f73be1f555ca3252b85a4c1af936d5df7a1faeb0ade72",
+        "sha256_in_prefix": "80dd924780b9d101b28f73be1f555ca3252b85a4c1af936d5df7a1faeb0ade72",
+        "size_in_bytes": 4317
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/regression_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "2210da7a99e8c210fbdb2c78d2997370c9924c15a5234e760db0288d96d15eec",
+        "sha256_in_prefix": "2210da7a99e8c210fbdb2c78d2997370c9924c15a5234e760db0288d96d15eec",
+        "size_in_bytes": 4708
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/scikits_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "8fb07afe0cf348bc9fb75c4eb86d2113720f87573727c6370eb113c0c8894419",
+        "sha256_in_prefix": "8fb07afe0cf348bc9fb75c4eb86d2113720f87573727c6370eb113c0c8894419",
+        "size_in_bytes": 19164
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/scikits_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "785caa743d563670aa14f699e1de3f8c9a59d63750b3cb4aeaabaa688c86f702",
+        "sha256_in_prefix": "785caa743d563670aa14f699e1de3f8c9a59d63750b3cb4aeaabaa688c86f702",
+        "size_in_bytes": 15234
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/sfa_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "ccaf6d1bc59a68cbf4c8bba07a3bb91cbec81c219c19d436e58ca280af4cdc64",
+        "sha256_in_prefix": "ccaf6d1bc59a68cbf4c8bba07a3bb91cbec81c219c19d436e58ca280af4cdc64",
+        "size_in_bytes": 12080
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/sfa_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "56ccf2374bf2e6ff264874b5bc725b53f4560ca610de1d82ea7b9666be976d2e",
+        "sha256_in_prefix": "56ccf2374bf2e6ff264874b5bc725b53f4560ca610de1d82ea7b9666be976d2e",
+        "size_in_bytes": 11478
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/shogun_svm_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "0f93cb85b60def6115f0de95cff75dec0b35a40f073d6bf2e95d3bdebc099709",
+        "sha256_in_prefix": "0f93cb85b60def6115f0de95cff75dec0b35a40f073d6bf2e95d3bdebc099709",
+        "size_in_bytes": 14246
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/shogun_svm_classifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "050884d3c07fc614b4c5259a76b84ec72e8dcee17ef8897225a2592e4aeae140",
+        "sha256_in_prefix": "050884d3c07fc614b4c5259a76b84ec72e8dcee17ef8897225a2592e4aeae140",
+        "size_in_bytes": 14159
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/svm_classifiers.py",
+        "path_type": "hardlink",
+        "sha256": "0793db594292c726d7b3836d5ff2a00a1031242bfd6a087b0c4403c2ce36c3dc",
+        "sha256_in_prefix": "0793db594292c726d7b3836d5ff2a00a1031242bfd6a087b0c4403c2ce36c3dc",
+        "size_in_bytes": 2617
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/svm_classifiers.pyc",
+        "path_type": "hardlink",
+        "sha256": "cd4377fa0f45200e5b3e96314bbe0e9482ea7766a0d861608683ad1d34e5436d",
+        "sha256_in_prefix": "cd4377fa0f45200e5b3e96314bbe0e9482ea7766a0d861608683ad1d34e5436d",
+        "size_in_bytes": 3705
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/xsfa_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "56d1c05d4a5a75a8216b48d9070c08046317aa9b4f898dd31a8f260f792f0b49",
+        "sha256_in_prefix": "56d1c05d4a5a75a8216b48d9070c08046317aa9b4f898dd31a8f260f792f0b49",
+        "size_in_bytes": 13642
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/nodes/xsfa_nodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "b156d34c0df05387e2031169672f44aa1f09cbd7b37640064ff6e37b2945dce0",
+        "sha256_in_prefix": "b156d34c0df05387e2031169672f44aa1f09cbd7b37640064ff6e37b2945dce0",
+        "size_in_bytes": 11805
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2ee12c94e068f5cab1bb9e7a003f1ebc8a670b62755cd9cbed243513de0fb95e",
+        "sha256_in_prefix": "2ee12c94e068f5cab1bb9e7a003f1ebc8a670b62755cd9cbed243513de0fb95e",
+        "size_in_bytes": 3117
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "019c75ef2527c04b42899c222e56ef6cd98d647bb166e8659be7cc3c93e6ab06",
+        "sha256_in_prefix": "019c75ef2527c04b42899c222e56ef6cd98d647bb166e8659be7cc3c93e6ab06",
+        "size_in_bytes": 3130
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelclassifiers.py",
+        "path_type": "hardlink",
+        "sha256": "bb97b5c0afcb4d20c10481e3906891d4e830efefbb436b80a1b1f6e5c2db896a",
+        "sha256_in_prefix": "bb97b5c0afcb4d20c10481e3906891d4e830efefbb436b80a1b1f6e5c2db896a",
+        "size_in_bytes": 1886
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelclassifiers.pyc",
+        "path_type": "hardlink",
+        "sha256": "2bd31c10c8397a529b9563ce51904c7e070edee533e1d5dcf949507ce3c2ee68",
+        "sha256_in_prefix": "2bd31c10c8397a529b9563ce51904c7e070edee533e1d5dcf949507ce3c2ee68",
+        "size_in_bytes": 2684
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelflows.py",
+        "path_type": "hardlink",
+        "sha256": "b6cabc8b19697d85b097b69352ab2ea9a566657175e0789dc37db7299927724a",
+        "sha256_in_prefix": "b6cabc8b19697d85b097b69352ab2ea9a566657175e0789dc37db7299927724a",
+        "size_in_bytes": 33944
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelflows.pyc",
+        "path_type": "hardlink",
+        "sha256": "4fc2e6f01553d92dcdfa1221247dd8838ae105f9fdbefefa4f0b0603b9f922d9",
+        "sha256_in_prefix": "4fc2e6f01553d92dcdfa1221247dd8838ae105f9fdbefefa4f0b0603b9f922d9",
+        "size_in_bytes": 29391
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelhinet.py",
+        "path_type": "hardlink",
+        "sha256": "8e4c237bcd47b461306d590fef37b1f5d6b9c95aceea55bce99d11eb92809722",
+        "sha256_in_prefix": "8e4c237bcd47b461306d590fef37b1f5d6b9c95aceea55bce99d11eb92809722",
+        "size_in_bytes": 2868
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelhinet.pyc",
+        "path_type": "hardlink",
+        "sha256": "047d929f5f1618b45fa8c1dab8e38481ce6300dc08657f6b8fda49f98dcca4f4",
+        "sha256_in_prefix": "047d929f5f1618b45fa8c1dab8e38481ce6300dc08657f6b8fda49f98dcca4f4",
+        "size_in_bytes": 4332
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelnodes.py",
+        "path_type": "hardlink",
+        "sha256": "32e3afbdc459f9541094475e2b32bb2635530f30045441b155009f3028378939",
+        "sha256_in_prefix": "32e3afbdc459f9541094475e2b32bb2635530f30045441b155009f3028378939",
+        "size_in_bytes": 9601
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/parallelnodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "df99f978f1f56466f2f7ed64c8ed448983efe662429674cde008f868b526c49d",
+        "sha256_in_prefix": "df99f978f1f56466f2f7ed64c8ed448983efe662429674cde008f868b526c49d",
+        "size_in_bytes": 10519
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/pp_slave_script.py",
+        "path_type": "hardlink",
+        "sha256": "0ef2aa9057a2cd52319e77863e413db2c22d7598d7e649efb6e6c9e88eb6bf41",
+        "sha256_in_prefix": "0ef2aa9057a2cd52319e77863e413db2c22d7598d7e649efb6e6c9e88eb6bf41",
+        "size_in_bytes": 1866
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/pp_slave_script.pyc",
+        "path_type": "hardlink",
+        "sha256": "86a8f26967fad3c5ea85bb2dd6fb03f944638011b8d1e59a9679c4d5bc2cec83",
+        "sha256_in_prefix": "86a8f26967fad3c5ea85bb2dd6fb03f944638011b8d1e59a9679c4d5bc2cec83",
+        "size_in_bytes": 1693
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/pp_slave_wrapper.py",
+        "path_type": "hardlink",
+        "sha256": "42700859ec480a99677e9dfeb045b6172ee3d2888ec8a50fac279ab9905ccc28",
+        "sha256_in_prefix": "42700859ec480a99677e9dfeb045b6172ee3d2888ec8a50fac279ab9905ccc28",
+        "size_in_bytes": 976
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/pp_slave_wrapper.pyc",
+        "path_type": "hardlink",
+        "sha256": "2b5e62eab517bcec6c11ae8e8c8c6654ecb74b4195850ac90b160e11e92da43c",
+        "sha256_in_prefix": "2b5e62eab517bcec6c11ae8e8c8c6654ecb74b4195850ac90b160e11e92da43c",
+        "size_in_bytes": 1244
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/pp_support.py",
+        "path_type": "hardlink",
+        "sha256": "eb586730279e1cf40964972eaf561e028ece72207e882a7653acbe2b5cc59aea",
+        "sha256_in_prefix": "eb586730279e1cf40964972eaf561e028ece72207e882a7653acbe2b5cc59aea",
+        "size_in_bytes": 13786
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/pp_support.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e8424596ca3831cb2c76474db1232b728001fa45c365e9b48a14d0e07caafef",
+        "sha256_in_prefix": "9e8424596ca3831cb2c76474db1232b728001fa45c365e9b48a14d0e07caafef",
+        "size_in_bytes": 12673
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/process_schedule.py",
+        "path_type": "hardlink",
+        "sha256": "24453f4affef6fae6b5040ee2e1b7691474d4e1fba816a5263d4b0a9d9e2b009",
+        "sha256_in_prefix": "24453f4affef6fae6b5040ee2e1b7691474d4e1fba816a5263d4b0a9d9e2b009",
+        "size_in_bytes": 10689
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/process_schedule.pyc",
+        "path_type": "hardlink",
+        "sha256": "eac82d4584051d9844da47ca016a651b02ba29c3c73d321c648b76be93289261",
+        "sha256_in_prefix": "eac82d4584051d9844da47ca016a651b02ba29c3c73d321c648b76be93289261",
+        "size_in_bytes": 7796
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/scheduling.py",
+        "path_type": "hardlink",
+        "sha256": "751462b1549eeefc3d78ed61504be7e9c43458ecc8deda8fcb1d4228e300663c",
+        "sha256_in_prefix": "751462b1549eeefc3d78ed61504be7e9c43458ecc8deda8fcb1d4228e300663c",
+        "size_in_bytes": 12183
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/scheduling.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c508346bae072265396ed82d006544eae78369c85235a99347399821b86d622",
+        "sha256_in_prefix": "0c508346bae072265396ed82d006544eae78369c85235a99347399821b86d622",
+        "size_in_bytes": 14681
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/thread_schedule.py",
+        "path_type": "hardlink",
+        "sha256": "53c8884bd9bc9ac2bde422863ba5dac3477b25f5d4bf89018a6fc8ea4f2e79f9",
+        "sha256_in_prefix": "53c8884bd9bc9ac2bde422863ba5dac3477b25f5d4bf89018a6fc8ea4f2e79f9",
+        "size_in_bytes": 3543
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/parallel/thread_schedule.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a2672063b69f3c671ba2872b404a27038fe39f6e1dad45a68abfcf8596a42aa",
+        "sha256_in_prefix": "9a2672063b69f3c671ba2872b404a27038fe39f6e1dad45a68abfcf8596a42aa",
+        "size_in_bytes": 3447
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/repo_revision.py",
+        "path_type": "hardlink",
+        "sha256": "dfebf20f65f5b77691a188829a029f8445eae38f09600ecf6a15d08284ba5d1d",
+        "sha256_in_prefix": "dfebf20f65f5b77691a188829a029f8445eae38f09600ecf6a15d08284ba5d1d",
+        "size_in_bytes": 1088
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/repo_revision.pyc",
+        "path_type": "hardlink",
+        "sha256": "f5c00bfb56d09a64f74408eede95f224a86f151850f0307efbeefaeddc4e1e6d",
+        "sha256_in_prefix": "f5c00bfb56d09a64f74408eede95f224a86f151850f0307efbeefaeddc4e1e6d",
+        "size_in_bytes": 1113
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/signal_node.py",
+        "path_type": "hardlink",
+        "sha256": "b6985ff06debe9aa123ea8cbdbc4e6bc290f27d64adb80a24fce6a0d6888393d",
+        "sha256_in_prefix": "b6985ff06debe9aa123ea8cbdbc4e6bc290f27d64adb80a24fce6a0d6888393d",
+        "size_in_bytes": 29517
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/signal_node.pyc",
+        "path_type": "hardlink",
+        "sha256": "e8f9cbf9bd98c2d9e8a4227742a4c5669f032f794f7fabcdba5bff720ec58eca",
+        "sha256_in_prefix": "e8f9cbf9bd98c2d9e8a4227742a4c5669f032f794f7fabcdba5bff720ec58eca",
+        "size_in_bytes": 29495
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b627362c20cd24e50d3bd69b12b20c24ff2de0fe81f521e9b99ad6240e246101",
+        "sha256_in_prefix": "b627362c20cd24e50d3bd69b12b20c24ff2de0fe81f521e9b99ad6240e246101",
+        "size_in_bytes": 1532
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "3807ba86cf6e941dcbfc6ade129cd92fdffb88e2abbd42084680c5d5d08d1840",
+        "sha256_in_prefix": "3807ba86cf6e941dcbfc6ade129cd92fdffb88e2abbd42084680c5d5d08d1840",
+        "size_in_bytes": 1738
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/_tools.py",
+        "path_type": "hardlink",
+        "sha256": "5ea1b894fc0b81e1149ed13160e26545104c8bcd4d6b055fbacea26df13ee381",
+        "sha256_in_prefix": "5ea1b894fc0b81e1149ed13160e26545104c8bcd4d6b055fbacea26df13ee381",
+        "size_in_bytes": 5993
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/_tools.pyc",
+        "path_type": "hardlink",
+        "sha256": "d163a41b7bc22fc2ac22d838b1937c029280e84e6a0f1d2dc19f9a9bd08ba6cd",
+        "sha256_in_prefix": "d163a41b7bc22fc2ac22d838b1937c029280e84e6a0f1d2dc19f9a9bd08ba6cd",
+        "size_in_bytes": 9337
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/benchmark_mdp.py",
+        "path_type": "hardlink",
+        "sha256": "b1758c2dc66b805ad32ffc99f7f4c7826d5049e6ba2776348aa032c32245b9fc",
+        "sha256_in_prefix": "b1758c2dc66b805ad32ffc99f7f4c7826d5049e6ba2776348aa032c32245b9fc",
+        "size_in_bytes": 7604
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/benchmark_mdp.pyc",
+        "path_type": "hardlink",
+        "sha256": "14d8a60097e7444b612bad5cbcdc845e002e350e20b49534acee5abe7e6f477c",
+        "sha256_in_prefix": "14d8a60097e7444b612bad5cbcdc845e002e350e20b49534acee5abe7e6f477c",
+        "size_in_bytes": 8474
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "c7c067d440f411357f15ede04c11252d72e0f33f5c0c7422fdd69388d577e9ec",
+        "sha256_in_prefix": "c7c067d440f411357f15ede04c11252d72e0f33f5c0c7422fdd69388d577e9ec",
+        "size_in_bytes": 2520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb6670063f47730ae8783a217027b380132377aa8ac1371cccdf1f7f7f8ec442",
+        "sha256_in_prefix": "bb6670063f47730ae8783a217027b380132377aa8ac1371cccdf1f7f7f8ec442",
+        "size_in_bytes": 2986
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/ide_run.py",
+        "path_type": "hardlink",
+        "sha256": "5547242e6023717cb57490040aeda38885d929d6832405449e987a6216c49611",
+        "sha256_in_prefix": "5547242e6023717cb57490040aeda38885d929d6832405449e987a6216c49611",
+        "size_in_bytes": 237
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/ide_run.pyc",
+        "path_type": "hardlink",
+        "sha256": "a1393462ce1389a1e67d40e32b608f9f63602ea83c1002728fe41c5191664c9d",
+        "sha256_in_prefix": "a1393462ce1389a1e67d40e32b608f9f63602ea83c1002728fe41c5191664c9d",
+        "size_in_bytes": 393
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_AdaptiveCutoffNode.py",
+        "path_type": "hardlink",
+        "sha256": "eaf0d90f3beaa216fb6242348954a3ed9226258377a1bb5e5f58cb0ddde60a58",
+        "sha256_in_prefix": "eaf0d90f3beaa216fb6242348954a3ed9226258377a1bb5e5f58cb0ddde60a58",
+        "size_in_bytes": 1433
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_AdaptiveCutoffNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "756425c75cd77969f1cdccc2487fe09678336afc61551d76906fe14008a669a3",
+        "sha256_in_prefix": "756425c75cd77969f1cdccc2487fe09678336afc61551d76906fe14008a669a3",
+        "size_in_bytes": 1813
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_Convolution2DNode.py",
+        "path_type": "hardlink",
+        "sha256": "244a32aec724d3d007930a020d297082faf9035865fdfe6b94376565e16dec0a",
+        "sha256_in_prefix": "244a32aec724d3d007930a020d297082faf9035865fdfe6b94376565e16dec0a",
+        "size_in_bytes": 4953
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_Convolution2DNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "1fa22d4d3effaf73631b109922bbf711a6aec83d83f0e8fd379a3a63111121cd",
+        "sha256_in_prefix": "1fa22d4d3effaf73631b109922bbf711a6aec83d83f0e8fd379a3a63111121cd",
+        "size_in_bytes": 5628
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_CutoffNode.py",
+        "path_type": "hardlink",
+        "sha256": "403cd0b4e3004ff241389c6ce9b85d05178ad9c6cb921d9071334b1ba0b6ae81",
+        "sha256_in_prefix": "403cd0b4e3004ff241389c6ce9b85d05178ad9c6cb921d9071334b1ba0b6ae81",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_CutoffNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "5abeedfb694b224675c3c58cba1f7dd94bca17a91fe3bccab2ff595b300dfe9e",
+        "sha256_in_prefix": "5abeedfb694b224675c3c58cba1f7dd94bca17a91fe3bccab2ff595b300dfe9e",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_EtaComputerNode.py",
+        "path_type": "hardlink",
+        "sha256": "21bc6a317e6b6c5f7f3ebb24ee993710cbcf840683a295f1f6a2027ccf619831",
+        "sha256_in_prefix": "21bc6a317e6b6c5f7f3ebb24ee993710cbcf840683a295f1f6a2027ccf619831",
+        "size_in_bytes": 408
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_EtaComputerNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "b3bde5de91badf716f0b18ee3c9ef0d7a6bae8b54d5405f990b665c25a591303",
+        "sha256_in_prefix": "b3bde5de91badf716f0b18ee3c9ef0d7a6bae8b54d5405f990b665c25a591303",
+        "size_in_bytes": 776
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_FANode.py",
+        "path_type": "hardlink",
+        "sha256": "89eb863b5ac617f1e959bbc8b0ac1806c4d570bc81f5bb5254f7cd851e4d1af3",
+        "sha256_in_prefix": "89eb863b5ac617f1e959bbc8b0ac1806c4d570bc81f5bb5254f7cd851e4d1af3",
+        "size_in_bytes": 2553
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_FANode.pyc",
+        "path_type": "hardlink",
+        "sha256": "323a0c4a301cae53604d45433211d613223b5badf43d3155095824ec9f5799bb",
+        "sha256_in_prefix": "323a0c4a301cae53604d45433211d613223b5badf43d3155095824ec9f5799bb",
+        "size_in_bytes": 2848
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_FDANode.py",
+        "path_type": "hardlink",
+        "sha256": "7955f235d051836796007a6c4d368139dc982ac82c17c0517f40e5eaf89feee3",
+        "sha256_in_prefix": "7955f235d051836796007a6c4d368139dc982ac82c17c0517f40e5eaf89feee3",
+        "size_in_bytes": 1832
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_FDANode.pyc",
+        "path_type": "hardlink",
+        "sha256": "eee7aa1369f3fa623b59f38f4f2b5125bd27c1b0618340acb45492d4f7322d08",
+        "sha256_in_prefix": "eee7aa1369f3fa623b59f38f4f2b5125bd27c1b0618340acb45492d4f7322d08",
+        "size_in_bytes": 2346
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_GaussianClassifier.py",
+        "path_type": "hardlink",
+        "sha256": "1a45ea6a77ece3596a020698a7a90a37a1d78c43c598d0a7bca3555fbfd3efd2",
+        "sha256_in_prefix": "1a45ea6a77ece3596a020698a7a90a37a1d78c43c598d0a7bca3555fbfd3efd2",
+        "size_in_bytes": 2331
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_GaussianClassifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "dadfa05e37dfb8e6318c53a4ebea8a3adad33e56a80b9f956fa3590e306fb935",
+        "sha256_in_prefix": "dadfa05e37dfb8e6318c53a4ebea8a3adad33e56a80b9f956fa3590e306fb935",
+        "size_in_bytes": 3095
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_GeneralExpansionNode.py",
+        "path_type": "hardlink",
+        "sha256": "cbdf01dd4d9d349e35ef6d810ccc18cc474d243e5a823119fe286b9d9d534cb8",
+        "sha256_in_prefix": "cbdf01dd4d9d349e35ef6d810ccc18cc474d243e5a823119fe286b9d9d534cb8",
+        "size_in_bytes": 2657
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_GeneralExpansionNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a1bfe8e9f0557a5fe0e52a84110df8a32bd325cfbee215577142c0f5b969ef9",
+        "sha256_in_prefix": "8a1bfe8e9f0557a5fe0e52a84110df8a32bd325cfbee215577142c0f5b969ef9",
+        "size_in_bytes": 3422
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_GrowingNeuralGasNode.py",
+        "path_type": "hardlink",
+        "sha256": "7216fd1c2778ef719f842599bfa8e66635122dece76554b91ca8b8f6e0ae0cfd",
+        "sha256_in_prefix": "7216fd1c2778ef719f842599bfa8e66635122dece76554b91ca8b8f6e0ae0cfd",
+        "size_in_bytes": 2287
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_GrowingNeuralGasNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d9c05df288a915dd2dc4ebd8ac6310594bf7df15d5aa2cd94cd843de763b3fd",
+        "sha256_in_prefix": "6d9c05df288a915dd2dc4ebd8ac6310594bf7df15d5aa2cd94cd843de763b3fd",
+        "size_in_bytes": 2553
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_HistogramNode.py",
+        "path_type": "hardlink",
+        "sha256": "744a266f966e9b5c3b22e50fbffe42ad7d52ef14e59db6f80d1feecf3697501c",
+        "sha256_in_prefix": "744a266f966e9b5c3b22e50fbffe42ad7d52ef14e59db6f80d1feecf3697501c",
+        "size_in_bytes": 650
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_HistogramNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a7b6df4b67b12ea9a4710abb24379c22e2b04a70fc230a325f2ae1179d92976",
+        "sha256_in_prefix": "8a7b6df4b67b12ea9a4710abb24379c22e2b04a70fc230a325f2ae1179d92976",
+        "size_in_bytes": 1258
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_HitParadeNode.py",
+        "path_type": "hardlink",
+        "sha256": "6719c56f1f364bf47904fdd748acbebef4b8d723789e5feaebda92fbc81c302f",
+        "sha256_in_prefix": "6719c56f1f364bf47904fdd748acbebef4b8d723789e5feaebda92fbc81c302f",
+        "size_in_bytes": 2249
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_HitParadeNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "28b0fa33853924de5c4df76ea1fd1332b52db7df38839da96ecca4b882be54b3",
+        "sha256_in_prefix": "28b0fa33853924de5c4df76ea1fd1332b52db7df38839da96ecca4b882be54b3",
+        "size_in_bytes": 2917
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_ICANode.py",
+        "path_type": "hardlink",
+        "sha256": "86eea669e33805fe61cffced9997f83319f9c4dcd24c7627f8cd399d4ca3b4cb",
+        "sha256_in_prefix": "86eea669e33805fe61cffced9997f83319f9c4dcd24c7627f8cd399d4ca3b4cb",
+        "size_in_bytes": 2184
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_ICANode.pyc",
+        "path_type": "hardlink",
+        "sha256": "0284f47d6e5887f748512efd5c822e91fe85ae5f0e1f1361285ea85a4dc1308e",
+        "sha256_in_prefix": "0284f47d6e5887f748512efd5c822e91fe85ae5f0e1f1361285ea85a4dc1308e",
+        "size_in_bytes": 3077
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_ISFANode.py",
+        "path_type": "hardlink",
+        "sha256": "897cd4b4915ea8b6f01699b210ba9e04c229d3f99b110f59c0c58a4d523f6eee",
+        "sha256_in_prefix": "897cd4b4915ea8b6f01699b210ba9e04c229d3f99b110f59c0c58a4d523f6eee",
+        "size_in_bytes": 9102
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_ISFANode.pyc",
+        "path_type": "hardlink",
+        "sha256": "513f95293f197ae43f795ae9193d0423f5bfc589c8f7da1472d0ef3954c16207",
+        "sha256_in_prefix": "513f95293f197ae43f795ae9193d0423f5bfc589c8f7da1472d0ef3954c16207",
+        "size_in_bytes": 7849
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_KNNClassifier.py",
+        "path_type": "hardlink",
+        "sha256": "f2566cc6e4a56b1c6c890fa0e8d72bcac29952a21e49f4b92d61589eeba10ccf",
+        "sha256_in_prefix": "f2566cc6e4a56b1c6c890fa0e8d72bcac29952a21e49f4b92d61589eeba10ccf",
+        "size_in_bytes": 1794
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_KNNClassifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "7e842041b64da124453f61bc58df9801d8f6146e957d929aa6e379bf2137bda8",
+        "sha256_in_prefix": "7e842041b64da124453f61bc58df9801d8f6146e957d929aa6e379bf2137bda8",
+        "size_in_bytes": 2513
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_LinearRegressionNode.py",
+        "path_type": "hardlink",
+        "sha256": "f2039b66d6025464cf6938ccac5aa805b8ceebb308f38d108f0e5483b800d702",
+        "sha256_in_prefix": "f2039b66d6025464cf6938ccac5aa805b8ceebb308f38d108f0e5483b800d702",
+        "size_in_bytes": 2624
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_LinearRegressionNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "60642697c1ba8ba5d9cc61579e05fc931238d95bc8fef9215d27036668769a3f",
+        "sha256_in_prefix": "60642697c1ba8ba5d9cc61579e05fc931238d95bc8fef9215d27036668769a3f",
+        "size_in_bytes": 3835
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_NearestMeanClassifier.py",
+        "path_type": "hardlink",
+        "sha256": "7778b9f97093525674976a525aef04d757fe14d3748bed5117486bc3cba9483b",
+        "sha256_in_prefix": "7778b9f97093525674976a525aef04d757fe14d3748bed5117486bc3cba9483b",
+        "size_in_bytes": 2058
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_NearestMeanClassifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "8b7042bd3c56c8ef329e6ac04560d30796640dfaa650783ae721706c9df01884",
+        "sha256_in_prefix": "8b7042bd3c56c8ef329e6ac04560d30796640dfaa650783ae721706c9df01884",
+        "size_in_bytes": 2755
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_NeuralGasNode.py",
+        "path_type": "hardlink",
+        "sha256": "b8c823cebc31cbede14e10029b2980935c153786c5352aba7c3610b0e7cd8456",
+        "sha256_in_prefix": "b8c823cebc31cbede14e10029b2980935c153786c5352aba7c3610b0e7cd8456",
+        "size_in_bytes": 2517
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_NeuralGasNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "191f9478dac853eaaf113fe1d095f5024b9b530721eacfddc2f5e9d958f1d2fb",
+        "sha256_in_prefix": "191f9478dac853eaaf113fe1d095f5024b9b530721eacfddc2f5e9d958f1d2fb",
+        "size_in_bytes": 2926
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_NoiseNode.py",
+        "path_type": "hardlink",
+        "sha256": "93b4571e3cf4b696700e247ceb9d3c77fdc7f9278d9f0deebd0b5352210300c9",
+        "sha256_in_prefix": "93b4571e3cf4b696700e247ceb9d3c77fdc7f9278d9f0deebd0b5352210300c9",
+        "size_in_bytes": 793
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_NoiseNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "e9bbc7ad648e118d2ac65d50150d70c13c5bcf3010ab6a5c7f52b0b25a2fcd25",
+        "sha256_in_prefix": "e9bbc7ad648e118d2ac65d50150d70c13c5bcf3010ab6a5c7f52b0b25a2fcd25",
+        "size_in_bytes": 1703
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_PCANode.py",
+        "path_type": "hardlink",
+        "sha256": "416110d6f66299bc1cda0355beb69b641efff5d3dfca2b82ddac7e9b64143207",
+        "sha256_in_prefix": "416110d6f66299bc1cda0355beb69b641efff5d3dfca2b82ddac7e9b64143207",
+        "size_in_bytes": 8457
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_PCANode.pyc",
+        "path_type": "hardlink",
+        "sha256": "35a43132777589b8304665a669e3b3f3a949cef0c18e8fab800085b2c3989fae",
+        "sha256_in_prefix": "35a43132777589b8304665a669e3b3f3a949cef0c18e8fab800085b2c3989fae",
+        "size_in_bytes": 7470
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_PolynomialExpansionNode.py",
+        "path_type": "hardlink",
+        "sha256": "dad460b97dc09714ef62e3a3dc1c3780b5aba13ba3ff93ef7513c302b6d27c64",
+        "sha256_in_prefix": "dad460b97dc09714ef62e3a3dc1c3780b5aba13ba3ff93ef7513c302b6d27c64",
+        "size_in_bytes": 1686
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_PolynomialExpansionNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "322b659ee124e322509236a0895d642ebd2956a7390985791a6c4095bde78344",
+        "sha256_in_prefix": "322b659ee124e322509236a0895d642ebd2956a7390985791a6c4095bde78344",
+        "size_in_bytes": 2129
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_PreseverDimNode.py",
+        "path_type": "hardlink",
+        "sha256": "a667b8c10663dc3a658a9c170841328f51a50bf33412bbf6cee47f5c285ca429",
+        "sha256_in_prefix": "a667b8c10663dc3a658a9c170841328f51a50bf33412bbf6cee47f5c285ca429",
+        "size_in_bytes": 934
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_PreseverDimNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "e407226566c964a9a80104c55370f791eab4f244c7f49b67e83be498b2ff9a5a",
+        "sha256_in_prefix": "e407226566c964a9a80104c55370f791eab4f244c7f49b67e83be498b2ff9a5a",
+        "size_in_bytes": 1592
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_RBFExpansionNode.py",
+        "path_type": "hardlink",
+        "sha256": "44d1895c9d14145b1307594c15df20dbd893645c41f23c81435e5dc1ceeaa99a",
+        "sha256_in_prefix": "44d1895c9d14145b1307594c15df20dbd893645c41f23c81435e5dc1ceeaa99a",
+        "size_in_bytes": 1998
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_RBFExpansionNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "1a868f9246bfa15ec9e305c2412b898038c805c1263e763adcd1d39ce7a2e287",
+        "sha256_in_prefix": "1a868f9246bfa15ec9e305c2412b898038c805c1263e763adcd1d39ce7a2e287",
+        "size_in_bytes": 2380
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_RBM.py",
+        "path_type": "hardlink",
+        "sha256": "43e793863f14d83f092c6435d4d8fc7fe5f23f1b53ae4eb2a1a606d0cedbf8fc",
+        "sha256_in_prefix": "43e793863f14d83f092c6435d4d8fc7fe5f23f1b53ae4eb2a1a606d0cedbf8fc",
+        "size_in_bytes": 8584
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_RBM.pyc",
+        "path_type": "hardlink",
+        "sha256": "f5c829ef9a218ecffebb6e29b158c9279b006096c5f5ef0d2809c133c6c0501b",
+        "sha256_in_prefix": "f5c829ef9a218ecffebb6e29b158c9279b006096c5f5ef0d2809c133c6c0501b",
+        "size_in_bytes": 8366
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_SFA2Node.py",
+        "path_type": "hardlink",
+        "sha256": "489f52d145b6d35b0e198c788c83ef7c5cb9d06dd49015021ef81c0242ba8075",
+        "sha256_in_prefix": "489f52d145b6d35b0e198c788c83ef7c5cb9d06dd49015021ef81c0242ba8075",
+        "size_in_bytes": 2421
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_SFA2Node.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ae5b17e7226d434e3e8aa195cddd4c18e430c9913aac371c827b36948c0a800",
+        "sha256_in_prefix": "0ae5b17e7226d434e3e8aa195cddd4c18e430c9913aac371c827b36948c0a800",
+        "size_in_bytes": 3768
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_SFANode.py",
+        "path_type": "hardlink",
+        "sha256": "c2502765dbc8c1ee30767903d8999317546a2c2732fe9d85caa2143474619753",
+        "sha256_in_prefix": "c2502765dbc8c1ee30767903d8999317546a2c2732fe9d85caa2143474619753",
+        "size_in_bytes": 5373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_SFANode.pyc",
+        "path_type": "hardlink",
+        "sha256": "3cfe46519b7459d35ee21c88015166ea174e212683819c0682bfdcf74bb9b1b9",
+        "sha256_in_prefix": "3cfe46519b7459d35ee21c88015166ea174e212683819c0682bfdcf74bb9b1b9",
+        "size_in_bytes": 5541
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_TimeDelayNodes.py",
+        "path_type": "hardlink",
+        "sha256": "73a919ed746bee25415d26378097bd51dbd53a28a8729048244f511428dc6375",
+        "sha256_in_prefix": "73a919ed746bee25415d26378097bd51dbd53a28a8729048244f511428dc6375",
+        "size_in_bytes": 2472
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_TimeDelayNodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "c7ad4eb36f4f73d4e2497500c2e109ab8d727af4c160dd6f283729a913acd060",
+        "sha256_in_prefix": "c7ad4eb36f4f73d4e2497500c2e109ab8d727af4c160dd6f283729a913acd060",
+        "size_in_bytes": 1970
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_TimeFrameNode.py",
+        "path_type": "hardlink",
+        "sha256": "1492e755417119577a580a58dfe0830ed2134603abd1f883dc6b7577d1c26cd3",
+        "sha256_in_prefix": "1492e755417119577a580a58dfe0830ed2134603abd1f883dc6b7577d1c26cd3",
+        "size_in_bytes": 906
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_TimeFrameNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "d8d215d822caddbbf33361086a2c3bd51eb15d395180aa5cb7e2fcf7fbcf79fd",
+        "sha256_in_prefix": "d8d215d822caddbbf33361086a2c3bd51eb15d395180aa5cb7e2fcf7fbcf79fd",
+        "size_in_bytes": 1403
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_VariadicCumulator.py",
+        "path_type": "hardlink",
+        "sha256": "1b743fd28a03f6f4d9e88c8be6498d9ec4d9174ec4599f0177bfd1a76d5c16a2",
+        "sha256_in_prefix": "1b743fd28a03f6f4d9e88c8be6498d9ec4d9174ec4599f0177bfd1a76d5c16a2",
+        "size_in_bytes": 1106
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_VariadicCumulator.pyc",
+        "path_type": "hardlink",
+        "sha256": "3e2e32c457eadcfd1b0519c1bff9ae2e6ad44ad309658451cf6cc34d88481b3d",
+        "sha256_in_prefix": "3e2e32c457eadcfd1b0519c1bff9ae2e6ad44ad309658451cf6cc34d88481b3d",
+        "size_in_bytes": 1767
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_WhiteningNode.py",
+        "path_type": "hardlink",
+        "sha256": "2d6f2425cc3c0e1ffef7501cbacaca4c861dfc872b979f86e9e6d6e0b9cf4330",
+        "sha256_in_prefix": "2d6f2425cc3c0e1ffef7501cbacaca4c861dfc872b979f86e9e6d6e0b9cf4330",
+        "size_in_bytes": 878
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_WhiteningNode.pyc",
+        "path_type": "hardlink",
+        "sha256": "672946f13d118a7a6abe88cf5c0ecedbe0a873fd63bee91b4e4de604381593bc",
+        "sha256_in_prefix": "672946f13d118a7a6abe88cf5c0ecedbe0a873fd63bee91b4e4de604381593bc",
+        "size_in_bytes": 1369
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_caching.py",
+        "path_type": "hardlink",
+        "sha256": "e117df929c573f9e5bd55738e3bccb3a209e589b41a3cc9ee6d4b351eec77f8a",
+        "sha256_in_prefix": "e117df929c573f9e5bd55738e3bccb3a209e589b41a3cc9ee6d4b351eec77f8a",
+        "size_in_bytes": 6934
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_caching.pyc",
+        "path_type": "hardlink",
+        "sha256": "d75354c58a7634a48a029c5819e361a13b777ca0fd378d5cc3ae8a59baabb791",
+        "sha256_in_prefix": "d75354c58a7634a48a029c5819e361a13b777ca0fd378d5cc3ae8a59baabb791",
+        "size_in_bytes": 7569
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "9a9cfed9f25927ae98e0b4bc37f04e6403a9ddd23efa70427e27aec0737e2ce4",
+        "sha256_in_prefix": "9a9cfed9f25927ae98e0b4bc37f04e6403a9ddd23efa70427e27aec0737e2ce4",
+        "size_in_bytes": 6530
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_classifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "1f3f18559b1d9809eae492e7cbda044af3b832b8329319f69c564b2fe1a925ed",
+        "sha256_in_prefix": "1f3f18559b1d9809eae492e7cbda044af3b832b8329319f69c564b2fe1a925ed",
+        "size_in_bytes": 7610
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_config.py",
+        "path_type": "hardlink",
+        "sha256": "f3f3dbab985d1f763b8afba034d5d135af28540e370a3a8072bcffa951cb5c6d",
+        "sha256_in_prefix": "f3f3dbab985d1f763b8afba034d5d135af28540e370a3a8072bcffa951cb5c6d",
+        "size_in_bytes": 1323
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_config.pyc",
+        "path_type": "hardlink",
+        "sha256": "51a2000c661a1fcf4e46535c534b22c71bd133a19732ccb1aae0f9c26f1261bd",
+        "sha256_in_prefix": "51a2000c661a1fcf4e46535c534b22c71bd133a19732ccb1aae0f9c26f1261bd",
+        "size_in_bytes": 2278
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_contrib.py",
+        "path_type": "hardlink",
+        "sha256": "ed2487f89bd71a541498cc2992a0a74f2c1296f55a680e3fd776844a792cdf93",
+        "sha256_in_prefix": "ed2487f89bd71a541498cc2992a0a74f2c1296f55a680e3fd776844a792cdf93",
+        "size_in_bytes": 7147
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_contrib.pyc",
+        "path_type": "hardlink",
+        "sha256": "b5354bf1ec242c9f144030cad102bcc3dcc7ef371807eea239b12bfd142969fb",
+        "sha256_in_prefix": "b5354bf1ec242c9f144030cad102bcc3dcc7ef371807eea239b12bfd142969fb",
+        "size_in_bytes": 8452
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_copying.py",
+        "path_type": "hardlink",
+        "sha256": "caad34c4df2f8729cad7f2de6a26283bdbf77e4140a5584f57b3a0ec40d3f241",
+        "sha256_in_prefix": "caad34c4df2f8729cad7f2de6a26283bdbf77e4140a5584f57b3a0ec40d3f241",
+        "size_in_bytes": 499
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_copying.pyc",
+        "path_type": "hardlink",
+        "sha256": "0793185422bca9e3662aa3048049a48fc90643a9b78d8f447b98c8c1a6290f0e",
+        "sha256_in_prefix": "0793185422bca9e3662aa3048049a48fc90643a9b78d8f447b98c8c1a6290f0e",
+        "size_in_bytes": 1133
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_extension.py",
+        "path_type": "hardlink",
+        "sha256": "4236d60873370045fe2997b10488ea13392f7d79ff71d062228daf2b77d2f481",
+        "sha256_in_prefix": "4236d60873370045fe2997b10488ea13392f7d79ff71d062228daf2b77d2f481",
+        "size_in_bytes": 13398
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_extension.pyc",
+        "path_type": "hardlink",
+        "sha256": "33559e3e9ed238617c39907054e48d1e549385c85f8552c220ce6095a4ee7280",
+        "sha256_in_prefix": "33559e3e9ed238617c39907054e48d1e549385c85f8552c220ce6095a4ee7280",
+        "size_in_bytes": 22794
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_fastica.py",
+        "path_type": "hardlink",
+        "sha256": "af7b18636f6c657c7a227ea695377d3293a3e15801e498076076b039970716e4",
+        "sha256_in_prefix": "af7b18636f6c657c7a227ea695377d3293a3e15801e498076076b039970716e4",
+        "size_in_bytes": 2145
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_fastica.pyc",
+        "path_type": "hardlink",
+        "sha256": "83e82f157ccc48563589df9e406e5902f518e6970188b93fa272a84f4f7c7443",
+        "sha256_in_prefix": "83e82f157ccc48563589df9e406e5902f518e6970188b93fa272a84f4f7c7443",
+        "size_in_bytes": 2387
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_flows.py",
+        "path_type": "hardlink",
+        "sha256": "69eddf86909f7f94242f1979af3675c842feb34d8a149730553d4caa4e594025",
+        "sha256_in_prefix": "69eddf86909f7f94242f1979af3675c842feb34d8a149730553d4caa4e594025",
+        "size_in_bytes": 11894
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_flows.pyc",
+        "path_type": "hardlink",
+        "sha256": "fc833deddf15a178e9282b26c9b4cdb8eeeacd04c8244c7b3c05785be1197d77",
+        "sha256_in_prefix": "fc833deddf15a178e9282b26c9b4cdb8eeeacd04c8244c7b3c05785be1197d77",
+        "size_in_bytes": 12897
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_graph.py",
+        "path_type": "hardlink",
+        "sha256": "9ccd33e3f8361fe3d97e57d279b6a1bdbb547340454b3ff77331d15e82a7eadf",
+        "sha256_in_prefix": "9ccd33e3f8361fe3d97e57d279b6a1bdbb547340454b3ff77331d15e82a7eadf",
+        "size_in_bytes": 5197
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_graph.pyc",
+        "path_type": "hardlink",
+        "sha256": "9785a555660b80fd557e9db4f2e636f2c5637b2bc11c76c0ff12a864211b22bc",
+        "sha256_in_prefix": "9785a555660b80fd557e9db4f2e636f2c5637b2bc11c76c0ff12a864211b22bc",
+        "size_in_bytes": 7416
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_hinet.py",
+        "path_type": "hardlink",
+        "sha256": "c47f769a7d875d17b1bfa9d32b9c2f01f3eea1673ffcb0eb9c3742a20874c145",
+        "sha256_in_prefix": "c47f769a7d875d17b1bfa9d32b9c2f01f3eea1673ffcb0eb9c3742a20874c145",
+        "size_in_bytes": 20677
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_hinet.pyc",
+        "path_type": "hardlink",
+        "sha256": "58107f57d0f400cb7aedb8fe52fb1198c2f051db727b0b3572bbf1df65f23d40",
+        "sha256_in_prefix": "58107f57d0f400cb7aedb8fe52fb1198c2f051db727b0b3572bbf1df65f23d40",
+        "size_in_bytes": 23675
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_hinet_generic.py",
+        "path_type": "hardlink",
+        "sha256": "c2de652d6a6a73f7bb1e79dc71d84ab5de92b7ae9796848ab2583f770ceb0b56",
+        "sha256_in_prefix": "c2de652d6a6a73f7bb1e79dc71d84ab5de92b7ae9796848ab2583f770ceb0b56",
+        "size_in_bytes": 1376
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_hinet_generic.pyc",
+        "path_type": "hardlink",
+        "sha256": "1f9b6e5a31533a8a5638f543c655320ee2f82db55d6e8357db0d06a7850f7758",
+        "sha256_in_prefix": "1f9b6e5a31533a8a5638f543c655320ee2f82db55d6e8357db0d06a7850f7758",
+        "size_in_bytes": 1841
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_metaclass_and_extensions.py",
+        "path_type": "hardlink",
+        "sha256": "1b7ed1570139e47e1ac24aaa8cc20ae0e31cd2301e686e66d0b025aaac8d7b16",
+        "sha256_in_prefix": "1b7ed1570139e47e1ac24aaa8cc20ae0e31cd2301e686e66d0b025aaac8d7b16",
+        "size_in_bytes": 3120
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_metaclass_and_extensions.pyc",
+        "path_type": "hardlink",
+        "sha256": "4f71cce33926d15a9a77a7a7990405601ef893a7609ac1dd031f23c740f39eb9",
+        "sha256_in_prefix": "4f71cce33926d15a9a77a7a7990405601ef893a7609ac1dd031f23c740f39eb9",
+        "size_in_bytes": 6657
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_namespace_fixups.py",
+        "path_type": "hardlink",
+        "sha256": "35eae3df92d5928e50be8a30f1a29d5a03aa1bad725057aeea08225f12e72680",
+        "sha256_in_prefix": "35eae3df92d5928e50be8a30f1a29d5a03aa1bad725057aeea08225f12e72680",
+        "size_in_bytes": 1234
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_namespace_fixups.pyc",
+        "path_type": "hardlink",
+        "sha256": "00ba923185908d39268005172fc1b90d2f4b334ef06e1d9ed6dce658197ebaba",
+        "sha256_in_prefix": "00ba923185908d39268005172fc1b90d2f4b334ef06e1d9ed6dce658197ebaba",
+        "size_in_bytes": 1817
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_node_covariance.py",
+        "path_type": "hardlink",
+        "sha256": "2b74295be162d1a7dd96ec025cbdbb49efb0c371d99b1a7f41554ae014d57004",
+        "sha256_in_prefix": "2b74295be162d1a7dd96ec025cbdbb49efb0c371d99b1a7f41554ae014d57004",
+        "size_in_bytes": 6973
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_node_covariance.pyc",
+        "path_type": "hardlink",
+        "sha256": "af5181a7504be99baac6d5b1f639b21958ad2064defb863451624c57ffc7f1e6",
+        "sha256_in_prefix": "af5181a7504be99baac6d5b1f639b21958ad2064defb863451624c57ffc7f1e6",
+        "size_in_bytes": 8350
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_node_metaclass.py",
+        "path_type": "hardlink",
+        "sha256": "62bea41a8d4d3db07cf1b740c4ac7c78e6be21d885eaca34b153753ef0d9d145",
+        "sha256_in_prefix": "62bea41a8d4d3db07cf1b740c4ac7c78e6be21d885eaca34b153753ef0d9d145",
+        "size_in_bytes": 4075
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_node_metaclass.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d7af9c9322b195149034ca5c4a091a209b0f3a830d8d25059f7926a1cdbcd7e",
+        "sha256_in_prefix": "7d7af9c9322b195149034ca5c4a091a209b0f3a830d8d25059f7926a1cdbcd7e",
+        "size_in_bytes": 7130
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_node_operations.py",
+        "path_type": "hardlink",
+        "sha256": "d6cbfe2efe3f9ff1608166f0c995973e6c4f812ac1ce9e9ffa0df924fb08f836",
+        "sha256_in_prefix": "d6cbfe2efe3f9ff1608166f0c995973e6c4f812ac1ce9e9ffa0df924fb08f836",
+        "size_in_bytes": 2793
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_node_operations.pyc",
+        "path_type": "hardlink",
+        "sha256": "cf7bd09a8e56bcb7cad31cc97b7b9265596fbcf854da63349b97c6e6cff3ca25",
+        "sha256_in_prefix": "cf7bd09a8e56bcb7cad31cc97b7b9265596fbcf854da63349b97c6e6cff3ca25",
+        "size_in_bytes": 3693
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_nodes_generic.py",
+        "path_type": "hardlink",
+        "sha256": "4fbe3392bee9633e20e5cc93ce6ffed7387fcc8ccf2468c9c13ad123f8d066e2",
+        "sha256_in_prefix": "4fbe3392bee9633e20e5cc93ce6ffed7387fcc8ccf2468c9c13ad123f8d066e2",
+        "size_in_bytes": 14837
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_nodes_generic.pyc",
+        "path_type": "hardlink",
+        "sha256": "437e9441e52efa1f53f7f0cd74ba82a29325ebfd3ef491d49340d0c3b1aeccf0",
+        "sha256_in_prefix": "437e9441e52efa1f53f7f0cd74ba82a29325ebfd3ef491d49340d0c3b1aeccf0",
+        "size_in_bytes": 14874
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelclassifiers.py",
+        "path_type": "hardlink",
+        "sha256": "46d9451a2b186e60cb22e6e53a34e60e0651d05efdd1d8ce43594ef2520d0486",
+        "sha256_in_prefix": "46d9451a2b186e60cb22e6e53a34e60e0651d05efdd1d8ce43594ef2520d0486",
+        "size_in_bytes": 3032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelclassifiers.pyc",
+        "path_type": "hardlink",
+        "sha256": "54d7968a6af7b7af6c263b7ff26de8a7d5dfca514080b8a4e043fc4e36c73edc",
+        "sha256_in_prefix": "54d7968a6af7b7af6c263b7ff26de8a7d5dfca514080b8a4e043fc4e36c73edc",
+        "size_in_bytes": 3206
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelflows.py",
+        "path_type": "hardlink",
+        "sha256": "18f1b58520d4dd15a945acf9a4866e5aa0fe3de13859fad501f75c2fc32c5784",
+        "sha256_in_prefix": "18f1b58520d4dd15a945acf9a4866e5aa0fe3de13859fad501f75c2fc32c5784",
+        "size_in_bytes": 11598
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelflows.pyc",
+        "path_type": "hardlink",
+        "sha256": "686c66a69250b0837c430d994537f10de443d155e28891301ee33e2d6e8fd3d7",
+        "sha256_in_prefix": "686c66a69250b0837c430d994537f10de443d155e28891301ee33e2d6e8fd3d7",
+        "size_in_bytes": 11278
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelhinet.py",
+        "path_type": "hardlink",
+        "sha256": "2636aebe03d0bc7b6752a472edb7f99429774b780b7e4401ba4f9631a2fcf216",
+        "sha256_in_prefix": "2636aebe03d0bc7b6752a472edb7f99429774b780b7e4401ba4f9631a2fcf216",
+        "size_in_bytes": 3800
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelhinet.pyc",
+        "path_type": "hardlink",
+        "sha256": "d3b5914574555b1311fdb9d176189d8bddd6346613d1d708c4921cbd5cdc3a4b",
+        "sha256_in_prefix": "d3b5914574555b1311fdb9d176189d8bddd6346613d1d708c4921cbd5cdc3a4b",
+        "size_in_bytes": 4396
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelnodes.py",
+        "path_type": "hardlink",
+        "sha256": "953ec8b064d80eea555e8dd0d300b342fe4bbb81873dae3ff8d7da5b73d003ed",
+        "sha256_in_prefix": "953ec8b064d80eea555e8dd0d300b342fe4bbb81873dae3ff8d7da5b73d003ed",
+        "size_in_bytes": 6452
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_parallelnodes.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d1743888f9398798121d6aa615aed2194bafaa011727508d3f5fe927528c401",
+        "sha256_in_prefix": "6d1743888f9398798121d6aa615aed2194bafaa011727508d3f5fe927528c401",
+        "size_in_bytes": 7328
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_pp_local.py",
+        "path_type": "hardlink",
+        "sha256": "2918823b2cdf41fe0615717932709af0769335cc2d7b0ccf09a443448ae27b95",
+        "sha256_in_prefix": "2918823b2cdf41fe0615717932709af0769335cc2d7b0ccf09a443448ae27b95",
+        "size_in_bytes": 2641
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_pp_local.pyc",
+        "path_type": "hardlink",
+        "sha256": "1eee591b37b18c865acd6900efc86d7a4d9c4b6066862068427003abf4993860",
+        "sha256_in_prefix": "1eee591b37b18c865acd6900efc86d7a4d9c4b6066862068427003abf4993860",
+        "size_in_bytes": 2770
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_pp_remote.py",
+        "path_type": "hardlink",
+        "sha256": "c9898cb41e6445f99bfee576c0210c60c0ec7a3a67b574e824a2a55533954428",
+        "sha256_in_prefix": "c9898cb41e6445f99bfee576c0210c60c0ec7a3a67b574e824a2a55533954428",
+        "size_in_bytes": 680
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_pp_remote.pyc",
+        "path_type": "hardlink",
+        "sha256": "f691eba4ddc281e1833e3eb746f7407224db5ecd8fcef882fd4fc978532929fe",
+        "sha256_in_prefix": "f691eba4ddc281e1833e3eb746f7407224db5ecd8fcef882fd4fc978532929fe",
+        "size_in_bytes": 141
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_process_schedule.py",
+        "path_type": "hardlink",
+        "sha256": "a4cf0617029f83f8032914466ba91a1a19a6edef3e94cbade5b63c54ad43a68c",
+        "sha256_in_prefix": "a4cf0617029f83f8032914466ba91a1a19a6edef3e94cbade5b63c54ad43a68c",
+        "size_in_bytes": 4225
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_process_schedule.pyc",
+        "path_type": "hardlink",
+        "sha256": "b120db0c0b202be0c438b00ae7c941949331301c28f55031c9e824b2a6c82136",
+        "sha256_in_prefix": "b120db0c0b202be0c438b00ae7c941949331301c28f55031c9e824b2a6c82136",
+        "size_in_bytes": 4469
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_reload.py",
+        "path_type": "hardlink",
+        "sha256": "21994c1947fb8514237ebd27adad23c0ea96e169117a73ce0fce14d8083a83ce",
+        "sha256_in_prefix": "21994c1947fb8514237ebd27adad23c0ea96e169117a73ce0fce14d8083a83ce",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_reload.pyc",
+        "path_type": "hardlink",
+        "sha256": "0a9747da06155b00e6a2ca01997619ffad11b977cbe51bb30083937e7162af07",
+        "sha256_in_prefix": "0a9747da06155b00e6a2ca01997619ffad11b977cbe51bb30083937e7162af07",
+        "size_in_bytes": 434
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_schedule.py",
+        "path_type": "hardlink",
+        "sha256": "d05bd6de1ac9f380875bcbc57f6bb05e707376dff79bb350e28d5e220369ac5a",
+        "sha256_in_prefix": "d05bd6de1ac9f380875bcbc57f6bb05e707376dff79bb350e28d5e220369ac5a",
+        "size_in_bytes": 2899
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_schedule.pyc",
+        "path_type": "hardlink",
+        "sha256": "25807be195729dfa7bd3762af0ee1a52ed227476e7edf9576535a9f190528125",
+        "sha256_in_prefix": "25807be195729dfa7bd3762af0ee1a52ed227476e7edf9576535a9f190528125",
+        "size_in_bytes": 4551
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_scikits.py",
+        "path_type": "hardlink",
+        "sha256": "da0bf39396db4047e97b6537f1933012d822da2210d20cfb74d7c4dac1718988",
+        "sha256_in_prefix": "da0bf39396db4047e97b6537f1933012d822da2210d20cfb74d7c4dac1718988",
+        "size_in_bytes": 1201
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_scikits.pyc",
+        "path_type": "hardlink",
+        "sha256": "88f96daf84037bffc4fb1f7594fd6b54066a12fd1972d9038d7885eca922dbd4",
+        "sha256_in_prefix": "88f96daf84037bffc4fb1f7594fd6b54066a12fd1972d9038d7885eca922dbd4",
+        "size_in_bytes": 1672
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_seed.py",
+        "path_type": "hardlink",
+        "sha256": "637660015a31d653ee835e9c919d3121a33da7a777caafc6652948fd9bdc8bd1",
+        "sha256_in_prefix": "637660015a31d653ee835e9c919d3121a33da7a777caafc6652948fd9bdc8bd1",
+        "size_in_bytes": 989
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_seed.pyc",
+        "path_type": "hardlink",
+        "sha256": "bcefa1ac6db9b87ec948e577932e85ab410698cbc1ef5a1d55d390ef2693b319",
+        "sha256_in_prefix": "bcefa1ac6db9b87ec948e577932e85ab410698cbc1ef5a1d55d390ef2693b319",
+        "size_in_bytes": 1149
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_svm_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "380f38976e28a949c491a158b61cd44d64c91d59f6c0947cf74d0f3c0d80857e",
+        "sha256_in_prefix": "380f38976e28a949c491a158b61cd44d64c91d59f6c0947cf74d0f3c0d80857e",
+        "size_in_bytes": 11500
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_svm_classifier.pyc",
+        "path_type": "hardlink",
+        "sha256": "87785940ecbe08f7ed0cb126561d7b8b28881c8bf627d3b55822feb92d57a12c",
+        "sha256_in_prefix": "87785940ecbe08f7ed0cb126561d7b8b28881c8bf627d3b55822feb92d57a12c",
+        "size_in_bytes": 9964
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_tempdir.py",
+        "path_type": "hardlink",
+        "sha256": "1b95d9a23c384da899ab332607dadc1df7efcaf67ea39671f9434542288c8153",
+        "sha256_in_prefix": "1b95d9a23c384da899ab332607dadc1df7efcaf67ea39671f9434542288c8153",
+        "size_in_bytes": 412
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_tempdir.pyc",
+        "path_type": "hardlink",
+        "sha256": "2494dcfee826a0b502b2c74b40ee2da63f59e769a717a410736045431db5416b",
+        "sha256_in_prefix": "2494dcfee826a0b502b2c74b40ee2da63f59e769a717a410736045431db5416b",
+        "size_in_bytes": 1061
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_utils.py",
+        "path_type": "hardlink",
+        "sha256": "7831d83c25ed3d531a78a2172ff87fd3f73d6bf7ac471acc3e02e3c5e26a0675",
+        "sha256_in_prefix": "7831d83c25ed3d531a78a2172ff87fd3f73d6bf7ac471acc3e02e3c5e26a0675",
+        "size_in_bytes": 5313
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "db2588e5963ae6c63d23595d525b061e4bcfa2eaf773296bcc8b9a5e0a211866",
+        "sha256_in_prefix": "db2588e5963ae6c63d23595d525b061e4bcfa2eaf773296bcc8b9a5e0a211866",
+        "size_in_bytes": 7369
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_utils_generic.py",
+        "path_type": "hardlink",
+        "sha256": "3404594c1f9aa0ea4a5d6ad0fa3f71d35420e51018bc5874dcc3def8c9c421f8",
+        "sha256_in_prefix": "3404594c1f9aa0ea4a5d6ad0fa3f71d35420e51018bc5874dcc3def8c9c421f8",
+        "size_in_bytes": 2250
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/test/test_utils_generic.pyc",
+        "path_type": "hardlink",
+        "sha256": "22414f39f5dd5f2a894dec9f333707eeed4040174b116f3faa21c294075694bb",
+        "sha256_in_prefix": "22414f39f5dd5f2a894dec9f333707eeed4040174b116f3faa21c294075694bb",
+        "size_in_bytes": 2525
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a3715817899b172567950782321eb1aa76ef7e9cae17167d6c9d4397b013b3e7",
+        "sha256_in_prefix": "a3715817899b172567950782321eb1aa76ef7e9cae17167d6c9d4397b013b3e7",
+        "size_in_bytes": 8865
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "f0e032c8e51fb8b3bbb2c6b3cd0ccb9cce45996e13ab71b533240729eb07f6a5",
+        "sha256_in_prefix": "f0e032c8e51fb8b3bbb2c6b3cd0ccb9cce45996e13ab71b533240729eb07f6a5",
+        "size_in_bytes": 8862
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/_ordered_dict.py",
+        "path_type": "hardlink",
+        "sha256": "25ffa8af316bf53a28eeea1bea2fe49a4629d297454b3576f7a33b1bb0f9ea2f",
+        "sha256_in_prefix": "25ffa8af316bf53a28eeea1bea2fe49a4629d297454b3576f7a33b1bb0f9ea2f",
+        "size_in_bytes": 3045
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/_ordered_dict.pyc",
+        "path_type": "hardlink",
+        "sha256": "2a05f672505e89399c7325c1a06cc71d7c2f388f7bb6e31ddc185b75a09a4763",
+        "sha256_in_prefix": "2a05f672505e89399c7325c1a06cc71d7c2f388f7bb6e31ddc185b75a09a4763",
+        "size_in_bytes": 4547
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/_symeig.py",
+        "path_type": "hardlink",
+        "sha256": "bb7e39399b03d3898827c9b1bedb85771c05d98cde0676f6fb249db03a4fe7bc",
+        "sha256_in_prefix": "bb7e39399b03d3898827c9b1bedb85771c05d98cde0676f6fb249db03a4fe7bc",
+        "size_in_bytes": 5452
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/_symeig.pyc",
+        "path_type": "hardlink",
+        "sha256": "493afb315edd5f0e19e98df0555db6a5135fafb303e44c2d2e6975c5f4efb095",
+        "sha256_in_prefix": "493afb315edd5f0e19e98df0555db6a5135fafb303e44c2d2e6975c5f4efb095",
+        "size_in_bytes": 5380
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/covariance.py",
+        "path_type": "hardlink",
+        "sha256": "cf9395ef821174e1f621a3098a74a9fcef16599732a4c1d21f67c82b6ce77c1c",
+        "sha256_in_prefix": "cf9395ef821174e1f621a3098a74a9fcef16599732a4c1d21f67c82b6ce77c1c",
+        "size_in_bytes": 14672
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/covariance.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2e5857f4f9ab89eb5fe926d9eb4ab006a95155fff7a2a14a1423a174555dbec",
+        "sha256_in_prefix": "b2e5857f4f9ab89eb5fe926d9eb4ab006a95155fff7a2a14a1423a174555dbec",
+        "size_in_bytes": 14462
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/introspection.py",
+        "path_type": "hardlink",
+        "sha256": "7992022e7536c9b163b5ee830ab62a6dc791ebded0d7c904c92b70b8304235ba",
+        "sha256_in_prefix": "7992022e7536c9b163b5ee830ab62a6dc791ebded0d7c904c92b70b8304235ba",
+        "size_in_bytes": 4966
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/introspection.pyc",
+        "path_type": "hardlink",
+        "sha256": "abaaf0599cbf1f8687d3a662b51315abfba1f53bf04c84c1108e6e8e511eb5fb",
+        "sha256_in_prefix": "abaaf0599cbf1f8687d3a662b51315abfba1f53bf04c84c1108e6e8e511eb5fb",
+        "size_in_bytes": 4970
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/progress_bar.py",
+        "path_type": "hardlink",
+        "sha256": "668d8012730b2ce8f309446792d9976c454639f896deeadfc00f3248eab64501",
+        "sha256_in_prefix": "668d8012730b2ce8f309446792d9976c454639f896deeadfc00f3248eab64501",
+        "size_in_bytes": 11990
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/progress_bar.pyc",
+        "path_type": "hardlink",
+        "sha256": "8917cd5c3fb34620970cbf6f290571e4820ec2ed3c02d5f27fe795b245b1d155",
+        "sha256_in_prefix": "8917cd5c3fb34620970cbf6f290571e4820ec2ed3c02d5f27fe795b245b1d155",
+        "size_in_bytes": 9690
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/quad_forms.py",
+        "path_type": "hardlink",
+        "sha256": "81e4b4dabd5bb1be7dad528130364b8f8bad0926627c38b002045025ef0fc983",
+        "sha256_in_prefix": "81e4b4dabd5bb1be7dad528130364b8f8bad0926627c38b002045025ef0fc983",
+        "size_in_bytes": 5513
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/quad_forms.pyc",
+        "path_type": "hardlink",
+        "sha256": "b9dba541666e3d7226c27ba78ffd9e673d8e30648c827f867977ec84d4f8600b",
+        "sha256_in_prefix": "b9dba541666e3d7226c27ba78ffd9e673d8e30648c827f867977ec84d4f8600b",
+        "size_in_bytes": 5627
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/routines.py",
+        "path_type": "hardlink",
+        "sha256": "2403d3ad5e209d169408dda9257cdcd940f034cd38b72707d092d5ca432249db",
+        "sha256_in_prefix": "2403d3ad5e209d169408dda9257cdcd940f034cd38b72707d092d5ca432249db",
+        "size_in_bytes": 16110
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/routines.pyc",
+        "path_type": "hardlink",
+        "sha256": "ee24a7104869de3179561457ea6ce214ff11adc9b8fcd7c48be55b865e54bab2",
+        "sha256_in_prefix": "ee24a7104869de3179561457ea6ce214ff11adc9b8fcd7c48be55b865e54bab2",
+        "size_in_bytes": 18407
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/slideshow.css",
+        "path_type": "hardlink",
+        "sha256": "2216df7070449fa962b6b4025f7d3900613b0fce11e886f793ca09aa0f0baba3",
+        "sha256_in_prefix": "2216df7070449fa962b6b4025f7d3900613b0fce11e886f793ca09aa0f0baba3",
+        "size_in_bytes": 634
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/slideshow.py",
+        "path_type": "hardlink",
+        "sha256": "9e47a676aa4c3cd0924df8db45a1047c307c166293e47644f11ad1b5184ec1ec",
+        "sha256_in_prefix": "9e47a676aa4c3cd0924df8db45a1047c307c166293e47644f11ad1b5184ec1ec",
+        "size_in_bytes": 25529
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/slideshow.pyc",
+        "path_type": "hardlink",
+        "sha256": "ff583de8f4c35544ca68af4c4abcda271fdf7db78b7242dfdde7ada4e5abe798",
+        "sha256_in_prefix": "ff583de8f4c35544ca68af4c4abcda271fdf7db78b7242dfdde7ada4e5abe798",
+        "size_in_bytes": 25282
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/templet.py",
+        "path_type": "hardlink",
+        "sha256": "301cd9f4437035fe9233616cf65b346698c3ac93828636b86d4631dfc30e533c",
+        "sha256_in_prefix": "301cd9f4437035fe9233616cf65b346698c3ac93828636b86d4631dfc30e533c",
+        "size_in_bytes": 13103
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/templet.pyc",
+        "path_type": "hardlink",
+        "sha256": "a21229dd4cebf20d968b4a13b8b7c4caff699fab79bd88ae82f71b6cde93e273",
+        "sha256_in_prefix": "a21229dd4cebf20d968b4a13b8b7c4caff699fab79bd88ae82f71b6cde93e273",
+        "size_in_bytes": 16610
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/temporarydir.py",
+        "path_type": "hardlink",
+        "sha256": "94a9dfe71078d4d1a0bb295723aabefcd39d3e7efa641294dfb58c4f04cf2400",
+        "sha256_in_prefix": "94a9dfe71078d4d1a0bb295723aabefcd39d3e7efa641294dfb58c4f04cf2400",
+        "size_in_bytes": 2831
+      },
+      {
+        "_path": "lib/python2.7/site-packages/mdp/utils/temporarydir.pyc",
+        "path_type": "hardlink",
+        "sha256": "20bbadff1d4fb814c1b47d82282666f8fcf4c4261364edb8112ec5d55294df1a",
+        "sha256_in_prefix": "20bbadff1d4fb814c1b47d82282666f8fcf4c4261364edb8112ec5d55294df1a",
+        "size_in_bytes": 3129
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 528992,
+  "subdir": "linux-64",
+  "timestamp": 1537208279158,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mdp-3.5-py27_1.tar.bz2",
+  "version": "3.5"
+}

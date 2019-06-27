@@ -1,0 +1,262 @@
+#$Header: /home/pros/xray/xspatial/detect/doc/RCS/imdetect.hlp,v 11.0 1997/11/06 16:32:30 prosb Exp $
+#$Log: imdetect.hlp,v $
+#Revision 11.0  1997/11/06 16:32:30  prosb
+#General Release 2.5
+#
+#Revision 1.4  1997/09/19 22:31:05  prosb
+#*** empty log message ***
+#
+#Revision 1.3  1997/07/09 20:32:22  prosb
+#JCC(7/9/97) - add snr_576 for rosat and max_src_num.
+#
+#Revision 1.2  1997/05/23 14:40:55  prosb
+#JCC (5/23/97)
+#
+# Revision 1.1  1997/05/22  21:34:53  prosb
+# Initial revision
+# JCC (5/22/97) - help file for the new task "imdetect".
+#
+.help imdetect July97  xray.xspatial.detect
+.ih
+NAME
+imdetect - Determine rough positions of sources in the whole field. 
+.ih
+USAGE
+imdetect infile outfile subcells xcellsize ycellsize fieldbkdens
+
+.ih
+DESCRIPTION
+\fIIMDETECT\fR determines rough positions of sources in the whole
+field. The field is scanned in each direction with a sliding bin 
+of a detect cell and a source detection is defined to occur whenever 
+the threshold is exceeded.  Subsequent processing involves consolidation 
+of adjacent, or contiguous, source cells, and identifying the position 
+and minimum radius of the source or sources in each region.
+ 
+The task was converted from hopr and tested for rosat/hri, asc/hsi 
+and asc/hrc. 
+
+Currently, the background density is calculated from field background
+density (fieldbkdens) and three snr coefficients. No background map is
+used.
+
+.ih
+PARAMETERS
+.ls infile = ""         prompt = input qpoe or image file 
+
+Required input filename. It can be a qpoe file or an image file. 
+.le
+
+.ls outfile = ""        prompt = output (ruf) position table file 
+
+Required output filename. The file is written in a table format. The
+name may be specified by supplying the rootname and "_ruf.tab" 
+extension will be appended.  For example input "test" becomes
+"test_ruf.tab". The column names and definitions are as follows:
+.nf
+    blob #  - number of the current contiguous region (or "blob" )
+    peak #  - number of sources found within a blob
+    x       - x source position in pixels
+    y       - y source position in pixels
+    dx      - x detector coords. in pixels (= column_x - 1.0)
+    dy      - y detector coords. in pixels (= 4096.0 - column_y)
+    res?    - a flag indicating whether a source is big enough to 
+              contain more than 1 source.  (yes=1, no=0)
+    min r   - minimum radius of a source in pixels
+    cellx   - x detect cell size in pixels 
+    celly   - y detect cell size in pixels 
+.fi
+.le
+
+.ls subcells = 1        prompt = detect cell size smooth factor 
+number of detect subcells per cell
+.le
+
+.ls xcellsize = 24      prompt = x detect cell size in pixels
+x detect cell size in pixels.  Recommend using 24 pixels for rosat/hri
+and 8 pixels for asc data.
+.le
+
+.ls ycellsize = 24      prompt = y detect cell size in pixels
+y detect cell size in pixels.  Recommend using 24 pixels for rosat/hri
+and 8 pixels for asc data.
+.le
+
+.ls fieldbkdens = 0.001   prompt = field background density in cts/arcmin**2 
+field background density in cts/arcmin**2
+.le
+
+.ls max_src_num = 500      prompt = max number of sources
+maximum number of sources to be detected. If max sources found, the
+process will be stopped and write the sources to the ruf table.
+.le
+
+.ls (pixelsize = 0.5) [real]
+arcseconds per pixel
+.le
+
+.ls (snrfactor = 1.)  [real]
+reducing factor for snr threshold
+.le
+
+.ls (blobsize = 1024) [int]
+maximum blob size in pixels
+.le
+
+.ls (boxxmax = 3) [int]
+max x box dimensions in subcells 
+.le
+
+.ls (boxymax = 3) [int]
+max x box dimensions in subcells 
+.le
+
+.ls (ctwtfactor = 3) [int] 
+count weight factor type. The value of count weight factor is 1 for the
+default type(=3). 
+.le
+
+.ls (display = 1) [int]
+display level (>=1 for display)
+.le
+.ls (clobber = no) [boolean]
+overwrite existing file?
+.le
+
+.ls (maxblobs = 100) [int]
+max number of blobs allowed per field
+.le
+
+.ls (numcellsizes = 1) [int]
+number of different detect cell sizes to run 
+.le
+
+.ls (num_16_snr_coeffs = 3) [int]
+number of snr coefficients for detect cell area (16 arcsec**2) 
+.le
+.ls (snr_16_1_coeffs = 1.5336) [real]
+first snr coefficient for detect cell area (16 arcsec**2) 
+.le
+.ls (snr_16_2_coeffs = 0.22547) [real]
+second snr coefficient for detect cell area (16 arcsec**2)
+.le
+.ls (snr_16_3_coeffs = 0.0138237) [real]
+third  snr coefficient for detect cell area (16 arcsec**2)
+.le
+.ls (snr_16_thresh_min = 2.5) [real]
+minimum snr value for detect cell area (16 arcsec**2)
+.le
+.ls (num_64_snr_coeffs = 3) [int]
+number of snr coefficients for detect cell area (64 arcsec**2) 
+.le
+.ls (snr_64_1_coeffs = 1.5336) [real]
+first snr coefficient for detect cell area (64 arcsec**2)
+.le
+.ls (snr_64_2_coeffs = 0.22547) [real]
+second snr coefficient for detect cell area (64 arcsec**2)
+.le
+.ls (snr_64_3_coeffs = 0.0138237) [real]
+third  snr coefficient for detect cell area (64 arcsec**2)
+.le
+.ls (snr_64_thresh_min = 2.5) [real]
+minimum snr value for detect cell area (64 arcsec**2)
+.le
+.ls (num_144_snr_coeffs = 3) [int]
+number of snr coefficients for detect cell area (144 arcsec**2)
+.le
+.ls (snr_144_1_coeffs = 1.5336) [real]
+first snr coefficient for detect cell area (144 arcsec**2)
+.le
+.ls (snr_144_2_coeffs = 0.22547) [real]
+second snr coefficient for detect cell area (144 arcsec**2)
+.le
+.ls (snr_144_3_coeffs = 0.0138237) [real]
+third snr coefficient for detect cell area (144 arcsec**2)
+.le
+.ls (snr_144_thresh_min = 2.5) [real]
+minimum snr value for detect cell area (144 arcsec**2)
+.le
+.ls (num_576_snr_coeffs = 3) [int]
+number of snr coefficients for detect cell area (576 arcsec**2)
+.le
+.ls (snr_576_1_coeffs = 1.6952) [real]
+first snr coefficient for detect cell area (576 arcsec**2)
+.le
+.ls (snr_576_2_coeffs = 0.30085) [real]
+second snr coefficient for detect cell area (576 arcsec**2)
+.le
+.ls (snr_576_3_coeffs = -0.0011031) [real]
+third snr coefficient for detect cell area (576 arcsec**2)
+.le
+.ls (snr_576_thresh_min = 2.5) [real]
+minimum snr value for detect cell area (576 arcsec**2)
+.le
+.ls (prf_sigma = 0.5) [real]
+prf sigma in arcseconds. Currently, this is used as a flag
+indicating where to get the snr coefficients.  If it is greater
+than zero, then coefficients will be read from user's par.
+Otherwise, they will be retrieved from prf_table.
+
+Recommend setting prf_sigma greater than zero for asc data to 
+skip prf_table.
+[ see prf_table ]
+.le
+
+.ls (energy = 0.)   [real] 
+energy in KeV. Energy will be used when getting the snr coefficients 
+from prf_table.  [ see prf_sigma]
+.le
+
+.ls (prf_table = "xspatialdata$prfcoeffs.tab") [string]
+
+Prf coefficient table. Entries for ROSAT PSPC/HRI & Einstein
+IPC/HRI. Lookup based on value of energy. Returns coefficients
+assiciated with a default lookup when energy=0.0; returns 
+coefficients closest to the energy when exact match is not 
+found.
+
+Currently, entries for AXAF/ACIS and AXAF/HRC are only temporary.  
+[ see  prf_sigma ]
+.le
+
+.ih
+EXAMPLES
+
+
+.fi
+1. run imdetect with rosat qpoe file :
+.nf
+
+        de> flpr
+	de> unlearn imdetect
+	de> imdetect clob+
+        input qpoe or image file: xdata$rh110267n00.qp
+        output (ruf) position table file:   test
+        detect cell size smooth factor (1): 3
+        x detect cell size in pixels (24): 
+        y detect cell size in pixels (24): 
+        field background density in cts/arcmin**2 (0.001): 
+
+         -- created output table: test_ruf.tab --
+
+
+.fi
+2. run imdetect with asc_hrc image file :
+.nf
+
+        de> flpr
+	de> unlearn imdetect
+        de> imdetect snr_16_thres=3.6  clob+
+        input qpoe or image file: xspatialdata$asc_hrc.imh
+        output (ruf) position table file: hrc
+        detect cell size smooth factor (1): 
+        x detect cell size in pixels (24): 8
+        y detect cell size in pixels (24): 8
+        field background density in cts/arcmin**2 (0.001): 
+
+         -- created output table: hrc_ruf.tab --
+
+.fi
+.fi
+
+.endhelp

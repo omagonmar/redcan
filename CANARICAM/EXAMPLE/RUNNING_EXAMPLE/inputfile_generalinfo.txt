@@ -1,0 +1,25 @@
+Process started at:  2013-07-14 19:42:55
+----------------------------------------------------------
+Name of the input datafile list: inputfile.lst
+----------------------------------------------------------
+Identification and association of datafiles can be found at: /PRODUCTS/idinputfile.lst
+----------------------------------------------------------
+Staking: Rejection of bad chops using a sigma of:  5.  sigma
+OUTPUTS/ directory: "stck_" = stacked images
+OUTPUTS/ directory: "flat_" = flat-field image
+----------------------------------------------------------
+Information about how sources have been extracted
+(point-source=0, extended=1) can be found at:   /PRODUCTS/Extension_inputfile.lst
+Method of extraction: GROWING APERTURE (GA) (using standard width)
+The list of reference aperture widths is:  1
+(units in [pix] if FA, in [sigmas of standard width] if GA)
+The list of offset is:  0  (in [pix] from the central source)
+----------------------------------------------------------
+OUTPUTS/ directory: "WL_" prefix = Wavelength-calibration matrix stored in 4th-element of 3rd dimension
+OUTPUTS/ directory: "FC_" prefix = Flux-calibrated images (standards and targets, including acq. images)
+----------------------------------------------------------
+PRODUCTS/ directory:
+List with observation-mode keywords of datasets:  /PRODUCTS/ID1inputfile.lst
+List with time-related keywords of datasets:  /PRODUCTS/ID3inputfile.lst
+"WL_" prefix = Plots with fits performed during the wavelength calibration
+ Processing list of files inputfile.lst: Finished at 2013-07-14 19:48:01

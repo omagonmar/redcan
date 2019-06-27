@@ -1,0 +1,103 @@
+#$Header: /home/pros/xray/xdataio/doc/RCS/upqpoerdf.hlp,v 11.0 1997/11/06 16:34:13 prosb Exp $
+#$Log: upqpoerdf.hlp,v $
+#Revision 11.0  1997/11/06 16:34:13  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:58:17  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:19:37  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/15  15:58:09  janet
+#jd - pros 2.3.1 updates, added qpgapmap info.
+#
+#
+.help upqpoerdf Apr94 xray.xdataio
+.ih
+NAME
+upqpoerdf -- convert a list of IRAF/PROS QPOE file into RDF compatible format
+.ih
+USAGE
+upqpoerdf  qpoelist
+.ih
+DESCRIPTION
+\fIupqpoerdf\fR upgrades PROS QPOE file into the current format.  This
+task will run on a single file, a filename template or a filename list.
+It modifies the file in place and can be run more than once with
+no ill-affects.  It checks for old features, and if present, converts
+them to the new format. NOTE: You must have write access to the
+QPOE file.
+Also, for the special case of ROSAT/HRI data, it will run the
+task \fIqpgapmap\fR to generate the necessary 'detx,dety' coordinates
+if they are not present, provided that the 'rawx,rawy' input
+coordinates have been provided.  
+.ih
+PARAMETERS
+.ls  listfile   = ""              prompt = input (QPOE) filename or list
+
+The input QPOE file name, template or list ( a list of filenames is
+entered with the "@qlist.lst" syntax.
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A
+display level of 1 displays the filenames converted.
+.le
+.ls (qp_psize = 2048) [int]
+ 
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_blen = 4096) [int]
+ 
+Bucket length for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.le
+.ih
+EXAMPLES
+Convert a single  QPOE file 
+.nf
+
+cl> xray
+xr> xdataio
+xd> copy xdata$rp110590.qp .
+xd> upqpoerdf rp110590.qp
+Converting file headers to RDF ...
+Writing file rp110590.qp.
+Calculating ROSAT/HRI detector coordinates...
+rp110590.qp - not HRI data file - skipping
+
+.fi
+Convert a template of QPOE files 
+.nf
+
+xd> copy xdata$*.qp .
+xd> upqpoerdf *.qp
+Converting file headers to RDF ...
+Writing file h8103.qp.
+Writing file rh110267.qp.
+Writing file rh110267n00.qp.
+Writing file rp110590.qp.
+Writing file rp110590n00.qp.
+Writing file snr.qp.
+Calculating ROSAT/HRI detector coordinates...
+h8103.qp - not ROSAT data file - skipping
+Writing output file - rh110267.qp
+Writing output file - rh110267n00.qp
+rp110590.qp - not HRI data file - skipping
+rp110590n00.qp - not HRI data file - skipping
+snr.qp - not HRI data file - skipping
+.fi
+.ih
+TIME REQUIREMENTS
+Virtually instantaneous, as only header keywords are modified in place.
+Except for the ROSAT/HRI case when QPGAPMAP must be run as well.
+The time is then proportional to the number of events in the file.
+.ih
+BUGS
+.ih
+SEE ALSO
+.endhelp
+

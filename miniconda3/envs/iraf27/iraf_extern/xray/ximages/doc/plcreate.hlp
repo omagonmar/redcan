@@ -1,0 +1,184 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/plcreate.hlp,v 11.0 1997/11/06 16:25:50 prosb Exp $
+#$Log: plcreate.hlp,v $
+#Revision 11.0  1997/11/06 16:25:50  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:15  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:43:14  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/08  11:27:42  prosb
+#Brought help file up to date.
+#
+#Revision 7.0  93/12/27  18:23:07  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:04:50  prosb
+#General Release 2.2
+#
+#Revision 5.1  92/12/01  11:17:39  prosb
+#minor edit
+#
+#Revision 5.0  92/10/29  21:23:50  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:15:57  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:16:02  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/12  12:10:21  prosb
+#xray.ximages   7/12/91
+#
+#Revision 2.0  91/03/06  23:37:12  pros
+#General Release 1.0
+#
+.help plcreate Jun94 xray.ximages
+.ih
+NAME
+plcreate -- create a pixel mask from a region descriptor
+.ih
+USAGE
+plcreate region image mask
+.ih
+DESCRIPTION
+\fIplcreate\fR creates an IRAF PLIO pixel mask from the specified
+region descriptor. The size of the mask can be specified by means of a
+reference image, or with two integer dimensions in the \fIimage\fR
+parameter.  The pixel file is a standard IRAF PLIO file and can
+therefore be used in any IRAF task that requires a pixel mask file as
+input.  This pixel mask can also be used as region input in tasks,
+such as \fIimcnts\fR and \fIimdisp\fR, that use the \fIregion\fR
+parameter.
+.ih
+PARAMETERS
+.ls region = ""		prompt = region descriptor
+
+The input ASCII region descriptor.
+.le
+.ls image = ""		prompt = reference image file or 2 dims for mask
+
+The reference image, from which the dimensions of the mask are to be
+taken, or the x and y dimensions of the mask.  The user can either
+input an image name or two integer numbers specifying the dimensions.
+.le
+.ls mask = ""		prompt = output mask data file (root.pl)
+
+The name of the output pixel mask file.  If a reference image is input
+the mask name is permitted to default to the image name.  If
+dimensions are explicitly input, then the mask name must also be
+explicitly input.  In either case, the default ".pl" extension may be
+omitted from the specification.
+.le
+.ls (display = 2) [int]
+
+Flag that indicates the display level.  If display >=1, the header of the
+mask is displayed.  If display >=2, the mask is displayed as well.
+.le
+.ls (disp_mode = "zoom") [string]
+
+Specify area of mask to display.  The word \fIfull\fR specifies that
+the entire mask area be displayed.  The word \fIzoom\fR specifies that
+only the area of the mask with non-zero values be displayed.  In this
+case, pllist computes the smallest subsection which includes all
+non-zero mask values.  Any subsection can be specified by giving four
+integers, separated by spaces, in the format x1 x2 y1 y2.  The three
+modes can be mixed in one spcification.  If 0 is given for x1 or y1 in
+a subsection specification, the \fIzoom\fR limits are applied to that
+axis.  If -1 is given for x1 or y1 in a subsection specification, the
+\fIfull\fR field of that axis will be used for the display.  When 0 or
+-1 is used as the x1 or y1 value, the corresponding x2 or y2 entry is
+not used, but an integer value must be given.  The keyword names can
+be abbreviated in the specification.
+.le
+.ls (ncols = 80) [int]
+
+The number of columns to display, if the display parameter is >=2.
+.le
+.ls (nrows = 30) [int]
+
+The number of rows to display, if the display parameter is >=2.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag that indicates whether an existing mask can be
+overwritten.
+.le
+.ih
+EXAMPLES
+Create and display mask for i296 consisting of the union of 3 annuli
+with 3 pie slices, centered on the strongest source in the field.
+Display the zoomed sub-section (the default).
+.nf
+
+cl> plcreate "a 449.74 409.2 0 200 n=3 & pie 449.74 409.2 0 360 n=3"
+i296.qp ""
+
+mask_name:      i296.pl
+mask_type:      region
+ref_file:       i296.qp
+xdim:           1024
+ydim:           1024
+scale:          none
+regions:        ANNULUS 449.74 409.2 0. 200. n=3. & 
+ PIE 449.74 409.2 0. 360. n=3. 
+
+      2222222223333333333333333444444444444444445555555555555555566666666
+      5566788990112234455677889001123344566778990012233455667889901122344
+      0628406284062840628406284062840628406284062840628406284062840628406
+from  250 ------------------------------------------------------- to  650
+ 609: ................................339................................
+ 595: .....................3333333333333999999999999.....................
+ 581: .................3333333333333333399999999999999999................
+ 567: .............33333333333333333333399999999999999999999.............
+ 553: ...........3333333333333333333333399999999999999999999999..........
+ 539: ........333333333333333333333222228888899999999999999999999........
+ 525: .......333333333333333322222222222888888888889999999999999999......
+ 511: .....333333333333332222222222222228888888888888899999999999999.....
+ 497: ....333333333333322222222222222222888888888888888889999999999999...
+ 483: ...33333333333322222222222222222228888888888888888889999999999999..
+ 469: ..3333333333332222222222222221111177777888888888888888999999999999.
+ 455: .33333333333322222222222221111111177777777888888888888899999999999.
+ 441: .333333333332222222222221111111111777777777788888888888999999999999
+ 427: .333333333332222222222211111111111777777777788888888888899999999999
+ 413: 3333333333332222222222211111111111777777777778888888888899999999999
+ 399: .333333333332222222222211111111444444777777778888888888899999999999
+ 385: .333333333332222222222211114444444444444477788888888888899999999999
+ 371: .333333333332222222222255444444444444444444558888888888999999999999
+ 357: ..3333333333322222255555555444444444444445555555588888999999999999.
+ 343: ..333333333333355555555555555555444555555555555555555999999999999..
+ 329: ...3333333366666555555555555555555555555555555555555666669999999...
+ 315: ....33366666666666555555555555555555555555555555556666666666699....
+ 301: ......66666666666666655555555555555555555555555666666666666666.....
+ 287: .......66666666666666666655555555555555555566666666666666666.......
+ 273: .........6666666666666666666666666666666666666666666666666.........
+ 259: ............66666666666666666666666666666666666666666666...........
+ 245: ...............66666666666666666666666666666666666666..............
+ 231: ...................666666666666666666666666666666..................
+ 217: .........................666666666666666666........................
+Creating pl mask output file: i296.pl
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+\fIhelp pllist\fR for more on displaying the mask.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on QPOE filtering (\fIhelp qpoe\fR) for a description of
+the QPOE filter user interface.
+
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

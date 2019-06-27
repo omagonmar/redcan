@@ -1,0 +1,10 @@
+# Help directory for the cutout package (added for UR).
+
+$doc            = "cutoutpkg$"
+$srcdir         = "cutoutpkg$"
+
+cutoutpkg	hlp=cutoutpkg$cutoutpkg.men
+
+cutout		hlp=doc$cutout.hlp,   src=srcdir$t_cutout.x
+ndwfsget	hlp=doc$ndwfsget.hlp, src=srcdir$t_ndwfsget.x
+

@@ -1,0 +1,600 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/qpspec.hlp,v 11.0 1997/11/06 16:41:25 prosb Exp $
+#$Log: qpspec.hlp,v $
+#Revision 11.0  1997/11/06 16:41:25  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:32  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:29:21  prosb
+#General Release 2.3.1
+#
+#Revision 7.3  94/06/17  18:47:31  wendy
+#Pre-Release check-in.
+#
+#Revision 7.2  94/04/09  01:26:18  dennis
+#Added brief description of error computation (enhancement 692).
+#
+#Revision 7.1  94/02/15  20:14:56  dennis
+#Made the full description and the example congruent with the current 
+#release.
+#
+#Revision 7.0  93/12/27  18:53:19  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  18:11:06  mo
+#RDF updates
+#
+#Revision 6.0  93/05/24  16:48:02  prosb
+#General Release 2.2
+#
+#Revision 5.2  93/05/11  11:33:37  orszak
+#jso - added parameters for background correction.
+#./
+#
+#Revision 5.1  92/11/17  11:00:53  prosb
+#jso - updated oah1 paramter with improved unit knowledge.
+#
+#Revision 5.0  92/10/29  22:42:39  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/20  16:53:06  orszak
+#]jso - cleanup some outdate notes.
+#
+#Revision 4.1  92/06/04  10:36:48  prosb
+#Corrected to state that task works on only one region.
+#
+#Revision 4.0  92/04/27  15:27:44  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.5  92/04/24  09:57:38  mo
+#MC	4/24/92		Remove BUG notice that time filtering not supported
+#			since this was fixed with IRAF 2.10/PROS 2.0
+#
+#Revision 3.4  92/04/22  16:13:59  prosb
+#Changed date.
+#
+#Revision 3.3  92/04/15  14:30:30  prosb
+#*** empty log message ***
+#
+#Revision 3.2  92/03/23  15:52:57  prosb
+#*** empty log message ***
+#
+#Revision 3.1  92/03/20  12:11:03  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:22  prosb
+#General Release 1.1
+#
+#Revision 2.5  91/08/01  18:29:32  prosb
+#jso - update for Aug91
+#
+#Revision 2.3  91/07/08  15:31:23  mo
+#MC	7/8/91		Updated with the new package structure
+#
+#Revision 2.2  91/07/03  14:56:11  prosb
+#xray.xspectral 7/3/91
+#
+#Revision 2.1  91/03/28  14:15:46  pros
+#jso - change to match upgrade of qpspec which corrects problems with
+#	default instrument type.
+#,
+#
+#Revision 2.0  91/03/06  23:09:25  pros
+#General Release 1.0
+#
+.help qpspec Jun94 xray.xspectral
+.ih
+NAME
+qpspec -- create a spectral observed data set from a \fIqpoe\fR file.
+.ih
+USAGE
+qpspec source region bkgd bkgdregion table
+.ih
+DESCRIPTION
+
+\fIqpspec\fR bins photons in the specified source region according to
+pha or pi value.  Photons are optionally binned in the specified
+bkgd region, and the bkgd is normalized by area (and optionally, by
+time and a user-specified norm factor), before being subtracted from
+the source counts in each bin. Both the source and bkgd images can be
+filtered using an exposure map (and a threshold at which to accept
+pixels) if desired.
+.ih
+PARAMETERS
+.ls source = ""		prompt = source qpoe file
+
+The source qpoe data file.  This file must be of appropriate size for
+the type of spectrum being created.  For ROSAT/PSPC it must include
+the DETECTOR coordinates.
+
+.le
+.ls region = ""		prompt = source region descriptor
+
+The ASCII region descriptor or pixel mask file name.  If "NONE" or ""
+is specified, the entire field is used.  Region descriptors of arbitrary 
+complexity are accepted.  If the mask has more than one region, the 
+effective region is the union of all of them.  For the Einstein IPC, 
+a circle of radius 22.5 pixels will be equivalent to the 3 arc-minute 
+radius used to calculate the source spectrum that is stored in the sdf 
+file.  This can be entered either as 
+.nf
+	CIRCLE	<xcenter> <ycenter> 22.5
+or	CIRCLE	<xcenter> <ycenter> 3'
+.fi
+This 22.5 pixel radius should normally be used, since the IPC spectral
+fitting corrections assume that data is taken in a circle of this
+radius.  (This will be generalized at a future date.)  If you specify a 
+source region other than this standard circle for an Einstein IPC file, 
+qpspec will accept and use it, but will print a warning message.
+.le
+.ls bkgd = ""		prompt = background qpoe file
+
+The bkgd qpoe data file.  This file must be of appropriate size for
+the type of spectrum being created.  If the null string is input, the source 
+file is used for bkgd.  If "NONE"
+is input, no bkgd subtraction will be performed.  In this latter case,
+the background region parameter is not prompted for.
+
+NB: The number of channels in the bkgd qpoe file must equal the number
+of channels in the source qpoe file.
+.le
+.ls bkgdregion = ""	prompt = bkgd region descriptor
+
+The background ASCII region descriptor, if a bkgd file is specified.
+If "NONE" or "" is specified, the entire field is used.
+.le
+.ls table = ""		prompt = root name for output files [root_obs.tab, etc.]
+
+Name of the STScI observed spectra table file to which output is written; 
+or the root name to use for the observed spectra file and for any auxiliary 
+table files that will be created.  If the null string is input, the source 
+image file name is used (with an "_obs.tab" extension for the observed 
+spectra file, "_soh.tab" and "_boh.tab" extensions for source and background 
+off-axis histograms (for ROSAT PSPC, etc.), "_bal.tab" extension for Einstein 
+BAL histogram). The extension can be omitted in the specification, but the
+file(s) must have a ".tab" system extension.  If the string "NONE" is
+input, no table files are created.
+
+The columns of the observed spectra table file are: "e_lo" (low energy 
+boundary for this bin (keV)), "e_hi" (high energy boundary for this bin 
+(keV)), "cts_tot" (raw source counts in this bin), "ccts_bkg" (normalized 
+bkgd counts for this bin), "net" (net bkgd-subtracted counts in this bin), 
+and "neterr" (error on net counts).  Several parameters are also added to 
+the headers of the table files (see description below).
+.le
+.ls (exposure = "NONE") [string]
+
+The PLIO mask containing exposure information for the specified
+source image.  If the null string is input,  the name will be the
+same root as the source image file with a "_exp.pl" extension.
+If "NONE" is input (the default), no exposure filtering is performed.
+.le
+.ls (expthresh = 0.0) [real]
+
+The percentage of total exposure required for a given source pixel to
+pass the exposure filter, (if an exposure mask is present).  For
+example, if expthresh is 50.0, then only pixels whose exposure time is
+>= 50% will be used.  An exposure threshold of 0% allows all photons
+to pass the exposure filter.
+.le
+.ls (bkgdexposure = "NONE") [string]
+
+The PLIO mask containing exposure information for the specified bkgd
+image.  If the null string is input, the name will be the same root as
+the bkgd image file with a "_exp.pl" extension.  If "NONE" is input
+(the default), no exposure filtering is performed.
+.le
+.ls (bkgdthresh = 0.0) [real]
+
+The percentage of total exposure required for a given bkgd pixel to
+pass the exposure filter, (if an exposure mask is present).  For
+example, if expthresh is 50.0, then only pixels whose exposure time is
+>= 50% will be used.  An exposure threshold of 0% allows all photons
+to pass the exposure filter.
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the table files can be
+overwritten, if they already exist.
+.le
+.ls (display = 1) [int]
+
+The level of output display.  A value of 0 will generate no display.
+A value of 1 or greater will display header information as well as the
+spectra.
+.le
+.ls (full = no) [boolean]
+
+This boolean flag specifies whether to bin counts into the
+instrument's full range of bins.   The ROSAT HRI data set should be 
+binned into 1 pha channel normally.  For ROSAT PSPC data it indicates whether
+the pi bins should be compressed to the nominal 34 channels (full=no)
+or left as 256 raw channels (full=yes) produced by the PSPC pipeline
+processing.
+.le
+.ls (timenorm = no) [boolean]
+
+Boolean flag (taking on values "true" or "false") specifying whether
+or not the background should be normalized by the ratio of live times.
+.le
+.ls (normfactor = 1.0) [real]
+
+User-specified background normalization factor (default = 1.0).  The
+background is multiplied by this factor before being subtracted from
+the signal.
+.le
+.ls (syserr = "") [string]
+
+The systematic error to be applied in the error calculation. The input
+string normally takes one of three forms: if the null string is input,
+then the default systematic error for that instrument is used.  (The
+default systematic errors are maintained in the \fIpkgpars\fR
+parameter file.)  Secondly, if a single value is input, then that
+value is used as the systematic error for each channel in the
+spectrum.  Thirdly, a different systematic error can be specified for
+each channel separately in the string.  (As a fourth option, if
+several values are input, but fewer than the number of channels, then
+the last value is replicated for the remaining channels.  This is not
+normally used.)
+
+The values input as systematic errors are percentages of net counts.
+They are applied to the error as follows:
+.nf
+
+	new error = sqrt([old error]**2 +
+		 [(net)*(systematic error)]**2)
+
+.fi
+.le
+.ls (detx = "detx") [string]
+
+This string indicates the qpoe structure field to be used as the detector x
+event position for the construction of the off-axis histogram.
+.le
+.ls (dety = "dety") [string]
+
+This string indicates the qpoe structure field to be used as the detector y
+event position for the construction of the off-axis histogram.
+.le
+.ls (ein_ipc_binning = "pha") [string]
+
+Type of binning for Einstein IPC.
+.le
+.ls (bal_histo = "") [string]
+
+EINSTEIN only
+A string specifying the bal histogram.  The string has the form:
+"bal_val, bal_percent, bal_val, bal_percent, ...". (Commas are
+optional).  If only one bal value is supplied, the percentage will be
+assumed to be 100% and can be omitted.  Note that the bal values must
+range between 9.0 and 26.0, by increments of 0.2.  Bal values which
+are not "multiples" of 0.2 are illegal (since calibration files exist
+only for the 85 bals between 9 and 26).
+
+If the null string is input, the bal_histogram will be calculated at
+the source position, using the PSGNI or DGNI table, as appropriate, as
+well as temporal bal information in the qpoe file.  (Note that, in
+this case, one must add the "blt" information to the qpoe file when it
+is created.)  If the bal histogram is calculated, some information
+about the spatial bal is automatically outputted to the console, to
+aid the user in interpreting the meaning of the histogram.  For the
+time being, this information is always displayed regardless of display
+level, since there remain several question about bal histograms which
+must be actively investigated.
+.le
+.ls (ein_hri_binning = "pha") [string]
+
+EINSTEIN only
+Type of binning for Einstein HRI.
+.le
+.ls (ros_pspc_binning = "pi") [string]
+
+Type of binning for ROSAT PSPC.
+.le
+.ls (ros_pi_offar = "xspectraldata$ros_pi_offar.ieee") [string]
+
+File containing the ROSAT PSPC off-axis effective area coefficients by PI bin.
+.le
+.ls (vign_correct = no) [bool]
+
+This parameter determines whether or not ROSAT PSPC data has the
+background vignetting corrected to the source or not.  See 
+\fIhelp pspc_fitting\fR for more details.
+.le
+.ls (avg_mvr = ) [real]
+
+The average master veto rate for this observation.  It will used to
+calculate the charged particle rates at the source and background.
+In the special case of avg_mvr=0.0 the charged particles will be set
+to zero.  See \fIhelp pspc_fitting\fR for more details.
+.le
+.ls (particle_data_column = "") [string]
+
+The coefficients for the charged particle equations are generally
+extracted from the particle_table according to the START DATE of the
+observation.  The user may choose another column by making this
+parameter non-NULL and equal to the desired column name; these names
+are the strings: "48043.0", "48294.0", "48408.0", "48541.0".  Use
+'tprint xspectraldata$particle_bkgd.tab prpar+' for more information.
+See \fIhelp pspc_fitting\fR for more details.
+.le
+.ls (particle_table = "xspectraldata$particle_bkgd.tab") [string]
+
+The ST table file containing the coefficients to be used in the
+equations to calculate the ROSAT PSPC charged particle background.
+Use 'tprint xspectraldata$particle_bkgd.tab prpar+' for more
+information.  See \fIhelp pspc_fitting\fR for more details.
+.le
+.ls (ros_hri_binning = "pha") [string]
+
+Type of binning for ROSAT HRI.
+.le
+.ls (srg_lepc1_binning = "pi") [string]
+
+Type of binning for SRG LEPC1.
+.le
+.ls (srg_hepc1_binning = "pi") [string]
+
+Type of binning for SRG HEPC1.
+.le
+
+.ls The following parameters are used if the instrument is not one of
+the following: Einstein HRI, Einstein IPC, ROSAT PSPC, ROSAT HRI, SRG LEPC1, 
+SRG HEPC1.
+
+.ls (channels = 16) [int]
+
+If the instrument is unknown to qpspec, this parameter is queried to
+determine the number of channels in the spectrum.  PHA values below 1
+or greater than this value are discarded.
+.le
+.ls (binning = "pha") [string]
+
+The name of the event element on which to perform the binning, if the
+instrument is unknown to qpspec.
+.le
+.ls (inst_syserr = "0.0") [string]
+
+The default instrument systematic error.
+.le
+.ls (radius = 3.0) [real]
+
+If the instrument is unknown to qpspec, this parameter is queried to
+determine the radius of the circle from which the spectrum will be gathered.
+.le
+.ls (noah = 0) [int]
+
+If the instrument is unknown to qpspec, this parameter is queried to
+determine the number of off-axis histogram bins.
+.le
+.ls (oahelements = 1) [int]
+
+If the instrument is unknown to qpspec and noah does not equal 0 then this
+parameter is queried to determine the maximum number of off-axis angles
+that will appear per line of the parameter oah# (see below).  With noah > 0,
+qpspec will query oah1 for up to oahelements off-axis histogram angles; if
+(noah - oahelements) is still greater then zero qpspec will query oah2
+for the next group of off-axis histogram angles.  This will continue until
+all the off-axis histogram angles have been read in.
+.le
+.ls (oah1 = "0") [string]
+
+If the instrument is unknown to qpspec and noah does not equal 0 then this
+parameter is queried to determine the off-axis histogram angles.  For example,
+if both noah and oahelements equal 8 then oah1 could take the form
+"0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7".  The units of oah# should be in degrees
+so that when they are divided by QP_INPXX (from the qpoe file) the result
+is in pixels.  See the previous parameter if it is necessary to use more
+then one line to input the off-axis histogram angles.
+.le
+.ls (xdopti = 0.0) [real]
+
+This real parameter is used to determine the optical center of the detector
+in detector coordinates.  It is used for the construction of the off-axis
+histogram.
+.le
+.ls (ydopti = 0.0) [real]
+
+This real parameter is used to determine the optical center of the detector
+in detector coordinates.  It is used for the construction of the off-axis
+histogram.
+
+.le
+.ih
+FULL DESCRIPTION
+
+\fIqpspec\fR bins photons in the specified source region according to
+pha or pi value.  Photons are optionally binned in the specified
+bkgd region, and the bkgd is normalized by area (and optionally, by
+time and a user-specified norm factor), before being subtracted from
+the source counts in each bin.  Both source and background counts may 
+also be reduced by subtracting an estimate of charged particle 
+contributions.  Both the source and bkgd images can be filtered using 
+an exposure map (and a threshold at which to accept pixels) if desired.  
+Errors on the source counts and on the normalized background counts are 
+estimated, assuming a Poisson process (see \fIhelp explain_errors\fR).  
+These two error estimates and the optional systematic error (= syserr * 
+net source counts) are added in quadrature to estimate the net error.
+
+The resulting spectra (cts_tot, ccts_bkg, and net), as well as energy 
+channel boundaries and errors, are written to the observed spectra table 
+file.  This file (along with its auxiliary files -- off-axis histogram 
+table files, or BAL histogram table file) can then be used as input to 
+the spectral fitting tasks.  The "e_lo", "e_hi", "net", and "neterr" 
+columns are required for spectral fitting. The source and bkgd spectra 
+are included for information purposes only.
+
+The headers of the table files contain both required and optional 
+parameters.  Required parameters are "TELESCOP" (text, reported by qpspec 
+as "mission" number -- e.g., 10 for Einstein, 20 for ROSAT), "INSTRUME" 
+(text, reported by qpspec as more specific "instrument" text -- e.g., 
+"EINSTEIN_HRI", "EINSTEIN_IPC", "ROSAT_PSPC"), "OBS_ID" (the text of the 
+sequence number, reported by qpspec as "seqno"), "LIVETIME" (observation 
+live time), and "NCHANS" (number of channels in the net spectrum).  
+Optional parameters include x, y, RA, DEC, source area in pixels, bkgd
+area in pixels, etc.  Some missions have additional required parameters, 
+such as "SUBINST", "ANGLE" (the off-axis angle, defined as 
+sqrt((x-xcenter)**2+(y-ycenter)**2), where (x,y) is the source position 
+and (xcenter,ycenter) is the center of the field), and "RADIUS" of the 
+on-source circle in arcminutes.
+
+Some mission-specific required parameters formerly stored in the header 
+(before the advent of RDF) are stored in separate table files now.  
+Einstein IPC data require the BAL histogram for the source.  The BAL 
+histogram is stored in the _bal.tab file.  It has two columns, "bal" and 
+"frac_time".  For ROSAT PSPC data, source and background off-axis 
+histograms are stored in the _soh.tab and _boh.tab files, respectively.  
+Each of these files has two columns, labeled "off_ax_rad" (the off-axis 
+radius, in arcmin) and "frac_time".
+.ih
+EXAMPLES
+
+(Note:  The exact appearance of your display may differ slightly from 
+what is shown here.)
+
+Extract the spectrum from a 3 arc-minute circle centered around the
+source position 503.0, 513.0 in Einstein IPC data snr.  The
+bal histogram is calculated at runtime from the psgni/dgni file and
+temporal bal information stored in the qpoe file.
+.nf
+
+xs> qpspec
+source qpoe file: xdata$snr
+source region descriptor: c 503.0 513.0 3'
+background qpoe file: 
+bkgd region descriptor: a 503.0 513.0 3' 6'
+root name for output files [root_obs.tab, etc.]: snr
+
+
+ds:                     0
+file:                   snr_obs.tab
+scale:                  0.00
+mission:                10
+seqno:                  8102
+instrument:             EINSTEIN_IPC
+sub-instrument:         1
+no. pha channels:       15
+off-axis angle of center
+   of region (arcmin):  1.20
+radius (arcmin):        3.00
+filter:                 0
+livetime (sec):         4255.78
+x, y:                   503.00, 513.00
+livetime corr:          0.96
+arc fraction:           0.10
+src area (sq. pix.):    1597.00
+cts_tot (count):        44.00  83.00  258.00  474.00  663.00  792.00  772.00
+                        556.00  354.00  205.00  104.00  55.00  35.00  24.00
+                        19.00  
+bkgd area (sq. pix.):   4752.00
+ccts_bkg (count):       25.88  44.03  69.23  99.14  116.28  99.14  74.94  
+                        54.44  33.94  17.81  17.14  18.15  14.11  23.52  
+                        14.45  
+net (count):            18.12  38.97  188.77  374.86  546.72  692.86  697.06
+                        501.56  320.06  187.19  86.86  36.85  20.89  0.48  
+                        4.55  
+neterr (count):         8.39  11.05  18.73  26.14  32.07  36.33  35.99  
+                        29.20  22.35  16.58  11.86  8.99  7.45  6.76  6.02  
+BAL info:
+BAL entries:            1
+BAL mean:               14.20
+BAL value, percent:     14.20      100.00 
+
+Output table file(s):  snr_obs.tab, snr_bal.tab
+.fi
+
+The table files snr_obs.tab and snr_bal.tab can be displayed using tprint.
+
+
+Extract the spectrum from a circle with a radius of 225 pixels (112.5 arcsec) 
+centered on the source position 6958, 9356 in ROSAT PSPC data rp110590n00.
+.nf
+
+xs> qpspec
+source qpoe file: xdata$rp110590n00.qp
+source region descriptor: c 6958 9356 225
+background qpoe file: 
+bkgd region descriptor: a 6958 9356 250 500
+root name for output files [root_obs.tab, etc.]: rp110590n00
+
+ds:                     0
+file:                   rp110590n00_obs.tab
+scale:                  0.00
+mission:                20
+seqno:                  CA110590P.N5
+instrument:             ROSAT_PSPC
+sub-instrument:         1
+no. pha channels:       34
+mean off-axis angle
+   of events (arcmin):  8.73
+radius (arcmin):        1.88
+filter:                 0
+livetime (sec):         1885.00
+x, y:                   6958.00, 9356.00
+livetime corr:          0.96
+src area (sq. pix.):    159013.00
+cts_tot (count):        150.00  344.00  715.00  866.00  916.00  1291.00  
+                        983.00  732.00  547.00  323.00  235.00  221.00  
+                        300.00  320.00  414.00  638.00  680.00  716.00  
+                        857.00  700.00  612.00  479.00  400.00  308.00  
+                        250.00  186.00  137.00  104.00  71.00  50.00  33.00
+                        14.00  13.00  7.00  
+bkgd area (sq. pix.):   589028.00
+ccts_bkg (count):       4.05  5.94  1.62  1.89  0.54  1.89  3.51  1.08  1.35
+                        0.27  1.08  1.35  0.81  0.81  1.35  1.35  2.16  1.08
+                        2.70  2.97  1.08  1.08  1.62  1.08  1.35  0.27  1.08
+                        0.81  1.08  0.54  0.54  1.35  0.00  0.00  
+net (count):            145.95  338.06  713.38  864.11  915.46  1289.11  
+                        979.49  730.92  545.65  322.73  233.92  219.65  
+                        299.19  319.19  412.65  636.65  677.84  714.92  
+                        854.30  697.03  610.92  477.92  398.38  306.92  
+                        248.65  185.73  135.92  103.19  69.92  49.46  32.46
+                        12.65  13.00  7.00  
+neterr (count):         13.35  19.63  27.77  30.46  31.29  36.96  32.39  
+                        28.08  24.42  19.00  16.38  15.92  18.36  18.93  
+                        21.39  26.29  27.11  27.79  30.31  27.50  25.77  
+                        22.92  21.04  18.59  16.86  14.68  12.77  11.26  
+                        9.51  8.16  6.85  4.93  4.73  3.82  
+Output table file(s):  rp110590n00_obs.tab, rp110590n00_soh.tab, 
+                       rp110590n00_boh.tab
+.fi
+
+.ih
+TIME REQUIREMENTS
+
+The time required depends on the speed of the mask I/O, and is
+proportional to the number of photons being filtered.  Also, if a
+region description is input rather than an already existing pixel mask,
+for source and/or bkgd region, the pixel mask must be created at run
+time.  This only takes a few seconds for relatively simple masks.  For
+complicated masks that one will use repeatedly, use plcreate first and
+input the plio mask directly instead of the ASCII region descriptor.
+.ih
+BUGS
+.ih
+SEE ALSO
+
+Documentation on spectral models (\fIhelp models_spectral\fR) for a
+description of the spectral model user interface.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on QPOE filtering (\fIhelp qpoe\fR) for a description of
+the QPOE filter user interface.
+
+Documentation on error calculation (\fIhelp explain_errors\fR) for a
+description of the PROS error calculation algorithm.
+
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

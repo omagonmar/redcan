@@ -1,0 +1,21 @@
+# $Header: /home/pros/xray/xproto/xexamine_r/RCS/mkpkg,v 1.2 1998/04/24 16:14:27 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 1.2  1998/04/24 16:14:27  prosb
+# Patch Release 2.5.p1
+#
+# Revision 1.1  1998/02/25 19:49:59  prosb
+# Initial revision
+#
+#
+# Make control package.
+ 
+$checkout libpkg.a ../
+$update libpkg.a 
+$checkin libpkg.a ../
+$exit
+
+libpkg.a:
+        xexamine_r.x <ctype.h> <ext.h> <mach.h> <fset.h> "xexamine2.h"
+        xesubs2.x <gset.h> <imhdr.h> <ctype.h> <ext.h> <mach.h> <fset.h> <rosat.h> <qpoe.h> "xexamine2.h"
+        xesetup2.x <coords.h> <error.h> <gset.h> <imhdr.h> <rosat.h> <qpoe.h> "xexamine2.h"
+        ;

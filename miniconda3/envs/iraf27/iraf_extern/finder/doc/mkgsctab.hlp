@@ -1,0 +1,56 @@
+.help mkgsctab Jun97 finder
+.ih
+NAME
+mkgsctab -- Make a GSC format table from a text coordinate list
+.ih
+USAGE
+mkgsctab input output
+.ih
+PARAMETERS
+.ls input
+The name of the input text file containing the RA and Dec coordinates.
+A third optional column contains an integer ID number.
+.le
+.ls output
+The output HST Guide Star Catalog format table.  This will be suitable
+as input to TFINDER.
+.le
+.ls ra_units = "hours"
+The units of the RA column in the input.  Allowed values are "hours" and
+"degrees".
+.le
+.ls startid = 1
+Starting ID number if the third ID column is omitted from the input.
+.le
+.ls region = 0
+Region number for new entries.
+.le
+.ls plate = "NONE"
+Plate name for new entries.
+.le
+.ls cdfile = "finder$lib/cdfile.gsc"
+The column definition file that serves as a template for the new table.
+.le
+.ih
+DESCRIPTION
+The FINDER package requires a catalog of astrometric sources that is in
+a format similar to the Space Telescope Guide Star Catalog.  While the
+catpars parameter set does allow specifying different names for the
+required catalog columns, it is simplest to simply format other catalogs
+in the same way.
+
+MKGSCTAB will convert an \fIinput\fR text coordinate list into the GSC format.
+The Right Ascension may be specified in units of either decimal hours or
+degrees - sexigesimal input in the form HH:MM:SS[.S...] is also
+acceptable.  The ID number for the new catalog file can be explicitly
+specified as a third column in the \fIinput\fR, or the new catalog entries
+can be sequentially numbered starting at \fIstartid\fR.  A GSC format
+\fIregion\fR number and \fIplate\fR name can be specified.
+
+The \fIcdfile\fR parameter specifies the tables package column
+definition file that is used to format the new catalog table.  Modify
+the default value, "finder$lib/cdfile.gsc", at your own risk.
+.ih
+SEE ALSO
+mkobjtab, catpars, gscfind, cdrfits, tfinder
+.endhelp

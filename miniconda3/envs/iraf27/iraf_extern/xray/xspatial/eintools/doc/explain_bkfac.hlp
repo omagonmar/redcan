@@ -1,0 +1,98 @@
+#$Header: /home/pros/xray/xspatial/eintools/doc/RCS/explain_bkfac.hlp,v 11.0 1997/11/06 16:30:36 prosb Exp $
+#$Log: explain_bkfac.hlp,v $
+#Revision 11.0  1997/11/06 16:30:36  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:48:11  prosb
+#General Release 2.4
+#
+#Revision 1.1  1994/08/15  11:27:05  dvs
+#Initial revision
+#
+.help explain_bkfac Jul94 xray.xspatial.eintools
+.ih
+NAME
+explain_bkfac -- an explanation of the contents of the BKFAC table.
+.ih
+BACKGROUND FACTORS TABLE
+
+The background factors (BKFAC) table is an intermediate file used by the
+eintools package to store aspect and weighting information used to 
+create a background map.  The BKFAC table is specific to an observation
+and to the deep survey and bright Earth maps.
+
+The task \fIbkfac_make\fR creates a BKFAC
+table with the aspect information for an observation, read from a 
+QPOE file. The aspect is described in a WCS format as a 
+mapping from detector coordinates to sky coordinates. The task 
+\fIcalc_factors\fR is then run to calculate
+the weighting factors.  Finally, the task \fIbe_ds_rotate\fR is used to
+create a background map from the
+BKFAC table and the deep survey and bright Earth maps.
+
+The columns in the BKFAC are as follows:
+
+.ls BEFAC,DSFAC
+
+The bright Earth and deep survey weighting factors.  (Note that the
+bright Earth factor may be negative.)  
+The task \fIcalc_factors\fR is used to create these columns.
+
+.le 
+.ls LIVTI
+
+The length of time the observation was at the aspect described
+in this row.  Correction for dead-time correction is
+included.
+This value is created in \fIbkfac_make\fR and
+used in calculating the BEFAC and DSFAC columns during \fIcalc_factors\fR.
+
+.le
+.ls RCRVL1,RCRVL2
+
+Two keywords used in the WCS description of the aspect for the row.  These
+correspond to the sky coordinates which the reference pixel (header 
+keywords RCRPX1 and RCRPX2) will map to in the transformation.  These
+values are calculated in \fIbkfac_make\fR.
+
+.le
+.ls RCROT2
+
+A keyword used in the WCS description of the aspect for the row.  This
+value describes the angle of rotation between detector coordinates and the
+final sky position.
+
+.le
+.ls PI_CTS
+
+The number of photons which arrived during the time associated with
+this table row.  The photons are first filtered through the appropriate 
+PI band and spatial filters.  This value is created in \fIbkfac_make\fR and
+used in calculating the BEFAC and DSFAC columns during \fIcalc_factors\fR.
+.le
+
+There are several header keywords specific to the background factors table:
+
+.ls PIBAND
+
+The PI range which was used in creating this BKFAC table.  This range
+must match the range used in creating the deep survey and bright Earth maps.
+
+.le
+.ls BECTS,DSCTS
+
+The number of image counts in the bright Earth and deep survey maps.  These
+values are used to help identify the BKFAC table.  They are compared against
+the counts in the BEMAP and DSMAP used in \fIbe_ds_rotate\fR when making
+the final background map.
+
+.le
+.ls DSTIME
+
+The livetime of the deep survey map.  This value is used to help identify
+the BKFAC table, and is compared against the livetime of the deep survey
+map during \fIbe_ds_rotate\fR.
+
+.le
+
+.endhelp

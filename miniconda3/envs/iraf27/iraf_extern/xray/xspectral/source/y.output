@@ -1,0 +1,153 @@
+
+state 0
+	$accept : _command $end 
+	command : _    (1)
+
+	DATA  shift 8
+	INCL  shift 9
+	YYEOF  shift 5
+	SEMICOLON  shift 7
+	NEWLINE  shift 6
+	.  reduce 1
+
+	command  goto 1
+	eost  goto 2
+	data  goto 3
+	incl  goto 4
+
+state 1
+	$accept :  command_$end 
+
+	$end  accept
+	.  error
+
+
+state 2
+	command :  eost_    (2)
+
+	.  reduce 2
+
+
+state 3
+	command :  data_eost 
+
+	SEMICOLON  shift 7
+	NEWLINE  shift 6
+	.  error
+
+	eost  goto 10
+
+state 4
+	command :  incl_eost 
+
+	SEMICOLON  shift 7
+	NEWLINE  shift 6
+	.  error
+
+	eost  goto 11
+
+state 5
+	command :  YYEOF_    (5)
+
+	.  reduce 5
+
+
+state 6
+	eost :  NEWLINE_    (11)
+
+	.  reduce 11
+
+
+state 7
+	eost :  SEMICOLON_    (12)
+
+	.  reduce 12
+
+
+state 8
+	data :  DATA_    (6)
+	data :  DATA_RANGE 
+	data :  DATA_* NUMERAL 
+	data :  DATA_RANGE * NUMERAL 
+
+	RANGE  shift 12
+	*  shift 13
+	.  reduce 6
+
+
+state 9
+	incl :  INCL_    (10)
+
+	.  reduce 10
+
+
+state 10
+	command :  data eost_    (3)
+
+	.  reduce 3
+
+
+state 11
+	command :  incl eost_    (4)
+
+	.  reduce 4
+
+
+state 12
+	data :  DATA RANGE_    (7)
+	data :  DATA RANGE_* NUMERAL 
+
+	*  shift 14
+	.  reduce 7
+
+
+state 13
+	data :  DATA *_NUMERAL 
+
+	NUMERAL  shift 15
+	.  error
+
+
+state 14
+	data :  DATA RANGE *_NUMERAL 
+
+	NUMERAL  shift 16
+	.  error
+
+
+state 15
+	data :  DATA * NUMERAL_    (8)
+
+	.  reduce 8
+
+
+state 16
+	data :  DATA RANGE * NUMERAL_    (9)
+
+	.  reduce 9
+
+
+11/127 terminals, 4/300 nonterminals
+13/600 grammar rules, 17/750 states
+0 shift/reduce, 0 reduce/reduce conflicts reported
+13/350 working sets used
+memory: states,etc. 97/12000, parser 5/12000
+7/600 distinct lookahead sets
+0 extra closures
+14 shift entries, 1 exceptions
+6 goto entries
+0 entries saved by goto default
+Optimizer space used: input 38/12000, output 226/12000
+226 table entries, 208 zero
+maximum spread: 264, maximum offset: 263
+
+11/127 terminals, 4/300 nonterminals
+13/600 grammar rules, 17/750 states
+0 shift/reduce, 0 reduce/reduce conflicts reported
+13/350 working sets used
+memory: states,etc. 97/12000, parser 5/12000
+7/600 distinct lookahead sets
+0 extra closures
+14 shift entries, 1 exceptions
+6 goto entries
+0 entries saved by goto default

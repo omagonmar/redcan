@@ -1,0 +1,131 @@
+#$Header: /home/pros/xray/lib/doc/RCS/msk_disp.hlp,v 11.0 1997/11/06 16:23:02 prosb Exp $
+#$Log: msk_disp.hlp,v $
+#Revision 11.0  1997/11/06 16:23:02  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:03  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:56  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:45  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:13  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:57  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:10:06  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:50  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:38  pros
+#General Release 1.0
+#
+.help msk_disp Jan89 PROS_Library
+NAME
+.in 4
+msk_disp - display info about a mask file
+.sp
+.in -4
+USAGE
+.in 4
+call msk_disp(heading, imname, title)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	heading		str		heading for display
+	imname		str		image name
+	title		str		region summary string
+
+Output Arguments:
+	none
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine msk_disp displays information about a mask file.
+If the heading string is non-null, it is printed out first.  Next,
+if the imname string is non-null, the line:
+.nf
+
+	image: <imname>
+
+.fi
+is displayed.  Finally the region summary is displayed.  This region
+summary is obtained by the msk_open call (or the rg_pmcreate call).
+The summary consists of a list of regions that make up the region mask.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how msk_disp is used in conjunction with
+other msk routines such as msk_open.  This code, adapted from imcnts,
+opens a mask (with no exposure mask) and displays the regions.
+.in 8
+.nf
+include <ctype.h>
+include <pmset.h>
+
+procedure dispregions()
+
+char	simage[SZ_FNAME]	# source image name
+char	sregion[SZ_FNAME]	# source region descr
+pointer	sim 			# source image pointer
+pointer	spm			# source pixel mask pointer
+pointer	smp			# source mask I/O pointer
+pointer	stitle			# source region summary pointer
+pointer	sp			# stack pointer
+
+pointer	immap()			# open an image
+pointer	msk_open()		# open a region and/or exposure mask
+
+begin
+  # mark the stack
+  call smark(sp)
+  
+  # init some variables
+  stitle = 0
+
+  # get source information
+  call clgstr("source", simage, SZ_FNAME)
+  call clgstr("region", sregion, SZ_FNAME)
+
+  # open the source image
+  sim = immap(simage, READ_ONLY, 0)
+  # open the region and/or exposure
+  spm = msk_open(sregion, "NONE", 0.0, sim, stitle)
+
+  # display the regions
+  call msk_disp("SIGNAL", simage, Memc[stitle])
+
+  # close source pixel mask
+  call pm_close(spm)
+  # close source image
+  call imunmap(sim)
+
+  # free up stack space
+  call sfree(sp)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+The pointer to the title summary must be set to zero in the calling routine.
+.in -4
+.sp
+SEE ALSO
+.in4
+msk_open (which combines a region mask and an exposure mask into a
+single mask), msk_g2s (which fills a 2-D buffer with data through a mask), and
+msk_cnts (which counts photons in regions)

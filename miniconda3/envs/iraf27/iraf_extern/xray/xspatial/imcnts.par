@@ -1,0 +1,52 @@
+#$Header: /home/pros/xray/xspatial/RCS/imcnts.par,v 11.0 1997/11/06 16:31:50 prosb Exp $
+#$Log: imcnts.par,v $
+#Revision 11.0  1997/11/06 16:31:50  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:35:28  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:55:19  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:30:30  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:09:30  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:03  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:33:08  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/04  01:20:25  dennis
+#New parameters matchbkgd, display
+#
+#Revision 3.0  91/08/02  01:26:28  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:10:45  pros
+#General Release 1.0
+#
+#
+#  Parameters for the imcnts task
+#
+source,s,a,"",,,"source image file"
+region,s,a,"",,,"source region descriptor"
+exposure,s,h,"NONE",,,"source exposure mask or NONE"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion in source"
+err,s,h,"NONE",,,"error file or NONE"
+bkgd,s,a,"",,,"background image file or cts/pixel"
+bkgdregion,s,a,"",,,"bkgd region descriptor"
+matchbkgd,b,h,no,,,"match bkgd regions to source regions?"
+bkgdexposure,s,h,"NONE",,,"bkgd exposure mask or NONE"
+bkgdthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion in bkgd"
+addbkgderr,b,h,y,,,"use bkgd in error calculation?"
+bkgderr,s,h,"NONE",,,"bkgd error file, NONE, or constant err"
+timenorm,b,h,no,,,"normalize by time?"
+normfactor,r,h,1.0,,,"user-specified normalization factor"
+table,s,a,"",,,"root name for output file [root_cnt.tab]"
+clobber,b,h,n,,,"delete old copy of table file?"
+display,i,h,1,0,5,"display level"

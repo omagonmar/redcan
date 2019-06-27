@@ -1,0 +1,10 @@
+# Global environment definitions for the FINDER packages.
+
+reset	finderbin	= "finder$bin(arch)/"
+reset	pkgbin		= finderbin$
+reset	pkglibs		= finder$lib/
+
+reset	gscnorth	= "/orion/cdrom0/"
+reset	gscsouth	= "/orion/cdrom1/"
+
+keep

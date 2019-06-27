@@ -1,0 +1,43 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "bokeh >=0.13.0",
+    "cloudpickle >=0.2.1",
+    "cytoolz >=0.7.3",
+    "dask-core 1.2.2.*",
+    "distributed >=1.28.0",
+    "numpy >=1.11.0",
+    "pandas >=0.19.0",
+    "partd >=0.3.8",
+    "python",
+    "toolz >=0.7.3"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/dask-1.2.2-py_0",
+  "features": "",
+  "files": [],
+  "fn": "dask-1.2.2-py_0.tar.bz2",
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/dask-1.2.2-py_0",
+    "type": 1
+  },
+  "md5": "de1aa6226773feab5b7c03a5be6ca99b",
+  "name": "dask",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/dask-1.2.2-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 11210,
+  "subdir": "noarch",
+  "timestamp": 1557502144385,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/dask-1.2.2-py_0.tar.bz2",
+  "version": "1.2.2"
+}

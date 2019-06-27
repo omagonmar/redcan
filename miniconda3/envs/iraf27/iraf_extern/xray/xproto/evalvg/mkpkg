@@ -1,0 +1,25 @@
+# $Header: /home/pros/xray/xproto/evalvg/RCS/mkpkg,v 11.0 1997/11/06 16:38:58 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:38:58  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:26:47  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/07/20  13:55:42  chen
+#Initial revision
+#
+#
+# Make the "evalvg" task
+
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+
+libpkg.a:
+        evalvg.x "evalvg.h" <imhdr.h> <tbset.h> <clk.h> <ext.h>
+        evalvg_subs.x "evalvg.h" <math.h> <iraf.h> <clk.h> <bary.h>
+        vgtabio.x "evalvg.h" <iraf.h> <tbset.h>
+        vghdrio.x "evalvg.h" <ctype.h> <math.h> <iraf.h> <clk.h>
+        ;

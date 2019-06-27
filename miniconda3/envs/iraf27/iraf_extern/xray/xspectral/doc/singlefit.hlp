@@ -1,0 +1,285 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/singlefit.hlp,v 11.0 1997/11/06 16:41:28 prosb Exp $
+#$Log: singlefit.hlp,v $
+#Revision 11.0  1997/11/06 16:41:28  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:38  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:29:31  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/17  18:48:04  wendy
+#Pre-Release check-in.
+#
+#Revision 7.0  93/12/27  18:53:29  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:48:17  prosb
+#General Release 2.2
+#
+#Revision 5.2  93/04/01  09:19:11  orszak
+#jso - made energy index clearer
+#
+#Revision 5.1  92/12/02  11:31:38  prosb
+#corrected typo.  (PLM)
+#
+#Revision 5.0  92/10/29  22:42:49  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/20  16:55:29  orszak
+#jso - update for rebin
+#
+#Revision 4.0  92/04/27  15:27:58  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.3  92/04/22  16:16:41  prosb
+#Changed date.
+#
+#Revision 3.2  92/03/31  12:20:20  prosb
+#clarified meaning of line model parameters
+#
+#Revision 3.1  92/03/23  17:39:18  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:25  prosb
+#General Release 1.1
+#
+#Revision 2.4  91/08/01  18:30:54  prosb
+#jso - update for Aug91
+#
+#Revision 2.2  91/07/08  15:32:21  mo
+#MC	7/8/91		Updated with the new package structure
+#
+#Revision 2.1  91/07/03  14:58:25  prosb
+#xray.xspectral 7/3/91
+#
+#Revision 2.0  91/03/06  23:09:29  pros
+#General Release 1.0
+#
+.help singlefit Jun94 xray.xspectral
+.ih
+NAME
+singlefit -- performs a single value fit. 
+.ih
+USAGE
+singlefit
+.ih
+DESCRIPTION
+
+This task computes a single predicted spectrum, using the values of
+the model parameters without change.  Any model parameters which have
+been marked "free" or "calculated" will be temporarily "fixed".  A
+Chi-squared will be computed using all the observed data sets specified
+by the parameter \fBobserved\fR.  (See the parameters defined for the
+task \fBpkgpars\fR for some quantities which can be set
+prior to execution.)
+.ih
+PARAMETERS
+.ls observed = ""             prompt = observed spectrum [root_obs.tab]
+
+This is a package wide parameter, found in the pkgpars parameter file.
+
+The file names of one or more observed data sets on which the fit is
+to be performed.  Multiple observation data sets can be specified by
+entering the file names, separated by semicolons, e.g. "foo1; foo2;
+foo3", etc. Normally these files have a "_obs.tab" extension.  This
+extension need not be input explicitly; if the files do not follow this
+convention the explicit name should be typed.
+
+Channels to fit for a given data set may be selected by appending a
+bracket notation to the file name.  Thus "foo[3:11,15]" will cause
+channels 3 to 11 (inclusive) and 15 to be fit. If channels are not
+explicitly specified, the default channels for the given instrument
+are retrieved from the pkgpars parameter file.
+.le
+.ls model = ""		prompt = model descriptor or ? for help
+
+This is a package wide parameter, found in the pkgpars parameter file.
+
+The ASCII model descriptor.  If "?" is input a short help file appears,
+and the model prompt reappears.  A null string ("") will cause the previously
+determined best
+model to be taken from the _prd.tab file.  Type \fIhelp models_spectral\fR
+from the CL for further information.
+
+The spectral model descriptor is the sum of individual model components
+with the option of applying absorption.
+.nf
+
+The general syntax for applying absorption to a component is:
+    absorption(params) * component(params)
+
+The general syntax for multiple model components is:
+    abs(params) * compnt1(params) + abs(params) * compnt2(params) + ...
+
+Possible components and arguments are:
+powerlaw         log(normalization), energy index
+bremsstrahlung   log(normalization), temperature [keV]
+exponential      log(normalization), temperature [keV]
+blackbody        log(normalization), temperature [keV]
+raymond          log(normalization), temperature [keV], abundance table,
+                                       abundance percent
+line model       log(normalization), line-energy [keV],
+                                       line-width [FWHM, in keV]
+
+Absorption is applied as follows:
+	absorption(galactic_NH (log))
+	absorption(intrinsic_NH (log), redshift)
+	absorption(galactic_NH (log), intrinsic_NH (log), redshift)
+
+.fi
+Unique abbreviations are recognized (e.g. pow).  Parameters are specified
+by entering a single value (fixed) or a range (free) separated by ":".  For
+free normalization of the first component, this parameter may be omitted.
+The normalization of a second component is linked to that of the
+first, other parameters may also be linked.
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ls (rebin = no) [boolean]
+
+For PSPC sources with only a few counts rebin should be set to yes and
+all the data will be binned into one channel.  In this case, all paramters
+in the choosen model must be given except for the first normalization.
+
+.le
+.ls Parameters from \fIpkgpars\fR.
+The following are some of the parameters that can be found in the 
+\fIpkgpars\fR parameter set that are used by this task.
+
+.ls (absorption_type = "morrison") [string]
+
+The type of absorption to be used.  The options are "morrison
+mccammon" or "brown gould".
+.le
+.ls (predicted = "new") [string]
+
+Each input observed data file that is fit to a model results in an
+output predicted data file with the same root as the input file, and
+the extension "_prd.tab" instead of the input files "_obs.tab"
+extension.  Since more than one input file can be used in a fit, more
+than one predicted file can be created as output.
+
+The predicted data file contains all of the information contained in
+the input observed data files.  In addition, three columns are added
+detailing the results of the fit.  These are: "pred" (containing the
+predicted spectrum), "chisq" (containing the chi-square contribution
+for each channel) and "chans" (containing a "*" if that channel was
+used in the fit).  The table may contain more than one set of
+predicted data, so the names of these columns are actually "pred_<N>",
+"chisq_<N>", and "chans_<N>", where <N> distinguishes the predicted
+data sets within the file (see below).
+
+The predicted data set also contains header parameters that describe
+the model used in the fit (the best fit parameters), the total
+chi-square of the fit, and the file names of all observed data sets
+used in the fit.
+
+This \fIpredicted\fR parameter controls the creation of the predicted
+files.  The parameter takes three possible values: "nothing", "new",
+or "append".  If predicted is "nothing", no predicted data files are
+created.  If the parameter value is "new", then the predicted data
+files are overwritten (if the \fIclobber\fR parameter is set to true).
+If the value is "append", then the predicted data columns are appended
+to the current predicted data file.  In this case, the <N> number
+appended to the "pred", "chisq", and "chans" column names in
+incremented so that successive runs of a fit result, for example, in
+the successive predicted column names "pred_1", "pred_2", etc.
+.le
+.ls (clobber = YES) [boolean]
+
+This flag determines whether the predicted data file can be over-written,
+assuming that the value of the predicted parameter is "new".
+.le
+.ls (chisquare = ".") [string]
+
+The name of the table file containing accumulated chisquare results.
+The file will contain one row of the following columns for each fit
+performed: "date" (the time and date of the run), "chisq" (the total
+chisq of the fit), "chans" (the number of channels used in the fit),
+"free" (the number of free parameters used in the fit), "files" (a
+list of predicted data files generated by the fit, along with the <N>
+column number within each file - see above), "model" (the best fit
+model).
+.le
+
+See the pkgpars help file for more parameters.
+.le
+.ih
+EXAMPLE
+
+Perform a fit on the input observed data set snr_obs.tab.  The source 
+region is a circle of radius 3 arcmin (22.5 pixels) centered on 
+pixel (503, 513); the background is a concentric annulus of inner radius 
+24 pixels and outer radius 40 pixels.  The model has log Galactic absorption 
+of 22.38, with no redshift, a power-law of energy index 5.83, and a 
+log normalization 0.03: 
+.nf
+
+xs> singlefit
+Performing a single value fit.
+observed spectrum [root_obs.tab]: snr
+model descriptor or ? for help: abs(22.38)*pow(0.03 5.83)
+Found 1 dataset(s).
+
+ Data set #1 from file: snr_obs.tab 
+
+ PHA energy range   observed     error   predicted (pred-obs)/error 
+ --- ------------   --------     -----   --------- ---------------- 
+   1  0.06->0.19        16.3       8.8        21.2        0.6 
+   2  0.19->0.39        41.4      11.4        68.7        2.4 
+   3  0.39->0.64       191.1 *    19.1       185.6       -0.3 
+   4  0.64->0.91       377.4 *    26.5       386.4        0.3 
+   5  0.91->1.21       543.1 *    32.4       594.2        1.6 
+   6  1.21->1.54       690.9 *    36.6       700.2        0.3 
+   7  1.54->1.93       698.7 *    36.2       657.7       -1.1 
+   8  1.93->2.41       497.1 *    29.4       508.7        0.4 
+   9  2.41->3.12       319.8 *    22.5       331.4        0.5 
+  10  3.12->4.01       188.2 *    16.7       185.3       -0.2 
+  11  4.01->5.16        84.7 *    12.1        90.1        0.5 
+  12  5.16->6.91        35.7       9.3        38.6        0.3 
+  13  6.91->9.19        21.1       7.7        14.6       -0.8 
+  14  9.19->12.0        -0.8       7.2         5.0        0.8 
+  15 11.98->15.4         3.6       6.4         1.5       -0.3 
+               * indicates use in Chi-square calculation. 
+
+The fitted net counts are: 3591.01; with error: 80.99.
+
+Chi-square =      4.687 
+Predicted Data file: snr_prd.tab
+Intermediate Spectra file: ./snr_int.tab
+
+Model: abs(22.380)*pow(0.030 5.830)
+
+Model Component 1: Power Law 
+          energy index = 5.830 (fixed) 
+    normalization (log) = 0.0300 (fixed) 
+    galactic Nh (log) = 22.380 (fixed) 
+    intrinsic Nh (log) = 0.000 (fixed) 
+          redshift = 0.000 (fixed) 
+
+.fi
+.ih
+TIME REQUIREMENTS
+
+Since all "free" parameters are "fixed", this task executes 
+quickly, in less than 10 seconds normally.
+.ih
+BUGS
+
+The _obs.tab file name must not begin with a numeral.  The same is true
+for the model input file, if one is used.  Beginning the file names of
+these files with a numeral causes the parser to attempt to process the
+numeral, resulting in an error.
+.ih
+SEE ALSO
+
+Documentation on spectral models (\fIhelp show_models\fR) for a
+description of the spectral model user interface.
+
+fit, pspc_fitting, search_grid
+.endhelp

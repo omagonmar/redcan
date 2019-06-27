@@ -1,0 +1,1854 @@
+check out file `libmscred.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscred.a'
+warning: library `libmscred.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred curfit.x t_curfit.x
+curfit.x:
+   cf_fitr:
+   cf_listxyr:
+   im_projectionr:
+   cf_fitd:
+   cf_listxyd:
+   im_projectiond:
+t_curfit.x:
+   t_curfit:
+   cf_operand:
+   cf_rlist:
+   cf_rimage:
+   cf_divzr:
+   cf_divzd:
+curfit.f:
+   cffitr:
+   cflisr:
+   impror:
+   cffitd:
+   cflisd:
+   improd:
+t_curfit.f:
+   tcurft:
+   cfoped:
+   cfrlit:
+   cfrime:
+   cfdivr:
+   cfdivd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscred.a curfit.o t_curfit.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscred.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred imsurfit.x pixlist.x ranges.x t_imsurfit.x
+imsurfit.x:
+   imsurfit:
+   all_pixels:
+   good_pixels:
+   all_medians:
+   good_medians:
+   set_outimage:
+   clean_line:
+   do_reject:
+   refit_surface:
+   grow_regions:
+   get_sigma:
+   detect_rejects:
+   awssqr:
+   ims_divzero:
+pixlist.x:
+   prl_add_ranges:
+   prl_eqlines:
+   prl_get_ranges:
+   prl_nextlineno:
+   prl_prevlineno:
+   prl_put_ranges:
+   prl_free:
+   prl_init:
+ranges.x:
+   is_decode_ranges:
+   is_next_number:
+   is_previous_number:
+   is_in_rangelist:
+   is_expand_ranges:
+   is_select_ranges:
+   is_choose_rangesi:
+   is_choose_rangesr:
+   is_make_ranges:
+t_imsurfit.x:
+   t_imsurfit:
+   make_good_list:
+imsurfit.f:
+   imsurt:
+   allpis:
+   goodps:
+   allmes:
+   goodms:
+   setoue:
+   cleane:
+   dorejt:
+   refite:
+   growrs:
+   getsia:
+   detecs:
+   awssqr:
+   imsdio:
+pixlist.f:
+   prlads:
+   prleqs:
+   prlges:
+   prlneo:
+   prlpro:
+   prlpus:
+   prlfre:
+   prlint:
+ranges.f:
+   isdecs:
+   isnexr:
+   isprer:
+   isinrt:
+   isexps:
+   issels:
+   ischoi:
+   ischor:
+   ismaks:
+t_imsurfit.f:
+   timsut:
+   makegt:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscred.a imsurfit.o pixlist.o ranges.o t_imsurfit.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred ccdsection.x ccsetwcs.x liststr.x mapio.x mgs.x mim.x mscwcs.x patblk.x rgstr.x skywcs.x t_addkey.x t_fitscopy.x t_getcatalog.x t_imext.x t_imstat.x t_jlists.x t_mkmsc.x t_msccmatch.x t_mscctran.x t_mscext.x t_mscgmask.x t_mscimatch.x t_mscpmask.x t_msctmplt.x t_mscuniq.x t_mscwcs.x t_patfit.x t_pixarea.x t_pupilfit.x t_toshort.x t_xlog.x t_xtalkcor.x t_xtcoeff.x xtalk.x xtmaskname.x
+ccdsection.x:
+   ccd_section:
+ccsetwcs.x:
+   t_ccsetwcs:
+   ccsetwcs:
+   cc_dtwcs:
+   cc_rdproj:
+   cc_nwcsim:
+   cc_wcscor:
+   cc_gsencode:
+   geo_gcoeffd:
+liststr.x:
+   li_find_fields:
+   li_cappend_line:
+   li_get_numr:
+   li_pack_liner:
+   li_append_liner:
+   li_format_fieldr:
+   li_get_numd:
+   li_pack_lined:
+   li_append_lined:
+   li_format_fieldd:
+mapio.x:
+   map_glr:
+   map_open:
+   map_opengs:
+   map_close:
+   map_gets:
+   map_geti:
+   map_getr:
+   map_seti:
+   map_setr:
+   map_sets:
+mgs.x:
+   mgs_glr:
+   mgs_open:
+   mgs_close:
+   mgs_gets:
+   mgs_sets:
+   mgs_geti:
+   mgs_seti:
+   mgs_getr:
+   mgs_setr:
+   mgs_pgs:
+   mgs_ggs:
+mim.x:
+   mim_glr:
+   mim_open:
+   mim_close:
+   mim_gets:
+   mim_geti:
+   mim_getr:
+   mim_sets:
+   mim_seti:
+   mim_setr:
+mscwcs.x:
+   msc_openim:
+   msc_open:
+   msc_close:
+   msc_sctran:
+   msc_ctrand:
+   msc_ctranr:
+   msc_c2tranr:
+   msc_c2trand:
+   msc_wcsstati:
+   msc_wcsstatd:
+patblk.x:
+   pblk_initi:
+   patblki:
+   pblk_initr:
+   patblkr:
+rgstr.x:
+   rg_apack_liner:
+   rg_apack_lined:
+skywcs.x:
+   sk_decwcs:
+   sk_decim:
+   sk_strwcs:
+   sk_imwcs:
+   sk_close:
+   sk_cscopy:
+   sk_hdrsaveim:
+   sk_ctypeim:
+   sk_statd:
+   sk_setd:
+   sk_stati:
+   sk_seti:
+   sk_getstr:
+   sk_setstr:
+   sk_iiprint:
+   sk_iiwrite:
+   sk_inprint:
+   sk_inwrite:
+   sk_imprint:
+   sk_imwrite:
+   sk_ultran:
+   sk_lltran:
+   sk_equatorial:
+   rg_wrdstr:
+t_addkey.x:
+   t_addkey:
+   imaddfc:
+t_fitscopy.x:
+   t_fitscopy:
+   fits_copy:
+   fits_hdr:
+   fits_gstr:
+   fits_geti:
+t_getcatalog.x:
+   t_getcatalog:
+   mscagetcat:
+   noaousno:
+   cadcusno:
+t_imext.x:
+   t_imextensions:
+t_imstat.x:
+   t_imstatistics:
+   ist_fields:
+   ist_isfield:
+   ist_initialize:
+   ist_accumulate4:
+   ist_accumulate3:
+   ist_accumulate2:
+   ist_accumulate1:
+   ist_accumulate0:
+   ist_stats:
+   ist_ihist:
+   ist_hmedian:
+   ist_hmode:
+   ist_pheader:
+   ist_print:
+   ist_fprint:
+   ist_gdata:
+t_jlists.x:
+   t_jlists:
+t_mkmsc.x:
+   t_mkmsc:
+   mk_gkey:
+   estp_open:
+t_msccmatch.x:
+   t_msccmatch:
+   cm_pixel:
+   cm_shift:
+   cm_center:
+   cm_geomap:
+   cm_updcoords:
+   cm_compared:
+   cm_getcoords:
+t_mscctran.x:
+   t_mscctran:
+   wt_transform:
+   wt_laxmap:
+   wt_vmap:
+   wt_cunits:
+   wt_tvlogd:
+   wt_ctrand:
+   wt_logtvd:
+   wt_getlabels:
+t_mscext.x:
+   t_mscextensions:
+t_mscgmask.x:
+   t_mscgmask:
+t_mscimatch.x:
+   t_mscimatch:
+   t_rand:
+   imat_measure:
+   imat_comp:
+   imat_fit:
+   imat_fit1:
+   imat_fnc:
+   imat_fit2:
+   imat_scale:
+   imat_eprop:
+   imat_fix:
+   imat_rej:
+   imat_rms:
+   imat_icinit:
+   imat_icfree:
+   imat_iclabels:
+   imat_ic1:
+   imat_ic2:
+t_mscpmask.x:
+   t_mscpmask:
+t_msctmplt.x:
+   t_msctemplate:
+   t_mscwtemplate:
+t_mscuniq.x:
+   t_mscuniq:
+t_mscwcs.x:
+   t_mscwcs:
+   wcs_trans:
+   wcs_adjust:
+t_patfit.x:
+   t_patfit:
+   patfit1:
+   patfit2:
+t_pixarea.x:
+   t_pixarea:
+   pixarea:
+t_pupilfit.x:
+   t_pupilfit:
+   pupfit:
+t_toshort.x:
+   t_toshort:
+   toshort:
+   toshort_minmax:
+t_xlog.x:
+   t_xlog:
+   xlog_open:
+   xlog_close:
+   xlog_send:
+t_xtalkcor.x:
+   t_xtalkcor:
+   ctread:
+   ctalk:
+   ctjoin:
+   ctsplit:
+t_xtcoeff.x:
+   t_xtcoeff:
+   xt_mode:
+xtalk.x:
+   ctalks:
+   ctobs:
+   ctbpms:
+   ctalkr:
+   ctobr:
+   ctbpmr:
+xtmaskname.x:
+   xt_maskname:
+ccdsection.f:
+   ccdsen:
+ccsetwcs.f:
+   tccses:
+   ccsets:
+   ccdtws:
+   ccrdpj:
+   ccnwcm:
+   ccwcsr:
+   ccgsee:
+   geogcd:
+liststr.f:
+   lifins:
+   licape:
+   ligetr:
+   lipacr:
+   liappr:
+   liforr:
+   ligetd:
+   lipacd:
+   liappd:
+   liford:
+mapio.f:
+   mapglr:
+   mapopn:
+   mapops:
+   mapcle:
+   mapges:
+   mapgei:
+   mapger:
+   mapsei:
+   mapser:
+   mapses:
+mgs.f:
+   mgsglr:
+   mgsopn:
+   mgscle:
+   mgsges:
+   mgsses:
+   mgsgei:
+   mgssei:
+   mgsger:
+   mgsser:
+   mgspgs:
+   mgsggs:
+mim.f:
+   mimglr:
+   mimopn:
+   mimcle:
+   mimges:
+   mimgei:
+   mimger:
+   mimses:
+   mimsei:
+   mimser:
+mscwcs.f:
+   mscopm:
+   mscopn:
+   msccle:
+   mscscn:
+   mscctd:
+   mscctr:
+   mscc2r:
+   mscc2d:
+   mscwci:
+   mscwcd:
+patblk.f:
+   pblkii:
+   patbli:
+   pblkir:
+   patblr:
+rgstr.f:
+   rgapar:
+   rgapad:
+skywcs.f:
+   skdecs:
+   skdecm:
+   skstrs:
+   skimws:
+   skcloe:
+   skcscy:
+   skhdrm:
+   skctym:
+   skstad:
+   sksetd:
+   skstai:
+   skseti:
+   skgetr:
+   sksetr:
+   skiipt:
+   skiiwe:
+   skinpt:
+   skinwe:
+   skimpt:
+   skimwe:
+   skultn:
+   sklltn:
+   skequl:
+   rgwrdr:
+t_addkey.f:
+   taddky:
+   imaddc:
+t_fitscopy.f:
+   tfitsy:
+   fitscy:
+   fitshr:
+   fitsgr:
+   fitsgi:
+t_getcatalog.f:
+   tgetcg:
+   mscagt:
+   noaouo:
+   cadcuo:
+t_imext.f:
+   timexs:
+t_imstat.f:
+   timsts:
+   istfis:
+   istisd:
+   istine:
+   istac4:
+   istac3:
+   istac2:
+   istac1:
+   istac0:
+   iststs:
+   istiht:
+   isthmn:
+   isthme:
+   istphr:
+   istprt:
+   istfpt:
+   istgda:
+t_jlists.f:
+   tjliss:
+t_mkmsc.f:
+   tmkmsc:
+   mkgkey:
+   estpon:
+t_msccmatch.f:
+   tmscch:
+   cmpixl:
+   cmshit:
+   cmcenr:
+   cmgeop:
+   cmupds:
+   cmcomd:
+   cmgets:
+t_mscctran.f:
+   tmsccn:
+   wttram:
+   wtlaxp:
+   wtvmap:
+   wtcuns:
+   wttvld:
+   wtctrd:
+   wtlogd:
+   wtgets:
+t_mscext.f:
+   tmsces:
+t_mscgmask.f:
+   tmscgk:
+t_mscimatch.f:
+   tmscih:
+   trand:
+   imatme:
+   imatcp:
+   imatft:
+   imatf1:
+   imatfc:
+   imatf2:
+   imatse:
+   imatep:
+   imatfx:
+   imatrj:
+   imatrs:
+   imatit:
+   imatie:
+   imatis:
+   imati1:
+   imati2:
+t_mscpmask.f:
+   tmscpk:
+t_msctmplt.f:
+   tmscte:
+   tmscwe:
+t_mscuniq.f:
+   tmscuq:
+t_mscwcs.f:
+   tmscws:
+   wcstrs:
+   wcsadt:
+t_patfit.f:
+   tpatft:
+   patfi1:
+   patfi2:
+t_pixarea.f:
+   tpixaa:
+   pixara:
+t_pupilfit.f:
+   tpupit:
+   pupfit:
+t_toshort.f:
+   ttosht:
+   toshot:
+   toshox:
+t_xlog.f:
+   txlog:
+   xlogon:
+   xlogce:
+   xlogsd:
+t_xtalkcor.f:
+   txtalr:
+   ctread:
+   ctalk:
+   ctjoin:
+   ctsplt:
+t_xtcoeff.f:
+   txtcof:
+   xtmode:
+xtalk.f:
+   ctalks:
+   ctobs:
+   ctbpms:
+   ctalkr:
+   ctobr:
+   ctbpmr:
+xtmaskname.f:
+   xtmase:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscred.a ccdsection.o ccsetwcs.o liststr.o mapio.o mgs.o mim.o mscwcs.o patblk.o rgstr.o skywcs.o t_addkey.o t_fitscopy.o t_getcatalog.o t_imext.o t_imstat.o t_jlists.o t_mkmsc.o t_msccmatch.o t_mscctran.o t_mscext.o t_mscgmask.o t_mscimatch.o t_mscpmask.o t_msctmplt.o t_mscuniq.o t_mscwcs.o t_patfit.o t_pixarea.o t_pupilfit.o t_toshort.o t_xlog.o t_xtalkcor.o t_xtcoeff.o xtalk.o xtmaskname.o
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscred.a
+Updated 41 files in libmscred.a
+check file `libmscred.a' into `mscbin$'
+check out file `libccdred.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libccdred.a'
+warning: library `libccdred.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred cor.x proc.x xtfp.x
+cor.x:
+   cor1s:
+   cor1flats:
+   cor2s:
+   cor2flats:
+   cor1r:
+   cor1flatr:
+   cor2r:
+   cor2flatr:
+proc.x:
+   proc1s:
+   proc2s:
+   find_overscans:
+   procmeans:
+   proc1r:
+   proc2r:
+   find_overscanr:
+   procmeanr:
+xtfp.x:
+   xx_fps:
+   xx_fpss:
+   xx_fpvals:
+   xx_fpi:
+   xx_fpsi:
+   xx_fpvali:
+   xx_fpl:
+   xx_fpsl:
+   xx_fpvall:
+   xx_fpr:
+   xx_fpsr:
+   xx_fpvalr:
+   xx_fpd:
+   xx_fpsd:
+   xx_fpvald:
+cor.f:
+   cor1s:
+   cor1fs:
+   cor2s:
+   cor2fs:
+   cor1r:
+   cor1fr:
+   cor2r:
+   cor2fr:
+proc.f:
+   proc1s:
+   proc2s:
+   findos:
+   procms:
+   proc1r:
+   proc2r:
+   findor:
+   procmr:
+xtfp.f:
+   xxfps:
+   xxfpss:
+   xxfpvs:
+   xxfpi:
+   xxfpsi:
+   xxfpvi:
+   xxfpl:
+   xxfpsl:
+   xxfpvl:
+   xxfpr:
+   xxfpsr:
+   xxfpvr:
+   xxfpd:
+   xxfpsd:
+   xxfpvd:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libccdred.a cor.o proc.o xtfp.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libccdred.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred bleed.x calimage.x ccdamp.x ccdcache.x ccdcheck.x ccdcmp.x ccdcopy.x ccddelete.x ccdflag.x ccdlog.x ccdmean.x ccdnscan.x ccdproc.x ccdsection.x ccdsubsets.x ccdtypes.x doproc.x hdrmap.x hdmflag.x readcor.x scancor.x setbpmask.x setdark.x setfixpix.x setflat.x setfringe.x setheader.x setillum.x setinmask.x setinput.x setinteract.x setnoi.x setoutput.x setoverscan.x setproc.x setreadcor.x setsaturate.x setsections.x setsflat.x settrim.x setzero.x t_ccdgroups.x t_ccdhedit.x t_ccdinst.x t_ccdlist.x t_ccdmask.x t_ccdproc.x t_ccdtool.x timelog.x xtfixpix.x xtpmmap.x
+bleed.x:
+   bld_open:
+   bld_close:
+   bld_mask:
+   bld_interp:
+calimage.x:
+   cal_image:
+   cal_open:
+   cal_close:
+   cal_list:
+   cal_scan:
+   cal_get:
+ccdamp.x:
+   ccdamp:
+   ccdname:
+ccdcache.x:
+   ccd_cache:
+   ccd_open:
+   ccd_unmap:
+   ccd_flush:
+   ccd_close:
+   ccd_glr:
+   ccd_gls:
+ccdcheck.x:
+   ccdcheck:
+ccdcmp.x:
+   ccd_cmp:
+ccdcopy.x:
+   ccdcopy:
+ccddelete.x:
+   t_ccddelete:
+   ccddelete:
+ccdflag.x:
+   ccdflag:
+ccdlog.x:
+   ccdlog_open:
+   ccdlog_close:
+   ccdlog:
+   ccdlog_flush:
+   ccdlog_clear:
+ccdmean.x:
+   ccdmean:
+ccdnscan.x:
+   ccdnscan:
+ccdproc.x:
+   ccdproc:
+   ccdproc1:
+   ccdproc2:
+ccdsection.x:
+   ccd_section:
+ccdsubsets.x:
+   ccdsubset:
+ccdtypes.x:
+   ccdtype:
+   ccdtypecl:
+   ccdtypes:
+   ccdstr:
+doproc.x:
+   doproc:
+hdrmap.x:
+   hdmopen:
+   hdmclose:
+   hdmwrite:
+   hdmname:
+   hdmpname:
+   hdmgdef:
+   hdmpdef:
+   hdmaccf:
+   hdmgstr:
+   hdmgetr:
+   hdmgeti:
+   hdmpstr:
+   hdmputi:
+   hdmputr:
+   hdmgstp:
+   hdmpstp:
+   hdmdelf:
+   hdmparam:
+hdmflag.x:
+   hdmflag:
+readcor.x:
+   readcor:
+scancor.x:
+   scancor:
+   shortscan:
+   longscan:
+setbpmask.x:
+   set_bpmask:
+setdark.x:
+   set_dark:
+setfixpix.x:
+   set_fixpix:
+   set_fp:
+setflat.x:
+   set_flat:
+setfringe.x:
+   set_fringe:
+setheader.x:
+   set_header:
+setillum.x:
+   set_illum:
+setinmask.x:
+   set_inmask:
+setinput.x:
+   set_input:
+setinteract.x:
+   set_interactive:
+setnoi.x:
+   set_noi:
+setoutput.x:
+   set_output:
+setoverscan.x:
+   set_overscan:
+   fit_overscan:
+   trim_overscan:
+setproc.x:
+   set_proc:
+   free_proc:
+setreadcor.x:
+   set_readcor:
+setsaturate.x:
+   set_saturate:
+   set_bldval:
+setsections.x:
+   set_sections:
+   set_calsection:
+setsflat.x:
+   set_sflat:
+settrim.x:
+   set_trim:
+setzero.x:
+   set_zero:
+t_ccdgroups.x:
+   t_ccdgroups:
+   group_name:
+   group_position:
+t_ccdhedit.x:
+   t_ccdhedit:
+t_ccdinst.x:
+   t_ccdinst:
+   ccdinst_edit:
+   ccdinst_hdr:
+   ccdinst_p:
+   ccdinst_e:
+   ccdinst_g:
+   ccdinst_i:
+t_ccdlist.x:
+   t_ccdlist:
+   shortlist:
+   longlist:
+   pargtype1:
+t_ccdmask.x:
+   t_ccdmask:
+   cm_mask:
+   cm_interp:
+   cm_interp1:
+t_ccdproc.x:
+   t_ccdproc:
+t_ccdtool.x:
+   t_ccdtool:
+timelog.x:
+   timelog:
+xtfixpix.x:
+   xx_fpinit:
+   xx_fpsinterp:
+   xx_fpfree:
+xtpmmap.x:
+   yt_pmunmap:
+bleed.f:
+   bldopn:
+   bldcle:
+   bldmak:
+   bldinp:
+calimage.f:
+   calime:
+   calopn:
+   calcle:
+   callit:
+   calscn:
+   calget:
+ccdamp.f:
+   ccdamp:
+   ccdnae:
+ccdcache.f:
+   ccdcae:
+   ccdopn:
+   ccdunp:
+   ccdflh:
+   ccdcle:
+   ccdglr:
+   ccdgls:
+ccdcheck.f:
+   ccdchk:
+ccdcmp.f:
+   ccdcmp:
+ccdcopy.f:
+   ccdcoy:
+ccddelete.f:
+   tccdde:
+   ccddee:
+ccdflag.f:
+   ccdflg:
+ccdlog.f:
+   ccdlon:
+   ccdloe:
+   ccdlog:
+   ccdloh:
+   ccdlor:
+ccdmean.f:
+   ccdmen:
+ccdnscan.f:
+   ccdnsn:
+ccdproc.f:
+   ccdprc:
+   ccdpr1:
+   ccdpr2:
+ccdsection.f:
+   ccdsen:
+ccdsubsets.f:
+   ccdsut:
+ccdtypes.f:
+   ccdtye:
+   ccdtyl:
+   ccdtys:
+   ccdstr:
+doproc.f:
+   doproc:
+hdrmap.f:
+   hdmopn:
+   hdmcle:
+   hdmwre:
+   hdmnae:
+   hdmpne:
+   hdmgdf:
+   hdmpdf:
+   hdmacf:
+   hdmgsr:
+   hdmger:
+   hdmgei:
+   hdmpsr:
+   hdmpui:
+   hdmpur:
+   hdmgsp:
+   hdmpsp:
+   hdmdef:
+   hdmpam:
+hdmflag.f:
+   hdmflg:
+readcor.f:
+   readcr:
+scancor.f:
+   scancr:
+   shortn:
+   longsn:
+setbpmask.f:
+   setbpk:
+setdark.f:
+   setdak:
+setfixpix.f:
+   setfix:
+   setfp:
+setflat.f:
+   setflt:
+setfringe.f:
+   setfre:
+setheader.f:
+   sether:
+setillum.f:
+   setilm:
+setinmask.f:
+   setink:
+setinput.f:
+   setint:
+setinteract.f:
+   setine:
+setnoi.f:
+   setnoi:
+setoutput.f:
+   setout:
+setoverscan.f:
+   setovn:
+   fitovn:
+   trimon:
+setproc.f:
+   setprc:
+   freepc:
+setreadcor.f:
+   setrer:
+setsaturate.f:
+   setsae:
+   setbll:
+setsections.f:
+   setses:
+   setcan:
+setsflat.f:
+   setsft:
+settrim.f:
+   settrm:
+setzero.f:
+   setzeo:
+t_ccdgroups.f:
+   tccdgs:
+   groupe:
+   groupn:
+t_ccdhedit.f:
+   tccdht:
+t_ccdinst.f:
+   tccdit:
+   ccdint:
+   ccdinr:
+   ccdinp:
+   ccdine:
+   ccding:
+   ccdini:
+t_ccdlist.f:
+   tccdlt:
+   shortt:
+   longlt:
+   pargt1:
+t_ccdmask.f:
+   tccdmk:
+   cmmask:
+   cmintp:
+   cmint1:
+t_ccdproc.f:
+   tccdpc:
+t_ccdtool.f:
+   tccdtl:
+timelog.f:
+   timelg:
+xtfixpix.f:
+   xxfpit:
+   xxfpsp:
+   xxfpfe:
+xtpmmap.f:
+   ytpmup:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libccdred.a bleed.o calimage.o ccdamp.o ccdcache.o ccdcheck.o ccdcmp.o ccdcopy.o ccddelete.o ccdflag.o ccdlog.o ccdmean.o ccdnscan.o ccdproc.o ccdsection.o ccdsubsets.o ccdtypes.o doproc.o hdrmap.o hdmflag.o readcor.o scancor.o setbpmask.o setdark.o setfixpix.o setflat.o setfringe.o setheader.o setillum.o setinmask.o setinput.o setinteract.o setnoi.o setoutput.o setoverscan.o setproc.o setreadcor.o setsaturate.o setsections.o setsflat.o settrim.o setzero.o t_ccdgroups.o t_ccdhedit.o t_ccdinst.o t_ccdlist.o t_ccdmask.o t_ccdproc.o t_ccdtool.o timelog.o xtfixpix.o xtpmmap.o
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libccdred.a
+Updated 54 files in libccdred.a
+check file `libccdred.a' into `mscbin$'
+check out file `libcombine.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libcombine.a'
+warning: library `libcombine.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred icmefscale.x t_combine.x
+icmefscale.x:
+   mefscales:
+   mefscales1:
+t_combine.x:
+   t_combine:
+   t_coutput:
+   t_ampmerge:
+   maskmerge:
+   cmbine:
+   cmb_images_free:
+   coutput:
+   cmb_images:
+   mefcombine:
+   ic_grp:
+   ic_mklist:
+icmefscale.f:
+   mefscs:
+   mefsc1:
+t_combine.f:
+   tcombe:
+   tcoutt:
+   tampme:
+   maskme:
+   cmbine:
+   cmbime:
+   coutpt:
+   cmbims:
+   mefcoe:
+   icgrp:
+   icmklt:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libcombine.a icmefscale.o t_combine.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libcombine.a
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libcombine.a
+Updated 2 files in libcombine.a
+check file `libcombine.a' into `mscbin$'
+check out file `libmscdisp.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscdisp.a'
+warning: library `libmscdisp.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred akavg.x ampset.x gamma.x linebias.x maskcolor.x maxmin.x migl2.x mignl.x migs2.x miproc.x mitemplate.x mkoverscan.x moscoords.x mosmap.x mscg.x proc.x sigm2.x t_mscdisplay.x t_mscrtdisp.x
+akavg.x:
+   akavgs:
+   akavrs:
+   akavgi:
+   akavri:
+   akavgl:
+   akavrl:
+   akavgr:
+   akavrr:
+   akavgd:
+   akavrd:
+ampset.x:
+   ampset:
+   ampvals:
+   ampfree:
+   ampnull:
+gamma.x:
+   signorm:
+   gammp:
+   gammq:
+   gamser:
+   gamcf:
+   gammln:
+linebias.x:
+   set_linebias:
+   linebiass:
+   linebiasi:
+   linebiasl:
+   linebiasr:
+   linebiasd:
+maskcolor.x:
+   xmaskcolor_map:
+   xmaskcolor_free:
+   xmaskcolor:
+   xmaskexprn:
+   xmaskoperand:
+   xmaskfunc:
+maxmin.x:
+   maxmin:
+migl2.x:
+   migl2s:
+   migl2i:
+   migl2l:
+   migl2r:
+   migl2d:
+mignl.x:
+   minl_inits:
+   mignls:
+   minl_initi:
+   mignli:
+   minl_initl:
+   mignll:
+   minl_initr:
+   mignlr:
+   minl_initd:
+   mignld:
+migs2.x:
+   migs2s:
+   migs2i:
+   migs2l:
+   migs2r:
+   migs2d:
+   migetss:
+   migetsi:
+   migetsl:
+   migetsr:
+   migetsd:
+   micpy:
+   micpys:
+   micpyi:
+   micpyl:
+   micpyr:
+   micpyd:
+miproc.x:
+   miprocs:
+   miproci:
+   miprocl:
+   miprocr:
+   miprocd:
+mitemplate.x:
+   mitopen:
+   mitgetim:
+   mitrgetim:
+   mitlen:
+   mitrewind:
+   mitclose:
+mkoverscan.x:
+   mk_overscan:
+   avg_overscan:
+moscoords.x:
+   moscoords:
+mosmap.x:
+   mimap:
+   miunmap:
+   mg_open:
+   mos_header:
+   mg_compgeom:
+   mg_sort:
+   mg_free:
+   mg_dump:
+   mg_ampid:
+   mg_ampname:
+   mg_rootname:
+   mg_c2im:
+   mg_im2c:
+   mkdetsec:
+mscg.x:
+   mscl2s:
+   mscnls:
+   mscs2s:
+   mscuprocs:
+   mscprocs:
+   mscl2i:
+   mscnli:
+   mscs2i:
+   mscuproci:
+   mscproci:
+   mscl2l:
+   mscnll:
+   mscs2l:
+   mscuprocl:
+   mscprocl:
+   mscl2r:
+   mscnlr:
+   mscs2r:
+   mscuprocr:
+   mscprocr:
+   mscl2d:
+   mscnld:
+   mscs2d:
+   mscuprocd:
+   mscprocd:
+   mscbuf:
+proc.x:
+   procset:
+   zproc:
+sigm2.x:
+   zigm2_setup:
+   yigm2s:
+   yigm2i:
+   yi_blmavgi:
+   zigm2s:
+   zi_blmavgs:
+   zi_maxs:
+   zt_fps:
+   zt_fpss:
+   zt_fpvals:
+   zi_samples:
+   zigm2i:
+   zi_blmavgi:
+   zi_maxi:
+   zt_fpi:
+   zt_fpsi:
+   zt_fpvali:
+   zi_samplei:
+   zigm2r:
+   zi_blmavgr:
+   zi_maxr:
+   zt_fpr:
+   zt_fpsr:
+   zt_fpvalr:
+   zi_sampler:
+t_mscdisplay.x:
+   t_mscdisplay:
+   msctile:
+   mos_comap:
+   mos_info:
+   mos_params:
+   msc_mzscale:
+   msc_load_display:
+   logerrfcn:
+t_mscrtdisp.x:
+   t_mscrtdisplay:
+   msc_rtload_display:
+akavg.f:
+   akavgs:
+   akavrs:
+   akavgi:
+   akavri:
+   akavgl:
+   akavrl:
+   akavgr:
+   akavrr:
+   akavgd:
+   akavrd:
+ampset.f:
+   ampset:
+   ampvas:
+   ampfre:
+   ampnul:
+gamma.f:
+   signom:
+   gammp:
+   gammq:
+   gamser:
+   gamcf:
+   gammln:
+linebias.f:
+   setlis:
+   linebs:
+   linebi:
+   linebl:
+   linebr:
+   linebd:
+maskcolor.f:
+   xmaskp:
+   xmaske:
+   xmaskr:
+   xmaskn:
+   xmaskd:
+   xmaskc:
+maxmin.f:
+   maxmin:
+migl2.f:
+   migl2s:
+   migl2i:
+   migl2l:
+   migl2r:
+   migl2d:
+mignl.f:
+   minlis:
+   mignls:
+   minlii:
+   mignli:
+   minlil:
+   mignll:
+   minlir:
+   mignlr:
+   minlid:
+   mignld:
+migs2.f:
+   migs2s:
+   migs2i:
+   migs2l:
+   migs2r:
+   migs2d:
+   migets:
+   migeti:
+   migetl:
+   migetr:
+   migetd:
+   micpy:
+   micpys:
+   micpyi:
+   micpyl:
+   micpyr:
+   micpyd:
+miproc.f:
+   mipros:
+   miproi:
+   miprol:
+   mipror:
+   miprod:
+mitemplate.f:
+   mitopn:
+   mitgem:
+   mitrgm:
+   mitlen:
+   mitred:
+   mitcle:
+mkoverscan.f:
+   mkoven:
+   avgovn:
+moscoords.f:
+   moscos:
+mosmap.f:
+   mimap:
+   miunmp:
+   mgopen:
+   mosher:
+   mgcomm:
+   mgsort:
+   mgfree:
+   mgdump:
+   mgampd:
+   mgampe:
+   mgrooe:
+   mgc2im:
+   mgim2c:
+   mkdetc:
+mscg.f:
+   mscl2s:
+   mscnls:
+   mscs2s:
+   mscups:
+   mscprs:
+   mscl2i:
+   mscnli:
+   mscs2i:
+   mscupi:
+   mscpri:
+   mscl2l:
+   mscnll:
+   mscs2l:
+   mscupl:
+   mscprl:
+   mscl2r:
+   mscnlr:
+   mscs2r:
+   mscupr:
+   mscprr:
+   mscl2d:
+   mscnld:
+   mscs2d:
+   mscupd:
+   mscprd:
+   mscbuf:
+proc.f:
+   procst:
+   zproc:
+sigm2.f:
+   zigm2p:
+   yigm2s:
+   yigm2i:
+   yiblmi:
+   zigm2s:
+   ziblms:
+   zimaxs:
+   ztfps:
+   ztfpss:
+   ztfpvs:
+   zisams:
+   zigm2i:
+   ziblmi:
+   zimaxi:
+   ztfpi:
+   ztfpsi:
+   ztfpvi:
+   zisami:
+   zigm2r:
+   ziblmr:
+   zimaxr:
+   ztfpr:
+   ztfpsr:
+   ztfpvr:
+   zisamr:
+t_mscdisplay.f:
+   tmscdy:
+   msctie:
+   moscop:
+   mosino:
+   mospas:
+   mscmze:
+   mscloy:
+   logern:
+t_mscrtdisp.f:
+   tmscry:
+   mscrty:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscdisp.a akavg.o ampset.o gamma.o linebias.o maskcolor.o maxmin.o migl2.o mignl.o migs2.o miproc.o mitemplate.o mkoverscan.o moscoords.o mosmap.o mscg.o proc.o sigm2.o t_mscdisplay.o t_mscrtdisp.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscdisp.a
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libmscdisp.a
+Updated 19 files in libmscdisp.a
+check file `libmscdisp.a' into `mscbin$'
+check out file `libimexam.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libimexam.a'
+warning: library `libimexam.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred iecimexam.x iecolon.x iedisplay.x ieeimexam.x iegcur.x iegdata.x iegimage.x iegnfr.x iegraph.x iehimexam.x ieimname.x iejimexam.x ielimexam.x iemw.x ieopenlog.x iepos.x ieprint.x ieqrimexam.x ierimexam.x iesimexam.x iestatistics.x ietimexam.x ievimexam.x stfmeasure.x stfprofile.x t_imexam.x
+iecimexam.x:
+   ie_cimexam:
+iecolon.x:
+   ie_colon:
+   ie_colon1:
+   ie_colon2:
+iedisplay.x:
+   ie_display:
+ieeimexam.x:
+   ie_eimexam:
+iegcur.x:
+   ie_gcur:
+iegdata.x:
+   ie_gdata:
+iegimage.x:
+   ie_gimage:
+iegnfr.x:
+   ie_getnframes:
+iegraph.x:
+   ie_graph:
+iehimexam.x:
+   ie_himexam:
+ieimname.x:
+   ie_imname:
+iejimexam.x:
+   ie_jimexam:
+   ie_gfit:
+   derivs:
+   mr_solve:
+   mr_eval:
+   mr_invert:
+ielimexam.x:
+   ie_limexam:
+iemw.x:
+   ie_mwinit:
+   ie_mwctran:
+   ie_imwctran:
+   ie_iformatr:
+ieopenlog.x:
+   ie_openlog:
+iepos.x:
+   ie_pos:
+ieprint.x:
+   ie_print:
+ieqrimexam.x:
+   ie_qrimexam:
+ierimexam.x:
+   ie_rimexam:
+   ie_center:
+   ie_gauss:
+   ie_dgauss:
+   ie_moffat:
+   ie_dmoffat:
+iesimexam.x:
+   ie_simexam:
+   ie_perimeter:
+   ie_draw_axis:
+   ie_label_axis:
+   ie_draw_ticksx:
+   ie_draw_ticksy:
+   ie_surf_limits:
+iestatistics.x:
+   ie_statistics:
+ietimexam.x:
+   ie_timexam:
+ievimexam.x:
+   ie_vimexam:
+   ie_get_vector:
+   ie_get_col:
+   ie_get_row:
+   ie_setboundary:
+   ie_bufl2r:
+stfmeasure.x:
+   stf_measure:
+   stf_free:
+stfprofile.x:
+   stf_find:
+   stf_bkgd:
+   stf_profile:
+   stf_norm:
+   stf_widths:
+   stf_i2r:
+   stf_r2i:
+   stf_r2n:
+   stf_model:
+   stf_dfwhm:
+   stf_fwhms:
+   stf_radius:
+   stf_fit:
+   stf_gauss1:
+   stf_gauss2:
+   stf_moffat1:
+   stf_moffat2:
+t_imexam.x:
+   t_imexamine:
+   ie_addimage:
+iecimexam.f:
+   iecimm:
+iecolon.f:
+   iecoln:
+   iecol1:
+   iecol2:
+iedisplay.f:
+   iedisy:
+ieeimexam.f:
+   ieeimm:
+iegcur.f:
+   iegcur:
+iegdata.f:
+   iegdaa:
+iegimage.f:
+   iegime:
+iegnfr.f:
+   iegets:
+iegraph.f:
+   iegrah:
+iehimexam.f:
+   iehimm:
+ieimname.f:
+   ieimne:
+iejimexam.f:
+   iejimm:
+   iegfit:
+   derivs:
+   mrsole:
+   mreval:
+   mrinvt:
+ielimexam.f:
+   ielimm:
+iemw.f:
+   iemwit:
+   iemwcn:
+   ieimwn:
+   ieifor:
+ieopenlog.f:
+   ieopeg:
+iepos.f:
+   iepos:
+ieprint.f:
+   ieprit:
+ieqrimexam.f:
+   ieqrim:
+ierimexam.f:
+   ierimm:
+   iecenr:
+   iegaus:
+   iedgas:
+   iemoft:
+   iedmot:
+iesimexam.f:
+   iesimm:
+   ieperr:
+   iedras:
+   ielabs:
+   iedrax:
+   iedray:
+   iesurs:
+iestatistics.f:
+   iestas:
+ietimexam.f:
+   ietimm:
+ievimexam.f:
+   ievimm:
+   iegetr:
+   iegetl:
+   iegetw:
+   iesety:
+   iebufr:
+stfmeasure.f:
+   stfmee:
+   stffre:
+stfprofile.f:
+   stffid:
+   stfbkd:
+   stfpre:
+   stfnom:
+   stfwis:
+   stfi2r:
+   stfr2i:
+   stfr2n:
+   stfmol:
+   stfdfm:
+   stffws:
+   stfras:
+   stffit:
+   stfga1:
+   stfga2:
+   stfmo1:
+   stfmo2:
+t_imexam.f:
+   timexe:
+   ieadde:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libimexam.a iecimexam.o iecolon.o iedisplay.o ieeimexam.o iegcur.o iegdata.o iegimage.o iegnfr.o iegraph.o iehimexam.o ieimname.o iejimexam.o ielimexam.o iemw.o ieopenlog.o iepos.o ieprint.o ieqrimexam.o ierimexam.o iesimexam.o iestatistics.o ietimexam.o ievimexam.o stfmeasure.o stfprofile.o t_imexam.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libimexam.a
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libimexam.a
+Updated 26 files in libimexam.a
+check file `libimexam.a' into `mscbin$'
+check out file `libsf.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libsf.a'
+warning: library `libsf.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred rngranges.x stfgraph.x stfprofile.x t_starfocus.x
+rngranges.x:
+   rng_test:
+   rng_open:
+   rng_close:
+   rng_index:
+   rng_nearest:
+   rng_inrange:
+   rng_add:
+   rng_error:
+stfgraph.x:
+   stf_graph:
+   stf_colon:
+   stf_g1:
+   stf_g2:
+   stf_g3:
+   stf_g4:
+   stf_g5:
+   stf_g6:
+   stf_g7:
+   stf_g8:
+   stf_g9:
+   stf_g10:
+   stf_g11:
+   stf_g12:
+stfprofile.x:
+   stf_find:
+   stf_bkgd:
+   stf_profile:
+   stf_norm:
+   stf_widths:
+   stf_i2r:
+   stf_r2i:
+   stf_r2n:
+   stf_model:
+   stf_dfwhm:
+   stf_fwhms:
+   stf_radius:
+   stf_fit:
+   stf_gauss1:
+   stf_gauss2:
+   stf_moffat1:
+   stf_moffat2:
+t_starfocus.x:
+   t_starfocus:
+   t_psfmeasure:
+   starfocus:
+   stf_free:
+   stf_organize:
+   stf_log:
+   stf_title:
+   stf_fitfocus:
+   stf_parab:
+   stf_magsort:
+   stf_focsort:
+   stf_display:
+   stfcur:
+rngranges.f:
+   rngtet:
+   rngopn:
+   rngcle:
+   rnginx:
+   rngnet:
+   rngine:
+   rngadd:
+   rngerr:
+stfgraph.f:
+   stfgrh:
+   stfcon:
+   stfg1:
+   stfg2:
+   stfg3:
+   stfg4:
+   stfg5:
+   stfg6:
+   stfg7:
+   stfg8:
+   stfg9:
+   stfg10:
+   stfg11:
+   stfg12:
+stfprofile.f:
+   stffid:
+   stfbkd:
+   stfpre:
+   stfnom:
+   stfwis:
+   stfi2r:
+   stfr2i:
+   stfr2n:
+   stfmol:
+   stfdfm:
+   stffws:
+   stfras:
+   stffit:
+   stfga1:
+   stfga2:
+   stfmo1:
+   stfmo2:
+t_starfocus.f:
+   tstars:
+   tpsfme:
+   starfs:
+   stffre:
+   stfore:
+   stflog:
+   stftie:
+   stffis:
+   stfpab:
+   stfmat:
+   stffot:
+   stfdiy:
+   stfcur:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libsf.a rngranges.o stfgraph.o stfprofile.o t_starfocus.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libsf.a
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libsf.a
+Updated 4 files in libsf.a
+check file `libsf.a' into `mscbin$'
+check out file `libfinder.a = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libfinder.a'
+warning: library `libfinder.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred select.x allrows.x change.x mjd.x tbleval.x tblterm.x
+select.x:
+   select:
+allrows.x:
+   allrows:
+change.x:
+   change:
+   patcode:
+   subcode:
+   addpat:
+   addsub:
+   submake:
+   dosub:
+   movechars:
+mjd.x:
+   mjd:
+tbleval.x:
+   tbl_eval:
+tblterm.x:
+   tbl_term:
+   tbl_func:
+   tbl_handler:
+select.f:
+   select:
+allrows.f:
+   allros:
+change.f:
+   change:
+   patcoe:
+   subcoe:
+   addpat:
+   addsub:
+   submae:
+   dosub:
+   movecs:
+mjd.f:
+   mjd:
+tbleval.f:
+   tblevl:
+tblterm.f:
+   tbltem:
+   tblfuc:
+   tblhar:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libfinder.a select.o allrows.o change.o mjd.o tbleval.o tblterm.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libfinder.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred t_tpeak.x
+t_tpeak.x:
+   t_tpeak:
+   tp_colon:
+   opentab:
+   nearest:
+   display:
+   tpltsol:
+   printlog:
+   overlay:
+   center:
+   pcenter:
+   rotate:
+   scale:
+   shift:
+   overlay_one:
+   center_one:
+   newpoint:
+   newobject:
+   goodpoint:
+   badpoint:
+   tp_select:
+   reinit:
+   reinit_one:
+   replace:
+t_tpeak.f:
+   ttpeak:
+   tpcoln:
+   opentb:
+   nearet:
+   disply:
+   tpltsl:
+   printg:
+   overly:
+   center:
+   pcentr:
+   rotate:
+   scale:
+   shift:
+   overle:
+   centee:
+   newpot:
+   newobt:
+   goodpt:
+   badpot:
+   tpselt:
+   reinit:
+   reinie:
+   replae:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libfinder.a t_tpeak.o
+ranlib /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/libfinder.a
+Updated 7 files in libfinder.a
+check file `libfinder.a' into `mscbin$'
+check out file `x_combine.o = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/x_combine.o'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred x_combine.x
+x_combine.x:
+   sys_runtask:
+x_combine.f:
+   sysruk:
+xc -Nz -p mscred x_combine.o -lcombine -limc -lccdred -lmscred -lxtools -lcurfit -lsurfit -lgsurfit -liminterp -lnlfit -lslalib -lncar -lgks -o xx_combine.e
+check file `x_combine.o' into `mscbin$'
+move `xx_combine.e' to `mscbin$x_combine.e'
+check out file `x_ccdred.o = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/x_ccdred.o'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred x_ccdred.x
+x_ccdred.x:
+   sys_runtask:
+x_ccdred.f:
+   sysruk:
+xc -Nz -p mscred  x_ccdred.o -lccdred -limc -lxtools -lcurfit -lgsurfit -lncar -lgks -o xx_ccdred.e
+check file `x_ccdred.o' into `mscbin$'
+move `xx_ccdred.e' to `mscbin$x_ccdred.e'
+check out file `x_mscdisplay.o = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/x_mscdisplay.o'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred x_mscdisplay.x
+x_mscdisplay.x:
+   sys_runtask:
+x_mscdisplay.f:
+   sysruk:
+xc -Nz -p mscred x_mscdisplay.o -lsf -lmscdisp  -lccdred -lmscred -lds -lxtools -lcurfit -lgsurfit -lnlfit -liminterp -lncar -lgks -lllsq -o xx_mscdisplay.e
+check file `x_mscdisplay.o' into `mscbin$'
+check out file `x_mscexam.o = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/x_mscexam.o'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred x_mscexam.x
+x_mscexam.x:
+   sys_runtask:
+x_mscexam.f:
+   sysruk:
+xc -Nz -p mscred x_mscexam.o -limexam -lmscdisp  -lccdred -lmscred -lslalib -lds -lxtools -lcurfit -lgsurfit -lnlfit -liminterp -lncar -lgks -lllsq -o xx_mscexam.e
+check file `x_mscexam.o' into `mscbin$'
+move `xx_mscdisplay.e' to `mscbin$x_mscdisplay.e'
+move `xx_mscexam.e' to `mscbin$x_mscexam.e'
+check out file `x_finder.o = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/x_finder.o'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred x_finder.x
+x_finder.x:
+   sys_runtask:
+x_finder.f:
+   sysruk:
+xc -Nz -p mscred x_finder.o -lfinder -ltbtables -lxtools -o xx_finder.e
+check file `x_finder.o' into `mscbin$'
+move `xx_finder.e' to `mscbin$x_finder.e'
+check out file `x_mscred.o = /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mscred/bin.linux/x_mscred.o'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mscred x_mscred.x
+x_mscred.x:
+   sys_runtask:
+x_mscred.f:
+   sysruk:
+xc -Nz -p mscred  x_mscred.o -lmscred -lxtools -lcurfit   -lgsurfit -lslalib -lsurfit -liminterp -o xx_mscred.e
+check file `x_mscred.o' into `mscbin$'
+move `xx_mscred.e' to `mscbin$x_mscred.e'

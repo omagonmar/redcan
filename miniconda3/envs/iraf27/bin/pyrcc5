@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin/python -m PyQt5.pyrcc_main ${1+"$@"}

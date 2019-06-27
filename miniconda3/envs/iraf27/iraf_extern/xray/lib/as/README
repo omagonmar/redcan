@@ -1,0 +1,14 @@
+#$Header: /home/pros/xray/lib/as/RCS/README,v 11.0 1997/11/06 16:24:35 prosb Exp $
+#$Log: README,v $
+#Revision 11.0  1997/11/06 16:24:35  prosb
+#General Release 2.5
+#
+#Revision 1.2  1995/08/07 18:05:21  prosb
+#JD - initial version for pros2.3.1.
+#
+#
+# directory with special replacement files to work around
+# bugs in specific architectures.
+
+wlsetup.x    --  pointed at by xray$lib/mkpkg.sf.DMIP, has DMIP
+	         workaround to atan2 problem.

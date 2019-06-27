@@ -1,0 +1,97 @@
+%\input skeleton.tex
+\def\version{Version 1.1 --- 2/2/90}
+\def\chapter{Spatial --- Vignetting Corrections}
+%\chapterhead{Spatial Vignetting Corrections}
+\chapterhead{III.~Spatial Vignetting Corrections}
+\@{Overview}
+
+The spatial vignetting and other area corrections are stored as
+calibration data of area as a function of off-axis angle and energy.
+We will require 2 tasks, {\it vigmodel} and {\it vigdata}, which will divide
+and multiply, respectively, an iraf image file
+by an area array
+constructed from these calibration data. Constants in the iraf image
+header of the input image will give the necessary information about
+the energy of the data and the geometry, which will enable the area
+array to be constructed from the calibration data. 
+
+The IRAF image may be a 2D spatial array of mean energy $E$.
+The {\it vigmodel} and {\it vigdata} functions would
+construct arrays for the geometry of the data array relevant to this energy.
+Alternatively, the image may be a 3D spatial
+array where the first two dimensions are spatial, and the third is
+$n$ energy bins of central energies $E_i$.  The vignetting correction
+is applied
+separately to each of the $n$ 2D arrays in turn. (We may wish to make
+an approximation, and calculate, or require the user to input, an effective mean energy.)
+
+The {\it vigmodel} task will normally be used to apply the vignetting
+correction to a model image.  A model will not normally have an
+associated image file of error values.  The {\it vigdata} task will
+normally be used to take out the vignetting from (flat-field) an
+IRAF image containing data.  The data will
+normally contain some fraction of events which have not been vignetted.  This may be a
+constant across the image, or it may be described by a second image.
+The user should have the option of specifying this as a constant value
+of {\it PBACK}, or a file containing the {\it PBACK} values.  The {\it
+vigdata} task should subtract the {\it PBACK} from the image, multiply by
+the area array, and optionally add the {\it PBACK} to the result.  There will
+normally be an error image file associated with the IRAF image
+containing data.
+
+\@{User input}
+
+For both {\it vigmodel} and {\it vigdata} the user would supply an
+input IRAF image (which has header information).  The tasks will
+produce an output image
+of the same dimensions.  The user should have the option of allowing
+the input file to be overwritten by the output file.
+
+For {\it vigdata} the user would specify a value for {\it PBACK}.  This
+would either be a constant value or a file name.  The default would be
+constant=0.  The user would specify whether or not the {\it PBACK}
+should be added to the result after the area multiplication.
+
+\@{Construction of the Area Array}
+
+The tasks read information about the input image from its header  ---
+pixel size, array dimensions and roll angle.  For each pixel in the
+image array, a mean off-axis angle, $\bar \theta$ must be calculated.
+The calibration data must be interpolated to find the area for this
+$\bar \theta$ and the central energy of the image array.  Note that any
+normalization values in the calibration data must be retrieved --- we
+wish to come up with an area in units of ${\rm cm}^2$.
+
+\@{Array Algebra}
+
+Let $I$, $O$, $A$, and $P$ be the input, output, area and particle-background
+arrays respectively, all with a total of $N_1 \times N_2 = N$
+elements.
+The last may be a constant array with each
+pixel containing {\it PBACK}/$N$.
+
+For {\it vigmodel},
+$$ O = I / A$$
+For {\it vigdata}
+$$ O = [(I - P) \times A] $$
+~~~or
+$$ O = [(I - P) \times A] + P $$
+
+\@{Error Arrays}
+
+The user should have the choice of whether or nor error calculations
+are performed.  If requested, the input array should have an
+associated error array, $\epsilon(i,j)$, or the input array may be
+integer and the user request that the square root of the numbers be
+used.
+See the memo `Error Arrays - Fundamentals' from DW, dated July 15th
+1988, for how to apply algebra corresponding to that above to the
+error arrays.
+
+\vfill\eject
+
+
+
+
+
+

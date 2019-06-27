@@ -1,0 +1,159 @@
+#$Header: /home/pros/xray/lib/doc/RCS/rg_pmvallims.hlp,v 11.0 1997/11/06 16:23:22 prosb Exp $
+#$Log: rg_pmvallims.hlp,v $
+#Revision 11.0  1997/11/06 16:23:22  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:30  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:36  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:20:30  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:59  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:35  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:11:17  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:48:02  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:36:07  pros
+#General Release 1.0
+#
+.help rg_pmvallims Jan89 REGIONS_Library
+NAME
+.in 4
+rg_pmvallims - get min amd max mask value
+.sp
+.in -4
+USAGE
+.in 4
+call rg_pmvallims(pm, min, max)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	pm		pointer		pm handle
+
+Output Arguments:
+	min		int		min mask value
+	max		int		max mask value
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine rg_pmvallims returns the minimum and maximum mask values of
+a pm mask.  This information is needed, for example, to allocate the correct
+amount of array space for routines such as msk_cnts.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how rg_pmvallims is used in conjunction with
+other routines such as msk_cnts.  This code, adapted from imcnts,
+counts up photons in an image, filtering through a region mask and
+an exposure mask.
+.in 8
+.nf
+include <ctype.h>
+include <imhdr.h>
+include <pmset.h>
+
+include "../../lib/ext.h"
+
+procedure cntphotons()
+
+char	simage[SZ_FNAME]	# source image name
+char	sregion[SZ_FNAME]	# source region descr
+char	sexposure[SZ_FNAME]	# source exposure file
+int	smin, smax		# min and max for source regions
+int	sindices		# total indices for source regions
+real	sthresh			# source threshold for exposure
+pointer	sim 			# source image pointer
+pointer	spm			# source pixel mask pointer
+pointer	smp			# source mask I/O pointer
+pointer	stitle			# source region summary pointer
+pointer	scounts			# counts in source
+pointer	sarea			# area in source
+pointer	sp			# stack pointer
+
+bool	strne()			# string compare
+real	clgetr()		# get a real param
+pointer	immap()			# open an image
+pointer	msk_open()		# open a region and/or exp. mask
+pointer	mio_openo()		# open a pixel mask for MIO
+
+begin
+  # mark the stack
+  call smark(sp)
+  
+  # init some variables
+  stitle = 0
+
+  # get source information
+  call clgstr("source", simage, SZ_FNAME)
+
+  # get exposure stuff for source
+  call clgstr("exp", sexposure, SZ_FNAME)
+  call rootname(simage, sexposure, EXT_EXPOSURE, SZ_FNAME)
+  if( strne(sexposure, "NONE") ){
+	sthresh = clgetr("thresh")
+	if( sthresh < 0.0 )
+	    call error(1, "exposure threshold must be >=0")
+  }
+
+  # open the source image
+  sim = immap(simage, READ_ONLY, 0)
+  # open the region and/or exposure
+  spm = msk_open(sregion, sexposure, sthresh, sim, stitle)
+  # open the source mask file for MIO
+  smp = mio_openo(spm, sim)
+
+  # make sure we have a 1D or 2D image
+  if( IM_NDIM(sim) > 2 )
+	call error(1, "source image dimensions must be <= 2")  
+
+  # display the regions
+  call msk_disp("SIGNAL", simage, Memc[stitle])
+
+  # count up all photons - this is where all the work is done!!!
+  call rg_pmvallims(spm, smin, smax)
+  sindices = smax - smin + 1
+  call salloc(scounts, sindices, TY_DOUBLE)
+  call salloc(sarea, sindices, TY_DOUBLE)
+  call mskcnts(smp, Memd[scounts], Memd[sarea], smin, smax)
+
+  # display the source and bkgd counts
+  call cnt_rawdisp("SIGNAL DATA",
+	Memd[scounts], Memd[sarea], sindices)
+
+  # close source MIO file
+  call mio_close(smp)
+  # close source pixel mask
+  call pm_close(spm)
+  # close source image
+  call imunmap(sim)
+
+  # free up stack space
+  call sfree(sp)
+
+end
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+regions (a description of the ASCII region descriptor, in the spatial
+doc directory), rg_pmcreate, rg_pmdisp

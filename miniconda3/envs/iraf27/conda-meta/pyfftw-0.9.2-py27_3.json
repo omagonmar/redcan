@@ -1,0 +1,231 @@
+{
+  "build": "py27_3",
+  "build_number": 3,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "cython",
+    "fftw",
+    "numpy",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/pyfftw-0.9.2-py27_3",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/pyFFTW-0.9.2-py2.7.egg-info",
+    "lib/python2.7/site-packages/pyfftw/__init__.py",
+    "lib/python2.7/site-packages/pyfftw/__init__.pyc",
+    "lib/python2.7/site-packages/pyfftw/_version.py",
+    "lib/python2.7/site-packages/pyfftw/_version.pyc",
+    "lib/python2.7/site-packages/pyfftw/builders/__init__.py",
+    "lib/python2.7/site-packages/pyfftw/builders/__init__.pyc",
+    "lib/python2.7/site-packages/pyfftw/builders/_utils.py",
+    "lib/python2.7/site-packages/pyfftw/builders/_utils.pyc",
+    "lib/python2.7/site-packages/pyfftw/builders/builders.py",
+    "lib/python2.7/site-packages/pyfftw/builders/builders.pyc",
+    "lib/python2.7/site-packages/pyfftw/interfaces/__init__.py",
+    "lib/python2.7/site-packages/pyfftw/interfaces/__init__.pyc",
+    "lib/python2.7/site-packages/pyfftw/interfaces/_utils.py",
+    "lib/python2.7/site-packages/pyfftw/interfaces/_utils.pyc",
+    "lib/python2.7/site-packages/pyfftw/interfaces/cache.py",
+    "lib/python2.7/site-packages/pyfftw/interfaces/cache.pyc",
+    "lib/python2.7/site-packages/pyfftw/interfaces/numpy_fft.py",
+    "lib/python2.7/site-packages/pyfftw/interfaces/numpy_fft.pyc",
+    "lib/python2.7/site-packages/pyfftw/interfaces/scipy_fftpack.py",
+    "lib/python2.7/site-packages/pyfftw/interfaces/scipy_fftpack.pyc",
+    "lib/python2.7/site-packages/pyfftw/np_fft.py",
+    "lib/python2.7/site-packages/pyfftw/np_fft.pyc",
+    "lib/python2.7/site-packages/pyfftw/pyfftw.so"
+  ],
+  "fn": "pyfftw-0.9.2-py27_3.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/pyfftw-0.9.2-py27_3",
+    "type": 1
+  },
+  "md5": "88633c00e687670099291781b740381b",
+  "name": "pyfftw",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/pyfftw-0.9.2-py27_3.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/pyFFTW-0.9.2-py2.7.egg-info",
+        "path_type": "hardlink",
+        "sha256": "08db89196dea6f78434ea419805fbfa7a973433185ed7f4a140314b52bb93a17",
+        "sha256_in_prefix": "08db89196dea6f78434ea419805fbfa7a973433185ed7f4a140314b52bb93a17",
+        "size_in_bytes": 2321
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "38e67b2eceb7f0655ffd8d8294a8d4c9faafbdad96f82d874a50ca2b7c9e7cee",
+        "sha256_in_prefix": "38e67b2eceb7f0655ffd8d8294a8d4c9faafbdad96f82d874a50ca2b7c9e7cee",
+        "size_in_bytes": 787
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "bd453a183adbce73e6c3d11e45606df2989fc178a5668ea50aa21f4122429b0c",
+        "sha256_in_prefix": "bd453a183adbce73e6c3d11e45606df2989fc178a5668ea50aa21f4122429b0c",
+        "size_in_bytes": 968
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/_version.py",
+        "path_type": "hardlink",
+        "sha256": "056e46a5de5ece20be617e00f7f06231da357aaac0ecb95639ea3f0499f11e29",
+        "sha256_in_prefix": "056e46a5de5ece20be617e00f7f06231da357aaac0ecb95639ea3f0499f11e29",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/_version.pyc",
+        "path_type": "hardlink",
+        "sha256": "48d8f01758d3d5a02cb33bb15b8efdfc670367010fa71889f4e83a9b72c08274",
+        "sha256_in_prefix": "48d8f01758d3d5a02cb33bb15b8efdfc670367010fa71889f4e83a9b72c08274",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/builders/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "653551eca6b2b7cce0c65ba06d339570f929fb8d7a7dd893419cdb217df1b982",
+        "sha256_in_prefix": "653551eca6b2b7cce0c65ba06d339570f929fb8d7a7dd893419cdb217df1b982",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/builders/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "64bd2564bc695c14c8acc13db7cb2a57fe80427be71fe6a26a6106ee26f9afdc",
+        "sha256_in_prefix": "64bd2564bc695c14c8acc13db7cb2a57fe80427be71fe6a26a6106ee26f9afdc",
+        "size_in_bytes": 271
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/builders/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "75e3804988a0a460b22d49e564833195641d701fa5d7b96bfaa15a3d8ba7164f",
+        "sha256_in_prefix": "75e3804988a0a460b22d49e564833195641d701fa5d7b96bfaa15a3d8ba7164f",
+        "size_in_bytes": 12685
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/builders/_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "b322af5aeeb7e725fc224e6be036e28e97458845cad17db712ebc319529b398a",
+        "sha256_in_prefix": "b322af5aeeb7e725fc224e6be036e28e97458845cad17db712ebc319529b398a",
+        "size_in_bytes": 9197
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/builders/builders.py",
+        "path_type": "hardlink",
+        "sha256": "34aab3df3b5fd3544e2462964bdb969ad35d14281b2443aa27d2b1bf06262ac0",
+        "sha256_in_prefix": "34aab3df3b5fd3544e2462964bdb969ad35d14281b2443aa27d2b1bf06262ac0",
+        "size_in_bytes": 18488
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/builders/builders.pyc",
+        "path_type": "hardlink",
+        "sha256": "7f362f9271ebf879b75f852ed453ca4dda4528252b2a4b1de2507ddec41ff2f6",
+        "sha256_in_prefix": "7f362f9271ebf879b75f852ed453ca4dda4528252b2a4b1de2507ddec41ff2f6",
+        "size_in_bytes": 17018
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f59ca71fa8a8f750eaa7401c375b3509e06e1e265635f9ccfa85fb9251c203be",
+        "sha256_in_prefix": "f59ca71fa8a8f750eaa7401c375b3509e06e1e265635f9ccfa85fb9251c203be",
+        "size_in_bytes": 9714
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "ac116b686db2d4c6c30b78930e1ea6f19fbb5360219fbb70b23bb0c5847a32d7",
+        "sha256_in_prefix": "ac116b686db2d4c6c30b78930e1ea6f19fbb5360219fbb70b23bb0c5847a32d7",
+        "size_in_bytes": 9903
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "d1d8f388f0fd88cffde600ebe1e6bb6055a7914a58e8ee582473c4bcc198778d",
+        "sha256_in_prefix": "d1d8f388f0fd88cffde600ebe1e6bb6055a7914a58e8ee582473c4bcc198778d",
+        "size_in_bytes": 3574
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/_utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "cbbf4e07dfebe2a853c2c95d2e91b053a49358cede774a46c316d56731763baa",
+        "sha256_in_prefix": "cbbf4e07dfebe2a853c2c95d2e91b053a49358cede774a46c316d56731763baa",
+        "size_in_bytes": 1756
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/cache.py",
+        "path_type": "hardlink",
+        "sha256": "6e772a71683b145bd4d8151b18d4a86cc79da9a02b53b30e5b42d46c0ee1cc8c",
+        "sha256_in_prefix": "6e772a71683b145bd4d8151b18d4a86cc79da9a02b53b30e5b42d46c0ee1cc8c",
+        "size_in_bytes": 8265
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/cache.pyc",
+        "path_type": "hardlink",
+        "sha256": "bceda1623b11cabbefe69f23e28b827c50591d7d8cbab810892bf819afbefcab",
+        "sha256_in_prefix": "bceda1623b11cabbefe69f23e28b827c50591d7d8cbab810892bf819afbefcab",
+        "size_in_bytes": 7766
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/numpy_fft.py",
+        "path_type": "hardlink",
+        "sha256": "b52bb356a424d5ec8aa95da4e5d4748b2610e31fe042b01871374f779e7fb4c4",
+        "sha256_in_prefix": "b52bb356a424d5ec8aa95da4e5d4748b2610e31fe042b01871374f779e7fb4c4",
+        "size_in_bytes": 8724
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/numpy_fft.pyc",
+        "path_type": "hardlink",
+        "sha256": "28bb4e67f8458c801cfee1d5eeadfb7b734de6dcbe48ddd8a3d71c4e6883485c",
+        "sha256_in_prefix": "28bb4e67f8458c801cfee1d5eeadfb7b734de6dcbe48ddd8a3d71c4e6883485c",
+        "size_in_bytes": 7514
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/scipy_fftpack.py",
+        "path_type": "hardlink",
+        "sha256": "4a03bd255065464569e4a9bc6f8f5633833fd3dca0fa984cc66326deb98914f7",
+        "sha256_in_prefix": "4a03bd255065464569e4a9bc6f8f5633833fd3dca0fa984cc66326deb98914f7",
+        "size_in_bytes": 5682
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/interfaces/scipy_fftpack.pyc",
+        "path_type": "hardlink",
+        "sha256": "177937f1fb011700edb36773112b85d7bc36e1c059b62cfc901506898c5ab087",
+        "sha256_in_prefix": "177937f1fb011700edb36773112b85d7bc36e1c059b62cfc901506898c5ab087",
+        "size_in_bytes": 5179
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/np_fft.py",
+        "path_type": "hardlink",
+        "sha256": "60779af7a9474cfe145a22c9c734dd5e207ff5e054e64a0f92ee64deeb7a5ab6",
+        "sha256_in_prefix": "60779af7a9474cfe145a22c9c734dd5e207ff5e054e64a0f92ee64deeb7a5ab6",
+        "size_in_bytes": 642
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/np_fft.pyc",
+        "path_type": "hardlink",
+        "sha256": "4652bdf4094a39cb75b3f0026c87796c19e69dc5eb3000fbbc5e023a7e162f37",
+        "sha256_in_prefix": "4652bdf4094a39cb75b3f0026c87796c19e69dc5eb3000fbbc5e023a7e162f37",
+        "size_in_bytes": 2174
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyfftw/pyfftw.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.11/_dispatch/miniconda/conda-bld/pyfftw_1518644071073/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "d9e7d54b4b5ff7d8da3dbf09e45731c25c9ff8515dc23a27464e280cb10278bb",
+        "sha256_in_prefix": "69f10e69a2851020925486fa0fc1be2c448049dc9e8e9d3d87a9574a36c9acb5",
+        "size_in_bytes": 770072
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 253515,
+  "subdir": "linux-64",
+  "timestamp": 1518647401989,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/pyfftw-0.9.2-py27_3.tar.bz2",
+  "version": "0.9.2"
+}

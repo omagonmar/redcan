@@ -1,0 +1,86 @@
+\O=NOAO/IRAF V2.10EXPORT prosb@cfa253.harvard.edu Wed 16:30:33 28-Oct-92
+\T=xterm
+\G=xtermr
+clear\n
+\{%5000
+
+        [An SAOimage window MUST be active for this demo]
+\}
+\{%5000
+
+        [Change directory to output filespace]
+\}\n
+cd\sout_demo\n
+\{%5000
+
+        [Delete existing demo files]
+\}\n
+imdel\spabbell*.imh\n
+del\s\s\spabbell512_iso.pl\n
+\{%5000
+
+        [Load the "xray", "xplot", and "xspatial" packages]
+\}\n
+xray\n
+xplot\n
+xspatial\n
+\{%5000
+
+        [Copy a blocked sub-section of the input QPOE file
+         into a temporary file]
+\}\n
+imcopy\s("in_demo$pabbell.qp[bl=10][501:1012,456:967]",\s"pabbell",\sverbos\
+    e=yes)\n
+\{%5000
+
+        [Smooth the data]
+\}\n
+imsmooth\s("pabbell.imh",\s"pabbell512",\s"gauss",\s4.0,\s0)\n
+xdisp\s("pabbell.imh",\n
+frame=1,\serase=yes,\sborder_erase=no,\sselect_frame=yes,\sfill=no,\szscale\
+    =no,\n
+contrast=0.25,\szrange=yes,\snsample_line=512,\sxcenter=0.5,\sycenter=0.5,\n
+xsize=1.,\sysize=1.,\sxmag=1.,\symag=1.,\sorder=0,\sz1=0.,\sz2=30.,\sztrans\
+    ="linear",\n
+lutfile="")\n
+\{%5000
+
+        [Run the "imcontour" task]
+\}\n
+imcontour\s("pabbell512_smo",\n
+"sky",\s"peak",\s"log\s10\s80\s5",\s"",\swlpars="",\sdisplay=2,\sscale=0.\
+    ,\n
+xy_scale_rat=1.,\sdotitle=yes,\sdolegend=yes,\sperim=no,\ssrc_list="none",\n
+racol="ra",\sdeccol="dec",\sisystem="",\ssrc_mark="#",\spixgrid="full",\n
+pixlabels="out",\spixel_lines=10,\sdolabel=yes,\slabout=no,\smajor_grid=yes\
+    ,\n
+minor_grid=no,\sgraph_device="imdy",\sscale_device="stdplot",\sgclose=yes,\n
+cursor="")\n
+
+\{%5000
+
+        [Run the "isoreg" task]
+\}\n
+isoreg\s("pabbell",\s"pabbell512",\n
+\s\s\s\s\s\s\s\s"0.5079,0.7600,1.1669,1.7687,2.6809,4.0634",\sclobber=no,\s\
+    display=2)\n
+\{%5000
+
+        [Run the "imcnts" task]
+\}\n
+imcnts\s("pabbell.imh",\s"pabbell512_iso.pl",\s"none",\s"",\s"none",\n
+exposure="NONE",\sexpthresh=0.,\serr="NONE",\smatchbkgd=no,\sbkgdexposure="\
+    NONE",\n
+bkgdthresh=0.,\saddbkgderr=yes,\sbkgderr="NONE",\stimenorm=no,\snormfactor=\
+    1.,\n
+clobber=no,\sdisplay=1)\n
+\{%5000
+
+        [Exit the "xray", "xplot", and "xspatial" packages]
+\}\n
+bye\n
+bye\n
+bye\n
+gflush\n
+cd\sscripts_demo\n
+stty\sclear\slogin\n

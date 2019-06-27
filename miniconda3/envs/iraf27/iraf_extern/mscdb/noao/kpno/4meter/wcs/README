@@ -1,0 +1,8 @@
+These are astrometry solutions which can be restored in Mosaic headers
+with MSCSETWCS.
+
+
+Ik1005_000930.db	+
+Rk1004_000930.db	+
+    Solutions using 2000-09-30 observations of Trumpler 37 added.
+    (4/24/03, valdes, jannuzi)

@@ -1,0 +1,57 @@
+# This file created by conda-build 3.8.0
+# ------------------------------------------------
+
+package:
+    name: libxcb
+    version: '1.13'
+source:
+    -   patches:
+            - 0001-Re-introduce-_xcb_lock_io-for-SLES11.patch
+            - python3.patch
+        sha256: 188c8752193c50ff2dbe89db4554c63df2e26a2e47b0fa415a70918b5b851daa
+        url: https://www.x.org/releases/individual/xcb/libxcb-1.13.tar.bz2
+    -   folder: proto
+        sha256: 7b98721e669be80284e9bbfeab02d2d0d54cd11172b72271e47a2fe875e2bde1
+        url: https://www.x.org/releases/individual/xcb/xcb-proto-1.13.tar.bz2
+build:
+    number: 1
+    run_exports:
+        - libxcb >=1.13,<2.0a0
+    string: h1bed415_1
+requirements:
+    build:
+        - binutils_impl_linux-64 2.28.1 had2808c_3
+        - binutils_linux-64 7.2.0 26
+        - gcc_impl_linux-64 7.2.0 habb00fd_3
+        - gcc_linux-64 7.2.0 26
+        - libgcc-ng 7.2.0 hdf63c60_3
+        - libstdcxx-ng 7.2.0 hdf63c60_3
+        - libx11-common-cos6-x86_64 1.6.4 h023ea50_0
+        - libx11-cos6-x86_64 1.6.4 h64a1553_0
+        - libx11-devel-cos6-x86_64 1.6.4 hb9851ce_0
+        - libxau-cos6-x86_64 1.0.6 h4888106_0
+        - libxau-devel-cos6-x86_64 1.0.6 hf5ff492_0
+        - make 4.2.1 h1bed415_1
+        - pkg-config 0.29.2 h1bed415_8
+        - xorg-x11-proto-devel-cos6-x86_64 7.7 h8d4a98b_0
+        - xorg-x11-util-macros-cos6-x86_64 1.19.0 h94bfbc6_0
+    host:
+        - libgcc-ng 7.2.0 hdf63c60_3
+        - pthread-stubs 0.3 h0ce48e5_1
+        - xcb-proto >=1.13,<2.0a0
+    run:
+        - libgcc-ng >=7.2.0
+about:
+    summary: This is the C-language Binding (XCB) package to the X Window System protocol
+extra:
+    copy_test_source_files: true
+    final: true
+    parent_recipe:
+        name: libxcb_and_xcb-proto
+        path: /tmp/build/80754af9/rsync-recipes/libxcb_and_xcb-proto-1.13-on-linux_64
+        version: '1.13'
+    recipe-maintainers:
+        - ccordoba12
+        - mingwandroid
+        - msarahan
+        - pkgw

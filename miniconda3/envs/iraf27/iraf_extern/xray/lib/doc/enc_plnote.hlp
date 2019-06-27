@@ -1,0 +1,242 @@
+#$Header: /home/pros/xray/lib/doc/RCS/enc_plnote.hlp,v 11.0 1997/11/06 16:22:44 prosb Exp $
+#$Log: enc_plnote.hlp,v $
+#Revision 11.0  1997/11/06 16:22:44  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:42  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:25  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:11  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:00:33  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:28  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:06  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:40  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:16  pros
+#General Release 1.0
+#
+.help enc_plnote Apr89 PROS_Library
+NAME
+.in 4
+enc_plnote - encode a note into a PLIO header string
+.sp
+.in -4
+USAGE
+.in 4
+procedure enc_plnote(keyword, value, type, s, len)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	keyword		string		keyword to note, or null string
+	value		any type	value to be encoded
+	type		int		data type (TY_INT, etc.)
+
+Output Arguments:
+	s		string		plio header string that gets encoded
+	len		int		length of output string
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine enc_plnote encodes a plio note at the end of the plio header
+string.  The header string must already be encoded using enc_plhead. One or
+more notes can be added to the end of the string using successive calls.
+
+Notes can have keywords associated with them, in which case they can be
+decoded with dec_plnote.  This is not necessary, however.  It is legitimate
+to encode a note without a keyword if the note is of type TY_CHAR (i.e., a
+string - see below).
+
+The first input argument is the keyword string, which can be the null string.
+The second input argument is the value to be encoded.  This can be a
+string, or any scalar of type SILRDX. The third input argument is the data
+type of the value, (i.e., TY_CHAR for string, or TY_SHORT, TY_INT, etc.)
+It is a restriction that notes of type SILRDX *must* have a keyword, but
+notes of type TY_CHAR do not require a keyword.
+
+The first output argument is the plio header string into which the note
+will be encoded.  The second output argument is the length of this string,
+which is normally SZ_PLHEAD.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how enc_plnote is used in conjunction
+with enc_plhead.  Adapted from msk_open, it combines a region mask and
+an exposure mask into a final mask.
+.in 8
+.nf
+#
+# MSK_OPEN -- open a region and/or and exposure mask
+# and combine the two into a final mask, given an exposure threshold
+# this routines performs pl calls if im ==0, else pm calls
+#
+pointer procedure msk_open(regname, expname, thresh, im, axislen,
+				title)
+
+char	regname[ARB]		# i: region name
+char	expname[ARB]		# i: exposure mask
+real	thresh			# i: exposure threshold
+pointer	im			# i: image handle or 0 for pl
+int	axislen[2]		# i: reference image or dimensions
+pointer	title			# o: region summary
+
+char	etitle[SZ_PLHEAD]	# l: exposure mask title
+char	timages[SZ_LINE]	# l: temp string for dec_plhead
+int	ithresh			# l: int threshold for exposure
+int	isplio			# l: is descr. a plio file?
+pointer	regions			# l: region summary from rg_mask
+pointer	tregions		# l: temp region summary
+pointer	em			# l: exposure pixel mask handle
+pointer	rm			# l: region pixel mask handle
+pointer	pm			# l: merges pixel mask handle
+bool	strne()			# l: string compare
+pointer	pm_open()		# l: open a pixel mask
+pointer	rg_pmmask()		# l: merge masks with a threshold
+pointer	rg_pmcreate()		# l: create a pixel mask from region
+pointer	pl_open()		# l: open a pixel mask
+pointer	rg_plmask()		# l: merge masks with a threshold
+pointer	rg_plcreate()		# l: create a pixel mask from region
+int	rg_isfile()		# l: is descriptor a plio file?
+
+# local to dec_plhead for regions and exposure:
+char	ename[SZ_LINE]
+char	etype[SZ_LINE]
+char	efile[SZ_LINE]
+int	exdim, eydim
+real	escale
+pointer	eregions
+pointer	enotes
+char	rname[SZ_LINE]
+char	rtype[SZ_LINE]
+char	rfile[SZ_LINE]
+int	rxdim, rydim
+real	rscale
+pointer	rregions
+pointer	rnotes
+
+begin
+	# common code for regions
+	# allocate space for a pl header
+	call calloc(title, SZ_PLHEAD, TY_CHAR)
+	# init some pointers
+	rregions = 0
+	rnotes = 0
+	# open a pixel mask for the region
+	if( im ==0 )
+	    rm = rg_plcreate(regname, axislen, regions)
+	else
+	    rm = rg_pmcreate(regname, im, regions)
+	# if its a plio file, decode header to get ref im., etc.
+	isplio = rg_isfile(regname, rname, SZ_LINE)
+	if( isplio >1 ){
+	    call dec_plhead(Memc[regions], rname, SZ_LINE, rtype,
+		SZ_LINE, rfile, SZ_LINE, rxdim, rydim, rscale,
+		rregions, rnotes)
+	    tregions = rregions
+	}
+	else
+	    tregions = regions
+
+	# check for exposure mask
+	if( strne(expname, "NONE") ){
+	    # get the scaled threshold
+	    ithresh = (thresh*MAXEXPOSURE/100.0)
+	    # read in the exposure mask
+	    if( im ==0 ){
+		em = pl_open(NULL)
+		call pl_loadf(em, expname, etitle, SZ_PLHEAD)
+		# merge the two masks into a final mask
+		pm = rg_plmask(em, rm, ithresh)
+		# close the two temp mask files
+		call pl_close(rm)
+		call pl_close(em)
+	    }
+	    else{
+		em = pm_open(NULL)
+		call pm_loadf(em, expname, etitle, SZ_PLHEAD)
+		# merge the two masks into a final mask
+		pm = rg_pmmask(em, rm, ithresh)
+		# close the two temp mask files
+		call pm_close(rm)
+		call pm_close(em)
+	    }
+
+	    # create the plio header for this mask
+	    # decode the exposure plio header to get ref im., etc.
+	    call dec_plhead(etitle, ename, SZ_LINE, etype, SZ_LINE,
+		efile, SZ_LINE, exdim, eydim, escale, eregions,
+						enotes)
+	    # combine the region and exposure headers into one
+	    call sprintf(timages, SZ_LINE, "%s & %s")
+	    if( isplio >1 )
+		call pargstr(rname)
+	    else
+		call pargstr("in memory")
+	    call pargstr(ename)
+	    # create the pl header
+	    call enc_plhead(timages, "region & exposure", efile,
+		axislen[1], axislen[2], 0.0D0,
+		tregions, Memc[title], SZ_PLHEAD)
+	    # add exposure notes, if necessary
+	    if( enotes !=0 )
+		call enc_plnote("", Memc[enotes], TY_CHAR,
+			Memc[title], SZ_PLHEAD)
+	    # add the exposure threshold
+	    call enc_plnote("exposure threshold", thresh, TY_REAL,
+			Memc[title], SZ_PLHEAD)
+	    # and release the region summary space
+	    call mfree(regions, TY_CHAR)
+	    call mfree(eregions, TY_CHAR)
+	    call mfree(enotes, TY_CHAR)
+	}
+	else{
+	    # the output pm is the region pm
+	    pm = rm
+	    # create a plio header
+	    call sprintf(timages, SZ_LINE, "%s")
+	    if( isplio >1 )
+		call pargstr(rname)
+	    else
+		call pargstr("in memory")
+	    # encdoe the pl header
+	    call enc_plhead(timages, "region", "", axislen[1],
+		axislen[2], 0.0D0, tregions, Memc[title],
+		SZ_PLHEAD)
+	    # add a note about the exposure
+	    call enc_plnote("", "no exposure correction", TY_CHAR,
+			Memc[title], SZ_PLHEAD)
+	}
+	# free up region plio header space
+	call mfree(regions, TY_CHAR)
+	call mfree(rregions, TY_CHAR)
+	call mfree(rnotes, TY_CHAR)
+	# return final pointer
+	return(pm)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+.in -4
+.sp
+SEE ALSO
+.in4
+dec_plhead, disp_plhead.

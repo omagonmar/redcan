@@ -1,0 +1,44 @@
+\O=NOAO/IRAF V2.10EXPORT sao_pros@host-19.softconf.near.net Tue 16:08:31 03-Nov-92
+\T=xterm
+\G=xtermr
+clear\n
+\{%5000
+
+        [An SAOimage window MUST be active for this demo]
+\}
+xray\n
+xplot\n
+xspatial\n
+detect\n
+cd\sout_demo$\n
+\{%5000
+
+        [Display M31 image]
+\}
+xdisp\s("in_demo$m31.qp[bl=10]",\n
+frame=1,\serase=yes,\sborder_erase=no,\sselect_frame=yes,\sfill=no,\szscale\
+    =no,\n
+contrast=0.25,\szrange=yes,\snsample_line=512,\sxcenter=0.5,\sycenter=0.5,\n
+xsize=1.,\sysize=1.,\sxmag=1.,\symag=1.,\sorder=0,\sz1=0.,\sz2=30.,\sztrans\
+    ="linear",\n
+lutfile="")\n
+\n
+\{%5000
+
+        [Run the "detmkreg" task]
+
+        THE OUTPUT REGION FILE WILL BE IN:
+
+	"/home/sao_pros/demos/outdata/m31cell12.reg"
+
+        READ THIS REGION FILE INTO SAOIMAGE (include full pathname)
+\}\n
+detmkreg\s("in_demo$m31.qp[bl=10]",\n
+"in_demo$m31_ruf.tab",\s"in_demo$m31_pos.tab",\s"none",\s"m31cell12.reg",\n
+\sdisplay=1,\sclobber=yes)\n
+\n
+bye\n
+bye\n
+bye\n
+bye\n
+stty\sclear\slogin\n

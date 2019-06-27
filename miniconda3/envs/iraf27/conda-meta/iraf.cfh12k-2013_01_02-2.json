@@ -1,0 +1,293 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR",
+    "iraf.mscred"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.cfh12k-2013_01_02-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.cfh12k-post-link.sh",
+    "bin/.iraf.cfh12k-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/cfh12k/README",
+    "iraf_extern/cfh12k/bin",
+    "iraf_extern/cfh12k/build_log",
+    "iraf_extern/cfh12k/cfh12k.cl",
+    "iraf_extern/cfh12k/cfh12k.hd",
+    "iraf_extern/cfh12k/cfh12k.men",
+    "iraf_extern/cfh12k/cfh12k.par",
+    "iraf_extern/cfh12k/conda_build.sh",
+    "iraf_extern/cfh12k/doc/hdrcfh12k.hlp",
+    "iraf_extern/cfh12k/doc/installation.hlp",
+    "iraf_extern/cfh12k/doc/setcfh12k.hlp",
+    "iraf_extern/cfh12k/help_log",
+    "iraf_extern/cfh12k/lib/_package.hd",
+    "iraf_extern/cfh12k/lib/apropos.db",
+    "iraf_extern/cfh12k/lib/db/Rwcs.db",
+    "iraf_extern/cfh12k/lib/db/cfh12k.dat",
+    "iraf_extern/cfh12k/lib/db/setcfh12k.cl",
+    "iraf_extern/cfh12k/lib/helpdb.mip",
+    "iraf_extern/cfh12k/lib/mkpkg.inc",
+    "iraf_extern/cfh12k/lib/root.hd",
+    "iraf_extern/cfh12k/lib/rootpackage.hd",
+    "iraf_extern/cfh12k/lib/zzsetenv.def",
+    "iraf_extern/cfh12k/src/Revisions",
+    "iraf_extern/cfh12k/src/hdrcfh12k.cl",
+    "iraf_extern/cfh12k/src/setcfh12k.cl",
+    "iraf_extern/cfh12k/ur_extern.pkg",
+    "iraf_extern/cfh12k/ur_mkpkg_cmd",
+    "iraf_extern/cfh12k/ur_mkpkg_patterns"
+  ],
+  "fn": "iraf.cfh12k-2013_01_02-2.tar.bz2",
+  "license": "IRAF MIT/X11 variant",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.cfh12k-2013_01_02-2",
+    "type": 1
+  },
+  "md5": "749023ebdfd6e773503854809bd3d385",
+  "name": "iraf.cfh12k",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.cfh12k-2013_01_02-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.cfh12k-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "afb6ce3a6291ae31d53fb243599ab52a9b877e4f0f7fb7e9cc95fd22db51cfec",
+        "sha256_in_prefix": "afb6ce3a6291ae31d53fb243599ab52a9b877e4f0f7fb7e9cc95fd22db51cfec",
+        "size_in_bytes": 114
+      },
+      {
+        "_path": "bin/.iraf.cfh12k-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "06a750f5c43bbe1aaa4994a7f18f0e0f31f02da796f789716f6b305d7dfe5625",
+        "sha256_in_prefix": "06a750f5c43bbe1aaa4994a7f18f0e0f31f02da796f789716f6b305d7dfe5625",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "sha256_in_prefix": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "sha256_in_prefix": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/cfh12k/README",
+        "path_type": "hardlink",
+        "sha256": "258fdcb12b843bae3fe2f1fc2ae33ae0a354cc7ed1ff0bb3a006408c390be9a4",
+        "sha256_in_prefix": "258fdcb12b843bae3fe2f1fc2ae33ae0a354cc7ed1ff0bb3a006408c390be9a4",
+        "size_in_bytes": 4392
+      },
+      {
+        "_path": "iraf_extern/cfh12k/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/cfh12k/build_log",
+        "path_type": "hardlink",
+        "sha256": "0f7115570c6a5034625b2e742185e37068e9bd677b5bf14cc11cc816d3506617",
+        "sha256_in_prefix": "0f7115570c6a5034625b2e742185e37068e9bd677b5bf14cc11cc816d3506617",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "iraf_extern/cfh12k/cfh12k.cl",
+        "path_type": "hardlink",
+        "sha256": "591d5ab7f02a20da64416ba993e6bc81beef729dec392c66c33e1f809174c5f5",
+        "sha256_in_prefix": "591d5ab7f02a20da64416ba993e6bc81beef729dec392c66c33e1f809174c5f5",
+        "size_in_bytes": 234
+      },
+      {
+        "_path": "iraf_extern/cfh12k/cfh12k.hd",
+        "path_type": "hardlink",
+        "sha256": "4bdf3a461005dfc77911337fe4ff3900f1a1fb30b1aa69d5cff9ebfda65e0181",
+        "sha256_in_prefix": "4bdf3a461005dfc77911337fe4ff3900f1a1fb30b1aa69d5cff9ebfda65e0181",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "iraf_extern/cfh12k/cfh12k.men",
+        "path_type": "hardlink",
+        "sha256": "ef00c011b492e687eea9b5df16c2946ba938e2fead3ca3e8957614b9e2c3ce34",
+        "sha256_in_prefix": "ef00c011b492e687eea9b5df16c2946ba938e2fead3ca3e8957614b9e2c3ce34",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "iraf_extern/cfh12k/cfh12k.par",
+        "path_type": "hardlink",
+        "sha256": "e144e75b96bcd930c8b23af8ddb13d3c76c5b3051468c4e2d316398c5e556ea5",
+        "sha256_in_prefix": "e144e75b96bcd930c8b23af8ddb13d3c76c5b3051468c4e2d316398c5e556ea5",
+        "size_in_bytes": 75
+      },
+      {
+        "_path": "iraf_extern/cfh12k/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "d0db9fa3cde2412d9662696f28b36fcf5d93a80856ed365f2d9ed37c52dd2129",
+        "sha256_in_prefix": "84e8bb0263a8c0cdd7595984cd25513c2d62f376bc3a20c0c943d37c54db7027",
+        "size_in_bytes": 2400
+      },
+      {
+        "_path": "iraf_extern/cfh12k/doc/hdrcfh12k.hlp",
+        "path_type": "hardlink",
+        "sha256": "6fd174d1dcd73b2eb08fab157d7bd0d70af8612cc89c2d72f614c14560469c68",
+        "sha256_in_prefix": "6fd174d1dcd73b2eb08fab157d7bd0d70af8612cc89c2d72f614c14560469c68",
+        "size_in_bytes": 3101
+      },
+      {
+        "_path": "iraf_extern/cfh12k/doc/installation.hlp",
+        "path_type": "hardlink",
+        "sha256": "de637bbfe90bbf357624b8bcd7319bfb93237841e94c092fca85385f6ce22bf6",
+        "sha256_in_prefix": "de637bbfe90bbf357624b8bcd7319bfb93237841e94c092fca85385f6ce22bf6",
+        "size_in_bytes": 4110
+      },
+      {
+        "_path": "iraf_extern/cfh12k/doc/setcfh12k.hlp",
+        "path_type": "hardlink",
+        "sha256": "2546f20f6acf84bca259538330b11acc4bcd4db5c2de3eafca6c61f2a4bf5d7c",
+        "sha256_in_prefix": "2546f20f6acf84bca259538330b11acc4bcd4db5c2de3eafca6c61f2a4bf5d7c",
+        "size_in_bytes": 1032
+      },
+      {
+        "_path": "iraf_extern/cfh12k/help_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "60c8c259c0ac61d002ebd907c55b3b8997eb3b9522c043e09b0364b6c6af7133",
+        "sha256_in_prefix": "ab35a3b73bb504e65a65ef56bb983858559bad49be8ca125929c242f720a8177",
+        "size_in_bytes": 944
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/_package.hd",
+        "path_type": "hardlink",
+        "sha256": "50c2a90c74044d313a30ee7a84f8ecc9174bc5ea317ab746c47d033bf865fe45",
+        "sha256_in_prefix": "50c2a90c74044d313a30ee7a84f8ecc9174bc5ea317ab746c47d033bf865fe45",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/apropos.db",
+        "path_type": "hardlink",
+        "sha256": "1574bf30656eeb2a4bfb3b9baacced0c7cdf8a84726b90bffc64334c4759bc4d",
+        "sha256_in_prefix": "1574bf30656eeb2a4bfb3b9baacced0c7cdf8a84726b90bffc64334c4759bc4d",
+        "size_in_bytes": 125
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/db/Rwcs.db",
+        "path_type": "hardlink",
+        "sha256": "de4a93d2d202774a81cc92cba90b0d1d2de4e3a5014e36d6d214ae8d8606c3e2",
+        "sha256_in_prefix": "de4a93d2d202774a81cc92cba90b0d1d2de4e3a5014e36d6d214ae8d8606c3e2",
+        "size_in_bytes": 18451
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/db/cfh12k.dat",
+        "path_type": "hardlink",
+        "sha256": "c2294c7e7ce4a6ccbde03cf429a8f5703d15846666bd73c4f40d57c1e5a5f1b6",
+        "sha256_in_prefix": "c2294c7e7ce4a6ccbde03cf429a8f5703d15846666bd73c4f40d57c1e5a5f1b6",
+        "size_in_bytes": 1536
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/db/setcfh12k.cl",
+        "path_type": "hardlink",
+        "sha256": "9517ad76d3f053d20ce1985f64d0ab1242e27ae959bc554ccd181d766c6f72d3",
+        "sha256_in_prefix": "9517ad76d3f053d20ce1985f64d0ab1242e27ae959bc554ccd181d766c6f72d3",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/helpdb.mip",
+        "path_type": "hardlink",
+        "sha256": "7965467ca047ca93775a47d7d2c095f2e36a73aeea7444bfa904258db5210a76",
+        "sha256_in_prefix": "7965467ca047ca93775a47d7d2c095f2e36a73aeea7444bfa904258db5210a76",
+        "size_in_bytes": 2968
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "32c7bb0d4ff82ad205fd313f0f320958e0c00610fc8b92963bdc95db985b6d41",
+        "sha256_in_prefix": "32c7bb0d4ff82ad205fd313f0f320958e0c00610fc8b92963bdc95db985b6d41",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/root.hd",
+        "path_type": "hardlink",
+        "sha256": "2b202a566ba66efa7e402408c7a66ba18a57cf717aff4a60572e26e46689bf2c",
+        "sha256_in_prefix": "2b202a566ba66efa7e402408c7a66ba18a57cf717aff4a60572e26e46689bf2c",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/rootpackage.hd",
+        "path_type": "hardlink",
+        "sha256": "a826dc4275294ff777045cb897f5f0cc3ddc50374e0464e45f3e1175bf034b4e",
+        "sha256_in_prefix": "a826dc4275294ff777045cb897f5f0cc3ddc50374e0464e45f3e1175bf034b4e",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "iraf_extern/cfh12k/lib/zzsetenv.def",
+        "path_type": "hardlink",
+        "sha256": "92f19d5488d312f68e1e5440bfc44f29e397db219cc0b5bcdcf9387f2256fd0f",
+        "sha256_in_prefix": "92f19d5488d312f68e1e5440bfc44f29e397db219cc0b5bcdcf9387f2256fd0f",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "iraf_extern/cfh12k/src/Revisions",
+        "path_type": "hardlink",
+        "sha256": "8373b6d65f78d0d89679f5edffbc33813298f11fc57b403a5eb74f35ade7942f",
+        "sha256_in_prefix": "8373b6d65f78d0d89679f5edffbc33813298f11fc57b403a5eb74f35ade7942f",
+        "size_in_bytes": 314
+      },
+      {
+        "_path": "iraf_extern/cfh12k/src/hdrcfh12k.cl",
+        "path_type": "hardlink",
+        "sha256": "10cf47f92d28c6cdce33ed32b9f52d8af6aca33081a07dca6c3804b48bfbad5e",
+        "sha256_in_prefix": "10cf47f92d28c6cdce33ed32b9f52d8af6aca33081a07dca6c3804b48bfbad5e",
+        "size_in_bytes": 3600
+      },
+      {
+        "_path": "iraf_extern/cfh12k/src/setcfh12k.cl",
+        "path_type": "hardlink",
+        "sha256": "f17c7b9564ab2275ef14720267e29d4518db86220a8e962a8c35006a658ef9f4",
+        "sha256_in_prefix": "f17c7b9564ab2275ef14720267e29d4518db86220a8e962a8c35006a658ef9f4",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "iraf_extern/cfh12k/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "656b273963a337b568381847b96b511b11ae5d4b3457893cb5794eeaace97002",
+        "sha256_in_prefix": "656b273963a337b568381847b96b511b11ae5d4b3457893cb5794eeaace97002",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "iraf_extern/cfh12k/ur_mkpkg_cmd",
+        "path_type": "hardlink",
+        "sha256": "a4d4d868c1f5a049981cc5662beafa9aed7b4b571277e0cbefcf9d00c46b5dda",
+        "sha256_in_prefix": "a4d4d868c1f5a049981cc5662beafa9aed7b4b571277e0cbefcf9d00c46b5dda",
+        "size_in_bytes": 22
+      },
+      {
+        "_path": "iraf_extern/cfh12k/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "d0876cf9a63a5afa5d1e2def9d4c98511f973a6e71b123be1d901ea4a7378448",
+        "sha256_in_prefix": "d0876cf9a63a5afa5d1e2def9d4c98511f973a6e71b123be1d901ea4a7378448",
+        "size_in_bytes": 16
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 24044,
+  "subdir": "linux-64",
+  "timestamp": 1553890382632,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.cfh12k-2013_01_02-2.tar.bz2",
+  "version": "2013_01_02"
+}

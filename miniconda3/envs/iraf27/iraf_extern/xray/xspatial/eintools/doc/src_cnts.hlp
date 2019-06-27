@@ -1,0 +1,266 @@
+#$Header: /home/pros/xray/xspatial/eintools/doc/RCS/src_cnts.hlp,v 11.0 1997/11/06 16:30:39 prosb Exp $
+#$Log: src_cnts.hlp,v $
+#Revision 11.0  1997/11/06 16:30:39  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:48:17  prosb
+#General Release 2.4
+#
+#Revision 1.2  1994/08/15  11:27:27  dvs
+#Help file for src_cnts
+#
+.help src_cnts Jul94 xray.xspatial.eintools
+.ih
+NAME
+src_cnts -- Find number of counts in an Einstein IPC QPOE file attributable 
+to sources using an Einstein Level One algorithm.
+.ih
+USAGE
+src_cnts qpoefile srcfile expfile pi_band
+.ih
+DESCRIPTION
+The task \fIsrc_cnts\fR will read in the positions of sources from a table 
+and calculate 
+the number of counts in an image attributable to these sources.  The
+algorithm used is 
+based on one in the Einstein Level One program xdetect/remove_l_sources.f.
+
+The calculation of counts for a particular source is as follows:
+
+.nf
+                                (bkgd counts)*(source area)  
+cts= CCC * {  (total counts) - ---------------------------   }
+                                       (bkgd area)
+.fi
+
+Here,  CCC is the circle composite correction, obtained by
+multiplying the circle mirror scattering correction by the circle
+point response correction.  These constants depend on the PI band: if
+the input band includes hard PI values, we use the hard CMSC and CPRC values;
+otherwise, we use the soft values.  (These values come from the
+Level One processing file IPC.PF.)
+
+The total and background counts are obtained by finding the counts
+within a circle (of radius src_rad) and an annulus (with radii bkgd_ann_in
+and bkgd_ann_out) around the source.
+
+We use the input exposure mask to calculate the source and background
+areas. This corrects for possible spatial variations in source or
+background exposures.
+
+If a source is determined to have negative counts, it is not added to
+the total.  
+
+This routine does not account for duplicate or overlapping sources.
+
+.ih
+PARAMETERS
+.ls qpoefile = ""          prompt = input QPOE file [root.qp]
+
+The input qpoe file name.  The extension ".qp" will be added to the
+file if there is no extension.
+
+.le
+.ls srcfile = ""	   prompt = input source table
+
+The table of sources, in physical coordinates.  The only requirements for 
+this table is that the
+columns containing the x and y coordinates for each source be labelled
+"X" and "Y".
+The output of \fIldetect\fR would be appropriate, as would the source
+tables from the Einstein unscreened CDROM.
+
+.le
+.ls expfile = ""	   prompt = input exposure PL mask [root_exp.pl]
+
+This is expected to be an exposure  mask for the input QPOE file,
+such as one produced by the \fIexp_make\fR task. 
+
+.le
+.ls pi_band = "all"	   prompt = PI band
+
+The PI band to use when generating source counts for the QPOE file. 
+This can be any of "all", "soft", "hard", "broad", or some range of
+values, such as "1:5" or "4:6,12:14".  The bands correspond to the
+following ranges:  soft=2:4, hard=5:10, broad=2:10, all=0:15.  The
+bands can be abbreviated ("s", "h", etc.).
+
+.le
+.ls (src_cts = "") [double]
+
+This is the output parameter.  After the task is run, this parameter
+will contain the total number of source counts found in the QPOE file.
+
+.le
+.ls (br_edge_filt = "detx=287:738,dety=287:738") [string]
+
+The bright edge filter to be applied to the QPOE file.  The default
+corresponds to the standard "screened" area (3/4 degrees), and will
+screen out the bright edges in unscreened data.  If you
+modify this filter, be sure to also modify the br_edge_reg parameter
+in any other tasks run in \fIeintools\fR.
+
+.le
+.ls (src_rad = 22.5) [double]
+
+Source radius (in pixels).  This is the size of the source circle
+to be used around each source.  The default value (22.5 pixels) is
+the standard radius used in the Einstein Level One processing system.
+
+.le
+.ls (bkgd_ann_in = 37.5) [double]
+
+Inner radius of background annulus.  This is used to generate 
+background counts for each image. The default value (37.5 pixels) is
+the standard radius used in the Einstein Level One processing system.
+
+
+.le
+.ls (bkgd_ann_out = 45.0) [double]
+
+Outer radius of background annulus.  This is used to generate 
+background counts for each image. The default value (45.0 pixels) is
+the standard radius used in the Einstein Level One processing system.
+
+
+.le
+.ls (soft_cmsc = 1.09) [double]
+
+Circle mirror scattering correction for Einstein soft band.  The
+value comes from Einstein Level One Processing file IPC.PF.
+
+.le
+.ls (soft_cprc = 1.09) [double]
+
+Circle point response correction for Einstein soft band.   The
+value comes from Einstein Level One Processing file IPC.PF.
+
+.le
+.ls (hard_cmsc = 1.14) [double]
+
+Circle mirror scattering correction for Einstein hard band.  The
+value comes from Einstein Level One Processing file IPC.PF.
+
+.le
+.ls (hard_cprc = 1.00) [double]
+
+Circle point response correction for Einstein hard band.   The
+value comes from Einstein Level One Processing file IPC.PF.
+
+
+.le
+.ls (display = 1) [int]
+
+The display level.  A setting of 0 should output no display (besides warnings), 
+while settings above 3 are only useful for debugging.
+
+.le
+
+.ih
+SOURCE TABLE
+
+There are several methods of creating a source table for this task.
+
+The easiest method is to display the QPOE file, find the sources
+visually, then use \fItcreate\fR to create a table with these values.
+The column definitions must include columns "x" and "y" of type
+"r" or "d".  
+
+The Einstein unscreened CDROM includes source tables which could be
+used as input.  If one uses \fIstrfits\fR on the source detection
+(".sd") FITS file, the resulting EINCPTS table will include every source
+detected by the Level One Processing algorithm.  Use \fItselect\fR to select
+the appropriate rows from this table.  For instance, the Level One
+processing runs this source counting algorithm only on those sources
+found with the LDETECT method and in the appropriate band.  This 
+method has the limitation that it will only use sources found in
+the original, screened image.
+ 
+Lastly, one can use the \fIldetect\fR task in the \fIdetect\fR package
+to find the sources in the current QPOE file.  The output table
+(root_pos.tab) is in the correct format for this task.
+
+.ih
+EXAMPLES
+
+1. Use \fIsrc_cnts\fR to find the number of counts in an Einstein IPC
+image with user-specified source list.
+.nf
+ei> tcreate
+name of table to be created: snr_src.tab
+name of file containing column descriptions (STDIN): 
+name of file containing data (STDIN): 
+Give column definitions (name, datatype, print format, units)
+ ... then newline & EOF to finish.
+x r
+y r
+
+Give table data ... then newline & EOF to finish.
+512.0 504.0
+
+ei> exp_make
+input QPOE file [root.qp]: xdata$snr.qp
+output exposure file [root_exp.pl] (.): 
+
+Created constant aspect table ./snr_cat.tab with 1 row(s).
+
+Created exposure file ./snr_exp.pl.
+
+ei> src_cnts
+input QPOE file [root.qp]: xdata$snr.qp
+input source table: snr_src.tab
+input exposure PL mask [root_exp.pl] (.): 
+PI band (all): broad
+
+Found source counts of image to be 3691.25.
+
+.fi
+
+
+2. Use \fIsrc_cnts\fR to find the number of counts due to sources
+listed in the source detection file from an Einstein unscreened file.
+The requested sources are screened for those in the broad band
+detected with the LDETECT method.
+
+.nf
+ei> tselect
+Input tables: EINCPTS.tab
+Output tables: src.tab
+Expression used for selection: METHOD="L" && BAND="B"
+
+ei> exp_make
+input QPOE file [root.qp]: i196.qp
+output exposure file [root_exp.pl] (.): 
+
+Created constant aspect table i196_cat.tab with 14 row(s).
+
+Created exposure file ./i196_exp.pl.
+ei> src_cnts
+input QPOE file [root.qp]: i196.qp
+input source table: src.tab
+input exposure PL mask [root_exp.pl] (.): 
+PI range (all): broad
+
+Found source counts of image to be 63.18.
+
+.fi
+
+
+.ih
+TIME REQUIREMENTS
+This task takes under 5 seconds on a Sparc for a source file with
+one source.  It takes about 30 seconds for a source file with 14 sources.
+
+.ih
+SEE ALSO
+See \fIexp_make\fR for details on generating Einstein exposure maps.
+
+See \fIrbkmap_make\fR to see how this task is used to generate rotated
+background maps. 
+
+See \fItcreate\fR for more details on creating tables from standard
+input or from a text file.
+
+See \fIldetect\fR for details on generating a list of detected sources.
+
+.endhelp

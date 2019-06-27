@@ -1,0 +1,50 @@
+#$Header: /home/pros/xray/xspectral/RCS/bal_plot.par,v 11.0 1997/11/06 16:43:37 prosb Exp $
+#$Log: bal_plot.par,v $
+#Revision 11.0  1997/11/06 16:43:37  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:27:33  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:27:43  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:58:54  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:46:15  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:47:03  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:25:43  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:52:38  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/12  14:38:21  prosb
+#jso - change for pset implementation
+#
+#Revision 2.0  91/03/06  22:54:35  pros
+#General Release 1.0
+#
+# BAL plotting task parameters       
+
+pkgpars,pset,h,"",,,Spectral package parameters
+dataset_number,i,a,1,1,,"data set number" 
+plot_title,s,h,"BAL histogram",,,plot title
+x_axis_title,s,h,"BAL",,,x axis title
+y_axis_title,s,h,"percent",,,y axis title
+listout,b,h,no,,,List instead of plot histogram
+device,s,h,"stdgraph",,,output graphics device
+cursor,*gcur,h,"",,,Graphics cursor input
+
+#  BAL table information
+#BAL_file,s,h,)_.BAL_file,,,Name of BAL histogram data file
+#tables_BAL_steps,i,h,)_.tables_BAL_steps,,,Number of BAL tables
+#tables_start_BAL,r,h,)_.tables_start_BAL,,,Starting BAL value in tables
+#tables_BAL_increment,r,h,)_.tables_BAL_increment,,,BAL increment between tables
+#BAL_epsilon,r,h,)_.BAL_epsilon,,,Allowed epsilon from table BAL
+

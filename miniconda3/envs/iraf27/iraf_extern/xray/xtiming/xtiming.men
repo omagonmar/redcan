@@ -1,0 +1,18 @@
+        chiplot  - plot a chi-square table (output of period)
+        fft      - compute fast fourier transform on table or qpoe data
+        fftplot  - plot a fft table (output of fft)
+        fldplot  - plot a fld table (output of fold)
+        fold     - fold time data on a period and compute statistics
+        ftpplot  - plot a ftp table (output of fft)
+        ksplot   - plot observed & model cdf's and their difference 
+                   (output of vartst)
+        ltcplot  - plot a ltc table (output of ltcurv)
+        ltcurv   - compute count rates of binned source and bkgd
+        period   - determine the period using epoch folding
+        qpphase  - Generate a QPOE file, adding a new element attribute - phase
+        timcor   - calculate ROSAT timing corrections ( SC/UT/BARYCENTER)
+        timfilter- write qpoe time interval filters to an ascii file 
+        timplot  - strip plot of table format data
+        timprint - display timing table data
+        timsort  - create a time-sorted qpoe file for timing analysis
+        vartst   - non-parametric statistical tests for source variability

@@ -1,0 +1,79 @@
+                                                                1987 June 23
+
+     This note describes the file format for SDAS tables.  There are four
+sections to a table:
+
+(1)  a size-information record which gives the number of rows, etc
+(2)  optional user-parameter records
+(3)  a record for each column that describes the column
+(4)  the table data
+
+
+1.   The size-information record is 12 integers in length.  Only the first
+nine are used at the moment, and these have the following meanings:
+
+  1  The number of user parameters that have been written to the table.
+  2  The maximum number of user parameters for which space has been allocated.
+  3  The number of rows that have been written to the table.
+  4  The allocated number of rows (relevant only for a column-ordered table).
+  5  The number of columns that have been defined.
+  6  The maximum number of column descriptors for which space has been
+        allocated.
+  7  The length of the row that is used by columns that have been defined;
+        unit = SZ_CHAR (= two bytes).
+  8  The allocated row length; unit = SZ_CHAR.  This is relevant only for
+        a row-ordered table.
+  9  Table type:  11 implies row-ordered; 12 implies column-ordered.
+
+
+2.  The user parameters are FITS-like records for storing information such
+as comments or numerical values.  They are not used by the table routines
+at all.  There need not be any user parameters, and there need not be any
+space allocated for them; that is, words one and two of the size-information
+record may be zero.  Each user-parameter record is eighty bytes in length and
+contains the following:
+
+bytes                   description
+-----                   -----------
+ 1-8    Keyword; from one to eight characters padded on the right with blanks.
+        All letters will be in upper case.
+  9     Data type; a single lower-case letter:  t, b, i, r, d indicating a
+        type of text, Boolean, integer, real, or double-precision respectively.
+        The data type has little real meaning since the value is ASCII.
+10-80   The value, a left-justified ASCII string terminated by an ASCII null
+        and followed by garbage.  Boolean true and false are represented by
+        one and zero respectively.
+
+
+3.  There is a column descriptor for each column that has been defined.  Each
+column-descriptor record has a length of 16 integer words and contains the
+following:
+
+ word                   description
+ ----                   -----------
+   1    The column number.
+   2    The offset from the start of the row; unit = SZ_CHAR (= two bytes).
+        This is the sum of the widths of all previous columns, or zero for
+        the first column.
+   3    The width of the current column; unit = SZ_CHAR.  The width will be
+        an integral multiple of the size of a real variable (four bytes).
+   4    The data type:
+                6 = single-precision real
+                7 = double-precision real
+                4 = integer
+                1 = Boolean
+                2 = character string; this may also be -n for char*n
+  5-9   The column name, up to 19 characters left-justified, terminated by an
+        ASCII null and followed by garbage.  Upper and lower case are allowed.
+ 10-14  The units, up to 19 characters terminated by an ASCII null and
+        followed by garbage.
+ 15-16  The format for printing the column, terminated by an ASCII null and
+        followed by garbage.  This is an SPP-style format without the leading %.
+
+
+4.  The table data may be either row-ordered or column-ordered.  Integer and
+single- and double-precision reals are stored in VMS format.  Boolean true
+and false are stored as integer one and zero respectively.  For character
+data type, each element will be terminated with an ASCII null if there is
+room for the null; if an element fills the entire column width (a multiple
+of four bytes) then the null will not be present.

@@ -1,0 +1,18 @@
+rm -f readline.o vi_mode.o funmap.o keymaps.o parens.o search.o rltty.o complete.o bind.o isearch.o display.o signals.o util.o kill.o undo.o macro.o input.o callback.o terminal.o text.o nls.o misc.o compat.o xmalloc.o history.o histexpand.o histfile.o histsearch.o shell.o mbutil.o tilde.o libreadline.a libhistory.a
+rm -f readline readline.exe
+( cd shlib && make  clean )
+make[1]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/pkg/ecl/readline/shlib'
+rm -f readline.so vi_mode.so funmap.so keymaps.so parens.so search.so rltty.so complete.so bind.so isearch.so display.so signals.so util.so kill.so undo.so macro.so input.so callback.so terminal.so text.so nls.so misc.so xmalloc.so history.so histexpand.so histfile.so histsearch.so shell.so mbutil.so tilde.so compat.so libreadline.so.5.0 libhistory.so.5.0
+make[1]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/pkg/ecl/readline/shlib'
+( cd doc && make  clean )
+make[1]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/pkg/ecl/readline/doc'
+rm -f *.aux *.bak *.cp *.fn *.ky *.log *.pg *.toc *.tp *.vr *.cps \
+	      *.pgs *.bt *.bts *.rw *.rws *.fns *.kys *.tps *.vrs *.o \
+	      core *.core
+make[1]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/pkg/ecl/readline/doc'
+( cd examples && make  clean )
+make[1]: Entering directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/pkg/ecl/readline/examples'
+rm -f fileman.o rltest.o rl.o rlcat.o rlversion.o histexamp.o
+rm -f fileman rltest rl rlcat rlversion histexamp  *.exe
+rm -f rlfe.o rlfe
+make[1]: Leaving directory `/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/pkg/ecl/readline/examples'

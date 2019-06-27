@@ -1,0 +1,91 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/atomicwrites-1.3.0-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/installed-files.txt",
+    "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/atomicwrites/__init__.py",
+    "lib/python2.7/site-packages/atomicwrites/__init__.pyc"
+  ],
+  "fn": "atomicwrites-1.3.0-py27_1.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/atomicwrites-1.3.0-py27_1",
+    "type": 1
+  },
+  "md5": "2d3d1c263ace8370396666d6c05cad50",
+  "name": "atomicwrites",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/atomicwrites-1.3.0-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "a3cb4097b804df97fef72f9c535f28f0e8983fcd99e0707239f61f8a7ab4e7df",
+        "sha256_in_prefix": "a3cb4097b804df97fef72f9c535f28f0e8983fcd99e0707239f61f8a7ab4e7df",
+        "size_in_bytes": 6530
+      },
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "e70a4e66729a5606151fc6caae62989b22701c836a9fbf1f9176763041c16959",
+        "sha256_in_prefix": "e70a4e66729a5606151fc6caae62989b22701c836a9fbf1f9176763041c16959",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/installed-files.txt",
+        "path_type": "hardlink",
+        "sha256": "42650d2b7d9dffb8c55f03d3c7665a82c9bc31ff5798b27bb9037e6b85f233ae",
+        "sha256_in_prefix": "42650d2b7d9dffb8c55f03d3c7665a82c9bc31ff5798b27bb9037e6b85f233ae",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites-1.3.0-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "92ceb8cca55492b97666bacfd38e82b32b5795219ff202c6f887285e93727a87",
+        "sha256_in_prefix": "92ceb8cca55492b97666bacfd38e82b32b5795219ff202c6f887285e93727a87",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d340daa5d41bd38fa4efd2998f3cdfc2723543c9dfb221794cf79572a6c6570d",
+        "sha256_in_prefix": "d340daa5d41bd38fa4efd2998f3cdfc2723543c9dfb221794cf79572a6c6570d",
+        "size_in_bytes": 6562
+      },
+      {
+        "_path": "lib/python2.7/site-packages/atomicwrites/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "e081bcdfec9c0872ca6ddc95cf2ff0a0d263ad9a484e41d9fd2422ab7f56d0bf",
+        "sha256_in_prefix": "e081bcdfec9c0872ca6ddc95cf2ff0a0d263ad9a484e41d9fd2422ab7f56d0bf",
+        "size_in_bytes": 7905
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 12966,
+  "subdir": "linux-64",
+  "timestamp": 1553289194852,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/atomicwrites-1.3.0-py27_1.tar.bz2",
+  "version": "1.3.0"
+}

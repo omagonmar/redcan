@@ -1,0 +1,4 @@
+    miclean - Remove various types of pattern noise in Gemini mid-IR data
+      mipql - Stokes parameters and polarization vectors for Michelle
+      mipsf - Measure FWHM and Strehl value in Gemini mid-IR data
+  mistdflux - In-band flux density of mid-IR standard (Michelle/T-ReCS)

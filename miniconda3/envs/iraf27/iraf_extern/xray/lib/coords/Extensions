@@ -1,0 +1,20 @@
+
+The Precess Library contains the following extension to f77
+
+	Un-numbered DO loop structures
+	Lower case input characters
+	Identifiers of longer than 6 characters
+	Some variables are declared after DATA initializations
+
+	Non-Standard Intrinsic functions
+
+		DCOSD
+		DSIND
+		DACOSD
+		COSD
+		SIND
+		ACOSD
+
+		DFLOAT
+
+		

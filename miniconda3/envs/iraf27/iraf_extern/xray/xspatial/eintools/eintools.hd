@@ -1,0 +1,57 @@
+# $Header: /home/pros/xray/xspatial/eintools/RCS/eintools.hd,v 11.0 1997/11/06 16:31:03 prosb Exp $
+# $Log: eintools.hd,v $
+# Revision 11.0  1997/11/06 16:31:03  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:47:46  prosb
+# General Release 2.4
+#
+#Revision 1.2  1994/09/07  09:54:48  dvs
+#Added missing commas to .hd file.
+#
+#Revision 1.1  94/08/04  13:43:37  dvs
+#Initial revision
+#
+#
+# Help directory for the EINTOOLS package
+
+$doc		= "./doc/"
+$script		= "./"
+$be_ds_rotate	= "./be_ds_rotate/"
+$bkfac_make	= "./bkfac_make/"
+$calc_factors	= "./calc_factors/"
+$cat2exp	= "./cat2exp/"
+$cat_make	= "./cat_make/"
+$src_cnts	= "./src_cnts/"
+
+using_eintools		hlp = doc$using_eintools.hlp
+explain_cat		hlp = doc$explain_cat.hlp
+explain_bkfac		hlp = doc$explain_bkfac.hlp
+making_be_ds_maps	hlp = doc$making_be_ds_maps.hlp
+
+be_ds_rotate	hlp = doc$be_ds_rotate.hlp,
+		src = be_ds_rotate$be_ds_rotate.x
+
+bkfac_make	hlp = doc$bkfac_make.hlp,
+		src = bkfac_make$bkfac_make.x
+
+calc_factors	hlp = doc$calc_factors.hlp,
+		src = calc_factors$calc_factors.x
+
+cat2exp		hlp = doc$cat2exp.hlp,
+		src = cat2exp$cat2exp.x
+
+cat_make	hlp = doc$cat_make.hlp,
+		src = cat_make$cat_make.x
+
+src_cnts	hlp = doc$src_cnts.hlp,
+		src = src_cnts$src_cnts.x
+
+exp_make	hlp = doc$exp_make.hlp,
+		src = script$exp_make.cl
+
+rbkmap_make	hlp = doc$rbkmap_make.hlp,
+		src = script$rbkmap_make.cl
+
+
+

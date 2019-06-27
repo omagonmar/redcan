@@ -1,0 +1,101 @@
+#$Header: /home/pros/xray/lib/doc/RCS/is_qphead.hlp,v 11.0 1997/11/06 16:22:59 prosb Exp $
+#$Log: is_qphead.hlp,v $
+#Revision 11.0  1997/11/06 16:22:59  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:00  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:51  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:40  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:09  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:53  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:57  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:49  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:35  pros
+#General Release 1.0
+#
+.help is_qphead May90 PROS_Library
+NAME
+.in 4
+is_qphead - determine if a standard PROS header exists in a qpoe file
+.sp
+.in -4
+USAGE
+.in 4
+got = is_qphead(qp)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	qp		pointer		qp handle
+
+Return Arguments:
+	got		int		YES if a PROS header is available
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function is_qphead checks the existence of
+several parameters in the qpoe file to
+determine if the file contains a "standard" PROS header.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how to get, put, and display the X-ray
+header information in a qpoe file.
+.in 8
+.nf
+procedure foo()
+
+char	qpname[SZ_FNAME]	# qpoe name
+int	display			# display level
+pointer qp			# qpoe handle
+pointer	qphead			# qpoe header pointer
+pointer	qp_open()		# open a qpoe file
+int	clgeti()		# get cl param
+int	is_qphead()		# get qpoe header
+
+begin
+	call clgstr("qpoe", qpname, SZ_FNAME)
+	display = clgeti("display")
+	# open the qpoe file
+	qp = qp_open(qpname, READ_ONLY, NULL)
+	# read in the X-ray header information
+	if( is_qphead(qp) == YES ){
+	    call get_qphead(qp, qphead)
+	    ... (manipulate the header) ...
+	    # write out the header information
+	    call put_qphead(qp, qphead)
+	    # display, if necessary
+	    if( display >0 ){
+		call disp_qphead(qphead)
+	    }
+	}
+	# close the file
+	call qp_close(qp)
+end
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+qpoe.h (which defines the struct into which qpoe header is read)

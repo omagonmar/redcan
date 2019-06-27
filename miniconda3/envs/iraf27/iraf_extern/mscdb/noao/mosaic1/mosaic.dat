@@ -1,0 +1,34 @@
+imagetyp	obstype
+amp		imageid
+subset		filter
+
+'dome flat'	flat
+'sky flat'	flat
+'projector flat'	flat
+
+detim1          detsec  [1:2044,1:4096]
+detim2          detsec  [2045:4088,1:4096]
+detim3          detsec  [4089:6132,1:4096]
+detim4          detsec  [6133:8176,1:4096]
+detim5          detsec  [1:2044,4097:8192]
+detim6          detsec  [2045:4088,4097:8192]
+detim7          detsec  [4089:6132,4097:8192]
+detim8          detsec  [6133:8176,4097:8192]
+
+datim1          datasec [1:2044,1:4096]
+datim2          datasec [1:2044,1:4096]
+datim3          datasec [1:2044,1:4096]
+datim4          datasec [1:2044,1:4096]
+datim5          datasec [65:2108,1:4096]
+datim6          datasec [65:2108,1:4096]
+datim7          datasec [65:2108,1:4096]
+datim8          datasec [65:2108,1:4096]
+
+trmim1		trim	64
+trmim2		trim	64
+trmim3		trim	64
+trmim4		trim	64
+trmim5		trim	0
+trmim6		trim	0
+trmim7		trim	0
+trmim8		trim	0

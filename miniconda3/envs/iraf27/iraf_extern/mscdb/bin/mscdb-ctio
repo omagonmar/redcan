@@ -1,0 +1,5 @@
+# Create tar file for Mosaic II.
+
+cd ../..
+tar cfXX - mscdb/bin/kpnocaldirs mscdb/bin/wiyncaldirs mscdb |\
+gzip > mscdb-ctio.tar.gz

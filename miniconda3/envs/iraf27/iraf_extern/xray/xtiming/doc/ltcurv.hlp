@@ -1,0 +1,228 @@
+#$Header: /home/pros/xray/xtiming/doc/RCS/ltcurv.hlp,v 11.0 1997/11/06 16:44:13 prosb Exp $
+#$Log: ltcurv.hlp,v $
+#Revision 11.0  1997/11/06 16:44:13  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:33:10  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:38:51  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:00:08  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/21  12:25:02  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:55:55  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:48:04  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/21  17:36:18  janet
+#krm updates for fds.
+#
+#Revision 4.0  92/04/27  15:31:30  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.3  92/04/24  12:07:52  janet
+#revised for apr 92 release.
+#
+#Revision 3.2  92/03/19  18:10:22  janet
+#corrected USAGE line.
+#
+#..
+#
+#Revision 3.1  91/09/25  11:00:24  janet
+#updated with example 3 using time filter.  Added feature eith iraf 2.9.3.
+#
+#Revision 3.0  91/08/02  02:00:41  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/03  14:35:13  prosb
+#xray.xtiming   7/3/91
+#
+#Revision 2.0  91/03/06  22:53:01  pros
+#General Release 1.0
+#
+.help ltcurv Dec93 xray.xtiming
+.ih
+NAME
+ltcurv - Bin photons and compute the count rates of timing data.
+.ih
+USAGE
+ltcurv source_file background_file ltcurv_file bins bin_length
+.ih
+DESCRIPTION
+\fILTCURV\fR bins source and background photons into specified time
+intervals and computes a count rate for each bin.
+
+The good time intervals for the data are read from the source QPOE
+file, and are used in computing the time exposure of each bin.  The
+precursor task to this is TIMSORT which selects and sorts a QPOE
+file in time order.  TIMPRINT will display the output and LTCPLOT will 
+plot output table data.  Corrections are not yet being applied for 
+Fractional Spatial Exposure.
+.ih
+PARAMETERS
+.ls source_file =		prompt = Input Source Timing File
+
+Required input in time ordered QPOE format.  The file is created by
+running TIMSORT on a specified source region.  The file may be
+specified by supplying the rootname and a "_sti.qp" extension will be
+appended by the task before looking for the file.  For example input
+"i6757" is interpreted as "i6757_sti.qp".
+.le
+.ls background_f = "NONE"	prompt = Input Background Timing File
+
+Optional input in time ordered QPOE format.  The file is created by
+running TIMSORT on a specified background region.  The file may be
+specified by supplying the rootname and a "_bti.qp" extension will be
+appended by the task before looking for the file.  For example input
+"i6757" becomes "i6757_bti.qp".  Enter "none" to skip this parameter.
+.le
+.ls ltcurv_file =		prompt = root name for output file
+.nf
+				[root_ltc.tab]
+.fi
+
+Required Output filename.  The file is written in table format.  The
+file may be specified by supplying the rootname and a "_ltc.tab"
+extension will be appended.  For example input "i6757" becomes
+"i6757_ltc.tab".  Each row in the table represents 1 bin of folded
+data. The column titles and definitions are as follows:
+.nf
+
+	time ----------- start of the bin in space-craft time units
+	ctrt ----------- count rate
+	err ------------ count rate error
+        exp ------------ exposure
+	src ------------ source counts
+        bkgd ----------- background counts
+	net ------------ net counts (src - bkgd)
+	neterr --------- net error
+
+.fi
+A table file header is also written.  It consists of parameters copied
+from the input QPOE file and parameters recorded from running this
+task.
+.le
+.ls bins =			prompt = Number of Bins (0 for bin length)
+
+The number of data bins.  Input 0 if specification of bin length is
+preferred.
+.le
+.ls bin_length =		prompt = Bin Length in Secs
+
+The length of a bin in seconds.  If bins is 0, specification of bin_length
+is required.
+.le
+.ls (display = 1) [int]
+
+The display level.  A few of the parameters and computed time
+intervals are displayed to the user for those who like to see that
+things are happening.  Input 0 for no output and 5 for the maximum
+level.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the table file can be overwritten
+if it already exists.
+.le
+.ls (get_gintvs = yes) [boolean]
+
+Boolean flag specifying whether to filter the input events through the  
+good time intervals stored in the QPOE file.  It is useful to turn this 
+parameter off when analyzing lab data where good intervals are not applicable 
+or in a file without the intervals.
+.le
+.ls (bk_norm_fact = 1.) [real]
+
+Background Normalization factor.  This is an extra fudge factor that can 
+be used to adjust the ratio of source to background area.
+.le
+.ih
+EXAMPLES
+.nf
+Type `help timfilter` and `help timsort` for information concerning
+input files.
+
+.fi
+1. Make a light curve from the time sorted source QPOE file
+snr_sti.qp. No background is used and the number of bins is 100.  The
+data is written to snr_ltc.tab.
+.nf
+
+	xt> ltcurv
+	Input Source Timing File: snr_sti.qp
+	Input Background Timing File (NONE): 
+	Output Table File: snr
+	Number of Bins: 100
+
+	Creating ltcurv file: snr_ltc.tab
+
+.fi
+2. Make a light curve from the time sorted source QPOE file
+snr_sti.qp and background file snr_bti.qp.  In this example the
+number of bins is skipped by specifying 0, and the length of each bin
+is 0.5 seconds.  The data is written to my_ltc.tab.
+.nf
+
+	xt> ltcurv
+	Input Source Timing File: snr
+	Input Background Timing File (NONE): snr
+	root name for output file [root_ltc.tab]: my_ltc.tab
+	Number of Bins (0 for bin length): 0
+	Bin Length: 0.5
+	
+	Creating ltcurv file: my_ltc.tab
+
+.fi
+3. Make a light curve from the time sorted source QPOE file snr_sti.qp 
+with a time filter for the third good time interval.   In this example
+the number of bins is skipped by specifying 0, and the length of each bin
+is 0.5 seconds.  The data is written to snr3_ltc.tab.
+.nf
+
+	xt> ltcurv
+	Input Source Timing File: snr_sti.qp[time=(79492486.63:79494689.51)]
+	Input Background Timing File (NONE): 
+	root name for output file [root_ltc.tab]: snr3
+	Number of Bins (0 for bin length): 0
+	Bin Length: 0.5
+
+	Creating ltcurv file: snr3_ltc.tab
+
+.fi
+4. As in example 3 above only in command line format.
+.nf
+	
+	xt> ltcurv "snr_sti.qp[time=(79492486.63:79494689.51)]" "none" 
+	"snr3" 0 0.5 clobber+
+	
+	Creating ltcurv file: snr3_ltc.tab
+
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS 
+No Corrections are being applied for Fractional Spatial Exposure.
+.ih
+SEE ALSO
+Documentation on errors (\fIhelp explain_errors\fR) 
+for a description of the error calculations implemented in PROS.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on QPOE filtering (\fIhelp qpoe\fR) for a description of
+the QPOE filter user interface.
+ 
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

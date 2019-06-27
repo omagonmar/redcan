@@ -1,0 +1,368 @@
+{
+  "build": "1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR",
+    "iraf-os-libs"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf-x11-2.0-1",
+  "features": "",
+  "files": [
+    "bin/ism_wcspix.e",
+    "bin/obmsh",
+    "bin/resize",
+    "bin/xgterm",
+    "bin/ximtool",
+    "include/cdl.h",
+    "include/cdlftn.inc",
+    "iraf/dev/dev/imtoolcmap/README",
+    "iraf/dev/dev/imtoolcmap/alex.lut",
+    "iraf/dev/dev/imtoolcmap/backgr.lut",
+    "iraf/dev/dev/imtoolcmap/blulut.lut",
+    "iraf/dev/dev/imtoolcmap/flag.lut",
+    "iraf/dev/dev/imtoolcmap/idl11.lut",
+    "iraf/dev/dev/imtoolcmap/idl12.lut",
+    "iraf/dev/dev/imtoolcmap/idl14.lut",
+    "iraf/dev/dev/imtoolcmap/idl15.lut",
+    "iraf/dev/dev/imtoolcmap/idl2.lut",
+    "iraf/dev/dev/imtoolcmap/idl4.lut",
+    "iraf/dev/dev/imtoolcmap/idl5.lut",
+    "iraf/dev/dev/imtoolcmap/idl6.lut",
+    "iraf/dev/dev/imtoolcmap/ikon.lut",
+    "iraf/dev/dev/imtoolcmap/isophot.lut",
+    "iraf/dev/dev/imtoolcmap/light.lut",
+    "iraf/dev/dev/imtoolcmap/lnspiral.lut",
+    "iraf/dev/dev/imtoolcmap/manycol.lut",
+    "iraf/dev/dev/imtoolcmap/mousse.lut",
+    "iraf/dev/dev/imtoolcmap/pastel.lut",
+    "iraf/dev/dev/imtoolcmap/pseudo1.lut",
+    "iraf/dev/dev/imtoolcmap/pseudo2.lut",
+    "iraf/dev/dev/imtoolcmap/rainbow.lut",
+    "iraf/dev/dev/imtoolcmap/rainbow1.lut",
+    "iraf/dev/dev/imtoolcmap/rainbow2.lut",
+    "iraf/dev/dev/imtoolcmap/rainbow3.lut",
+    "iraf/dev/dev/imtoolcmap/rainbow4.lut",
+    "iraf/dev/dev/imtoolcmap/random.lut",
+    "iraf/dev/dev/imtoolcmap/random1.lut",
+    "iraf/dev/dev/imtoolcmap/random2.lut",
+    "iraf/dev/dev/imtoolcmap/random3.lut",
+    "iraf/dev/dev/imtoolcmap/random4.lut",
+    "iraf/dev/dev/imtoolcmap/real.lut",
+    "iraf/dev/dev/imtoolcmap/smooth.lut",
+    "iraf/dev/dev/imtoolcmap/staircase.lut",
+    "iraf/dev/dev/imtoolcmap/stairs8.lut",
+    "iraf/dev/dev/imtoolcmap/stairs9.lut",
+    "iraf/dev/dev/imtoolcmap/standard.lut",
+    "lib/cdlspp.h",
+    "lib/libcdl.a",
+    "share/doc/x11iraf/cdlref.ps",
+    "share/doc/x11iraf/licenses/copyright_gifio",
+    "share/doc/x11iraf/licenses/copyright_mosaic",
+    "share/doc/x11iraf/licenses/copyright_quant",
+    "share/doc/x11iraf/licenses/copyright_romanovski",
+    "share/doc/x11iraf/licenses/copyright_slate",
+    "share/doc/x11iraf/licenses/copyright_toronto",
+    "share/doc/x11iraf/licenses/copyright_x11",
+    "share/doc/x11iraf/licenses/copyright_x11_2",
+    "share/doc/x11iraf/licenses/grep_copyright",
+    "share/doc/x11iraf/licenses/note",
+    "share/doc/x11iraf/obmsh.ps",
+    "share/doc/x11iraf/vximtool.ps",
+    "share/doc/x11iraf/xgterm.ps",
+    "share/doc/x11iraf/ximtool.ps",
+    "share/doc/x11iraf/xtapemon.ps",
+    "share/man/man1/resize.1",
+    "share/man/man1/xgterm.1",
+    "share/man/man1/ximtool.1"
+  ],
+  "fn": "iraf-x11-2.0-1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf-x11-2.0-1",
+    "type": 1
+  },
+  "md5": "060a32ca6f7b0573b7598d2572096fb6",
+  "name": "iraf-x11",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf-x11-2.0-1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/ism_wcspix.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf-x11_1483662413412/_b_env_place",
+        "sha256_in_prefix": "de3f55f49d76fcf3f1df658136220aedac843cf5ab892152a138963d1fd2dea0"
+      },
+      {
+        "_path": "bin/obmsh",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "bin/resize",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "bin/xgterm",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "bin/ximtool",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "include/cdl.h",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "include/cdlftn.inc",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/README",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/alex.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/backgr.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/blulut.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/flag.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl11.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl12.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl14.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl15.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl2.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl4.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl5.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/idl6.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/ikon.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/isophot.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/light.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/lnspiral.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/manycol.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/mousse.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/pastel.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/pseudo1.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/pseudo2.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/rainbow.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/rainbow1.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/rainbow2.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/rainbow3.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/rainbow4.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/random.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/random1.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/random2.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/random3.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/random4.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/real.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/smooth.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/staircase.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/stairs8.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/stairs9.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "iraf/dev/dev/imtoolcmap/standard.lut",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "lib/cdlspp.h",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "lib/libcdl.a",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/cdlref.ps",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_gifio",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_mosaic",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_quant",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_romanovski",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_slate",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_toronto",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_x11",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/copyright_x11_2",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/grep_copyright",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/licenses/note",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/obmsh.ps",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/vximtool.ps",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/xgterm.ps",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/ximtool.ps",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/doc/x11iraf/xtapemon.ps",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/man/man1/resize.1",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/man/man1/xgterm.1",
+        "path_type": "hardlink"
+      },
+      {
+        "_path": "share/man/man1/ximtool.1",
+        "path_type": "hardlink"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 3042717,
+  "subdir": "linux-64",
+  "timestamp": 1483662529000,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf-x11-2.0-1.tar.bz2",
+  "version": "2.0"
+}

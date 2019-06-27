@@ -1,0 +1,375 @@
+#
+.help tvimcontour Jan92 xray.xplot
+.ih
+NAME
+tvimcontour -- Load and overlay Contours of an image onto the Tv 
+               display device.
+.ih
+USAGE
+tvimcontour image units clevel map_type 
+.ih
+DESCRIPTION
+
+        \fITvimcontour\fR loads an Image and Overlays Contours onto the 
+tv display device.  The algorithm that determines the skymap is WCSLAB 
+code developed at ST that supports the world coordinate system (WCS) 
+of the image.  The task will display full images, image sections, and 
+rotated images with accuracy.  Images displayed on the tv device must 
+be square to have contours overlay the displayed image correctly.  The 
+image display and contours fill the display device, thus if the image 
+is smaller or larger than the Saoimage/imtool device, the task interpolates 
+the image to fit the display window.
+
+	Choice of Skymap or Pixel map displays are available.  Other options 
+include syntax for specification of contour levels, placement choice for 
+labels, and grid or tic options for marking the lines of ra/dec or pixels.  
+The graph is displayed on the Image display (imdr|y|b|g|w), and a list of 
+source positions can be input and marked on the plot with the user's choice 
+of markers.
+
+	Reference the imcontour and Display Help files for a more 
+detailed description.
+
+.ih
+PARAMETERS
+.ls image = ""          prompt = IRAF image filename
+
+The image filename.  This can be any valid IRAF image file, including
+X-ray QPOE files.  WCS Parameters are read from the header, but they
+do not exist the default is to draw a pixel map.
+.le
+.ls map_type = "sky"		prompt = Grid type (sky|pixel)
+
+Grid Type for Contour map.  Your Choices are:
+.nf
+
+        sky --- draws a scaled sky map with labeled  lines of RA
+                & DEC
+
+        pixel - draws a scaled grid with labeled pixels
+.fi
+.le
+.ls units = "peak"      prompt = Units (pixel|peak|sigma)
+
+The units in which to interpret the contour levels.  Your choices are:
+.nf
+
+        pixel - levels expressed as photon values
+
+        peak -- levels expressed as  a percentage  of  the peak.
+                The  peak   is the value   of  maximum number of
+                photons at a pixel position in the image.
+
+        sigma - levels  expressed in  photons  as  stored  in an
+                array that is  the result of  dividing the input
+                image by an associated error array.  If an error
+                element has 0 stored the result is 0.
+                (see the task \fIerrcreate\fR for info on how
+                 to generate the error array)
+
+
+.fi
+.le
+.ls clevel = "log 5 100 5"         prompt = Contour Levels
+
+The contour levels at which to graph the image.  When display is set to 2,
+the list of computed levels is displayed.
+
+Syntax "min max steps" creates steps+1 contour levels from min to max
+inclusive.  Current maximum number of contour levels is defined as 100.
+
+Your choices are:
+.nf
+
+        (l1, l2, l3, l4) ------ list of levels
+                ex. (5.0, 10.5, 20.)
+
+        linear min max steps -- linear function - abbreviation 'lin'
+                                                  also accepted.
+                ex. linear 1 100 10
+
+        log min max steps ----- log function - if log 0 is specified
+                                it is replaced with log 1 and a Warning
+                                message is displayed.
+                ex. log 1 100 10
+
+        filename -------------- Ascii  file  name  with  contour
+                                levels  listed  in one  of the 3
+                                forms above.
+                ex. clevel.lis
+
+.fi
+* All numeric values are read as reals.  Decimal points, commas, and
+parenthesis are not required.  
+.le
+.ls error_image  = ""   prompt = IRAF error image filename
+
+The error image filename is optional.  This can be any valid IRAF image
+file, including X-ray QPOE file.  It must be the same size as the image
+file.  The image is divided by the square root of the error file and the
+result is contoured. 
+(Errors are stored as the errors squared in PROS and can be generated with 
+the \fIERRCREATE\fR task).  If an error array element has 0 stored the result 
+is 0.
+
+.le
+.ls gcolor = "r"   prompt = Contour Graphics Overlay Color - r|y|b|g|w|B
+
+The color of the Contour lines and labels to be displayed on the image 
+device.  Input r=red, y=yellow, b=blue, g=green, w=white, B=black.
+.le
+.ls (wlpars="") [pset]
+
+The  name  of  the parameter set (pset) containing the labelling parameters 
+which controls the detailed  appearance  of  the  sky plot.  See  
+'help  wlpars'  for  a  detailed  description of the parameters.  If NULL 
+("") then the params set in wlpars will  be used.   The  parameters  are 
+customized in one place and used by both imcontour & tvimcontour  along  
+with  other  sky  labelling tasks.
+.le
+.ls (display = 2) [int]
+
+The range is 0-5.  The higher the number more verbose the display.  Will
+print a few header params with low value, higher value is for debugging.
+Display level 2 has a moderate number of useful prints that informs the
+user of progress and interpretation of parameters.
+.le
+.ls (dotitle = yes) [boolean]
+
+\fIYes\fR labels the contour plot with a title.  The title consists on an
+image title as it appears in the input file header, and the name of the
+plot file.  \fINo\fR skips this option.  This parameter is meant to aid
+the user in preparing plots for publication.
+.le
+.ls (dolegend = yes) [boolean]
+
+\fIYes\fR labels the contour plot with a legend.  The legend consists of a
+field center and contour level display drawn along the right border.  \fINo\fR
+indicates that no legend is plotted.  This option is meant to aid the
+user in preparing plots for publication.
+.le
+.ls (src_list = "none") [string]
+
+Optional Input Source List in table or Ascii format for marking source
+positions on the contour graph.  When display is 2, the list of positions
+and computed pixel positions are displayed.
+
+TABLE Format:  Name of a table file. Optional column names for right
+        ascension and declination. Ra/Dec Units in table are Degrees.
+
+.ls (racol = "ra") [string]
+
+Right Ascension Column Name in degrees
+
+.le
+.ls (deccol = "dec") [string]
+
+Declination Column Name in degrees
+
+.le
+.nf
+ASCII Format:  Input of 1 of 4 ascii list formats expected:
+
+1) A list of RA and DEC in 2 columns with colon delimeters:
+   (format: 2 columns - rh:rm:rss.s dh:dm:dss.s)
+
+        12:56:06.8    35:45:03.6
+        12:55:46.5    35:36:01.0
+
+2) A list of RA and DEC in 3 columns with colon delimeters:
+   (format: 3 columns - char_id rh:rm:rss.s dh:dm:dss.s)
+
+        src_1 12:56:06.8    35:45:03.6
+        src_2 12:55:46.5    35:36:01.0
+
+3) A list of RA and DEC in 6 columns with space delimters:
+   (format: 6 columns - rh rm rss.s dh dm dss.s)
+
+        12 56 06.8 35 45 03.6
+        12 55 46.5 35 36 1.0
+
+4) A list of RA and DEC in 7 columns with space delimters:
+   (format: 7 columns - char_id rh rm rss.s dh dm dss.s)
+
+        src_1 12 56 06.8 35 45 03.6
+        src_2 12 55 46.5 35 36 1.0
+.fi
+.le
+.ls (isystem = "") [string]
+
+   Input coordinate system for Source List above.  When default empty
+string is set the system of the input Image File is used.  This can be 
+overridden by specifying one of the systems below:
+.nf
+        [Equatorial] Jxxxx.xx
+                        -- FK5 system with Julian equinox.
+        [Equatorial] Bxxxx.xx[@xxxx.xx]
+                        -- FK4 system with Besselian equinox and
+                           optional Bessalian observation epoch.
+
+        Image_name      -- Pseudo system.  The sky system of the 
+			   specified image will be used for this 
+ 			   system.
+.fi
+.le
+.ls (src_mark = "+#")  [string]
+
+Source marker when src_list specified.  The following notation is
+interpreted:
+.nf
+        "<char>"        - mark source with specified character
+                          ex. "*" will mark sources with *'s
+        "#"             - mark source with a number
+                          ex. "#" will mark sources 1, 2, 3 ...
+        "<char>#"       - mark the source with a char and a number
+                          ex. "+#" will mark sources + 1, + 2, + 3 ...
+.fi
+.le
+.ls (pixgrid = "full") [string]
+
+Indicates grid choice.  Types available are:
+.nf
+
+        full - plot full grid
+        tics - plot tics marks along perimeter of plot
+        none - no grid or tics marks
+.fi
+.le
+.ls (pixlabels = "in") [string]
+
+Indicates where to place labels in relation to contour area.  Choices are:
+.nf
+
+        in --- label axes inside the contour area
+        none - no labels on plot
+.fi
+.le
+.ls (pixel_lines = 10) [int]
+
+Used if map_type = "pixel" (see above param).
+Estimated number of graphed pixel lines on the map in X & Y independently.
+Task chooses evenly spaced intervals near the input value, thus the actual
+number may be more or less than the parameter.
+.le
+.ls (labout = no)   [bool]
+Used if map_type = "sky" (see  above  param).   No labels the graph with  
+labels inside of the sky grid, Yes labels the graph outside of the grid 
+borders.  
+.le
+.ls (zrange = no)	 [bool]
+
+If set to yes, Map the full range of the image intensity to the full 
+range of the display.  Map between z1 and z2 below if zrange=no.
+.le
+.ls (z1=0.0, z2=30.0) [real]
+
+Minimum  and maximum image intensity to be mapped to the minimum and 
+maximum display levels. 
+.le
+.ls (ztrans = "linear")  [string]
+Transformation  of  the  image  intensity  levels to the display levels.  
+The choices are:
+.nf
+"linear"
+   Map the minimum and maximum image intensities linearly to the 
+   minimum and maximum display levels.
+
+"log"
+   Map  the  minimum  and maximum image intensities linearly to the 
+   range 1 to 1000, take the logrithm (base 10),  and  then map the 
+   logrithms to the display range.
+
+"none"
+   Apply no mapping of the image intensities (regardless of the 
+   values of zcale, zrange, z1, and z2).  For most image displays,  
+   values exceeding the maximum display value are truncated by masking 
+   the highest bits.  This corresponds to applying a modulus operation
+   to the intensity values and produces "wrap-around" in the display 
+   levels.
+
+ "user"
+   User supplies a look up table of intensities and their corresponding 
+   greyscale values.
+.fi
+.ih
+EXAMPLES
+.nf
+
+--------------------------------------------------------------------
+note:
+-----
+File rh110267_smo is used in examples below and was created by running 
+imsmooth on the qpoe file creating a 256x256 smoothed image:
+ 
+	imsmooth xdata$rh110267.qp[bl=32] 
+
+--------------------------------------------------------------------
+
+Running Tvimcontour with the Defaults:
+--------------------------------------
+
+cl> tvimcontour
+IRAF image filename: rh110267_smo
+Grid type (sky|pixel): sky
+Units (pixel|peak|sigma) (peak): 
+Contour Levels (log 5 100 5): 
+
+... First Displays and then Plots a Contour map of rh110267_smo at contour 
+levels computed based on the image peak at 75.7, 41.6, 22.8, 12.5, 6.8, 3.8,
+onto the Image Device.
+... if pixel were specified instead of sky for Grid type then an identical
+    plot with pixel labels will be displayed.
+--------------------------------------------------------------------
+
+Overlaying contours on an existing plot with different colors:
+--------------------------------------------------------------
+
+First run tvimcontour once to figure out which contour levels should go 
+with which color.  Once that's done:
+   
+cl> tvimcontour rh110267_smo sky pixel "75.0,45.0,25.0" gcolor="w"
+cl> imcontour rh110267_smo sky pixel "7.0,4.0" graph_device=imdB perim- labout-
+cl> gflush
+
+--------------------------------------------------------------------
+For detailed explanation and other examples reference the IMCONTOUR 
+Help File.
+
+--------------------------------------------------------------------
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+When inputing a value less than 1, such as .5, an input of "0.5" is
+accepted while ".5" is not.  This is an IRAF bug.
+
+One can precess from 1950 to 2000 (coordinates in 1950, image in 2000)
+but the reverse does not work properly (image in 1950 [i.e. an Einstein
+image], coordinates in 2000).
+.ih
+SEE ALSO
+See the documentation on ERRCREATE(\fIhelp ERRCREATE\fR)
+for a description of the 'error' arrays and also the
+\fIhelp explain_errors\fR for a more complete discussion of errors
+in PROS.
+
+See the documentation on imcontour (\fIhelp imcontour\fR)
+for a description of the Imcontour Task.
+
+See the documentation on gridpars (\fIhelp gridpars\fR)
+for a description of the available WCS grid labeling parameters.
+
+See the documentation on skypix (\fIhelp skypix\fR)
+for a description of a coordinate system conversion task.
+
+See the documentation on Imsmooth (\fIhelp imsmooth\fR)
+for a description of the Imsmooth task.
+
+See the documentation on Imcompress (\fIhelp imcompress\fR)
+for a description of the Imcompress task.
+
+See the documentation on Qpoe filtering (\fIhelp qpoe\fR)
+for a description of the spatial filter user interface.
+.endhelp
+

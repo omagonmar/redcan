@@ -1,0 +1,71 @@
+#$Header: /pros/xray/xspatial/immd/RCS/mkpkg,v 11.2 2000/01/04 22:28:12 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.2  2000/01/04 22:28:12  prosb
+#copy from pros_2.5 (or pros_2.5_p1)
+#
+#Revision 9.0  1995/11/16  18:52:44  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:15:44  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:36:39  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:21:22  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/04/07  13:37:48  orszak
+#jso - changes to add lorentzian model.
+#
+#Revision 5.0  92/10/29  21:34:54  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:43:11  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.1  92/04/24  14:59:13  mo
+#Initial revision
+#
+#Revision 3.1  92/01/30  08:59:34  mo
+#MC	1/30/92		Remove the 'update' option that prevented
+#
+#			a library creation
+#
+#Revision 3.0  91/08/02  01:28:21  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  18:27:59  mo
+#MC	7/21/91		Update for package restructuring
+#
+#Revision 2.0  91/03/06  22:47:56  pros
+#General Release 1.0
+#
+# Make control package.
+ 
+$checkout libmd.a ../
+$update libmd.a
+$checkin libmd.a ../
+
+	
+libmd.a:
+	mdinit.x	mdset.h
+	mdparse.x	mdset.h	mdname.h
+	mdapply.x	mdset.h
+	mdnorm.x	mdset.h
+	mdboxcar.x
+	mdexpo.x
+	mdfile.x
+	mdgauss.x
+	mdhipass.x
+	mdimpulse.x
+	mdlorentz.x
+	mdking.x
+	mdmyfunc.x
+	mdnewcopy.x
+	mdpower.x
+	mdtophat.x
+	;
+
+
+$exit

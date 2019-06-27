@@ -1,0 +1,14 @@
+$checkout libpkg.a ..
+$checkout libpkg.a
+$checkin  libpkg.a ..
+$exit
+
+libpkg.a:
+	dcio.x		dispcor.h <error.h> <imhdr.h> <imset.h> <pkg/dttext.h>\
+			<smw.h> <units.h>
+	dctable.x	dctable.h <imhdr.h> <mach.h> <smw.h>
+	dispcor.x	<math/iminterp.h>
+	odropenp.x	<ctype.h>
+	t_dispcor.x	dctable.h dispcor.h <error.h> <imhdr.h> <imio.h>\
+			<mach.h> <mwset.h> <smw.h> <units.h>
+	;

@@ -1,0 +1,719 @@
+#!/bin/csh
+#
+
+########################################################################################################" >
+##	Purpose: Pipeline for data reduction of Imaging and spectroscopy of CanariCam data		##"
+##													##"
+##	Author: O. Gonzalez Martin (Instituto de Astrofisica de Canarias, Tenerife, Spain)		##"
+##	Staring date: Monday 20th of February 2011							##"
+##	Finished date: 6th of April (v1.0)								##"
+##													##"
+##			  redcan -h : Displays this help						##"
+##			  redcan -i : Interactive mode. It will aask for the inputs interactivelly	##"
+##			  redcan -d : Default mode. It will only ask for the input file interactivelly. ##"
+##					  For the others it will assume: 0 3 "[2, 10, 20, 30]"  	##'
+##	  Inputs:											##"
+##		  1. Infile:		  ASCII file with a list of all the observations		##"
+##													##"
+##		  2. Entry_point:	  Start point of the proccess					##"
+##													##"
+##					  # 0	  Indentification of files				##"
+##					  # 1	  Stacking						##"
+##					  # 2	  Wavelength calibration				##"
+##					  # 3	  Spectral extraction					##"
+##													##"
+##		  3. Method:		  Method of extraction for the target(s)			##"
+##													##"
+##					  # 0	  Fixed aperture					##"
+##					  # 1	  Width determined using the trace of the standard	##"
+##													##"
+##						  Note 1. The trace of the object determines		##"
+##							  the center of the extraction. 		##"
+##						  Note 2. The trace of the standard determines  	##"
+##							  the center and width used to extract  	##"
+##							  the standards.				##"
+##													##"
+##		  4. Target extension:		  Selection of the extension selected for 		##"
+##						  the target:						##"
+##													##"
+##					  # 0	  Point like source					##"
+##					  # 1	  Extended source					##"
+##					  # 2	  Interactive selection 				##"
+##													##"
+##						  Note 1. #2 is Usefull for more than one source 	##"
+##													##"
+##		  5. Radii:		  String of the form 2,5,10,20 with the number of pixels	##"
+##						  to make the spectral extraction			##'
+##													##"
+##													##"
+##		  6. Offsets:		  String of the form 2,5,10,20 with the number of pixels	##"
+##						 to extract the spectrum from the center of the source	##'
+##													##"
+##						  Note 1. Note than the pipeline allows 1 offset with  	##"
+##							several aperture radii of 1 aperture radii with ##"
+##							several offsets. 				##"
+##													##"
+##	  Example:	  Data process of a set of data contained in "infile.lst", from the initial	##'
+##					  point (0), determining a set of spectra (method 3)with	##'
+##					  a set of widths of "2.,10,20,30"				##'
+##													##'
+##				  redcan infile.lst 0 0 0  2,10,20,30 0 				##'
+##													##'
+########################################################################################################" 
+##
+#### Inputs:
+##
+set infile = $1
+set entry_point = $2
+set method = $3
+set target_ext = $4
+set radial_profile = $5
+set offset = $6
+set modify = $7
+
+(mkdir OUTPUTS)  >& /dev/null
+(mkdir PRODUCTS)  >& /dev/null
+(ln -sf ${HOME}/login.cl OUTPUTS/.)  >& /dev/null
+
+set infilen = `echo $infile | cut -f1 -d"."`
+set timenow = `date +%F" "%T`
+set timename = `date +%F"_"%T`
+set startdir = `pwd`
+
+##
+#### Definitions:
+##
+set procdir = ${REDCANDIR}
+set procmidir = ${procdir}/midir
+set diridl   = ${procdir}/IDLPRO
+set dirpython   = ${procdir}/PYPRO
+set dirshell   = ${procdir}/CSHELL
+set dircohen   = ${procdir}/COHEN
+set sigmas = 1.0
+set ncolapsing = 10
+set extracal = 'N'
+
+##### Changing CC file names
+
+
+##### Giving inputs
+#
+(rm -rf ${startdir}/PRODUCTS/Status_${infilen}.txt) >& /dev/null
+touch ${startdir}/PRODUCTS/Status_${infilen}.txt
+tail -f -n 10000 ${startdir}/PRODUCTS/Status_${infilen}.txt &
+csh ${dirshell}/InitialRedCan.csh $infile $entry_point $method $target_ext $radial_profile $offset $modify
+
+set infile = `cat init.lst | awk '{print $1}'`
+if $infile == "STOP" then
+	(rm -rf init.lst) >& /dev/null
+	goto endloop2
+else
+	set entry_point = `cat init.lst | awk '{print $2}'`
+	set method = `cat init.lst | awk '{print $3}'`
+	set target_ext = `cat init.lst | awk '{print $4}'`
+	set radial_profile = `cat init.lst | awk '{print $5}'`
+	set offset = `cat init.lst | awk '{print $6}'`
+	set skipflat = `cat init.lst | awk '{print $7}'`
+	set check_back = `cat init.lst | awk '{print $8}'`
+	set sigm_back = `cat init.lst | awk '{print $9}'`
+	(rm -rf init.lst) >& /dev/null
+endif
+#echo  $infile $entry_point $method $target_ext $radial_profile $offset  $skipflat $check_back $sigm_back
+rm -rf ${startdir}/PRODUCTS/Status_${infilen}.txt
+set infilen = `echo $infile | cut -f1 -d"."`
+
+echo " Processing list of files "${infile}": Started at "${timenow} >! ${startdir}/PRODUCTS/Status_${infilen}.txt
+tail -f -n 10000 ${startdir}/PRODUCTS/Status_${infilen}.txt &
+(gunzip S*fits.gz) >& /dev/null
+
+####  Selecting instrument : 
+set firstfile = `cat  ${infile} | head -1 | tail -1`
+set instrument = `gethead ${firstfile} INSTRUME | tail -1`
+echo "#######################"
+echo "###   "${instrument} 
+echo "#######################"
+if (${instrument}  != "TReCS") then 
+     set instrument = "CC"
+endif
+
+##
+#### STEPS:
+##
+if (${entry_point} == 0) then
+     goto loop0
+else if (${entry_point} == 1) then
+     goto loop1
+else if (${entry_point} == 2) then
+     goto loop2
+else if (${entry_point} == 3) then
+     goto loop3
+else if (${entry_point} == 4) then
+     goto loop4
+else if (${entry_point} == 5) then
+     goto loop5
+else if (${entry_point} == 6) then
+     goto loop6
+else if (${entry_point} == 7) then
+     goto loop7
+else
+     echo "ERROR"
+     echo "Entry point: "${entry_point}" not supported."
+     exit
+endif
+
+loop0:
+
+set firstline = `cat $infile | head -1 | cut -c1`
+if (${instrument} == "CC" && ${firstline} != "S") then
+	echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "**   Changing CC file names        **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	csh ${dirshell}/ChangeName.csh ${infile}
+        echo "New list: "
+	echo "--------  "
+	cat $infile
+endif 
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**   OBSCLASS Keyword           **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+set filenamei =  `cat $infile | head -1`
+set ObsclassSel = `gethead ${filenamei} OBSCLASS | tail -1 | awk '{print $1}'`
+if (${ObsclassSel} == "") then 
+	echo "OBSCLASS keyword NOT defined... changing to manual selection of files" >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+	set ObsclassSel = "NONE"
+else 
+	echo "OBSCLASS keyword defined... automatic selection of files" >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+endif
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**   Rejecting bad files           **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+cd ${startdir}/OUTPUTS
+(ln -s ${startdir}/S*fits ${startdir}/OUTPUTS/.)  >& /dev/null
+(rm -rf ${startdir}/new_${infile}) >& /dev/null
+touch  ${startdir}/new_${infile}
+(rm -rf ${startdir}/PRODUCTS/Check_${infilen}.txt) >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/Check2_${infilen}.txt) >& /dev/null
+touch  ${startdir}/PRODUCTS/Check_${infilen}.txt
+touch  ${startdir}/PRODUCTS/Check2_${infilen}.txt
+set count=`wc -l ${startdir}/${infile} | awk '{ print $1 }'`
+set i = `expr 1`
+while ( $i <= $count )
+	set filename = `cat ${startdir}/${infile} | head -${i} | tail -1 | awk '{print $1}'`
+	(rm -rf midir.log) >& /dev/null
+	python ${dirpython}/Checkfits.py   ${procmidir}/  ${filename} >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+	echo ${filename}"....   " `cat midir.log | tail -5 | head -1 | awk '{print $5}'` >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+	set checkResult =  `cat midir.log | tail -5 | head -1 | awk '{print $5}'`
+	echo ${filename}"   "${checkResult} >> ${startdir}/PRODUCTS/Check_${infilen}.txt
+	set compstat = `gethead ${filename} COMPSTAT | tail -1 | awk '{print $1}' | cut -c1-8`
+	echo ${checkResult}  ${compstat} ${i}
+	if (${compstat} != "COMPLETE") then
+#		if (${compstat} != "STARTING") then
+			set compstat = "FAILURE"
+#		else 
+#			set compstat = "COMPLETE" 
+#		endif	
+	endif
+	echo ${filename}"   "${compstat} >>  ${startdir}/PRODUCTS/Check2_${infilen}.txt	
+	if (${checkResult} == "SUCCESS") then
+		if (${compstat} == "COMPLETE") then
+			echo ${filename} >> ${startdir}/new_${infile}	
+		endif
+	endif
+	set i = `expr $i + 1`
+end
+cat ${infile}
+cat ${startdir}/PRODUCTS/Check2_${infilen}.txt	
+cat ${startdir}/PRODUCTS/Check_${infilen}.txt	
+echo "-----------------------" >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+echo "######  Removing files:" >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+echo "-----------------------" >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+cat  ${startdir}/PRODUCTS/Check2_${infilen}.txt >> ${startdir}/PRODUCTS/Check_${infilen}.txt 
+cat ${startdir}/PRODUCTS/Check_${infilen}.txt | grep FAILURE >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+echo "-----------------------" >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+cd ${startdir}
+(mv ${startdir}/${infile} ${startdir}/${infilen}_old.lst ) >& /dev/null
+(mv ${startdir}/new_${infile} ${startdir}/${infile} ) >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/Check2_${infilen}.txt) >& /dev/null
+
+loop1: 
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**   Identification of files       **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+if (${instrument} == "CC") then
+	python ${dirpython}/ObsidentifyC.py $infile $infilen 0 ${ObsclassSel} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo ".compile "${diridl}"/OrderC.pro" >! PRODUCTS/Order_tmp.pro
+	echo "ORDER, '"${infilen}"'" >> PRODUCTS/Order_tmp.pro
+	idl < PRODUCTS/Order_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	python ${dirpython}/ObsidentifyC.py PRODUCTS/ORD${infilen}.lst $infilen 1  ${ObsclassSel} >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+else
+	python ${dirpython}/Obsidentify.py $infile $infilen 0  ${ObsclassSel} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo ".compile "${diridl}"/Order.pro" >! PRODUCTS/Order_tmp.pro
+	echo "ORDER, '"${infilen}"'" >> PRODUCTS/Order_tmp.pro
+	idl < PRODUCTS/Order_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	python ${dirpython}/Obsidentify.py PRODUCTS/ORD${infilen}.lst $infilen 1  ${ObsclassSel} >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+endif	
+
+cd ${startdir}/OUTPUTS
+(rm -rf ${startdir}/OUTPUTS/b_*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/tb_*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/tmp*fits) >& /dev/null
+python ${dirpython}/BackAndPrepare.py ${procmidir}/ ${startdir}/PRODUCTS/ID4${infilen}.lst ${sigm_back} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+cd ${startdir}
+
+if (${ObsclassSel} != "NONE") then 
+	if (${skipflat} == "no") then 
+		echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo "**      Flatfield		         **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo ".compile "${diridl}"/Flatfield.pro" >! ${startdir}/PRODUCTS/Ffield_tmp.pro
+		echo 'Flatfield , "'${infilen} >> ${startdir}/PRODUCTS/Ffield_tmp.pro
+		idl <  ${startdir}/PRODUCTS/Ffield_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		cd ${startdir}/OUTPUTS
+		(rm -rf ${startdir}/OUTPUTS/tb_*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/atb_*fits) >& /dev/null
+		python ${dirpython}/Flatfield.py ${procmidir}/ ${startdir}/PRODUCTS/flats.txt ${check_back} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		cd ${startdir}
+		echo ".compile "${diridl}"/applyflat.pro" >! ${startdir}/PRODUCTS/FlatCorr_tmp.pro
+		echo ".compile "${diridl}"/FlatCorrect.pro" >> ${startdir}/PRODUCTS/FlatCorr_tmp.pro
+		echo 'FlatCorrect , skipflat="'${skipflat}'"' >> ${startdir}/PRODUCTS/FlatCorr_tmp.pro
+		idl <  ${startdir}/PRODUCTS/FlatCorr_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	else
+		(rm -rf ${startdir}/OUTPUTS/fltb_*fits ) >& /dev/null
+		set count=`wc -l ${startdir}/${infile} | awk '{ print $1 }'`
+		set i = `expr 1`
+		while ( $i <= $count )
+			set fileName = `cat ${startdir}/${infile} | head -${i} | tail -1 | awk '{print $1}'`
+			ln -s ${startdir}/${fileName} ${startdir}/OUTPUTS/fltb_${fileName}
+			set i = `expr $i + 1`
+		end
+	endif
+else 
+	(rm -rf ${startdir}/OUTPUTS/fltb_*fits ) >& /dev/null
+	set count=`wc -l ${startdir}/${infile} | awk '{ print $1 }'`
+	set i = `expr 1`
+	while ( $i <= $count )
+		set fileName = `cat ${startdir}/${infile} | head -${i} | tail -1 | awk '{print $1}'`
+		ln -s ${startdir}/${fileName} ${startdir}/OUTPUTS/fltb_${fileName}
+		set i = `expr $i + 1`
+	end
+endif
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Stacking		         **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+cd ${startdir}/OUTPUTS
+(rm -rf ${startdir}/OUTPUTS/tfltb*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/vtfltb*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/dvtfltb*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/cvtfltb*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/avtfltb*fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/mi*fits) >& /dev/null
+python ${dirpython}/Stacking_iraf.py ${procmidir}/ ${startdir}/${infile} ${check_back}  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+cd ${startdir}
+echo ".compile "${diridl}"/ReAgroup.pro" >! ${startdir}/PRODUCTS/ReAgr_tmp.pro
+echo 'ReAgroup, "'${startdir}'/PRODUCTS/ID4'${infilen}'.lst"' >> ${startdir}/PRODUCTS/ReAgr_tmp.pro
+idl <  ${startdir}/PRODUCTS/ReAgr_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+(rm -rf ${startdir}/OUTPUTS/fltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/tfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/vtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/vtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/avtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/dvtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/cvtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/mi*fits ) >& /dev/null
+
+if (${ObsclassSel} == "NONE") then 
+	echo " "  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo " "  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "WARNING! Go to PRODUCTS/id"${infilen}".lst to change it and select the kind of observations! OBSCLASS is not set as a keyword!"  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "WARNING! (Perhaps also read PRODUCTS/ID1"${infilen}".lst could help to complete the missed information)"  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo " "  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo " "  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	nedit PRODUCTS/id"${infilen}".lst  PRODUCTS/ID1"${infilen}".lst &
+	ds9 OUTPUTS/stck_*fits &
+	echo -n 'Include the information required (and check the rest with your log) and press ENTER:			       ' >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	set stopping = $<
+	echo ".compile "${diridl}"/OrderCC.pro" >! PRODUCTS/Order_tmp.pro
+	echo "ORDERCC, '"${infilen}"'" >> PRODUCTS/Order_tmp.pro
+	idl < PRODUCTS/Order_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+
+	if ($skipflat == "no") then
+		echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo "**      Flatfield		         **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo ".compile "${diridl}"/Flatfield.pro" >! ${startdir}/PRODUCTS/Ffield_tmp.pro
+		echo 'Flatfield , "'${infilen} >> ${startdir}/PRODUCTS/Ffield_tmp.pro
+		idl <  ${startdir}/PRODUCTS/Ffield_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		cd ${startdir}/OUTPUTS
+		(rm -rf ${startdir}/OUTPUTS/tb_*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/atb_*fits) >& /dev/null
+		python ${dirpython}/Flatfield.py ${procmidir}/ ${startdir}/PRODUCTS/flats.txt ${check_back} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		cd ${startdir}
+		echo ".compile "${diridl}"/applyflat.pro" >! ${startdir}/PRODUCTS/FlatCorr_tmp.pro
+		echo ".compile "${diridl}"/FlatCorrect.pro" >> ${startdir}/PRODUCTS/FlatCorr_tmp.pro
+		echo 'FlatCorrect , skipflat="'${skipflat}'"' >> ${startdir}/PRODUCTS/FlatCorr_tmp.pro
+		idl <  ${startdir}/PRODUCTS/FlatCorr_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		cd ${startdir}/OUTPUTS
+		(rm -rf ${startdir}/OUTPUTS/tfltb*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/vtfltb*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/dvtfltb*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/cvtfltb*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/avtfltb*fits) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/mi*fits) >& /dev/null
+		python ${dirpython}/Stacking_iraf.py ${procmidir}/ ${startdir}/${infile} ${check_back}  >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		cd ${startdir}
+		echo ".compile "${diridl}"/ReAgroup.pro" >! ${startdir}/PRODUCTS/ReAgr_tmp.pro
+		echo 'ReAgroup, "'${startdir}'/PRODUCTS/ID4'${infilen}'.lst"' >> ${startdir}/PRODUCTS/ReAgr_tmp.pro
+		idl <  ${startdir}/PRODUCTS/ReAgr_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		(rm -rf ${startdir}/OUTPUTS/fltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/tfltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/vtfltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/vtfltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/avtfltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/dvtfltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/cvtfltb_*fits ) >& /dev/null
+		(rm -rf ${startdir}/OUTPUTS/mi*fits ) >& /dev/null
+	endif
+endif
+(rm -rf ${startdir}/OUTPUTS/b_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/tb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/atb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/fltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/tfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/vtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/vtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/avtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/dvtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/cvtfltb_*fits ) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/mi*fits ) >& /dev/null
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Converting to ADUs/sec     **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo ".compile "${diridl}"/PerSec.pro" >! ${startdir}/PRODUCTS/PerSec_tmp.pro
+echo 'PerSec , "'${infilen}'" , "stck"' >> ${startdir}/PRODUCTS/PerSec_tmp.pro
+idl <  PRODUCTS/PerSec_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+
+loop2:
+
+echo "******************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**  Looking for different targets in the sample   **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "******************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+(rm -rf ${startdir}/PRODUCTS/diff_id.lst) >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/targets_${infilen}.lst) >& /dev/null
+touch ${startdir}/PRODUCTS/targets_${infilen}.lst
+cat ${startdir}/PRODUCTS/id${infilen}.lst  | grep  "TARGET" >! ${startdir}/PRODUCTS/diff_id.lst
+
+set count=`wc -l ${startdir}/PRODUCTS/diff_id.lst | awk '{ print $1 }'`
+set i = `expr 1`
+while ( $i <= $count )
+	set files = `cat ${startdir}/PRODUCTS/diff_id.lst | head -${i} | tail -1 | awk '{print $1}'`
+	set obj = `cat ${startdir}/PRODUCTS/ID1${infilen}.lst | grep ${files} | awk '{print $2}'`
+	set sub_names2 = `cat ${startdir}/PRODUCTS/targets_${infilen}.lst | grep ${obj} | head -1 | awk '{print $1}'`
+	if ("${obj}" != "${sub_names2}") then 
+		echo $obj >> ${startdir}/PRODUCTS/targets_${infilen}.lst
+	endif
+	set i = `expr $i + 1`
+end
+(rm -rf ${startdir}/PRODUCTS/diff_id.lst) >& /dev/null
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**   looking for redshifts         **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+set i = `expr 1`
+set count=`wc -l ${startdir}/PRODUCTS/targets_${infilen}.lst | awk '{ print $1 }'`
+(rm -rf ${startdir}/PRODUCTS/redshifts_${infilen}.lst  ) >& /dev/null
+if (! -e  ${startdir}/PRODUCTS/redshifts_${infilen}.lst ) then 
+touch  ${startdir}/PRODUCTS/redshifts_${infilen}.lst  
+while ( $i <= $count )
+	set name = `cat ${startdir}/PRODUCTS/targets_${infilen}.lst | head -${i} | tail -1 | awk '{print $1}'`
+	set aux = `python ${dirpython}/sgml2.py  $name | awk '{print $1}' `
+	if ( ${aux} != ${name}) then
+		set zvalue =  0.00000
+	else
+		set aux2 = `python ${dirpython}/sgml2.py  $name | awk '{print $2}' | cut -f1 -d"." `
+	 	if ( $aux2 < 0 ) then
+			set zvalue =  0.00000
+		else
+			set zvalue = `python ${dirpython}/sgml2.py  $name | awk '{print $2}' `
+		endif
+	endif
+	echo $name $zvalue >> ${startdir}/PRODUCTS/redshifts_${infilen}.lst  		
+	echo "Source  " $name " ===> z = "  $zvalue >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+	set i = `expr $i + 1`
+end
+endif
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Image flux Calibration	  **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+(rm -rf Cohen_coord.lst) >& /dev/null
+ln -s ${dircohen}/Cohen_coord.lst .
+echo ".compile "${diridl}"/spfilconvolution.pro" >! ${startdir}/PRODUCTS/MImFl_tmp.pro
+echo ".compile "${diridl}"/imagefluxcal.pro" >> ${startdir}/PRODUCTS/MImFl_tmp.pro
+echo ".compile "${diridl}"/MainImageFlux.pro" >> ${startdir}/PRODUCTS/MImFl_tmp.pro
+echo 'MainImageFlux , "'${infilen}'" , "stck", "'${dircohen}'"' >> ${startdir}/PRODUCTS/MImFl_tmp.pro
+idl <  ${startdir}/PRODUCTS/MImFl_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+cat PRODUCTS/id${infilen}.lst | awk '{print $3}' | grep "SPECTRUM" >! PRODUCTS/spec.lst
+set numSpec  =   `wc -l  PRODUCTS/spec.lst  | awk '{print $1}' `
+if (${numSpec}  <=  0) then
+	echo "STOP:   NO SPECTRAL FILES TO BE CALIBRATED"
+	(rm -rf PRODUCTS/spec.lst) >& /dev/null
+	goto endloop
+endif
+
+loop3:
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Computing slit losses      **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo ".compile "${diridl}"/slitlosses.pro" >! PRODUCTS/MSlit_tmp.pro
+echo ".compile "${diridl}"/MainSlitlosses.pro" >> PRODUCTS/MSlit_tmp.pro
+echo 'MainSlitlosses , "'${infilen}'" , "stck"' >> PRODUCTS/MSlit_tmp.pro
+idl <  PRODUCTS/MSlit_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+
+loop4:
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**    Wavelength calibration       **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+(rm -rf Spectrum_theor_N.dat) >& /dev/null
+(rm -rf Spectrum_theor_Q.dat) >& /dev/null
+echo $instrument
+if ($instrument == "CC") then
+	ln -s ${diridl}/Spectrum_theor_CC.dat  Spectrum_theor_N.dat  		#   for CC
+	ln -s ${diridl}/Spectrum_theor_CC_Q.dat  Spectrum_theor_Q.dat  		#   for CC
+	ln -s ${diridl}/Spectrum_theor_CC_poly.dat  Spectrum_theor_N_poly.dat  	#   for CC
+else
+	ln -s ${diridl}/Spectrum_theor_TRECS.dat  Spectrum_theor_N.dat  	#   for T-RECs
+	ln -s ${diridl}/Spectrum_theor_TRECS_Q.dat  Spectrum_theor_Q.dat  	#   for T-RECs
+endif	
+
+#############################    including poly_template! Spectrum_theor_CC_poly.dat
+echo ".compile "${diridl}"/WLcalib.pro" >! PRODUCTS/WLcalib_tmp.pro
+echo ".compile "${diridl}"/colorbar.pro" >> PRODUCTS/WLcalib_tmp.pro
+echo ".compile "${diridl}"/psinit.pro" >> PRODUCTS/WLcalib_tmp.pro
+echo ".compile "${diridl}"/psterm.pro" >> PRODUCTS/WLcalib_tmp.pro
+echo 'wlcalib , "'${infilen}'" , "stck", NCOLAPSING='${ncolapsing}', instrument="'${instrument}'"' >> PRODUCTS/WLcalib_tmp.pro
+echo "Running idl..."
+idl <   PRODUCTS/WLcalib_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+cat  PRODUCTS/texto.out
+(rm -rf  PRODUCTS/texto.out)  >& /dev/null
+
+if ($extracal == "Y") then
+    cd ${startdir}/OUTPUTS
+    (cp -rvfp ${dirpython}/theoric_lines.dat .)  >& /dev/null
+    (rm -rf  theoric_lines.dat)  >& /dev/null
+    (rm -rf  ref_list.dat)  >& /dev/null
+    (ln -s ${dirpython}/theoric_lines.dat .)  >& /dev/null
+    (ln -s ${dirpython}/ref_list.dat .)  >& /dev/null
+    (rm -rf pyraf)   >& /dev/null
+    (rm -rf database) >& /dev/null
+    (rm -rf ${startdir}/OUTPUTS/wpl*.fits) >& /dev/null
+    python ${dirpython}/WLtransform.py ${startdir}/PRODUCTS/AV_stck_${infilen}.dat >> ${startdir}/PRODUCTS/Status_${infilen}.txt 
+    echo ".compile "${diridl}"/ReAgroupGen.pro" >! ${startdir}/PRODUCTS/ReAgrG_tmp.pro
+    echo 'ReAgroupGen , "'${startdir}'/PRODUCTS/id'${infilen}'.lst","wpl","WL"  ' >> ${startdir}/PRODUCTS/ReAgrG_tmp.pro
+    idl <  ${startdir}/PRODUCTS/ReAgrG_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+    cd ${startdir}
+else 
+    echo ".compile "${diridl}"/WLtransform.pro" >! ${startdir}/PRODUCTS/WLtransform_tmp.pro
+    echo 'WLtransform , "'${infilen}'" ' >> ${startdir}/PRODUCTS/WLtransform_tmp.pro
+    idl <  ${startdir}/PRODUCTS/WLtransform_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+endif
+
+loop5:
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Trace determination        **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo ".compile "${diridl}"/mpfit.pro" >! PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/mpfitfun.pro" >> PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/mpfitpeak.pro" >> PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/WLtrace.pro" >> PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/MainTrace.pro" >> PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/colorbar.pro" >> PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/psinit.pro" >> PRODUCTS/Mtr_tmp.pro
+echo ".compile "${diridl}"/psterm.pro" >> PRODUCTS/Mtr_tmp.pro
+echo 'MainTrace, "'${infilen}'", "stck" , NCOLAPSING='${ncolapsing}', instrument="'${instrument}'"' >> PRODUCTS/Mtr_tmp.pro
+echo "Running idl..."
+idl <   PRODUCTS/Mtr_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+
+
+loop6:
+
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Spectral Extraction        **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+
+(rm -rf ${startdir}/PRODUCTS/Extension_${infilen}.lst) >& /dev/null
+touch ${startdir}/PRODUCTS/Extension_${infilen}.lst
+set count=`wc -l ${startdir}/PRODUCTS/targets_${infilen}.lst | awk '{ print $1 }'`
+if ($target_ext == 2) then
+	echo "******************************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "**    Interactive selection of extended source      **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	echo "******************************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	set i = `expr 1`
+	while ( $i <= $count )
+		set obj = `cat ${startdir}/PRODUCTS/targets_${infilen}.lst | head -${i} | tail -1 | awk '{print $1}'`
+		set files = `cat ${startdir}/PRODUCTS/ID1${infilen}.lst | grep ${obj} | head -1 | awk '{print $1}'`
+		ds9 -scale zscale ${startdir}/OUTPUTS/s1_${files} -datacube 3 &
+		echo  '0:   Point source' >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo  '1:   Extended source' >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+		echo -n 'Write if the source is extended:		       ' >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+			set extended = $<
+			echo $obj $extended >> ${startdir}/PRODUCTS/Extension_${infilen}.lst
+		set i = `expr $i + 1`
+	end
+else
+	set i = `expr 1`
+	while ( $i <= $count )
+		set obj = `cat ${startdir}/PRODUCTS/targets_${infilen}.lst | head -${i} | tail -1 | awk '{print $1}'`
+		echo $obj $target_ext >> ${startdir}/PRODUCTS/Extension_${infilen}.lst
+		set i = `expr $i + 1`
+	end
+endif
+
+if ($method == 0) then
+    	echo 'METHOD: FIXEDAPER' >! ${startdir}/${infilen}.txt
+	echo 'APERTURES: ' $radial_profile ' pixels ' >> ${startdir}/${infilen}.txt
+else
+    	echo 'METHOD: GROWINGAPER' >! ${startdir}/${infilen}.txt
+	echo 'APERTURES: ' $radial_profile ' sigmas ' >> ${startdir}/${infilen}.txt
+endif
+echo 'OFFSETS: ' $offset ' pixels' >> ${startdir}/${infilen}.txt
+
+(rm -rf Spec_positions.lst) >& /dev/null
+(rm -rf Cohen_coord.lst) >& /dev/null
+ln -s ${dircohen}/Cohen_coord.lst .
+echo ".compile "${diridl}"/SubPiX.pro" >! ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/Xtract_commonwave.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/mpfit.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/mpfitfun.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/mpfitpeak.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/XtractMain_commonwave.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/colorbar.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/psinit.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/psterm.pro" >> ${startdir}/PRODUCTS/Xtm_tmp.pro
+echo ".compile "${diridl}"/strcnt.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/matchdelim.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/str_token.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/nexttok.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/translate_sub_super.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/strtrans.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/textable.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/textoidl.pro" >> PRODUCTS/MeanS_tmp.pro
+echo 'XtractMain, "'${infilen}'", "stck","'${dircohen}'",'${target_ext}', METHOD='${method}', SIGMAS='${sigmas}', OFFSET=['${offset}'], TEXTFILE="'${infilen}'.txt", NCOLAPSING='${ncolapsing}', RADIAL_PROFILE=['${radial_profile}'] ' >> PRODUCTS/Xtm_tmp.pro
+echo "Running idl..."
+idl <   ${startdir}/PRODUCTS/Xtm_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+
+loop7:
+
+#### mv ${startdir}/Spec_m*.fits  ${startdir}/OUTPUTS/.
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "**      Combining spectra          **" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo "*************************************" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+(rm -rf PRODUCTS/Spec_positions_*lst) >& /dev/null
+cat -n ${startdir}/PRODUCTS/Spec_positions.lst >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+set i = `expr 1`
+set count=`wc -l ${startdir}/PRODUCTS/Spec_positions.lst | awk '{ print $1 }'`
+cd ${startdir}/PRODUCTS
+while ( $i <= $count )
+	set obj = `cat Spec_positions.lst | head -${i} | tail -1 | awk '{print $2}'`
+	cat Spec_positions.lst | grep ${obj}  >! Spec_positions_${obj}.lst
+	set i = `expr $i + 1`
+end
+ls Spec_positions_*lst >! ${startdir}/PRODUCTS/List_Spec_positions.lst
+cat  ${startdir}/PRODUCTS/List_Spec_positions.lst
+set i = `expr 1`
+set count=`wc -l ${startdir}/PRODUCTS/List_Spec_positions.lst | awk '{ print $1 }'`
+echo "Number of Objects:   "   $count >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+while ( $i <= $count )
+	echo "Object:  #"${i}":" >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	set line = `cat ${startdir}/PRODUCTS/List_Spec_positions.lst | head -${i} | tail -1` 
+	cat ${startdir}/PRODUCTS/${line} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+	set i = `expr $i + 1`
+end
+
+cd ${startdir}
+echo ".compile "${diridl}"/psinit.pro" >! PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/psterm.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/strcnt.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/matchdelim.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/str_token.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/nexttok.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/translate_sub_super.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/strtrans.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/textable.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/textoidl.pro" >> PRODUCTS/MeanS_tmp.pro
+echo ".compile "${diridl}"/MeanSpectra.pro" >> PRODUCTS/MeanS_tmp.pro
+echo 'MeanSpectra, "stck",'${method}',"'${infilen}'",RADIAL_PROFILE=['${radial_profile}'], OFFSET=['${offset}']' >> PRODUCTS/MeanS_tmp.pro
+idl < PRODUCTS/MeanS_tmp.pro >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+(rm -rf ${startdir}/PRODUCTS/List_Spec_positions.lst) >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/Spec_positions_*.lst) >& /dev/null
+
+endloop:
+
+echo 'Process started at: ' $timenow >! ${startdir}/${infilen}_generalinfo.txt
+echo '----------------------------------------------------------' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'Name of the input datafile list: '$infile >> ${startdir}/${infilen}_generalinfo.txt
+echo '----------------------------------------------------------' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'Identification and association of datafiles can be found at: /PRODUCTS/id'${infilen}'.lst' >> ${startdir}/${infilen}_generalinfo.txt
+echo '----------------------------------------------------------' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'Staking: Rejection of bad chops using a sigma of: ' $sigm_back ' sigma' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'OUTPUTS/ directory: "stck_" = stacked images' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'OUTPUTS/ directory: "flat_" = flat-field image' >> ${startdir}/${infilen}_generalinfo.txt
+echo '----------------------------------------------------------' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'Information about how sources have been extracted' >> ${startdir}/${infilen}_generalinfo.txt
+echo '(point-source=0, extended=1) can be found at:   /PRODUCTS/Extension_'${infilen}'.lst' >> ${startdir}/${infilen}_generalinfo.txt
+if ($method == 0) then
+    echo 'Method of extraction: FIXED APERTURE (FA)' >> ${startdir}/${infilen}_generalinfo.txt
+else
+    echo 'Method of extraction: GROWING APERTURE (GA) (using standard width)' >> ${startdir}/${infilen}_generalinfo.txt
+endif
+echo 'The list of reference aperture widths is: ' $radial_profile >> ${startdir}/${infilen}_generalinfo.txt
+echo '(units in [pix] if FA, in [sigmas of standard width] if GA)' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'The list of offset is: ' $offset ' (in [pix] from the central source)' >> ${startdir}/${infilen}_generalinfo.txt
+echo '----------------------------------------------------------' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'OUTPUTS/ directory: "WL_" prefix = Wavelength-calibration matrix stored in 4th-element of 3rd dimension' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'OUTPUTS/ directory: "FC_" prefix = Flux-calibrated images (standards and targets, including acq. images)' >> ${startdir}/${infilen}_generalinfo.txt
+echo '----------------------------------------------------------' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'PRODUCTS/ directory:' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'List with observation-mode keywords of datasets:  /PRODUCTS/ID1'${infilen}'.lst' >> ${startdir}/${infilen}_generalinfo.txt
+echo 'List with time-related keywords of datasets:  /PRODUCTS/ID3'${infilen}'.lst' >> ${startdir}/${infilen}_generalinfo.txt
+echo '"WL_" prefix = Plots with fits performed during the wavelength calibration' >> ${startdir}/${infilen}_generalinfo.txt
+
+#
+## Cleaning and finishing
+#
+endloop2:
+
+#(gzip S*fits) >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/spectra_s*_${infilen}.lst) >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/*_tmp.pro)  >& /dev/null
+#(rm -rf ${startdir}/PRODUCTS/targets_${infilen}.lst)  >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/Extension_${infilen}.lst)  >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/spec.lst)  >& /dev/null
+(rm -rf ${startdir}/PRODUCTS/ORD${infilen}.lst)  >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/pyraf) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/*_tmp.pro) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/S*S*.fits) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/midir.log) >& /dev/null
+(rm -rf ${startdir}/OUTPUTS/login.cl) >& /dev/null
+(rm -rf ${startdir}/Spectrum_theor_N.dat) >& /dev/null
+(rm -rf ${startdir}/Spectrum_theor_N_poly.dat) >& /dev/null
+(rm -rf ${startdir}/Spectrum_theor_Q.dat) >& /dev/null
+(rm -rf ${startdir}/Cohen_coord.lst) >& /dev/null
+(rm -rf ${startdir}/pyraf) >& /dev/null
+(mv ${startdir}/${infilen}_old.lst ${startdir}/PRODUCTS/.) >& /dev/null
+
+set timenow = `date +%F" "%T`
+echo " Processing list of files "${infile}": Finished at "${timenow} >> ${startdir}/PRODUCTS/Status_${infilen}.txt
+echo " Processing list of files "${infile}": Finished at "${timenow} >> ${startdir}/${infilen}_generalinfo.txt
+killall tail
+
+exit

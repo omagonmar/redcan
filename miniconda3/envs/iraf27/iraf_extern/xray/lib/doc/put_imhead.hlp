@@ -1,0 +1,113 @@
+#$Header: /home/pros/xray/lib/doc/RCS/put_imhead.hlp,v 11.0 1997/11/06 16:23:07 prosb Exp $
+#$Log: put_imhead.hlp,v $
+#Revision 11.0  1997/11/06 16:23:07  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:10  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:08  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:57  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:26  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:09  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:10:27  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:53  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:46  pros
+#General Release 1.0
+#
+.help put_imhead Jan89 PROS_Library
+NAME
+.in 4
+put_imhead - write X-ray header information to an image file
+.sp
+.in -4
+USAGE
+.in 4
+call put_imhead(im, imhead)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	im		pointer		image handle
+	imhead		pointer		pointer to image header
+
+Output Arguments:
+	none
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine put_imhead writes header information to a image file.
+The first argument is the image handle, returned by immap.
+The second argument is a pointer to a struct whose record structure
+is defined in xray/lib/qpoe.h.  This header information is normally created
+and written by image-creating routines such as xpr2qp.  However, it is
+possible to read an existing header, change values in that header, and
+write the header back to the image file, using get_imhead and put_imhead.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how to get, put, and display the X-ray
+header information in an image file.
+.in 8
+.nf
+procedure edithead()
+
+char	imname[SZ_FNAME]	# image name
+int	display			# display level
+pointer im			# image handle
+pointer	imhead			# image header pointer
+pointer	immap()			# open a image file
+int	clgeti()		# get cl param
+int	get_imhead()		# get image header
+
+begin
+	call clgstr("image", imname, SZ_FNAME)
+	display = clgeti("display")
+	# open the image file
+	im = immap (imname, READ_ONLY, NULL)
+	# read in the X-ray header information
+	if( get_imhead(im, imhead) == YES ){
+	    ... (manipulate the header) ...
+	    # write out the header information
+	    call put_imhead(im, imhead)
+	    # display, if necessary
+	    if( display >0 ){
+		call disp_imhead(imhead)
+	    }
+	}
+	# close the file
+	call imunmap(im)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+This routine cannot be used to put X-ray information to a qpoe file.
+Use put_qphead instead.  While the routine will appear to work, the
+parameters will not actually be saved in the qpoe file.  This is a
+general restriction on writing header parameters to qpoe files using
+IMIO and is not special to the X-ray parameters.
+.in -4
+.sp
+SEE ALSO
+.in4
+qpoe.h (which defines the struct into which qpoe header is read),
+get_imhead, disp_imhead.

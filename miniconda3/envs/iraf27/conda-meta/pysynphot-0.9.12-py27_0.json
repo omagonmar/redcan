@@ -1,0 +1,3233 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "numpy",
+    "pytest",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/pysynphot-0.9.12-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/native_libs.txt",
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/requires.txt",
+    "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/pysynphot/Cache.py",
+    "lib/python2.7/site-packages/pysynphot/Cache.pyc",
+    "lib/python2.7/site-packages/pysynphot/__init__.py",
+    "lib/python2.7/site-packages/pysynphot/__init__.pyc",
+    "lib/python2.7/site-packages/pysynphot/binning.py",
+    "lib/python2.7/site-packages/pysynphot/binning.pyc",
+    "lib/python2.7/site-packages/pysynphot/catalog.py",
+    "lib/python2.7/site-packages/pysynphot/catalog.pyc",
+    "lib/python2.7/site-packages/pysynphot/compat.py",
+    "lib/python2.7/site-packages/pysynphot/compat.pyc",
+    "lib/python2.7/site-packages/pysynphot/data/generic/Zodi.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/alpha_lyr_stis_008.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/b.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/bessell_h.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/bessell_j.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/bessell_k.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/cousins_i.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/cousins_r.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/detectors.dat",
+    "lib/python2.7/site-packages/pysynphot/data/generic/earthshine.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/egal.dat",
+    "lib/python2.7/site-packages/pysynphot/data/generic/el1215a.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/el1302a.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/el1356a.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/el2471a.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/elliptical.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/i.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/johnson_b.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/johnson_i.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/johnson_k.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/johnson_r.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/johnson_u.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/johnson_v.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/ngc1068_template.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/orion.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/orion_smooth.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/p041c_001.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/p177d_001.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/p330e_001.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/pn_smooth.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/qso_template.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/r.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/spiral.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/thru.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/u.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/us1.dat",
+    "lib/python2.7/site-packages/pysynphot/data/generic/v.fits",
+    "lib/python2.7/site-packages/pysynphot/data/generic/zeroang.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/acs.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_g800l_hrc.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_g800l_wfc.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_pr110l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_pr130l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_pr200l_hrc.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1291.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1300.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1309.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1318.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1327.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g140l_1105.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g140l_1230.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g140l_800.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1533.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1577.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1589.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1600.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1611.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1623.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_mirror.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1786.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1817.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1835.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1850.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1864.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1882.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1890.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1900.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1913.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1921.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1941.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1953.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1971.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1986.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_2010.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2186.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2217.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2233.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2250.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2268.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2283.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2306.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2325.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2339.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2357.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2373.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2390.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2410.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_2635.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_2950.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_3000.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_3360.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2617.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2637.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2657.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2676.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2695.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2709.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2719.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2739.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2850.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2952.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2979.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2996.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3018.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3035.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3057.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3074.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3094.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fgs.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/foc.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g130h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g160l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g190h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g270h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g400h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g570h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g650l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_prism.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g160l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g190h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g270h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g400h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g570h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g650l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g780h.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_prism.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_18.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_19.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_20.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_21.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_22.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_23.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_24.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_25.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_26.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_27.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_28.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_29.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_30.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_31.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_32.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_33.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_34.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_35.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_36.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_37.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_38.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_39.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_40.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_41.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_42.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_43.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_44.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_45.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_46.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_47.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_48.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_49.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_50.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_51.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_18.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_19.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_20.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_21.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_22.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_23.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_24.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_25.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_26.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_27.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_28.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_29.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_30.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_31.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_32.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_33.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g140l.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g140m.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g160m.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g200m.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g270m.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/hsp.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_1a.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_1b.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_1c.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_2a.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_2b.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_2c.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_3a.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_3b.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_3c.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_4a.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_4b.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_4c.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos_g096.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos_g141.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos_g206.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g140h.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g140m.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g235h.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g235m.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g395h.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g395m.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_prism.wavecat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/nsp_msa_wavecat.txt",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/prism.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/prism_c1200.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/prism_c2125.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/wavecat.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/wfc3.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/wfp2.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/wfpc.dat",
+    "lib/python2.7/site-packages/pysynphot/data/wavecat/wfpc2.dat",
+    "lib/python2.7/site-packages/pysynphot/exceptions.py",
+    "lib/python2.7/site-packages/pysynphot/exceptions.pyc",
+    "lib/python2.7/site-packages/pysynphot/extinction.py",
+    "lib/python2.7/site-packages/pysynphot/extinction.pyc",
+    "lib/python2.7/site-packages/pysynphot/graphtab.py",
+    "lib/python2.7/site-packages/pysynphot/graphtab.pyc",
+    "lib/python2.7/site-packages/pysynphot/locations.py",
+    "lib/python2.7/site-packages/pysynphot/locations.pyc",
+    "lib/python2.7/site-packages/pysynphot/obsbandpass.py",
+    "lib/python2.7/site-packages/pysynphot/obsbandpass.pyc",
+    "lib/python2.7/site-packages/pysynphot/observation.py",
+    "lib/python2.7/site-packages/pysynphot/observation.pyc",
+    "lib/python2.7/site-packages/pysynphot/observationmode.py",
+    "lib/python2.7/site-packages/pysynphot/observationmode.pyc",
+    "lib/python2.7/site-packages/pysynphot/planck.py",
+    "lib/python2.7/site-packages/pysynphot/planck.pyc",
+    "lib/python2.7/site-packages/pysynphot/pysynphot_utils.so",
+    "lib/python2.7/site-packages/pysynphot/reddening.py",
+    "lib/python2.7/site-packages/pysynphot/reddening.pyc",
+    "lib/python2.7/site-packages/pysynphot/refs.py",
+    "lib/python2.7/site-packages/pysynphot/refs.pyc",
+    "lib/python2.7/site-packages/pysynphot/renorm.py",
+    "lib/python2.7/site-packages/pysynphot/renorm.pyc",
+    "lib/python2.7/site-packages/pysynphot/spark.py",
+    "lib/python2.7/site-packages/pysynphot/spark.pyc",
+    "lib/python2.7/site-packages/pysynphot/spectrum.py",
+    "lib/python2.7/site-packages/pysynphot/spectrum.pyc",
+    "lib/python2.7/site-packages/pysynphot/spparser.py",
+    "lib/python2.7/site-packages/pysynphot/spparser.pyc",
+    "lib/python2.7/site-packages/pysynphot/svn_version.py",
+    "lib/python2.7/site-packages/pysynphot/svn_version.pyc",
+    "lib/python2.7/site-packages/pysynphot/tables.py",
+    "lib/python2.7/site-packages/pysynphot/tables.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/__init__.py",
+    "lib/python2.7/site-packages/pysynphot/test/__init__.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/conftest.py",
+    "lib/python2.7/site-packages/pysynphot/test/conftest.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/data/alpha_lyr_stis_002.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/bd_75d325_stis_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/bz_7.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/lmc_30dorshell_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/lmc_diffuse_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/lmc_diffuse_002.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/milkyway_dense_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/milkyway_diffuse_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/smc_bar_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/xgal_starburst_001.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/xgal_starburst_002.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/xgal_starburst_003.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/jref/empty_test_file.txt",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdbs/mtab/n9i1408hm_tmg.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/cdfile.txt",
+    "lib/python2.7/site-packages/pysynphot/test/data/h1.txt",
+    "lib/python2.7/site-packages/pysynphot/test/data/qso_template.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/test.dat",
+    "lib/python2.7/site-packages/pysynphot/test/data/test_bp_acs_hrc_f555w.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/test_bp_johnson_v.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/test_sp_analytic_bb.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/test_sp_vega.fits",
+    "lib/python2.7/site-packages/pysynphot/test/data/us7.txt",
+    "lib/python2.7/site-packages/pysynphot/test/data/vb8.inr.2a",
+    "lib/python2.7/site-packages/pysynphot/test/test_analytic_spectrum.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_analytic_spectrum.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_binning.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_binning.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_box.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_box.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_catalog.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_catalog.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_center_edges.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_center_edges.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_component_switch.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_component_switch.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_cos.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_cos.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_exceptions.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_exceptions.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_flip.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_flip.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_interp_band.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_interp_band.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_locations.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_locations.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_mergewavesets.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_mergewavesets.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_obsbandpass.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_obsbandpass.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_observation.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_observation.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_parsing.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_parsing.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_primary_area.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_primary_area.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_set_default_waveset.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_set_default_waveset.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_spec.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_spec.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_spectral_element.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_spectral_element.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_table.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_table.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_thermback.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_thermback.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket113.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket113.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket126.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket126.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket139.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket139.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket143.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket143.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket146.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket146.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket150.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket150.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket157.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket157.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket159.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket159.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket161.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket161.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket163.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket163.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket164.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket164.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket165.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket165.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket166.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket166.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket171.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket171.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket174.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket174.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket183.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket183.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket21.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket21.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket52.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket52.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket82.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket82.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket86.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ticket86.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_tokenizer.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_tokenizer.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ui.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ui.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_ui_tickets.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_ui_tickets.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_units.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_units.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_v05_tickets.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_v05_tickets.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_v06_tickets.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_v06_tickets.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_wavecat.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_wavecat.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/test_write.py",
+    "lib/python2.7/site-packages/pysynphot/test/test_write.pyc",
+    "lib/python2.7/site-packages/pysynphot/test/utils.py",
+    "lib/python2.7/site-packages/pysynphot/test/utils.pyc",
+    "lib/python2.7/site-packages/pysynphot/units.py",
+    "lib/python2.7/site-packages/pysynphot/units.pyc",
+    "lib/python2.7/site-packages/pysynphot/version.py",
+    "lib/python2.7/site-packages/pysynphot/version.pyc",
+    "lib/python2.7/site-packages/pysynphot/wavetable.py",
+    "lib/python2.7/site-packages/pysynphot/wavetable.pyc",
+    "lib/python2.7/site-packages/setuptools.pth"
+  ],
+  "fn": "pysynphot-0.9.12-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/pysynphot-0.9.12-py27_0",
+    "type": 1
+  },
+  "md5": "53e0df3c90c5df1a13dc75b1582a671b",
+  "name": "pysynphot",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/pysynphot-0.9.12-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "0709a1f04c5da55bfadfc6e36da62486b93232e606698c84a4b4776a7e9e0cbd",
+        "sha256_in_prefix": "0709a1f04c5da55bfadfc6e36da62486b93232e606698c84a4b4776a7e9e0cbd",
+        "size_in_bytes": 638
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "6a34d07b4571798e65a0b9b7a68b7e8b61ed2a0398bad8111ebb197b86087b16",
+        "sha256_in_prefix": "6a34d07b4571798e65a0b9b7a68b7e8b61ed2a0398bad8111ebb197b86087b16",
+        "size_in_bytes": 21355
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/native_libs.txt",
+        "path_type": "hardlink",
+        "sha256": "05a45e82ef0648e7f8fde6c0d17d38b74712e7a34404589b95076ff32d4b7e05",
+        "sha256_in_prefix": "05a45e82ef0648e7f8fde6c0d17d38b74712e7a34404589b95076ff32d4b7e05",
+        "size_in_bytes": 29
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "f989e24b28c37a65fc6e782ce73b9157f6795e96f5f41385cee1e93ce8cf457c",
+        "sha256_in_prefix": "f989e24b28c37a65fc6e782ce73b9157f6795e96f5f41385cee1e93ce8cf457c",
+        "size_in_bytes": 14
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot-0.9.12-py2.7-linux-x86_64.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "8c1ef945e8d9c0080f5a6f4eb7c653243814f64ccfb4c45c699e760900210a0b",
+        "sha256_in_prefix": "8c1ef945e8d9c0080f5a6f4eb7c653243814f64ccfb4c45c699e760900210a0b",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/Cache.py",
+        "path_type": "hardlink",
+        "sha256": "5ba6f74487b6e8d0877fcb6903327469f43c8ee8b32b72389c959eea34799ba3",
+        "sha256_in_prefix": "5ba6f74487b6e8d0877fcb6903327469f43c8ee8b32b72389c959eea34799ba3",
+        "size_in_bytes": 823
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/Cache.pyc",
+        "path_type": "hardlink",
+        "sha256": "0033c0bf50e24e50348d7fddf4687b2948f062a8f2d8a668cbc6297e40023c03",
+        "sha256_in_prefix": "0033c0bf50e24e50348d7fddf4687b2948f062a8f2d8a668cbc6297e40023c03",
+        "size_in_bytes": 1007
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "819cde55ec6dbc4ba827c5a4274494310d850faf6ad677495ec7c14c73234cff",
+        "sha256_in_prefix": "819cde55ec6dbc4ba827c5a4274494310d850faf6ad677495ec7c14c73234cff",
+        "size_in_bytes": 1674
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "3383a9c092529a42d5b59a7a83c71e54fe61f7775861dd90f8a63e88c2e1e88d",
+        "sha256_in_prefix": "3383a9c092529a42d5b59a7a83c71e54fe61f7775861dd90f8a63e88c2e1e88d",
+        "size_in_bytes": 1982
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/binning.py",
+        "path_type": "hardlink",
+        "sha256": "e04dd7b0abf118635ce375da6b0d5c5643ac31fe43b2f7bc9dca874bf8950691",
+        "sha256_in_prefix": "e04dd7b0abf118635ce375da6b0d5c5643ac31fe43b2f7bc9dca874bf8950691",
+        "size_in_bytes": 2551
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/binning.pyc",
+        "path_type": "hardlink",
+        "sha256": "dcadf9d66b41416dfaeb9cf4dd810d5c020430ce8b2d0d9a4f7c3192ef53034f",
+        "sha256_in_prefix": "dcadf9d66b41416dfaeb9cf4dd810d5c020430ce8b2d0d9a4f7c3192ef53034f",
+        "size_in_bytes": 3104
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/catalog.py",
+        "path_type": "hardlink",
+        "sha256": "27d09d9de18d3e56babb3db20297e870b2e45eea65fba78c4b7c5a5ac68814a1",
+        "sha256_in_prefix": "27d09d9de18d3e56babb3db20297e870b2e45eea65fba78c4b7c5a5ac68814a1",
+        "size_in_bytes": 7691
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/catalog.pyc",
+        "path_type": "hardlink",
+        "sha256": "cd4b597a858cd39e1dd139cde158454df99c74981503b7fe62f79e828dc9540c",
+        "sha256_in_prefix": "cd4b597a858cd39e1dd139cde158454df99c74981503b7fe62f79e828dc9540c",
+        "size_in_bytes": 7849
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/compat.py",
+        "path_type": "hardlink",
+        "sha256": "35200cb27099dc27ce507809cf6d3e5be831c70754291e462c031cf07ed2271d",
+        "sha256_in_prefix": "35200cb27099dc27ce507809cf6d3e5be831c70754291e462c031cf07ed2271d",
+        "size_in_bytes": 280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/compat.pyc",
+        "path_type": "hardlink",
+        "sha256": "7059147af4826de83df9a5414467de2ba6e0ba9348123c4a62869bc3550b83dc",
+        "sha256_in_prefix": "7059147af4826de83df9a5414467de2ba6e0ba9348123c4a62869bc3550b83dc",
+        "size_in_bytes": 555
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/Zodi.fits",
+        "path_type": "hardlink",
+        "sha256": "55d6e36f7ce6178b4dd90fb019741d7455a8de7a87a85e74f8e5cb187564a1ad",
+        "sha256_in_prefix": "55d6e36f7ce6178b4dd90fb019741d7455a8de7a87a85e74f8e5cb187564a1ad",
+        "size_in_bytes": 74880
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/alpha_lyr_stis_008.fits",
+        "path_type": "hardlink",
+        "sha256": "600c8911dfb6d66a5ea52f815adc1d0366806a104b89329bd4a64d7906139830",
+        "sha256_in_prefix": "600c8911dfb6d66a5ea52f815adc1d0366806a104b89329bd4a64d7906139830",
+        "size_in_bytes": 276480
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/b.fits",
+        "path_type": "hardlink",
+        "sha256": "662aa5688cf1baae6391a59d1fa2afd664ff829190ae6f2b226614f70b074724",
+        "sha256_in_prefix": "662aa5688cf1baae6391a59d1fa2afd664ff829190ae6f2b226614f70b074724",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/bessell_h.fits",
+        "path_type": "hardlink",
+        "sha256": "e35d5e5579bc52710167b4567fdb618d69fbf7ece5098f89565dbb5554bb7d4a",
+        "sha256_in_prefix": "e35d5e5579bc52710167b4567fdb618d69fbf7ece5098f89565dbb5554bb7d4a",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/bessell_j.fits",
+        "path_type": "hardlink",
+        "sha256": "ebe46698123b90bd8f8e86bb497fd3bc40a0e9b668e5d516c014680a798e30b7",
+        "sha256_in_prefix": "ebe46698123b90bd8f8e86bb497fd3bc40a0e9b668e5d516c014680a798e30b7",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/bessell_k.fits",
+        "path_type": "hardlink",
+        "sha256": "9cb692e8ae9343daadf839c97e6774dd2c13dc2ed30821549a0e987f62c047a0",
+        "sha256_in_prefix": "9cb692e8ae9343daadf839c97e6774dd2c13dc2ed30821549a0e987f62c047a0",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/cousins_i.fits",
+        "path_type": "hardlink",
+        "sha256": "119634e24c90cca36c1ccd3444048eb443076dcca800971d6c6b8c7dddae1c11",
+        "sha256_in_prefix": "119634e24c90cca36c1ccd3444048eb443076dcca800971d6c6b8c7dddae1c11",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/cousins_r.fits",
+        "path_type": "hardlink",
+        "sha256": "bfa20bb98f57e88dbb84277c3962a463a66b5147d52a8d1a971a0041c84a0fb0",
+        "sha256_in_prefix": "bfa20bb98f57e88dbb84277c3962a463a66b5147d52a8d1a971a0041c84a0fb0",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/detectors.dat",
+        "path_type": "hardlink",
+        "sha256": "6eb473d4bedc2772da451ab587f10270a356cac80cf0cec7359f40b455cebcce",
+        "sha256_in_prefix": "6eb473d4bedc2772da451ab587f10270a356cac80cf0cec7359f40b455cebcce",
+        "size_in_bytes": 2076
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/earthshine.fits",
+        "path_type": "hardlink",
+        "sha256": "d6a658541f0b32d4c7bcfcdb320180e0e0cdbf85efd7257f89da749122e7ab1e",
+        "sha256_in_prefix": "d6a658541f0b32d4c7bcfcdb320180e0e0cdbf85efd7257f89da749122e7ab1e",
+        "size_in_bytes": 57600
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/egal.dat",
+        "path_type": "hardlink",
+        "sha256": "dc71046f7c171c461784ea60e1d70965466b42d10f3b6dee2048b1d745c5445f",
+        "sha256_in_prefix": "dc71046f7c171c461784ea60e1d70965466b42d10f3b6dee2048b1d745c5445f",
+        "size_in_bytes": 32352
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/el1215a.fits",
+        "path_type": "hardlink",
+        "sha256": "190737e94c6e4e8583e24cb8610e68f9ebf6afd5e196836468b11cc5d84d25e2",
+        "sha256_in_prefix": "190737e94c6e4e8583e24cb8610e68f9ebf6afd5e196836468b11cc5d84d25e2",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/el1302a.fits",
+        "path_type": "hardlink",
+        "sha256": "bd569b17e27963f321592de48c1700f18969bba659ae69ed6f00a7d75e9f71e5",
+        "sha256_in_prefix": "bd569b17e27963f321592de48c1700f18969bba659ae69ed6f00a7d75e9f71e5",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/el1356a.fits",
+        "path_type": "hardlink",
+        "sha256": "142ff70377c7838b23e086b3dced51a9548bed475ec4d2de6e93436e419a7f09",
+        "sha256_in_prefix": "142ff70377c7838b23e086b3dced51a9548bed475ec4d2de6e93436e419a7f09",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/el2471a.fits",
+        "path_type": "hardlink",
+        "sha256": "bf14f9041f32096b06e85a190fd605432fd761134a4ea37e86e98f4b84a3cf33",
+        "sha256_in_prefix": "bf14f9041f32096b06e85a190fd605432fd761134a4ea37e86e98f4b84a3cf33",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/elliptical.fits",
+        "path_type": "hardlink",
+        "sha256": "d98b7df200bd06d2c03443e38922eff6ecab2da52acf52dea6b6d9d91c5d4a94",
+        "sha256_in_prefix": "d98b7df200bd06d2c03443e38922eff6ecab2da52acf52dea6b6d9d91c5d4a94",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/i.fits",
+        "path_type": "hardlink",
+        "sha256": "cbccae642a3b004a2d8571aadf10116fff88739ce728ed0adf689a3359860f9c",
+        "sha256_in_prefix": "cbccae642a3b004a2d8571aadf10116fff88739ce728ed0adf689a3359860f9c",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/johnson_b.fits",
+        "path_type": "hardlink",
+        "sha256": "662aa5688cf1baae6391a59d1fa2afd664ff829190ae6f2b226614f70b074724",
+        "sha256_in_prefix": "662aa5688cf1baae6391a59d1fa2afd664ff829190ae6f2b226614f70b074724",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/johnson_i.fits",
+        "path_type": "hardlink",
+        "sha256": "cbccae642a3b004a2d8571aadf10116fff88739ce728ed0adf689a3359860f9c",
+        "sha256_in_prefix": "cbccae642a3b004a2d8571aadf10116fff88739ce728ed0adf689a3359860f9c",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/johnson_k.fits",
+        "path_type": "hardlink",
+        "sha256": "5a733524c0d5acebdb4b7961d5f4a6be11357946567d18e5b0ad99ed060eb809",
+        "sha256_in_prefix": "5a733524c0d5acebdb4b7961d5f4a6be11357946567d18e5b0ad99ed060eb809",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/johnson_r.fits",
+        "path_type": "hardlink",
+        "sha256": "2a22c60f477b3b52daeff4c4007c60e31fbff892e2806281493759f832ce2e03",
+        "sha256_in_prefix": "2a22c60f477b3b52daeff4c4007c60e31fbff892e2806281493759f832ce2e03",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/johnson_u.fits",
+        "path_type": "hardlink",
+        "sha256": "0a1a87fc82c4e54832d5860958828f7ac058a00ffa047940d8227fba6a718ab3",
+        "sha256_in_prefix": "0a1a87fc82c4e54832d5860958828f7ac058a00ffa047940d8227fba6a718ab3",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/johnson_v.fits",
+        "path_type": "hardlink",
+        "sha256": "8c69e2a9e96a55834eda9f0a280da5cc75c839fcb9e79c0cdb64dcd4ac570d05",
+        "sha256_in_prefix": "8c69e2a9e96a55834eda9f0a280da5cc75c839fcb9e79c0cdb64dcd4ac570d05",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/ngc1068_template.fits",
+        "path_type": "hardlink",
+        "sha256": "bc62157b3815cbe40f20cde6502770b8b8f678e0989da8817d531a1346ce96ea",
+        "sha256_in_prefix": "bc62157b3815cbe40f20cde6502770b8b8f678e0989da8817d531a1346ce96ea",
+        "size_in_bytes": 169920
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/orion.fits",
+        "path_type": "hardlink",
+        "sha256": "016e26a609b7c686a2fd94c5c19ca1095163250d4e4bbcd5b92ba508feec99bf",
+        "sha256_in_prefix": "016e26a609b7c686a2fd94c5c19ca1095163250d4e4bbcd5b92ba508feec99bf",
+        "size_in_bytes": 11520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/orion_smooth.fits",
+        "path_type": "hardlink",
+        "sha256": "e523ee1af587e13b3ca36a2642dd323f41ffa9ec7ac91f7c1ef6d7538d1872df",
+        "sha256_in_prefix": "e523ee1af587e13b3ca36a2642dd323f41ffa9ec7ac91f7c1ef6d7538d1872df",
+        "size_in_bytes": 169920
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/p041c_001.fits",
+        "path_type": "hardlink",
+        "sha256": "53e682e56e859025bc3a45eeb3b029ba015def92cdf77aadbd37a6f8a8006fd5",
+        "sha256_in_prefix": "53e682e56e859025bc3a45eeb3b029ba015def92cdf77aadbd37a6f8a8006fd5",
+        "size_in_bytes": 161280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/p177d_001.fits",
+        "path_type": "hardlink",
+        "sha256": "9e84880cb7977a3883f9bc020a24b4978ec220ea2b6490d43187e6841f5bfca6",
+        "sha256_in_prefix": "9e84880cb7977a3883f9bc020a24b4978ec220ea2b6490d43187e6841f5bfca6",
+        "size_in_bytes": 161280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/p330e_001.fits",
+        "path_type": "hardlink",
+        "sha256": "68bfe6818795da5348c630346c24cdd96e6911c9cc9e501ffc3456c64098cb7f",
+        "sha256_in_prefix": "68bfe6818795da5348c630346c24cdd96e6911c9cc9e501ffc3456c64098cb7f",
+        "size_in_bytes": 161280
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/pn_smooth.fits",
+        "path_type": "hardlink",
+        "sha256": "156308d85790f74b557272edb9416472c0e1ba3e4c11693e3490a5c6d04012a9",
+        "sha256_in_prefix": "156308d85790f74b557272edb9416472c0e1ba3e4c11693e3490a5c6d04012a9",
+        "size_in_bytes": 169920
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/qso_template.fits",
+        "path_type": "hardlink",
+        "sha256": "bc27780138110c58916af3cca01050187fff45e369849b046f5920c574c47936",
+        "sha256_in_prefix": "bc27780138110c58916af3cca01050187fff45e369849b046f5920c574c47936",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/r.fits",
+        "path_type": "hardlink",
+        "sha256": "2a22c60f477b3b52daeff4c4007c60e31fbff892e2806281493759f832ce2e03",
+        "sha256_in_prefix": "2a22c60f477b3b52daeff4c4007c60e31fbff892e2806281493759f832ce2e03",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/spiral.fits",
+        "path_type": "hardlink",
+        "sha256": "929ca8625d13b4a038cf8a4b1aa06768682b54a0fbd8a42be298516f83810c1f",
+        "sha256_in_prefix": "929ca8625d13b4a038cf8a4b1aa06768682b54a0fbd8a42be298516f83810c1f",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/thru.fits",
+        "path_type": "hardlink",
+        "sha256": "544d086e2a5690a8d9328e8cfc5fc9fee8de068ff759d7ff15edba2222cdb421",
+        "sha256_in_prefix": "544d086e2a5690a8d9328e8cfc5fc9fee8de068ff759d7ff15edba2222cdb421",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/u.fits",
+        "path_type": "hardlink",
+        "sha256": "0a1a87fc82c4e54832d5860958828f7ac058a00ffa047940d8227fba6a718ab3",
+        "sha256_in_prefix": "0a1a87fc82c4e54832d5860958828f7ac058a00ffa047940d8227fba6a718ab3",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/us1.dat",
+        "path_type": "hardlink",
+        "sha256": "abf6fcfa7f8157880f2715c190fefbdba3cedb3e544b8b231acca7ab1329efbf",
+        "sha256_in_prefix": "abf6fcfa7f8157880f2715c190fefbdba3cedb3e544b8b231acca7ab1329efbf",
+        "size_in_bytes": 138000
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/v.fits",
+        "path_type": "hardlink",
+        "sha256": "8c69e2a9e96a55834eda9f0a280da5cc75c839fcb9e79c0cdb64dcd4ac570d05",
+        "sha256_in_prefix": "8c69e2a9e96a55834eda9f0a280da5cc75c839fcb9e79c0cdb64dcd4ac570d05",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/generic/zeroang.dat",
+        "path_type": "hardlink",
+        "sha256": "79bb2bd1601f6848c333373a95759efe01e580182bc2a1c7044a83c49b9bc8f8",
+        "sha256_in_prefix": "79bb2bd1601f6848c333373a95759efe01e580182bc2a1c7044a83c49b9bc8f8",
+        "size_in_bytes": 138023
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/acs.dat",
+        "path_type": "hardlink",
+        "sha256": "41e0cac0c4ff3d084f9776e326b75ed0f05a8cd99de39016e06bd0bd6dc9c809",
+        "sha256_in_prefix": "41e0cac0c4ff3d084f9776e326b75ed0f05a8cd99de39016e06bd0bd6dc9c809",
+        "size_in_bytes": 160016
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_g800l_hrc.dat",
+        "path_type": "hardlink",
+        "sha256": "ce12022e7896dcd434b2f67c6d90a0d9b12b2a70d858f0d21e6886c16afedd10",
+        "sha256_in_prefix": "ce12022e7896dcd434b2f67c6d90a0d9b12b2a70d858f0d21e6886c16afedd10",
+        "size_in_bytes": 2730
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_g800l_wfc.dat",
+        "path_type": "hardlink",
+        "sha256": "808743802bf7bbf8311ea0b642daf5e772b24e3529705cd5b867cd3aece0470b",
+        "sha256_in_prefix": "808743802bf7bbf8311ea0b642daf5e772b24e3529705cd5b867cd3aece0470b",
+        "size_in_bytes": 1691
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_pr110l.dat",
+        "path_type": "hardlink",
+        "sha256": "2800ee9a4658737ba2f863c44e1e9ffc14915994769988100d259424079154ac",
+        "sha256_in_prefix": "2800ee9a4658737ba2f863c44e1e9ffc14915994769988100d259424079154ac",
+        "size_in_bytes": 1089
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_pr130l.dat",
+        "path_type": "hardlink",
+        "sha256": "f5da8727f3c523ad8477df2056be352ccd5b2f5d18a8b47da26d10c16d5eab30",
+        "sha256_in_prefix": "f5da8727f3c523ad8477df2056be352ccd5b2f5d18a8b47da26d10c16d5eab30",
+        "size_in_bytes": 1181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/acs_pr200l_hrc.dat",
+        "path_type": "hardlink",
+        "sha256": "f115a4e68011f5a512e64082e54c393cbbf3c0b09e452e44bd07633b93d5fba0",
+        "sha256_in_prefix": "f115a4e68011f5a512e64082e54c393cbbf3c0b09e452e44bd07633b93d5fba0",
+        "size_in_bytes": 933
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1291.txt",
+        "path_type": "hardlink",
+        "sha256": "1cd0165e8aad7fc3ad5b9e3ead08d466bd6f7786a4dcf16854dbc30ffece7364",
+        "sha256_in_prefix": "1cd0165e8aad7fc3ad5b9e3ead08d466bd6f7786a4dcf16854dbc30ffece7364",
+        "size_in_bytes": 448588
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1300.txt",
+        "path_type": "hardlink",
+        "sha256": "aff7b715b61a173d1beb26e4e6e67322901090899065349a247b8e8ca57ae923",
+        "sha256_in_prefix": "aff7b715b61a173d1beb26e4e6e67322901090899065349a247b8e8ca57ae923",
+        "size_in_bytes": 448588
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1309.txt",
+        "path_type": "hardlink",
+        "sha256": "e9b0c9c9e5e0514b4670b423b3b9e6aa87774b31532f7fbb5b07929c7879c580",
+        "sha256_in_prefix": "e9b0c9c9e5e0514b4670b423b3b9e6aa87774b31532f7fbb5b07929c7879c580",
+        "size_in_bytes": 448588
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1318.txt",
+        "path_type": "hardlink",
+        "sha256": "cfd71b300f1e7ee9580caf9306f4395e9dfd6a9ebd3c7f37ea5244269bcb5199",
+        "sha256_in_prefix": "cfd71b300f1e7ee9580caf9306f4395e9dfd6a9ebd3c7f37ea5244269bcb5199",
+        "size_in_bytes": 448588
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g130m_1327.txt",
+        "path_type": "hardlink",
+        "sha256": "7fbd7776d2c5d870ac5d0d845241244444c39b345cbe04428636bd6a771b3972",
+        "sha256_in_prefix": "7fbd7776d2c5d870ac5d0d845241244444c39b345cbe04428636bd6a771b3972",
+        "size_in_bytes": 448588
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g140l_1105.txt",
+        "path_type": "hardlink",
+        "sha256": "4bd60b628fb2d3fb0be9d6362e83738b43c3b4f51cf41333d3d9c1cf2d1da2b6",
+        "sha256_in_prefix": "4bd60b628fb2d3fb0be9d6362e83738b43c3b4f51cf41333d3d9c1cf2d1da2b6",
+        "size_in_bytes": 342524
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g140l_1230.txt",
+        "path_type": "hardlink",
+        "sha256": "4177db15896930ce20ea23448e9ed6c53971c6fb1d9a1a61dac12e513f82d551",
+        "sha256_in_prefix": "4177db15896930ce20ea23448e9ed6c53971c6fb1d9a1a61dac12e513f82d551",
+        "size_in_bytes": 364168
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g140l_800.txt",
+        "path_type": "hardlink",
+        "sha256": "bbbc4a28d48b9e652975549f34cd60da19de49d07d2b6f6010cd86bc300a96ed",
+        "sha256_in_prefix": "bbbc4a28d48b9e652975549f34cd60da19de49d07d2b6f6010cd86bc300a96ed",
+        "size_in_bytes": 465886
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1533.txt",
+        "path_type": "hardlink",
+        "sha256": "d04ea243c41779d9ccab491d445ef147a6a91e85c142e398bb0ea528596e1206",
+        "sha256_in_prefix": "d04ea243c41779d9ccab491d445ef147a6a91e85c142e398bb0ea528596e1206",
+        "size_in_bytes": 312190
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1577.txt",
+        "path_type": "hardlink",
+        "sha256": "bfe992f321ac94d52cf7a86fb288f42d4f3952b95698d57e7d26153343dfb3a4",
+        "sha256_in_prefix": "bfe992f321ac94d52cf7a86fb288f42d4f3952b95698d57e7d26153343dfb3a4",
+        "size_in_bytes": 443520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1589.txt",
+        "path_type": "hardlink",
+        "sha256": "4d51eeb6d4264d4ec77dc7e29e6483e355da11e93439d4515c752e2652ce832c",
+        "sha256_in_prefix": "4d51eeb6d4264d4ec77dc7e29e6483e355da11e93439d4515c752e2652ce832c",
+        "size_in_bytes": 443520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1600.txt",
+        "path_type": "hardlink",
+        "sha256": "b98bb26eacb357a3f949b5688f6be841168498f00db92f76b5df7d563ca239f4",
+        "sha256_in_prefix": "b98bb26eacb357a3f949b5688f6be841168498f00db92f76b5df7d563ca239f4",
+        "size_in_bytes": 443520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1611.txt",
+        "path_type": "hardlink",
+        "sha256": "98f7defb2515433ab3a6ea54bc969ca9575f89c6d07022c377701b73e47593ed",
+        "sha256_in_prefix": "98f7defb2515433ab3a6ea54bc969ca9575f89c6d07022c377701b73e47593ed",
+        "size_in_bytes": 443520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_fuv_g160m_1623.txt",
+        "path_type": "hardlink",
+        "sha256": "d0aaff2eec1fda520b8bdb2b874844a6316630a5786f995250bf466dc55c8461",
+        "sha256_in_prefix": "d0aaff2eec1fda520b8bdb2b874844a6316630a5786f995250bf466dc55c8461",
+        "size_in_bytes": 443520
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_mirror.txt",
+        "path_type": "hardlink",
+        "sha256": "ce15ac573844b8dd9ffab2f78f5189cf71280065c8ac22f5fe7879b9ade8d0e9",
+        "sha256_in_prefix": "ce15ac573844b8dd9ffab2f78f5189cf71280065c8ac22f5fe7879b9ade8d0e9",
+        "size_in_bytes": 271188
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1786.txt",
+        "path_type": "hardlink",
+        "sha256": "33230dc0a7e1876fdb71215bec45b9246c904607e09887ba582a241de9b74f00",
+        "sha256_in_prefix": "33230dc0a7e1876fdb71215bec45b9246c904607e09887ba582a241de9b74f00",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1817.txt",
+        "path_type": "hardlink",
+        "sha256": "919a1966ea580812caff52c42ce0daccd5e8c4b5fe450db96009d1f0938e5b6b",
+        "sha256_in_prefix": "919a1966ea580812caff52c42ce0daccd5e8c4b5fe450db96009d1f0938e5b6b",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1835.txt",
+        "path_type": "hardlink",
+        "sha256": "5f7ccbbbffee827e2189553b299030a0c2d9791eb1c76296ebe789e056540ac7",
+        "sha256_in_prefix": "5f7ccbbbffee827e2189553b299030a0c2d9791eb1c76296ebe789e056540ac7",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1850.txt",
+        "path_type": "hardlink",
+        "sha256": "0e868586ec58061523ae75e9f88a2710209b61102e60a842321977e0c86f8c2f",
+        "sha256_in_prefix": "0e868586ec58061523ae75e9f88a2710209b61102e60a842321977e0c86f8c2f",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1864.txt",
+        "path_type": "hardlink",
+        "sha256": "8a3974dcb800e88708701fd2f4c43d15feaf21d8666c000afbf176e2f8dbe15c",
+        "sha256_in_prefix": "8a3974dcb800e88708701fd2f4c43d15feaf21d8666c000afbf176e2f8dbe15c",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1882.txt",
+        "path_type": "hardlink",
+        "sha256": "b671d9c75e1fe1263d5e855f6aec7f95644a3c66f0f042125f75b2ae86b1b5fb",
+        "sha256_in_prefix": "b671d9c75e1fe1263d5e855f6aec7f95644a3c66f0f042125f75b2ae86b1b5fb",
+        "size_in_bytes": 102424
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1890.txt",
+        "path_type": "hardlink",
+        "sha256": "a59348a4c450a830e50a28df11afcef6cba08aac8b5e1379336b6eb0e6cc306c",
+        "sha256_in_prefix": "a59348a4c450a830e50a28df11afcef6cba08aac8b5e1379336b6eb0e6cc306c",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1900.txt",
+        "path_type": "hardlink",
+        "sha256": "0548ef1051179c8f09b19279e8939c4fd382bf96fa75b1bc4fea7967d1d2952a",
+        "sha256_in_prefix": "0548ef1051179c8f09b19279e8939c4fd382bf96fa75b1bc4fea7967d1d2952a",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1913.txt",
+        "path_type": "hardlink",
+        "sha256": "84a4f5b51dbaecf662588781160fd4a2772d656a2cf44f458fde562438f51d30",
+        "sha256_in_prefix": "84a4f5b51dbaecf662588781160fd4a2772d656a2cf44f458fde562438f51d30",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1921.txt",
+        "path_type": "hardlink",
+        "sha256": "86d804e3375e1f22f9fe6fa687bffccab8636c66b2b8207cc5fb47fb3f8df707",
+        "sha256_in_prefix": "86d804e3375e1f22f9fe6fa687bffccab8636c66b2b8207cc5fb47fb3f8df707",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1941.txt",
+        "path_type": "hardlink",
+        "sha256": "396762129d9c87cadedbb218bde94a681dd9e2bf7331a5714dd997ed649dbb57",
+        "sha256_in_prefix": "396762129d9c87cadedbb218bde94a681dd9e2bf7331a5714dd997ed649dbb57",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1953.txt",
+        "path_type": "hardlink",
+        "sha256": "ff914041b4d84268892cb8d1260d64ebfb184a71c345caa53af8df62ca66352e",
+        "sha256_in_prefix": "ff914041b4d84268892cb8d1260d64ebfb184a71c345caa53af8df62ca66352e",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1971.txt",
+        "path_type": "hardlink",
+        "sha256": "6d04f0ab4c628208103428f260da3971d1cab337a3908d0b6bac3c1da73fc441",
+        "sha256_in_prefix": "6d04f0ab4c628208103428f260da3971d1cab337a3908d0b6bac3c1da73fc441",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_1986.txt",
+        "path_type": "hardlink",
+        "sha256": "8c627acddbb6924410413c40df63be658c172bac3693e33a96ac5a5cba07d687",
+        "sha256_in_prefix": "8c627acddbb6924410413c40df63be658c172bac3693e33a96ac5a5cba07d687",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g185m_2010.txt",
+        "path_type": "hardlink",
+        "sha256": "4d3c42b76e61482c1583f9b33d6ddf7f0f7418404b7ca1115b8ccbc1429a4045",
+        "sha256_in_prefix": "4d3c42b76e61482c1583f9b33d6ddf7f0f7418404b7ca1115b8ccbc1429a4045",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2186.txt",
+        "path_type": "hardlink",
+        "sha256": "e725ba1ffd22619fc2ffe22168aafa0268a6519d5edd4c52e04ac1d9f30788f9",
+        "sha256_in_prefix": "e725ba1ffd22619fc2ffe22168aafa0268a6519d5edd4c52e04ac1d9f30788f9",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2217.txt",
+        "path_type": "hardlink",
+        "sha256": "5cec77b722c11a4ff7ad2215bce8e8ccce9fb9247b6fb1d30acc33d642717aa6",
+        "sha256_in_prefix": "5cec77b722c11a4ff7ad2215bce8e8ccce9fb9247b6fb1d30acc33d642717aa6",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2233.txt",
+        "path_type": "hardlink",
+        "sha256": "3bd565fe1d92d2612f081342f9c0f5cd3df0d5a64b2f097b447afc9054c8b24e",
+        "sha256_in_prefix": "3bd565fe1d92d2612f081342f9c0f5cd3df0d5a64b2f097b447afc9054c8b24e",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2250.txt",
+        "path_type": "hardlink",
+        "sha256": "d4b1b61491c613f5f64018952ee05dc1f71a5f3d2f8c572a424314a3471cea2d",
+        "sha256_in_prefix": "d4b1b61491c613f5f64018952ee05dc1f71a5f3d2f8c572a424314a3471cea2d",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2268.txt",
+        "path_type": "hardlink",
+        "sha256": "f151e6ecd25e94525ba4afeee6882a6a3ea498cf11778eaa7f0ce9ff55b8ee76",
+        "sha256_in_prefix": "f151e6ecd25e94525ba4afeee6882a6a3ea498cf11778eaa7f0ce9ff55b8ee76",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2283.txt",
+        "path_type": "hardlink",
+        "sha256": "1d0c041d23c55e80609546dc27662384a72e6be910ae11ba1f30930f7a731877",
+        "sha256_in_prefix": "1d0c041d23c55e80609546dc27662384a72e6be910ae11ba1f30930f7a731877",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2306.txt",
+        "path_type": "hardlink",
+        "sha256": "05c8912748d2537a696ccd3ef9180d17788e3eb20e9549f5b6000413c99be8ce",
+        "sha256_in_prefix": "05c8912748d2537a696ccd3ef9180d17788e3eb20e9549f5b6000413c99be8ce",
+        "size_in_bytes": 103152
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2325.txt",
+        "path_type": "hardlink",
+        "sha256": "fcb34c34f511c3ca9812b8360336a58922db2151f3ab99a34ecba06494af3bae",
+        "sha256_in_prefix": "fcb34c34f511c3ca9812b8360336a58922db2151f3ab99a34ecba06494af3bae",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2339.txt",
+        "path_type": "hardlink",
+        "sha256": "bca72a5c34b61fb29c76dabc0c7a5a1eb5263b56474e3de114a1599716a9e96d",
+        "sha256_in_prefix": "bca72a5c34b61fb29c76dabc0c7a5a1eb5263b56474e3de114a1599716a9e96d",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2357.txt",
+        "path_type": "hardlink",
+        "sha256": "27c7d2102b133798cfe53a24c0e4a5e8d9857b60ba739aee96e328b50c910b38",
+        "sha256_in_prefix": "27c7d2102b133798cfe53a24c0e4a5e8d9857b60ba739aee96e328b50c910b38",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2373.txt",
+        "path_type": "hardlink",
+        "sha256": "d13457890ea05716e0783dd74d0095a57c74b5ae14bc8a6ad9784fa097c74256",
+        "sha256_in_prefix": "d13457890ea05716e0783dd74d0095a57c74b5ae14bc8a6ad9784fa097c74256",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2390.txt",
+        "path_type": "hardlink",
+        "sha256": "804cd579df73fbce8ef3b9b1c7c6aa19d3787583bf1c1e87ab6ce4b897296e25",
+        "sha256_in_prefix": "804cd579df73fbce8ef3b9b1c7c6aa19d3787583bf1c1e87ab6ce4b897296e25",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g225m_2410.txt",
+        "path_type": "hardlink",
+        "sha256": "3bb346d78a4f475681d37fe952462b1736bb358c3b47fe53ac06174019aee4c1",
+        "sha256_in_prefix": "3bb346d78a4f475681d37fe952462b1736bb358c3b47fe53ac06174019aee4c1",
+        "size_in_bytes": 103558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_2635.txt",
+        "path_type": "hardlink",
+        "sha256": "6eba1d542f161c8cb829be9fbf4180460c0d70a85cf0729b8fbf987e0413be71",
+        "sha256_in_prefix": "6eba1d542f161c8cb829be9fbf4180460c0d70a85cf0729b8fbf987e0413be71",
+        "size_in_bytes": 95354
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_2950.txt",
+        "path_type": "hardlink",
+        "sha256": "b893c167a2e1cb0269632135ecd9cb8fc772ac88bbecc7f4d4900a9c43f4005d",
+        "sha256_in_prefix": "b893c167a2e1cb0269632135ecd9cb8fc772ac88bbecc7f4d4900a9c43f4005d",
+        "size_in_bytes": 92624
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_3000.txt",
+        "path_type": "hardlink",
+        "sha256": "577ba82fdfc1121d802fbdcab39a90da1fbe27aa3d640401e5fadf1349c8b470",
+        "sha256_in_prefix": "577ba82fdfc1121d802fbdcab39a90da1fbe27aa3d640401e5fadf1349c8b470",
+        "size_in_bytes": 94374
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g230l_3360.txt",
+        "path_type": "hardlink",
+        "sha256": "511378e8d3483a48dacf4ad713ceab5e541a93c2799d9b4ff6ef375a8893c483",
+        "sha256_in_prefix": "511378e8d3483a48dacf4ad713ceab5e541a93c2799d9b4ff6ef375a8893c483",
+        "size_in_bytes": 96852
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2617.txt",
+        "path_type": "hardlink",
+        "sha256": "c80639382d5e811fe2e13552f576882f4603f706b77b26393b69be1bf51f15d0",
+        "sha256_in_prefix": "c80639382d5e811fe2e13552f576882f4603f706b77b26393b69be1bf51f15d0",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2637.txt",
+        "path_type": "hardlink",
+        "sha256": "84a86876174b6a1c6bb4d99632f66314455dbecc7cd57178d2a64e6d05130e4b",
+        "sha256_in_prefix": "84a86876174b6a1c6bb4d99632f66314455dbecc7cd57178d2a64e6d05130e4b",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2657.txt",
+        "path_type": "hardlink",
+        "sha256": "f45af2a6a0782738b0e9b6a5feaf098234ac64b3cda4cb6be3b7abcb9edb31d9",
+        "sha256_in_prefix": "f45af2a6a0782738b0e9b6a5feaf098234ac64b3cda4cb6be3b7abcb9edb31d9",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2676.txt",
+        "path_type": "hardlink",
+        "sha256": "9e3cf248d18cb7ec5200c3d7354e07d1e4b9e3d5621b9175d65a045cdedf8d32",
+        "sha256_in_prefix": "9e3cf248d18cb7ec5200c3d7354e07d1e4b9e3d5621b9175d65a045cdedf8d32",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2695.txt",
+        "path_type": "hardlink",
+        "sha256": "91b7d1cde00a6239a67ccf5e83b97e2bb6b59b61f25b849cf62fa25955979860",
+        "sha256_in_prefix": "91b7d1cde00a6239a67ccf5e83b97e2bb6b59b61f25b849cf62fa25955979860",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2709.txt",
+        "path_type": "hardlink",
+        "sha256": "dcd5fa27a6ed11eaf166bddd7be085144a9d427152e49f0d956ee00ecf9f9deb",
+        "sha256_in_prefix": "dcd5fa27a6ed11eaf166bddd7be085144a9d427152e49f0d956ee00ecf9f9deb",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2719.txt",
+        "path_type": "hardlink",
+        "sha256": "054ccb89e1be75f064dea89849f7c33fdbaf6b3a883a668c0fc227a77b1b218e",
+        "sha256_in_prefix": "054ccb89e1be75f064dea89849f7c33fdbaf6b3a883a668c0fc227a77b1b218e",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2739.txt",
+        "path_type": "hardlink",
+        "sha256": "137a6b8a76d4c549ad13a9bab07e6e0d7c1fac68a86bcd518b9d810203abdcb1",
+        "sha256_in_prefix": "137a6b8a76d4c549ad13a9bab07e6e0d7c1fac68a86bcd518b9d810203abdcb1",
+        "size_in_bytes": 99722
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2850.txt",
+        "path_type": "hardlink",
+        "sha256": "44ee68412cf529add25751fc18654fe293532a135384d14f27b997d888291c65",
+        "sha256_in_prefix": "44ee68412cf529add25751fc18654fe293532a135384d14f27b997d888291c65",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2952.txt",
+        "path_type": "hardlink",
+        "sha256": "5140a9c9a10730b7fbb7e211e9e4537884c74284575a8432c3f29b61b408bc87",
+        "sha256_in_prefix": "5140a9c9a10730b7fbb7e211e9e4537884c74284575a8432c3f29b61b408bc87",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2979.txt",
+        "path_type": "hardlink",
+        "sha256": "59e784fa6d198d31dcd5619370996061d792e04a3252731919712c53359e4171",
+        "sha256_in_prefix": "59e784fa6d198d31dcd5619370996061d792e04a3252731919712c53359e4171",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_2996.txt",
+        "path_type": "hardlink",
+        "sha256": "8836b33f862c72cdf4df038b1abdbde08697403376148a10f349f71d65c10a01",
+        "sha256_in_prefix": "8836b33f862c72cdf4df038b1abdbde08697403376148a10f349f71d65c10a01",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3018.txt",
+        "path_type": "hardlink",
+        "sha256": "99dbafc85e78a23caefee7b689b5d2a9576dd1ee7eb4be8d5b852cfb2426a0c1",
+        "sha256_in_prefix": "99dbafc85e78a23caefee7b689b5d2a9576dd1ee7eb4be8d5b852cfb2426a0c1",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3035.txt",
+        "path_type": "hardlink",
+        "sha256": "966462fc5ee939d17a0d8aadddce25611f3ab25911a986abec54d4947ea3a7fc",
+        "sha256_in_prefix": "966462fc5ee939d17a0d8aadddce25611f3ab25911a986abec54d4947ea3a7fc",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3057.txt",
+        "path_type": "hardlink",
+        "sha256": "2e10dc8b3f97c5147f3714cce3675ffcd5b7bdcbd33594db9249a04c4605d539",
+        "sha256_in_prefix": "2e10dc8b3f97c5147f3714cce3675ffcd5b7bdcbd33594db9249a04c4605d539",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3074.txt",
+        "path_type": "hardlink",
+        "sha256": "3ebbe97a8e56bfcc45abde1fc6bcaf0fc5cac942c810779ef5e7fdb50f3667cf",
+        "sha256_in_prefix": "3ebbe97a8e56bfcc45abde1fc6bcaf0fc5cac942c810779ef5e7fdb50f3667cf",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/cos_nuv_g285m_3094.txt",
+        "path_type": "hardlink",
+        "sha256": "ba30aa86f42bcf68fdf73d83b3accad03080192d64a643bb1a4254fdd321db33",
+        "sha256_in_prefix": "ba30aa86f42bcf68fdf73d83b3accad03080192d64a643bb1a4254fdd321db33",
+        "size_in_bytes": 102032
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fgs.dat",
+        "path_type": "hardlink",
+        "sha256": "f933e542a59ae77faf953d6f200d5b143c13da01ce71269ae574eb0c5b43c2c6",
+        "sha256_in_prefix": "f933e542a59ae77faf953d6f200d5b143c13da01ce71269ae574eb0c5b43c2c6",
+        "size_in_bytes": 5427
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/foc.dat",
+        "path_type": "hardlink",
+        "sha256": "f63448c01b18ef14e0fe0e20b94dbad7a117ab959ad4474e76b31bcadeea124e",
+        "sha256_in_prefix": "f63448c01b18ef14e0fe0e20b94dbad7a117ab959ad4474e76b31bcadeea124e",
+        "size_in_bytes": 6327
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g130h.dat",
+        "path_type": "hardlink",
+        "sha256": "956e7aa86c6220df213280ca187141da8c86026112faaf3af34b5e7ef823add3",
+        "sha256_in_prefix": "956e7aa86c6220df213280ca187141da8c86026112faaf3af34b5e7ef823add3",
+        "size_in_bytes": 4646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g160l.dat",
+        "path_type": "hardlink",
+        "sha256": "0530195ebefdea65b85c55f11192b803716218ea16f9c976351199e1443a680a",
+        "sha256_in_prefix": "0530195ebefdea65b85c55f11192b803716218ea16f9c976351199e1443a680a",
+        "size_in_bytes": 3341
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g190h.dat",
+        "path_type": "hardlink",
+        "sha256": "4ee1e8f8895ccbdfef96784bf0622942ae84307043d71a9210249bf1f3fe1686",
+        "sha256_in_prefix": "4ee1e8f8895ccbdfef96784bf0622942ae84307043d71a9210249bf1f3fe1686",
+        "size_in_bytes": 4646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g270h.dat",
+        "path_type": "hardlink",
+        "sha256": "8e4003d1e3908d8bf2cd18cad7b8fcc64e19f5f6f903029aaa9d6b0e28aa61f0",
+        "sha256_in_prefix": "8e4003d1e3908d8bf2cd18cad7b8fcc64e19f5f6f903029aaa9d6b0e28aa61f0",
+        "size_in_bytes": 4646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g400h.dat",
+        "path_type": "hardlink",
+        "sha256": "50a4cee40c072baa49a441e5f39baae3926ea0d6490a7103d60f8a979f8d7bbc",
+        "sha256_in_prefix": "50a4cee40c072baa49a441e5f39baae3926ea0d6490a7103d60f8a979f8d7bbc",
+        "size_in_bytes": 4646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g570h.dat",
+        "path_type": "hardlink",
+        "sha256": "8cff8558e127b3d5b8c04b1c0a1a270f46b19ebea9cb67dee66e63ea5dc42ea7",
+        "sha256_in_prefix": "8cff8558e127b3d5b8c04b1c0a1a270f46b19ebea9cb67dee66e63ea5dc42ea7",
+        "size_in_bytes": 4646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_g650l.dat",
+        "path_type": "hardlink",
+        "sha256": "5edd73312093dd281ac65f6f7bf29b4a67a858da78e4b9d5d761c38e68299f89",
+        "sha256_in_prefix": "5edd73312093dd281ac65f6f7bf29b4a67a858da78e4b9d5d761c38e68299f89",
+        "size_in_bytes": 3242
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_blue_prism.dat",
+        "path_type": "hardlink",
+        "sha256": "d2d4e65ce0e71d5902d9bb2dd13a7026dbe2b7478d356701a8bbdd41a315b3a4",
+        "sha256_in_prefix": "d2d4e65ce0e71d5902d9bb2dd13a7026dbe2b7478d356701a8bbdd41a315b3a4",
+        "size_in_bytes": 4502
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g160l.dat",
+        "path_type": "hardlink",
+        "sha256": "064d13c0d2c659c8e53f07ec60417cb6b9df4011ca79cdfdd5a1e26f4b852005",
+        "sha256_in_prefix": "064d13c0d2c659c8e53f07ec60417cb6b9df4011ca79cdfdd5a1e26f4b852005",
+        "size_in_bytes": 4309
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g190h.dat",
+        "path_type": "hardlink",
+        "sha256": "caf7d9dfa0e9a93574a5ac35c9d850e4723f754a69544f17e3923cce5a6df5d2",
+        "sha256_in_prefix": "caf7d9dfa0e9a93574a5ac35c9d850e4723f754a69544f17e3923cce5a6df5d2",
+        "size_in_bytes": 6181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g270h.dat",
+        "path_type": "hardlink",
+        "sha256": "67560a260b4fb786bbfb2f16431c723195723f664d594c5e1ac4fca2a23bfa41",
+        "sha256_in_prefix": "67560a260b4fb786bbfb2f16431c723195723f664d594c5e1ac4fca2a23bfa41",
+        "size_in_bytes": 6181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g400h.dat",
+        "path_type": "hardlink",
+        "sha256": "008a092b64d541e09475300020d42ae81b6535af16f8381b86bcb8fe7dc6eab9",
+        "sha256_in_prefix": "008a092b64d541e09475300020d42ae81b6535af16f8381b86bcb8fe7dc6eab9",
+        "size_in_bytes": 6181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g570h.dat",
+        "path_type": "hardlink",
+        "sha256": "78ed273eece2996930ce2f0ea4e03727685a7d57a0fb64e5cd643769a013e59a",
+        "sha256_in_prefix": "78ed273eece2996930ce2f0ea4e03727685a7d57a0fb64e5cd643769a013e59a",
+        "size_in_bytes": 6181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g650l.dat",
+        "path_type": "hardlink",
+        "sha256": "65de3f03f01083cb09bab62445f960cfc5074d9e0e76eb74b016d3f56ceca34f",
+        "sha256_in_prefix": "65de3f03f01083cb09bab62445f960cfc5074d9e0e76eb74b016d3f56ceca34f",
+        "size_in_bytes": 4321
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_g780h.dat",
+        "path_type": "hardlink",
+        "sha256": "86b32c47b1452b3e34eef76b5e037ed7b64b859a5e41004120d25385fb7d05e3",
+        "sha256_in_prefix": "86b32c47b1452b3e34eef76b5e037ed7b64b859a5e41004120d25385fb7d05e3",
+        "size_in_bytes": 6181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/fos_red_prism.dat",
+        "path_type": "hardlink",
+        "sha256": "4dd88c9563764be22abf1b6f301a54f5293e21c1af6fc8c18c3bdd5fe1ee46ff",
+        "sha256_in_prefix": "4dd88c9563764be22abf1b6f301a54f5293e21c1af6fc8c18c3bdd5fe1ee46ff",
+        "size_in_bytes": 6615
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_18.dat",
+        "path_type": "hardlink",
+        "sha256": "577e74a8856d2068b1867e328c61f357ab1523e8d766f22dafc3e4f21877fc2f",
+        "sha256_in_prefix": "577e74a8856d2068b1867e328c61f357ab1523e8d766f22dafc3e4f21877fc2f",
+        "size_in_bytes": 53765
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_19.dat",
+        "path_type": "hardlink",
+        "sha256": "193c269a3e4db88de85db49c5827a274be3caa9d194a6338facb88aa069b7cd0",
+        "sha256_in_prefix": "193c269a3e4db88de85db49c5827a274be3caa9d194a6338facb88aa069b7cd0",
+        "size_in_bytes": 51025
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_20.dat",
+        "path_type": "hardlink",
+        "sha256": "c9cff4494db6f82ea47ca5e6c4b0f8993818564f0b380278b35ba811f4bd7d3c",
+        "sha256_in_prefix": "c9cff4494db6f82ea47ca5e6c4b0f8993818564f0b380278b35ba811f4bd7d3c",
+        "size_in_bytes": 48315
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_21.dat",
+        "path_type": "hardlink",
+        "sha256": "39bd208c0e89b141dd5d5a2f89b39d39d438375061ea985be712f73d7a56bf8b",
+        "sha256_in_prefix": "39bd208c0e89b141dd5d5a2f89b39d39d438375061ea985be712f73d7a56bf8b",
+        "size_in_bytes": 46055
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_22.dat",
+        "path_type": "hardlink",
+        "sha256": "361cf4a0b836ffe0da6912ffb5e91e94f5385c8d5e0bd0c7d8c5817179f2de43",
+        "sha256_in_prefix": "361cf4a0b836ffe0da6912ffb5e91e94f5385c8d5e0bd0c7d8c5817179f2de43",
+        "size_in_bytes": 44065
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_23.dat",
+        "path_type": "hardlink",
+        "sha256": "abaf1faab319ec2603864bf463b7a4b1f0f833530b54bca8ab370b6366147cd7",
+        "sha256_in_prefix": "abaf1faab319ec2603864bf463b7a4b1f0f833530b54bca8ab370b6366147cd7",
+        "size_in_bytes": 42415
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_24.dat",
+        "path_type": "hardlink",
+        "sha256": "22155a36831e65064f1e09c4d0b8f64515b5358ac325302dc7cc570a3982575e",
+        "sha256_in_prefix": "22155a36831e65064f1e09c4d0b8f64515b5358ac325302dc7cc570a3982575e",
+        "size_in_bytes": 40535
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_25.dat",
+        "path_type": "hardlink",
+        "sha256": "ab0af0d6e6fbc04ec6a90ba8c15f2b305dffd14501a12c49bee932e1da9fb0ec",
+        "sha256_in_prefix": "ab0af0d6e6fbc04ec6a90ba8c15f2b305dffd14501a12c49bee932e1da9fb0ec",
+        "size_in_bytes": 38745
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_26.dat",
+        "path_type": "hardlink",
+        "sha256": "e827e9cd88dd69c6ddf32897b673e08fea9179d6045118c243a57baae0a3c9f4",
+        "sha256_in_prefix": "e827e9cd88dd69c6ddf32897b673e08fea9179d6045118c243a57baae0a3c9f4",
+        "size_in_bytes": 37175
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_27.dat",
+        "path_type": "hardlink",
+        "sha256": "e9b4e80bd90f699699213804322e5dae72018e27b608a72ad856dfd605cec262",
+        "sha256_in_prefix": "e9b4e80bd90f699699213804322e5dae72018e27b608a72ad856dfd605cec262",
+        "size_in_bytes": 35775
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_28.dat",
+        "path_type": "hardlink",
+        "sha256": "08a7768cfc3106ac671b0e9bd7b368ccca68dd482e2ad2cfbc5723ec87cf2808",
+        "sha256_in_prefix": "08a7768cfc3106ac671b0e9bd7b368ccca68dd482e2ad2cfbc5723ec87cf2808",
+        "size_in_bytes": 34575
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_29.dat",
+        "path_type": "hardlink",
+        "sha256": "4c6ae827a88f1c543416804530fbfdb2cc1d7a73f4446f4711c12afb33637725",
+        "sha256_in_prefix": "4c6ae827a88f1c543416804530fbfdb2cc1d7a73f4446f4711c12afb33637725",
+        "size_in_bytes": 32875
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_30.dat",
+        "path_type": "hardlink",
+        "sha256": "124ad850205791ad043155029033430c90b24a5a4e1e4fcc95f53add5357ee88",
+        "sha256_in_prefix": "124ad850205791ad043155029033430c90b24a5a4e1e4fcc95f53add5357ee88",
+        "size_in_bytes": 32515
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_31.dat",
+        "path_type": "hardlink",
+        "sha256": "4a95d6e4a52375f281ab6d1f7b0f9ff1a514b450abf4d0dbfac568c4c949a49c",
+        "sha256_in_prefix": "4a95d6e4a52375f281ab6d1f7b0f9ff1a514b450abf4d0dbfac568c4c949a49c",
+        "size_in_bytes": 30895
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_32.dat",
+        "path_type": "hardlink",
+        "sha256": "170984a5c2c364293c5653ad0f8e8c551211d877ae91232255f76e3a47193618",
+        "sha256_in_prefix": "170984a5c2c364293c5653ad0f8e8c551211d877ae91232255f76e3a47193618",
+        "size_in_bytes": 30345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_33.dat",
+        "path_type": "hardlink",
+        "sha256": "e24b61cbf7694771ece4a405a8e0a947e02935fde88eac348e5ddf04a8b828dd",
+        "sha256_in_prefix": "e24b61cbf7694771ece4a405a8e0a947e02935fde88eac348e5ddf04a8b828dd",
+        "size_in_bytes": 26541
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_34.dat",
+        "path_type": "hardlink",
+        "sha256": "a2797afc5082498d745b04df6901cb862d62f8a0436bb244eb7a3ffedf4cb089",
+        "sha256_in_prefix": "a2797afc5082498d745b04df6901cb862d62f8a0436bb244eb7a3ffedf4cb089",
+        "size_in_bytes": 25209
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_35.dat",
+        "path_type": "hardlink",
+        "sha256": "314b06fcb5596f5d0ce10aaf84bf130584e02baee16b502b0b7f63fb68a516ac",
+        "sha256_in_prefix": "314b06fcb5596f5d0ce10aaf84bf130584e02baee16b502b0b7f63fb68a516ac",
+        "size_in_bytes": 24885
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_36.dat",
+        "path_type": "hardlink",
+        "sha256": "0480126691f00093e495ed1259a9b10b0484a3c8f25b2774efce096d5bbb6fe6",
+        "sha256_in_prefix": "0480126691f00093e495ed1259a9b10b0484a3c8f25b2774efce096d5bbb6fe6",
+        "size_in_bytes": 24462
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_37.dat",
+        "path_type": "hardlink",
+        "sha256": "41ed2cbefa077f382832dbd84415a679601caca3d955d6cbe8d43720597b40a6",
+        "sha256_in_prefix": "41ed2cbefa077f382832dbd84415a679601caca3d955d6cbe8d43720597b40a6",
+        "size_in_bytes": 23373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_38.dat",
+        "path_type": "hardlink",
+        "sha256": "43c4295a65cc246bd516053f000bec792f984842177ecc51569da269b4cd8cf5",
+        "sha256_in_prefix": "43c4295a65cc246bd516053f000bec792f984842177ecc51569da269b4cd8cf5",
+        "size_in_bytes": 22221
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_39.dat",
+        "path_type": "hardlink",
+        "sha256": "8fb04d3c870ccb708bedb5cffda276826bc654b328e0c2899b123cce7c097e65",
+        "sha256_in_prefix": "8fb04d3c870ccb708bedb5cffda276826bc654b328e0c2899b123cce7c097e65",
+        "size_in_bytes": 22212
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_40.dat",
+        "path_type": "hardlink",
+        "sha256": "9a604c5bf50e78858970f1486bf28b0f8fb0d250605fddb92e5652279aa559d6",
+        "sha256_in_prefix": "9a604c5bf50e78858970f1486bf28b0f8fb0d250605fddb92e5652279aa559d6",
+        "size_in_bytes": 22284
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_41.dat",
+        "path_type": "hardlink",
+        "sha256": "33dda2c6402198936d2963f37c6f951fb0d6a53e52f669863df389c7c1e9309f",
+        "sha256_in_prefix": "33dda2c6402198936d2963f37c6f951fb0d6a53e52f669863df389c7c1e9309f",
+        "size_in_bytes": 20853
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_42.dat",
+        "path_type": "hardlink",
+        "sha256": "b61c6253ee005f52ec5a83e75ceda57e0580c43cb64c4456b82d214b3981af6d",
+        "sha256_in_prefix": "b61c6253ee005f52ec5a83e75ceda57e0580c43cb64c4456b82d214b3981af6d",
+        "size_in_bytes": 20736
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_43.dat",
+        "path_type": "hardlink",
+        "sha256": "7abffd897977d8504f744a66715ebcf802ed088ae3a5216f5fd8aa92d473eb6a",
+        "sha256_in_prefix": "7abffd897977d8504f744a66715ebcf802ed088ae3a5216f5fd8aa92d473eb6a",
+        "size_in_bytes": 19863
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_44.dat",
+        "path_type": "hardlink",
+        "sha256": "767a2aa85cf566c9a631b50e0dca5edf825fbb88b00b9af6f028da23bca5fabb",
+        "sha256_in_prefix": "767a2aa85cf566c9a631b50e0dca5edf825fbb88b00b9af6f028da23bca5fabb",
+        "size_in_bytes": 19710
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_45.dat",
+        "path_type": "hardlink",
+        "sha256": "0d543aa77246585fc495323aa58b4d255fdfa77fc302f29137f4e79ae58c621a",
+        "sha256_in_prefix": "0d543aa77246585fc495323aa58b4d255fdfa77fc302f29137f4e79ae58c621a",
+        "size_in_bytes": 19467
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_46.dat",
+        "path_type": "hardlink",
+        "sha256": "bf92ba4a034a4c7e6a0887fbd0ed4c59d06fdb0a18059b7e9d39ed326abb705a",
+        "sha256_in_prefix": "bf92ba4a034a4c7e6a0887fbd0ed4c59d06fdb0a18059b7e9d39ed326abb705a",
+        "size_in_bytes": 18513
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_47.dat",
+        "path_type": "hardlink",
+        "sha256": "e7cc87d56b3b41fcae0623e2205c8f356c0d01cc19c7312426a888afea36e298",
+        "sha256_in_prefix": "e7cc87d56b3b41fcae0623e2205c8f356c0d01cc19c7312426a888afea36e298",
+        "size_in_bytes": 18882
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_48.dat",
+        "path_type": "hardlink",
+        "sha256": "c2addc81908a73bdfee88ab0f8eb7c70477b4d0c0226c6c4f35b3dac79023701",
+        "sha256_in_prefix": "c2addc81908a73bdfee88ab0f8eb7c70477b4d0c0226c6c4f35b3dac79023701",
+        "size_in_bytes": 17784
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_49.dat",
+        "path_type": "hardlink",
+        "sha256": "bd9ba0f645a03abd899d06ee5d55317cb34901cca59f66b0d0cca41d30005a4c",
+        "sha256_in_prefix": "bd9ba0f645a03abd899d06ee5d55317cb34901cca59f66b0d0cca41d30005a4c",
+        "size_in_bytes": 18162
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_50.dat",
+        "path_type": "hardlink",
+        "sha256": "7dee8ba6fe128b243b9d21e608cc7c79189e8caedf105bf79020bc28e1a22e06",
+        "sha256_in_prefix": "7dee8ba6fe128b243b9d21e608cc7c79189e8caedf105bf79020bc28e1a22e06",
+        "size_in_bytes": 16938
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echa_51.dat",
+        "path_type": "hardlink",
+        "sha256": "2dda3cbe058bde60e0d84716dbc442341ccb1eea39d2ac7aaaf18a7ba84fd098",
+        "sha256_in_prefix": "2dda3cbe058bde60e0d84716dbc442341ccb1eea39d2ac7aaaf18a7ba84fd098",
+        "size_in_bytes": 17298
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_18.dat",
+        "path_type": "hardlink",
+        "sha256": "66f7b66097a0fc2cd28b0b443789e6c1a1d4c68ee444390f6d75d6c3772ad723",
+        "sha256_in_prefix": "66f7b66097a0fc2cd28b0b443789e6c1a1d4c68ee444390f6d75d6c3772ad723",
+        "size_in_bytes": 53765
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_19.dat",
+        "path_type": "hardlink",
+        "sha256": "a0f7d15ec351c22bca76f13ce130ceae46065d8cefac6bc617472f154a9ffc80",
+        "sha256_in_prefix": "a0f7d15ec351c22bca76f13ce130ceae46065d8cefac6bc617472f154a9ffc80",
+        "size_in_bytes": 51025
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_20.dat",
+        "path_type": "hardlink",
+        "sha256": "ca798c334d46237f55a8e1f234cb328cd4bc4041d85915cf8b633ef2efc5df26",
+        "sha256_in_prefix": "ca798c334d46237f55a8e1f234cb328cd4bc4041d85915cf8b633ef2efc5df26",
+        "size_in_bytes": 48315
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_21.dat",
+        "path_type": "hardlink",
+        "sha256": "8cb8ba55e35a5ec5b475600712d408b1586a902444aeed2a870c8232808ab8ea",
+        "sha256_in_prefix": "8cb8ba55e35a5ec5b475600712d408b1586a902444aeed2a870c8232808ab8ea",
+        "size_in_bytes": 46055
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_22.dat",
+        "path_type": "hardlink",
+        "sha256": "8a74c82d7ba517db9b110100022a25840fd7deb43cf1ad360c0e42ce620b87f0",
+        "sha256_in_prefix": "8a74c82d7ba517db9b110100022a25840fd7deb43cf1ad360c0e42ce620b87f0",
+        "size_in_bytes": 44065
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_23.dat",
+        "path_type": "hardlink",
+        "sha256": "39b4d5758ada3234f69d91f781303749b3f15abb8bc4e600b190eb8efe9b07c6",
+        "sha256_in_prefix": "39b4d5758ada3234f69d91f781303749b3f15abb8bc4e600b190eb8efe9b07c6",
+        "size_in_bytes": 42415
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_24.dat",
+        "path_type": "hardlink",
+        "sha256": "5d7cfd51ebf5639fcb6b3bf8d597b4a24409e9f810a6f5e7d27f310d0b425078",
+        "sha256_in_prefix": "5d7cfd51ebf5639fcb6b3bf8d597b4a24409e9f810a6f5e7d27f310d0b425078",
+        "size_in_bytes": 40535
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_25.dat",
+        "path_type": "hardlink",
+        "sha256": "e6b1e3d3343d0a19e9868efd69918d73131fc826c0bc8b90c83eeb3559aed54a",
+        "sha256_in_prefix": "e6b1e3d3343d0a19e9868efd69918d73131fc826c0bc8b90c83eeb3559aed54a",
+        "size_in_bytes": 38745
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_26.dat",
+        "path_type": "hardlink",
+        "sha256": "1c286755ec21f227b9ed203bf6c28f641a2e864f80bc10036d78bbfed0094394",
+        "sha256_in_prefix": "1c286755ec21f227b9ed203bf6c28f641a2e864f80bc10036d78bbfed0094394",
+        "size_in_bytes": 37175
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_27.dat",
+        "path_type": "hardlink",
+        "sha256": "aa7c84dd22f5afcf034f9637e01f52f8a6b4e22380f8fdf66db15bf0b803cee7",
+        "sha256_in_prefix": "aa7c84dd22f5afcf034f9637e01f52f8a6b4e22380f8fdf66db15bf0b803cee7",
+        "size_in_bytes": 35775
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_28.dat",
+        "path_type": "hardlink",
+        "sha256": "100925ffd78ebd62a4d56fb2f39a96d89c5b85efc5ad1f74702b3668a9a475a5",
+        "sha256_in_prefix": "100925ffd78ebd62a4d56fb2f39a96d89c5b85efc5ad1f74702b3668a9a475a5",
+        "size_in_bytes": 34575
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_29.dat",
+        "path_type": "hardlink",
+        "sha256": "8815a2f09cc059c4b5315207a9ea2c8154646c54bcae6b6b8d3b94bc87c24a43",
+        "sha256_in_prefix": "8815a2f09cc059c4b5315207a9ea2c8154646c54bcae6b6b8d3b94bc87c24a43",
+        "size_in_bytes": 32875
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_30.dat",
+        "path_type": "hardlink",
+        "sha256": "d7e22be5c50c2fc2e6c1896bf0534c05d02e95242736174fde9c08cd7282ac9b",
+        "sha256_in_prefix": "d7e22be5c50c2fc2e6c1896bf0534c05d02e95242736174fde9c08cd7282ac9b",
+        "size_in_bytes": 32515
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_31.dat",
+        "path_type": "hardlink",
+        "sha256": "1ffea792f69272e4ebc3e51c071bf0bd13284ac6e4f008e10ee8cc70e73463a3",
+        "sha256_in_prefix": "1ffea792f69272e4ebc3e51c071bf0bd13284ac6e4f008e10ee8cc70e73463a3",
+        "size_in_bytes": 30895
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_32.dat",
+        "path_type": "hardlink",
+        "sha256": "b52b75dc9b58cf2586ddf31f4329dbee8914344776c5593aefaa3b786d8bc659",
+        "sha256_in_prefix": "b52b75dc9b58cf2586ddf31f4329dbee8914344776c5593aefaa3b786d8bc659",
+        "size_in_bytes": 30345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_echb_33.dat",
+        "path_type": "hardlink",
+        "sha256": "6a53126a53c490f91575e048aa685d516c8dc3267d6cd2d2173d2896ada32331",
+        "sha256_in_prefix": "6a53126a53c490f91575e048aa685d516c8dc3267d6cd2d2173d2896ada32331",
+        "size_in_bytes": 29415
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g140l.dat",
+        "path_type": "hardlink",
+        "sha256": "a9adb973c83b4e17c8eef511a0b70697b57d8efb6c05602496c44c3ca1384f2b",
+        "sha256_in_prefix": "a9adb973c83b4e17c8eef511a0b70697b57d8efb6c05602496c44c3ca1384f2b",
+        "size_in_bytes": 14013
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g140m.dat",
+        "path_type": "hardlink",
+        "sha256": "610f9ba884b139171b2ff86dce43a8eb46ba7438df03831c5ad259e9c58947a3",
+        "sha256_in_prefix": "610f9ba884b139171b2ff86dce43a8eb46ba7438df03831c5ad259e9c58947a3",
+        "size_in_bytes": 148183
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g160m.dat",
+        "path_type": "hardlink",
+        "sha256": "35399f2fc3ff8145ef382374d3c211a5e884530ecb7d6bdc39aca5a504a1fdcf",
+        "sha256_in_prefix": "35399f2fc3ff8145ef382374d3c211a5e884530ecb7d6bdc39aca5a504a1fdcf",
+        "size_in_bytes": 115983
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g200m.dat",
+        "path_type": "hardlink",
+        "sha256": "d8055b50e32b29bdbd5055c9670470a932cdeb1727490270cf2a3305f30947f2",
+        "sha256_in_prefix": "d8055b50e32b29bdbd5055c9670470a932cdeb1727490270cf2a3305f30947f2",
+        "size_in_bytes": 102603
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hrs_g270m.dat",
+        "path_type": "hardlink",
+        "sha256": "9d295c73d546058be1f41a97924fb670638197420d18b51d4e934bfac1fabff7",
+        "sha256_in_prefix": "9d295c73d546058be1f41a97924fb670638197420d18b51d4e934bfac1fabff7",
+        "size_in_bytes": 109323
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/hsp.dat",
+        "path_type": "hardlink",
+        "sha256": "a376be158001c12ad24781e24cde982d100ce4339855ca674ab367188b6f0113",
+        "sha256_in_prefix": "a376be158001c12ad24781e24cde982d100ce4339855ca674ab367188b6f0113",
+        "size_in_bytes": 9927
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_1a.dat",
+        "path_type": "hardlink",
+        "sha256": "70d5ff334e1f447d0b5e496b9aacc2d77969fa1b4c7938b7cfe8eaa07cd5630b",
+        "sha256_in_prefix": "70d5ff334e1f447d0b5e496b9aacc2d77969fa1b4c7938b7cfe8eaa07cd5630b",
+        "size_in_bytes": 7973
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_1b.dat",
+        "path_type": "hardlink",
+        "sha256": "3f60c20f7f092df3c8d473bc01fed9ad85c6b89ecf722afc3f81caba2fc57ae9",
+        "sha256_in_prefix": "3f60c20f7f092df3c8d473bc01fed9ad85c6b89ecf722afc3f81caba2fc57ae9",
+        "size_in_bytes": 7765
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_1c.dat",
+        "path_type": "hardlink",
+        "sha256": "ba966b6f9fe742ff030538aabff6c8ad1d0b5190cb33534f23bf47e8126ab43a",
+        "sha256_in_prefix": "ba966b6f9fe742ff030538aabff6c8ad1d0b5190cb33534f23bf47e8126ab43a",
+        "size_in_bytes": 7564
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_2a.dat",
+        "path_type": "hardlink",
+        "sha256": "f7960f50b82ba6d741d506e6edae22187b9bb1685250711d9cc2e3e910d99218",
+        "sha256_in_prefix": "f7960f50b82ba6d741d506e6edae22187b9bb1685250711d9cc2e3e910d99218",
+        "size_in_bytes": 11753
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_2b.dat",
+        "path_type": "hardlink",
+        "sha256": "c0ca2b897dc59b9d1090753484b25c4679a0358f676bb5d9721acef40cdf819c",
+        "sha256_in_prefix": "c0ca2b897dc59b9d1090753484b25c4679a0358f676bb5d9721acef40cdf819c",
+        "size_in_bytes": 11722
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_2c.dat",
+        "path_type": "hardlink",
+        "sha256": "fd0bdee1ae2365346708efddaeebcb76936a2c3b90830b5fc4bf88de59288c8c",
+        "sha256_in_prefix": "fd0bdee1ae2365346708efddaeebcb76936a2c3b90830b5fc4bf88de59288c8c",
+        "size_in_bytes": 12303
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_3a.dat",
+        "path_type": "hardlink",
+        "sha256": "02c342b36bdf0861f1410ca73aad3a1eea19315b4e22acd9b91e147dfb57b752",
+        "sha256_in_prefix": "02c342b36bdf0861f1410ca73aad3a1eea19315b4e22acd9b91e147dfb57b752",
+        "size_in_bytes": 12658
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_3b.dat",
+        "path_type": "hardlink",
+        "sha256": "75d7e3ba5961864e9e50451d286169a9b3f63479a89a92e156f01cfab283c645",
+        "sha256_in_prefix": "75d7e3ba5961864e9e50451d286169a9b3f63479a89a92e156f01cfab283c645",
+        "size_in_bytes": 13236
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_3c.dat",
+        "path_type": "hardlink",
+        "sha256": "abfcc6cb5e5ca9867032e3651af5a9e4055b8b730c35c6fa6c4407b64e0eb433",
+        "sha256_in_prefix": "abfcc6cb5e5ca9867032e3651af5a9e4055b8b730c35c6fa6c4407b64e0eb433",
+        "size_in_bytes": 11003
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_4a.dat",
+        "path_type": "hardlink",
+        "sha256": "c422a040b9026f3c98f48f38e525c6a602badbc23b7fd70bb772de2cf890bdd7",
+        "sha256_in_prefix": "c422a040b9026f3c98f48f38e525c6a602badbc23b7fd70bb772de2cf890bdd7",
+        "size_in_bytes": 9966
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_4b.dat",
+        "path_type": "hardlink",
+        "sha256": "653f0761418efd1ad4e9fd0e2631ee5256e4575eb8dd65b5e7bc606e49aa9dcc",
+        "sha256_in_prefix": "653f0761418efd1ad4e9fd0e2631ee5256e4575eb8dd65b5e7bc606e49aa9dcc",
+        "size_in_bytes": 8876
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/miri_mrs_4c.dat",
+        "path_type": "hardlink",
+        "sha256": "85c992b10bdbeae1d2b8bdfb9c3ac3779a34bc7cbaedf5611653b686df3739f0",
+        "sha256_in_prefix": "85c992b10bdbeae1d2b8bdfb9c3ac3779a34bc7cbaedf5611653b686df3739f0",
+        "size_in_bytes": 7670
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos.dat",
+        "path_type": "hardlink",
+        "sha256": "1489c9871adbdb2dea2591818b85efa9eb3d9071a27fb53a850f24e1ee0a3873",
+        "sha256_in_prefix": "1489c9871adbdb2dea2591818b85efa9eb3d9071a27fb53a850f24e1ee0a3873",
+        "size_in_bytes": 73488
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos_g096.dat",
+        "path_type": "hardlink",
+        "sha256": "779306abef38d076e1fd39aacb8b364b422e9c53dc99b2aa89b5ac4f273a8d7c",
+        "sha256_in_prefix": "779306abef38d076e1fd39aacb8b364b422e9c53dc99b2aa89b5ac4f273a8d7c",
+        "size_in_bytes": 1174
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos_g141.dat",
+        "path_type": "hardlink",
+        "sha256": "7a89325baf09c26774c317ab93a8cd41c64dbcd4d3a2ac2d72339ee02f9c81e7",
+        "sha256_in_prefix": "7a89325baf09c26774c317ab93a8cd41c64dbcd4d3a2ac2d72339ee02f9c81e7",
+        "size_in_bytes": 1565
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nicmos_g206.dat",
+        "path_type": "hardlink",
+        "sha256": "c42ef87e6e1d4589828e7fe976b553e2765fe251e48bce21d7bd367ed652c3a1",
+        "sha256_in_prefix": "c42ef87e6e1d4589828e7fe976b553e2765fe251e48bce21d7bd367ed652c3a1",
+        "size_in_bytes": 1508
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g140h.wavecat",
+        "path_type": "hardlink",
+        "sha256": "ac9e45350561678cc482359e8e5ecbecec6eac39db8aee6f4c38c050d721b903",
+        "sha256_in_prefix": "ac9e45350561678cc482359e8e5ecbecec6eac39db8aee6f4c38c050d721b903",
+        "size_in_bytes": 33338
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g140m.wavecat",
+        "path_type": "hardlink",
+        "sha256": "d562284964632b07cb8804a305fd90f224d035ce59732284aade196e6268c1cb",
+        "sha256_in_prefix": "d562284964632b07cb8804a305fd90f224d035ce59732284aade196e6268c1cb",
+        "size_in_bytes": 12410
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g235h.wavecat",
+        "path_type": "hardlink",
+        "sha256": "505b9e7f8aadf9a6b3aef8dbc6bd7d0632166ad8a456b80824d29c2886dfe875",
+        "sha256_in_prefix": "505b9e7f8aadf9a6b3aef8dbc6bd7d0632166ad8a456b80824d29c2886dfe875",
+        "size_in_bytes": 32263
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g235m.wavecat",
+        "path_type": "hardlink",
+        "sha256": "722b570fbd631683d80a82122e11b6c82ecc437c1c88210c3e3beba1ccaed919",
+        "sha256_in_prefix": "722b570fbd631683d80a82122e11b6c82ecc437c1c88210c3e3beba1ccaed919",
+        "size_in_bytes": 12019
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g395h.wavecat",
+        "path_type": "hardlink",
+        "sha256": "3b73002edd2d2cc42ee7d8c4e4baa06cae08748f8ebde7fa1b8b7c4d62ec1335",
+        "sha256_in_prefix": "3b73002edd2d2cc42ee7d8c4e4baa06cae08748f8ebde7fa1b8b7c4d62ec1335",
+        "size_in_bytes": 31000
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_g395m.wavecat",
+        "path_type": "hardlink",
+        "sha256": "f57894a6f9f5a8427a05b36963af4ea6c1d237a7710d8ed97bcac3edce9ab3e6",
+        "sha256_in_prefix": "f57894a6f9f5a8427a05b36963af4ea6c1d237a7710d8ed97bcac3edce9ab3e6",
+        "size_in_bytes": 11528
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nirspec_prism.wavecat",
+        "path_type": "hardlink",
+        "sha256": "f652c115c9134d04024688edbdf1d8d6347531307f321d6d1dcd93ccdef9a8b5",
+        "sha256_in_prefix": "f652c115c9134d04024688edbdf1d8d6347531307f321d6d1dcd93ccdef9a8b5",
+        "size_in_bytes": 3648
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/nsp_msa_wavecat.txt",
+        "path_type": "hardlink",
+        "sha256": "595eaa1167b887afd7e0a2d595572ec2c363cd79a31c64a287c5dbfbde740171",
+        "sha256_in_prefix": "595eaa1167b887afd7e0a2d595572ec2c363cd79a31c64a287c5dbfbde740171",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/prism.dat",
+        "path_type": "hardlink",
+        "sha256": "fbd6e22010f8ce89ba46b7d78d11a3e3b531abbbd289217599e066c777e2afa1",
+        "sha256_in_prefix": "fbd6e22010f8ce89ba46b7d78d11a3e3b531abbbd289217599e066c777e2afa1",
+        "size_in_bytes": 4512
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/prism_c1200.dat",
+        "path_type": "hardlink",
+        "sha256": "fbd6e22010f8ce89ba46b7d78d11a3e3b531abbbd289217599e066c777e2afa1",
+        "sha256_in_prefix": "fbd6e22010f8ce89ba46b7d78d11a3e3b531abbbd289217599e066c777e2afa1",
+        "size_in_bytes": 4512
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/prism_c2125.dat",
+        "path_type": "hardlink",
+        "sha256": "fbd6e22010f8ce89ba46b7d78d11a3e3b531abbbd289217599e066c777e2afa1",
+        "sha256_in_prefix": "fbd6e22010f8ce89ba46b7d78d11a3e3b531abbbd289217599e066c777e2afa1",
+        "size_in_bytes": 4512
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/wavecat.dat",
+        "path_type": "hardlink",
+        "sha256": "24b568c75bd27d249e177bd090165631aabdd2003bd3731a8cd80cb2dfede14b",
+        "sha256_in_prefix": "24b568c75bd27d249e177bd090165631aabdd2003bd3731a8cd80cb2dfede14b",
+        "size_in_bytes": 16871
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/wfc3.dat",
+        "path_type": "hardlink",
+        "sha256": "aad631f098995b71312bbc61962ecb853f5bbea7c0914ea6341b7464d4c1b49d",
+        "sha256_in_prefix": "aad631f098995b71312bbc61962ecb853f5bbea7c0914ea6341b7464d4c1b49d",
+        "size_in_bytes": 9928
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/wfp2.dat",
+        "path_type": "hardlink",
+        "sha256": "aad631f098995b71312bbc61962ecb853f5bbea7c0914ea6341b7464d4c1b49d",
+        "sha256_in_prefix": "aad631f098995b71312bbc61962ecb853f5bbea7c0914ea6341b7464d4c1b49d",
+        "size_in_bytes": 9928
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/wfpc.dat",
+        "path_type": "hardlink",
+        "sha256": "7a63df03d72a07014419833c50389d91a652035b02cb2ac20be212f10e059b2e",
+        "sha256_in_prefix": "7a63df03d72a07014419833c50389d91a652035b02cb2ac20be212f10e059b2e",
+        "size_in_bytes": 9928
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/data/wavecat/wfpc2.dat",
+        "path_type": "hardlink",
+        "sha256": "aad631f098995b71312bbc61962ecb853f5bbea7c0914ea6341b7464d4c1b49d",
+        "sha256_in_prefix": "aad631f098995b71312bbc61962ecb853f5bbea7c0914ea6341b7464d4c1b49d",
+        "size_in_bytes": 9928
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "1865b773142e13783b0e228bcb5e8571f40885e1f0fc4d23541b76771b00bfe0",
+        "sha256_in_prefix": "1865b773142e13783b0e228bcb5e8571f40885e1f0fc4d23541b76771b00bfe0",
+        "size_in_bytes": 3046
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/exceptions.pyc",
+        "path_type": "hardlink",
+        "sha256": "3b94044f80e73f396c4ef444022d2416014695723b4d62af59534f513931b622",
+        "sha256_in_prefix": "3b94044f80e73f396c4ef444022d2416014695723b4d62af59534f513931b622",
+        "size_in_bytes": 6126
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/extinction.py",
+        "path_type": "hardlink",
+        "sha256": "2ea41651027287443db123a3a57aa7a82eee09254567d9cfad3213bfa05b8e0d",
+        "sha256_in_prefix": "2ea41651027287443db123a3a57aa7a82eee09254567d9cfad3213bfa05b8e0d",
+        "size_in_bytes": 9976
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/extinction.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa410acb6418a623ab93c407c2daa242ae11c8d66fa86f25e15bf6848cda76de",
+        "sha256_in_prefix": "fa410acb6418a623ab93c407c2daa242ae11c8d66fa86f25e15bf6848cda76de",
+        "size_in_bytes": 13371
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/graphtab.py",
+        "path_type": "hardlink",
+        "sha256": "4c16c58988f7cfc8f798f51bfbd3206614132563561034e604541b5ee9f1b26f",
+        "sha256_in_prefix": "4c16c58988f7cfc8f798f51bfbd3206614132563561034e604541b5ee9f1b26f",
+        "size_in_bytes": 10656
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/graphtab.pyc",
+        "path_type": "hardlink",
+        "sha256": "de7345ff2ac763cbd8ea514b36bf1dbd00becfa0067f9589952ecee1391421e4",
+        "sha256_in_prefix": "de7345ff2ac763cbd8ea514b36bf1dbd00becfa0067f9589952ecee1391421e4",
+        "size_in_bytes": 11519
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/locations.py",
+        "path_type": "hardlink",
+        "sha256": "2354ca2b26060102189537a2afdb1d41797ae71c06d6187391b51d6e65cb6b7a",
+        "sha256_in_prefix": "2354ca2b26060102189537a2afdb1d41797ae71c06d6187391b51d6e65cb6b7a",
+        "size_in_bytes": 11805
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/locations.pyc",
+        "path_type": "hardlink",
+        "sha256": "eba773519aee25307917ce4a54da60333be0ad13bdee575d561184266ef66015",
+        "sha256_in_prefix": "eba773519aee25307917ce4a54da60333be0ad13bdee575d561184266ef66015",
+        "size_in_bytes": 9644
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/obsbandpass.py",
+        "path_type": "hardlink",
+        "sha256": "dbedbd849f3122fa1d5af0ed426318bb2468d915566100751012c8ffa20812f9",
+        "sha256_in_prefix": "dbedbd849f3122fa1d5af0ed426318bb2468d915566100751012c8ffa20812f9",
+        "size_in_bytes": 20710
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/obsbandpass.pyc",
+        "path_type": "hardlink",
+        "sha256": "192c9c4a2411a7258ca6a691e85360bca916c2e9424109059344f12befbdf7b0",
+        "sha256_in_prefix": "192c9c4a2411a7258ca6a691e85360bca916c2e9424109059344f12befbdf7b0",
+        "size_in_bytes": 17071
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/observation.py",
+        "path_type": "hardlink",
+        "sha256": "4ec68fb242cf84aa18e55e718aa86423f42782b8d67aba7e59737ba14e7a6238",
+        "sha256_in_prefix": "4ec68fb242cf84aa18e55e718aa86423f42782b8d67aba7e59737ba14e7a6238",
+        "size_in_bytes": 28555
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/observation.pyc",
+        "path_type": "hardlink",
+        "sha256": "148b4823b409c9e8cb9bc4d2e9e38ce07777a93d7e37a8010c9344cf2a4060a6",
+        "sha256_in_prefix": "148b4823b409c9e8cb9bc4d2e9e38ce07777a93d7e37a8010c9344cf2a4060a6",
+        "size_in_bytes": 25187
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/observationmode.py",
+        "path_type": "hardlink",
+        "sha256": "be12ac4e8d84f8b66009e1fb8826c03c90330014298be5352e340ee41a8edb41",
+        "sha256_in_prefix": "be12ac4e8d84f8b66009e1fb8826c03c90330014298be5352e340ee41a8edb41",
+        "size_in_bytes": 20395
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/observationmode.pyc",
+        "path_type": "hardlink",
+        "sha256": "84d3a48410846d350bdf4cfeb8e5cca2157c35d0acf58345e39b454433ef05a9",
+        "sha256_in_prefix": "84d3a48410846d350bdf4cfeb8e5cca2157c35d0acf58345e39b454433ef05a9",
+        "size_in_bytes": 20833
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/planck.py",
+        "path_type": "hardlink",
+        "sha256": "ff4a43bd44c260750cc3788b7e70112a79959c3e8ee33038e3422ca0df737fb3",
+        "sha256_in_prefix": "ff4a43bd44c260750cc3788b7e70112a79959c3e8ee33038e3422ca0df737fb3",
+        "size_in_bytes": 4433
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/planck.pyc",
+        "path_type": "hardlink",
+        "sha256": "f71e6796dcce597d6749680e69dd7cafc9d0816e38fa85f0b57dc72015acf16c",
+        "sha256_in_prefix": "f71e6796dcce597d6749680e69dd7cafc9d0816e38fa85f0b57dc72015acf16c",
+        "size_in_bytes": 4239
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/pysynphot_utils.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.11/_dispatch/miniconda/conda-bld/pysynphot_1524211330979/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "d07ebd26aba940e7e6d250db95c98146da543a621cb51f395d23f70c80d5a74b",
+        "sha256_in_prefix": "e736d2ee179783cb390e34214321dfc8f64d77753d0eba43e0df8f7ca1198b51",
+        "size_in_bytes": 31120
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/reddening.py",
+        "path_type": "hardlink",
+        "sha256": "b3ae70b4596f439be92c4b65b4596442399e17045aae06b39421417b9d2d5f96",
+        "sha256_in_prefix": "b3ae70b4596f439be92c4b65b4596442399e17045aae06b39421417b9d2d5f96",
+        "size_in_bytes": 7862
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/reddening.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2e3d3206ee55748d0e2e7f3ff30af20ed4b8cfc2d59073f90de9832b76bb92d",
+        "sha256_in_prefix": "b2e3d3206ee55748d0e2e7f3ff30af20ed4b8cfc2d59073f90de9832b76bb92d",
+        "size_in_bytes": 9219
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/refs.py",
+        "path_type": "hardlink",
+        "sha256": "8d93c0ff6df4c113da89a243bc6620973be27ca841fd4a81f143751f9f795d9b",
+        "sha256_in_prefix": "8d93c0ff6df4c113da89a243bc6620973be27ca841fd4a81f143751f9f795d9b",
+        "size_in_bytes": 7127
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/refs.pyc",
+        "path_type": "hardlink",
+        "sha256": "154cf64f9c301733f0054346af07028b288c837921ed51030dca6e085e4000cd",
+        "sha256_in_prefix": "154cf64f9c301733f0054346af07028b288c837921ed51030dca6e085e4000cd",
+        "size_in_bytes": 6940
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/renorm.py",
+        "path_type": "hardlink",
+        "sha256": "ed937d91d6869343ac70f595e836636a219275fd112993549b46b789c249c481",
+        "sha256_in_prefix": "ed937d91d6869343ac70f595e836636a219275fd112993549b46b789c249c481",
+        "size_in_bytes": 4614
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/renorm.pyc",
+        "path_type": "hardlink",
+        "sha256": "80fd9b5d64ec3ac41a96498fa2e2b15c858d02e86056aaf98fdd0efbd05492e3",
+        "sha256_in_prefix": "80fd9b5d64ec3ac41a96498fa2e2b15c858d02e86056aaf98fdd0efbd05492e3",
+        "size_in_bytes": 4245
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/spark.py",
+        "path_type": "hardlink",
+        "sha256": "0e42757ded7c7367e3551a8446d9f7234b420439ca1d1a4211936c884d1205f9",
+        "sha256_in_prefix": "0e42757ded7c7367e3551a8446d9f7234b420439ca1d1a4211936c884d1205f9",
+        "size_in_bytes": 24271
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/spark.pyc",
+        "path_type": "hardlink",
+        "sha256": "0595bf95720d0e047febe447aef8dee256cb48a560e44c661c1ffa43439a1c41",
+        "sha256_in_prefix": "0595bf95720d0e047febe447aef8dee256cb48a560e44c661c1ffa43439a1c41",
+        "size_in_bytes": 17342
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/spectrum.py",
+        "path_type": "hardlink",
+        "sha256": "823dfdb01a1691ae81c2449b6cd767b933827e271d293751828c328b174f22e2",
+        "sha256_in_prefix": "823dfdb01a1691ae81c2449b6cd767b933827e271d293751828c328b174f22e2",
+        "size_in_bytes": 105957
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/spectrum.pyc",
+        "path_type": "hardlink",
+        "sha256": "120f39cc52ab7e821ebda6d9c974517826bc43c09d4959828be8773e0968c78b",
+        "sha256_in_prefix": "120f39cc52ab7e821ebda6d9c974517826bc43c09d4959828be8773e0968c78b",
+        "size_in_bytes": 103316
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/spparser.py",
+        "path_type": "hardlink",
+        "sha256": "f54b4d56f759878345820cdbf9be61566609e1565a1bb73bc25811feed4d8160",
+        "sha256_in_prefix": "f54b4d56f759878345820cdbf9be61566609e1565a1bb73bc25811feed4d8160",
+        "size_in_bytes": 12984
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/spparser.pyc",
+        "path_type": "hardlink",
+        "sha256": "46842ef6d756d3de66b6747ffb8c72d8d563099cc325c18ccb5cd05ef1840ff3",
+        "sha256_in_prefix": "46842ef6d756d3de66b6747ffb8c72d8d563099cc325c18ccb5cd05ef1840ff3",
+        "size_in_bytes": 20106
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/svn_version.py",
+        "path_type": "hardlink",
+        "sha256": "046ecdabc4902fff6e19443228e65b2aa5d1d6d1ca6d917ce9d4bbaede7e301b",
+        "sha256_in_prefix": "046ecdabc4902fff6e19443228e65b2aa5d1d6d1ca6d917ce9d4bbaede7e301b",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/svn_version.pyc",
+        "path_type": "hardlink",
+        "sha256": "c23a588dd9bee80e4d82632790cb1a5571455d2ce7240a5209a22230d4276967",
+        "sha256_in_prefix": "c23a588dd9bee80e4d82632790cb1a5571455d2ce7240a5209a22230d4276967",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/tables.py",
+        "path_type": "hardlink",
+        "sha256": "7b03239c590e9504eb25b669a104843f4fa8d04fff841325ec15482d1f95e607",
+        "sha256_in_prefix": "7b03239c590e9504eb25b669a104843f4fa8d04fff841325ec15482d1f95e607",
+        "size_in_bytes": 8431
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/tables.pyc",
+        "path_type": "hardlink",
+        "sha256": "dca9ca0f2a73bf2b7693c058a32575ade1addf42345f5e0aeb691df9efb26063",
+        "sha256_in_prefix": "dca9ca0f2a73bf2b7693c058a32575ade1addf42345f5e0aeb691df9efb26063",
+        "size_in_bytes": 6854
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "3bb4823b4873b5a984451d1b6b14a74c218cabeb7a6381985b1f9e35b21cd437",
+        "sha256_in_prefix": "3bb4823b4873b5a984451d1b6b14a74c218cabeb7a6381985b1f9e35b21cd437",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "b54fe36cd0c54982aef7bfdf570eff756c6092169660436daf47d6a5963dd9e0",
+        "sha256_in_prefix": "b54fe36cd0c54982aef7bfdf570eff756c6092169660436daf47d6a5963dd9e0",
+        "size_in_bytes": 406
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "2c8a59b914c46510fdc347693037bd56acae68ebe32ad9c8931a7f5cbebc4b92",
+        "sha256_in_prefix": "2c8a59b914c46510fdc347693037bd56acae68ebe32ad9c8931a7f5cbebc4b92",
+        "size_in_bytes": 905
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/alpha_lyr_stis_002.fits",
+        "path_type": "hardlink",
+        "sha256": "88df89872756919e4493d52271284737be3d516b0c6fdd7cc0af98a8b5a665a7",
+        "sha256_in_prefix": "88df89872756919e4493d52271284737be3d516b0c6fdd7cc0af98a8b5a665a7",
+        "size_in_bytes": 256320
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/bd_75d325_stis_001.fits",
+        "path_type": "hardlink",
+        "sha256": "c5925e325be2d0312d49904909dc263e4ad05c38f154a82bfefb74082fa0f6f8",
+        "sha256_in_prefix": "c5925e325be2d0312d49904909dc263e4ad05c38f154a82bfefb74082fa0f6f8",
+        "size_in_bytes": 106560
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/bz_7.fits",
+        "path_type": "hardlink",
+        "sha256": "93abed77c6b654bb9a4f436be12fbb40003167ae819fad2c22478267829c45a7",
+        "sha256_in_prefix": "93abed77c6b654bb9a4f436be12fbb40003167ae819fad2c22478267829c45a7",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/lmc_30dorshell_001.fits",
+        "path_type": "hardlink",
+        "sha256": "ab78f4e3f3c1f7d62b383ee9b313220551dfd6bddc76d5fc80b0c2dac576948b",
+        "sha256_in_prefix": "ab78f4e3f3c1f7d62b383ee9b313220551dfd6bddc76d5fc80b0c2dac576948b",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/lmc_diffuse_001.fits",
+        "path_type": "hardlink",
+        "sha256": "84faa4a4656978fd64c755d39d93de0c6a099f58326b1c5193f7df0a99e95709",
+        "sha256_in_prefix": "84faa4a4656978fd64c755d39d93de0c6a099f58326b1c5193f7df0a99e95709",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/lmc_diffuse_002.fits",
+        "path_type": "hardlink",
+        "sha256": "84faa4a4656978fd64c755d39d93de0c6a099f58326b1c5193f7df0a99e95709",
+        "sha256_in_prefix": "84faa4a4656978fd64c755d39d93de0c6a099f58326b1c5193f7df0a99e95709",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/milkyway_dense_001.fits",
+        "path_type": "hardlink",
+        "sha256": "f621c32720bf7777a083652d0bde647bfaf83ee879f1f4a1fa9d9d055d94c428",
+        "sha256_in_prefix": "f621c32720bf7777a083652d0bde647bfaf83ee879f1f4a1fa9d9d055d94c428",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/milkyway_diffuse_001.fits",
+        "path_type": "hardlink",
+        "sha256": "6d9cb92873ab38f80ddefa937b36f3c333915b9fb3a5c1dc896b08707a4ced5e",
+        "sha256_in_prefix": "6d9cb92873ab38f80ddefa937b36f3c333915b9fb3a5c1dc896b08707a4ced5e",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/smc_bar_001.fits",
+        "path_type": "hardlink",
+        "sha256": "69b83a673eb2b75b446813203e5ea2ec90d56cb34fd89f62803a3dc254d3cb15",
+        "sha256_in_prefix": "69b83a673eb2b75b446813203e5ea2ec90d56cb34fd89f62803a3dc254d3cb15",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/xgal_starburst_001.fits",
+        "path_type": "hardlink",
+        "sha256": "512470a4adcff8e734d8b43e7e7e24fac21bea8acf2e3768ca50670cabf61fde",
+        "sha256_in_prefix": "512470a4adcff8e734d8b43e7e7e24fac21bea8acf2e3768ca50670cabf61fde",
+        "size_in_bytes": 40320
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/xgal_starburst_002.fits",
+        "path_type": "hardlink",
+        "sha256": "512470a4adcff8e734d8b43e7e7e24fac21bea8acf2e3768ca50670cabf61fde",
+        "sha256_in_prefix": "512470a4adcff8e734d8b43e7e7e24fac21bea8acf2e3768ca50670cabf61fde",
+        "size_in_bytes": 40320
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/extinction/xgal_starburst_003.fits",
+        "path_type": "hardlink",
+        "sha256": "512470a4adcff8e734d8b43e7e7e24fac21bea8acf2e3768ca50670cabf61fde",
+        "sha256_in_prefix": "512470a4adcff8e734d8b43e7e7e24fac21bea8acf2e3768ca50670cabf61fde",
+        "size_in_bytes": 40320
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/jref/empty_test_file.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdbs/mtab/n9i1408hm_tmg.fits",
+        "path_type": "hardlink",
+        "sha256": "713bcade813da015ecc5a1704561eac979c0af3a812eaa65b58d2839447ddf51",
+        "sha256_in_prefix": "713bcade813da015ecc5a1704561eac979c0af3a812eaa65b58d2839447ddf51",
+        "size_in_bytes": 394560
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/cdfile.txt",
+        "path_type": "hardlink",
+        "sha256": "22b877abd562ee2119eb39292126bc8f5922bdabfd6e0c6addcc76cfee196e31",
+        "sha256_in_prefix": "22b877abd562ee2119eb39292126bc8f5922bdabfd6e0c6addcc76cfee196e31",
+        "size_in_bytes": 680
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/h1.txt",
+        "path_type": "hardlink",
+        "sha256": "d0d1719ac41a22af74688d7549a0d0fc08bcf4599c5bc8636053c1b931ba1659",
+        "sha256_in_prefix": "d0d1719ac41a22af74688d7549a0d0fc08bcf4599c5bc8636053c1b931ba1659",
+        "size_in_bytes": 1945
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/qso_template.fits",
+        "path_type": "hardlink",
+        "sha256": "81f485687a6fa1597b733daa7c90674290a2a0b86093a9bb25db21278afc6573",
+        "sha256_in_prefix": "81f485687a6fa1597b733daa7c90674290a2a0b86093a9bb25db21278afc6573",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/test.dat",
+        "path_type": "hardlink",
+        "sha256": "22e5632c8ec68d46c5b1c107c71df30ce3cc52a9db0ad8f55c2293aec7ec10ee",
+        "sha256_in_prefix": "22e5632c8ec68d46c5b1c107c71df30ce3cc52a9db0ad8f55c2293aec7ec10ee",
+        "size_in_bytes": 170035
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/test_bp_acs_hrc_f555w.fits",
+        "path_type": "hardlink",
+        "sha256": "5e347f88b4851f8d6aefde7f3c103506775753f95d806482b49d838d2b48af18",
+        "sha256_in_prefix": "5e347f88b4851f8d6aefde7f3c103506775753f95d806482b49d838d2b48af18",
+        "size_in_bytes": 120960
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/test_bp_johnson_v.fits",
+        "path_type": "hardlink",
+        "sha256": "36b154fd2f4acd6314962ec3913cd69eff523c2ab46d13f6722936a15bcf32f5",
+        "sha256_in_prefix": "36b154fd2f4acd6314962ec3913cd69eff523c2ab46d13f6722936a15bcf32f5",
+        "size_in_bytes": 8640
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/test_sp_analytic_bb.fits",
+        "path_type": "hardlink",
+        "sha256": "93d421f78e32bf9a8b705aef0ae71d86c9c67d619055caa14e9bb630af85f847",
+        "sha256_in_prefix": "93d421f78e32bf9a8b705aef0ae71d86c9c67d619055caa14e9bb630af85f847",
+        "size_in_bytes": 167040
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/test_sp_vega.fits",
+        "path_type": "hardlink",
+        "sha256": "b8f749c024f0ea40a6ad89794cad063cf7c82dd414472abcdf1da6a298cdc0a7",
+        "sha256_in_prefix": "b8f749c024f0ea40a6ad89794cad063cf7c82dd414472abcdf1da6a298cdc0a7",
+        "size_in_bytes": 149760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/us7.txt",
+        "path_type": "hardlink",
+        "sha256": "8ff588895e7b8fce8fa971f6ec9c3794b48bcee29ac6dfee39ec94601c1a7bdf",
+        "sha256_in_prefix": "8ff588895e7b8fce8fa971f6ec9c3794b48bcee29ac6dfee39ec94601c1a7bdf",
+        "size_in_bytes": 9309
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/data/vb8.inr.2a",
+        "path_type": "hardlink",
+        "sha256": "f3ebc18dca1bba05ee2f9c97a56062b978fd6387faac6619edcf8c8264a6cca7",
+        "sha256_in_prefix": "f3ebc18dca1bba05ee2f9c97a56062b978fd6387faac6619edcf8c8264a6cca7",
+        "size_in_bytes": 174823
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_analytic_spectrum.py",
+        "path_type": "hardlink",
+        "sha256": "12f8f85f8ab975a2c76fe1b28a03056c01e24c2d07245a0c7b9f362b9320ec1b",
+        "sha256_in_prefix": "12f8f85f8ab975a2c76fe1b28a03056c01e24c2d07245a0c7b9f362b9320ec1b",
+        "size_in_bytes": 3565
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_analytic_spectrum.pyc",
+        "path_type": "hardlink",
+        "sha256": "3cc91964cb8bceb48fd3ea934001090a3287ef31122dfacae41b4aa78f8f54ed",
+        "sha256_in_prefix": "3cc91964cb8bceb48fd3ea934001090a3287ef31122dfacae41b4aa78f8f54ed",
+        "size_in_bytes": 6620
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_binning.py",
+        "path_type": "hardlink",
+        "sha256": "6144d0b8e919b2cff5bd8a620f30d910b696158da094c7fa8418bb1da744d5b3",
+        "sha256_in_prefix": "6144d0b8e919b2cff5bd8a620f30d910b696158da094c7fa8418bb1da744d5b3",
+        "size_in_bytes": 1710
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_binning.pyc",
+        "path_type": "hardlink",
+        "sha256": "af9e944fa5c96bfc0331bb7d7250c2cbd15aa53ca5246e1c645f223bdf78e351",
+        "sha256_in_prefix": "af9e944fa5c96bfc0331bb7d7250c2cbd15aa53ca5246e1c645f223bdf78e351",
+        "size_in_bytes": 2718
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_box.py",
+        "path_type": "hardlink",
+        "sha256": "52844c69935e1b4ccf095f3db39cdc1c131641c00e4c96671c6181fcb81485da",
+        "sha256_in_prefix": "52844c69935e1b4ccf095f3db39cdc1c131641c00e4c96671c6181fcb81485da",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_box.pyc",
+        "path_type": "hardlink",
+        "sha256": "f5d1c72add006fd7da9190da8aad1bcbe882b5a853765a88f66d18af7ba93dd8",
+        "sha256_in_prefix": "f5d1c72add006fd7da9190da8aad1bcbe882b5a853765a88f66d18af7ba93dd8",
+        "size_in_bytes": 1173
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_catalog.py",
+        "path_type": "hardlink",
+        "sha256": "274ebb95b35e45709052572560aca271cfebcc51f864ba023185eec96b4bb124",
+        "sha256_in_prefix": "274ebb95b35e45709052572560aca271cfebcc51f864ba023185eec96b4bb124",
+        "size_in_bytes": 4960
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_catalog.pyc",
+        "path_type": "hardlink",
+        "sha256": "711e633c37df9393df7530778a7b86683b96096b10d3f0614ed4cdad6811a7f0",
+        "sha256_in_prefix": "711e633c37df9393df7530778a7b86683b96096b10d3f0614ed4cdad6811a7f0",
+        "size_in_bytes": 6802
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_center_edges.py",
+        "path_type": "hardlink",
+        "sha256": "fb30db89c22fd84e2bc80aac77a734fca68a3b48d4104d084f6dc5f1a3278251",
+        "sha256_in_prefix": "fb30db89c22fd84e2bc80aac77a734fca68a3b48d4104d084f6dc5f1a3278251",
+        "size_in_bytes": 2118
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_center_edges.pyc",
+        "path_type": "hardlink",
+        "sha256": "cc8b691d2e0be9c19dc28d04f17a32c4e29195ba4cef5f6cff0d404426bf58d2",
+        "sha256_in_prefix": "cc8b691d2e0be9c19dc28d04f17a32c4e29195ba4cef5f6cff0d404426bf58d2",
+        "size_in_bytes": 3719
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_component_switch.py",
+        "path_type": "hardlink",
+        "sha256": "4d885e01f3bfc7da8cbf8f0421caf4b14d4e4eeeb6b6728dab00afb55f91b91d",
+        "sha256_in_prefix": "4d885e01f3bfc7da8cbf8f0421caf4b14d4e4eeeb6b6728dab00afb55f91b91d",
+        "size_in_bytes": 1962
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_component_switch.pyc",
+        "path_type": "hardlink",
+        "sha256": "bba32590a2daab5428f5be9ce803cec514b81762584a9e897fb7dd72a5e6104a",
+        "sha256_in_prefix": "bba32590a2daab5428f5be9ce803cec514b81762584a9e897fb7dd72a5e6104a",
+        "size_in_bytes": 3133
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_cos.py",
+        "path_type": "hardlink",
+        "sha256": "9e47b35237935c40c08f2e2456fd15756d685ee70a6cd63e3dac6d4d235b2263",
+        "sha256_in_prefix": "9e47b35237935c40c08f2e2456fd15756d685ee70a6cd63e3dac6d4d235b2263",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_cos.pyc",
+        "path_type": "hardlink",
+        "sha256": "23d38fdd405f8ffde50f8dcbe102a5dfc14285d47c4b1c6764d33942ed6b0214",
+        "sha256_in_prefix": "23d38fdd405f8ffde50f8dcbe102a5dfc14285d47c4b1c6764d33942ed6b0214",
+        "size_in_bytes": 1695
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "5a55cadb2be7c0ecb34ae6e07dadc64accd94fa4acd2454e95f06f4f6a17f960",
+        "sha256_in_prefix": "5a55cadb2be7c0ecb34ae6e07dadc64accd94fa4acd2454e95f06f4f6a17f960",
+        "size_in_bytes": 1317
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_exceptions.pyc",
+        "path_type": "hardlink",
+        "sha256": "af456387fa75adb13e011f064a6fb51a47426880254774d2e426d0241bd4a66a",
+        "sha256_in_prefix": "af456387fa75adb13e011f064a6fb51a47426880254774d2e426d0241bd4a66a",
+        "size_in_bytes": 2666
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_flip.py",
+        "path_type": "hardlink",
+        "sha256": "03091bf638e67bfcf4be859d3ea2c4c34aae0b7d771953e174ba32f7e7d2c2b3",
+        "sha256_in_prefix": "03091bf638e67bfcf4be859d3ea2c4c34aae0b7d771953e174ba32f7e7d2c2b3",
+        "size_in_bytes": 1659
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_flip.pyc",
+        "path_type": "hardlink",
+        "sha256": "ec9de45294a6190608c2496dc8b17529f0da5abbe5e2f18d8a78b1dfe4f97547",
+        "sha256_in_prefix": "ec9de45294a6190608c2496dc8b17529f0da5abbe5e2f18d8a78b1dfe4f97547",
+        "size_in_bytes": 3587
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_interp_band.py",
+        "path_type": "hardlink",
+        "sha256": "0b2b902a0064040e83150b7fc734720f7598e37a67a247fa9da0e5620096bed2",
+        "sha256_in_prefix": "0b2b902a0064040e83150b7fc734720f7598e37a67a247fa9da0e5620096bed2",
+        "size_in_bytes": 15863
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_interp_band.pyc",
+        "path_type": "hardlink",
+        "sha256": "bce577d45be8be337c97546c4de82c80f092add7a4f04ae05d1063bf350a63ad",
+        "sha256_in_prefix": "bce577d45be8be337c97546c4de82c80f092add7a4f04ae05d1063bf350a63ad",
+        "size_in_bytes": 15921
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_locations.py",
+        "path_type": "hardlink",
+        "sha256": "e9eed6f1f1cd8251d194e0c5683404e4a93582f246a2d3e2209f4812e4d15d39",
+        "sha256_in_prefix": "e9eed6f1f1cd8251d194e0c5683404e4a93582f246a2d3e2209f4812e4d15d39",
+        "size_in_bytes": 1602
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_locations.pyc",
+        "path_type": "hardlink",
+        "sha256": "01b8af3a770128590239ef845c22b7441767b7efb4767c7a53258a0c0c95cc54",
+        "sha256_in_prefix": "01b8af3a770128590239ef845c22b7441767b7efb4767c7a53258a0c0c95cc54",
+        "size_in_bytes": 2896
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_mergewavesets.py",
+        "path_type": "hardlink",
+        "sha256": "f16a059a7a5335d8d0af78dd736359ffc374bdeb1dc5452c78f6334ca6d3d42e",
+        "sha256_in_prefix": "f16a059a7a5335d8d0af78dd736359ffc374bdeb1dc5452c78f6334ca6d3d42e",
+        "size_in_bytes": 2221
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_mergewavesets.pyc",
+        "path_type": "hardlink",
+        "sha256": "79e886c5afc79d36accde713394968e1c8c890ed1a61b926596303eac6ca036b",
+        "sha256_in_prefix": "79e886c5afc79d36accde713394968e1c8c890ed1a61b926596303eac6ca036b",
+        "size_in_bytes": 3623
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_obsbandpass.py",
+        "path_type": "hardlink",
+        "sha256": "e7adf10afd4e65dcd7f84e347f9a6a3a47ae6104f72d0dd8739f8e117faf93bd",
+        "sha256_in_prefix": "e7adf10afd4e65dcd7f84e347f9a6a3a47ae6104f72d0dd8739f8e117faf93bd",
+        "size_in_bytes": 5154
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_obsbandpass.pyc",
+        "path_type": "hardlink",
+        "sha256": "212f05863d7db624b475b3eff1350882e39e652de1ed3bab0db73f2aed6dd651",
+        "sha256_in_prefix": "212f05863d7db624b475b3eff1350882e39e652de1ed3bab0db73f2aed6dd651",
+        "size_in_bytes": 8635
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_observation.py",
+        "path_type": "hardlink",
+        "sha256": "0f2e0cf16ca41a3db28a7e618109a0b52c7a823c1655dc2159d5e0844a21a903",
+        "sha256_in_prefix": "0f2e0cf16ca41a3db28a7e618109a0b52c7a823c1655dc2159d5e0844a21a903",
+        "size_in_bytes": 5099
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_observation.pyc",
+        "path_type": "hardlink",
+        "sha256": "404cdfa9123b406afa71a2042e121af5fe014f2af2fb300ea60753a75b103394",
+        "sha256_in_prefix": "404cdfa9123b406afa71a2042e121af5fe014f2af2fb300ea60753a75b103394",
+        "size_in_bytes": 8066
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_parsing.py",
+        "path_type": "hardlink",
+        "sha256": "e175d1c15b43dfed1e7b009c5fc8cfef7881b05bfc4aba9bbfcd92fdabeaf5ef",
+        "sha256_in_prefix": "e175d1c15b43dfed1e7b009c5fc8cfef7881b05bfc4aba9bbfcd92fdabeaf5ef",
+        "size_in_bytes": 1419
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_parsing.pyc",
+        "path_type": "hardlink",
+        "sha256": "76483d3c187940f3d25aa1c302a8f9a937c475db7e3627ae1e28c6ef1c318b8a",
+        "sha256_in_prefix": "76483d3c187940f3d25aa1c302a8f9a937c475db7e3627ae1e28c6ef1c318b8a",
+        "size_in_bytes": 2468
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_primary_area.py",
+        "path_type": "hardlink",
+        "sha256": "b9270402ad6e1eee9eed0c9e02fddc2e03a4363f26d3ee22b33b239535483942",
+        "sha256_in_prefix": "b9270402ad6e1eee9eed0c9e02fddc2e03a4363f26d3ee22b33b239535483942",
+        "size_in_bytes": 3246
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_primary_area.pyc",
+        "path_type": "hardlink",
+        "sha256": "53e1e7731ee936c649aa9c67ab2ab274cecab9c6e18c6e39365f880d09e409bb",
+        "sha256_in_prefix": "53e1e7731ee936c649aa9c67ab2ab274cecab9c6e18c6e39365f880d09e409bb",
+        "size_in_bytes": 5173
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_set_default_waveset.py",
+        "path_type": "hardlink",
+        "sha256": "d6ab0346b50f02f4750df7bc538fe0b0698b28827485c5a878288682f61c80b9",
+        "sha256_in_prefix": "d6ab0346b50f02f4750df7bc538fe0b0698b28827485c5a878288682f61c80b9",
+        "size_in_bytes": 1377
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_set_default_waveset.pyc",
+        "path_type": "hardlink",
+        "sha256": "c9b9ba71deb04be25238025d0e8a47c5b3e6b4fd4ef1931b30de62afcda1068f",
+        "sha256_in_prefix": "c9b9ba71deb04be25238025d0e8a47c5b3e6b4fd4ef1931b30de62afcda1068f",
+        "size_in_bytes": 2476
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_spec.py",
+        "path_type": "hardlink",
+        "sha256": "11dcbc2246e2448d0c9eeff9d019d42c1f1b4ef1b9857e8c0b87d880e4804bf9",
+        "sha256_in_prefix": "11dcbc2246e2448d0c9eeff9d019d42c1f1b4ef1b9857e8c0b87d880e4804bf9",
+        "size_in_bytes": 3451
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_spec.pyc",
+        "path_type": "hardlink",
+        "sha256": "3579df94952197ef4f5cc17a8887b88058a6ad2f4701db77066da22c445556de",
+        "sha256_in_prefix": "3579df94952197ef4f5cc17a8887b88058a6ad2f4701db77066da22c445556de",
+        "size_in_bytes": 8522
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_spectral_element.py",
+        "path_type": "hardlink",
+        "sha256": "04ca51520bec3ea95915e1c21a9bda2b9f379ba19f6ffe88459fa81bc2b31de7",
+        "sha256_in_prefix": "04ca51520bec3ea95915e1c21a9bda2b9f379ba19f6ffe88459fa81bc2b31de7",
+        "size_in_bytes": 1263
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_spectral_element.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb7035148b2ca051b56b6e37d1bf53f853bf1d67aad6e31dd8b733a4e934eed4",
+        "sha256_in_prefix": "bb7035148b2ca051b56b6e37d1bf53f853bf1d67aad6e31dd8b733a4e934eed4",
+        "size_in_bytes": 2380
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_table.py",
+        "path_type": "hardlink",
+        "sha256": "e255a3b102756c22da669bc7fd81b01252390b07a6fff1aaf2599b8746a19fec",
+        "sha256_in_prefix": "e255a3b102756c22da669bc7fd81b01252390b07a6fff1aaf2599b8746a19fec",
+        "size_in_bytes": 1401
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_table.pyc",
+        "path_type": "hardlink",
+        "sha256": "9b5bfc1abf781d84a91b9762f0ce0d8215ec16bcced021fa5ca52ede946649ec",
+        "sha256_in_prefix": "9b5bfc1abf781d84a91b9762f0ce0d8215ec16bcced021fa5ca52ede946649ec",
+        "size_in_bytes": 2056
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_thermback.py",
+        "path_type": "hardlink",
+        "sha256": "e73918e5e0eb398fd7f76f1b19b2290c7fddd48f7fa4bd8957d0f696b72a99ce",
+        "sha256_in_prefix": "e73918e5e0eb398fd7f76f1b19b2290c7fddd48f7fa4bd8957d0f696b72a99ce",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_thermback.pyc",
+        "path_type": "hardlink",
+        "sha256": "a21233c261a8f4ea65b00b43b489f3c97e763aeb42e83b0a46fb7c7911d7a7d9",
+        "sha256_in_prefix": "a21233c261a8f4ea65b00b43b489f3c97e763aeb42e83b0a46fb7c7911d7a7d9",
+        "size_in_bytes": 1400
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket113.py",
+        "path_type": "hardlink",
+        "sha256": "d8fb82f5cd57364a0953595a642f3be7deecf85a5481733aaa4d3f1c1e3cc45c",
+        "sha256_in_prefix": "d8fb82f5cd57364a0953595a642f3be7deecf85a5481733aaa4d3f1c1e3cc45c",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket113.pyc",
+        "path_type": "hardlink",
+        "sha256": "7ba9d6e2af3c5dbc2302b8e5b62e2fb7df32bb6aac938d5451ea6a4bfe05f97b",
+        "sha256_in_prefix": "7ba9d6e2af3c5dbc2302b8e5b62e2fb7df32bb6aac938d5451ea6a4bfe05f97b",
+        "size_in_bytes": 842
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket126.py",
+        "path_type": "hardlink",
+        "sha256": "bb2cfdb665741e2841d7222ce3718d30e70d2030cca7713a4a2c269eee220f9f",
+        "sha256_in_prefix": "bb2cfdb665741e2841d7222ce3718d30e70d2030cca7713a4a2c269eee220f9f",
+        "size_in_bytes": 445
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket126.pyc",
+        "path_type": "hardlink",
+        "sha256": "4c691bbc5909aa154e13779c2e9ab21a101e54fa6db5c7b05ef77ca636f72095",
+        "sha256_in_prefix": "4c691bbc5909aa154e13779c2e9ab21a101e54fa6db5c7b05ef77ca636f72095",
+        "size_in_bytes": 958
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket139.py",
+        "path_type": "hardlink",
+        "sha256": "c662ec20a7366576b006aa2a089f9dc8990e9e1588e7cda8b80bcb73473b8e7b",
+        "sha256_in_prefix": "c662ec20a7366576b006aa2a089f9dc8990e9e1588e7cda8b80bcb73473b8e7b",
+        "size_in_bytes": 1810
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket139.pyc",
+        "path_type": "hardlink",
+        "sha256": "ccc81bd10c2f748893f714cd976e9df2a6edf2d922a27d21d4c44dd9e2152c69",
+        "sha256_in_prefix": "ccc81bd10c2f748893f714cd976e9df2a6edf2d922a27d21d4c44dd9e2152c69",
+        "size_in_bytes": 2572
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket143.py",
+        "path_type": "hardlink",
+        "sha256": "8183944c2feb86b2f60b901750300c5d4321bd25a2099b293052541ad2e8f32a",
+        "sha256_in_prefix": "8183944c2feb86b2f60b901750300c5d4321bd25a2099b293052541ad2e8f32a",
+        "size_in_bytes": 2916
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket143.pyc",
+        "path_type": "hardlink",
+        "sha256": "cfdd0f2ceadb58182215c7bd0c76a33443a4908376df4ecfed1043f433b36845",
+        "sha256_in_prefix": "cfdd0f2ceadb58182215c7bd0c76a33443a4908376df4ecfed1043f433b36845",
+        "size_in_bytes": 4516
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket146.py",
+        "path_type": "hardlink",
+        "sha256": "b79e36ba1037b0b0ab54ee9111b02408cb0a6e155a67e1c140cb87f4ec119900",
+        "sha256_in_prefix": "b79e36ba1037b0b0ab54ee9111b02408cb0a6e155a67e1c140cb87f4ec119900",
+        "size_in_bytes": 2250
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket146.pyc",
+        "path_type": "hardlink",
+        "sha256": "e31feae51c8c9d3bfbd7a7ed98a5177eb987ee5ab66c659469db9b8ea9abe20b",
+        "sha256_in_prefix": "e31feae51c8c9d3bfbd7a7ed98a5177eb987ee5ab66c659469db9b8ea9abe20b",
+        "size_in_bytes": 4394
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket150.py",
+        "path_type": "hardlink",
+        "sha256": "c2272f68d5adad4fea8c631ee44dc36377781bfe225643ab6322930a8a7cd6ac",
+        "sha256_in_prefix": "c2272f68d5adad4fea8c631ee44dc36377781bfe225643ab6322930a8a7cd6ac",
+        "size_in_bytes": 7375
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket150.pyc",
+        "path_type": "hardlink",
+        "sha256": "e1275580dd9e6d446d15a034c338423ee08b6368280b1d951259403206d56082",
+        "sha256_in_prefix": "e1275580dd9e6d446d15a034c338423ee08b6368280b1d951259403206d56082",
+        "size_in_bytes": 13826
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket157.py",
+        "path_type": "hardlink",
+        "sha256": "46a5ae78cc89d29e89ad43a590c4bfcfe3bd16fbc4f00e368305a31313825290",
+        "sha256_in_prefix": "46a5ae78cc89d29e89ad43a590c4bfcfe3bd16fbc4f00e368305a31313825290",
+        "size_in_bytes": 7434
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket157.pyc",
+        "path_type": "hardlink",
+        "sha256": "418ca18cddce03d30ed3fd29562952d70437f3b4a9407d825458a493363d7e7f",
+        "sha256_in_prefix": "418ca18cddce03d30ed3fd29562952d70437f3b4a9407d825458a493363d7e7f",
+        "size_in_bytes": 12892
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket159.py",
+        "path_type": "hardlink",
+        "sha256": "3cf983c95f934288c25f0cbe711017a7d88d4ef64ea284fe235a9708a58135b4",
+        "sha256_in_prefix": "3cf983c95f934288c25f0cbe711017a7d88d4ef64ea284fe235a9708a58135b4",
+        "size_in_bytes": 1360
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket159.pyc",
+        "path_type": "hardlink",
+        "sha256": "ca870158c520aa2f1f23056bb9e67711c2e5f4d147719ea409501bfb3f04ea9b",
+        "sha256_in_prefix": "ca870158c520aa2f1f23056bb9e67711c2e5f4d147719ea409501bfb3f04ea9b",
+        "size_in_bytes": 2943
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket161.py",
+        "path_type": "hardlink",
+        "sha256": "f61cae10aba28c7ebc906486dd96d40ab63e2fcd0d1473f7265c9a30a2860830",
+        "sha256_in_prefix": "f61cae10aba28c7ebc906486dd96d40ab63e2fcd0d1473f7265c9a30a2860830",
+        "size_in_bytes": 331
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket161.pyc",
+        "path_type": "hardlink",
+        "sha256": "56a128f9f54d0cb03ee9a5855a8390dfa679f71747dc5549f37aab897f918ce5",
+        "sha256_in_prefix": "56a128f9f54d0cb03ee9a5855a8390dfa679f71747dc5549f37aab897f918ce5",
+        "size_in_bytes": 857
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket163.py",
+        "path_type": "hardlink",
+        "sha256": "d850f273f5583552ef514bd2bcb2e4232384e93580459740953810f32083bd99",
+        "sha256_in_prefix": "d850f273f5583552ef514bd2bcb2e4232384e93580459740953810f32083bd99",
+        "size_in_bytes": 1654
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket163.pyc",
+        "path_type": "hardlink",
+        "sha256": "b8d8448663b89296088d9b42e13b40ec48776abf047a585b379d766e70100705",
+        "sha256_in_prefix": "b8d8448663b89296088d9b42e13b40ec48776abf047a585b379d766e70100705",
+        "size_in_bytes": 3379
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket164.py",
+        "path_type": "hardlink",
+        "sha256": "befb05bfa5bd0d8db26c1b0e57dc0c81ce25798bba98400016f280bcecad8b1b",
+        "sha256_in_prefix": "befb05bfa5bd0d8db26c1b0e57dc0c81ce25798bba98400016f280bcecad8b1b",
+        "size_in_bytes": 2288
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket164.pyc",
+        "path_type": "hardlink",
+        "sha256": "6211f05949f55e291ff7dd25715074c5a7289a42ff57f9a3c6826d2cad76eb15",
+        "sha256_in_prefix": "6211f05949f55e291ff7dd25715074c5a7289a42ff57f9a3c6826d2cad76eb15",
+        "size_in_bytes": 4888
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket165.py",
+        "path_type": "hardlink",
+        "sha256": "0c4a85f5613d297fdc949e6fef43a617d7f4208ec7fa28212d9c20ea2944eb91",
+        "sha256_in_prefix": "0c4a85f5613d297fdc949e6fef43a617d7f4208ec7fa28212d9c20ea2944eb91",
+        "size_in_bytes": 528
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket165.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c459cf2538709aa6d9a97e1cdc43f2478ef44d65d29ad6a6aaba93cfdec7910",
+        "sha256_in_prefix": "0c459cf2538709aa6d9a97e1cdc43f2478ef44d65d29ad6a6aaba93cfdec7910",
+        "size_in_bytes": 1060
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket166.py",
+        "path_type": "hardlink",
+        "sha256": "b319e4e005d15848267e573bde9c4a5bd6f69f64f5f15e85bc145045380f50eb",
+        "sha256_in_prefix": "b319e4e005d15848267e573bde9c4a5bd6f69f64f5f15e85bc145045380f50eb",
+        "size_in_bytes": 2039
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket166.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa651e5012c58ccb03ec7df2ccf407b2276b8620756a3a5e849a5cddf9b678cf",
+        "sha256_in_prefix": "fa651e5012c58ccb03ec7df2ccf407b2276b8620756a3a5e849a5cddf9b678cf",
+        "size_in_bytes": 3459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket171.py",
+        "path_type": "hardlink",
+        "sha256": "165db9892b62169d35598d3c2426806edc831ffaad616ba192ab7252cd65ee7a",
+        "sha256_in_prefix": "165db9892b62169d35598d3c2426806edc831ffaad616ba192ab7252cd65ee7a",
+        "size_in_bytes": 699
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket171.pyc",
+        "path_type": "hardlink",
+        "sha256": "24c155b4c13037a04091c265a7792bb036a9cae9776174d8211605f548883d51",
+        "sha256_in_prefix": "24c155b4c13037a04091c265a7792bb036a9cae9776174d8211605f548883d51",
+        "size_in_bytes": 1739
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket174.py",
+        "path_type": "hardlink",
+        "sha256": "1e71758048faf3c3c8ac3f5ee1b389d95bb7406b54773f2803bc3dd1eda2abbc",
+        "sha256_in_prefix": "1e71758048faf3c3c8ac3f5ee1b389d95bb7406b54773f2803bc3dd1eda2abbc",
+        "size_in_bytes": 670
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket174.pyc",
+        "path_type": "hardlink",
+        "sha256": "dfb5fa82cb6056dd83d306cf177afe50fbbff8b3a6658adbc645add590116ddc",
+        "sha256_in_prefix": "dfb5fa82cb6056dd83d306cf177afe50fbbff8b3a6658adbc645add590116ddc",
+        "size_in_bytes": 1233
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket183.py",
+        "path_type": "hardlink",
+        "sha256": "ec57207c2e462bff1c0d9e1aceb4d9a37b556d64e4cb58d2a497a0a99c5699fe",
+        "sha256_in_prefix": "ec57207c2e462bff1c0d9e1aceb4d9a37b556d64e4cb58d2a497a0a99c5699fe",
+        "size_in_bytes": 292
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket183.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ad0b64057c9f632ffddbf6e2232b29833fa603cab6715ed131a16c27e57f470",
+        "sha256_in_prefix": "0ad0b64057c9f632ffddbf6e2232b29833fa603cab6715ed131a16c27e57f470",
+        "size_in_bytes": 798
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket21.py",
+        "path_type": "hardlink",
+        "sha256": "a626dc091be57b804eebb8b5c98725c5b69e5f74ca001c1b51dabc5ede25a803",
+        "sha256_in_prefix": "a626dc091be57b804eebb8b5c98725c5b69e5f74ca001c1b51dabc5ede25a803",
+        "size_in_bytes": 1648
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket21.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f32c40d7aa21738033c660781ec7135e95b4ddd80cd82062a3f6d5e94b678fe",
+        "sha256_in_prefix": "8f32c40d7aa21738033c660781ec7135e95b4ddd80cd82062a3f6d5e94b678fe",
+        "size_in_bytes": 2608
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket52.py",
+        "path_type": "hardlink",
+        "sha256": "9fb510c0439ade5adbeaae1faca59fed98ad329977981d05a5d9b76f0011b5b4",
+        "sha256_in_prefix": "9fb510c0439ade5adbeaae1faca59fed98ad329977981d05a5d9b76f0011b5b4",
+        "size_in_bytes": 887
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket52.pyc",
+        "path_type": "hardlink",
+        "sha256": "975e361531b9de914f9210b6933c9535085e6a7b515b16ca1f3b45a9bc5db170",
+        "sha256_in_prefix": "975e361531b9de914f9210b6933c9535085e6a7b515b16ca1f3b45a9bc5db170",
+        "size_in_bytes": 2047
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket82.py",
+        "path_type": "hardlink",
+        "sha256": "0dd9a53f625105454d54f547af06b4d6be95494dbfc8d68f26496944691645ef",
+        "sha256_in_prefix": "0dd9a53f625105454d54f547af06b4d6be95494dbfc8d68f26496944691645ef",
+        "size_in_bytes": 1813
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket82.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b6acd950d051ce0c554c224cc28e512d9931107180fc1497d793f63e3f24ebc",
+        "sha256_in_prefix": "7b6acd950d051ce0c554c224cc28e512d9931107180fc1497d793f63e3f24ebc",
+        "size_in_bytes": 3130
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket86.py",
+        "path_type": "hardlink",
+        "sha256": "f1c7efa4b1d7de215ebe51e8f5f7eca27473d1b3af0bbc98c0913e34dcb053a9",
+        "sha256_in_prefix": "f1c7efa4b1d7de215ebe51e8f5f7eca27473d1b3af0bbc98c0913e34dcb053a9",
+        "size_in_bytes": 2095
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ticket86.pyc",
+        "path_type": "hardlink",
+        "sha256": "aafcbe1eb869190aa1c1c6b5942e302771a6f6244efd4e9b8a357c9cdec626ef",
+        "sha256_in_prefix": "aafcbe1eb869190aa1c1c6b5942e302771a6f6244efd4e9b8a357c9cdec626ef",
+        "size_in_bytes": 4571
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_tokenizer.py",
+        "path_type": "hardlink",
+        "sha256": "4cf5e6d6d049af6ae97c3a500b0aa9a65e3bcaef194801d646a0de999b20541f",
+        "sha256_in_prefix": "4cf5e6d6d049af6ae97c3a500b0aa9a65e3bcaef194801d646a0de999b20541f",
+        "size_in_bytes": 9459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_tokenizer.pyc",
+        "path_type": "hardlink",
+        "sha256": "ac43a768db06ea7511163cf0f5440f3dd0cbf6f13d098e7236b7d7dd8f0f0a02",
+        "sha256_in_prefix": "ac43a768db06ea7511163cf0f5440f3dd0cbf6f13d098e7236b7d7dd8f0f0a02",
+        "size_in_bytes": 9484
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ui.py",
+        "path_type": "hardlink",
+        "sha256": "344ba36c65f5a92c54aff13a7cf0b9e771a0178b051f6a74b74d803b072d81e2",
+        "sha256_in_prefix": "344ba36c65f5a92c54aff13a7cf0b9e771a0178b051f6a74b74d803b072d81e2",
+        "size_in_bytes": 6214
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ui.pyc",
+        "path_type": "hardlink",
+        "sha256": "65769d2f6d61462f5a9f04ffad01dfaffe555ec0079a907aef3744c695af36bf",
+        "sha256_in_prefix": "65769d2f6d61462f5a9f04ffad01dfaffe555ec0079a907aef3744c695af36bf",
+        "size_in_bytes": 11180
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ui_tickets.py",
+        "path_type": "hardlink",
+        "sha256": "bddbfc2807ec08c105754a388463f4cee07b56075c03d90a1aba4623105c244f",
+        "sha256_in_prefix": "bddbfc2807ec08c105754a388463f4cee07b56075c03d90a1aba4623105c244f",
+        "size_in_bytes": 1535
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_ui_tickets.pyc",
+        "path_type": "hardlink",
+        "sha256": "78618b30e8779f892776e6b61ff4b460b6427cb4a47f8882ca819a0548bd26e7",
+        "sha256_in_prefix": "78618b30e8779f892776e6b61ff4b460b6427cb4a47f8882ca819a0548bd26e7",
+        "size_in_bytes": 2403
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_units.py",
+        "path_type": "hardlink",
+        "sha256": "97b1cc0a570c90bef4658ecc9c1409230d4c43b9ca686659fcc1dd7aa71c9dab",
+        "sha256_in_prefix": "97b1cc0a570c90bef4658ecc9c1409230d4c43b9ca686659fcc1dd7aa71c9dab",
+        "size_in_bytes": 7591
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_units.pyc",
+        "path_type": "hardlink",
+        "sha256": "bec1b937551d08eab88983348b9957c42e73e3e682347eb1c35c779e4fd64752",
+        "sha256_in_prefix": "bec1b937551d08eab88983348b9957c42e73e3e682347eb1c35c779e4fd64752",
+        "size_in_bytes": 11442
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_v05_tickets.py",
+        "path_type": "hardlink",
+        "sha256": "cd1b3a2797b4f42ecd5da580e64bf7d94d9e0770da820feb469434aa3ba80952",
+        "sha256_in_prefix": "cd1b3a2797b4f42ecd5da580e64bf7d94d9e0770da820feb469434aa3ba80952",
+        "size_in_bytes": 4989
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_v05_tickets.pyc",
+        "path_type": "hardlink",
+        "sha256": "ee8174d66777dac734be447b99a34f87dd24d5e09d05d0143c469a63784a01cc",
+        "sha256_in_prefix": "ee8174d66777dac734be447b99a34f87dd24d5e09d05d0143c469a63784a01cc",
+        "size_in_bytes": 7949
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_v06_tickets.py",
+        "path_type": "hardlink",
+        "sha256": "f89e8f87e6d85d4a8d3920238b80a5458ff6daef61a7d42b42232466ffa982dd",
+        "sha256_in_prefix": "f89e8f87e6d85d4a8d3920238b80a5458ff6daef61a7d42b42232466ffa982dd",
+        "size_in_bytes": 1385
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_v06_tickets.pyc",
+        "path_type": "hardlink",
+        "sha256": "c46ce089f8ca3d131e43fb44c023219f7537f1eb4865e6458ccbb0c6c3221011",
+        "sha256_in_prefix": "c46ce089f8ca3d131e43fb44c023219f7537f1eb4865e6458ccbb0c6c3221011",
+        "size_in_bytes": 3352
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_wavecat.py",
+        "path_type": "hardlink",
+        "sha256": "028a5634c989a8bc2de9f6f068c1b3831f7305b665d1808be23550ca1faf711e",
+        "sha256_in_prefix": "028a5634c989a8bc2de9f6f068c1b3831f7305b665d1808be23550ca1faf711e",
+        "size_in_bytes": 656
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_wavecat.pyc",
+        "path_type": "hardlink",
+        "sha256": "30963c387d8f597660a68deb1d653ac079d95a36ce7a808fcf430da441291a35",
+        "sha256_in_prefix": "30963c387d8f597660a68deb1d653ac079d95a36ce7a808fcf430da441291a35",
+        "size_in_bytes": 1382
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_write.py",
+        "path_type": "hardlink",
+        "sha256": "a63f029a4d489a98a1b60bfb802300d7729b025896cf96a628a28d07481f6489",
+        "sha256_in_prefix": "a63f029a4d489a98a1b60bfb802300d7729b025896cf96a628a28d07481f6489",
+        "size_in_bytes": 2145
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/test_write.pyc",
+        "path_type": "hardlink",
+        "sha256": "0eb9a9569662e0df8f646617699ff4641863bbdc5915ae385562999aa9f71383",
+        "sha256_in_prefix": "0eb9a9569662e0df8f646617699ff4641863bbdc5915ae385562999aa9f71383",
+        "size_in_bytes": 5570
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/utils.py",
+        "path_type": "hardlink",
+        "sha256": "1a3eb0ff05bd0949c8013ccf0a2502b2eb4374279f48d483becbcb4ab61c0f85",
+        "sha256_in_prefix": "1a3eb0ff05bd0949c8013ccf0a2502b2eb4374279f48d483becbcb4ab61c0f85",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/test/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "0b68ee90e6edbbf4050f3f28e31f094853f0e12912ec6b69a70be84374ed78ed",
+        "sha256_in_prefix": "0b68ee90e6edbbf4050f3f28e31f094853f0e12912ec6b69a70be84374ed78ed",
+        "size_in_bytes": 439
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/units.py",
+        "path_type": "hardlink",
+        "sha256": "b15555d1f08d71d93c05b96aade312ff85e8c677ccfbd9b152ebc867f593805a",
+        "sha256_in_prefix": "b15555d1f08d71d93c05b96aade312ff85e8c677ccfbd9b152ebc867f593805a",
+        "size_in_bytes": 53373
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/units.pyc",
+        "path_type": "hardlink",
+        "sha256": "05757e1f154c54e5a80fb20769fcb229d82c7034468a152dcd892ef25e51797f",
+        "sha256_in_prefix": "05757e1f154c54e5a80fb20769fcb229d82c7034468a152dcd892ef25e51797f",
+        "size_in_bytes": 63717
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/version.py",
+        "path_type": "hardlink",
+        "sha256": "9628bc4f648ecd4ee50ba310876fe291ade32ec2961e4f69da826dbe3805d621",
+        "sha256_in_prefix": "9628bc4f648ecd4ee50ba310876fe291ade32ec2961e4f69da826dbe3805d621",
+        "size_in_bytes": 762
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "88ae81f96dd48440837900aaeb9e008c4fa7240aad601148e46ea0245c667afe",
+        "sha256_in_prefix": "88ae81f96dd48440837900aaeb9e008c4fa7240aad601148e46ea0245c667afe",
+        "size_in_bytes": 771
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/wavetable.py",
+        "path_type": "hardlink",
+        "sha256": "70d1653a61c697d8851b4b5e74c712b28b22d41bc19db10ddb0c7c232da47bce",
+        "sha256_in_prefix": "70d1653a61c697d8851b4b5e74c712b28b22d41bc19db10ddb0c7c232da47bce",
+        "size_in_bytes": 5921
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pysynphot/wavetable.pyc",
+        "path_type": "hardlink",
+        "sha256": "c72f3f3c667e16630a9f8fb276b537ae0d59e47b4129e8b8563cd41d908767fe",
+        "sha256_in_prefix": "c72f3f3c667e16630a9f8fb276b537ae0d59e47b4129e8b8563cd41d908767fe",
+        "size_in_bytes": 5825
+      },
+      {
+        "_path": "lib/python2.7/site-packages/setuptools.pth",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4dc8bfb2a806d7992a779ea25871faf2738770046b90ed1564a66d7a694f3dab",
+        "sha256_in_prefix": "ba8ea53e107435912666fca2489648dbccbe8cdb59385b1ad03cbd6d9233efe4",
+        "size_in_bytes": 61
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 5674673,
+  "subdir": "linux-64",
+  "timestamp": 1524211508361,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/pysynphot-0.9.12-py27_0.tar.bz2",
+  "version": "0.9.12"
+}

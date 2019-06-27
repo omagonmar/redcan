@@ -1,0 +1,40 @@
+# Make the FINDER package
+
+$call	relink
+$exit
+
+update:
+	$call	relink
+	$call	install
+#	$call	fortran
+	;
+
+relink:
+	$update	libpkg.a
+	$call	link
+	;
+
+install:
+	$move	xx_finder.e finderbin$x_finder.e
+	;
+
+link:
+	$omake	x_finder.x
+	$link	x_finder.o libpkg.a -lgilib -ltbtables -lstxtools -lxtools \
+		-o xx_finder.e
+	;
+
+fortran:
+	!f77	-Bstatic astrom.f -o astrom.e
+	$move	astrom.e finderbin$astrom.e
+	;
+
+libpkg.a:
+	@select
+	@cdrfits
+	t_gscfind.x     <tbset.h> <math.h>
+	t_tfield.x	<imhdr.h> <math.h> <ctotok.h> <error.h> <tbset.h>
+	t_tpeak.x	<tbset.h> <error.h> <mach.h>
+	fprecess.x	<math.h>
+	ftimes.x
+	;

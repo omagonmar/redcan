@@ -1,0 +1,17 @@
+# G_USIGMA -- Compute the sigma image line when uniform weighting or 
+#  no weighting is involved. This is the sigma in the mean, not the
+#  averaged sample standard deviation itself.
+#  Reference: "Data Reduction and Error Analysis for the Physical
+#  Sciences, by P.R. Bevington, 1969
+# CYZhang April 10, 1994 Based on images.imcombine
+# I. Busko May 27, 1998 Fixed bug that caused a floating-point crash
+# in IMIO. The task won't crash but the output error array will be
+# filled up with BLANK values, only when the number of input files
+# is exactly equal to GPIX. This seems to be more of a design bug.
+# G_PSIGMA -- Compute the sigma image line when pixelwise weighting 
+#  is applied.
+#  Reference: "Data Reduction and Error Analysis for the Physical
+#  Sciences, by P.R. Bevington, 1969
+# CYZhang April 10, 1994 Based on images.imcombine
+
+###  Proprietary source code removed  ###

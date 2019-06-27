@@ -1,0 +1,3 @@
+
+[glue.plugins]
+ginga=glue_ginga:setup

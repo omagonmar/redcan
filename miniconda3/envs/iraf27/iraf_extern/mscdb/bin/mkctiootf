@@ -1,0 +1,3 @@
+# Create tar file caldirs.
+
+tar cf - -I noao/ctio/4meter/caldir noao

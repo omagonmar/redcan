@@ -1,0 +1,31 @@
+# JCC(1/99) - mv apply_bary.par to apply_bary_spp.par
+#
+input_qpoe,s,a,"",,,"input qpoe file name"
+tblfile,s,a,,,,"input correction table filename"
+#st_alp,r,a,,,,"input RA (hh:mm:ss.s)"
+#st_dec,r,a,,,,"input DEC (dd:mm:ss.s)"
+eventdef,s,a,"large",,,"event definition"
+qpoe,s,a,"",,,"output qpoe file name"
+#
+# hidden parameters
+#
+region,s,h,"",,,"region descriptor"
+scc_to_ut,s,h,xtimingdata$scc_to_utc.tab,,,"SCC to UTC table"
+exposure,s,h,"NONE",,,"exposure mask"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion"
+tbl_i1,s,h,"IT1",,,"Corr. table col name of uncorrected int date"
+tbl_r1,s,h,"RT1",,,"Corr. table col name of uncorrected real date"
+tbl_i2,s,h,"IT2",,,"Corr. table col name of corrected int date"
+tbl_r2,s,h,"RT2",,,"Corr. table col name of corrected real date"
+clobber,b,h,n,,,"delete old copy of output file"
+display,i,h,1,0,5,"0=no disp, 1=header"
+sort,b,h,n,,,"sort events?"
+sorttype,s,h,"position",,,"type of sort"
+sortsize,i,h,1000000,,,"bytes to alloc. per sort"
+qp_internals,b,h,yes,,,"prompt for qpoe internals?"
+qp_pagesize,i,h,1024,,,"page size for qpoe file"
+qp_bucketlen,i,h,2048,,,"bucket length for qpoe file"
+qp_blockfactor,i,h,1,,,"block factor for imio"
+qp_mkindex,b,h,n,,,"make an index on y, x"
+qp_key,s,h,"",,,"key on which to make index"
+qp_debug,i,h,0,,,"qpoe debug level"

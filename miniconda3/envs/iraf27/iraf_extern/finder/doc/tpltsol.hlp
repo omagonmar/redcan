@@ -1,0 +1,97 @@
+.help tpltsol Jun97 finder
+.ih
+NAME
+tpltsol -- perform a plate solution given a table of coordinates
+.ih
+USAGE
+tpltsol input
+.ih
+PARAMETERS
+.ls image
+Input image name
+.le
+.ls table
+The name of the input table that contains the catalog (equitorial) and
+plate (cartesian) coordinates.
+.le
+.ls database
+The output database name.
+.le
+.ls results = ""
+The output results summary file.
+.le
+.ls append = no
+Append to the database and the results files?
+.le
+.ls imupdate = no
+Update the image WCS?
+.le
+.ls tabupdate = no
+Update the input table?
+.le
+.ls refitcat = no
+Recompute the XYs for uncentered sources?
+.le
+.ls verbose = yes
+Print verbose progress messages?
+.le
+.ls dssheader = yes
+Read plate center from a Digital Sky Survey image header?
+.le
+.ls ra_ref = ""
+The RA (in hours) of the plate center.
+.le
+.ls dec_ref = ""
+The Declination (in degrees) of the plate center.
+.le
+.ls eq_ref = INDEF
+The plate center coordinate equinox.
+.le
+.ls inpixsys="logical", outpixsys="logical"
+The input and output pixel systems.
+.le
+.ls insystem = "j2000"
+The input celestial coordinate system.
+.le
+.ls projection = "tan"
+The sky projection geometry.
+.le
+.ls fitgeometry = "general"
+The fitting geometry.
+.le
+.ls function = "polynomial"
+Surface type.
+.le
+.ls xxorder=2, xyorder=2
+Order of xi fit in x and in y, respectively.
+.le
+.ls xxterms = "half"
+Include the cross-terms in the xi fit?
+.le
+.ls yxorder=2, yyorder=2
+Order of eta fit in x and in y, respectively.
+.le
+.ls yxterms = "half"
+Include the cross-terms in the eta fit?
+.le
+.ls reject = INDEF
+Rejection limit in sigma units
+.le
+.ls interactive = yes
+Fit the transformation interactively?
+.le
+.ls graphics = "stdgraph"
+Default graphics device
+.le
+.ls cursor = ""
+Graphics cursor
+.le
+.ls catpars = ""
+Catalog description pset
+.le
+.ih
+DESCRIPTION
+.ih
+SEE ALSO
+tfinder, tastrom
+.endhelp

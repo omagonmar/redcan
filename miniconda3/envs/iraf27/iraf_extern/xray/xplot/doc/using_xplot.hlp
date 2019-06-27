@@ -1,0 +1,73 @@
+#$Header: /home/pros/xray/xplot/doc/RCS/using_xplot.hlp,v 11.0 1997/11/06 16:38:22 prosb Exp $
+#$Log: using_xplot.hlp,v $
+#Revision 11.0  1997/11/06 16:38:22  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:09:24  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:02:56  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:49:20  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:41:55  prosb
+#General Release 2.2
+#
+#Revision 1.2  93/05/22  18:45:13  mo
+#new file
+#
+.help using_xplot May93 xray.xplot
+.ih
+NAME
+using_xplot -- Guide to general plotting tasks available to 
+               display Xray data
+.ih
+USAGE
+This document is a guide to plot tasks available to display xray 
+data in the Xplot package and also other packages within IRAF.
+.ih
+DESCRIPTION
+.nf
+The following are 3 task lists (by graph type, file type, and output
+device) of commonly used Display tasks.  It is meant to help the 
+User locate Graphics tasks appropriate for their data.  
+Type 'help <task name>' for further details on specific tasks.  
+
+
+	Graph type		  Task name
+	==============================================================
+
+	Contouring -------------  imcontour, tvimcontour
+	Histo/Point/line graph -  IGI, tabplot, sgraph
+	Image Display ----------  xdisplay
+	Interactive Display ----  imexamine, xexamine, tvlabel 
+	Plot Labeling ----------  tvmark
+	Projections ------------  tvproj, xexamine
+	Skymap -----------------  wcslab, imcontour, tvimcontour
+
+
+	File type      		  Task name
+	==============================================================
+
+	Ascii lists  -----------  sgraph
+	Images/Qpoes -----------  imcontour, tvimcontour, 
+		          	  tvlabel, tvmark, tvproj
+		          	  imexamine, xexamine, xdisplay 
+                          	  sgraph, wcslab
+	Tables -----------------  tabplot, IGI, sgraph
+
+
+	Output device		  Task name
+	==============================================================
+
+	Graphics windo ---------  imcontour, IGI, tabplot, sgraph
+	TV windo ---------------  imexamine, xexamine
+			   	  tvimcontour, tvlabel, tvmark, tvproj
+			  	  xdisplay, wcslab
+.fi
+.ih
+SEE ALSO
+	Xtiming package for plotting timing analysis output 
+        Xspectral package for plotting spectral analysis output

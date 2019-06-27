@@ -1,0 +1,136 @@
+# $Header: /home/pros/xray/xplot/doc/RCS/tvlabel.hlp,v 11.0 1997/11/06 16:38:20 prosb Exp $
+# $Log: tvlabel.hlp,v $
+# Revision 11.0  1997/11/06 16:38:20  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:09:20  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:02:51  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:49:14  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:41:49  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:35:41  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/06/26  16:42:38  mo
+#MC	6/26/92		Updated for correct RIMCURSOR operation
+#
+#Revision 4.0  92/04/27  15:10:49  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.6  92/04/23  15:32:22  mo
+#MC	Fix the RCS header
+#
+.help tvlabel Jun92 xray.xplot
+.ih
+NAME
+tvlabel-- Display an image with a cursor readback in hh:mm:ss, dd:mm:ss
+.ih
+USAGE
+tvlabel image
+.ih
+DESCRIPTION
+
+        \fITvlabel\fR loads an image, and displays it on the tv
+display device.  The program is then left in IMCUR cursor readback
+mode.  When the Image Cursor is positioned and the character 'd' is
+typed the World Coordinates at the cursor position will be displayed.
+
+	Reference the \fIxdisplay\fR  and \fIrimcursor\fR help files for a more
+detailed description.
+
+.ih
+PARAMETERS
+.ls image = ""          prompt = IRAF image filename
+
+The image filename.  This can be any valid IRAF image file, including
+X-ray QPOE files.  WCS Parameters are read from the header.
+.le
+.ls (wcs = "world") [string]
+
+The parameter set that defines a world coordinate system. 
+.le
+.ls (xwxform = "%.4H") [string]
+
+Format for x axis readout.  See the documentation on the
+\fIrimcursor\fR task (\fIhelp rimcursor\fR) for a description of the
+output formats.
+.le
+.ls (xwyform = "%.4h") [string]
+
+Format for y axis readout.  See the documentation on the
+\fIrimcursor\fR task (\fIhelp rimcursor\fR) for a description of the
+output formats.
+.le
+.ls (z1=0.0, z2=30.0) [real]
+
+Minimum  and maximum image intensity to be mapped to the minimum and
+maximum display levels.  These are ignored if zrange=yes.
+.le
+.ls (ztrans = "linear")  [string]
+Transformation  of  the  image  intensity  levels to the display
+levels.  The choices are:
+.nf
+"linear"
+   Map the minimum and maximum image intensities linearly to the
+   minimum and maximum display levels.
+
+"log"
+   Map  the  minimum  and maximum image intensities linearly to
+   the range 1 to 1000, take the logrithm (base 10),  and  then
+   map the logarithms to the display range.
+
+"none"
+   Apply no mapping of the image intensities (regardless of the
+   values of zcale, zrange, z1, and z2).  For most image displays,
+   values exceeding the maximum display value are truncated by
+   masking the highest bits.  This corresponds to applying a
+   modulus operation to the intensity values and produces
+   "wrap-around" in the display levels.
+.fi
+.le
+.ls (zrange = yes)	 [bool]
+
+If set to yes, map the full range of the image intensity to the full
+range of the display.  Map between z1 and z2 below if zrange=no.
+.le
+.ih
+EXAMPLES
+This example first displays rh110267.qp on the image device.  The user
+then moves the cursor and strikes 'd' for the world coordinate
+read-out.
+.nf
+
+	cl> tvlabel
+	IRAF image filename: xdata$rh110267.qp[bl=8]
+	z1 = 0., z2 = 218.
+	After the blinking image cursor appears ---
+	Move cursor to object and type 'd' for hh:mm:ss, dd:mm:ss
+	     ( Type <cntl-d> to quit )
+	22h08m36.97s  +45o31'23.62"
+
+.fi
+For detailed explanation and other examples reference the rimcursor help
+file.
+
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+See the documentation on rimcursor (\fIhelp rimcursor\fR) for a description
+of the rimcursor task.
+
+See the documentation on cursor mode (\fIhelp cursor\fR) for a
+description of the IRAF graphics user interface.
+
+See the documentation on QPOE filtering (\fIhelp qpoe\fR) for a
+description of the spatial filter user interface.
+.endhelp

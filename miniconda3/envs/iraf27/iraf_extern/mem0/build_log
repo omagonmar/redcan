@@ -1,0 +1,117 @@
+warning: library `libpkg.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mem0 ncarfft.f
+ncarfft.f:
+   cffti:
+   cfftf:
+   cfftb:
+   cffti1:
+   cfftf1:
+   cfftb1:
+   passf:
+   passf2:
+   passf3:
+   passf4:
+   passf5:
+   passb:
+   passb2:
+   passb3:
+   passb4:
+   passb5:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mem0/src/libpkg.a ncarfft.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mem0/src/libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mem0 convx.x fftdata.x fft_ncar.x outx.x t_imconv.x t_immake.x t_irfftes.x t_irme0.x t_pfactor.x
+convx.x:
+   move_array:
+   arrpeak:
+   standard:
+   lnshift:
+fftdata.x:
+   fftdata:
+fft_ncar.x:
+   fft_b_ma:
+   fft_b_mf:
+   ffft_b:
+   ifft_b:
+outx.x:
+   outr_b:
+   outc_b:
+t_imconv.x:
+   t_imconv:
+t_immake.x:
+   t_immake:
+   imdata:
+t_irfftes.x:
+   t_irfftes:
+   discpu:
+t_irme0.x:
+   t_irme0:
+   get_icf:
+   gaussfn:
+   trans_psf_c:
+   cal_hessian:
+   def_tp:
+   def_model:
+   irme_zero_c:
+   convolution_c:
+   cal_gradE:
+   calculate_c:
+   new_alpha_c:
+   new_beta:
+   nr_step_c:
+   opt_step_c:
+   me_header_c:
+t_pfactor.x:
+   t_pfactor:
+convx.f:
+   moveay:
+   arrpek:
+   standd:
+   lnshit:
+fftdata.f:
+   fftdaa:
+fft_ncar.f:
+   fftbma:
+   fftbmf:
+   ffftb:
+   ifftb:
+outx.f:
+   outrb:
+   outcb:
+t_imconv.f:
+   timcov:
+t_immake.f:
+   timmae:
+   imdata:
+t_irfftes.f:
+   tirffs:
+   discpu:
+t_irme0.f:
+   tirme0:
+   geticf:
+   gaussn:
+   transc:
+   calhen:
+   deftp:
+   defmol:
+   irmezc:
+   convoc:
+   calgre:
+   calcuc:
+   newalc:
+   newbea:
+   nrstec:
+   optstc:
+   meheac:
+t_pfactor.f:
+   tpfacr:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/mem0/src/libpkg.a convx.o fftdata.o fft_ncar.o outx.o t_imconv.o t_immake.o t_irfftes.o t_irme0.o t_pfactor.o
+ranlib libpkg.a
+Updated 10 files in libpkg.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p mem0 x_mem0.x
+x_mem0.x:
+   sys_runtask:
+x_mem0.f:
+   sysruk:
+xc -Nz -o xx_mem0.e x_mem0.o libpkg.a
+move `xx_mem0.e' to `mem0bin$x_mem0.e'
+purge directory `mem0bin$'

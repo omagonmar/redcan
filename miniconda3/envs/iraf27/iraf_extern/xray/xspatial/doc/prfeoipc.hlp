@@ -1,0 +1,72 @@
+# $Header: /home/pros/xray/xspatial/doc/RCS/prfeoipc.hlp,v 11.0 1997/11/06 16:29:56 prosb Exp $
+# $Log: prfeoipc.hlp,v $
+# Revision 11.0  1997/11/06 16:29:56  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:37:41  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:56:51  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:29:02  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:11:16  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:28:56  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:35:07  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/24  13:52:28  mo
+#New PROS help file
+#
+.help prfeoipc Apr92  xray.xspatial
+.ih
+NAME
+prfeoipc -- Description of the point response functions, PRF, for Einstein IPC 
+.ih
+USAGE
+This document describes the PRF for the Einstein Observatory IPC and 
+gives tables of in-orbit calibration images available to PROS.
+The data files can be found in directory xecal$.
+.ih
+DESCRIPTION
+.nf
+
+			The Einstein IPC
+
+	The size of the Gaussian core of the IPC PRF is a strong
+function of pulse height channel and a weak function of energy.  The
+low level wings are caused by mirror scattering and thus increase in
+relative importance with energy.  Details may be found in chapter 5 of
+the Revised User's Manual (SAO).
+       
+4.1 GROUND CALS
+
+ ELEMENT  LINE    ENERGY         CENTER*      	FILE NAME
+		   (keV)	 X (pix) Y
+-----------------------------------------------------------------
+
+   C       K    0.277 KeV        513	513     ipc.c.qp
+
+   AL      K    1.49  KeV        513	511     ipc.al.qp**
+
+   AL      K    1.49  KeV        513	511     ipc.al.hv6.qp***
+
+   AG      L    2.98  KeV        513	512     ipc.ag.qp
+
+
+* NOTE: This is the approximate center of the cal source, in pros pixel 
+coordinates, with 1,1 in the lower left corner.  
+
+** BEWARE !  This file is a combination of two files taken at different gains.
+The pulse height data in IPC.AL.IMG are therefore of NO use. (HVS data
+from HV steps 6 and 7 were combined - BAL ~13.5 and 18).
+
+*** This file contains only data from HV step 6.
+
+.fi

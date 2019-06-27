@@ -1,0 +1,512 @@
+%\input /pros/doc/scidoc/skeleton.tex
+\def\version{\it Rev. 1.0 - 8/1/86}
+\def\chapter{\it Timing Analysis: Shot Noise Analysis}
+%\chapterhead{Science Specifications for the PROS}
+%\chapterhead{Timing Analysis: Shot Noise Analysis}
+\chapterhead{VIII.~Shot Noise Analysis}
+
+\vskip 12pt
+\noindent
+{\it Science Contact}:  R. Rosner
+
+\@{Introduction}
+
+This memo briefly describes shot noise temporal analysis of X-ray
+data, and outlines the structure of a typical software implementation
+of such an analysis.  The basic idea behind this kind of temporal
+analysis is presented first, followed by an outline of the necessary
+calculational steps.
+
+The origins of shot noise analysis in astronomy involve the
+interpretation of the extremely noisy X-ray signal observed from
+Cyg~X-1 in the early days of X-ray astronomy (cf., Oda et al. 1971,
+Rappaport, Doxsey and Zaumen 1971, Holt {\it et al.} 1971, Schreier
+{\it et al.}
+1971): the questions were, first, whether the extremely short-duration
+(superimposed) transients could be used as a constraint on the size of
+the source (via a light travel time argument) and, second, whether one
+could build a model for the observed bursting behavior in terms of a
+superposition of random pulses with identical temporal profiles (the
+``shots'').
+
+This kind of ``shot'' model was first studied in some detail by
+Terrell (1972).  The basic complication, pointed out by Press and
+Schechter (1974), was that the reality of the elementary bursts or
+``shots'' depends crucially on the variability of the source on time
+scales much longer than the shot duration:  that is, one can show that
+small-amplitude slow variations in Poisson count data can
+significantly increase the probability of occurrence of
+shorter-duration ``bursts'' (which are in fact entirely spurious).
+Thus, any analysis of noisy data which seeks to study the
+characteristics of apparent ``shots'' or flare-like short transients
+must take this bias into account.  This kind of analysis was then
+developed further by Weisskopf and collaborators (Weisskopf, Kahn and
+Sutherland 1975, Sutherland, Weisskopf and Kahn 1978, Weisskopf and
+Sutherland 1978), using UHURU data.  The following discussion is based
+on the latter papers.
+
+\@{The Basic Idea of the Analysis Method}
+
+The idea is to model the signal in the form
+
+$$z(t)= \sum^{N}_{i=1} h (t - t_{i}) + C  \qquad\qquad (1)$$
+
+where the individual shots have Poisson-distributed starting times
+$t_{i}$, with a mean rate of $\lambda$, and are identical in form
+[given by $h(t)$], with a characteristic width of $\tau$. Most models
+consider either shots which are ``square'', of width $\tau$, or
+exponential [so that $h(t) = h$~exp$(-t/\tau)$ for $t>0$, and $=0$ for
+$t < 0$].  C is assumed to represent a non-shot component (possibly
+variable).  Note that because all shots are identical, and because
+they are Poisson-distributed in time, the stochastic part of $z(t)$ is
+a stationary process, so that all correlation functions of the shot
+noise signal depend only on differences in time (this is the reason
+that it is essential to detrend the data, since if C does depend on
+time, then correlation functions constructed from $z(t)$ will not be
+time-invariant).  The key is then to consider the form of the
+autocorrelation function of $z(t)$, and to see whether its form can be
+used to deduce the parameters of the model ({\it i.e.}, the mean shot rate
+$\lambda$, the shot characteristic time $\tau$, the shot amplitude
+$h$, and the (assumed constant) non-shot component amplitude C.  Thus,
+Sutherland, Weisskopf and Kahn (1978) derive (for the continuous
+signal exponential shot model in the presence of binning) the
+simultaneous set of equations
+$$\eqalign{\hfill <s> = (\lambda h\tau + C)T\hfill\qquad\qquad (2a)\cr
+\hfill V_{s} = \lambda h^{2}\tau^{3} (x - 1 +
+e^{-x})\hfill\qquad\qquad (2b)\cr
+\hfill M_{3s} = \lambda h^3\tau^4(x - 3/2 +2e^{-x} - e
+^{-2x}/2)\hfill\qquad\qquad (2c)\cr
+\hfill \rho_{n} = \left( {2 \sinh^{2}(x/2)\over x -1 + e^{-x}} \right)
+e^{-nx}\hfill\qquad\qquad (2d)\cr}$$
+where $<s>$ is the signal mean, $V_{s}$ is the signal variance,
+$M_{3s}$ is the third moment of the signal, $\rho_{n}$ is the
+autocorrelation function ($n$ is the number of bins by which the signal
+is shifted), and $x \equiv T/\tau$ ($T$ is the bin interval).  These
+four equations can then be used to solve for $\lambda,\tau, h$ and $C$:
+The data allow one to calculate the left-hand sides of equations
+(2a)-(2c), and [by fitting (2d) to the data autocorrelation function
+$z(t)z(t+nT)$] to derive $x$ (and hence $\tau$), leaving three
+simultaneous equations in the three remaining unknowns $\lambda, h$
+and $C$.
+
+\@{The Complications and the Actual Method:  The Recipe}
+
+Unfortunately, not only is the data binned, but it also entails
+discrete photon counting, a finite interval over which the data is
+collected, and long-term variation in the non-shot component ({\it i.e.}, $C$
+is not a constant); hence, the above approach cannot be used in
+practice.  In order to compensate for the biases introduced by these
+complications, Sutherland, Weisskopf and Kahn (1978; henceforth SWK)
+devised a series of corrections to the above relatively simple-minded
+approach.  Aside from the considerable increase in algebraic
+complexity of the formalism, the major change derives from the fact
+that the autocorrelation function $\rho_{1}$ turns out to depend on
+the source variance $V_{s}$; hence, the fitting procedure to obtain
+$\tau$ directly from the data (by fitting the data autocorrelation
+function with the model) is very poorly conditioned.  One reasonable
+solution is to note that the ratio of the autocorrelation function at
+two successive lag times [{\it i.e.}, $\rho(T)/\rho(2T)$] turns out to be
+independent of the source variance.  In particular, SWK constructed
+the following recipe (with some additions, as gleaned from the other
+literature):
+
+\vskip 12pt
+
+\item{1.} {\bf Background-subtract the data} (where $B$ is the
+background).
+\item{2.} {\bf Bin the background-subtracted data}, using a range of
+binning intervals $T$.
+\item{3.} {\bf Detrend the binned data}; the simplest method is to
+take out any linear variation of the overall background-subtracted
+signal ({\it i.e.}, fit a linear function of time to the data in the least
+square sense, and subtract this best-fit function from the data).
+\item{4.} {\bf Compute the variance $\sigma_{T}$ for the binned,
+background-subtracted, and detrended data}, computing one variance for
+each binning interval $T$.  This step is useful in order to decide
+whether to keep going:  perfectly random data will show a variance per
+bin duration, $\sigma_{T}/T$, which does not depend on the binning
+interval (it should just be equal to the mean counting rate).
+\item{5.} If the variance per bin interval {\it does} show a distinct
+variation with the binning interval,
+\itemitem{(a)} {\bf Subtract the mean from the data;}
+\itemitem{(b)} Use the zero-mean, binned data to {\bf evaluate the
+autocorrelation function for two bin shifts}: $\rho(T)$ and $\rho(2T)$;
+\itemitem{(c)} {\bf Solve for} $x = T/\tau$ (using a non-linear
+fitting routine) in equation (6) of SWK:
+
+$$\eqalign{{<\rho(2T)>\over <\rho(T)>} =
+&\Biggl[ {N-2\over N-1}
+\Biggl\{ {e^{-2}g(x)\over 2} - {1\over N-2}\Biggl[ 1-{1\over
+Ng(x)}\Biggl] \cr
+&\times\Biggl[ 1+{N-2\over N(N-1)}\Biggl] + {g(x)\over
+N(N-2)}\Biggl\}\Biggl] \cr
+&\times\Biggl\{ {g(x)\over 2} - {1\over N-1}\Biggl[ 1- {1\over Ng(x)}\Biggl]
+\Biggl[ 1+{1\over N}\Biggl] \Biggl\}^{-1},\cr}\quad\quad(3) $$
+
+\itemitem{\phantom{(c)}} where $g(x)\equiv 1-e^{-x}$, $q(x) \equiv
+x/g(x) -1$, and $x$ and $T$ have
+been defined above.  By changing the binning frequency ({\it i.e.}, $N$), we
+can test the sensitivity of the determination of $X$ (and $\tau$).
+
+\item{6.} {\bf Set up three equations for the remaining three
+unknowns} (using $\tau$ and $x$ just derived, as well as equations (A10)
+and (B8) of SWK):
+\itemitem{(a)} {\bf Compute the mean $<s>$ of the
+background-subtracted data, and set it equal to the mean count rate of
+the model}:
+$$<s> = (\lambda h\tau + C)T \qquad\qquad\qquad\qquad\qquad(4a)$$
+\itemitem{(b)} {\bf Compute the variance $<(s^{\prime})^{2}>$ of the
+zero-mean, background-subtracted, and detrended data, and set it equal
+to the variance of the model}:
+$$<(s^{\prime})^{2}> = V_{s} +{<s>\over<Tr>}
++{B\over<Tr^{2}>},\qquad\qquad(4b)$$
+where
+$$V_{s} = \lambda h^{2}\tau^{3}(x-1+e^{-x})$$
+is the (unknown source variance, expressed in terms of the unknown
+source model parameters $\lambda$, $C$ and $h \tau$, $<Tr>$ is the mean
+of the trend which was subtracted out previously in step \#3,
+$<Tr^{2}>$ is the second moment of the trend, and $B$ is the background
+rate.
+
+\itemitem{(c)} {\bf Compute the third moment of the zero-mean
+background-subtracted and detrended data, and set it equal to the
+third moment of the model}: 
+
+$$\eqalign{<(s^{\prime})^{3}> = \lambda h^3\tau^4 \left[ x - {3\over 2} + 2e^{-x}
+-{e^{-2x} \over 2} \right] \cr + {3V_s\over<Tr>} + {<s>\over <Tr^{2}>} + {B\over
+<Tr^{3}>}\cr}\qquad\qquad(4c)$$
+
+\itemitem{\phantom{(c)}} where $<Tr^3>$ is the third moment of the zero-mean,
+background-subtracted, and detrended data.
+
+{\bf By solving equations (4a)-(4c) simultaneously for $\lambda, C$,
+and $h\tau$, we obtain a complete description of the exponential shot
+model}.  The solution to (4a)--(4c) can be obtained by (a) using a root
+finding routine if good initial values for $\lambda, C$ and $h \tau$
+are available, or (b) re-casting the problem of solving (4a)--(4c) as
+an optimization problem [{\it i.e.}, find that triplet $\{\lambda,C,\tau\}$
+which best satisfies (4a)--(4c)), and then using a gradient descent or
+annealing algorithm to solve this optimization problem].
+
+\@{Case for a large number of bins}\footnote\dag{Section based on
+comments from M. Weisskopf, Marshall Space Flight Center}
+
+For $N >$ few hundred, it is better to use the power spectrum rather
+than the autocorrelation function in step \# 5 of `the recipe'. [A
+paper by Elsner {\it et al.} (1986 or later?) should give the method.] 
+It is suggested that the power-spectrum and autocorrelation-function
+methods both be coded, and the program choose the appropriate branch
+depending on the data. 
+
+\@{Error Analysis}
+
+Because of the highly non-linear fitting procedures involved in
+deriving the four parameters $\tau,\lambda,C$ and h$\tau$, there is no
+reliable way of analytically estimating the error in these derived
+model parameters. Hence, it seems unavoidable that Monte Carlo
+simulations must be used to estimate the errors.  The FORTRAN code for
+the simulations of Elsner, Weisskopf {\it et al.} has been transmitted
+to us by Elsner.  A description of the method is given below.
+
+\@{Simulating Binned Shot Noise with an Exponential
+Profile}\footnote\ddag{by R. Elsner}
+
+The classic paper on shot noise in the continuous limit is Rice, S.O.
+(1954), in {\it Selected Papers on Noise and Stochastic Processes}, ed. N.
+Wax (Dover: New York), pp.~133-294.  Various incarnations of Sutherland
+and Weisskopf discuss the effects of binning.
+
+Consider the continuous time series (in counts per second) given by:
+$$R(t) = C + \sum_{j} F_{j}(t-t_{j})$$
+
+Here $C$ is a possible steady component and $t_j$ is the time of
+onset of the $j$-th shot.  The amount of computer time needed to
+simulate shot noise can be greatly reduced if one assumes that the
+shot profile is given by:
+$$F_{j}(t-t_{j}) = \theta(t-t_{j})h\ e^{-(t-t_j)/\tau}$$
+
+where $\theta (t)$ is the step function.  For this profile the mean
+number of counts per shot (or shot strength) is given by:
+$$Q = h\tau.$$
+
+Assume that the number of shots in time $T$ is Poisson distributed
+with mean $\lambda T$, where $\lambda$ is the mean shot rate (see
+Rice).  Then one can show that the mean count rate [ensemble average
+of $R(t)$] is independent of time and given by:
+$${\rm average\ rate} = <R(t)> = C +\lambda Q$$
+
+On average, the fraction of counts due to shots (or shot fraction) is
+given by:
+$$\alpha = \lambda Q/(C+\lambda Q)$$
+
+Now assume a bin size $\Delta t$.  Then the binned time series (in
+counts per bin) is given by:
+$$X_{i} = C\Delta t + Q\sum_{j} S_{j,i}$$
+
+where we have defined:
+$$S_{j,i} = \int_{(i-1)\Delta t}^{i\Delta t}\
+(dt/\tau)\theta(t-t_j)e^{-(t-t_j)/\tau}$$
+
+At this point it is useful to define:
+$$Q_{j,i} = e^{-(i\Delta t-t_{j})/\tau}$$
+
+[Note:  In this expression, $i$ is bin number {\it not}
+$\sqrt{-1}$.]
+
+Note the relation:
+$$Q_{j,i+1} = e^{-\Delta t/\tau} Q_{j,i}$$
+
+Now suppose that the $j$-th shot begins in bin $i_o = i_o(t_j)$
+so that $[(i_o-1)\Delta t \leq t_j < i_o \Delta t]$.  Then
+one can show that the following relations are true:
+$$\eqalign{
+S_{j,i_o} & = 1 - Q_{j,i_o} \cr
+S_{j,i_o+1} & = Q_{j,i_o} (1 - e^{-\Delta t/\tau}) \cr
+S_{j,i+1} & = S_{j,i}e^{-\Delta t/\tau},\qquad i \geq i_o+1 \cr  }$$
+
+These relationships allow one to calculate the contribution to the
+counts in bin $i$ from shots that began in earlier bins from their
+contribution to the previous bin.  This fact forms the basis for the
+following algorithm for simulating binned shot noise.  Since the
+algorithm avoids direct calculation of the contribution from each shot
+to each bin, the computer time needed to create the binned time series
+is greatly reduced below what it would be for a brute force method.
+Unfortunately, the algorithm does not work for general shot profiles
+and brute force methods must then be employed.
+
+\item{}{\bf The Algorithm:}
+
+\**Input shot and binning parameters and initialize variables.
+
+\**Generate sequence of shot onset times $t_j$.  Let $N$ be
+the desired number of bins in the time series:
+
+\??The number of shots in time $T$ is Poisson distributed
+so that the time interval between shots is exponentially distributed.
+Therefore $t_j = t_{j-1} + (dt)_j$, with $(dt)_j$ given by
+$$(dt)_{j} = -(1/\lambda)\ast\ln (r)$$
+
+\itemitem{}Here $r$ is a random number uniformly distributed between 0 and 1.
+thus once one determines a starting point, one can generate as long a
+string of $t_{j}$ as desired simply by generating a string of random
+numbers $r$ and successively applying the equation given above;
+
+\??There is no condition for determining the time $t_1$
+of the first shot in the time series.  We start with $t_{1} = 0$.  In
+order to avoid any special effects introduced by this special initial
+condition, we generate a time series with $N^{\prime} = N +I1$ bins
+and keep only the last $N$ bins.  If $I1$ is large enough, then many
+shots occur in the first $I1$ bins, and the special initial condition
+is effectively `forgotten' for the last $N$ bins.  We set $I1$
+according to
+$$I1 = 1 - (1/x)\ast\ln (P/x)$$
+
+\itemitem{}where $x = \Delta t/\tau$ and $P$ is a small number (we use $P =
+10^{-4}$).  As far as we know, this procedure is sufficient to
+eliminate potential problems due to the initial condition $t_{1} = 0$;
+
+\??Following the rules given above, generate a sequence of
+$t_j < N' \Delta t$.  Stop when one finds a $t_j >
+N' \Delta t$.
+
+\**Initialize the `old' shot contribution:  $SQ = 0$.
+
+\**For $i = 1$ to $N'$:
+
+\??Calculate contributions from those shots that begin in
+bin $i$:
+$$SJ = \sum_{j'} S_{j',i_o} = \sum_{j'} \left(1 - Q_{j',i_o}\right)$$
+
+\??For these same shots also calculate the quantity:
+$$SQP = \sum_{j'} Q_{j',i_o}$$
+
+\??Calculate the shot contribution to the $i$-th bin by
+adding contributions from `old' and `new' shots:
+$$X_{i'} = SJ + SQ$$
+
+\itemitem{}[Note:  $SJ$ is `new' shot contribution, while $SQ$ is `old` shot
+contribution.]
+
+\??Prepare for the next bin by propagating the old value
+for $SQ$ and adding in the new contributions to $SQ$:
+$$SQ = SQ \ast \exp(-\Delta t/\tau) + SQP\ast[1-\exp(-\Delta t/\tau)]$$
+
+\**Calculate the mean number of counts per bin, $[<x_{i}>~;~ i =
+1,N]$, for this realization of the desired time series by converting
+to counts and adding in the DC component:
+
+$$<x_{i}> = C\Delta t + Q\ast x_{k}^{\prime}, \quad k=i+I1$$
+
+\item{}Notice that this procedure keeps only the last $N$ bins out of the
+original $N'$. The numbers $<x_i>$ will of course vary from
+experiment to experiment due to variations in the number of shots as
+well as in the sequence of onset times $t_j$.
+
+\**If desired, `randomize' the number of counts $x_i$ in bin
+$i$, $i = 1$ to $N$, according to the Poisson distribution with mean
+$<x_{i}>$.  This introduces further variations due to counting
+statistics.
+
+\**Calculate the power spectrum (and/or autocorrelation
+function) and the desired moments for the time series $[x_i,\ i=1,\
+N]$.
+
+\**Repeat steps 2-7 for $M$ `experiments' $(M>>1)$.
+
+\**Calculate the ensemble averaged power spectrum (and/or
+autocorrelation function) and moments.  Estimate errors based on
+scatter about average values.
+
+\item{}[We have a hardcopy version of the FORTRAN code ``Binned Shot
+Noise Simulator without Dead Time Corrections'', by R.F. Elsner and
+M.C. Weisskopf. Feb 1986 -- 260 lines including comments.]
+
+\@{Limitations of the ``shot'' model analysis}
+
+This kind of analysis, much like spectral fitting, is at the mercy of
+the model used to interpret the data:  The data can never prove the
+correctness of the model, but rather can only demonstrate the
+consistency of the model with the data.  Thus, unless the ``shot''
+model can be interpreted in some physically-meaningful way [{\it e.g.}, in
+terms of some local instability, with the ``shot'' width and
+repetition rate physically interpreted], the model parameters derived
+above are simply an economical description of the character of the
+time variation of the signal.
+
+\@{References}
+
+\refindent
+Holt, S.S., Boldt, E.A., Schwartz, D.A., Serlemitsos, P.J., and
+Bleach, R.D. 1971, {\it Ap.J.(Letters)}, {\bf 166}: L65.
+
+\refindent
+Oda, M., Gorenstein, P., Gursky, H., Kellogg, E., Schreier, E.,
+Tananbaum, H., and Giacconi, R. 1971, {\it Ap.J.(Letters)}, {\bf 166}:
+L1.
+
+\refindent
+Press, W.H. and Schechter, P. 1974, {\it Ap.J.}, {\bf 193}: 437.
+
+\refindent
+Rappaport, S., Doxsey, R., and Zaumen, W. 1971, {\it Ap.J.(Letters)},
+{\bf 168}: L43.
+
+\refindent
+Rothschild, R.E., Boldt, E.A., Holt, S.S., and Serlemitsos, P.J. 1974,
+{\it Ap.J.(Letters)}, {\bf 189}: L13.
+
+\refindent
+Rothschild, R.E., Boldt, E.A., Holt, S.S., and Serlemitsos, P.J. 1977,
+{\it Ap.J.}, {\bf 213}: 818.
+
+\refindent
+Schreier, E., Gursky, H., Kellogg, E., Tananbaum, H., and Giacconi, R.
+1971, {\it Ap.J.(Letters)}, {\bf 170}: L21.
+
+\refindent
+Sutherland, P.G., Weisskopf, M.C., and Kahn, S.M. 1978, {\it Ap.J.},
+{\bf 219}: 1029.
+
+\refindent
+Terrell, N.J. 1972, {\it Ap.J.(Letters)}, {\bf 174}: L35.
+
+\refindent
+Weisskopf, M.C., Kahn, S.M., and Sutherland, P.G. 1975, {\it
+Ap.J.(Letters)}, {\bf 199}: L147.
+
+\refindent
+Weisskopf, M.C. and Sutherland, P.G. 1978, {\it Ap.J.}, {\bf 221}: 228.
+
+
+
+\vfill\eject
+\@{Flow Chart for Shot Noise Analysis}
+
+\def\normaldisplay#1$${\centerline{$\displaystyle{#1}$}$$}
+\everydisplay{\normaldisplay}
+
+\parskip 0pt
+\rm
+\abovedisplayskip 0truept
+\belowdisplayskip 0truept
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+       \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+
+\setbox1=\vbox{\hsize 2.7in \noindent \strut
+Background-subtract: $z(t) \rightarrow z'(t)$
+ \strut}
+
+\setbox2=\vbox{\hsize 4.2in \noindent \strut
+Choose binning interval $T$, and bin $z'(t)$ to obtain $z'(nt)$
+ \strut}
+
+\setbox3=\vbox{\hsize 3.3in \noindent \strut
+Detrend the data: $s(nT) = z'(nT) - Tr(nT)$
+ \strut}
+
+\setbox4=\vbox{\hsize 2.4in \noindent \strut
+Compute the variance $\rho(T)$ of $s$
+ \strut}
+
+\setbox5=\vbox{\hsize 1.9in \noindent \strut
+Change binning interval
+ \strut}
+
+\setbox6=\vbox{\hsize 3.in \noindent \strut
+Plot $\rho$ as a function of $T$.  If $\rho(T)$ varies significantly
+with $T$, go on
+ \strut}
+
+\setbox7=\vbox{\hsize 2.3in \noindent \strut
+Subtract mean: $s' = s - <s>$
+ \strut}
+
+\setbox8=\vbox{\hsize 3.9in \noindent \strut 
+Calculate autocorrelation function at two shift values
+$\rho(T) = < s'(t) s'(t+T) >; \rho(2T) = < s'(t) s'(t+2T) >$
+ \strut}
+
+\setbox9=\vbox{\hsize 2.8in \noindent \strut
+Solve for $x=T/\tau$ in equation (3), using non-linear fitting routine
+ \strut}
+
+\setbox10=\vbox{\hsize 3.6in \noindent \strut
+Compute $<s'>, <(s')^2>$, and $<(s')^3>$.  Compute $<Tr>, <Tr^2>$, and $<Tr^3>$
+ \strut}
+
+\setbox11=\vbox{\hsize 3.2in \noindent \strut
+Solve equations (4a) -- (4c) for $\lambda, C$ and $h\tau$
+ \strut}
+
+\vskip 12pt
+Given time series data $z=z(t)$ (which consists of arrival times of
+individual photons):
+
+$$\boxit{\box1}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\nearrow\boxit{\box2}\phantom{\nearrow}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\boxit{\box3}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\boxit{\box4}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+%$$\hbox{\vbox{$\nwarrow$\kern6pt}\boxit{\box5}}$$
+$$\nwarrow\boxit{\box5}\phantom{\nwarrow}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$${\rm N}\longleftarrow\boxit{\box6}\phantom{\longleftarrow{\rm N}}$$
+\centerline{$\mid$}\vskip
+-3pt\centerline{\phantom{Y}\quad$\downarrow$\quad Y}\vskip -9pt
+$$\boxit{\box7}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\boxit{\box8}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\boxit{\box9}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\boxit{\box10}$$
+\centerline{$\mid$}\vskip -3pt\centerline{$\downarrow$}\vskip -9pt
+$$\boxit{\box11}$$
+
+\everydisplay{\leftdisplay}
+
+\parskip 8.0pt
+\vfill\eject

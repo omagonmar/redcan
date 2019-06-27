@@ -1,0 +1,183 @@
+%\input /pros/doc/scidoc/skeleton.tex
+\def\version{\it Rev. 1.0 - 5/27/86}
+\def\chapter{\it Timing Analysis: Fractal/Attractor Analysis}
+%\chapterhead{Science Specifications for the PROS}
+%\chapterhead{Timing Analysis: Fractal/Attractor Analysis}
+\chapterhead{X.~Fractal/Attractor Analysis}
+
+\@{Overview}
+
+\noindent
+{\it Science Contact}:  R. Rosner
+
+\noindent
+{\it Function Purpose}:  Attractor dimension time series analysis,
+sometimes also referred to as fractal dimension time series analysis,
+aims to discover regularities in time series which may be obscured by
+complex temporal behavior.
+
+\@{Basic Idea}
+
+Consider a complex dynamical system ({\it e.g.}, a star, an accretion
+disk,$\ldots$) characterized by a large set of variables $X_k$, whose
+evolution is governed by nonlinear equations of the form
+$${d\over dt} X_{k} (t) = f(X_{1},...,X_{n};t)\qquad k=1,...,n\qquad\qquad(1)$$
+
+In general, it is possible to solve for any one of these variables,
+whose evolution is then governed by an $n$th-order nonlinear
+differential equation.  Thus, the evolution of this one variable (and
+of its $(n-1)$ derivatives) specifies the system's behavior.
+
+Suppose that this one variable is an observable, such as for example
+the source's luminosity.  Call this variable $X(t)$.  {\it The key
+idea is to use the temporal behavior of this observable to deduce $n$,
+the number of independent variables which govern the source's
+behavior}.  Because we deal with discrete, rather than continuous
+data, it is senseless to consider the behavior of $X(t)$ and its
+derivatives; instead, we will consider the temporal behavior of the $N$
+time series $[X(t), X(t+\tau),...,X(t+(N-1)\tau)]$, where $\tau$ is
+a fixed binning interval and $N$ is the number of shifted time series
+generated from the original data. As discussed by Ruelle (1981), the $N$
+shifted time series and the set ${X(t),X^{(1)}(t),...,X^{(N-1)}(t)}$
+are equivalent ways of describing the dynamical system's evolution in
+the phase space of the system.
+
+\@{The Method}
+
+Given a binned set of data
+$$X(t_{o}), X(t_{o}+\tau),..., X(t_{o}+M\tau)\qquad\qquad(2)$$
+where $\tau$ is the temporal bin width, form the $N$ vectors
+$$\eqalign{
+Y_{1}&=[ X(t_{o}), X(t_{o}+\tau),..., X(t_{o}+(N-1)\tau)] \cr
+Y_{2}&=[X(t_{o}+\tau), X(t_{o}+2\tau),...,X(t_{o}+N\tau)] \qquad\qquad\qquad\qquad(3) \cr
+Y_{N}&=[X(t_{o}+(N-1)\tau), X(t_{o}+N\tau),...,X(t_{o}+2(N-1)\tau)]
+\cr }$$
+
+Obviously $N < M$, but other than this obvious constraint, there is no
+{\it a priori} way of choosing $N$. Experience dictates that
+several values of $N$ be chosen, and the analysis repeated; this will
+be discussed further below.
+
+These $N$ vectors define the positions of $N$ points in a space of $N$
+dimensions.  The key question is whether these $N$ points lie in a
+subspace of {\it lower} dimension. To answer this question,
+
+\**Calculate {\it all} of the distances between all possible
+pairs of points, using the Euclidean norm
+
+$$\mid Y_{i}-Y_{j}\mid = \left[\ \sum_{k=1}^{N} \left(\{Y_{i}\}_{k} -
+\{Y_{j}\}_{k}\right)^{2}\right]^{^{1/2}}\qquad\qquad(4)$$
+
+{\list
+
+where $\{Y_{i}\}_{k}$ is the $k$th coordinate value of the vector
+$Y_{i}$
+
+}
+
+\**For each point $Y_{i}$ in the $N$-dimensional space, determine the
+number of other points $q_{i}$ lying within a distance $\rho$ of it as
+a function of $\rho$. This should yield a scatter plot looking as
+follows:
+
+\vskip 1.5in
+\centerline{Figure TBD}
+\vskip 1.5in
+
+{\list
+
+This scatter plot is best produced by binning log $\rho$, with each
+log $\rho$ bin containing the ($N$) values $q_{i}$ of number of points
+lying {\it within} that bin value $\rho$ of the $i$th points,
+{\it i.e.} 1,...,$N$.
+
+}
+
+\**For each log $\rho$ bin, add up all of the $q_{i}$, {\it e.g.},
+
+$$Q(\rho_{j}) = \sum_{i=1}^{N}\ q_{i}(\rho_{j})$$
+
+{\list
+
+is the {\it total} number of points which lie within $\rho_i$
+of any other point in the space.  This gives a scatter plot of the
+form
+
+}
+
+\vskip 1.5in
+\centerline{Figure TBD}
+\vskip 1.5in
+
+{\list 
+
+{\it e.g.}, one value of $Q\ (\rho_{i})$ for each bin
+$\rho_{i}$.
+
+}
+
+\**Fit a straight line to the portion of the $\log Q(\rho) - \log
+\rho$ scatter plot near the origin, {\it i.e.}, near small $\rho$, and
+determine its slope, $m(N)$.
+
+\**Repeat the above analysis but increasing the value of $N$.  Then
+plot the variation of the slope $m$ as a function of $N$:
+
+\vskip 1.5in
+\centerline{Figure TBD}
+\vskip 1.5in
+
+{\list
+
+Thus, start with $N$ small (1 or 2) and increase it in
+steps of 1 until a break or saturation in the $m=m(N)$ relation is
+seen; {\it the value of $m$ at this break is an estimate of the
+dimension of the subspace in which the data points are clustered}.
+this value may well not be an integer; hence the name ``fractal
+dimension''.
+
+}
+
+\@{Why the algorithm works}
+
+A basic fact about manifolds (whether differentiable, smooth, or
+whatever) is that their dimension can always be determined locally by
+studying how the volume of a small sphere increases as the radius of
+the sphere increases.  How do we study this practically?  Well just
+``sprinkle'' random points on the manifold and then count the number
+of points within a small sphere as the radius of the sphere $\rho$ is
+increased.  If the manifold is two-dimensional, then the number $Q$
+points within a small sphere will vary as $\rho^{2}$; if the manifold
+is three-dimensional, it will vary as $\rho^{3}$, {\it etc}.  Hence $\log
+Q(\rho)$ gives directly $m\cdot \log~\rho$, where $m$ is the manifold
+dimension.  This only works for $\rho$ small; this is why we fit a
+straight line to $\log~Q - \log~\rho$ (in step 4 above) only near the
+origin.  Why vary $N$? Because we don't know what $m$ is: if $m > N$,
+then the above method will find that $Q\sim \rho$; only if $m<N$ will
+$Q\sim \rho^m$, so that $m$ can be determined.  This
+Monte-Carlo-like method of determining the dimension $m$ is due to
+Grassberger and Procaccia (1983), and is a concrete implementation of
+the ``correlation dimension''.
+
+\@{Notes}
+
+M. Garcia is coding this analysis on the M600.  He should be contacted
+for his up-to-date program listings.
+
+\@{References}
+
+\refindent
+Grassberger, P. and Procaccia, I. 1983, {\it Phys.~Rev.~Lett.}, {\bf 50},
+346.
+
+\refindent
+Ruelle, D. 1981 in {\it Non-linear Phenomena in Chemical Dynamics},
+(eds. Pacault and Vidal;  Sringer, Berlin).
+
+\noindent
+Also see:
+
+\refindent
+Nicolis, C. and Nicolis, G. 1984, {\it Nature}, {\bf 311}, 529
+
+\vfill\eject

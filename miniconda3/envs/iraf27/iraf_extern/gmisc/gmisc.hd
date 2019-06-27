@@ -1,0 +1,13 @@
+# Help directory for the GMISC package.
+
+$doc		= "gmisc$src/doc/"
+$srcdir		= "gmisc$src/"
+
+gmisc		hlp="gmisc$gmisc.men"
+
+gdispcor	hlp=doc$gdispcor.hlp
+gstandard	hlp=doc$gstandard.hlp
+gscombine	hlp=doc$gscombine.hlp
+ldisplay	hlp=doc$ldisplay.hlp,	src=srcdir$t_ldisplay.x
+nhedit		hlp=doc$nhedit.hlp,     src=srcdir$nhedit.x
+skymask		hlp=doc$skymask.hlp,	src=srcdir$t_skymask.x

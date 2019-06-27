@@ -1,0 +1,6 @@
+  gdispcor - Version of DISPCOR that works with long slit data (gmisc)
+ gstandard - Version of STANDARD that provides blackbody calibration (gmisc)
+ gscombine - Version of SCOMBINE that provides mask support (gmisc)
+  ldisplay - Prototype IFU display task (gmisc)
+    nhedit - New HEDIT application (gmisc)
+   skymask - Create a sky mask from a bad region pixel file (gmisc)

@@ -1,0 +1,650 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "numpy",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/reftools-1.7.4-py27_1",
+  "features": "",
+  "files": [
+    "bin/tdspysyn",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/native_libs.txt",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/requires.txt",
+    "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/reftools/__init__.py",
+    "lib/python2.7/site-packages/reftools/__init__.pyc",
+    "lib/python2.7/site-packages/reftools/_computephotpars.so",
+    "lib/python2.7/site-packages/reftools/data/dqflags_acs.txt",
+    "lib/python2.7/site-packages/reftools/data/dqflags_hstgen.txt",
+    "lib/python2.7/site-packages/reftools/data/dqflags_wfc3.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_110425.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_110718-1.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_110718-2.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_111129-1.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_111129-2.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_111129.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_111214.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_120119.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_130813.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_dtdel_110425.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_dtdel_111129.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_history.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_levels_110425.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_levels_111129.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_scaling_110718.txt",
+    "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_scaling_110818.txt",
+    "lib/python2.7/site-packages/reftools/getphotpars.py",
+    "lib/python2.7/site-packages/reftools/getphotpars.pyc",
+    "lib/python2.7/site-packages/reftools/graphfile.py",
+    "lib/python2.7/site-packages/reftools/graphfile.pyc",
+    "lib/python2.7/site-packages/reftools/graphtab.py",
+    "lib/python2.7/site-packages/reftools/graphtab.pyc",
+    "lib/python2.7/site-packages/reftools/imphtcomp.py",
+    "lib/python2.7/site-packages/reftools/imphtcomp.pyc",
+    "lib/python2.7/site-packages/reftools/interpretdq.py",
+    "lib/python2.7/site-packages/reftools/interpretdq.pyc",
+    "lib/python2.7/site-packages/reftools/makedxy.py",
+    "lib/python2.7/site-packages/reftools/makedxy.pyc",
+    "lib/python2.7/site-packages/reftools/makesmall.py",
+    "lib/python2.7/site-packages/reftools/makesmall.pyc",
+    "lib/python2.7/site-packages/reftools/mkimphttab.py",
+    "lib/python2.7/site-packages/reftools/mkimphttab.pyc",
+    "lib/python2.7/site-packages/reftools/pars/tdspysyn.cfg",
+    "lib/python2.7/site-packages/reftools/pars/tdspysyn.cfgspc",
+    "lib/python2.7/site-packages/reftools/pctetab.py",
+    "lib/python2.7/site-packages/reftools/pctetab.pyc",
+    "lib/python2.7/site-packages/reftools/synpysyncomp.py",
+    "lib/python2.7/site-packages/reftools/synpysyncomp.pyc",
+    "lib/python2.7/site-packages/reftools/tdspysyn.help",
+    "lib/python2.7/site-packages/reftools/tdspysyn.py",
+    "lib/python2.7/site-packages/reftools/tdspysyn.pyc",
+    "lib/python2.7/site-packages/reftools/test_small_dgeo.py",
+    "lib/python2.7/site-packages/reftools/test_small_dgeo.pyc",
+    "lib/python2.7/site-packages/reftools/tests/__init__.py",
+    "lib/python2.7/site-packages/reftools/tests/__init__.pyc",
+    "lib/python2.7/site-packages/reftools/tests/data/acs_sbc_dev_imp.fits",
+    "lib/python2.7/site-packages/reftools/tests/data/test_acs_wfc1_dev_imp.fits",
+    "lib/python2.7/site-packages/reftools/tests/data/test_wfc1_dev_imp.fits",
+    "lib/python2.7/site-packages/reftools/tests/test_get_phot_pars.py",
+    "lib/python2.7/site-packages/reftools/tests/test_get_phot_pars.pyc",
+    "lib/python2.7/site-packages/reftools/tests/test_imphtcomp.py",
+    "lib/python2.7/site-packages/reftools/tests/test_imphtcomp.pyc",
+    "lib/python2.7/site-packages/reftools/tests/test_interpretdq.py",
+    "lib/python2.7/site-packages/reftools/tests/test_interpretdq.pyc",
+    "lib/python2.7/site-packages/reftools/tests/test_mkimphttab.py",
+    "lib/python2.7/site-packages/reftools/tests/test_mkimphttab.pyc",
+    "lib/python2.7/site-packages/reftools/version.py",
+    "lib/python2.7/site-packages/reftools/version.pyc",
+    "lib/python2.7/site-packages/reftools/wtraxyutils.py",
+    "lib/python2.7/site-packages/reftools/wtraxyutils.pyc",
+    "lib/python2.7/site-packages/setuptools.pth"
+  ],
+  "fn": "reftools-1.7.4-py27_1.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/reftools-1.7.4-py27_1",
+    "type": 1
+  },
+  "md5": "55ab0cee7b2ef42732cc74dbde9d1b13",
+  "name": "reftools",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/reftools-1.7.4-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/tdspysyn",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "aa708a395188345fd615f6b01f11db5c2d59bad8eba2153b4b199b5b7859f208",
+        "sha256_in_prefix": "ab667af49b6667b8ab757ce734623b98e13a884681a1dd9eebe847628cd7afa2",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "76b0563726417e08a013b9f41bc5a04253f63cf05a13d3d23cfb2de921e8c6fb",
+        "sha256_in_prefix": "76b0563726417e08a013b9f41bc5a04253f63cf05a13d3d23cfb2de921e8c6fb",
+        "size_in_bytes": 752
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "a9cc143d4e6be034ea5fbe4cf57faa7e3fcc5aac9425b3e48763bdb0625d77ec",
+        "sha256_in_prefix": "a9cc143d4e6be034ea5fbe4cf57faa7e3fcc5aac9425b3e48763bdb0625d77ec",
+        "size_in_bytes": 2205
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "ac5e3aac2bd231098ddac2bbc297447a23d09754cc725fcc0146fec966c0f31b",
+        "sha256_in_prefix": "ac5e3aac2bd231098ddac2bbc297447a23d09754cc725fcc0146fec966c0f31b",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/native_libs.txt",
+        "path_type": "hardlink",
+        "sha256": "36ff5dbacb2b14e29b37a5d340516a0447dad0fa59c1816afe79ab2a9fa729dc",
+        "sha256_in_prefix": "36ff5dbacb2b14e29b37a5d340516a0447dad0fa59c1816afe79ab2a9fa729dc",
+        "size_in_bytes": 29
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "02f5db68747e269c4c6b95c9fd5b20d2c54fb551f4357c0f9190b0e3fbd59016",
+        "sha256_in_prefix": "02f5db68747e269c4c6b95c9fd5b20d2c54fb551f4357c0f9190b0e3fbd59016",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools-1.7.4-py2.7-linux-x86_64.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "2e910d138432bf045dfd8217bb4d3894322cdec2a11cae447a460fb93ebe0504",
+        "sha256_in_prefix": "2e910d138432bf045dfd8217bb4d3894322cdec2a11cae447a460fb93ebe0504",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e482ff1fcf8b05284650822880aac212f5b3827a2c8960cc838f4bd15b75ebd8",
+        "sha256_in_prefix": "e482ff1fcf8b05284650822880aac212f5b3827a2c8960cc838f4bd15b75ebd8",
+        "size_in_bytes": 63
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0c9a05ba079118fbb896428de2a6aba57c1fab6a629bb491a97c7b5f31988f0",
+        "sha256_in_prefix": "d0c9a05ba079118fbb896428de2a6aba57c1fab6a629bb491a97c7b5f31988f0",
+        "size_in_bytes": 279
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/_computephotpars.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.11/_dispatch/miniconda/conda-bld/reftools_1518644084733/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "71b31f306fac7d275383b80805ba8241bf5dd8ef3141b8496c013766c6cde00f",
+        "sha256_in_prefix": "d194496360e0e13851489674dd7dc66729067ae71a3afac22380938e721d61c8",
+        "size_in_bytes": 50568
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/dqflags_acs.txt",
+        "path_type": "hardlink",
+        "sha256": "a2a5dbbf8709a718b68ed494112d54e48923c840d777206a0a3e7f4f28d3cb0e",
+        "sha256_in_prefix": "a2a5dbbf8709a718b68ed494112d54e48923c840d777206a0a3e7f4f28d3cb0e",
+        "size_in_bytes": 1041
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/dqflags_hstgen.txt",
+        "path_type": "hardlink",
+        "sha256": "899b9851b13bf8acd4a126b3b3017a40bf00db96d51c72ede8ecd2a0862582a8",
+        "sha256_in_prefix": "899b9851b13bf8acd4a126b3b3017a40bf00db96d51c72ede8ecd2a0862582a8",
+        "size_in_bytes": 908
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/dqflags_wfc3.txt",
+        "path_type": "hardlink",
+        "sha256": "4482ccfdd230330a7f6ef4a33d069422b8e1a203a7df46dd267e438ba12853a3",
+        "sha256_in_prefix": "4482ccfdd230330a7f6ef4a33d069422b8e1a203a7df46dd267e438ba12853a3",
+        "size_in_bytes": 1120
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_110425.txt",
+        "path_type": "hardlink",
+        "sha256": "6d3348967c2a931636438cac7d54b3cfe9c5784bd30070645aaafc773aaade30",
+        "sha256_in_prefix": "6d3348967c2a931636438cac7d54b3cfe9c5784bd30070645aaafc773aaade30",
+        "size_in_bytes": 888
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_110718-1.txt",
+        "path_type": "hardlink",
+        "sha256": "fc80e9605be8f10c5aee52d8d88fc273e83fd7d37a91844436c733e31cb04958",
+        "sha256_in_prefix": "fc80e9605be8f10c5aee52d8d88fc273e83fd7d37a91844436c733e31cb04958",
+        "size_in_bytes": 989
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_110718-2.txt",
+        "path_type": "hardlink",
+        "sha256": "a252488b13fc902a04e7fad7bf171733942850324a9fa54a7899d5f297cecf68",
+        "sha256_in_prefix": "a252488b13fc902a04e7fad7bf171733942850324a9fa54a7899d5f297cecf68",
+        "size_in_bytes": 996
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_111129-1.txt",
+        "path_type": "hardlink",
+        "sha256": "fc80e9605be8f10c5aee52d8d88fc273e83fd7d37a91844436c733e31cb04958",
+        "sha256_in_prefix": "fc80e9605be8f10c5aee52d8d88fc273e83fd7d37a91844436c733e31cb04958",
+        "size_in_bytes": 989
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_chgleak_111129-2.txt",
+        "path_type": "hardlink",
+        "sha256": "b11431d0f37d661e905cfafb4e333df40193429d48826413fca2bb3c1221e45a",
+        "sha256_in_prefix": "b11431d0f37d661e905cfafb4e333df40193429d48826413fca2bb3c1221e45a",
+        "size_in_bytes": 996
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_111129.txt",
+        "path_type": "hardlink",
+        "sha256": "ee136db1445be3b8368e2b2a3a23255ecd4dcd85202fcf9895f3badcb19249d6",
+        "sha256_in_prefix": "ee136db1445be3b8368e2b2a3a23255ecd4dcd85202fcf9895f3badcb19249d6",
+        "size_in_bytes": 93517
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_111214.txt",
+        "path_type": "hardlink",
+        "sha256": "f86d623320a5977e4828e66978a689fb2377d9488ecb52c396d2f6ec8fa7e54d",
+        "sha256_in_prefix": "f86d623320a5977e4828e66978a689fb2377d9488ecb52c396d2f6ec8fa7e54d",
+        "size_in_bytes": 110112
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_120119.txt",
+        "path_type": "hardlink",
+        "sha256": "02dc7c3b284f8639a802a638e46480c778133be7244373a69803c335dce65a1f",
+        "sha256_in_prefix": "02dc7c3b284f8639a802a638e46480c778133be7244373a69803c335dce65a1f",
+        "size_in_bytes": 132914
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_column_scaling_130813.txt",
+        "path_type": "hardlink",
+        "sha256": "f4db3d5bb6eb94465146cdbf925dfddeac9bf131a170cb20bfb6f2f23e9033f0",
+        "sha256_in_prefix": "f4db3d5bb6eb94465146cdbf925dfddeac9bf131a170cb20bfb6f2f23e9033f0",
+        "size_in_bytes": 131378
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_dtdel_110425.txt",
+        "path_type": "hardlink",
+        "sha256": "de772641bffb91a900420f97a0b3dc21800ea1dc419c48b15aa987ab6e43e007",
+        "sha256_in_prefix": "de772641bffb91a900420f97a0b3dc21800ea1dc419c48b15aa987ab6e43e007",
+        "size_in_bytes": 347
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_dtdel_111129.txt",
+        "path_type": "hardlink",
+        "sha256": "9ee38e1c4b1ff8b4bd59f882900652714323e0a10bd6c244767ac9bf4d44777a",
+        "sha256_in_prefix": "9ee38e1c4b1ff8b4bd59f882900652714323e0a10bd6c244767ac9bf4d44777a",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_history.txt",
+        "path_type": "hardlink",
+        "sha256": "7c23ae0c4163875a0e08efc2f5d52209487886cdf8a7ff31561c89bd5c009c10",
+        "sha256_in_prefix": "7c23ae0c4163875a0e08efc2f5d52209487886cdf8a7ff31561c89bd5c009c10",
+        "size_in_bytes": 646
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_levels_110425.txt",
+        "path_type": "hardlink",
+        "sha256": "fe9f1dbac91ab1a94f1eef476ad4a013d56cc10d9466b029d17b3b8d9ff7dd1f",
+        "sha256_in_prefix": "fe9f1dbac91ab1a94f1eef476ad4a013d56cc10d9466b029d17b3b8d9ff7dd1f",
+        "size_in_bytes": 798
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_levels_111129.txt",
+        "path_type": "hardlink",
+        "sha256": "c1a5aa369799e590d53191a7c1621af43363d6bdf8e9a8a05f9c24253feabca0",
+        "sha256_in_prefix": "c1a5aa369799e590d53191a7c1621af43363d6bdf8e9a8a05f9c24253feabca0",
+        "size_in_bytes": 1357
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_scaling_110718.txt",
+        "path_type": "hardlink",
+        "sha256": "6c8ddd3cf8dd42cf980afe040786eda6d3b2f7911b7b21eb40dbd93f77289ccd",
+        "sha256_in_prefix": "6c8ddd3cf8dd42cf980afe040786eda6d3b2f7911b7b21eb40dbd93f77289ccd",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/data/pctetab/pctetab_scaling_110818.txt",
+        "path_type": "hardlink",
+        "sha256": "8f118a26e0b7fd4750736a1e12740f70d7477309c06c2d74a7ab1c8986cd8d3b",
+        "sha256_in_prefix": "8f118a26e0b7fd4750736a1e12740f70d7477309c06c2d74a7ab1c8986cd8d3b",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/getphotpars.py",
+        "path_type": "hardlink",
+        "sha256": "319e2bc4790777b213cd3388199813421ed639496aa4fcfe09dd8e9c1f25a727",
+        "sha256_in_prefix": "319e2bc4790777b213cd3388199813421ed639496aa4fcfe09dd8e9c1f25a727",
+        "size_in_bytes": 9762
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/getphotpars.pyc",
+        "path_type": "hardlink",
+        "sha256": "49fb4d5ca30e040fe6ca7587b013b45f28639a7b6164d5733db33cf0eed58aa8",
+        "sha256_in_prefix": "49fb4d5ca30e040fe6ca7587b013b45f28639a7b6164d5733db33cf0eed58aa8",
+        "size_in_bytes": 11089
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/graphfile.py",
+        "path_type": "hardlink",
+        "sha256": "59412b3a5a30c8f3f6ebae4591624140ae0d81e554feafb54bd8bbe691c79025",
+        "sha256_in_prefix": "59412b3a5a30c8f3f6ebae4591624140ae0d81e554feafb54bd8bbe691c79025",
+        "size_in_bytes": 7284
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/graphfile.pyc",
+        "path_type": "hardlink",
+        "sha256": "2a7d36c0470814ff44cd2560c8039ae0641917d98f9ceb7792b5ed1fedd36165",
+        "sha256_in_prefix": "2a7d36c0470814ff44cd2560c8039ae0641917d98f9ceb7792b5ed1fedd36165",
+        "size_in_bytes": 5743
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/graphtab.py",
+        "path_type": "hardlink",
+        "sha256": "9a7061f3a60db6ebf8948a1310ad3c94ec69fdf2a9b258dd4f5dd6bfd0af8af0",
+        "sha256_in_prefix": "9a7061f3a60db6ebf8948a1310ad3c94ec69fdf2a9b258dd4f5dd6bfd0af8af0",
+        "size_in_bytes": 21561
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/graphtab.pyc",
+        "path_type": "hardlink",
+        "sha256": "cbc07a3593994adf4a40e9be4dd06be5a17af554ed94024aa0e0ee9e620814b4",
+        "sha256_in_prefix": "cbc07a3593994adf4a40e9be4dd06be5a17af554ed94024aa0e0ee9e620814b4",
+        "size_in_bytes": 22978
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/imphtcomp.py",
+        "path_type": "hardlink",
+        "sha256": "71d12ade10dcfdcb44b46eeb5f13fc6809762a0db8db39c6607c53c8215d76f2",
+        "sha256_in_prefix": "71d12ade10dcfdcb44b46eeb5f13fc6809762a0db8db39c6607c53c8215d76f2",
+        "size_in_bytes": 15936
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/imphtcomp.pyc",
+        "path_type": "hardlink",
+        "sha256": "984f622481fea6c81eb96a692bc3b18c7223d249c88b703f78c68090f57d86f5",
+        "sha256_in_prefix": "984f622481fea6c81eb96a692bc3b18c7223d249c88b703f78c68090f57d86f5",
+        "size_in_bytes": 16304
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/interpretdq.py",
+        "path_type": "hardlink",
+        "sha256": "dc232151e813d175872fa31df1e8630bf3ea39a14bdbb2f35ac7a5b052774a8d",
+        "sha256_in_prefix": "dc232151e813d175872fa31df1e8630bf3ea39a14bdbb2f35ac7a5b052774a8d",
+        "size_in_bytes": 14459
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/interpretdq.pyc",
+        "path_type": "hardlink",
+        "sha256": "c442ff3701240ee00a18637d5bef9248488019d0b0ca9385041c7d0f6d1185a7",
+        "sha256_in_prefix": "c442ff3701240ee00a18637d5bef9248488019d0b0ca9385041c7d0f6d1185a7",
+        "size_in_bytes": 15751
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/makedxy.py",
+        "path_type": "hardlink",
+        "sha256": "3bcf131d67cc816e435821a0ed83a97342d462552da67f77cc89672f5bb4d162",
+        "sha256_in_prefix": "3bcf131d67cc816e435821a0ed83a97342d462552da67f77cc89672f5bb4d162",
+        "size_in_bytes": 6289
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/makedxy.pyc",
+        "path_type": "hardlink",
+        "sha256": "6785d525c143f25b009d95b24563263e91ff68d2487c72cba0a60dd25f01d229",
+        "sha256_in_prefix": "6785d525c143f25b009d95b24563263e91ff68d2487c72cba0a60dd25f01d229",
+        "size_in_bytes": 6286
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/makesmall.py",
+        "path_type": "hardlink",
+        "sha256": "a1b62bfa61cfa99a92eaed2945606a9b4f6e8b7731ee970e019ab96a0e99d393",
+        "sha256_in_prefix": "a1b62bfa61cfa99a92eaed2945606a9b4f6e8b7731ee970e019ab96a0e99d393",
+        "size_in_bytes": 8406
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/makesmall.pyc",
+        "path_type": "hardlink",
+        "sha256": "922ac930bbdcbda44836c367f181a46aa1fee61e88345cb9b4dd721075806f6c",
+        "sha256_in_prefix": "922ac930bbdcbda44836c367f181a46aa1fee61e88345cb9b4dd721075806f6c",
+        "size_in_bytes": 6460
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/mkimphttab.py",
+        "path_type": "hardlink",
+        "sha256": "0231b4551046c51f45e0a9985bbe3da83981f9fb9a0543a7c82d775b868f3049",
+        "sha256_in_prefix": "0231b4551046c51f45e0a9985bbe3da83981f9fb9a0543a7c82d775b868f3049",
+        "size_in_bytes": 26393
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/mkimphttab.pyc",
+        "path_type": "hardlink",
+        "sha256": "99f3af950d38d0b96e6c51516d11b8381d3f9104108a492f35e588b15cee6cdf",
+        "sha256_in_prefix": "99f3af950d38d0b96e6c51516d11b8381d3f9104108a492f35e588b15cee6cdf",
+        "size_in_bytes": 21135
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/pars/tdspysyn.cfg",
+        "path_type": "hardlink",
+        "sha256": "567517e5564930dee5473d46cf8a561043ae2bb77045126660ac68da17c283b8",
+        "sha256_in_prefix": "567517e5564930dee5473d46cf8a561043ae2bb77045126660ac68da17c283b8",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/pars/tdspysyn.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "36c648dfe51558e02214b6a9d7ab1c8cebca3069258ec2921454a66a08c3a9d2",
+        "sha256_in_prefix": "36c648dfe51558e02214b6a9d7ab1c8cebca3069258ec2921454a66a08c3a9d2",
+        "size_in_bytes": 690
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/pctetab.py",
+        "path_type": "hardlink",
+        "sha256": "4a72866d62d0035a5a4d8f400633d3500373b70cc42e64c160b2fb6887f328af",
+        "sha256_in_prefix": "4a72866d62d0035a5a4d8f400633d3500373b70cc42e64c160b2fb6887f328af",
+        "size_in_bytes": 24068
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/pctetab.pyc",
+        "path_type": "hardlink",
+        "sha256": "23f593d4060287238a6f5ba668abb7b68cd672febc1deced9da8988e957aac18",
+        "sha256_in_prefix": "23f593d4060287238a6f5ba668abb7b68cd672febc1deced9da8988e957aac18",
+        "size_in_bytes": 20863
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/synpysyncomp.py",
+        "path_type": "hardlink",
+        "sha256": "62594aeacae47ba7fdbf637c1d4c4a4b47ac182bea0a79cae9295cd932791047",
+        "sha256_in_prefix": "62594aeacae47ba7fdbf637c1d4c4a4b47ac182bea0a79cae9295cd932791047",
+        "size_in_bytes": 14840
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/synpysyncomp.pyc",
+        "path_type": "hardlink",
+        "sha256": "abf45cc9c3426a72342ee51a47b6e66c849be85a920cf9d1838d817b9a0f3a8c",
+        "sha256_in_prefix": "abf45cc9c3426a72342ee51a47b6e66c849be85a920cf9d1838d817b9a0f3a8c",
+        "size_in_bytes": 17958
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tdspysyn.help",
+        "path_type": "hardlink",
+        "sha256": "5ccb4bfc8ab85abe997faf23318a17a15d988fc757945430fe898513d95d0355",
+        "sha256_in_prefix": "5ccb4bfc8ab85abe997faf23318a17a15d988fc757945430fe898513d95d0355",
+        "size_in_bytes": 1992
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tdspysyn.py",
+        "path_type": "hardlink",
+        "sha256": "af6e1052fc9be1beb1e304dbab5f6114f38870d555f245a81c301fa86b8abb2d",
+        "sha256_in_prefix": "af6e1052fc9be1beb1e304dbab5f6114f38870d555f245a81c301fa86b8abb2d",
+        "size_in_bytes": 28947
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tdspysyn.pyc",
+        "path_type": "hardlink",
+        "sha256": "a029f136efc3bab47a20eaff4630d0104e96f50cf80a0ae2a847132c6b9cb503",
+        "sha256_in_prefix": "a029f136efc3bab47a20eaff4630d0104e96f50cf80a0ae2a847132c6b9cb503",
+        "size_in_bytes": 26097
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/test_small_dgeo.py",
+        "path_type": "hardlink",
+        "sha256": "f350a4aa4130bb2b747af931bfbfb2da8f3a760585b3274336b5202c59925cb4",
+        "sha256_in_prefix": "f350a4aa4130bb2b747af931bfbfb2da8f3a760585b3274336b5202c59925cb4",
+        "size_in_bytes": 17408
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/test_small_dgeo.pyc",
+        "path_type": "hardlink",
+        "sha256": "cca63d6297441a08b058e5116816fe06d03489959341d309981918280689e88b",
+        "sha256_in_prefix": "cca63d6297441a08b058e5116816fe06d03489959341d309981918280689e88b",
+        "size_in_bytes": 14374
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "5640f773148aabe6fb20a427fc0a75a997b433996e32047151ced9a1f73aa287",
+        "sha256_in_prefix": "5640f773148aabe6fb20a427fc0a75a997b433996e32047151ced9a1f73aa287",
+        "size_in_bytes": 179
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/data/acs_sbc_dev_imp.fits",
+        "path_type": "hardlink",
+        "sha256": "e66456940ced13dc15058eebf0006bfec02349d8a22bf419b47253ea21d80054",
+        "sha256_in_prefix": "e66456940ced13dc15058eebf0006bfec02349d8a22bf419b47253ea21d80054",
+        "size_in_bytes": 20160
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/data/test_acs_wfc1_dev_imp.fits",
+        "path_type": "hardlink",
+        "sha256": "3ec7c1a4fcb4aa9b9e56e447552bdd7f30499b57dd8b1979fc1880a78486ff79",
+        "sha256_in_prefix": "3ec7c1a4fcb4aa9b9e56e447552bdd7f30499b57dd8b1979fc1880a78486ff79",
+        "size_in_bytes": 763200
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/data/test_wfc1_dev_imp.fits",
+        "path_type": "hardlink",
+        "sha256": "fc9be26d944eb9298f64b850ee2822cec4ce35e0bab8d5072448454f0b1d83ca",
+        "sha256_in_prefix": "fc9be26d944eb9298f64b850ee2822cec4ce35e0bab8d5072448454f0b1d83ca",
+        "size_in_bytes": 763200
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_get_phot_pars.py",
+        "path_type": "hardlink",
+        "sha256": "9f20db567a26a61dd10f568465bfe475202ab455bebaf8933614143ba014df9f",
+        "sha256_in_prefix": "9f20db567a26a61dd10f568465bfe475202ab455bebaf8933614143ba014df9f",
+        "size_in_bytes": 14031
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_get_phot_pars.pyc",
+        "path_type": "hardlink",
+        "sha256": "40c2241af619124da2ab5865ea944bbfb9038f69a783de927fce7f48f991ce0f",
+        "sha256_in_prefix": "40c2241af619124da2ab5865ea944bbfb9038f69a783de927fce7f48f991ce0f",
+        "size_in_bytes": 14255
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_imphtcomp.py",
+        "path_type": "hardlink",
+        "sha256": "b3fc6ee5b4f924eb2adbfa3962d45d02d90b06462ee03ddf096b6793e443b93e",
+        "sha256_in_prefix": "b3fc6ee5b4f924eb2adbfa3962d45d02d90b06462ee03ddf096b6793e443b93e",
+        "size_in_bytes": 509
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_imphtcomp.pyc",
+        "path_type": "hardlink",
+        "sha256": "b5d5f3a5b138c26ba2b9bdb779078e11d6ceaa699c1ef3aa60f371b75057cde2",
+        "sha256_in_prefix": "b5d5f3a5b138c26ba2b9bdb779078e11d6ceaa699c1ef3aa60f371b75057cde2",
+        "size_in_bytes": 1278
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_interpretdq.py",
+        "path_type": "hardlink",
+        "sha256": "796d1e1f5727dfe001dbe7628cd405565fcca7720a6ecf205df13da8640336df",
+        "sha256_in_prefix": "796d1e1f5727dfe001dbe7628cd405565fcca7720a6ecf205df13da8640336df",
+        "size_in_bytes": 381
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_interpretdq.pyc",
+        "path_type": "hardlink",
+        "sha256": "080a0b0bcd8922e217f3e224f866de1f6abd1f02ee62cefc49cd5d8142f4c223",
+        "sha256_in_prefix": "080a0b0bcd8922e217f3e224f866de1f6abd1f02ee62cefc49cd5d8142f4c223",
+        "size_in_bytes": 907
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_mkimphttab.py",
+        "path_type": "hardlink",
+        "sha256": "eb05345a5938f2215a86f9a3af665d58c00f2c2c9b23f8b7eb25819c82556139",
+        "sha256_in_prefix": "eb05345a5938f2215a86f9a3af665d58c00f2c2c9b23f8b7eb25819c82556139",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/tests/test_mkimphttab.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd58b37167bfe856d63e226dd7053521664594b42f3f37cc9a533b7c4add2dd1",
+        "sha256_in_prefix": "dd58b37167bfe856d63e226dd7053521664594b42f3f37cc9a533b7c4add2dd1",
+        "size_in_bytes": 899
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/version.py",
+        "path_type": "hardlink",
+        "sha256": "33d4eb67b91034f9dd8fb7e5a2392d75f68a1b1554070e26e2b1d73a4f994966",
+        "sha256_in_prefix": "33d4eb67b91034f9dd8fb7e5a2392d75f68a1b1554070e26e2b1d73a4f994966",
+        "size_in_bytes": 759
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "c5bbb9bb99fca99910f9e9cc5a25f8717535102d30c6aa2d4551edb43e6cf489",
+        "sha256_in_prefix": "c5bbb9bb99fca99910f9e9cc5a25f8717535102d30c6aa2d4551edb43e6cf489",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/wtraxyutils.py",
+        "path_type": "hardlink",
+        "sha256": "0b71b37cf3ca63df59ec15a40540c788472538e90f304f5c5f865eb5a0290dda",
+        "sha256_in_prefix": "0b71b37cf3ca63df59ec15a40540c788472538e90f304f5c5f865eb5a0290dda",
+        "size_in_bytes": 22062
+      },
+      {
+        "_path": "lib/python2.7/site-packages/reftools/wtraxyutils.pyc",
+        "path_type": "hardlink",
+        "sha256": "e43f6a6871a53637f804a23f2edecdf118172503481cbeca2076ebc383447d7c",
+        "sha256_in_prefix": "e43f6a6871a53637f804a23f2edecdf118172503481cbeca2076ebc383447d7c",
+        "size_in_bytes": 22711
+      },
+      {
+        "_path": "lib/python2.7/site-packages/setuptools.pth",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4dc8bfb2a806d7992a779ea25871faf2738770046b90ed1564a66d7a694f3dab",
+        "sha256_in_prefix": "ba8ea53e107435912666fca2489648dbccbe8cdb59385b1ad03cbd6d9233efe4",
+        "size_in_bytes": 61
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 491530,
+  "subdir": "linux-64",
+  "timestamp": 1518646068493,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/reftools-1.7.4-py27_1.tar.bz2",
+  "version": "1.7.4"
+}

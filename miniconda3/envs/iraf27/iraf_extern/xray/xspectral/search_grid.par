@@ -1,0 +1,69 @@
+#$Header: /home/pros/xray/xspectral/RCS/search_grid.par,v 11.0 1997/11/06 16:43:49 prosb Exp $
+#$Log: search_grid.par,v $
+#Revision 11.0  1997/11/06 16:43:49  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:27:53  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:18  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:59:24  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:46:48  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:47:25  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/09  09:29:42  prosb
+#jso - added the rebin parameter - which was required - i will add an error
+#      message to grid_fit.x to make this a no op.
+#
+#Revision 4.0  92/04/27  15:26:22  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:52:55  prosb
+#General Release 1.1
+#
+#Revision 2.3  91/07/22  12:26:16  orszak
+#jso - changes requested by users
+#
+#Revision 2.2  91/07/12  14:55:19  prosb
+#jso - change for pset implementation
+#
+#Revision 2.1  91/05/24  11:28:22  pros
+#jso - addition of line width to possible axis types
+#
+#Revision 2.0  91/03/06  22:54:31  pros
+#General Release 1.0
+#
+#
+#  grid_search.par - parameters for grid search
+#
+pkgpars,pset,h,"",,,Spectral package parameters
+grid,s,a,"",,,root name for output file [root_grd.tab]
+model,s,a,"",,,"model descriptor {null=>last best fit}"
+final,b,h,y,,,"perform final fit on best chisq?"
+
+x_axis_steps,i,a,,1,,"number of steps in the first axis"
+y_axis_steps,i,a,,1,,"number of steps in the second axis"
+
+x_axis_type,s,h,"linear","linear|logarithmic",,"type of axis (first)"
+y_axis_type,s,h,"linear","linear|logarithmic",,"type of y axis (second)"
+
+x_model_for_axis,i,a,1,,,"model component number for the first axis"
+y_model_for_axis,i,a,1,,,"model component number for the second axis"
+
+x_axis_parameter,s,a,,"norm|index|temp|width|galacticNh|intrinsicNh",,"first axis parameter"
+y_axis_parameter,s,a,,"norm|index|temp|width|galacticNh|intrinsicNh",,"second axis parameter"
+
+x_parameter_delta,r,a,,,,"half-range of first axis parameter"
+y_parameter_delta,r,a,,,,"half-range of second axis parameter"
+
+max_iterations,i,h,400,,,"Maximum number of iterations"
+tolerance,r,h,1.e-3,,,"Convergence tolerance"
+verbose,b,h,no,,,"Print all grid point results"
+rebin,b,h,no,,,"rebin to one channel"

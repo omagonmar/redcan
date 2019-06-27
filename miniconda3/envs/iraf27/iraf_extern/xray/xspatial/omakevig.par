@@ -1,0 +1,14 @@
+#
+#  Parameters for the vignmask task
+#
+ref_image,s,a,"",,,"reference image name"
+mask,s,a,"",,,"root name for output file [root_vig.pl]"
+energy,s,a,"","0.100|0.200|0.300|0.400|0.500|0.600|0.700|0.800|0.900|1.000|1.100|1.200|1.300|1.400|1.500|2.000|2.500|3.000",,"requested energy ( in x.xxx KeV) "
+einvignfile,s,h,"xspatialdata$einvignfits.tab",,,"einstein calibration table"
+norm,r,h,1.0E0,,,"normalization factor ( 1.0 for vignetting)"
+display,i,h,1,0,5,"display level exposure mask file"
+ncols,i,h,80,,,"number of columns for output display"
+rquadxsq,r,h,-3.03E-4,,,"rosat quad vignetting coefficient for x**2"
+rquadx,r,h,-1.54E-3,,,"rosat quad vignetting coefficient for x"
+rquad,r,h,1.00E0,,,"rosat quad vignetting coefficient constant"
+clobber,b,h,no,,,"clobber mask file if it exits"

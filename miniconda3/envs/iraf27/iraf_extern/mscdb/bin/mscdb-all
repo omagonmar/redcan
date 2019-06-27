@@ -1,0 +1,9 @@
+# Create tar file for distribution to the telescopes.
+
+cd ../..
+tar cfXX - mscdb/bin/wiyncaldirs mscdb/bin/ctiocaldirs mscdb |\
+gzip > mscdb-kpno.tar.gz
+tar cfXX - mscdb/bin/kpnocaldirs mscdb/bin/wiyncaldirs mscdb |\
+gzip > mscdb-ctio.tar.gz
+tar cfXX - mscdb/bin/kpnocaldirs mscdb/bin/ctiocaldirs mscdb |\
+gzip > mscdb-wiyn.tar.gz

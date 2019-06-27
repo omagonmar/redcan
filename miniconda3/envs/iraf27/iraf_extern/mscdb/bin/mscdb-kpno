@@ -1,0 +1,5 @@
+# Create tar file for Mosaic I.
+
+cd ../..
+tar cfXX - mscdb/bin/wiyncaldirs mscdb/bin/ctiocaldirs mscdb |\
+gzip > mscdb-kpno.tar.gz

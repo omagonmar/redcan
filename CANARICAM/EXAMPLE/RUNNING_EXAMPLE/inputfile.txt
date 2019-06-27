@@ -1,0 +1,3 @@
+METHOD: GROWINGAPER
+APERTURES:  1  sigmas 
+OFFSETS:  0  pixels

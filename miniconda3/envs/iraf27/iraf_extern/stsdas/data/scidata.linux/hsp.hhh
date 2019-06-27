@@ -1,0 +1,145 @@
+SIMPLE  =                    F /                                                
+BITPIX  =                   32 /                                                
+DATATYPE= 'REAL*4  '           /                                                
+NAXIS   =                    1 /                                                
+NAXIS1  =                 5000 /                                                
+GROUPS  =                    T /                                                
+GCOUNT  =                    1 /                                                
+PCOUNT  =                   14 /                                                
+PSIZE   =                  960 /                                                
+PTYPE1  = 'CRVAL1  '           / time at reference pixel-first packet time      
+PDTYPE1 = 'REAL*8  '           /                                                
+PSIZE1  =                   64 /                                                
+PTYPE2  = 'CRVAL2  '           / right ascension of aperture                    
+PDTYPE2 = 'REAL*8  '           /                                                
+PSIZE2  =                   64 /                                                
+PTYPE3  = 'CRVAL3  '           / declination of aperture                        
+PDTYPE3 = 'REAL*8  '           /                                                
+PSIZE3  =                   64 /                                                
+PTYPE4  = 'CRPIX1  '           / pixel number of reference pixel                
+PDTYPE4 = 'REAL*4  '           /                                                
+PSIZE4  =                   32 /                                                
+PTYPE5  = 'CD1_1   '           / time increment between pixels                  
+PDTYPE5 = 'REAL*4  '           /                                                
+PSIZE5  =                   32 /                                                
+PTYPE6  = 'DATAMIN '           / minimum data value in the group                
+PDTYPE6 = 'REAL*4  '           /                                                
+PSIZE6  =                   32 /                                                
+PTYPE7  = 'DATAMAX '           / maximum data value in the group                
+PDTYPE7 = 'REAL*4  '           /                                                
+PSIZE7  =                   32 /                                                
+PTYPE8  = 'FILLCNT '           / number of segments containing fill             
+PDTYPE8 = 'INTEGER*4'          /                                                
+PSIZE8  =                   32 /                                                
+PTYPE9  = 'ERRCNT  '           / number of segments containing errors           
+PDTYPE9 = 'INTEGER*4'          /                                                
+PSIZE9  =                   32 /                                                
+PTYPE10 = 'FPKTTIME'           / the time of the first packet                   
+PDTYPE10= 'CHARACTER*24'       /                                                
+PSIZE10 =                  192 /                                                
+PTYPE11 = 'LPKTTIME'           / the time of the last packet                    
+PDTYPE11= 'CHARACTER*24'       /                                                
+PSIZE11 =                  192 /                                                
+PTYPE12 = 'CTYPE1  '           / the first coordinate type                      
+PDTYPE12= 'CHARACTER*8'        /                                                
+PSIZE12 =                   64 /                                                
+PTYPE13 = 'CTYPE2  '           / the second coordinate type                     
+PDTYPE13= 'CHARACTER*8'        /                                                
+PSIZE13 =                   64 /                                                
+PTYPE14 = 'CTYPE3  '           / the third coordinate type                      
+PDTYPE14= 'CHARACTER*8'        /                                                
+PSIZE14 =                   64 /                                                
+                                                                                
+                               / GROUP PARAMETERS: OSS                          
+                                                                                
+                               / HSP DATA DESCRIPTOR KEYWORDS                   
+INSTRUME= 'HSP               ' / instrument in use                              
+ROOTNAME= 'V0RX0203R         ' / rootname of the observation set                
+FILETYPE= 'DST               ' / shp, udl, dst, dsk, ast, ask, asd, asa         
+NSEGPGRP=                    0 / not computed - used only by OSS                
+BUNIT   = 'CT/S    '           / brightness units:  COUNTS or DN (analog data)  
+                                                                                
+                               / CALIBRATION FLAGS AND INDICATORS               
+MODE    = 'SCP               ' / instrument mode SCP, SSP, ARS                  
+DETECTOB=                    4 / detector in use (0-5) - object data            
+DETECTSK=                    0 / detector in use (0-5) - sky data               
+PTSRCFLG= 'P                 ' / point source flag (P=point, E=extended)        
+APERTOBJ= 'VCLRU2_T          ' / aperture in use - object data                  
+APERTSKY= '                  ' / aperture in use - sky data                     
+                                                                                
+                               / CALIBRATION SWITCHES: perform,omit,complete    
+DET_CHR = 'PERFORM           ' / retrieve detector characteristics              
+DEADTIME= 'COMPLETE'           / deadtime correction                            
+TRUE_CNT= 'COMPLETE'           / compute the true count rates                   
+TRUE_PHC= 'OMIT              ' / compute the true photocurrents                 
+                                                                                
+                               / CALIBRATION KEYWORDS                           
+DATA_TYP= 'DIGITAL           ' / data type: digital, analog                     
+DATA_SRC= 'STAR              ' / data source: star, sky, area scan              
+DATA_FMT= 'WORD              ' / data format: byte, word, lwrd, alog, all       
+WORDS   =                    8 / number of HSP samples in a line                
+LINES   =                52500 / number of lines in a group                     
+INT_TIME=                  999 / time of integration (in 1/1.024 microseconds)  
+TIMEBIAS=                   25 / instrument time bias (in 1/1.024 microseconds) 
+SAMPTIME=        0.1000000E-02 / time of integration (in seconds)               
+DELAY   =                    0 / delay between integrations (in 1/1.024 usec.)  
+DETECTOR=                    4 / detector used for this file                    
+APERTURE= 'VCLRU2_T          ' / name of the aperture used for this file        
+PANGAPER=        0.2075110E+03 / position angle of aperture used with target    
+APERAREA=        0.0000000E+00 / aperature area                                 
+BDEXPFLG=                    1 / bus director expander flag                     
+PT_EFFIC=                   1. / scaled point source cathode efficiency         
+EX_EFFIC=        0.0000000E+00 / scaled extended source cathode efficiency      
+DARKRATE=                0.052 / scaled cathode dark rate                       
+PRE_AMP =                   0. / scaled tube pre-amp contribution               
+HIGHVOLT=                   1. / scaled high voltage factor                     
+TUBEGAIN=        0.0000000E+00 / scaled tube gain factor                        
+DEADTM  =          4.000000E-8 / deadtime                                       
+CVCOFSET=        0.0000000E+00 / scaled CVC offset                              
+VGAIND  =                    7 / gain setting                                   
+                                                                                
+                               / CALIBRATION TABLE NAMES                        
+CCP0    = 'vtab$a751323rv.cv0' / aperture area table name                       
+CCP1    = 'vtab$a891626iv.cv1' / high voltage factor table name                 
+CCP2    = 'vtab$a751323tv.cv2' / gain factor table name                         
+CCP3    = 'vtab$a7513241v.cv3' / pre-amplifier noise table name                 
+CCP4    = 'vtab$a7513242v.cv4' / relative sensitivity table name                
+CCP5    = 'vtab$a891626nv.cv5' / dark signal table name                         
+CCP7    = 'vtab$a7513245v.cv7' / CVC offset table name                          
+CCP8    = 'vtab$a7513247v.cv8' / dead time table name                           
+CCP9    = 'vtab$a891626tv.cv9' / dark aperture translation table name           
+                                                                                
+                               / PHOTOMETRY KEYWORDS                            
+GRAPHTAB= '                  ' / the HST graph table                            
+COMPTAB = '                  ' / the HST components table                       
+PHOTMODE= 'hsp uv2 f140lp t'   / Photometric Mode                               
+PHOTFLAM=        0.0000000E+00 / Inverse Sensitivity                            
+PHOTZPT =        0.0000000E+00 / Zero Point                                     
+PHOTPLAM=        0.0000000E+00 / Pivot Wavelength                               
+PHOTBW  =        0.0000000E+00 / RMS Bandwidth of the Filter                    
+                                                                                
+                               / STATISTICAL KEYWORDS                           
+DATE    = '14/10/91          ' / date this file was written (dd/mm/yy)          
+PODPSFF =                    0 / 0=(no  podps fill); 1=(podps fill present)     
+STDCFFF =                    0 / 0=(no st dcf fill); 1=(st dcf fill present)    
+STDCFFP = '0000              ' / st dcf fill pattern (hex)                      
+                                                                                
+                               / DISPLAY KEYWORDS                               
+PLOTID  = 'HSP               ' / plot title                                     
+                                                                                
+                               / DMF EXPOSURE DATA                              
+PROPOSID= '03383             ' / PEP proposal identifier                        
+PEP_EXPO= '20.0000000        ' / PEP exposure identifier including sequence     
+TARGNAM1= 'HD49798           ' / proposer's target name (first 18 char)         
+TARGNAMC= '                  ' / target name continuation (last 12 char)        
+PLAN_EXP=  0.1260000000000E+04 / proposed time per exposure (sec)               
+PLAN_SN =  0.5000000000000E+02 / proposed signal-to-noise ratio                 
+PRIORITY=                    1 / proposer's priority for exposure               
+RA      =        0.1020193E+03 / right ascension of the target (degrees)        
+DEC     =       -0.4431647E+02 / declination of the target (degrees)            
+EXPOSURE=        0.1260000E+04 / exposure duration (seconds)--calculated        
+EXPSTRT =  0.3718059813910E+09 / exposure start time (sec since 1/1/80 00:00:00)
+EXPEND  =  0.3718072414832E+09 / exposure end time (sec since 1/1/80 00:00:00)  
+SUNANGLE=        0.8890672E+02 / angle between sun and V1 axis (degrees)        
+MOONANGL=        0.1084864E+03 / angle between moon and V1 axis (degrees)       
+END                                                                             

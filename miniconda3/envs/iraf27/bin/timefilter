@@ -1,0 +1,4 @@
+#!/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin/python
+# EASY-INSTALL-SCRIPT: 'costools==1.2.3','timefilter'
+__requires__ = 'costools==1.2.3'
+__import__('pkg_resources').run_script('costools==1.2.3', 'timefilter')

@@ -1,0 +1,9 @@
+#  Parameters for the bkden task
+#
+image,s,a,"",,,"Input Image"
+region,s,a,"default",,,"Region Descriptor"
+fluctuation,r,h,1.0,,,"Background Fluctuation"
+max_iter,i,h,3,,,"Maximum Iterations"
+display,i,h,1,,,"Display Level"
+radius,r,h,7.5,,,"radius for default region in arc minutes"
+value,r,h,0.0,,,"Computed bkden"

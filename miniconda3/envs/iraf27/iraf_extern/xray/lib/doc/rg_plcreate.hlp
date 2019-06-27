@@ -1,0 +1,151 @@
+#$Header: /home/pros/xray/lib/doc/RCS/rg_plcreate.hlp,v 11.0 1997/11/06 16:23:14 prosb Exp $
+#$Log: rg_plcreate.hlp,v $
+#Revision 11.0  1997/11/06 16:23:14  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:20  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:21  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:20:14  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:42  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:22  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:10:52  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:58  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:56  pros
+#General Release 1.0
+#
+.help rg_plcreate Jan89 REGIONS_Library
+NAME
+.in 4
+rg_plcreate - create a mask from a region descriptor
+.sp
+.in -4
+USAGE
+.in 4
+pl = rg_plcreate(region, axislen, title)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	region		char		region descriptor
+	axislen		int[2]		array of lengths of axes
+
+Output Arguments:
+	title				pointer to region summary
+
+Return Value:
+	pl		pointer		pl handle
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function rg_plcreate create a pl mask from a region descriptor.
+The region descriptor is an ASCII string containg zero or more regions.
+A PLIO mask is created from these regions which can be used in any
+subsequent PLIO call.
+If the region descriptor is null, rg_plcreate will create a mask containing
+the entire field.
+
+The title is an ASCII string containing a summary of the regions that
+make up the mask.  It can be saved along with the mask in a file using
+the PLIO routine pl_savef.  If the title pointer is non-zero, the region
+information is appended to the string.  This means that one must set
+the title pointer to zero in most cases, or else there is the chance that
+the string will contain garbage.
+
+The axislen array is an array containing the dimensions of
+the mask to create. The pl handle of the mask is returned by the function.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how rg_plcreate is used in conjunction with
+other routines such as rg_pldisp.  This code, adapted from plcreate, creates
+and displays a region mask.
+.in 8
+.nf
+include <plset.h>
+include "../../lib/ext.h"
+
+include "xspatial.h"
+
+procedure plcreate()
+char	plname[SZ_PATHNAME]		# name of output PLIO file
+char	region[SZ_PATHNAME]		# region descriptor
+char	tempname[SZ_PATHNAME]		# temp mask name
+bool	clobber				# clobber old mask
+bool	disp				# display mask
+int	ncols				# columns to display
+int	nrows				# rows to display
+int	axislen[2]			# axis lengths
+pointer	pl				# pixel list pointer
+pointer	title				# region summary
+int	clgeti()			# get int param
+pointer	rg_plcreate()			# create pixel mask
+bool	clgetb()			# get boolean
+bool	streq()				# string compare
+
+begin
+	# init some variables
+	title = 0
+	# get the parameters
+	call clgstr ("region", region, SZ_PATHNAME)
+	axislen[1] = clgeti("xdim")
+	axislen[2] = clgeti("ydim")
+	call clgstr ("mask", plname, SZ_PATHNAME)
+	clobber = clgetb ("clobber")
+	disp = clgetb ("display")
+	if( disp )
+	{
+	    ncols = clgeti("ncols")
+	    nrows = clgeti("nrows")
+	}
+	# must have a valid plname
+	if( streq(plname, "") )
+	    call error(1, "requires a mask file name")
+	# add the extension, if necessary
+	call addextname(plname, EXT_PL, SZ_PATHNAME)
+	# check for already-existing file
+	call clobbername(plname, tempname, clobber, SZ_PATHNAME)
+	# create the PLIO file
+	pl =  rg_plcreate(region, axislen, title)
+	# display if necessary
+	if( disp )
+	    call rg_pldisp(pl, ncols, nrows, 0, 0, 0, 0)
+	# save mask in a file
+	call pl_savef(pl, tempname, Memc[title], 0)
+	# close the pixel mask
+	call pl_close(pl)
+	# rename mask file, if necessary
+	call finalname(tempname, plname)
+end
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+The pointer to the title summary must be set to zero in the calling routine.
+
+The code only checks for axislen for 2 dimensions.
+.in -4
+.sp
+SEE ALSO
+.in4
+regions (a description of the ASCII region descriptor, in the spatial
+doc directory), rg_pmcreate, rg_pldisp, rg_plvallims

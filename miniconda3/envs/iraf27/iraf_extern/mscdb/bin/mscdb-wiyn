@@ -1,0 +1,5 @@
+# Create tar file for WIYN mini-mosaic.
+
+cd ../..
+tar cfXX - mscdb/bin/kpnocaldirs mscdb/bin/ctiocaldirs mscdb |\
+gzip > mscdb-wiyn.tar.gz

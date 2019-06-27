@@ -1,0 +1,200 @@
+#+1299183564
+pkill
+#+1299183567
+clear
+#+1299185178
+ls
+#+1299185184
+cd
+#+1299185185
+ls
+#+1299185187
+cd MMT/
+#+1299185188
+ls
+#+1299185196
+ls mmtinstall/
+#+1299185200
+rmdir mmtinstall/
+#+1299185201
+ls
+#+1299185207
+vi ~/.cshrc
+#+1299185219
+echo $0
+#+1299185234
+ls
+#+1299185245
+ls ~
+#+1299185254
+ls
+#+1299185254
+mv ~/Desktop/mmtinstall.tgz .
+#+1299185265
+tar xvfz mmtinstall.tgz
+#+1299185266
+ls
+#+1299185270
+rehash
+#+1299185281
+ls ufmmtinstall/
+#+1299185287
+cd
+#+1299185288
+ls
+#+1299185297
+source ~/.cshrc
+#+1299185309
+ufmmtstart -preset list
+#+1299185312
+echo $PATH
+#+1299185326
+source ~/.cshrc
+#+1299185328
+echo $PATH
+#+1299185335
+vi ~/.cshrc
+#+1299185354
+ssh -Y -l warner astro.ufl.edu
+#+1299185411
+vi ~/.cshrc
+#+1299185489
+source ~/.cshrc
+#+1299185493
+echo $PATH
+#+1299185503
+ls $UFINSTALL
+#+1299185509
+ls /Users/packham/
+#+1299185512
+ls /Users/packham/MMT/
+#+1299185517
+vi ~/.cshrc
+#+1299185532
+source ~/.cshrc
+#+1299185536
+echo $PATH
+#+1299185548
+ufmmtstart -preset sim
+#+1299185571
+ufmjec -is -ishost localhost
+#+1299868327
+ssh -Y -l warner astro.ufl.edu
+#+1299868432
+ssh packham@astro.ufl.edu
+#+1301546602
+ssh packham@astro.ufl.edu
+#+1302485282
+ssh packham@astro.ufl.edu
+#+1302485308
+exit
+#+1303773388
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1303774925
+exit
+#+1303774949
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1304381414
+so that will have to happen on our endso that will have to happen on our end
+#+1304381418
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381418
+so: Command not found.
+#+1304381418
+chris_mac >
+#+1304381419
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381419
+so: Command not found.
+#+1304381419
+chris_mac >
+#+1304381436
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381436
+so: Command not found.
+#+1304381436
+chris_mac >
+#+1304381437
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381437
+so: Command not found.
+#+1304381437
+chris_mac >
+#+1304381437
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381437
+so: Command not found.
+#+1304381437
+chris_mac >
+#+1304381437
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381437
+so: Command not found.
+#+1304381437
+chris_mac >
+#+1304381438
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381438
+so: Command not found.
+#+1304381438
+chris_mac >
+#+1304381439
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381439
+so: Command not found.
+#+1304381439
+chris_mac >
+#+1304381439
+chris_mac > so that will have to happen on our endso that will have to happen on our end
+#+1304381439
+so: Command not found.
+#+1304381439
+chris_mac >
+#+1304381444
+chris_mac >
+#+1304381444
+chris_mac >
+#+1304381444
+chris_mac >
+#+1304381445
+chris_mac > chris_mac >
+#+1304381445
+chris_mac >
+#+1304381445
+chris_mac >
+#+1304381446
+chris_mac > chris_mac >
+#+1304381446
+chris_mac >
+#+1304381446
+chris_mac >
+#+1304381447
+chris_mac >
+#+1304381453
+chris_mac >
+#+1304381455
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1304906194
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1305484654
+sftp yavin.deepspace.ucsb.edu
+#+1305484661
+ftp yavin.deepspace.ucsb.edu
+#+1305484807
+ftp yavin.deepspace.ucsb.edu
+#+1307104693
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1307104699
+rm .ssh/known_hosts
+#+1307104702
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1307106432
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1307118084
+ssh -Y warner@irlinux-01.spa.umn.edu
+#+1307129654
+exit
+#+1307453343
+cd iraf/
+#+1307453345
+cd midir/

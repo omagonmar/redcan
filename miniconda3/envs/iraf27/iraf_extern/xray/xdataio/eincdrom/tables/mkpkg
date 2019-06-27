@@ -1,0 +1,32 @@
+# $Header: /home/pros/xray/xdataio/eincdrom/tables/RCS/mkpkg,v 11.0 1997/11/06 16:36:59 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:36:59  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:01:46  prosb
+# General Release 2.4
+#
+#Revision 8.1  1994/07/15  15:00:50  dvs
+#These routines now form the libgentab.a library.
+#
+#Revision 8.0  94/06/27  16:59:35  prosb
+#General Release 2.3.1
+#
+#Revision 1.1  94/05/06  17:35:02  prosb
+#Initial revision
+#
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+
+$checkout libgentab.a ../
+$update   libgentab.a
+$checkin  libgentab.a ../
+$exit
+
+libgentab.a:
+        gt_info.x   <tbset.h> "../source/ecd_err.h" "gen_tab.h"
+        gt_file.x   <tbset.h> "../source/ecd_err.h" "gen_tab.h"
+        ;

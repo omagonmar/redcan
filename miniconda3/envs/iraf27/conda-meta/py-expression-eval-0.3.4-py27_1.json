@@ -1,0 +1,106 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/py-expression-eval-0.3.4-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/py_expression_eval/__init__.py",
+    "lib/python2.7/site-packages/py_expression_eval/__init__.pyc",
+    "lib/python2.7/site-packages/py_expression_eval/tests.py",
+    "lib/python2.7/site-packages/py_expression_eval/tests.pyc"
+  ],
+  "fn": "py-expression-eval-0.3.4-py27_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/py-expression-eval-0.3.4-py27_1",
+    "type": 1
+  },
+  "md5": "22bd460ef3e6715bdc35c6a0ecf1f7f3",
+  "name": "py-expression-eval",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/py-expression-eval-0.3.4-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "c58704bfc930f4fe7543b3a043141a695cccce3c03369603d64a5fdfb24b7e13",
+        "sha256_in_prefix": "c58704bfc930f4fe7543b3a043141a695cccce3c03369603d64a5fdfb24b7e13",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "212dd7e10bf7ccc655b3c3fd109c66ab3242f5ed32a49b43514e75b7b87da397",
+        "sha256_in_prefix": "212dd7e10bf7ccc655b3c3fd109c66ab3242f5ed32a49b43514e75b7b87da397",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval-0.3.3-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "a6d8bf8c3986c972c0e5dccfc959ffe92fb146b0c08cd28167de11d100d35543",
+        "sha256_in_prefix": "a6d8bf8c3986c972c0e5dccfc959ffe92fb146b0c08cd28167de11d100d35543",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5567654b15b2c820c1a60d75bd73adca306dda113301789f52f5c53f68a2469f",
+        "sha256_in_prefix": "5567654b15b2c820c1a60d75bd73adca306dda113301789f52f5c53f68a2469f",
+        "size_in_bytes": 29507
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "cf9ca08c07396b81671f55b6f12c679571c173413fa1c76353981385b27a13b4",
+        "sha256_in_prefix": "cf9ca08c07396b81671f55b6f12c679571c173413fa1c76353981385b27a13b4",
+        "size_in_bytes": 28121
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval/tests.py",
+        "path_type": "hardlink",
+        "sha256": "2a3df3eb23f5044f40577b984867ffcec8baa7df39a6fb845d35f15ef2f6d762",
+        "sha256_in_prefix": "2a3df3eb23f5044f40577b984867ffcec8baa7df39a6fb845d35f15ef2f6d762",
+        "size_in_bytes": 6749
+      },
+      {
+        "_path": "lib/python2.7/site-packages/py_expression_eval/tests.pyc",
+        "path_type": "hardlink",
+        "sha256": "04959755eb1750ab7b003560d4762ecc795860772240ad99ce5494f3e8293f8d",
+        "sha256_in_prefix": "04959755eb1750ab7b003560d4762ecc795860772240ad99ce5494f3e8293f8d",
+        "size_in_bytes": 5906
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 18049,
+  "subdir": "linux-64",
+  "timestamp": 1518645912100,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/py-expression-eval-0.3.4-py27_1.tar.bz2",
+  "version": "0.3.4"
+}

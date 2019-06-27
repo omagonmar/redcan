@@ -1,0 +1,27 @@
+#Initial revision -  1997/09/15 JDS
+#Qpappend has a new parameter("dotsi") that gives the user
+#the control of whether or not to append the TSI 
+#records as well. Either all or just the first TSI
+#records can be included in the final qpoe file.
+# (updated from "qpappend.par" : the Revision 9.0  1995/11/16 ) 
+#
+qpoe_list,s,a,"",,,"input list of qpoe filenames (e.g. @qp.lst)"
+region,s,a,"",,,"region descriptor"
+exposure,s,h,"NONE",,,"exposure mask"
+expthresh,r,h,0.0,0.0,100.0,"min. percent of exp. time for inclusion"
+qpoe,s,a,"",,,"output qpoe file name"
+eventdef,s,a,"",,,"event definition"
+dotsi,i,a,0,,,"Include TSI records from all qpoe's(no=0;yes=1)"
+clobber,b,h,n,,,"delete old copy of output file"
+display,i,h,1,0,5,"0=no disp, 1=header"
+sort,b,h,y,,,"sort events?"
+sorttype,s,h,"y x",,,"type of sort"
+sortsize,i,h,1000000,,,"bytes to alloc. per sort"
+qp_internals,b,h,yes,,,"prompt for qpoe internals?"
+qp_pagesize,i,h,2048,,,"page size for qpoe file"
+qp_bucketlen,i,h,4096,,,"bucket length for qpoe file"
+qp_blockfactor,i,h,1,,,"block factor for imio"
+qp_mkindex,b,h,y,,,"make an index on y, x"
+qp_key,s,h,"",,,"key on which to make index"
+qp_debug,i,h,0,,,"qpoe debug level"
+

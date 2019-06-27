@@ -1,0 +1,22 @@
+% Next 5 lines define \lapprox and \gapprox: "less than or approximately
+% equal to" and "greater than or approximately equal to".
+\newbox\grsign \setbox\grsign=\hbox{$>$} \newdimen\grdimen \grdimen=\ht\grsign
+\newbox\simlessbox \newbox\simgreatbox
+\setbox\simgreatbox=\hbox{\raise.5ex\hbox{$>$}\llap
+     {\lower.5ex\hbox{$\sim$}}}\ht1=\grdimen\dp1=0pt
+\setbox\simlessbox=\hbox{\raise.5ex\hbox{$<$}\llap
+     {\lower.5ex\hbox{$\sim$}}}\ht2=\grdimen\dp2=0pt
+\def\simgreat{\mathrel{\copy\simgreatbox}}
+\def\simless{\mathrel{\copy\simlessbox}}
+% Next lines define "approximately proportional to"
+\newbox\simppropto
+\setbox\simppropto=\hbox{\raise.5ex\hbox{$\sim$}\llap
+     {\lower.5ex\hbox{$\propto$}}}\ht2=\grdimen\dp2=0pt
+\def\simpropto{\mathrel{\copy\simppropto}}
+\def\today{\ifcase\month\or
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+  \space\number\day, \number\year}
+\mathchardef\hyph='0055
+
+

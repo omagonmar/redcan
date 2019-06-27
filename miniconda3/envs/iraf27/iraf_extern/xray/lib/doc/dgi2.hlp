@@ -1,0 +1,101 @@
+#$Header: /home/pros/xray/lib/doc/RCS/dgi2.hlp,v 11.0 1997/11/06 16:22:28 prosb Exp $
+#$Log: dgi2.hlp,v $
+#Revision 11.0  1997/11/06 16:22:28  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:21  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:34:50  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:18:35  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  15:59:56  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:19:59  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:08:07  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:31  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:34:52  pros
+#General Release 1.0
+#
+.help dgi2 Jan89 PROS_Library
+NAME
+.in 4
+dgi2 - convert DG 2-byte integer to host format
+.sp
+.in -4
+USAGE
+.in 4
+ival = dgi2(ibuf)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	ibuf		any type	data element containing DG short
+
+Output Arguments:
+	none
+
+Return Value:
+	ival		short		SPP short in host format
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The function dgi2 takes a 2-byte integer in DG data format and returns
+a 2-byte integer (SPP short) in host format.  Because SPP (and Fortran)
+pass data by reference, the DG data can be stored in any data type, and
+in either an array or a scalar.
+
+Note that dgi2 checks BYTE_SWAP2 (defined in <mach.h>) and calls the 
+SPP library routine bswap2.  If a user needs to convert many 2-byte integers
+stored in an array, it would be more efficient to call bswap2 directly (see
+second example).
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. Convert a DG 2-byte integer to host format.
+.in 8
+.nf
+short	i
+short	dgbuf[100]
+short	dgi2()
+
+i = dgi2(dgbuf[50])
+.fi
+.sp
+.in -12
+.in 4
+ex. Convert an array of DG 2-byte integers to host format using bswap2.
+.in 8
+.nf
+include <mach.h>
+define	BUFSIZ 100
+short	dgbuf[BUFSIZ]
+short	hostbuf[BUFSIZ]
+
+# convert DG i*2, if necessary
+if( BYTE_SWAP2 == YES )
+    # last arg to bswap2 is the number of machine bytes to swap
+    call bswap2(dgbuf, 1, hostbuf, 1, BUFSIZ*2)
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+dgi4, dgr4, dgr8, dgi6

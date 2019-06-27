@@ -1,0 +1,129 @@
+#$Header: /home/pros/xray/xtiming/doc/RCS/timprint.hlp,v 11.0 1997/11/06 16:44:17 prosb Exp $
+#$Log: timprint.hlp,v $
+#Revision 11.0  1997/11/06 16:44:17  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:33:18  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:39:05  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:00:21  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/21  12:25:29  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:56:10  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:48:13  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:31:47  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/04/24  12:08:45  janet
+#revised for apr 92 release.
+#
+#Revision 3.0  91/08/02  02:00:51  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/03  14:39:33  prosb
+#xray.xtiming   7/3/91
+#
+#Revision 2.0  91/03/06  22:53:31  pros
+#General Release 1.0
+#
+.help timprint Dec93 xray.xtiming
+.ih
+NAME
+timprint - Display a timing table file
+.ih
+USAGE
+timprint table rows
+.ih
+DESCRIPTION
+\fITIMPRINT\fR displays a table file by calling the\fISTDAS\fR \fITPRINT\fR
+task.  The TPRINT parameters are set by TIMPRINT for convenient display of
+the timing data tables.  Most notably, the table is printed with a 132
+character width so that all of the columns in the table are included
+in the display.  Users should set their console window to accommodate
+132 character width.  The table file name can be indicated with or
+without the ".tab" extension.
+.ih
+PARAMETERS
+.ls table =		prompt = table file name
+
+A list of tables to be printed separated by a comma.  If the list
+includes more than one table a blank line will be printed between
+them.
+.le
+.ls rows = "-"		prompt = Range of rows to print
+
+Used to indicate the range of rows which are to be printed.  The
+default value "-" means to print all rows.  The first ten rows could
+be specified as rows="1-10" or just rows="-10".  To display the first
+10 rows and all the rows from 900 to the last inclusive, use
+rows="-10,900-".  Rows="1,3,7,26" will print only those four rows.  It
+is not an error to specify rows larger than the largest row number;
+they will be ignored.
+.le
+.ls (prparam = yes) [boolean]
+
+When prparam = yes, the header parameters of the table are printed.
+.le
+.ih
+EXAMPLES
+1. Display all rows of table file snr1_chi.tab.
+.nf
+
+	xt> timprint
+	table file name: snr1_chi.tab
+	Range of rows to print (-):
+
+.fi
+2. Display all rows and header of file snr1_chi.tab.
+.nf
+
+	xt> timprint prparam+
+	table file name: snr1_chi.tab
+	Range of rows to print (-):
+
+.fi
+3. Display rows 30 through 50 of table files reg1_ltc.tab &
+reg2_ltc.tab.  Both files will be displayed and a blank line will
+separate the output.  The ".tab" table file extension is optional does
+not appear here.
+.nf
+
+	xt> timprint
+	table file name: reg1_ltc, reg2_ltc
+	Range of rows to print(-): 30-50
+
+.fi
+5. Display the first 10 rows & last 20 rows of table file
+reg1_fft.tab.
+.nf
+
+	xt> timprint
+	table file name: reg1_ltc
+	Range of rows to print(-): -10,2028-
+
+.fi
+6. As in example 5 using command line format.  Send output to the default
+printer.
+.nf
+
+	xt> timprint "reg1_ltc" "-10,2028-" | lpr
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+tprint
+.endhelp

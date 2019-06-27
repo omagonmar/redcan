@@ -1,0 +1,359 @@
+	RELEASE NOTES FOR SAO/PROS -- April 1992/June 1992
+
+(NB: Some directory names refer explicitly to the SAO Unix LAN.)
+
+The April 1992 build and June 1992 patch of the PROS has been installed in the 
+IRAF V2.10 system and resides in the /iraf/irafx/xray directory.  The xray 
+package is a "top level" package (at the same level as packages such as 
+"image" and "noao").  The xray package contains the sub-packages xdataio, 
+ximages, xspatial, xspectral, xplot, xtiming, and xlocal.
+
+I) NEW PROS AND QPOE FEATURES
+
+	The QPOE format has been upgraded to fully support user
+time filtering in all packages.  This has been accomplished by
+adding 3 additional QPOE header keywords:
+	DEFATTR1
+	DEFFILT
+	EXPTIME
+	All existing QPOE files MUST be updated by executing
+the task:
+	xray.xdataio.upqpoe210
+which will accept either a single filename, or a list of filenames,
+or a filename template ( e.g. *.qp )
+
+	IRAF/PROS now supports the ROSAT/PSPC exposure maps
+supplied on Guest Observor data tapes as mask files in PROS
+tasks.  This means that the exposure file can be used to exclude
+data from calculations if the spatial exposure has dropped below
+the specified percentage of the maximum exposure.  These two parameter
+options appear in most PROS tasks as 'exposure' and 'expthresh'.
+( This feature also is available for use with Einstein exposure maps. )
+Please note that the software does NOT correct the exposure time.
+The RFITS2PROS task produces the file <obs-name>_mex.pl to use
+for this purpose.  The <obs-name>_mex.imh,pix files are still produced
+and can be used to correct data for exposure by using IMCALC.  A sample
+file can be found in xdata$rp110590_mex.pl.
+
+	Calibration files for use in analyzing the Point Response
+Function have also been included on the release tape.  However,
+since they occupy  ~40Bytes of space, they come as an optional file
+to be read and installed.  They are not required by any PROS
+tasks.  They include ROSAT/HRI in-flight observations as well
+as Einstein IPC and HRI ground and in-flight data.  See 
+'help prf' in the xray.xspatial package for further details.
+
+	The majority of work has been done in the XSPATIAL package
+to add the new sub-package DETECT and the XTIMING package to
+add the new sub-package TIMCOR.  Much work has also been done in the XPLOT 
+package to improve support for World Coordinate Systems (MWCS in IRAF).
+The XSPECTRAL package now includes the latest PSPC calibration
+files from MPE and support for calculating HRI fluxes.
+ 
+II) NEW TASKS AND PACKAGES
+
+1. XSPATIAL
+	DETECT: 
+	This package has prototype tasks for doing XRAY source 'LOCAL' 
+detection for either ROSAT or Einstein data.  The 'using_detect' and
+'explain_detect' help files give more details.
+
+	FIXSAOREG
+	This task will convert region files produced by SAOIMAGE
+to 'physical' coordinates. This allows them to be used directly
+in all PROS tasks WITHOUT MODIFICATION.
+
+	ISOREG
+	This task allows user 'contour levels' to be stored in an
+IRAF mask file ( -.pl).  This -.pl file can then be used as a region
+specifier in any of the XSPATIAL tasks.  The only restriction is
+that the spatial tasks must use exactly the same input data file
+as ISOREG used to generate the mask.  Otherwise the coordinates
+will not be consistent. 
+
+2. XTIMING
+	TIMCOR
+	This package has prototype software for doing ROSAT 
+barycenter time corrections.  It has been taken from the most
+recent MIDAS/EXSAS development ( March 92) and uses the most recently 
+available conversions from ROSAT SCC (spacecraft clock) to UTC. The 
+'using_bary' and 'utc' help file gives more details.
+
+	LTCPLOT,FFTPLOT,FLDPLOT,FTPPLOT,CHIPLOT 
+	These are new customized plot tasks designed specificially
+for each of the types of XTIMING output files.
+
+3.  XPROTO
+
+	HKFILTER
+	This task allows users to generate a QPOE time filter from
+a 'TSI' filter.  This is most useful for ROSAT/HRI where the TSI
+defines ~20 values.  The values available can be found by
+running QPLIST on the TSI records.
+	When fully tested this will become incorporated in the rest of PROS.
+
+4. XPLOT
+
+	TVLABEL
+	This task displays an image and then provides an IMAGE
+cursor.  The image cursor will read-back the coordinates in
+RA and Dec ( hh:mm:ss, dd:mm:ss ).
+
+	TVPROJ
+	This task displays an image and then produces X and Y
+image projections overlayed on the display.
+
+
+5.  XDATAIO
+
+	UPQPOE210	
+	This is a task to convert existing QPOE files to the IRAF210/
+PROS 2.0 format.
+
+	QP2FITS
+	This task will 'reverse' the QP2FITS process so that a
+        modified QPOE file can be converted to FITS for export.
+	( note: only for 'unrotated' files - see KNOWN BUGS below )
+
+	DETECTOR COORDS ( most useful with XPLOT.XDISPLAY)
+        Detector coordinate images are now available by doing the following:
+        xdata$rh110267.qp[bl=8,key=(s16,s18)][1:512,1:512]
+        xdata$rp110590.qp[bl=15,key=(s16,s18)][1:512,1:512]
+
+        Providing a 'BLOCK' parameter AFTER an IMAGE section now
+        gives the error:
+                pixel subscript out of bounds
+        Other QPOE specific filters are still allowed to pass without
+        error, though they will be ignored.
+
+6. XOBSOLETE:
+	This package contains the previous release of IMCONTOUR and
+TVIMCONTOUR which do NOT have full MWCS support.
+
+7. XRAY
+        XAPROPOS 
+	This is a customized version of the CTIO package, APROPOS commnand
+	Therefore this is only available on systems that have installed
+	the CTIO layered package.
+
+command now installed to search PROS/IRAF/TABLES/STSDAS 
+                 packages for pertinent tasks
+                Unwanted packages can be removed by changing the 'dbname'.
+
+III) MAJOR MODIFICATIONS TO EXISTING TASKS
+
+The following changes have been made to PROS by this change:
+
+1. XDATAIO
+	FITS2QP: 
+	This has been modified to add the NEW QPOE header keywords
+
+	RFITS2PROS
+	Support has been added for reading and converting the orbital
+	ephemeris files needed for barycenter timing corrections.
+
+2. XPLOT 
+	IMCONTOUR/TVIMCONTOUR
+        Previously in XPROTO where they were named newimcontour/tvnewimcontour.
+        These tasks have been modified to share a set of parameter
+	values, gridpars.
+
+	XDISPLAY
+	The default switches have been modified to allow the image
+	to be automatically scaled linearly to the minimum and
+	maximum pixel values.
+
+	DETECTOR COORDINATES
+	It is now possible to produce DISPLAYS of ROSAT and EINSTEIN
+	data in detector coordinates.  
+	
+3.  XSPECTRAL
+	QPSPEC now supports extended sources.
+
+	CALIBRATION - The latest PSPC calibration files available from
+MPE have been included and the PKGPARS parameter file has been modified
+to use these as defaults.  NOTE - The default is for instrument 2.  Any
+data taken with instrument 1 ( pre-AO1) must change defaults to instrument 1.
+See pspc_fitting for more details.
+	HRI calibration files have been added for both ROSAT and EINSTEIN
+to allow flux calculations.
+
+        FIT 
+	This task has been changed so that any bins with negitive net counts 
+will no longer be zeroed before calculating the chi squared.  
+previously, when there was a bin with negitive net counts the 
+counts were set to zero before calculating the chi square, now 
+they remain at the negitive value.  This will cause a degradation 
+of the chi square in any fits with negitive net counts, reflecting 
+the poor background subtraction.
+
+	MODELS
+        There are additional SPECTRAL models.  These are Raymond
+        models abundances 10, 20, 30, 40, 60, 70, 80, 90, 110, 120,
+        130, 140.
+
+        SINGLEFIT should now run on HRI files. 
+
+4.  XSPATIAL
+	IMCNTS
+	This task has been modified to allow the specification of 
+	individual 'local' detect background regions as well as a large 
+	background area.  See the task help file for a description of the 
+	necessary parameter setting to activate this.
+	
+	REGIONS
+	Several REGIONS bugs have been fixed, including some problems
+	with LONG region specifiers and errors using rotated boxes
+	with annuli.  There are some outstanding bugs as well.
+
+5.  XTIMING
+
+	FFT
+	The summed FFT option has been re-implemented.  The previous
+	version was fatally flawed.
+
+	PERIOD
+	The binning algorithm has been significantly upgraded to correctly 
+        calculate exposure even in very small bins.
+        Added chisq threshold to filter outputs to chisq table.
+        Auto-increment algorithm updated to compute the period at each 
+        interval with an explicit dependence on the number of bins being 
+        used.
+
+	ALL (LTCURV,FFT,PERIOD,FOLD)
+	With the addition of full TIME FILTERING support these
+	tasks have been upgraded to use the start and stop of the
+	exposure as the endpoints for the analysis performed.
+
+IV) EXISTING XRAY PACKAGES AND TASKS
+
+	The xray package contains the following sub-packages and tasks
+(* denotes a new task, + denotes major modifications to a task, and -
+denotes that the task has changed packages, $ denotes the task has a new name):
+
+package		tasks		description
+
+xray				No tasks at top level, most now found
+				in ximages.
+
+xdataio			
+		+ rfits2pros	Convert ROSAT DISK fits files to PROS format
+		* qp2fits
+
+xspatial		
+		* detect
+		+ imcnts
+		* fixsaoreg
+		* isoreg
+
+detect		
+
+xtiming				All tasks corrected to do proper background
+				subtraction
+		+ fft		Add power normalization columns
+		* ltcplot
+		* fftplot
+		* ftpplot
+		* chiplot
+		* fldplot
+		* timcor
+
+timcor		* scc_to_utc
+		* calc_bary
+		* apply_bary
+
+
+xspectral	
+		+ qpspec
+		+ fit
+		+ xflux
+
+xplot		
+		+ imcontour     Re-organized parameters
+
+		+ tvimcontour	load and contour an image 
+		+ xdisplay	improved default parameters for auto-scaling
+		* tvlabel
+		* tvproj
+
+xproto		* hkfilter
+
+xlocal		Locally supported tasks
+
+xobsolete	* oldimcontour
+		* oldtvimcontour
+			
+There are help pages for all tasks.  In addition, there is help for
+spatial filtering ("help regions"), PROS/IRAF coordinates ("help
+coords"), QPOE filtering ("help qpoe") and PROS file name conventions
+("help extensions") in the xray package.
+
+V) SETTING UP TO USE THE XRAY PACKAGE
+
+	To run the xray package, users should use the default IRAF V2.10
+In addition, the TABLES 1.2 package (with patch), available from StSci,
+is also required.
+	Users must rerun the MKIRAF task and re-initialize their
+uparm directory before running.
+
+VI) TEST DATA FILES
+
+	To give you some familiarity with the system, there are some ROSAT
+data files available.  The directory xdata$ contains the 
+data files for the ROSAT PSPC AR LAC observation rp110590* and
+the ROSAT HRI AR LAC observation rh110267.  There are
+some Einstein data files available as well.  The directory xdata$ 
+contains the data files for the Einstein file "snr" and the HRI
+obseration of the same object, h8102.
+
+
+VII) KNOWN BUGS
+
+	There is an IRAF bug affecting some uses of regions applied to 
+non-sorted ( e.g. time-sorted) QPOE files.  If encountered, ( the task
+will die with a FATAL ERROR), this problem can be worked around
+by using QPCOPY first and then TIMSORT or QPSORT with region=NONE.
+
+	The QP2FITS task does NOT work for 'rotated' files, i.e. qpoe
+files whose 'CROTA2 != 0.  By default all ROSAT and Einstein QPOE
+files are NOT rotated.  However, the output from QPROTATE will be
+a rotated file, not supported by QP2FITS.
+
+	There may still be a problem with 
+the normalization used in XSPECTRAL/LINE_MODEL.
+
+	The img2qp and xpr2qp tasks still have trouble with memory.
+If these tasks run and seem to take an extremely long time (>10 minutes
+for 100000 photons) or give strange error messages ("can't delete file"),
+try using a smaller sortsize buffer.
+
+VIII) NEXT RELEASE
+
+The next release of PROS will be version 2.1 using IRAF 2.10.1 in October1992.  
+
+There will be an Ultrix patch of PROS ( 2.0.1 ) using IRAF 2.10,
+when 2.10 is available, possibly early summer and another VMS patch of PROS
+(2.0.2) using IRAF 2.10, when available, possibly late summer.
+
+Areas of focus in the next several months will be:
+
+	GENERAL	- Added support in all XRAY tasks for the MWCS under
+		  IRAF 2.10, and improved interface for REGIONS. 
+
+		  Improved data selection capabilities using filtering.
+		  
+		  Improved exposure maps support and generation.
+
+		  Improved documentation.
+
+	XPLOT	  Improved DISPLAY options.
+		  Improved IMCONTOUR support to be consistent with
+		  the new IRAF 'WCSLAB' task.
+
+	XSPATIAL -  An improved vignetting task valid for all off-axis angles.
+		    Improved modelling and deconvolution.
+		 
+	DETECT	 - improved support.
+
+	XSPECTRAL -  Improved user options.
+	 

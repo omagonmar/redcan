@@ -1,0 +1,4802 @@
+ Processing list of files inputfile.lst: Started at 2013-07-14 19:42:55
+*************************************
+**   OBSCLASS Keyword           **
+*************************************
+OBSCLASS keyword defined... automatic selection of files
+*************************************
+**   Rejecting bad files           **
+*************************************
+Created directory /Users/omaira/Dropbox/CCAM/CANARICAM/EXAMPLE/RUNNING_EXAMPLE/OUTPUTS/pyraf for cache
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+
+Loading the gnirs package:
+
+Loading the midir package:
+S20060925S0090.fits....    SUCCESS
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+
+Loading the gnirs package:
+
+Loading the midir package:
+S20060925S0091.fits....    SUCCESS
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+
+Loading the gnirs package:
+
+Loading the midir package:
+S20060925S0092.fits....    SUCCESS
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+
+Loading the gnirs package:
+
+Loading the midir package:
+S20060925S0095.fits....    SUCCESS
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+
+Loading the gnirs package:
+
+Loading the midir package:
+S20060925S0096.fits....    SUCCESS
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+
+Loading the gnirs package:
+
+Loading the midir package:
+S20060925S0097.fits....    SUCCESS
+-----------------------
+######  Removing files:
+-----------------------
+-----------------------
+*************************************
+**   Identification of files       **
+*************************************
+The relative time for   S20060925S0090.fits is           0
+The relative time for   S20060925S0091.fits is         149
+The relative time for   S20060925S0092.fits is         359
+The relative time for   S20060925S0095.fits is        1322
+The relative time for   S20060925S0096.fits is        1477
+The relative time for   S20060925S0097.fits is        1741
+@@@ Files already ordered
+@@@ Associated files: 
+@ Note that the associated Standard will be the closest to the observation
+@ The associated observation to the acquisition image will be the first observed after the acquis.
+                FILE        TARG/STD/ACQ             SPEC/IM              ACQUIS            STANDARD
+ S20060925S0090.fits         ACQUISITION               IMAGE S20060925S0092.fits             NOASSOC
+ S20060925S0091.fits         ACQUISITION               IMAGE S20060925S0092.fits             NOASSOC
+ S20060925S0092.fits            STANDARD            SPECTRUM             NOASSOC             NOASSOC
+ S20060925S0095.fits         ACQUISITION               IMAGE S20060925S0097.fits             NOASSOC
+ S20060925S0096.fits         ACQUISITION               IMAGE S20060925S0097.fits             NOASSOC
+ S20060925S0097.fits              TARGET            SPECTRUM             NOASSOC S20060925S0092.fits
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+gemini/:
+ flamingos/     gmos/           midir/          niri/           quirc/
+ gemtools/      gnirs/          nifs/           oscir/
+gemtools/:
+ ckcal          gemexpr         gemlogname      glogextract     wmef
+ ckinput        gemextn         gemoffsetlist   glogfix
+ gemarith       gemhead         gemqa           glogpars@
+ gemcombine     gemhedit        gemseeing       imcoadd
+ gemcube        gemlist         gemvsample      mgograph
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+gnirs/:
+ gnirsexamples  nfflt2pin       nsextract       nsreduce        nstransform
+ gnirsinfo      nfquick         nsfitcoords     nsressky        nswavelength
+ gnirsinfoifu   nsappwave       nsflat          nssdist         nswedit
+ gnirsinfols    nscombine       nsheaders       nsslitfunction  nvnoise
+ gnirsinfoxd    nscut           nsoffset        nsstack         nxdisplay
+ nfcube         nsedge          nsprepare       nstelluric
+
+Loading the gnirs package:
+
+Loading the midir package:
+TBACKGROUND 
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND Log opened at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND 
+TBACKGROUND --------------------
+TBACKGROUND Input Parameters:
+TBACKGROUND      inimages       = S20060925S0090.fits
+TBACKGROUND      outimages      = 
+TBACKGROUND      outpref        = b_
+TBACKGROUND      rawpath        = 
+TBACKGROUND      sigma          = 5.0
+TBACKGROUND      bsetfile       = BadChopsNods.lst
+TBACKGROUND      writeps        = no
+TBACKGROUND      sh_change      = yes
+TBACKGROUND      logfile        = 
+TBACKGROUND      verbose        = yes
+TBACKGROUND --------------------
+TBACKGROUND Processing 1 image(s).
+TBACKGROUND Copying image S20060925S0090 to b_S20060925S0090
+TBACKGROUND Checking image b_S20060925S0090
+TBACKGROUND FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:14 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = b_S20060925S0090
+TCHECKSTRUCTURE      modeflag       = 1
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File b_S20060925S0090 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:14 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TBACKGROUND FORK -- Returning to TBACKGROUND ...
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND ERROR: 123 at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND ERROR: 123 Wrong image format
+TBACKGROUND ERROR: 123 Image b_S20060925S0090 has 1 nod phases.
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND --------------------
+TBACKGROUND Exit status: SUCCESS
+TBACKGROUND Log closed at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND 
+TBACKGROUND 
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND Log opened at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND 
+TBACKGROUND --------------------
+TBACKGROUND Input Parameters:
+TBACKGROUND      inimages       = S20060925S0091.fits
+TBACKGROUND      outimages      = 
+TBACKGROUND      outpref        = b_
+TBACKGROUND      rawpath        = 
+TBACKGROUND      sigma          = 5.0
+TBACKGROUND      bsetfile       = BadChopsNods.lst
+TBACKGROUND      writeps        = no
+TBACKGROUND      sh_change      = yes
+TBACKGROUND      logfile        = 
+TBACKGROUND      verbose        = yes
+TBACKGROUND --------------------
+TBACKGROUND Processing 1 image(s).
+TBACKGROUND Copying image S20060925S0091 to b_S20060925S0091
+TBACKGROUND Checking image b_S20060925S0091
+TBACKGROUND FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:14 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = b_S20060925S0091
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File b_S20060925S0091 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:14 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TBACKGROUND FORK -- Returning to TBACKGROUND ...
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND ERROR: 123 at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND ERROR: 123 
+TBACKGROUND ERROR: 123 Image b_S20060925S0091 has 1 nod phases.
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND --------------------
+TBACKGROUND Exit status: SUCCESS
+TBACKGROUND Log closed at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND 
+TBACKGROUND 
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND Log opened at [Sun 20:43:14 14-Jul-2013]
+TBACKGROUND 
+TBACKGROUND --------------------
+TBACKGROUND Input Parameters:
+TBACKGROUND      inimages       = S20060925S0092.fits
+TBACKGROUND      outimages      = 
+TBACKGROUND      outpref        = b_
+TBACKGROUND      rawpath        = 
+TBACKGROUND      sigma          = 5.0
+TBACKGROUND      bsetfile       = BadChopsNods.lst
+TBACKGROUND      writeps        = no
+TBACKGROUND      sh_change      = yes
+TBACKGROUND      logfile        = 
+TBACKGROUND      verbose        = yes
+TBACKGROUND --------------------
+TBACKGROUND Processing 1 image(s).
+TBACKGROUND Copying image S20060925S0092 to b_S20060925S0092
+TBACKGROUND Checking image b_S20060925S0092
+TBACKGROUND FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:15 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = b_S20060925S0092
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File b_S20060925S0092 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:17 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TBACKGROUND FORK -- Returning to TBACKGROUND ...
+TBACKGROUND Image                     n_savesets n_nodpos n_nodsets nextensions total frames
+TBACKGROUND b_S20060925S0092            14        2          5        10        280     
+TBACKGROUND Signal [percent full well] in reference frames:
+TBACKGROUND 
+TBACKGROUND                         Average  =  -7.01
+TBACKGROUND                         Stddev   =   0.0110
+TBACKGROUND                         Minimum  =  -7.04
+TBACKGROUND                         Maximum  =  -6.99
+TBACKGROUND There are no frames with median outside 5.0 sigma of mean.\n
+TBACKGROUND --------------------
+TBACKGROUND Exit status: SUCCESS
+TBACKGROUND Log closed at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND 
+TBACKGROUND 
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND Log opened at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND 
+TBACKGROUND --------------------
+TBACKGROUND Input Parameters:
+TBACKGROUND      inimages       = S20060925S0095.fits
+TBACKGROUND      outimages      = 
+TBACKGROUND      outpref        = b_
+TBACKGROUND      rawpath        = 
+TBACKGROUND      sigma          = 5.0
+TBACKGROUND      bsetfile       = BadChopsNods.lst
+TBACKGROUND      writeps        = no
+TBACKGROUND      sh_change      = yes
+TBACKGROUND      logfile        = 
+TBACKGROUND      verbose        = yes
+TBACKGROUND --------------------
+TBACKGROUND Processing 1 image(s).
+TBACKGROUND Copying image S20060925S0095 to b_S20060925S0095
+TBACKGROUND Checking image b_S20060925S0095
+TBACKGROUND FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:23 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = b_S20060925S0095
+TCHECKSTRUCTURE      modeflag       = 1
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File b_S20060925S0095 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:23 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TBACKGROUND FORK -- Returning to TBACKGROUND ...
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND ERROR: 123 at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND ERROR: 123 
+TBACKGROUND ERROR: 123 Image b_S20060925S0095 has 1 nod phases.
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND --------------------
+TBACKGROUND Exit status: SUCCESS
+TBACKGROUND Log closed at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND 
+TBACKGROUND 
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND Log opened at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND 
+TBACKGROUND --------------------
+TBACKGROUND Input Parameters:
+TBACKGROUND      inimages       = S20060925S0096.fits
+TBACKGROUND      outimages      = 
+TBACKGROUND      outpref        = b_
+TBACKGROUND      rawpath        = 
+TBACKGROUND      sigma          = 5.0
+TBACKGROUND      bsetfile       = BadChopsNods.lst
+TBACKGROUND      writeps        = no
+TBACKGROUND      sh_change      = yes
+TBACKGROUND      logfile        = 
+TBACKGROUND      verbose        = yes
+TBACKGROUND --------------------
+TBACKGROUND Processing 1 image(s).
+TBACKGROUND Copying image S20060925S0096 to b_S20060925S0096
+TBACKGROUND Checking image b_S20060925S0096
+TBACKGROUND FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:23 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = b_S20060925S0096
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File b_S20060925S0096 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:23 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TBACKGROUND FORK -- Returning to TBACKGROUND ...
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND ERROR: 123 at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND ERROR: 123 
+TBACKGROUND ERROR: 123 Image b_S20060925S0096 has 1 nod phases.
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND --------------------
+TBACKGROUND Exit status: SUCCESS
+TBACKGROUND Log closed at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND 
+TBACKGROUND 
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND Log opened at [Sun 20:43:23 14-Jul-2013]
+TBACKGROUND 
+TBACKGROUND --------------------
+TBACKGROUND Input Parameters:
+TBACKGROUND      inimages       = S20060925S0097.fits
+TBACKGROUND      outimages      = 
+TBACKGROUND      outpref        = b_
+TBACKGROUND      rawpath        = 
+TBACKGROUND      sigma          = 5.0
+TBACKGROUND      bsetfile       = BadChopsNods.lst
+TBACKGROUND      writeps        = no
+TBACKGROUND      sh_change      = yes
+TBACKGROUND      logfile        = 
+TBACKGROUND      verbose        = yes
+TBACKGROUND --------------------
+TBACKGROUND Processing 1 image(s).
+TBACKGROUND Copying image S20060925S0097 to b_S20060925S0097
+TBACKGROUND Checking image b_S20060925S0097
+TBACKGROUND FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:24 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = b_S20060925S0097
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File b_S20060925S0097 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:33 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TBACKGROUND FORK -- Returning to TBACKGROUND ...
+TBACKGROUND Image                     n_savesets n_nodpos n_nodsets nextensions total frames
+TBACKGROUND b_S20060925S0097            1         2          35       70        140     
+TBACKGROUND Signal [percent full well] in reference frames:
+TBACKGROUND 
+TBACKGROUND                         Average  =  -7.23
+TBACKGROUND                         Stddev   =   0.0182
+TBACKGROUND                         Minimum  =  -7.26
+TBACKGROUND                         Maximum  =  -7.18
+TBACKGROUND There are no frames with median outside 5.0 sigma of mean.\n
+TBACKGROUND --------------------
+TBACKGROUND Exit status: SUCCESS
+TBACKGROUND Log closed at [Sun 20:43:39 14-Jul-2013]
+TBACKGROUND ---------------------------------------------------------------
+TBACKGROUND 
+*************************************
+**      Stacking		         **
+*************************************
+ 
+     +------------------- Gemini IRAF Package -------------------+
+     |              Version 1.11, December 30, 2011              |
+     |             Requires IRAF v2.12.2a or greater             |
+     |                 Tested with IRAF v2.14.1                  |
+     |             Gemini Observatory, Hilo, Hawaii              |
+     |    Please use the help desk for submission of questions   |
+     |  http://www.gemini.edu/sciops/helpdesk/helpdeskIndex.html |
+     +-----------------------------------------------------------+
+ 
+     Warning setting imtype=fits
+ 
+gemtools/:
+ ckcal          gemexpr         gemlogname      glogextract     wmef
+ ckinput        gemextn         gemoffsetlist   glogfix
+ gemarith       gemhead         gemqa           glogpars@
+ gemcombine     gemhedit        gemseeing       imcoadd
+ gemcube        gemlist         gemvsample      mgograph
+onedspec/:
+ aidpars@       dopcor          refspectra      scopy           slist
+ autoidentify   fitprofs        reidentify      sensfunc        specplot
+ bplot          identify        rspectext       setairmass      specshift
+ calibrate      lcalib          sapertures      setjd           splot
+ continuum      mkspec          sarith          sfit            standard
+ deredden       names           sbands          sflip           telluric
+ dispcor        ndprep          scombine        sinterp         wspectext
+ disptrans      odcombine       scoords         skytweak
+gnirs/:
+ gnirsexamples  nfflt2pin       nsextract       nsreduce        nstransform
+ gnirsinfo      nfquick         nsfitcoords     nsressky        nswavelength
+ gnirsinfoifu   nsappwave       nsflat          nssdist         nswedit
+ gnirsinfols    nscombine       nsheaders       nsslitfunction  nvnoise
+ gnirsinfoxd    nscut           nsoffset        nsstack         nxdisplay
+ nfcube         nsedge          nsprepare       nstelluric
+
+Loading the gnirs package:
+
+Loading the midir package:
+##################tpreparing....
+TPREPARE 
+TPREPARE ------------------------------------------------------------------
+TPREPARE Log opened at [Sun 20:43:41 14-Jul-2013]
+TPREPARE 
+TPREPARE --------------------
+TPREPARE Input Parameters:
+TPREPARE      inimages       = fltb_S20060925S0090.fits
+TPREPARE      outimages      = 
+TPREPARE      outpref        = t
+TPREPARE      rawpath        = 
+TPREPARE      stackoption    = stack
+TPREPARE      combine        = average
+TPREPARE      fl_check       = yes
+TPREPARE      logfile        = 
+TPREPARE      verbose        = yes
+TPREPARE --------------------
+TPREPARE Processing 1 image(s).
+TPREPARE 
+TPREPARE Input image fltb_S20060925S0090 output image tfltb_S20060925S0090.
+TPREPARE FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:41 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = fltb_S20060925S0090
+TCHECKSTRUCTURE      modeflag       = 1
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File fltb_S20060925S0090 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:41 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TPREPARE FORK -- Returning to TPREPARE ...
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0090[1][*,*,1,1]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,2]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,3]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,4]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,5]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,6]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,7]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,8]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,9]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,10]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,11]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,12]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,13]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,14]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,15]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,16]
+TPREPARE   fltb_S20060925S0090[1][*,*,1,17]
+TPREPARE 
+TPREPARE   Output image = tmpon2043j, ncombine = 17
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0090[1][*,*,2,1]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,2]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,3]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,4]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,5]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,6]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,7]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,8]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,9]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,10]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,11]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,12]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,13]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,14]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,15]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,16]
+TPREPARE   fltb_S20060925S0090[1][*,*,2,17]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043k, ncombine = 17
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE            tmpwork2043m
+TPREPARE            tmpwork2043n
+TPREPARE            tmpwork2043o
+TPREPARE            tmpwork2043p
+TPREPARE            tmpwork2043q
+TPREPARE            tmpwork2043r
+TPREPARE            tmpwork2043s
+TPREPARE            tmpwork2043t
+TPREPARE            tmpwork2043u
+TPREPARE            tmpwork2043v
+TPREPARE            tmpwork2043w
+TPREPARE            tmpwork2043x
+TPREPARE            tmpwork2043y
+TPREPARE            tmpwork2043z
+TPREPARE           tmpwork2043_1
+TPREPARE           tmpwork2043_2
+TPREPARE           tmpwork2043_3
+TPREPARE 
+TPREPARE   Output image = tmpout2043i, ncombine = 17
+TPREPARE Image written to output file extension 1.
+TPREPARE --------------------
+TPREPARE Exit status: SUCCESS
+TPREPARE Log closed at [Sun 20:43:43 14-Jul-2013]
+TPREPARE ------------------------------------------------------------------
+TPREPARE 
+##################tpreparing.... finished.
+##################tpreparing....
+TPREPARE 
+TPREPARE ------------------------------------------------------------------
+TPREPARE Log opened at [Sun 20:43:43 14-Jul-2013]
+TPREPARE 
+TPREPARE --------------------
+TPREPARE Input Parameters:
+TPREPARE      inimages       = fltb_S20060925S0091.fits
+TPREPARE      outimages      = 
+TPREPARE      outpref        = t
+TPREPARE      rawpath        = 
+TPREPARE      stackoption    = stack
+TPREPARE      combine        = average
+TPREPARE      fl_check       = yes
+TPREPARE      logfile        = 
+TPREPARE      verbose        = yes
+TPREPARE --------------------
+TPREPARE Processing 1 image(s).
+TPREPARE 
+TPREPARE Input image fltb_S20060925S0091 output image tfltb_S20060925S0091.
+TPREPARE FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:44 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = fltb_S20060925S0091
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File fltb_S20060925S0091 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:44 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TPREPARE FORK -- Returning to TPREPARE ...
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0091[1][*,*,1,1]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,2]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,3]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,4]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,5]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,6]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,7]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,8]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,9]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,10]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,11]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,12]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,13]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,14]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,15]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,16]
+TPREPARE   fltb_S20060925S0091[1][*,*,1,17]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_12, ncombine = 17
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0091[1][*,*,2,1]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,2]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,3]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,4]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,5]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,6]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,7]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,8]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,9]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,10]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,11]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,12]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,13]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,14]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,15]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,16]
+TPREPARE   fltb_S20060925S0091[1][*,*,2,17]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_13, ncombine = 17
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE          tmpwork2043_15
+TPREPARE          tmpwork2043_16
+TPREPARE          tmpwork2043_17
+TPREPARE          tmpwork2043_18
+TPREPARE          tmpwork2043_19
+TPREPARE          tmpwork2043_20
+TPREPARE          tmpwork2043_21
+TPREPARE          tmpwork2043_22
+TPREPARE          tmpwork2043_23
+TPREPARE          tmpwork2043_24
+TPREPARE          tmpwork2043_25
+TPREPARE          tmpwork2043_26
+TPREPARE          tmpwork2043_27
+TPREPARE          tmpwork2043_28
+TPREPARE          tmpwork2043_29
+TPREPARE          tmpwork2043_30
+TPREPARE          tmpwork2043_31
+TPREPARE 
+TPREPARE   Output image = tmpout2043_11, ncombine = 17
+TPREPARE Image written to output file extension 1.
+TPREPARE --------------------
+TPREPARE Exit status: SUCCESS
+TPREPARE Log closed at [Sun 20:43:47 14-Jul-2013]
+TPREPARE ------------------------------------------------------------------
+TPREPARE 
+##################tpreparing.... finished.
+##################tpreparing....
+TPREPARE 
+TPREPARE ------------------------------------------------------------------
+TPREPARE Log opened at [Sun 20:43:47 14-Jul-2013]
+TPREPARE 
+TPREPARE --------------------
+TPREPARE Input Parameters:
+TPREPARE      inimages       = fltb_S20060925S0092.fits
+TPREPARE      outimages      = 
+TPREPARE      outpref        = t
+TPREPARE      rawpath        = 
+TPREPARE      stackoption    = stack
+TPREPARE      combine        = average
+TPREPARE      fl_check       = yes
+TPREPARE      logfile        = 
+TPREPARE      verbose        = yes
+TPREPARE --------------------
+TPREPARE Processing 1 image(s).
+TPREPARE 
+TPREPARE Input image fltb_S20060925S0092 output image tfltb_S20060925S0092.
+TPREPARE FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:43:47 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = fltb_S20060925S0092
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File fltb_S20060925S0092 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:43:47 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TPREPARE FORK -- Returning to TPREPARE ...
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[1][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[1][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_40, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[1][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[1][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_41, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE          tmpwork2043_43
+TPREPARE          tmpwork2043_44
+TPREPARE          tmpwork2043_45
+TPREPARE          tmpwork2043_46
+TPREPARE          tmpwork2043_47
+TPREPARE          tmpwork2043_48
+TPREPARE          tmpwork2043_49
+TPREPARE          tmpwork2043_50
+TPREPARE          tmpwork2043_51
+TPREPARE          tmpwork2043_52
+TPREPARE          tmpwork2043_53
+TPREPARE          tmpwork2043_54
+TPREPARE          tmpwork2043_55
+TPREPARE          tmpwork2043_56
+TPREPARE 
+TPREPARE   Output image = tmpout2043_39, ncombine = 14
+TPREPARE Nod A image for set 1 written to output file extension 1.
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[2][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[2][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_58, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[2][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[2][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_59, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE          tmpwork2043_61
+TPREPARE          tmpwork2043_62
+TPREPARE          tmpwork2043_63
+TPREPARE          tmpwork2043_64
+TPREPARE          tmpwork2043_65
+TPREPARE          tmpwork2043_66
+TPREPARE          tmpwork2043_67
+TPREPARE          tmpwork2043_68
+TPREPARE          tmpwork2043_69
+TPREPARE          tmpwork2043_70
+TPREPARE          tmpwork2043_71
+TPREPARE          tmpwork2043_72
+TPREPARE          tmpwork2043_73
+TPREPARE          tmpwork2043_74
+TPREPARE 
+TPREPARE   Output image = tmpout2043_57, ncombine = 14
+TPREPARE Nod B image for set 1 written to output file extension 2.
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[3][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[3][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_76, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[3][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[3][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_77, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE          tmpwork2043_79
+TPREPARE          tmpwork2043_80
+TPREPARE          tmpwork2043_81
+TPREPARE          tmpwork2043_82
+TPREPARE          tmpwork2043_83
+TPREPARE          tmpwork2043_84
+TPREPARE          tmpwork2043_85
+TPREPARE          tmpwork2043_86
+TPREPARE          tmpwork2043_87
+TPREPARE          tmpwork2043_88
+TPREPARE          tmpwork2043_89
+TPREPARE          tmpwork2043_90
+TPREPARE          tmpwork2043_91
+TPREPARE          tmpwork2043_92
+TPREPARE 
+TPREPARE   Output image = tmpout2043_75, ncombine = 14
+TPREPARE Nod A image for set 2 written to output file extension 3.
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[4][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[4][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_94, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[4][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[4][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_95, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE          tmpwork2043_97
+TPREPARE          tmpwork2043_98
+TPREPARE          tmpwork2043_99
+TPREPARE         tmpwork2043_100
+TPREPARE         tmpwork2043_101
+TPREPARE         tmpwork2043_102
+TPREPARE         tmpwork2043_103
+TPREPARE         tmpwork2043_104
+TPREPARE         tmpwork2043_105
+TPREPARE         tmpwork2043_106
+TPREPARE         tmpwork2043_107
+TPREPARE         tmpwork2043_108
+TPREPARE         tmpwork2043_109
+TPREPARE         tmpwork2043_110
+TPREPARE 
+TPREPARE   Output image = tmpout2043_93, ncombine = 14
+TPREPARE Nod B image for set 2 written to output file extension 4.
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[5][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[5][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_112, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[5][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[5][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_113, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:43: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_115
+TPREPARE         tmpwork2043_116
+TPREPARE         tmpwork2043_117
+TPREPARE         tmpwork2043_118
+TPREPARE         tmpwork2043_119
+TPREPARE         tmpwork2043_120
+TPREPARE         tmpwork2043_121
+TPREPARE         tmpwork2043_122
+TPREPARE         tmpwork2043_123
+TPREPARE         tmpwork2043_124
+TPREPARE         tmpwork2043_125
+TPREPARE         tmpwork2043_126
+TPREPARE         tmpwork2043_127
+TPREPARE         tmpwork2043_128
+TPREPARE 
+TPREPARE   Output image = tmpout2043_111, ncombine = 14
+TPREPARE Nod A image for set 3 written to output file extension 5.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[6][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[6][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_130, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[6][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[6][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_131, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_133
+TPREPARE         tmpwork2043_134
+TPREPARE         tmpwork2043_135
+TPREPARE         tmpwork2043_136
+TPREPARE         tmpwork2043_137
+TPREPARE         tmpwork2043_138
+TPREPARE         tmpwork2043_139
+TPREPARE         tmpwork2043_140
+TPREPARE         tmpwork2043_141
+TPREPARE         tmpwork2043_142
+TPREPARE         tmpwork2043_143
+TPREPARE         tmpwork2043_144
+TPREPARE         tmpwork2043_145
+TPREPARE         tmpwork2043_146
+TPREPARE 
+TPREPARE   Output image = tmpout2043_129, ncombine = 14
+TPREPARE Nod B image for set 3 written to output file extension 6.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[7][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[7][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_148, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[7][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[7][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_149, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_151
+TPREPARE         tmpwork2043_152
+TPREPARE         tmpwork2043_153
+TPREPARE         tmpwork2043_154
+TPREPARE         tmpwork2043_155
+TPREPARE         tmpwork2043_156
+TPREPARE         tmpwork2043_157
+TPREPARE         tmpwork2043_158
+TPREPARE         tmpwork2043_159
+TPREPARE         tmpwork2043_160
+TPREPARE         tmpwork2043_161
+TPREPARE         tmpwork2043_162
+TPREPARE         tmpwork2043_163
+TPREPARE         tmpwork2043_164
+TPREPARE 
+TPREPARE   Output image = tmpout2043_147, ncombine = 14
+TPREPARE Nod A image for set 4 written to output file extension 7.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[8][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[8][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_166, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[8][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[8][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_167, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_169
+TPREPARE         tmpwork2043_170
+TPREPARE         tmpwork2043_171
+TPREPARE         tmpwork2043_172
+TPREPARE         tmpwork2043_173
+TPREPARE         tmpwork2043_174
+TPREPARE         tmpwork2043_175
+TPREPARE         tmpwork2043_176
+TPREPARE         tmpwork2043_177
+TPREPARE         tmpwork2043_178
+TPREPARE         tmpwork2043_179
+TPREPARE         tmpwork2043_180
+TPREPARE         tmpwork2043_181
+TPREPARE         tmpwork2043_182
+TPREPARE 
+TPREPARE   Output image = tmpout2043_165, ncombine = 14
+TPREPARE Nod B image for set 4 written to output file extension 8.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[9][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[9][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_184, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[9][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[9][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_185, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_187
+TPREPARE         tmpwork2043_188
+TPREPARE         tmpwork2043_189
+TPREPARE         tmpwork2043_190
+TPREPARE         tmpwork2043_191
+TPREPARE         tmpwork2043_192
+TPREPARE         tmpwork2043_193
+TPREPARE         tmpwork2043_194
+TPREPARE         tmpwork2043_195
+TPREPARE         tmpwork2043_196
+TPREPARE         tmpwork2043_197
+TPREPARE         tmpwork2043_198
+TPREPARE         tmpwork2043_199
+TPREPARE         tmpwork2043_200
+TPREPARE 
+TPREPARE   Output image = tmpout2043_183, ncombine = 14
+TPREPARE Nod A image for set 5 written to output file extension 9.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[10][*,*,2,1]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,2]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,3]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,4]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,5]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,6]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,7]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,8]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,9]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,10]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,11]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,12]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,13]
+TPREPARE   fltb_S20060925S0092[10][*,*,2,14]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_202, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0092[10][*,*,1,1]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,2]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,3]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,4]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,5]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,6]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,7]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,8]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,9]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,10]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,11]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,12]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,13]
+TPREPARE   fltb_S20060925S0092[10][*,*,1,14]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_203, ncombine = 14
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_205
+TPREPARE         tmpwork2043_206
+TPREPARE         tmpwork2043_207
+TPREPARE         tmpwork2043_208
+TPREPARE         tmpwork2043_209
+TPREPARE         tmpwork2043_210
+TPREPARE         tmpwork2043_211
+TPREPARE         tmpwork2043_212
+TPREPARE         tmpwork2043_213
+TPREPARE         tmpwork2043_214
+TPREPARE         tmpwork2043_215
+TPREPARE         tmpwork2043_216
+TPREPARE         tmpwork2043_217
+TPREPARE         tmpwork2043_218
+TPREPARE 
+TPREPARE   Output image = tmpout2043_201, ncombine = 14
+TPREPARE Nod B image for set 5 written to output file extension 10.
+TPREPARE --------------------
+TPREPARE Exit status: SUCCESS
+TPREPARE Log closed at [Sun 20:44:12 14-Jul-2013]
+TPREPARE ------------------------------------------------------------------
+TPREPARE 
+##################tpreparing.... finished.
+##################tpreparing....
+TPREPARE 
+TPREPARE ------------------------------------------------------------------
+TPREPARE Log opened at [Sun 20:44:12 14-Jul-2013]
+TPREPARE 
+TPREPARE --------------------
+TPREPARE Input Parameters:
+TPREPARE      inimages       = fltb_S20060925S0095.fits
+TPREPARE      outimages      = 
+TPREPARE      outpref        = t
+TPREPARE      rawpath        = 
+TPREPARE      stackoption    = stack
+TPREPARE      combine        = average
+TPREPARE      fl_check       = yes
+TPREPARE      logfile        = 
+TPREPARE      verbose        = yes
+TPREPARE --------------------
+TPREPARE Processing 1 image(s).
+TPREPARE 
+TPREPARE Input image fltb_S20060925S0095 output image tfltb_S20060925S0095.
+TPREPARE FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:44:12 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = fltb_S20060925S0095
+TCHECKSTRUCTURE      modeflag       = 1
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File fltb_S20060925S0095 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:44:12 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TPREPARE FORK -- Returning to TPREPARE ...
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0095[1][*,*,1,1]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,2]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,3]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,4]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,5]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,6]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,7]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,8]
+TPREPARE   fltb_S20060925S0095[1][*,*,1,9]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_227, ncombine = 9
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0095[1][*,*,2,1]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,2]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,3]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,4]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,5]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,6]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,7]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,8]
+TPREPARE   fltb_S20060925S0095[1][*,*,2,9]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_228, ncombine = 9
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_230
+TPREPARE         tmpwork2043_231
+TPREPARE         tmpwork2043_232
+TPREPARE         tmpwork2043_233
+TPREPARE         tmpwork2043_234
+TPREPARE         tmpwork2043_235
+TPREPARE         tmpwork2043_236
+TPREPARE         tmpwork2043_237
+TPREPARE         tmpwork2043_238
+TPREPARE 
+TPREPARE   Output image = tmpout2043_226, ncombine = 9
+TPREPARE Image written to output file extension 1.
+TPREPARE --------------------
+TPREPARE Exit status: SUCCESS
+TPREPARE Log closed at [Sun 20:44:14 14-Jul-2013]
+TPREPARE ------------------------------------------------------------------
+TPREPARE 
+##################tpreparing.... finished.
+##################tpreparing....
+TPREPARE 
+TPREPARE ------------------------------------------------------------------
+TPREPARE Log opened at [Sun 20:44:14 14-Jul-2013]
+TPREPARE 
+TPREPARE --------------------
+TPREPARE Input Parameters:
+TPREPARE      inimages       = fltb_S20060925S0096.fits
+TPREPARE      outimages      = 
+TPREPARE      outpref        = t
+TPREPARE      rawpath        = 
+TPREPARE      stackoption    = stack
+TPREPARE      combine        = average
+TPREPARE      fl_check       = yes
+TPREPARE      logfile        = 
+TPREPARE      verbose        = yes
+TPREPARE --------------------
+TPREPARE Processing 1 image(s).
+TPREPARE 
+TPREPARE Input image fltb_S20060925S0096 output image tfltb_S20060925S0096.
+TPREPARE FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:44:14 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = fltb_S20060925S0096
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File fltb_S20060925S0096 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:44:14 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TPREPARE FORK -- Returning to TPREPARE ...
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0096[1][*,*,1,1]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,2]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,3]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,4]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,5]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,6]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,7]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,8]
+TPREPARE   fltb_S20060925S0096[1][*,*,1,9]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_247, ncombine = 9
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0096[1][*,*,2,1]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,2]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,3]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,4]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,5]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,6]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,7]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,8]
+TPREPARE   fltb_S20060925S0096[1][*,*,2,9]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_248, ncombine = 9
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_250
+TPREPARE         tmpwork2043_251
+TPREPARE         tmpwork2043_252
+TPREPARE         tmpwork2043_253
+TPREPARE         tmpwork2043_254
+TPREPARE         tmpwork2043_255
+TPREPARE         tmpwork2043_256
+TPREPARE         tmpwork2043_257
+TPREPARE         tmpwork2043_258
+TPREPARE 
+TPREPARE   Output image = tmpout2043_246, ncombine = 9
+TPREPARE Image written to output file extension 1.
+TPREPARE --------------------
+TPREPARE Exit status: SUCCESS
+TPREPARE Log closed at [Sun 20:44:15 14-Jul-2013]
+TPREPARE ------------------------------------------------------------------
+TPREPARE 
+##################tpreparing.... finished.
+##################tpreparing....
+TPREPARE 
+TPREPARE ------------------------------------------------------------------
+TPREPARE Log opened at [Sun 20:44:15 14-Jul-2013]
+TPREPARE 
+TPREPARE --------------------
+TPREPARE Input Parameters:
+TPREPARE      inimages       = fltb_S20060925S0097.fits
+TPREPARE      outimages      = 
+TPREPARE      outpref        = t
+TPREPARE      rawpath        = 
+TPREPARE      stackoption    = stack
+TPREPARE      combine        = average
+TPREPARE      fl_check       = yes
+TPREPARE      logfile        = 
+TPREPARE      verbose        = yes
+TPREPARE --------------------
+TPREPARE Processing 1 image(s).
+TPREPARE 
+TPREPARE Input image fltb_S20060925S0097 output image tfltb_S20060925S0097.
+TPREPARE FORK -- Forking to TCHECKSTRUCTURE ...
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE Log opened at [Sun 20:44:15 14-Jul-2013]
+TCHECKSTRUCTURE 
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Input Parameters:
+TCHECKSTRUCTURE      image          = fltb_S20060925S0097
+TCHECKSTRUCTURE      modeflag       = 2
+TCHECKSTRUCTURE      logfile        = midir.log
+TCHECKSTRUCTURE      verbose        = yes
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE File fltb_S20060925S0097 appears to be correct.
+TCHECKSTRUCTURE --------------------
+TCHECKSTRUCTURE Exit status: SUCCESS
+TCHECKSTRUCTURE Log closed at [Sun 20:44:23 14-Jul-2013]
+TCHECKSTRUCTURE -----------------------------------------------------------
+TCHECKSTRUCTURE 
+TPREPARE FORK -- Returning to TPREPARE ...
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[1][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_267, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[1][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_268, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_270
+TPREPARE 
+TPREPARE   Output image = tmpout2043_266, ncombine = 1
+TPREPARE Nod A image for set 1 written to output file extension 1.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[2][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_272, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[2][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_273, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_275
+TPREPARE 
+TPREPARE   Output image = tmpout2043_271, ncombine = 1
+TPREPARE Nod B image for set 1 written to output file extension 2.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[3][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_277, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[3][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_278, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_280
+TPREPARE 
+TPREPARE   Output image = tmpout2043_276, ncombine = 1
+TPREPARE Nod A image for set 2 written to output file extension 3.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[4][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_282, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[4][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_283, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_285
+TPREPARE 
+TPREPARE   Output image = tmpout2043_281, ncombine = 1
+TPREPARE Nod B image for set 2 written to output file extension 4.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[5][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_287, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[5][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_288, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_290
+TPREPARE 
+TPREPARE   Output image = tmpout2043_286, ncombine = 1
+TPREPARE Nod A image for set 3 written to output file extension 5.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[6][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_292, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[6][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_293, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_295
+TPREPARE 
+TPREPARE   Output image = tmpout2043_291, ncombine = 1
+TPREPARE Nod B image for set 3 written to output file extension 6.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[7][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_297, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[7][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_298, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_300
+TPREPARE 
+TPREPARE   Output image = tmpout2043_296, ncombine = 1
+TPREPARE Nod A image for set 4 written to output file extension 7.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[8][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_302, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[8][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_303, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_305
+TPREPARE 
+TPREPARE   Output image = tmpout2043_301, ncombine = 1
+TPREPARE Nod B image for set 4 written to output file extension 8.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[9][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_307, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[9][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_308, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_310
+TPREPARE 
+TPREPARE   Output image = tmpout2043_306, ncombine = 1
+TPREPARE Nod A image for set 5 written to output file extension 9.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[10][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_312, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[10][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_313, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_315
+TPREPARE 
+TPREPARE   Output image = tmpout2043_311, ncombine = 1
+TPREPARE Nod B image for set 5 written to output file extension 10.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[11][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_317, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[11][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_318, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_320
+TPREPARE 
+TPREPARE   Output image = tmpout2043_316, ncombine = 1
+TPREPARE Nod A image for set 6 written to output file extension 11.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[12][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_322, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[12][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_323, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_325
+TPREPARE 
+TPREPARE   Output image = tmpout2043_321, ncombine = 1
+TPREPARE Nod B image for set 6 written to output file extension 12.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[13][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_327, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[13][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_328, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_330
+TPREPARE 
+TPREPARE   Output image = tmpout2043_326, ncombine = 1
+TPREPARE Nod A image for set 7 written to output file extension 13.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[14][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_332, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[14][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_333, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_335
+TPREPARE 
+TPREPARE   Output image = tmpout2043_331, ncombine = 1
+TPREPARE Nod B image for set 7 written to output file extension 14.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[15][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_337, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[15][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_338, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_340
+TPREPARE 
+TPREPARE   Output image = tmpout2043_336, ncombine = 1
+TPREPARE Nod A image for set 8 written to output file extension 15.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[16][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_342, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[16][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_343, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_345
+TPREPARE 
+TPREPARE   Output image = tmpout2043_341, ncombine = 1
+TPREPARE Nod B image for set 8 written to output file extension 16.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[17][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_347, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[17][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_348, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_350
+TPREPARE 
+TPREPARE   Output image = tmpout2043_346, ncombine = 1
+TPREPARE Nod A image for set 9 written to output file extension 17.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[18][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_352, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[18][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_353, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_355
+TPREPARE 
+TPREPARE   Output image = tmpout2043_351, ncombine = 1
+TPREPARE Nod B image for set 9 written to output file extension 18.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[19][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_357, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[19][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_358, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_360
+TPREPARE 
+TPREPARE   Output image = tmpout2043_356, ncombine = 1
+TPREPARE Nod A image for set 10 written to output file extension 19.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[20][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_362, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[20][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_363, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_365
+TPREPARE 
+TPREPARE   Output image = tmpout2043_361, ncombine = 1
+TPREPARE Nod B image for set 10 written to output file extension 20.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[21][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_367, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[21][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_368, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_370
+TPREPARE 
+TPREPARE   Output image = tmpout2043_366, ncombine = 1
+TPREPARE Nod A image for set 11 written to output file extension 21.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[22][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_372, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[22][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_373, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_375
+TPREPARE 
+TPREPARE   Output image = tmpout2043_371, ncombine = 1
+TPREPARE Nod B image for set 11 written to output file extension 22.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[23][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_377, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[23][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_378, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_380
+TPREPARE 
+TPREPARE   Output image = tmpout2043_376, ncombine = 1
+TPREPARE Nod A image for set 12 written to output file extension 23.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[24][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_382, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[24][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_383, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_385
+TPREPARE 
+TPREPARE   Output image = tmpout2043_381, ncombine = 1
+TPREPARE Nod B image for set 12 written to output file extension 24.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[25][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_387, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[25][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_388, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_390
+TPREPARE 
+TPREPARE   Output image = tmpout2043_386, ncombine = 1
+TPREPARE Nod A image for set 13 written to output file extension 25.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[26][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_392, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[26][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_393, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_395
+TPREPARE 
+TPREPARE   Output image = tmpout2043_391, ncombine = 1
+TPREPARE Nod B image for set 13 written to output file extension 26.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[27][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_397, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[27][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_398, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_400
+TPREPARE 
+TPREPARE   Output image = tmpout2043_396, ncombine = 1
+TPREPARE Nod A image for set 14 written to output file extension 27.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[28][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_402, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[28][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_403, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_405
+TPREPARE 
+TPREPARE   Output image = tmpout2043_401, ncombine = 1
+TPREPARE Nod B image for set 14 written to output file extension 28.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[29][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_407, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[29][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_408, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_410
+TPREPARE 
+TPREPARE   Output image = tmpout2043_406, ncombine = 1
+TPREPARE Nod A image for set 15 written to output file extension 29.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[30][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_412, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[30][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_413, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_415
+TPREPARE 
+TPREPARE   Output image = tmpout2043_411, ncombine = 1
+TPREPARE Nod B image for set 15 written to output file extension 30.
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[31][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_417, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:44: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[31][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_418, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_420
+TPREPARE 
+TPREPARE   Output image = tmpout2043_416, ncombine = 1
+TPREPARE Nod A image for set 16 written to output file extension 31.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[32][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_422, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[32][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_423, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_425
+TPREPARE 
+TPREPARE   Output image = tmpout2043_421, ncombine = 1
+TPREPARE Nod B image for set 16 written to output file extension 32.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[33][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_427, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[33][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_428, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_430
+TPREPARE 
+TPREPARE   Output image = tmpout2043_426, ncombine = 1
+TPREPARE Nod A image for set 17 written to output file extension 33.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[34][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_432, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[34][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_433, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_435
+TPREPARE 
+TPREPARE   Output image = tmpout2043_431, ncombine = 1
+TPREPARE Nod B image for set 17 written to output file extension 34.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[35][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_437, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[35][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_438, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_440
+TPREPARE 
+TPREPARE   Output image = tmpout2043_436, ncombine = 1
+TPREPARE Nod A image for set 18 written to output file extension 35.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[36][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_442, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[36][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_443, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_445
+TPREPARE 
+TPREPARE   Output image = tmpout2043_441, ncombine = 1
+TPREPARE Nod B image for set 18 written to output file extension 36.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[37][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_447, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[37][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_448, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_450
+TPREPARE 
+TPREPARE   Output image = tmpout2043_446, ncombine = 1
+TPREPARE Nod A image for set 19 written to output file extension 37.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[38][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_452, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[38][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_453, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_455
+TPREPARE 
+TPREPARE   Output image = tmpout2043_451, ncombine = 1
+TPREPARE Nod B image for set 19 written to output file extension 38.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[39][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_457, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[39][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_458, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_460
+TPREPARE 
+TPREPARE   Output image = tmpout2043_456, ncombine = 1
+TPREPARE Nod A image for set 20 written to output file extension 39.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[40][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_462, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[40][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_463, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_465
+TPREPARE 
+TPREPARE   Output image = tmpout2043_461, ncombine = 1
+TPREPARE Nod B image for set 20 written to output file extension 40.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[41][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_467, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[41][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_468, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_470
+TPREPARE 
+TPREPARE   Output image = tmpout2043_466, ncombine = 1
+TPREPARE Nod A image for set 21 written to output file extension 41.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[42][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_472, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[42][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_473, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_475
+TPREPARE 
+TPREPARE   Output image = tmpout2043_471, ncombine = 1
+TPREPARE Nod B image for set 21 written to output file extension 42.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[43][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_477, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[43][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_478, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_480
+TPREPARE 
+TPREPARE   Output image = tmpout2043_476, ncombine = 1
+TPREPARE Nod A image for set 22 written to output file extension 43.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[44][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_482, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[44][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_483, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_485
+TPREPARE 
+TPREPARE   Output image = tmpout2043_481, ncombine = 1
+TPREPARE Nod B image for set 22 written to output file extension 44.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[45][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_487, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[45][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_488, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_490
+TPREPARE 
+TPREPARE   Output image = tmpout2043_486, ncombine = 1
+TPREPARE Nod A image for set 23 written to output file extension 45.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[46][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_492, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[46][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_493, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_495
+TPREPARE 
+TPREPARE   Output image = tmpout2043_491, ncombine = 1
+TPREPARE Nod B image for set 23 written to output file extension 46.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[47][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_497, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[47][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_498, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_500
+TPREPARE 
+TPREPARE   Output image = tmpout2043_496, ncombine = 1
+TPREPARE Nod A image for set 24 written to output file extension 47.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[48][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_502, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[48][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_503, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_505
+TPREPARE 
+TPREPARE   Output image = tmpout2043_501, ncombine = 1
+TPREPARE Nod B image for set 24 written to output file extension 48.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[49][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_507, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[49][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_508, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_510
+TPREPARE 
+TPREPARE   Output image = tmpout2043_506, ncombine = 1
+TPREPARE Nod A image for set 25 written to output file extension 49.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[50][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_512, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[50][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_513, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_515
+TPREPARE 
+TPREPARE   Output image = tmpout2043_511, ncombine = 1
+TPREPARE Nod B image for set 25 written to output file extension 50.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[51][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_517, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[51][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_518, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_520
+TPREPARE 
+TPREPARE   Output image = tmpout2043_516, ncombine = 1
+TPREPARE Nod A image for set 26 written to output file extension 51.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[52][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_522, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[52][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_523, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_525
+TPREPARE 
+TPREPARE   Output image = tmpout2043_521, ncombine = 1
+TPREPARE Nod B image for set 26 written to output file extension 52.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[53][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_527, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[53][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_528, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_530
+TPREPARE 
+TPREPARE   Output image = tmpout2043_526, ncombine = 1
+TPREPARE Nod A image for set 27 written to output file extension 53.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[54][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_532, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[54][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_533, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_535
+TPREPARE 
+TPREPARE   Output image = tmpout2043_531, ncombine = 1
+TPREPARE Nod B image for set 27 written to output file extension 54.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[55][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_537, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[55][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_538, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_540
+TPREPARE 
+TPREPARE   Output image = tmpout2043_536, ncombine = 1
+TPREPARE Nod A image for set 28 written to output file extension 55.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[56][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_542, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[56][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_543, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_545
+TPREPARE 
+TPREPARE   Output image = tmpout2043_541, ncombine = 1
+TPREPARE Nod B image for set 28 written to output file extension 56.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[57][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_547, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[57][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_548, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_550
+TPREPARE 
+TPREPARE   Output image = tmpout2043_546, ncombine = 1
+TPREPARE Nod A image for set 29 written to output file extension 57.
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[58][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_552, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[58][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_553, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:45: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_555
+TPREPARE 
+TPREPARE   Output image = tmpout2043_551, ncombine = 1
+TPREPARE Nod B image for set 29 written to output file extension 58.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[59][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_557, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[59][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_558, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_560
+TPREPARE 
+TPREPARE   Output image = tmpout2043_556, ncombine = 1
+TPREPARE Nod A image for set 30 written to output file extension 59.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[60][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_562, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[60][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_563, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_565
+TPREPARE 
+TPREPARE   Output image = tmpout2043_561, ncombine = 1
+TPREPARE Nod B image for set 30 written to output file extension 60.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[61][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_567, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[61][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_568, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_570
+TPREPARE 
+TPREPARE   Output image = tmpout2043_566, ncombine = 1
+TPREPARE Nod A image for set 31 written to output file extension 61.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[62][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_572, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[62][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_573, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_575
+TPREPARE 
+TPREPARE   Output image = tmpout2043_571, ncombine = 1
+TPREPARE Nod B image for set 31 written to output file extension 62.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[63][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_577, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[63][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_578, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_580
+TPREPARE 
+TPREPARE   Output image = tmpout2043_576, ncombine = 1
+TPREPARE Nod A image for set 32 written to output file extension 63.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[64][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_582, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[64][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_583, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_585
+TPREPARE 
+TPREPARE   Output image = tmpout2043_581, ncombine = 1
+TPREPARE Nod B image for set 32 written to output file extension 64.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[65][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_587, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[65][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_588, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_590
+TPREPARE 
+TPREPARE   Output image = tmpout2043_586, ncombine = 1
+TPREPARE Nod A image for set 33 written to output file extension 65.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[66][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_592, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[66][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_593, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_595
+TPREPARE 
+TPREPARE   Output image = tmpout2043_591, ncombine = 1
+TPREPARE Nod B image for set 33 written to output file extension 66.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[67][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_597, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[67][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_598, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_600
+TPREPARE 
+TPREPARE   Output image = tmpout2043_596, ncombine = 1
+TPREPARE Nod A image for set 34 written to output file extension 67.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[68][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_602, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[68][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_603, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_605
+TPREPARE 
+TPREPARE   Output image = tmpout2043_601, ncombine = 1
+TPREPARE Nod B image for set 34 written to output file extension 68.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[69][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_607, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[69][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_608, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_610
+TPREPARE 
+TPREPARE   Output image = tmpout2043_606, ncombine = 1
+TPREPARE Nod A image for set 35 written to output file extension 69.
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[70][*,*,2,1]
+TPREPARE 
+TPREPARE   Output image = tmpon2043_612, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE   fltb_S20060925S0097[70][*,*,1,1]
+TPREPARE 
+TPREPARE   Output image = tmpoff2043_613, ncombine = 1
+TPREPARE 
+TPREPARE Jul 14 19:46: IMCOMBINE
+TPREPARE   combine = average, scale = none, zero = none, weight = none
+TPREPARE   blank = 0.
+TPREPARE                 Images 
+TPREPARE         tmpwork2043_615
+TPREPARE 
+TPREPARE   Output image = tmpout2043_611, ncombine = 1
+TPREPARE Nod B image for set 35 written to output file extension 70.
+TPREPARE --------------------
+TPREPARE Exit status: SUCCESS
+TPREPARE Log closed at [Sun 20:46:33 14-Jul-2013]
+TPREPARE ------------------------------------------------------------------
+TPREPARE 
+##################tpreparing.... finished.
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:35 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0090.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = d
+MISTACK      rawpath        = 
+MISTACK      frametype      = dif
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0090 --> dvtfltb_S20060925S0090.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_624
+MISTACK 
+MISTACK   Output image = tmpfinal2043_623, ncombine = 17
+MISTACK   Sigma image = tmpvar2043_622
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:36 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:36 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0090.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = c
+MISTACK      rawpath        = 
+MISTACK      frametype      = src
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0090 --> cvtfltb_S20060925S0090.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_636
+MISTACK 
+MISTACK   Output image = tmpfinal2043_635, ncombine = 17
+MISTACK   Sigma image = tmpvar2043_634
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:37 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:37 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0090.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = a
+MISTACK      rawpath        = 
+MISTACK      frametype      = ref
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0090 --> avtfltb_S20060925S0090.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_648
+MISTACK 
+MISTACK   Output image = tmpfinal2043_647, ncombine = 17
+MISTACK   Sigma image = tmpvar2043_646
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:37 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:38 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = dvtfltb_S20060925S0090.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:39 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:39 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = cvtfltb_S20060925S0090.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:39 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:39 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = avtfltb_S20060925S0090.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:40 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:40 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0091.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = d
+MISTACK      rawpath        = 
+MISTACK      frametype      = dif
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0091 --> dvtfltb_S20060925S0091.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_675
+MISTACK 
+MISTACK   Output image = tmpfinal2043_674, ncombine = 17
+MISTACK   Sigma image = tmpvar2043_673
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:41 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:41 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0091.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = c
+MISTACK      rawpath        = 
+MISTACK      frametype      = src
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0091 --> cvtfltb_S20060925S0091.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_687
+MISTACK 
+MISTACK   Output image = tmpfinal2043_686, ncombine = 17
+MISTACK   Sigma image = tmpvar2043_685
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:42 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:42 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0091.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = a
+MISTACK      rawpath        = 
+MISTACK      frametype      = ref
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0091 --> avtfltb_S20060925S0091.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_699
+MISTACK 
+MISTACK   Output image = tmpfinal2043_698, ncombine = 17
+MISTACK   Sigma image = tmpvar2043_697
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:43 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:43 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = dvtfltb_S20060925S0091.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:43 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:43 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = cvtfltb_S20060925S0091.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:43 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:43 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = avtfltb_S20060925S0091.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:44 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:44 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0092.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = d
+MISTACK      rawpath        = 
+MISTACK      frametype      = dif
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0092 --> dvtfltb_S20060925S0092.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 10
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_727
+MISTACK        tmpfile12043_729
+MISTACK        tmpfile12043_731
+MISTACK        tmpfile12043_733
+MISTACK        tmpfile12043_735
+MISTACK 
+MISTACK   Output image = tmpfinal2043_725, ncombine = 70
+MISTACK   Sigma image = tmpvar2043_724
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:47 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:47 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0092.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = c
+MISTACK      rawpath        = 
+MISTACK      frametype      = src
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0092 --> cvtfltb_S20060925S0092.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 10
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_748
+MISTACK        tmpfile12043_750
+MISTACK        tmpfile12043_752
+MISTACK        tmpfile12043_754
+MISTACK        tmpfile12043_756
+MISTACK 
+MISTACK   Output image = tmpfinal2043_746, ncombine = 70
+MISTACK   Sigma image = tmpvar2043_745
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:49 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:49 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0092.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = a
+MISTACK      rawpath        = 
+MISTACK      frametype      = ref
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0092 --> avtfltb_S20060925S0092.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 10
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_769
+MISTACK        tmpfile12043_771
+MISTACK        tmpfile12043_773
+MISTACK        tmpfile12043_775
+MISTACK        tmpfile12043_777
+MISTACK 
+MISTACK   Output image = tmpfinal2043_767, ncombine = 70
+MISTACK   Sigma image = tmpvar2043_766
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:51 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:51 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = dvtfltb_S20060925S0092.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:51 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:51 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = cvtfltb_S20060925S0092.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:51 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:51 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = avtfltb_S20060925S0092.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:52 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:52 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0095.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = d
+MISTACK      rawpath        = 
+MISTACK      frametype      = dif
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0095 --> dvtfltb_S20060925S0095.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_804
+MISTACK 
+MISTACK   Output image = tmpfinal2043_803, ncombine = 9
+MISTACK   Sigma image = tmpvar2043_802
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:53 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:53 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0095.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = c
+MISTACK      rawpath        = 
+MISTACK      frametype      = src
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0095 --> cvtfltb_S20060925S0095.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_816
+MISTACK 
+MISTACK   Output image = tmpfinal2043_815, ncombine = 9
+MISTACK   Sigma image = tmpvar2043_814
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:53 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:53 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0095.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = a
+MISTACK      rawpath        = 
+MISTACK      frametype      = ref
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0095 --> avtfltb_S20060925S0095.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_828
+MISTACK 
+MISTACK   Output image = tmpfinal2043_827, ncombine = 9
+MISTACK   Sigma image = tmpvar2043_826
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:54 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:54 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = dvtfltb_S20060925S0095.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:55 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:55 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = cvtfltb_S20060925S0095.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:55 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:55 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = avtfltb_S20060925S0095.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:56 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:56 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0096.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = d
+MISTACK      rawpath        = 
+MISTACK      frametype      = dif
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0096 --> dvtfltb_S20060925S0096.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_855
+MISTACK 
+MISTACK   Output image = tmpfinal2043_854, ncombine = 9
+MISTACK   Sigma image = tmpvar2043_853
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:57 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:57 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0096.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = c
+MISTACK      rawpath        = 
+MISTACK      frametype      = src
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0096 --> cvtfltb_S20060925S0096.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_867
+MISTACK 
+MISTACK   Output image = tmpfinal2043_866, ncombine = 9
+MISTACK   Sigma image = tmpvar2043_865
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:58 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:46:58 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0096.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = a
+MISTACK      rawpath        = 
+MISTACK      frametype      = ref
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0096 --> avtfltb_S20060925S0096.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 1
+MISTACK 
+MISTACK Jul 14 19:46: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_879
+MISTACK 
+MISTACK   Output image = tmpfinal2043_878, ncombine = 9
+MISTACK   Sigma image = tmpvar2043_877
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:46:58 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:58 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = dvtfltb_S20060925S0096.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:59 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:59 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = cvtfltb_S20060925S0096.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:46:59 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:46:59 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = avtfltb_S20060925S0096.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:47:00 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:47:00 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0097.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = d
+MISTACK      rawpath        = 
+MISTACK      frametype      = dif
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0097 --> dvtfltb_S20060925S0097.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 70
+MISTACK 
+MISTACK Jul 14 19:47: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_907
+MISTACK        tmpfile12043_909
+MISTACK        tmpfile12043_911
+MISTACK        tmpfile12043_913
+MISTACK        tmpfile12043_915
+MISTACK        tmpfile12043_917
+MISTACK        tmpfile12043_919
+MISTACK        tmpfile12043_921
+MISTACK        tmpfile12043_923
+MISTACK        tmpfile12043_925
+MISTACK        tmpfile12043_927
+MISTACK        tmpfile12043_929
+MISTACK        tmpfile12043_931
+MISTACK        tmpfile12043_933
+MISTACK        tmpfile12043_935
+MISTACK        tmpfile12043_937
+MISTACK        tmpfile12043_939
+MISTACK        tmpfile12043_941
+MISTACK        tmpfile12043_943
+MISTACK        tmpfile12043_945
+MISTACK        tmpfile12043_947
+MISTACK        tmpfile12043_949
+MISTACK        tmpfile12043_951
+MISTACK        tmpfile12043_953
+MISTACK        tmpfile12043_955
+MISTACK        tmpfile12043_957
+MISTACK        tmpfile12043_959
+MISTACK        tmpfile12043_961
+MISTACK        tmpfile12043_963
+MISTACK        tmpfile12043_965
+MISTACK        tmpfile12043_967
+MISTACK        tmpfile12043_969
+MISTACK        tmpfile12043_971
+MISTACK        tmpfile12043_973
+MISTACK        tmpfile12043_975
+MISTACK 
+MISTACK   Output image = tmpfinal2043_905, ncombine = 35
+MISTACK   Sigma image = tmpvar2043_904
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:47:12 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:47:12 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0097.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = c
+MISTACK      rawpath        = 
+MISTACK      frametype      = src
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0097 --> cvtfltb_S20060925S0097.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 70
+MISTACK 
+MISTACK Jul 14 19:47: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK        tmpfile12043_988
+MISTACK        tmpfile12043_990
+MISTACK        tmpfile12043_992
+MISTACK        tmpfile12043_994
+MISTACK        tmpfile12043_996
+MISTACK        tmpfile12043_998
+MISTACK       tmpfile12043_1000
+MISTACK       tmpfile12043_1002
+MISTACK       tmpfile12043_1004
+MISTACK       tmpfile12043_1006
+MISTACK       tmpfile12043_1008
+MISTACK       tmpfile12043_1010
+MISTACK       tmpfile12043_1012
+MISTACK       tmpfile12043_1014
+MISTACK       tmpfile12043_1016
+MISTACK       tmpfile12043_1018
+MISTACK       tmpfile12043_1020
+MISTACK       tmpfile12043_1022
+MISTACK       tmpfile12043_1024
+MISTACK       tmpfile12043_1026
+MISTACK       tmpfile12043_1028
+MISTACK       tmpfile12043_1030
+MISTACK       tmpfile12043_1032
+MISTACK       tmpfile12043_1034
+MISTACK       tmpfile12043_1036
+MISTACK       tmpfile12043_1038
+MISTACK       tmpfile12043_1040
+MISTACK       tmpfile12043_1042
+MISTACK       tmpfile12043_1044
+MISTACK       tmpfile12043_1046
+MISTACK       tmpfile12043_1048
+MISTACK       tmpfile12043_1050
+MISTACK       tmpfile12043_1052
+MISTACK       tmpfile12043_1054
+MISTACK       tmpfile12043_1056
+MISTACK 
+MISTACK   Output image = tmpfinal2043_986, ncombine = 35
+MISTACK   Sigma image = tmpvar2043_985
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:47:24 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MISTACK 
+MISTACK -------------------------------------------------------------------
+MISTACK Log opened at [Sun 20:47:24 14-Jul-2013]
+MISTACK 
+MISTACK --------------------
+MISTACK Input Parameters:
+MISTACK      inimages       = vtfltb_S20060925S0097.fits
+MISTACK      outimages      = 
+MISTACK      outpref        = a
+MISTACK      rawpath        = 
+MISTACK      frametype      = ref
+MISTACK      combine        = average
+MISTACK      fl_variance    = no
+MISTACK      logfile        = 
+MISTACK      verbose        = yes
+MISTACK --------------------
+MISTACK   vtfltb_S20060925S0097 --> avtfltb_S20060925S0097.fits
+MISTACK Instrument is:TReCS
+MISTACK Number of extensions is 70
+MISTACK 
+MISTACK Jul 14 19:47: IMCOMBINE
+MISTACK   combine = average, scale = none, zero = none, weight = none
+MISTACK   blank = 0.
+MISTACK                 Images 
+MISTACK       tmpfile12043_1069
+MISTACK       tmpfile12043_1071
+MISTACK       tmpfile12043_1073
+MISTACK       tmpfile12043_1075
+MISTACK       tmpfile12043_1077
+MISTACK       tmpfile12043_1079
+MISTACK       tmpfile12043_1081
+MISTACK       tmpfile12043_1083
+MISTACK       tmpfile12043_1085
+MISTACK       tmpfile12043_1087
+MISTACK       tmpfile12043_1089
+MISTACK       tmpfile12043_1091
+MISTACK       tmpfile12043_1093
+MISTACK       tmpfile12043_1095
+MISTACK       tmpfile12043_1097
+MISTACK       tmpfile12043_1099
+MISTACK       tmpfile12043_1101
+MISTACK       tmpfile12043_1103
+MISTACK       tmpfile12043_1105
+MISTACK       tmpfile12043_1107
+MISTACK       tmpfile12043_1109
+MISTACK       tmpfile12043_1111
+MISTACK       tmpfile12043_1113
+MISTACK       tmpfile12043_1115
+MISTACK       tmpfile12043_1117
+MISTACK       tmpfile12043_1119
+MISTACK       tmpfile12043_1121
+MISTACK       tmpfile12043_1123
+MISTACK       tmpfile12043_1125
+MISTACK       tmpfile12043_1127
+MISTACK       tmpfile12043_1129
+MISTACK       tmpfile12043_1131
+MISTACK       tmpfile12043_1133
+MISTACK       tmpfile12043_1135
+MISTACK       tmpfile12043_1137
+MISTACK 
+MISTACK   Output image = tmpfinal2043_1067, ncombine = 35
+MISTACK   Sigma image = tmpvar2043_1066
+MISTACK --------------------
+MISTACK Exit status: SUCCESS
+MISTACK Log closed at [Sun 20:47:34 14-Jul-2013]
+MISTACK -------------------------------------------------------------------
+MISTACK 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:47:34 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = dvtfltb_S20060925S0097.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:47:35 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:47:35 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = cvtfltb_S20060925S0097.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:47:35 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+MICLEAN 
+MICLEAN -------------------------------------------------------------------
+MICLEAN Log opened at [Sun 20:47:35 14-Jul-2013]
+MICLEAN 
+MICLEAN --------------------
+MICLEAN Input Parameters:
+MICLEAN      inimages       = avtfltb_S20060925S0097.fits
+MICLEAN      rawpath        = 
+MICLEAN      outimages      = 
+MICLEAN      outpref        = mi
+MICLEAN      fl_stair       = no
+MICLEAN      fl_columns     = no
+MICLEAN      fl_rows        = no
+MICLEAN      fl_simage      = no
+MICLEAN      stairpref      = s
+MICLEAN      fl_nimage      = no
+MICLEAN      noisepref      = n
+MICLEAN      threshold      = 3.0
+MICLEAN      logfile        = 
+MICLEAN      verbose        = yes
+MICLEAN --------------------
+MICLEAN Processing 1 image(s).
+MICLEAN --------------------
+MICLEAN Exit status: SUCCESS
+MICLEAN Log closed at [Sun 20:47:36 14-Jul-2013]
+MICLEAN -------------------------------------------------------------------
+MICLEAN 
+*************************************
+**      Converting to ADUs/sec     **
+*************************************
+Converting  stck_S20060925S0090.fits  with exposure         1.80991 sec.
+Converting  stck_S20060925S0091.fits  with exposure         1.80991 sec.
+Converting  stck_S20060925S0092.fits  with exposure        0.646395 sec.
+Converting  stck_S20060925S0095.fits  with exposure         3.61981 sec.
+Converting  stck_S20060925S0096.fits  with exposure         3.61981 sec.
+Converting  stck_S20060925S0097.fits  with exposure         9.04953 sec.
+******************************************
+**  Looking for different targets in the sample   **
+******************************************
+*************************************
+**   looking for redshifts         **
+*************************************
+Source   NGC7130  ===> z =  0.016151
+*************************************
+**      Image flux Calibration	  **
+*************************************
+      S20060925S0090.fits file was identified as the Standard HD    190056
+      S20060925S0095.fits converted using:     FC_stck_S20060925S0090.fits
+*************************************
+**      Computing slit losses      **
+*************************************
+Standard: stck_S20060925S0092.fits
+	...associated to the image WITHOUT slit:  stck_S20060925S0090.fits
+ 	...associated to the image WITH slit:  stck_S20060925S0091.fits
+Computing slit-losses of stck_S20060925S0092.fits with files: 
+--->  stck_S20060925S0090.fits
+--->  stck_S20060925S0091.fits
+*************************************
+**    Wavelength calibration       **
+*************************************
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
++++++++++++++++++++++++++++++++++++++++++++++
+Desplacement of the teplate of       2.00000
+Selected method: SPEC	        63062.0
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/WL_stck_S20060925S0092_mean.ps .
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/WL_stck_S20060925S0092.ps .
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
++++++++++++++++++++++++++++++++++++++++++++++
+Desplacement of the teplate of       2.00000
+Selected method: SPEC	        63062.0
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/WL_stck_S20060925S0097_mean.ps .
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/WL_stck_S20060925S0097.ps .
+*************************************
+**      Trace determination        **
+*************************************
+### Determining the trace of...S20060925S0092
+             Initial center position:     152
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/Moff_stck_S20060925S0092.ps .
+### Determining the trace of...S20060925S0097
+             Initial center position:     118
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/Moff_stck_S20060925S0097.ps .
+*************************************
+**      Spectral Extraction        **
+*************************************
+
+The association of the spectrum and standard is done as follows:
+
+Target:  S20060925S0097.fits asssociated to:  S20060925S0092.fits
+S20060925S0092.fits       119.22307       142.79264
+      222.000
+        Extraction #    1 S20060925S0097.fits     94.20    100.09
+      222.000
+      222.000
+File...   S20060925S0097.fits: DONE   
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/Specs_m1_stck_S20060925S0097.ps .
+ 
+Selection of targets and standards: 
+ 
+          TARGET   : S20060925S0097.fits    327.08    -34.95          2006-09-25
+          STANDARD : S20060925S0092.fits    301.08    -32.06          2006-09-25
+      S20060925S0092.fits file was identified as the Standard HD    190056
+Saving final spectrum  : OUTPUTS/Spec_m1_stck_S20060925S0097.dat
+Saving calibration file  : OUTPUTS/Cal_m1_stck_S20060925S0092.dat
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/Specs_m1_stck_logs.ps .
+*************************************
+**      Combining spectra          **
+*************************************
+     1	 S20060925S0097.fits             NGC7130   327.081   -34.951          2006-09-25
+Number of Objects:    1
+Object:  #1:
+ S20060925S0097.fits             NGC7130   327.081   -34.951          2006-09-25
+##########NGC7130
+OUTPUTS/SpecErr_m1_stck_S20060925S0097.dat
+Warning: No translation for device: X
+ All plots are now redirected to the postscript printer lw.
+ To output plots and reset to screen do PSTERM.
+ Portrait mode, top half page.
+ Color mode
+ Non Ecapsulated Postscript
+ Postscript output terminated without plot.
+ Postscript file saved in  PRODUCTS/Spec_m1_stck_NGC7130.ps .
+ Processing list of files inputfile.lst: Finished at 2013-07-14 19:48:01

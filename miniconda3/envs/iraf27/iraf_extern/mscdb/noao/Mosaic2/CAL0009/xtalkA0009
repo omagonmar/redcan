@@ -1,0 +1,11 @@
+# XTCOEFF: NOAO/IRAF V2.11.3EXPORT mosaic@ctio4m Fri 16:56:54 01-Sep-2000
+#   New coeffs determined after significant La Serena lab work in Aug 2000
+
+im1     im2      0.001190 (0.000005, 217.0)
+im2     im1      
+im3     im4      0.001373 (0.000009, 148.2)
+im4     im3      0.001388 (0.000006, 239.7)
+im5     im6      
+im6     im5      0.001460 (0.000004, 328.7)
+im7     im8      
+im8     im7      0.001177 (0.000003, 356.4)

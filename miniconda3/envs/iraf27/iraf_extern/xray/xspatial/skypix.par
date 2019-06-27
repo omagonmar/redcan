@@ -1,0 +1,42 @@
+#$Header: /home/pros/xray/xspatial/RCS/skypix.par,v 11.0 1997/11/06 16:33:28 prosb Exp $
+#$Log: skypix.par,v $
+#Revision 11.0  1997/11/06 16:33:28  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:37:03  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:55:51  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:31:04  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:10:07  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:29  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/09/08  17:26:52  mo
+#MC	9/8/92		Change units defaults from degrees to hours
+#
+#Revision 4.0  92/04/27  14:33:54  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:26:42  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:11:09  pros
+#General Release 1.0
+#
+isystem,s,a,"J2000",,,"input cooordinate system"
+osystem,s,a,"J2000",,,"output cooordinate system"
+ifile,s,a,"STDIN",,,"input file list"
+ofile,s,h,"STDOUT",,,"output file"
+iformat,s,h,"hours",,,"input list format"
+oformat,s,h,"hours",,,"output list format"
+clobber,b,h,yes,,,"allow overwriting of output file"
+display,i,h,1,,,"debug output level"
+istring,s,h,"NONE",,,"input string + formatting spec"
+ostring,s,h,"NONE",,,"output string + formatting spec"

@@ -1,0 +1,171 @@
+.help hydrahints Aug91 finder
+.nf
+A GUIDE TO THE PROTOTYPE IRAF/FINDER ROUTINES FOR NESSIE/HYDRA USERS
+(a rough draft in 12 acts)
+---Phil Massey June 18 1991
+slightly revised July 2, 1991
+completely revised Aug 31, 1991 after Rob's fixes.
+
+Hidden away in the "local" package at NOAO is an extremely useful set
+of routines written by Rob Seaman.  These routines allow you to determine
+accurate positions for objects on CCD frames using the Space Telescope
+Guide Star Catalogue as reference stars.  Although this package is
+a prototype, and has a few inconvenient features, it is doubtless a zillion
+times better than whatever you are currently using for producing coordinates
+for NESSIE/HYDRA.  The purpose of this document is to guide the NESSIE/HYDRA
+user through its intricacies.  It assumes you have a good grasp of basic
+IRAF, and that you are running on some SUN consol that is on good speaking
+terms with ORION.
+
+For each frame you will need a list of  accurate
+x and y positions for your unknowns.  You will also need to have some id
+number in the third column or the package will get hopelessly confused
+later on.
+The file needs to be a simple text file, containing x and y in the first
+two columns and an integer ID in the third column.
+If you are working from the output of PHOTCAL, say, you will
+need to (a) edit out the comment lines, and (b) use "fields" in the 
+"proto" package to extract the relevant x and y columns. You will then
+have to edit in some integer id's.
+
+Alternatively, you can use tvmark to generate a "starting" list of x and
+y positions which you can then center using the "finder" routines.  Be
+warned, however, that sky positions will vanish when you go to center your
+other objects!  Personally, I think it would be better to use "center"
+in the apphot package to first center on all your objects, use
+txdump to put the x and y positions into a separate file, and then use
+tvmark to add sky positions.  But remember to add the id's in the third column!
+
+1) Load local and finder.
+2) Examine each of your images and determine which way is east and north.
+   Write down the RA, DEC and epoch of field center from the header, or,
+   better yet, write down the x and y of some object on the frame with
+   known coordinates.
+3) epar tfinder.  Give tfinder the name of the first image you will be
+   working with, as well as a name for the STSDAS "table" that will be
+   used internally. Also provide a name for the "logfile"; this will
+   contain crucial info you'll need for figuing out which plate to
+   restrict yourself to.  I would NOT give it a file name for the object
+   x's and y's yet; this can be done later in tpeak when you are
+   doing the final pass. 
+   catpars can
+   be left blank.  
+
+   For ra, dec, and epoch you can either give it the coordinates of the
+   frame center (taken from the header) and the epoch of these coordinages,
+   or the ra, dec, and epoch of some object on the frame.  Be sure to give
+   it the xref and yref of this position.  Give it the best value of the
+   plate scale you know, and set "edge" to some significant number of
+   pixels (200, say) to make sure that it finds all the stars in your
+   field.  The default boxsize of 9 for centering seems to work fine.
+
+   You must specify the orientation for north and east using the terms
+   left, right, top, or bottom.  "pangle" is the orientation of the frame.
+   You would expect this to normally be zero, but could be plus or minus
+   a degree or so; our CCDs are not mounted on the telescopes all that
+   accurately.
+  
+   Leave everything else alone.
+
+4) It is necessary to "unlearn" selectpars before the first run of tfinder.
+5) Run tfinder.  After searching the CDroms containing the ST Guide Star
+   Catalogue tfinder will eventually display the image in your imtool window
+   and draw little red circles where it thinks the guide stars should be.
+   When it is ready for you to do something it will give you a blinking
+   cursor in the imtool window.  
+   
+   Examine the marked locations.   Hopefully you will see the circles 
+   just slighly offset from obviously corresponding stars.
+   Does the scale seem to be exactly right?
+   Is there an angle problem between the marked location and the guide stars?
+   The interactive features in tfinder are great for taking care of linear
+   shifts but can do nothing about scale problems and angle problems.  If
+   need be "quit" [using a "q"] out of tfinder and adjust the scale and
+   angle. Rerun tfinder, being sure to first delete the table and logfile
+
+   It's time to use some of the fantastically NICE features of tfinder.
+   Usually all the red circles (the catalog stars) are all offset
+   from their true locations.
+   hit an "a" and then move the cursor to one of the red circles and hit an
+   "l".  Move the cursor to the corresponding star and hit another "l". 
+   Miraculously the image will now be redisplayed with all the sources
+   nicely centered (the circles will now be blue).  If you want to see what
+   other options are available to you, hit a "?". 
+6) Repeat 3 & 5 for all the ccd frames for which you want a COMMON astrometric
+   solution, e.g., based upon the SAME ST plate.  I will warn you now that
+   it is going to prove necessary to redo all of these runs, but it can't be
+   helped.
+7) Now is the time to make sure that your astrometry is all on a common
+   reference system.  For each CCD frame you have probably have reference
+   stars from a few different ST "PLATE_ID"'s.  This is Very Bad, as
+   the coordinates of these reference stars will TYPICALLY differ by
+   a few arcsecs.  So having now seen which stars are CAN be centered on each
+   frame, you are going to have to go back and rerun tfinder but now insisting
+   that all of the reference stars come from the same plate.  To do this,
+   you must first ascertain which (if any) plate_id is in common to all the
+   frames you want to observe together.  
+   Page through the log files, and figure out what (if any) plate_id is
+   common to all the fields for which you want to have on a common
+   system.  If you have only one frame, you still may still find that
+   stars (sometimes the same stars) come from two different plates.
+   Edit in this plate ID into "selectpars".  This is just slightly
+   tricky; use
+  "(double quote)'(single quote) plate name '(single quote)"(double quote)
+   i.e., "'004C'" would be a valid entry.  It will appear as '004C', 
+  (surrounded by single quotes).
+
+8) Run the "tpeak" command, specifying the same table name that you used
+   before.  Specify the name of the list that has the xy coordinates of
+   the unknowns.  tpeak will do 2 things for you:
+   a) add in the unknowns
+   b) select only the guide stars that come from the plate_id that you specified
+      in selectpars in item 7 above.
+   EXIT tpeak without doing anything: simply type a "q" after it displays
+   your image with the centered guide stars and positions of the unknowns.
+
+9) This item is intensionally left blank.
+
+10) Whew!  It is time to do a little astrometry now.  The astrometry is
+   actually performed by the AAT program "ASTROM", which seems to do an
+   incredibly nice job...nicer than ASTRO anyway!
+    a) epar tastrom and enter the SDAS table name (which, incidently,
+       now contains your list of unknowns), and some output root name
+       which will be used to generate a bunch of files.  Ignore catpars
+       again.  For "report" epoch, enter whatever epoch you would like
+       to have the results in.
+       For ra_tan and dec_tan you need to provide the RA and DEC of
+      some point reasonably near the field center of the CCD.  However,
+      unlike the input in tfinder you must be VERY fussy about the format.
+      Specify the RA as HH MM SS.S (no colons) and the DEC as SDD MM SS
+      the tepoch is the peoch corresponding to this.
+    b) run tastrom.  Nothing will seem to happen, but it has!  If you have
+       given tastrom the "root" name of "field3" you will now find that
+       there are 3 files that have been created: "field3.in", which contains
+       the INPUT to astrom, "field3.ast" which contains the full-blown
+       overly chatty analysis perfomed by astrom, and "field3.out", which
+       contains a good summary of the fit and the RA and DEC of your
+       unknowns. 
+
+11) Page through the ".out" file and see which standard stars gave high
+    residuals.  The first set of residuals listed will be for the "linear
+    interpolation", and these will have gigantic errors if the orientation
+    of the chip is not RA=x and DEC=y, so skip down to the
+    RESIDUALS---6 COEF FIT.  For each star the star name and the residuals
+    in arcseconds EW, NS, and on-the-sky are listed, as well as the plate
+    scale in x and y ( these two plate scales should be identical). 
+    Write down the star names of the few stars with the worst residuals. 
+    Edit the ".in" file and search for these stars.  Eliminate the
+    measurement line (x, y, star name) as well as the line above it
+    (which gives the RA, DEC, and gsc region of that object).  Rerun
+    astrom by eparing "redo" and running it, setting "overwrite" to "yes".
+    Continue this process until you have a nice, clean solution.  I find
+    that from reasonable scale CCD frames (scale <1.5 arcsec/pixel) I
+    can easily get the solution to have an rms of a few tenths of an arcsec,
+    with no star more deviant than 0.5 arcsec.
+
+
+    You will find yourself with two useful output files, one name
+    ".coo" that contains the ra's and dec's of all the unknowns, as
+    well as the equinox of the coordinates. 
+.fi
+.endhelp

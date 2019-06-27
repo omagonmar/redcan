@@ -1,0 +1,44 @@
+# MKPKG file for the MEM0 Package
+
+$call relink
+$exit
+
+update:
+	$call relink
+	$call install
+	;
+
+debug:
+	$set XFLAGS = "$(XFLAGS) -gF"
+	$update libpkg.a
+	$update libdbg.a
+	$omake x_mem0.x
+	$link -z -g -o xx_mem0.e x_mem0.o libpkg.a libdbg.a
+	$call install
+	;
+
+relink:
+	$update libpkg.a
+	$omake x_mem0.x
+	$link -o xx_mem0.e x_mem0.o libpkg.a
+	;
+
+install:
+	$move xx_mem0.e mem0bin$x_mem0.e
+	$purge mem0bin$
+	;
+	
+libpkg.a:
+	@fft
+
+	convx.x	
+	fftdata.x	<math.h>
+	fft_ncar.x	
+	outx.x
+	t_imconv.x	<fset.h> <imhdr.h> <mach.h> <math.h> 
+	t_immake.x	<fset.h> <imhdr.h> <mach.h> <math.h>
+	t_irfftes.x	<fset.h> <imhdr.h>
+	t_irme0.x	irme0.com <ctype.h> <fset.h> <imhdr.h> \
+			<mach.h> <math.h>
+	t_pfactor.x
+	;

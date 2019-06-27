@@ -1,0 +1,8 @@
+# Global environment definitions for the package.
+
+reset	esobin			= "esowfi$bin(arch)/"
+reset	esosrc			= "esowfi$src/"
+reset	esolib			= "esowfi$lib/"
+reset	pkglibs			= "esobin$"
+
+keep

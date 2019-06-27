@@ -1,0 +1,27 @@
+# $Header: /home/pros/xray/xspatial/eintools/RCS/cat2exp.par,v 11.0 1997/11/06 16:30:53 prosb Exp $
+# $Log: cat2exp.par,v $
+# Revision 11.0  1997/11/06 16:30:53  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:47:41  prosb
+# General Release 2.4
+#
+#Revision 8.1  1994/08/04  13:38:39  dvs
+#Added header & log at top
+#
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+# parameter file for cat2exp
+qpoefile,s,a,,,,"input QPOE file [root.qp]"
+catfile,s,a,,,,"input constant aspect table [root_cat.tab]"
+expfile,s,a,".",,,"output exposure file [root_exp.pl]"
+full_exp,b,h,no,,,"use full IPC exposure screening?"
+cell_size,i,h,4.0,,,"cell size of the exposure mask (pixels)"
+exp_max,i,h,32767,1,,"maximum value of exposure PL mask"
+geom_bounds,s,h,"eintoolsdata$geom_bounds.tab",,,"IPC geometry boundaries table"
+clobber,b,h,no,,,"overwrite existing files"
+display,i,h,1,0,5,"display level"
+

@@ -1,0 +1,88 @@
+#$Header: /home/pros/xray/xspectral/RCS/mkpkg,v 11.0 1997/11/06 16:43:38 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:43:38  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:27:48  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:10  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:59:15  prosb
+#General Release 2.3
+#
+#Revision 6.3  93/11/20  04:42:49  dennis
+#Added libdown.a:  downspecrdf library
+#
+#Revision 6.2  93/09/25  03:52:03  dennis
+#No change.
+#
+#Revision 6.0  93/05/24  16:46:38  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:47:18  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:26:11  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.1  92/03/06  10:32:58  prosb
+#jso - add qpspec subdirectory
+#
+#Revision 3.0  91/08/02  01:52:52  prosb
+#General Release 1.1
+#
+#Revision 2.3  91/07/12  14:47:52  prosb
+#jso - change to get the yacc stuff in source to work
+#
+#Revision 2.2  91/07/08  19:24:21  prosb
+#made VMS compatible
+#
+#Revision 2.1  91/06/25  08:43:53  mo
+#MC	6/25/91		PROS restructuring and naming
+#
+#Revision 2.0  91/03/06  23:11:03  pros
+#General Release 1.0
+#
+#
+#	mkpkg for the xspectral directory
+#
+$call   relink
+$exit
+
+update:
+	@source
+	$call relink
+	$call install
+	;
+				
+				
+relink:
+	$set    LIBS = "-lpros -ltbtables -lxtools" 
+	$update libpkg.a
+	$update libup.a
+	$update libdown.a
+	$omake  x_xspectral.x
+	$omake  debug.x
+#	The next line is not compatible with VMS
+#       $link   -/pg x_xspectral.o debug.o libpkg.a $(LIBS) -o xx_xspectral.e
+	$link   x_xspectral.o debug.o libdown.a libup.a libpkg.a $(LIBS) -o xx_xspectral.e
+	;
+
+install:
+	$move   xx_xspectral.e xraybin$x_xspectral.e
+	;
+
+libpkg.a:
+	@source
+	@qpspec
+	;
+
+libup.a:
+	@upspecrdf
+	;
+
+libdown.a:
+	@downspecrdf
+	;

@@ -1,0 +1,33 @@
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:37:09  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:01:58  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  16:59:55  prosb
+#General Release 2.3.1
+#
+#Revision 1.1  94/05/06  17:27:29  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/ecdinfo/RCS/mkpkg,v 11.0 1997/11/06 16:37:09 prosb Exp $
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+#
+#
+# Make control package for ecdinfo task
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+        ecdinfo.x  
+	eci_tools.x  "eci.h" "../source/dataset.h" "../source/ecd_err.h"
+	eci.x	     "eci.h" "../source/ecd_err.h"
+	;

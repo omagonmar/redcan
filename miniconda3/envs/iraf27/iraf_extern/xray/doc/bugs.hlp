@@ -1,0 +1,162 @@
+BUGS (Oct97)                      xray                      BUGS (Oct97)
+
+
+
+NAME
+    bugs  --  known  bugs  with  symptoms  and  work-arounds  in current
+    IRAF/PROS
+    
+    
+DESCRIPTION
+    
+    1)   IRAF/QPOE
+    Class:  ANNOYING and FATAL - 
+    Workaround: YES and mostly automated by use of ROSAT FITS macros
+    Symptoms:       obvious
+    
+    There is an IRAF bug affecting some uses of regions applied to 
+    non-sorted (e.g. time-sorted) QPOE files.  If encountered, (the task
+    will die with a FATAL ERROR), this problem can be worked around
+    by using QPCOPY first and then TIMSORT or QPSORT with region=NONE.
+    (NOTE: this is VERY likely to occur when using GERMAN archive data
+    which is NOT spatially sorted.  RARC2PROS will correctly sort the
+    data, but a manual conversion will not.)
+    
+
+    2)   PROS/REGIONS
+    Class:  MODERATE and SUBTLE
+    Workaround:     YES
+    Symptoms:       very subtle
+    
+    The pixel at the point of a pie slice is sometimes included in the
+    region, sometimes not.  It seems to depend on some combination of
+    the angle and the x, y position.  The philosophy of inclusion/
+    exclusion of pixels in/from geometric shapes, as outlined in "help
+    coords", intends that no pixel on a common boundary of two shapes be
+    included in both, or excluded from both.  According to that
+    philosophy, the central point should be included in exactly one of
+    any set of pie slices with that common center -- a very difficult
+    requirement to implement in a sensible algorithm.  "help coords"
+    leaves the user guessing about what will happen at the vertex of a
+    pie slice (and at some other points); the rules described there
+    don't cover all cases.  And the fault is not in the rules' being an
+    inadequate expression of a clear intention, but rather in the
+    intention's being impossible to satisfy with a simple sensible set
+    of rules that cover the whole set of shapes we use.
+            This can be checked using pllist and sometimes fixed
+    by including an additional specifier
+            POINT xxx  yyy
+
+
+
+
+                                                                  -page2-
+
+ 
+    3)   PROS/REGIONS
+    Class:  ANNOYING and FATAL - easily worked around
+    Workaround:     YES
+    Symtoms:        subtle
+    
+    There is a memory problem in REGIONS that prevents the use of too many
+    "accelerated" regions.
+            e.g.  ANN 512 512 0 100 n=50
+    may fail with a memory error but it can be run in segments successfully
+    as follows:
+            e.g.  ANN 512 512 0 20 n = 20
+                  ANN 512 512 20 40 n= 20
+                  ANN 512 512 40 50 n =10
+    
+
+    4)   PROS/DATA
+    Class:  MILD and MOSTLY ELIMINATED
+    Workaround:     YES
+    Symptoms:       subtle
+    
+    There is also a problem with the reference pixel value in the ROSAT
+    and EINSTEIN Rev 0 FITS IMAGE files that results in the WORLD Coordinates
+    being in error up to 1 pixel.  This error can be avoided (corrected)
+    by reading files into IRAF/PROS using the tasks "RFITS2PROS" or
+    "RARC2PROS" with the option "correct+".
+    
+
+    5)   PROS/QP2FITS
+    Class:  MILD restriction
+    Workaround:     NO - not yet
+    Symptoms:       subtle
+    
+    The QP2FITS task does NOT work for "rotated" files, i.e. qpoe
+    files whose "CROTA2" != 0.  By default all ROSAT and Einstein QPOE
+    files are NOT rotated.  However, the output from QPROTATE will be
+    a rotated file, not supported by QP2FITS.
+    
+
+    6)   PROS/ROSAT/UT time calibration
+    Class:  MILD restriction
+    Workaround:     NO - not yet
+    Symptoms:       subtle -  USER MUST CHECK PERSONALLY
+
+
+
+
+                                                                  -page3-
+
+
+     The ROSAT spacecraft clock to UTC calibration files are issued at 
+     infrequent intervals by MPE, and it's possible that users will 
+     encounter data whose times are not included in the current calibration 
+     file. Conversion of such spacecraft times to UTC are extrapolations 
+     and may not be very accurate. Users should verify that the times of 
+     their data are included in the current calibration file by running 
+     the task SCC_TO_UTC, which automatically displays the end time of 
+     the data file. Updates to the PROS calibration file will be issued as 
+     soon as new calibration files are released by MPE. 
+     [xray.xtiming.timcor.scc_to_utc]
+
+    
+    7)   PROS/DATA
+    Class:  MILD documentation error
+    Workaround:     YES
+    Symptoms:       
+    
+    The Rev 0 ROSAT/PSPC *_src.tab files incorrectly list the "SRC" entry
+    as containing SOURCE+BKGD counts: "SRC" contains the background
+    subtracted source counts.
+    
+
+    8)   PROS/XSPECTRAL
+    Class:   MILD restriction
+    Workaround:     NO
+    Symptoms:       warning message
+    
+    A black body model with temperature .01 or less will not work.
+    Temperatures this low are applicable to white dwarf stars and will be
+    required by some users.  A warning message has been included to tell the 
+    user they have reached the limit.  
+    
+
+    9)   PROS/QPOE
+    Class:   MODERATE and FATAL - help files give solutions
+    Workaround:     YES
+    Symptoms:       YES - fatal errors
+    
+    The tasks timsort, qpcopy, qpsort still have trouble with memory.
+    If these tasks run and seem to take an extremely long time (>10
+    minutes for 100000 photons) or give strange error messages ("can"t
+    delete file"), try using a smaller sortsize buffer.
+    Also, they may die at the end by having too many temporary files, or
+    being unable to index.  This requires optimizing parameter settings.
+    
+
+    10)   PROS/QPOE on VAX
+    Class:  MODERATE and FATAL
+    Workaround:   YES
+    Symtoms:      YES - 0 events in QPOE
+    
+    The conversion of FITS files to QPOE files on the VAX does not work
+    all the time with the default qp_pagesize and qp_bucketlen parameters.
+    We have worked around this problem by setting them to 512 and 1024
+    respectively.  A user with an extra large FITS file may run into
+    a limit with the number of temp files allowed in making the QPOE. 
+    This error will be fatal. 
+    

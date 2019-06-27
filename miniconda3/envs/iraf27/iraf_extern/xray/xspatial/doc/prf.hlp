@@ -1,0 +1,73 @@
+# $Header: /home/pros/xray/xspatial/doc/RCS/prf.hlp,v 11.0 1997/11/06 16:29:43 prosb Exp $
+# $Log: prf.hlp,v $
+# Revision 11.0  1997/11/06 16:29:43  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:37:38  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:56:46  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:28:58  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:11:10  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/20  11:51:06  mo
+#MC	5/20/93		Add PSF cross-reference
+#
+#Revision 5.0  92/10/29  21:28:52  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:35:00  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/24  13:52:15  mo
+#NEw PROS help file
+#
+.help prf Apr92 xray.xspatial
+.ih
+NAME
+prf -- Description of the point response functions, PRF, for ROSAT and Einstein
+.ih
+USAGE
+This document describes the PRF (a.k.a. PSF) for the appropriate instruments and
+gives tables of in-orbit calibration images available to PROS.
+.ih
+DESCRIPTION
+.nf
+The point response function, PRF, (aka point spread function, PSF) of
+each detector/mirror combination describes the spatial distribution of
+counts from an unresolved source.  On-axis, it is usually found to be
+circularly symmetric except for radial spokes caused by the mirror
+support ribs.  Off axis, the PRF gets distorted by coma and other
+aberrations.  To first order, the PRF is a function of energy and
+off-axis distance.  To second order, there will be variations from
+relative position of detector wires and there also may be distortions
+from imperfect corrections for gaps (HRI) or other algorithms used to
+compensate for known hardware non-linear behavior.  In these
+referenced memos, we will partially address only the first order
+effects.
+
+	We have included PRF information with the PROS release because
+there are many applications and uses (e.g. an immodel future
+enhancement will allow the convolution of a selected PRF with a chosen
+model).  In the 4 mission+focal-plane-detector descriptions we provide
+analytic approximations, usually restricted to on-axis characteristic
+based on some set of observations with a limited number of energy
+distributions.  We also describe the set of images supplied: both
+actual observations of sources known or thought to be essentially
+unresolved and data from ground calibrations (monochromatic).  These
+two sorts are loosely described by the terms "Sky CALs" and "Ground
+CALs".
+
+	There are four help files with the following names:
+
+prfroshri	The Rosat HRI+mirror		data in directory xrcal$
+prfrospspc	The Rosat PSPC + mirror		data in directory xrcal$
+prfeoipc	The Einstein IPC + mirror	data in directory xecal$
+prfeohri	The Einstein HRI + mirror	data in directory xecal$
+
+.fi

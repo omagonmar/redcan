@@ -1,0 +1,80 @@
+# $Header: /home/pros/xray/xspatial/detect/RCS/detect.hd,v 11.0 1997/11/06 16:32:44 prosb Exp $ 
+# $Log: detect.hd,v $
+# Revision 11.0  1997/11/06 16:32:44  prosb
+# General Release 2.5
+#
+# Revision 9.3  1997/09/26 20:08:58  prosb
+# JCC(9/97) - move imdetect to xproto.
+#
+#Revision 9.1  1996/11/15  17:09:28  prosb
+# JCC (11/4/96) - add a new task imdetect
+#
+#Revision 9.0  1995/11/16  18:50:13  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:11:31  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:34:53  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:13:08  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/13  11:41:36  janet
+#jd - added lmatchsrc def.
+#
+#Revision 5.0  92/10/29  21:33:26  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/07  11:18:53  janet
+#added ldetect & lbmap tasks.
+#
+#Revision 4.0  92/04/27  14:37:58  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.2  92/04/23  16:59:04  mo
+#New pros subpackage
+#  
+
+$doc            = "./doc/"
+$bepos		= "./bepos/"
+$bkden		= "./bkden/"
+$detmkreg       = "./detmkreg/"
+$lpeaks		= "./lpeaks/"
+$script         = "./"
+
+
+bepos		hlp = doc$bepos.hlp,
+                src = bepos$bepos.x
+
+bkden		hlp = doc$bkden.hlp,
+                src = bkden$bkden.x
+
+cellmap		hlp = doc$cellmap.hlp,
+                src = script$cellmap.cl
+
+detmkreg        hlp = doc$detmkreg.hlp,
+                src = detmkreg$detmkreg.x
+
+lbmap		hlp = doc$lbmap.hlp,
+                src = script$lbmap.cl
+
+ldetect		hlp = doc$ldetect.hlp,
+                src = script$ldetect.cl
+
+lmatchsrc	hlp = doc$lmatchsrc.hlp,
+                src = script$lmatchsrc.cl
+
+lpeaks		hlp = doc$lpeaks.hlp,
+                src = lpeaks$lpeaks.x
+
+snrmap		hlp = doc$snrmap.hlp,
+                src = script$snrmap.cl
+
+using_detect	hlp = doc$using_detect.hlp
+
+explain_detect	hlp = doc$explain_detect.hlp
+
+#revisions      hlp = Revisions
+

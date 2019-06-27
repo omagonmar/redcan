@@ -1,0 +1,32 @@
+# $Header: /home/pros/xray/xspatial/eintools/bkfac_make/RCS/mkpkg,v 11.0 1997/11/06 16:30:49 prosb Exp $
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:30:49  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:48:34  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/08/04  13:56:28  dvs
+#Initial revision
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+
+#
+# Make control package.
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+        bkfac_make.x 	<qpc.h> <ext.h>
+	bf_tools.x  	<qpc.h> <qpoe.h> <math.h> "../tables/bkfac.h" \
+			"../source/array.h"  "../source/asp.h" \
+			"../source/et_err.h" "../source/band.h"
+	grp.x		<mach.h> "../source/array.h" "../source/asp.h"
+	gti.x		"../source/array.h" "../../../lib/qpcreate/qpcreate.h"
+	;

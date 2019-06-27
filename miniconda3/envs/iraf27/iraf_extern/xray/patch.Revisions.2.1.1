@@ -1,0 +1,37 @@
+		PROS patch 2.1.1 for IRAF 2.10
+
+***********************************************************
+	The PROS patch was installed in the IRAF account very early 
+Friday morning, December 11, including the default response matrix, dtmat_31.
+( It required an 'unlearn pkgpars' by the user to activate this new matrix. )
+	Due to ROSAT Status report #41, the default response matrix
+was corrected Monday, December 14, to revert back to 'dtmat_6.ieee'.
+	( dtmat_31.ieee is available by resetting 'pkgpars.ros_dtmat' )
+
+PLEASE VERIFY your PKGPARS.ROS_DTMAT value (lparam pkgpars) to ENSURE you are 
+using the appropriate RESPONSE MATRIX.
+*************************************************************
+
+1.  The latest PSPC response matrix has been installed: dtmat_31.ieee.
+However, status report #41 cites bugs in it's creation.
+
+2.  XEXAMINE has been upgraded.  Please 'unlearn xexamine'.  There
+are new user parameters, and a new 's' command has been included that
+runs a maximum-likelihood positioning algorithm.
+
+3.  FITS2QP has been fixed to correct a fatal bug reading FITS files
+with no 'GTI' records, in particular, Einstein SLEW CDROMS.
+
+4.  Various minor code corrections to support the port to Silicon
+Graphics and Decstation machines:
+	./xray/lib/coords/coords_eq.f
+	./xray/xtiming/timplot/timcoords.x
+	./xray/xspatial/detect/bepos/imbepos.x
+
+5.  Many updated HELP files.
+
+6.  QPLIST.PAR correction to allow higher 'display' levels.
+
+7.  IMCNTS correction to allow specification of constant BKGDERR values.
+
+8.  QPLIST - fixed fatal error when the QPOE file was missing the 'title' string.

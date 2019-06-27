@@ -1,0 +1,8 @@
+	evalvg - Compute the earth-sun-target & sun-earth-sat angles from ephemeris data
+	imdetect  - determine rough positions of sources in the field 
+        marx2qpoe - convert MARX EVENT FITS to QPOE file
+	qpcalc    - Modify/Create event attributes with calculator
+	qpcreate  - Convert an ASCII event-list to PROS/QPOE format
+        tabfilter - Generate time filters based on engineering values
+        wcsqpedit - Modify the WCS parameters in a QPOE file.
+       xexamine_r - Examine a Qpoe using the image display and WCS coordinates

@@ -1,0 +1,20 @@
+.help cdrfits Jan91 finder
+.ih
+NAME
+cdrfits -- modified version of strfits
+.ih
+DESCRIPTION
+This is a modified version of strfits.  The modification allows reading
+the Apple CDrom mounted HST Guide Star Catalog CDs by skipping the first
+0, 1, 2, or 3 blocks of 512 bytes of garbage.
+.ih
+BUGS
+The unix filesystem / CDrom driver make it impossible to get at the
+final 0, 1, 2, or 3 512 byte blocks of the file.  CDRFITS will duplicate
+earlier records as the last few records of the output table.  These will
+only present a problem in those cases that the field in question lies
+near the border of a GSC region.
+.ih
+SEE ALSO
+stsdas.fitsio.strfits, tables.strfits
+.endhelp

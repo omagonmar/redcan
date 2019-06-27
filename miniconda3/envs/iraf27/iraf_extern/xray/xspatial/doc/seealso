@@ -1,0 +1,11 @@
+See the documentation on region filtering (\fIhelp regions\fR)
+for a description of the spatial filter user interface.
+
+See the documentation on QPOE filtering (\fIhelp qpoe\fR)
+for a description of the QPOE filter user interface.
+
+See the documentation on file extensions (\fIhelp extensions\fR)
+for a description of PROS file extensions.
+
+See the documentation on coordinates (\fIhelp coords\fR)
+for a description of PROS coordinate conventions.

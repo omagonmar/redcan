@@ -1,0 +1,265 @@
+#$Header: /home/pros/xray/xtiming/doc/RCS/period.hlp,v 11.0 1997/11/06 16:44:14 prosb Exp $
+#$Log: period.hlp,v $
+#Revision 11.0  1997/11/06 16:44:14  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:33:12  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:38:53  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/06/01  09:52:07  prosb
+#krm - updated last modified date.
+#
+#Revision 7.1  94/05/27  11:47:09  prosb
+#krm - added stdout to example 2.
+#
+#Revision 7.0  93/12/27  19:00:11  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/21  12:21:21  janet
+#*** empty log message ***
+#
+#Revision 6.0  93/05/24  16:55:58  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:48:06  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/21  17:36:53  janet
+#krm updates for fds.
+#
+#Revision 4.0  92/04/27  15:31:35  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/04/24  12:07:13  janet
+#revised for apr 92 release.
+#
+#Revision 3.1  91/09/25  11:19:23  janet
+# updated with example 3 using time filter.  Added feature eith iraf 2.9.3.
+#
+#Revision 3.0  91/08/02  02:00:42  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/03  14:36:21  prosb
+#xray.xtiming   7/3/91
+#
+#Revision 2.0  91/03/06  22:53:05  pros
+#General Release 1.0
+#
+.help period May94 xray.xtiming
+.ih
+NAME
+period - Determine the period using epoch folding.
+.ih
+USAGE
+period  source_file background_f out_tables period_start period_stop incr bins
+.ih
+DESCRIPTION
+Task \fIPERIOD\fR searches a time series for a coherent modulation by
+computing a chi-squared statistic for each trial fold period over a
+range of periods.  If there is no modulation present, chi-squared
+should be approximately equal to the number of bins upon which the
+data was folded.  If there is modulation present, chi-squared
+is maximum at the fold period closest to the actual period.
+
+The precursor task to this is TIMSORT which selects and time
+sorts the QPOE file.  TIMPRINT will display the output
+table files, and CHIPLOT and FLDPLOT will plot the output tables.  
+.ih
+PARAMETERS
+.ls source_file =		prompt = Input Source Timing File
+
+Required input in time ordered QPOE format.  The file is created by
+running TIMSORT on a specified source region.  The file may be
+specified by supplying the rootname and a "_sti.qp" extension will be
+appended by the task before looking for the file.  For example input
+"i6757" is interpreted as "i6757_sti.qp".
+.le
+.ls background_f =		prompt = Input Background Timing File
+
+Optional input in time ordered QPOE format.  The file is created by
+running TIMSORT on a specified background region.  The file may be
+specified by supplying the rootname and a "_bti.qp" extension will be
+appended by the task before looking for the file.  For example input
+"i6757" becomes "i6757_bti.qp".  Enter "none" to skip this parameter.
+.le
+.ls out_tables =		prompt = Root name for output files
+.nf
+				[root_fld.tab,root_chi.tab]
+.fi
+
+The root_fld.tab table is the folded lightcurve with the highest
+computed chisq.  The fold tables from all other periods are not saved.
+The column titles and definitions are as follows:
+.nf
+
+	ctrt ----------- count rate
+	err ------------ count rate error
+	exp ------------ exposure
+	src ------------ source counts
+	bkgd ----------- background counts
+	net ------------ net counts (src - bkgd)
+	neterr --------- net error
+
+.fi
+A table file header is also written.  It consists of parameters copied
+from the input QPOE file and parameters recorded from running the FOLD
+task.
+
+The root_chi.tab has the chisq's over the range of periods.  The
+column titles and definitions are as follows:
+.nf
+
+	chisq --------- Chi-squared calculation
+	period -------- period in seconds associated to chi square
+
+.fi
+.le
+.ls period_start = 1.0		prompt = Start period
+
+Initial period in seconds upon which to fold the data.
+.le
+.ls period_stop = 1.0		prompt = Stop period
+
+Final period in seconds upon which to fold the data.
+.le
+.ls incr = 1.0			prompt = Period increment
+
+Period increment in seconds.  If 0.0 is input the task will compute the
+increment and the next value of period to be used.  The increment is 
+computed at each interval with an explicit dependence on the number of 
+bins being used.
+.nf
+next_period=current_period + search_density * current_period**2 /
+            (num_bins * (data_start_time - data_stop_time))
+.fi
+
+
+.le
+.ls bins = 1			prompt = Number of Fold Bins
+
+The number of data bins in which to fold the data. 
+.le
+.ls (pdot = 0.0) [double]
+
+Period rate of change.  When pdot = 0.0, the period is constant.
+.le
+.ls (chisq_thresh = 0.) [real]
+.ls (search_density = 0.33) [real]
+
+Search_density is a dimensionless multiplier that specifies how finely 
+or coarsely the period range should be searched.  For sinusoidal pulse 
+profiles, a coarse density (values >~ 1/3) is sufficient to guarantee 
+finding the pulsations, but for sharper pulse profiles (with lower 
+"duty cycle"), a finer search is needed (values < 1/3).
+.le
+.ls (chisq_thresh = 0.) [real]
+
+Chisq threshold.  If chisq_thresh is 0.0, the chi-squares for all periods
+searched will be written to the output chisq table (*_chi.tab) file.  When
+>0.0 the data is screened by the threshold and only those exceeding the
+threshold are written to the output table.
+.le
+.ls (save_two = yes) [boolean]
+
+When yes, the fold data is written to the table (*_fld.tab) twice.
+.le
+.ls (display = 1) [int]
+
+The display level.  A few of the parameters and computed time
+intervals are displayed to the user for those who like to see that
+things are happening.  Choose a level between 1 and 5.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the Chisq table file can be overwritten
+if it already exists.
+
+.le
+.ls (get_gintvs = yes) [boolean]
+
+Boolean flag specifying whether to filter the input events through the 
+good time intervals stored in the QPOE file.  It useful to turn this 
+parameter off when analyzing lab data where good intervals are not 
+applicable or in a file without the intervals.
+.le
+.ls (bk_norm_fact = 1.) [real]
+Background Normalization factor.  This is an extra fudge factor that can be
+used to adjust the ratio of source to background area.
+
+.le
+.ih
+EXAMPLES
+.nf
+Type `help timfilter` and `help timsort` for information concerning
+input files.
+
+.fi
+1. Search for a period in snr_sti.qp between 2.0 and 4.0 seconds using
+an increment of 0.1 seconds.  Use data from the first GTI.  Bin the
+folded light curve with 16 bins.
+.nf
+
+	xt> period
+	Input Source Timing File: snr_sti.qp[time=(79486997.99:79488826.47)]
+	Input Background Timing File (NONE): 
+	Root name for output files [root_fld.tab, root_chi.tab]: snr1
+	Period start (1.): 2.0 
+	Period stop (1.): 4.0
+	Increment (0 for auto increment) (1.): .10
+	Number of Bins (1): 16
+
+	Creating Fold file : snr1_fld.tab
+	Creating Chisq file : snr1_chi.tab
+
+.fi
+2. As in example 1, only set chisq_thresh=15.0 so that only information
+for those periods with a chisq > 15.0 is saved in the output _chi.tab file.
+Use command line format.
+.nf
+
+	xt> period "snr_sti.qp[time=(79486997.99:79488826.47)]" "none" "snr1chi15" 2.0 4.0 0.10 16 chisq_thresh=15.0
+
+	Creating Fold file : snr1chi15_fld.tab
+	Creating Chisq file : snr1chi15_chi.tab
+.fi
+3. Perform a fine search for a period in the first GTI of snr_sti.qp.  Use
+the auto increment option.
+.nf
+
+	xt> period
+	Input Source Timing File: snr_sti.qp[time=(79486997.99:79488826.47)]
+	Input Background Timing File (NONE):
+	Root name for output files [root_fld.tab, root_chi.tab]: snr1auto
+	Period start (1.): 3.48
+	Period stop (1.): 3.50
+	Increment (0 for auto increment) (1.): 0
+        Number of Bins (1): 16
+
+	Creating Fold file : snr1auto_fld.tab
+	Creating Chisq file : snr1_chi.tab
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on errors (\fIhelp explain_errors\fR) 
+for a description of the error calculations implemented in PROS.
+
+Documentation on region filtering (\fIhelp regions\fR) for a
+description of the spatial filter user interface.
+
+Documentation on QPOE filtering (\fIhelp qpoe\fR) for a description of
+the QPOE filter user interface.
+ 
+Documentation on file extensions (\fIhelp extensions\fR) for a
+description of PROS file extensions.
+
+Documentation on coordinates (\fIhelp coords\fR) for a description of
+PROS coordinate conventions.
+.endhelp

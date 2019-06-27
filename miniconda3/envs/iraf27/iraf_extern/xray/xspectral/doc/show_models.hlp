@@ -1,0 +1,147 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/show_models.hlp,v 11.0 1997/11/06 16:41:27 prosb Exp $
+#$Log: show_models.hlp,v $
+#Revision 11.0  1997/11/06 16:41:27  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:36  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:29:27  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:53:25  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:48:12  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/05  17:36:12  prosb
+#jso - changed to new output standard.
+#
+#Revision 5.0  92/10/29  22:42:46  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:27:54  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.3  92/04/22  16:15:44  prosb
+#Changed date.
+#
+#Revision 3.2  92/03/31  12:17:47  prosb
+#clarified meaning of line model parameters
+#
+#Revision 3.1  92/03/23  17:35:12  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:24  prosb
+#General Release 1.1
+#
+#Revision 2.3  91/08/01  18:30:16  prosb
+#jso - update for Aug91.
+#
+#Revision 2.1  91/07/03  14:57:32  prosb
+#xray.xspectral 7/3/91
+#
+#Revision 2.0  91/03/06  23:09:28  pros
+#General Release 1.0
+#
+.help show_models Apr92 xray.xspectral
+.ih
+NAME
+show_models -- display the parameter values for all defined models
+.ih
+USAGE
+show_models
+.ih
+DESCRIPTION
+
+This tasks displays the input model descriptor in tabular form.  It is
+normally used for debugging.
+.ih
+PARAMETERS
+.ls model = ""		prompt = model descriptor or ? for help
+
+This is a package wide parameter, found in the pkgpars parameter file.
+
+The ASCII model descriptor.  If "?" is input a short helpfile appears,
+and the model prompt reappears.  A null string ("") will cause the previously
+determined best
+model to be taken from the _prd.tab file.  Type \fIhelp models_spectral\fR
+from the CL for further information.
+
+The spectral model descriptor is the sum of individual model components
+with the option of applying absoroption.
+.nf
+
+The general syntax for applying absorption to a component is:
+    absorption(params) * component(params)
+
+The general syntax for multiple model components is:
+    abs(params) * compnt1(params) + abs(params) * compnt2(params) + ...
+
+Possible components and arguments are:
+powerlaw         log(normalization), energy index
+bremsstrahlung   log(normalization), temperature [keV]
+exponential      log(normalization), temperature [keV]
+blackbody        log(normalization), temperature [keV]
+raymond          log(normalization), temperature [keV], abundance table,
+                                       abundance percent
+line model       log(normalization), line-energy [keV],
+                                       line-width [FWHM, in keV]
+
+Absorption is applied as follows:
+	absorption(galactic_NH (log))
+	absorption(intrinsic_NH (log), redshift)
+	absorption(galactic_NH (log), intrinsic_NH (log), redshift)
+
+.fi
+Unique abbreviations are recognized (e.g. pow).  Parameters are
+specified by entering a single value (fixed) or a range (free)
+separated by ":".  For free normalization of the first component, this
+parameter may be omitted.  The normalization of a second component is
+linked to that of the first, other parameters may also be linked.
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.
+If the name is null ("") then the parameters found for the pkgpars
+task will be used.
+.le
+.ih
+EXAMPLES
+
+Display a sample two-component model:
+.nf
+
+xs> show_models
+model descriptor or ? for help: abs(17)*ray(0.2:0.4 c 100)+ray(0.7 1:2 c 100)
+
+Model: abs(17.00)*ray(0.20:0.40 cosmic 100.00)+ray(0.70 1.00:2.00 cosmic 100.00)
+
+Model Component 1: Raymond Thermal
+          Cosmic abundance at 100 percent.
+          temperature = 0.300 (free)
+ normalization (log) = 1.0000000 (calculated)
+    galactic Nh (log) = 17.000 (fixed)
+    intrinsic Nh (log) = 0.000 (fixed)
+          redshift = 0.000 (fixed)
+
+Model Component 2: Raymond Thermal
+          Cosmic abundance at 100 percent.
+          temperature = 1.500 (free)
+ normalization (log) = 0.7000000 (fixed)
+    galactic Nh (log) = 0.000 (fixed)
+    intrinsic Nh (log) = 0.000 (fixed)
+          redshift = 0.000 (fixed)
+
+.fi
+.ih
+TIME REQUIREMENTS
+
+This task executes in less than 10 seconds.
+.ih
+SEE ALSO
+
+For more information on the spectral model descriptor type \fIhelp
+models_spectral\fR at the cl.
+.endhelp

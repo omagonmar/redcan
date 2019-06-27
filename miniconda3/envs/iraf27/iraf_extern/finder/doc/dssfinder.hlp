@@ -1,0 +1,70 @@
+.help dssfinder Jun97 finder
+.ih
+NAME
+dssfinder -- TFINDER tailored for Digital Sky Survey images
+.ih
+USAGE
+dssfinder image
+.ih
+PARAMETERS
+.ls image
+The image name for field information.  The right ascension, declination,
+and equinox are read from the image header unless the values are overridden
+by the \fIra\fR, \fIdec\fR, or \fIequinox\fR parameters, below.  The
+image's size in the X and Y directions (axis 1 or 2, respectively) is
+used with the \fIscale\fR factor to calculate the field size.  Only two
+dimensional images are supported.
+.le
+.ls rootname = ""
+An optional rootname for the output files.  If \fIrootname\fR is left
+blank, the \fIimage\fR parameter will be used to name the output files.
+The output files consist of an extended HST Guide Start Catalog format
+table of catalog and program object sources, a logfile that provides
+access to the basic information for each source, and a CCMAP format
+database file containing the plate solution for a fit that may have
+been performed.
+.le
+.ls objects = ""
+An optional input list of program object X,Y coordinates and an integer
+ID field.  If the ID field is omitted, the objects will receive an ID
+equivalent to their table row number.  Program objects do not participate
+in calculating a plate solution, but rather will have their coordinates
+generated if a plate solution is performed on the catalog objects.
+.le
+.ls update = no
+Update image header WCS following fit?
+.le
+.ls interactive = yes
+Enter interactive image cursor loop?
+.le
+.ls autocenter = no
+When entering the task, automatically center at the catalog coordinates?
+.le
+.ls reselect = yes
+When entering the task, override previously selected subset using the
+SELECTPARS parameters?
+.le
+.ls autodisplay = yes
+Automatically redisplay after any all-source keystroke command?
+.le
+.ls rotate = 0.
+The field's relative position angle.
+.le
+.ls boxsize = 9
+The centering box fullwidth in pixels.
+.le
+.ih
+DESCRIPTION
+These include an HST Guide Star Catalog format table that has been
+entended to include X,Y centering information and flags that indicate
+whether a particular source has been centered, whether the source is a
+program object, and whether the source has been excluded from the plate
+solution using SELECTPARS.  The table will contain the sources that lie
+within the field of view of the image (including the edge buffer).  All
+catalog sources within this field will be included in the table, but
+only those that have been selected using the SELECTPARS pset will be
+flagged for use in the plate solution by either the TASTROM or TPLTSOL
+task.
+.ih
+SEE ALSO
+.endhelp

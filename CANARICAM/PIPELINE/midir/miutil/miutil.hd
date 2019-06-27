@@ -1,0 +1,9 @@
+# help directory for miir utilties
+
+$doc    = "miutil$doc/"
+
+miclean         hlp = doc$miclean.hlp,     src = miutil$miclean.cl
+mipql           hlp = doc$mipql.hlp,       src = miutil$mipql.cl
+mipsf           hlp = doc$mipsf.hlp,       src = miutil$mipsf.cl
+mistdflux       hlp = doc$mistdflux.hlp,   src = miutil$mistdflux.cl
+

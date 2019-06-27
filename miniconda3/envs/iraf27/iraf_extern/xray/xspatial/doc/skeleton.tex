@@ -1,0 +1,138 @@
+% This is the beginning of skeleton.tex
+%    Version to be used with PROS science specifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Author D.M.W.                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input files used:                                         %
+%   family1200.tex                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\hsize 6.5truein
+\vsize 9.0truein
+\hoffset=0.0truein
+\voffset=0.0truein
+
+%input font definitions for pica typeface.
+%
+\input family1200 
+\font\bigslant =cmsl10 scaled 1728
+%
+% Useful definitions related to paragraphs, blank lines and references.
+%
+\def\blankline{\par\vskip 12 pt\noindent}
+\def\newline{\par\noindent}
+\def\blankpar{\par\vskip 12 pt}
+\def\refindent{\noindent\hangafter=1 \hangindent 24 pt}
+\def\listlist{\advance\leftskip by1.5\parindent
+  \everypar={\hangafter=1 \hangindent 54.0pt}}
+\def\list{\advance\leftskip by0.5\parindent
+  \everypar={\hangafter=1 \hangindent 36.0pt}}
+
+%set up pagenumbers useful for memos and letters.  This is superceeded
+%  later by the headline definition.  Headline may be commented out.
+%
+\def\folio{\ifnum\pageno=1\nopagenumbers\else\number\pageno\fi}
+
+% line spacing set at 1.0, parskip to 1/2:
+%
+\baselineskip 12.0pt
+\parskip 8.0pt
+\parindent 36.0pt
+
+\interlinepenalty=1000
+\raggedbottom
+\pretolerance 10000
+\hyphenpenalty 10000
+
+% input definitions of \simless, \simgreat and \simpropto for
+% approximately less than, greater than and proportional to:
+%
+% Next 5 lines define \lapprox and \gapprox: ``less than or approximately
+% equal to'' and ``greater than or approximately equal to''.
+\newbox\grsign \setbox\grsign=\hbox{$>$} \newdimen\grdimen \grdimen=\ht\grsign
+\newbox\simlessbox \newbox\simgreatbox
+\setbox\simgreatbox=\hbox{\raise.5ex\hbox{$>$}\llap
+     {\lower.5ex\hbox{$\sim$}}}\ht1=\grdimen\dp1=0pt
+\setbox\simlessbox=\hbox{\raise.5ex\hbox{$<$}\llap
+     {\lower.5ex\hbox{$\sim$}}}\ht2=\grdimen\dp2=0pt
+\def\simgreat{\mathrel{\copy\simgreatbox}}
+\def\simless{\mathrel{\copy\simlessbox}}
+% Next lines define ``approximately proportional to''
+\newbox\simppropto
+\setbox\simppropto=\hbox{\raise.5ex\hbox{$\sim$}\llap
+     {\lower.5ex\hbox{$\propto$}}}\ht2=\grdimen\dp2=0pt
+\def\simpropto{\mathrel{\copy\simppropto}}
+
+% set up some definitions which will allow automatic numbering of
+%\item and \itemitem
+%To get titles, use \@{title}
+%To get subtitles use \**subtitles here
+%To get subsubtitles use \??
+%
+%
+\def\startcount{\global\count1=0 \global\count2=0 \global\count3=0}
+\def\numitemitem{\number\count1.\number\count2.\number\count3}
+\def\numitem{\number\count1.\number\count2}
+\def\num{\refindent{\bf \number\count1.~}}
+\def\addnum{\global\advance\count1 by 1 \global\count2=0
+             \global\count3=0 \blankline}
+\def\addsubnum{\global\advance\count2 by 1 \global\count3=0 }
+\def\addsubsubnum{\global\advance\count3 by 1 }
+\def\@#1{\leftskip +0pt \addnum \num{\bf #1}}
+\def\**{\leftskip +10pt \addsubnum \item{\numitem}}
+\def\??{\leftskip +20pt \addsubsubnum \itemitem{\numitemitem}}
+
+%Here we will set up the headline.
+%  It will consist of the page number, version number 
+%  and the chapter.
+%
+\nopagenumbers
+\headline={\ifnum\pageno=\count100 \blankheadline \else 
+           {\ifodd\pageno\rightheadline \else\leftheadline\fi}\fi}
+\def\rightheadline{\hfil \chapter \hfil
+  {\bf{\ifnum\pageno<0 \romannumeral-\pageno \else\number\pageno\fi}}}
+\def\leftheadline{
+  {\bf{\ifnum\pageno<0 \romannumeral-\pageno \else\number\pageno\fi}}
+          \hfil\version} 
+\def\blankheadline{\ifnum\pageno<1000 {
+          \ifodd\pageno\rightheadnum \else\leftheadnum\fi} \else \hfill\fi}
+\def\rightheadnum{\hfil {\bf
+    {\ifnum\pageno<0 \romannumeral-\pageno \else\number\pageno\fi}}}
+\def\leftheadnum{{\bf 
+    {\ifnum\pageno<0 \romannumeral-\pageno \else\number\pageno\fi}}\hfil}
+\pageno=1
+\count100=\pageno
+\voffset=2\baselineskip
+%
+%  We will set initial values of version and chapter to blank.
+\def\version{}
+\def\chapter{}
+
+%Define chapterhead for Chapter title
+%
+\def\chapterhead#1{\centerline{}\vskip 12pt \bigslant
+                   \centerline{#1} \rm}
+
+%now set the alignment for equations:
+\def\leftdisplay#1$${\leftline{\indent\indent\indent$\displaystyle{#1}$}$$}
+\everydisplay{\leftdisplay}
+
+%Finally, make today's date available
+%
+\def\today{\ifcase\month\or
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+  \space\number\day, \number\year}
+
+\rm
+
+% Start counter
+\startcount
+
+%This is the end of skeleton.tex
+% Specific text comes in here.  End document with /vfill/eject/end.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+

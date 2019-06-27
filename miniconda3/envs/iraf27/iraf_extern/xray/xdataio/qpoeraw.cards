@@ -1,0 +1,106 @@
+# $Header: /home/pros/xray/xdataio/RCS/qpoeraw.cards,v 11.0 1997/11/06 16:36:12 prosb Exp $
+#
+# Function:	qpoe.cards
+# Purpose:	Definition of FITS qpoe header cards -> qpoe header parameters
+# Uses:		used by program fits2qp
+# Notes:	Modified:  MC	9/16/90	For accurate header names so that
+#			                fits2qp correctly creates a qpoe header
+#
+
+# Known Pros Cards
+#
+# See fits.cards for a tidbit of documentation.
+##
+
+EVENT		.		TY_CHAR		1000
+INSTRUME	.		TY_CHAR		1001
+EQUINOX		.		TY_REAL		3000
+RADECSYS	.		TY_CHAR		3000
+# these are handled properly in wcs.cards
+#CRVAL1		.		TY_REAL		1001
+#CRVAL2		.		TY_REAL		1001
+#CRPIX1		.		TY_REAL		1001
+#CRPIX2		.		TY_REAL		1001
+#CDELT1		.		TY_REAL		1001
+#CDELT2		.		TY_REAL		1001
+#CROTA2		.		TY_REAL		1001
+#CTYPE1		.		TY_REAL		1001
+#CTYPE2		.		TY_REAL		1001
+MJD-OBS		.		TY_REAL		1001
+DATE_OBS	.		TY_CHAR		1001
+TIME_OBS	.		TY_CHAR		1001
+DATE_END	.		TY_CHAR		1001
+TIME_END	.		TY_CHAR		1001
+
+BARYTIME	.		TY_BOOL		1001
+TSTART		.		TY_DOUBLE	1001
+TSTOP		.		TY_DOUBLE	1001
+
+# these are not really up to date with the real names!!
+XS-OBSID	.		TY_CHAR		3000
+XS-SUBIN	.		TY_INT		3000
+XS-OBSV 	.		TY_INT		3000
+XS-CNTRY	.		TY_CHAR		3000
+XS-FILTR	.		TY_INT		3000
+XS-MODE		.		TY_INT		3000
+XS-DANG 	.		TY_REAL		3000
+PANO1	 	.		TY_REAL		3000
+XS-MJDRD	.		TY_INT		3000
+MJDREFI		.		TY_INT		1001
+XS-MJDRF	.		TY_DOUBLE	3000
+MJDREFF		.		TY_DOUBLE	1001
+XS-EVREF	.		TY_INT		3000
+XS-TBASE	.		TY_DOUBLE	3000
+XS-ONTI 	.		TY_DOUBLE	3000
+ONTIME  	.		TY_DOUBLE	1001
+XS-LIVTI	.		TY_DOUBLE	3000
+LIVETIME	.		TY_DOUBLE	1001
+DTCOR		.		TY_REAL		1001
+XS-DTCOR	.		TY_REAL		3000
+XS-BKDEN	.		TY_REAL		1001
+XS-MINLT	.		TY_REAL		3000
+XS-MAXLT	.		TY_REAL		3000
+XS-XAOPT	.		TY_REAL		3000
+XS-YAOPT	.		TY_REAL		3000
+XS-XAOFF	.		TY_REAL		3000
+XS-YAOFF	.		TY_REAL		3000
+XS-RAROT	.		TY_REAL		3000
+XS-XARMS	.		TY_REAL		3000
+XS-YARMS	.		TY_REAL		3000
+XS-RARMS	.		TY_REAL		3000
+XS-RAPT		.		TY_REAL		3000
+RA_NOM		.		TY_REAL		3000
+XS-DECPT	.		TY_REAL		3000
+DEC_NOM		.		TY_REAL		3000
+XS-XPT		.		TY_INT		3000
+XS-YPT		.		TY_INT		3000
+XS-XDET		.		TY_INT		3000
+XS-YDET		.		TY_INT		3000
+XS-FOV		.		TY_REAL		3000
+XS-INPIX	.		TY_REAL		3000
+XS-INPXX	.		TY_REAL		3000
+XS-INPXY	.		TY_REAL		3000
+XS-XDOPT	.		TY_REAL		3000
+XS-YDOPT	.		TY_REAL		3000
+XS-CHANS	.		TY_INT		3000
+XS-SORT		.		TY_CHAR		3000
+XS-SIZE		.		TY_CHAR		3000
+XS-EVENT	.		TY_CHAR		3000
+NAXLEN		.		TY_INT		2001	
+AXLEN1		.		TY_INT		2002	
+AXLEN2		.		TY_INT		2003	
+REVISION	.		TY_INT		2004   
+
+OPTAXISX        .               TY_REAL         3000
+OPTAXISY        .               TY_REAL         3000
+MINPHA          .               TY_INT          3000
+MAXPHA          .               TY_INT          3000
+MINPI           .               TY_INT          3000
+MAXPI           .               TY_INT          3000
+PHACHANS        .               TY_INT          3000
+PICHANS         .               TY_INT          3000
+ROR_NUM         .               TY_INT          3000
+ROLL_NOM        .               TY_REAL         3000
+
+FORMAT		.		TY_INT		3002   
+TELESCOP	.		TY_CHAR		3003   

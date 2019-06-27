@@ -1,0 +1,34 @@
+## fields n10jtoktr.geoco "1,2" > n10ksubjtr.coo
+## fields n10jtoktr.geoco "3,4" > n10jsubktr.coo
+## fields n10htoktr.geoco "3,4" > n10hsubktr.coo
+## fields n10htoktr.geoco "1,2" > n10ksubhtr.coo
+## invcoo n10ksubjtr.coo 0 0 no yes nc=256 nr=256 > n10ksubj.coo
+## invcoo n10ksubhtr.coo 0 0 no yes nc=256 nr=256 > n10ksubh.coo
+## invcoo n10hsubktr.coo 0 0 no yes nc=256 nr=256 > n10hsubk.coo
+## invcoo n10jsubktr.coo 0 0 no yes nc=256 nr=256 > n10jsubk.coo
+ invcoo n10hsubjtr.coo 0 0 no yes nc=256 nr=256 > n10hsubj.coo
+ invcoo n10jsubhtr.coo 0 0 no yes nc=256 nr=256 > n10jsubh.coo
+## join n10ksubh.coo n10hsubk.coo > n10htok.geoco
+## join n10ksubj.coo n10jsubk.coo > n10jtok.geoco
+## geomap n10htok.geoco n10htok.geodb -43 300 -43 300
+## geomap n10jtok.geoco n10jtok.geodb -43 300 -43 300
+## join n10ksubhtr.coo n10hsubktr.coo > n10htoktr.geoco
+## join n10ksubjtr.coo n10jsubktr.coo > n10jtoktr.geoco
+## geomap n10htoktr.geoco n10htoktr.geodb -43 300 -43 300
+## geomap n10jtoktr.geoco n10jtoktr.geodb -43 300 -43 300
+## join n10hsubk.coo n10ksubh.coo > n10ktoh.geoco
+ join n10hsubj.coo n10jsubh.coo > n10jtoh.geoco
+## geomap n10ktoh.geoco n10ktoh.geodb -43 300 -43 300
+ geomap n10jtoh.geoco n10jtoh.geodb -43 300 -43 300
+## join n10hsubktr.coo n10ksubhtr.coo > n10ktohtr.geoco
+ join n10hsubjtr.coo n10jsubhtr.coo > n10jtohtr.geoco
+## geomap n10ktohtr.geoco n10ktohtr.geodb -43 300 -43 300
+ geomap n10jtohtr.geoco n10jtohtr.geodb -43 300 -43 300
+ join n10jsubh.coo n10hsubj.coo > n10htoj.geoco
+## join n10jsubk.coo n10ksubj.coo > n10ktoj.geoco
+ geomap n10htoj.geoco n10htoj.geodb -43 300 -43 300
+## geomap n10ktoj.geoco n10ktoj.geodb -43 300 -43 300
+## join n10jsubktr.coo n10ksubjtr.coo > n10ktojtr.geoco
+ join n10jsubhtr.coo n10hsubjtr.coo > n10htojtr.geoco
+## geomap n10ktojtr.geoco n10ktojtr.geodb -43 300 -43 300
+ geomap n10htojtr.geoco n10htojtr.geodb -43 300 -43 300

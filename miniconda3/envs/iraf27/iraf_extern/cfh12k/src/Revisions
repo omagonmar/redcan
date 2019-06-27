@@ -1,0 +1,17 @@
+.help revisions Mar01 cfh12k
+.nf
+
+===================
+V1.1: June 24, 2002
+===================
+
+hdrcfh12k.cl
+    The typo fix for chip07 incorrectly flips the display.  (7/24/02, Valdes)
+
+===================
+V1.0: March 6, 2001
+===================
+
+Setup initial version of the package.  (3/5/01, Valdes0
+
+.endhelp

@@ -1,0 +1,30 @@
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default dumb]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+PATH: /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/guiapps/
+
+Make helpdb for package guiapps
+  1            root (guiapps$lib/root.hd): 1 help modules
+  2     rootguiapps (guiapps$lib/rootguiapps.hd): 1 help modules
+  3         guiapps (guiapps$guiapps.hd): 4 help modules
+  4             spt (guiapps$spt/spt.hd): 11 help modules
+  4         xapphot (guiapps$xapphot/xapphot.hd): 16 help modules
+  4             xrv (guiapps$xrv/xrv.hd): 8 help modules
+  0                 (_index): 6 help modules
+
+Total of 47 help modules in 6 packages, file size 6698 bytes
+
+Make apropos.db for package guiapps
+  1            root (guiapps$lib/root.hd): 1 help modules
+  2     rootguiapps (guiapps$lib/rootguiapps.hd): 1 help modules
+  3         guiapps (guiapps$guiapps.hd): 4 help modules
+  4             spt (guiapps$spt/spt.hd): 11 help modules
+  4         xapphot (guiapps$xapphot/xapphot.hd): 16 help modules
+  4             xrv (guiapps$xrv/xrv.hd): 8 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+

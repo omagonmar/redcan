@@ -1,0 +1,44 @@
+#$Header: /tmp_mnt/home/pros/xray/ximages/xvops/RCS/atn2.gx,v 8.0 94/06/27 14:46:34 prosb Rel $
+#$Log:	atn2.gx,v $
+#Revision 8.0  94/06/27  14:46:34  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:27:44  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:08:30  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:27:55  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:31:59  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:18:16  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:33:59  pros
+#General Release 1.0
+#
+# ATN2 -- Compute the atan2 of 2 vectors containing x in first and y in
+# second (generic).
+
+procedure atn2$t (a, b, c, npix)
+
+PIXEL	a[ARB], b[ARB] c[ARB]
+int	npix, i
+
+begin
+	do i = 1, npix {
+		    $if (datatype == x)
+			c[i] = atan2 (double (b[i]), double (a[i]))
+		    $else $if (datatype == rd)
+			c[i] = atan2 (b[i], a[i])
+		    $else $if (datatype == l)
+			c[i] = atan2 (double (b[i]), double (a[i]))
+		    $else
+			c[i] = atan2 (real (b[i]), real (a[i]))
+		    $endif $endif $endif
+	}
+end

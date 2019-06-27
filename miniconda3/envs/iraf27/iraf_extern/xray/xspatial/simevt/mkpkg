@@ -1,0 +1,26 @@
+# $Header: /home/pros/xray/xspatial/simevt/RCS/mkpkg,v 11.0 1997/11/06 16:33:31 prosb Exp $ 
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:33:31  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:56:11  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/10/24  16:40:52  prosb
+#Initial revision
+#
+#
+# Make the qpsim task.
+
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+
+libpkg.a:
+	simevt.x "simevt.h" <tbset.h> <mach.h> "ran.com" <fset.h> "hri.com"
+	simsubs.x "simevt.h" <qpoe.h> <tbset.h> <coords.h> <fset.h>
+	srcsubs.x "simevt.h" <mach.h>
+ 	evtsubs.x "simevt.h" "ran.com" <math.h> "hri.com"
+	dzbrent.x <mach.h>
+	;

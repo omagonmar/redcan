@@ -1,0 +1,83 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/contextlib2-0.5.5-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/contextlib2.py",
+    "lib/python2.7/site-packages/contextlib2.pyc"
+  ],
+  "fn": "contextlib2-0.5.5-py27_0.tar.bz2",
+  "license": "PSF",
+  "license_family": "PSF",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/contextlib2-0.5.5-py27_0",
+    "type": 1
+  },
+  "md5": "ce5c6f14e53fc6f40a5fa9e278de0bbc",
+  "name": "contextlib2",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/contextlib2-0.5.5-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "2b8ad0563f63152c105c97b398b70bda75f5449aec41e99593cdc94d9bbf3530",
+        "sha256_in_prefix": "2b8ad0563f63152c105c97b398b70bda75f5449aec41e99593cdc94d9bbf3530",
+        "size_in_bytes": 2972
+      },
+      {
+        "_path": "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "fec13d24b0a56ccad538b79a3dee72c6131c74c8085fb859266513e8ac3a89d4",
+        "sha256_in_prefix": "fec13d24b0a56ccad538b79a3dee72c6131c74c8085fb859266513e8ac3a89d4",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/contextlib2-0.5.5-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "47159604c90703faecc3595a5c9f0bdf213f7f261a066bedd9b554be3dd66cc8",
+        "sha256_in_prefix": "47159604c90703faecc3595a5c9f0bdf213f7f261a066bedd9b554be3dd66cc8",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "lib/python2.7/site-packages/contextlib2.py",
+        "path_type": "hardlink",
+        "sha256": "a71a862643c583543f81d18b5e546cadd7423f7796ed80533447d2280960f921",
+        "sha256_in_prefix": "a71a862643c583543f81d18b5e546cadd7423f7796ed80533447d2280960f921",
+        "size_in_bytes": 14828
+      },
+      {
+        "_path": "lib/python2.7/site-packages/contextlib2.pyc",
+        "path_type": "hardlink",
+        "sha256": "175cd66ef777752305d5f8b9be4364db18e1d791ae19193c12edbc992f88f358",
+        "sha256_in_prefix": "175cd66ef777752305d5f8b9be4364db18e1d791ae19193c12edbc992f88f358",
+        "size_in_bytes": 15091
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 14915,
+  "subdir": "linux-64",
+  "timestamp": 1530781086406,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/contextlib2-0.5.5-py27_0.tar.bz2",
+  "version": "0.5.5"
+}

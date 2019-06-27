@@ -1,0 +1,32 @@
+#
+#######################################################
+# From 'shell_config'
+#######################################################
+ENABLE_ABYSS_THREADS="yes"
+ENABLE_LIBXML2_BACKEND="no"
+MUST_BUILD_WININET_CLIENT="no"
+MUST_BUILD_CURL_CLIENT="yes"
+MUST_BUILD_LIBWWW_CLIENT="no"
+NEED_RPATH="no"
+NEED_WL_RPATH="RPATH)"
+LIBXMLRPCPP_NAME="xmlrpc++"
+LSOCKET=""
+WININET_LDADD=""
+WININET_RPATH=""
+WININET_WL_RPATH=""
+CURL_LDADD="-L/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib -lcurl -lrt"
+CURL_RPATH="-rpath /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib"
+CURL_WL_RPATH="-Wl,--rpath -Wl,/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/lib"
+LIBWWW_LDADD=""
+LIBWWW_RPATH=""
+LIBWWW_WL_RPATH=""
+XMLRPC_MAJOR_RELEASE="1"
+XMLRPC_MINOR_RELEASE="16"
+XMLRPC_POINT_RELEASE="29"
+FEATURE_LIST="abyss-server curl-client "
+PREFIX="/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc"
+HEADERINST_DIR="/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/include"
+LIBINST_DIR="/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/lib"
+BLDDIR="/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29"
+ABS_SRCDIR="/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/libsamp/libxrpc/xmlrpc-c-1.16.29"
+#######################################################

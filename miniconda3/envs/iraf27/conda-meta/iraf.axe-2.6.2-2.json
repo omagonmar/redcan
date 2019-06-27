@@ -1,0 +1,213 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "cfitsio >=3.430",
+    "iraf !=2.16.1,>=2.16.UR",
+    "iraf.stsdas >=3.18.3",
+    "wcstools >=3.8.4"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.axe-2.6.2-2",
+  "features": "",
+  "files": [
+    "iraf_extern/stsdas/bin.linux/aXe_AF2PET",
+    "iraf_extern/stsdas/bin.linux/aXe_BE",
+    "iraf_extern/stsdas/bin.linux/aXe_DIRIMAGE",
+    "iraf_extern/stsdas/bin.linux/aXe_DRZ2PET",
+    "iraf_extern/stsdas/bin.linux/aXe_DRZPREP",
+    "iraf_extern/stsdas/bin.linux/aXe_FILET",
+    "iraf_extern/stsdas/bin.linux/aXe_FRIGEN",
+    "iraf_extern/stsdas/bin.linux/aXe_FRINGECORR",
+    "iraf_extern/stsdas/bin.linux/aXe_GOL2AF",
+    "iraf_extern/stsdas/bin.linux/aXe_GPS",
+    "iraf_extern/stsdas/bin.linux/aXe_INTPIXCORR",
+    "iraf_extern/stsdas/bin.linux/aXe_NICBACK",
+    "iraf_extern/stsdas/bin.linux/aXe_PET2SPC",
+    "iraf_extern/stsdas/bin.linux/aXe_PETCONT",
+    "iraf_extern/stsdas/bin.linux/aXe_PETFF",
+    "iraf_extern/stsdas/bin.linux/aXe_PETIPC",
+    "iraf_extern/stsdas/bin.linux/aXe_SCALEBCK",
+    "iraf_extern/stsdas/bin.linux/aXe_SEX2GOL",
+    "iraf_extern/stsdas/bin.linux/aXe_STAMPS",
+    "iraf_extern/stsdas/bin.linux/aXe_TEST",
+    "iraf_extern/stsdas/bin.linux/aXe_TFIT",
+    "iraf_extern/stsdas/copyright.aXe"
+  ],
+  "fn": "iraf.axe-2.6.2-2.tar.bz2",
+  "license": "GPL",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.axe-2.6.2-2",
+    "type": 1
+  },
+  "md5": "8b99d9d696db4f466f4f32be4d9bdcc2",
+  "name": "iraf.axe",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.axe-2.6.2-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_AF2PET",
+        "path_type": "hardlink",
+        "sha256": "5487401402923bfbf45c99f4cadcd9d38ca09db517f866b9411117dbc2a58cfa",
+        "sha256_in_prefix": "5487401402923bfbf45c99f4cadcd9d38ca09db517f866b9411117dbc2a58cfa",
+        "size_in_bytes": 1515040
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_BE",
+        "path_type": "hardlink",
+        "sha256": "46f85e9b0a8334ff4d6a19b35091e2c29a2116d9e20f461cd11308d47c8d3ad1",
+        "sha256_in_prefix": "46f85e9b0a8334ff4d6a19b35091e2c29a2116d9e20f461cd11308d47c8d3ad1",
+        "size_in_bytes": 1517184
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_DIRIMAGE",
+        "path_type": "hardlink",
+        "sha256": "48ffe130834dbea1b681ff31bd78f6521d31615c6c49e9864ae7d882ef45a2a5",
+        "sha256_in_prefix": "48ffe130834dbea1b681ff31bd78f6521d31615c6c49e9864ae7d882ef45a2a5",
+        "size_in_bytes": 1510368
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_DRZ2PET",
+        "path_type": "hardlink",
+        "sha256": "b816820eb6010cdc378bc54d78f188e9df65ebd1637316ee2b213c7f22bf902a",
+        "sha256_in_prefix": "b816820eb6010cdc378bc54d78f188e9df65ebd1637316ee2b213c7f22bf902a",
+        "size_in_bytes": 1517184
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_DRZPREP",
+        "path_type": "hardlink",
+        "sha256": "94d133bb32c5a4216fb0c583e249fef2bdc320b46f754d4ef251d53331eb7109",
+        "sha256_in_prefix": "94d133bb32c5a4216fb0c583e249fef2bdc320b46f754d4ef251d53331eb7109",
+        "size_in_bytes": 1521280
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_FILET",
+        "path_type": "hardlink",
+        "sha256": "4b1b30069ab75d7dcbefb51ec56d40e197e04b641742431b5cb402c6f62d1a11",
+        "sha256_in_prefix": "4b1b30069ab75d7dcbefb51ec56d40e197e04b641742431b5cb402c6f62d1a11",
+        "size_in_bytes": 1513152
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_FRIGEN",
+        "path_type": "hardlink",
+        "sha256": "a7fe661ceecf68eeee8af65a3ae394798d5c8c1ddc1b4c7bb4d71297cbd2ea26",
+        "sha256_in_prefix": "a7fe661ceecf68eeee8af65a3ae394798d5c8c1ddc1b4c7bb4d71297cbd2ea26",
+        "size_in_bytes": 1508992
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_FRINGECORR",
+        "path_type": "hardlink",
+        "sha256": "6d0649b42b24637486ec4c34c94a59b784d9ec8d0e92c10882614343a425b5a6",
+        "sha256_in_prefix": "6d0649b42b24637486ec4c34c94a59b784d9ec8d0e92c10882614343a425b5a6",
+        "size_in_bytes": 1513088
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_GOL2AF",
+        "path_type": "hardlink",
+        "sha256": "094ee17c86a4a41870663d343cbbfb80b72dac43b3a957f78c62ef9257e33196",
+        "sha256_in_prefix": "094ee17c86a4a41870663d343cbbfb80b72dac43b3a957f78c62ef9257e33196",
+        "size_in_bytes": 1514752
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_GPS",
+        "path_type": "hardlink",
+        "sha256": "5a619ed43ed9459ae09b091f72e37176cec6407e2e9ba12f03a12e5c330bf834",
+        "sha256_in_prefix": "5a619ed43ed9459ae09b091f72e37176cec6407e2e9ba12f03a12e5c330bf834",
+        "size_in_bytes": 1514496
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_INTPIXCORR",
+        "path_type": "hardlink",
+        "sha256": "eb9a2ce3c01ab9e96c4b9c2c7287a1acbaa8ad60fe9220dfe9dcfdf6da95734a",
+        "sha256_in_prefix": "eb9a2ce3c01ab9e96c4b9c2c7287a1acbaa8ad60fe9220dfe9dcfdf6da95734a",
+        "size_in_bytes": 1513472
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_NICBACK",
+        "path_type": "hardlink",
+        "sha256": "cc027146d979c37e407983639abc18689707f757f1e5376b96afd0bd792e4932",
+        "sha256_in_prefix": "cc027146d979c37e407983639abc18689707f757f1e5376b96afd0bd792e4932",
+        "size_in_bytes": 1510048
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_PET2SPC",
+        "path_type": "hardlink",
+        "sha256": "4558a04180c59008e61c75978914c10ecb6aa8a95a93262bbc36863ecd4f5e56",
+        "sha256_in_prefix": "4558a04180c59008e61c75978914c10ecb6aa8a95a93262bbc36863ecd4f5e56",
+        "size_in_bytes": 1521280
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_PETCONT",
+        "path_type": "hardlink",
+        "sha256": "ba815fb726723a4275a4fef4da0d201f71183a3ab2cca86c7fd97d66c79e796e",
+        "sha256_in_prefix": "ba815fb726723a4275a4fef4da0d201f71183a3ab2cca86c7fd97d66c79e796e",
+        "size_in_bytes": 1513088
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_PETFF",
+        "path_type": "hardlink",
+        "sha256": "eea7ce2c1a70be949baa781e524d03acfaf4bd208962ddae41a7bc8248d3d5d8",
+        "sha256_in_prefix": "eea7ce2c1a70be949baa781e524d03acfaf4bd208962ddae41a7bc8248d3d5d8",
+        "size_in_bytes": 1513088
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_PETIPC",
+        "path_type": "hardlink",
+        "sha256": "91ff22d11f8b0a958821db010dd2c037fd220059bab0d140fb9f7ae9f70258f6",
+        "sha256_in_prefix": "91ff22d11f8b0a958821db010dd2c037fd220059bab0d140fb9f7ae9f70258f6",
+        "size_in_bytes": 1513088
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_SCALEBCK",
+        "path_type": "hardlink",
+        "sha256": "813340897c108d1f21b631c235cdc001c12d1d88ab4020196acdd8ecbc5c9cff",
+        "sha256_in_prefix": "813340897c108d1f21b631c235cdc001c12d1d88ab4020196acdd8ecbc5c9cff",
+        "size_in_bytes": 1510432
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_SEX2GOL",
+        "path_type": "hardlink",
+        "sha256": "59eba4744c967f5823c84013b4d53c1d460ab70c07c6d819eaa7634eb2dbc938",
+        "sha256_in_prefix": "59eba4744c967f5823c84013b4d53c1d460ab70c07c6d819eaa7634eb2dbc938",
+        "size_in_bytes": 1514496
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_STAMPS",
+        "path_type": "hardlink",
+        "sha256": "cf693dd7777d3c2528e294a26a99d64c88bd01195493727f948893763546ea8e",
+        "sha256_in_prefix": "cf693dd7777d3c2528e294a26a99d64c88bd01195493727f948893763546ea8e",
+        "size_in_bytes": 1514016
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_TEST",
+        "path_type": "hardlink",
+        "sha256": "d41146111a81a8dc938b93b85e8bf6f6345bd05ac62163ba45f50ca8f7110dc4",
+        "sha256_in_prefix": "d41146111a81a8dc938b93b85e8bf6f6345bd05ac62163ba45f50ca8f7110dc4",
+        "size_in_bytes": 1509760
+      },
+      {
+        "_path": "iraf_extern/stsdas/bin.linux/aXe_TFIT",
+        "path_type": "hardlink",
+        "sha256": "fe6134f4ef68d05c5d552b509c92170cc852c1242574f3394043aabcb9246a7a",
+        "sha256_in_prefix": "fe6134f4ef68d05c5d552b509c92170cc852c1242574f3394043aabcb9246a7a",
+        "size_in_bytes": 1510880
+      },
+      {
+        "_path": "iraf_extern/stsdas/copyright.aXe",
+        "path_type": "hardlink",
+        "sha256": "87d84a35b45a39a46588fa6ab8cd284d62e31d2a916fb47da1b96dd9967e9a0c",
+        "sha256_in_prefix": "87d84a35b45a39a46588fa6ab8cd284d62e31d2a916fb47da1b96dd9967e9a0c",
+        "size_in_bytes": 19401
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 7576388,
+  "subdir": "linux-64",
+  "timestamp": 1554143290358,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.axe-2.6.2-2.tar.bz2",
+  "version": "2.6.2"
+}

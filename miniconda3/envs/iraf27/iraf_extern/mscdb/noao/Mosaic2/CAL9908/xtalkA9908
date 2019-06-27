@@ -1,0 +1,11 @@
+# Crosstalk correction file for NOAO Mosaic South (test version)
+# victim  source  coefficient           James E. Rhoads  990817
+    im1     im2     0.001699
+    im2     im1     0.00024
+    im3     im4     0.001652
+    im4     im3     0.001589
+    im5     im6     0.000139
+    im6     im5     0.00138
+    im7     im8     0.000238
+    im8     im7     0.00153
+

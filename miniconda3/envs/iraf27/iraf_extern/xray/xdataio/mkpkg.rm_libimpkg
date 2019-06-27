@@ -1,0 +1,123 @@
+#$Header: /home/pros/xray/xdataio/RCS/mkpkg,v 11.0 1997/11/06 16:33:45 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:33:45  prosb
+#General Release 2.5
+#
+#Revision 9.1  1997/10/03 21:50:53  prosb
+#JCC(10/97) - add qpappend_ftsi.
+#
+#Revision 9.0  1995/11/16 18:56:57  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:17:27  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/04/06  13:56:39  janet
+#jd - added qpgapmap
+#
+#Revision 7.1  94/02/25  11:39:21  mo
+#MC	2/25/94		Add memdbg option
+#
+#Revision 7.0  93/12/27  18:43:18  prosb
+#General Release 2.3
+#
+#Revision 6.4  93/12/01  19:38:24  mo
+#MC	12/1/93		Add upimgrdf task
+#
+#Revision 6.3  93/12/01  11:21:39  mo
+#JD	12/1/93		Addition of tasks moved from XPROTO
+#
+#Revision 6.2  93/11/19  10:50:49  mo
+#MC	11/18/93		Change task from upqpoe210 to upqpoerdf
+#
+#Revision 6.1  93/10/04  12:18:16  dvs
+#Added subpackage eincdrom (moved from einbb).
+#
+#Revision 6.0  93/05/24  16:22:24  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:32:53  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/23  09:46:41  mo
+#MC	10/24/92	Add mperfits and move einbb and rosbb
+#
+#Revision 4.0  92/05/03  23:02:05  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/05/03  23:00:21  prosb
+#Added @upqpoe2.10
+#
+#Revision 3.1  92/02/06  18:04:45  mo
+#Mc	2/5/92		Add qp2fits task
+#
+#Revision 3.0  91/08/02  01:11:45  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/21  19:21:55  mo
+# MC   7/21/91         Updated for package restructuring
+#
+#Revision 2.0  91/03/07  00:03:40  pros
+#General Release 1.0
+#
+#
+# make the xdataio package
+#
+
+
+$call	relink
+$exit
+
+update:
+        $echo "-------------- XDATAIO/EINCDROM ----------------"
+        @eincdrom
+	$call relink
+	$call install
+	;
+
+
+relink:
+	$set	LIBS = "-lpros -ltbtables -lxtools" 
+	#$update	libpkg.a
+	#$update	libimpkg.a
+	#$omake	debug.x
+	$omake	x_xdataio.x
+	#$link	x_xdataio.o debug.o libimpkg.a libpkg.a $(LIBS) -o xx_xdataio.e
+  # no link to libimpkg.a (5/22/98) - JCC test
+	$link	x_xdataio.o debug.o libpkg.a $(LIBS) -o xx_xdataio.e
+	;
+
+memdbg:
+	$set	LIBS = "-lpros -ltbtables -lxtools -lmemdbg" 
+	$update	libpkg.a
+	$update	libimpkg.a
+	$omake	debug.x
+	$omake	x_xdataio.x
+	$link	-z x_xdataio.o debug.o libimpkg.a libpkg.a $(LIBS) -o xx_xdataio.e
+	;
+
+install:
+	$move	xx_xdataio.e xraybin$x_xdataio.e
+	;
+
+libpkg.a:
+	@datarep
+	@fits2qp
+        @hkfilter
+        @im2bin
+        @mkhkscr
+	@qpaddaux
+        @qpappend
+        @qpappend_ftsi
+        @qpgapmap
+	@qp2fits
+	@upimgrdf
+	@upqpoerdf
+	;
+
+libimpkg.a:
+	@fits2qp
+	;
+
+
+

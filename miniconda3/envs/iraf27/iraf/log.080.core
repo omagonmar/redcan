@@ -1,0 +1,704 @@
+!clear;date
+[H[2JTue Apr  3 11:30:45 CLST 2018
+==================== MAKE IRAF! =========================
++
+====================== SYSLIBS ==========================
++
+-------------- LIBSYS ----------------
+check out file `libsys.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libsys.a'
+! which xc
+/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/bin_directory/xc
+Subdirectory sys/fio is up to date
+Subdirectory sys/fmio is up to date
+Subdirectory sys/fmtio is up to date
+Subdirectory sys/clio is up to date
+Subdirectory sys/etc/gen is up to date
+Subdirectory sys/etc is up to date
+Subdirectory sys/gty is up to date
+Subdirectory sys/nmemio is up to date
+Subdirectory sys/mtio is up to date
+Subdirectory sys/symtab is up to date
+Subdirectory sys/tty is up to date
+Subdirectory sys/ki is up to date
+Subdirectory sys/psio is up to date
+Subdirectory sys/host$gdev//iism70 is up to date
+Subdirectory sys/host$gdev//iism75 is up to date
+Subdirectory sys/host$gdev/ is up to date
+Library libsys.a is up to date
+check file `libsys.a' into `lib$'
+-------------- LIBEX -----------------
+check out file `libex.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libex.a'
+Subdirectory sys/gio/glabax is up to date
+Subdirectory sys/gio/gki is up to date
+Subdirectory sys/gio/gim is up to date
+Subdirectory sys/gio is up to date
+Subdirectory sys/imio/tf is up to date
+Subdirectory sys/imio/db is up to date
+Subdirectory sys/imio/dbc is up to date
+Subdirectory sys/imio/iki/oif is up to date
+Subdirectory sys/imio/iki/fxf is up to date
+Subdirectory sys/imio/iki/plf is up to date
+Subdirectory sys/imio/iki/qpf is up to date
+Subdirectory sys/imio/iki/stf is up to date
+Subdirectory sys/imio/iki is up to date
+Subdirectory sys/imio/imt is up to date
+Subdirectory sys/imio is up to date
+Subdirectory sys/plio/tf is up to date
+Subdirectory sys/plio is up to date
+Subdirectory sys/pmio/tf is up to date
+Subdirectory sys/pmio is up to date
+Subdirectory sys/qpoe/gen is up to date
+Subdirectory sys/qpoe is up to date
+Subdirectory sys/mwcs/gen is up to date
+Subdirectory sys/mwcs is up to date
+Library libex.a is up to date
+check file `libex.a' into `lib$'
+-------------- LIBVOPS ---------------
+check out file `libvops.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libvops.a'
+generic -k        -t csilrdx acht.gx
+generic -k -p ak/ -t csilrdx achtc.x achts.x achti.x achtl.x achtr.x achtd.x achtx.x
+delete file achtc.x
+delete file achts.x
+delete file achti.x
+delete file achtl.x
+delete file achtr.x
+delete file achtd.x
+delete file achtx.x
+xc -c -w achtcc.x achtcd.x achtci.x achtcl.x achtcr.x achtcs.x achtcx.x achtdc.x achtdd.x achtdi.x achtdl.x achtdr.x achtds.x achtdx.x achtic.x achtid.x achtii.x achtil.x achtir.x achtis.x achtix.x achtlc.x achtld.x achtli.x achtll.x achtlr.x achtls.x achtlx.x achtrc.x achtrd.x achtri.x achtrl.x achtrr.x achtrs.x achtrx.x achtsc.x achtsd.x achtsi.x achtsl.x achtsr.x achtss.x achtsx.x achtxc.x achtxd.x achtxi.x achtxl.x achtxr.x achtxs.x achtxx.x
+achtcc.x:
+   achtcc:
+achtcd.x:
+   achtcd:
+achtci.x:
+   achtci:
+achtcl.x:
+   achtcl:
+achtcr.x:
+   achtcr:
+achtcs.x:
+   achtcs:
+achtcx.x:
+   achtcx:
+achtdc.x:
+   achtdc:
+achtdd.x:
+   achtdd:
+achtdi.x:
+   achtdi:
+achtdl.x:
+   achtdl:
+achtdr.x:
+   achtdr:
+achtds.x:
+   achtds:
+achtdx.x:
+   achtdx:
+achtic.x:
+   achtic:
+achtid.x:
+   achtid:
+achtii.x:
+   achtii:
+achtil.x:
+   achtil:
+achtir.x:
+   achtir:
+achtis.x:
+   achtis:
+achtix.x:
+   achtix:
+achtlc.x:
+   achtlc:
+achtld.x:
+   achtld:
+achtli.x:
+   achtli:
+achtll.x:
+   achtll:
+achtlr.x:
+   achtlr:
+achtls.x:
+   achtls:
+achtlx.x:
+   achtlx:
+achtrc.x:
+   achtrc:
+achtrd.x:
+   achtrd:
+achtri.x:
+   achtri:
+achtrl.x:
+   achtrl:
+achtrr.x:
+   achtrr:
+achtrs.x:
+   achtrs:
+achtrx.x:
+   achtrx:
+achtsc.x:
+   achtsc:
+achtsd.x:
+   achtsd:
+achtsi.x:
+   achtsi:
+achtsl.x:
+   achtsl:
+achtsr.x:
+   achtsr:
+achtss.x:
+   achtss:
+achtsx.x:
+   achtsx:
+achtxc.x:
+   achtxc:
+achtxd.x:
+   achtxd:
+achtxi.x:
+   achtxi:
+achtxl.x:
+   achtxl:
+achtxr.x:
+   achtxr:
+achtxs.x:
+   achtxs:
+achtxx.x:
+   achtxx:
+achtcc.f:
+   achtcc:
+achtcd.f:
+   achtcd:
+achtci.f:
+   achtci:
+achtcl.f:
+   achtcl:
+achtcr.f:
+   achtcr:
+achtcs.f:
+   achtcs:
+achtcx.f:
+   achtcx:
+achtdc.f:
+   achtdc:
+achtdd.f:
+   achtdd:
+achtdi.f:
+   achtdi:
+achtdl.f:
+   achtdl:
+achtdr.f:
+   achtdr:
+achtds.f:
+   achtds:
+achtdx.f:
+   achtdx:
+achtic.f:
+   achtic:
+achtid.f:
+   achtid:
+achtii.f:
+   achtii:
+achtil.f:
+   achtil:
+achtir.f:
+   achtir:
+achtis.f:
+   achtis:
+achtix.f:
+   achtix:
+achtlc.f:
+   achtlc:
+achtld.f:
+   achtld:
+achtli.f:
+   achtli:
+achtll.f:
+   achtll:
+achtlr.f:
+   achtlr:
+achtls.f:
+   achtls:
+achtlx.f:
+   achtlx:
+achtrc.f:
+   achtrc:
+achtrd.f:
+   achtrd:
+achtri.f:
+   achtri:
+achtrl.f:
+   achtrl:
+achtrr.f:
+   achtrr:
+achtrs.f:
+   achtrs:
+achtrx.f:
+   achtrx:
+achtsc.f:
+   achtsc:
+achtsd.f:
+   achtsd:
+achtsi.f:
+   achtsi:
+achtsl.f:
+   achtsl:
+achtsr.f:
+   achtsr:
+achtss.f:
+   achtss:
+achtsx.f:
+   achtsx:
+achtxc.f:
+   achtxc:
+achtxd.f:
+   achtxd:
+achtxi.f:
+   achtxi:
+achtxl.f:
+   achtxl:
+achtxr.f:
+   achtxr:
+achtxs.f:
+   achtxs:
+achtxx.f:
+   achtxx:
+ar r /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libvops.a achtcc.o achtcd.o achtci.o achtcl.o achtcr.o achtcs.o achtcx.o achtdc.o achtdd.o achtdi.o achtdl.o achtdr.o achtds.o achtdx.o achtic.o achtid.o achtii.o achtil.o achtir.o achtis.o achtix.o achtlc.o achtld.o achtli.o achtll.o achtlr.o achtls.o achtlx.o achtrc.o achtrd.o achtri.o achtrl.o achtrr.o achtrs.o achtrx.o achtsc.o achtsd.o achtsi.o achtsl.o achtsr.o achtss.o achtsx.o achtxc.o achtxd.o achtxi.o achtxl.o achtxr.o achtxs.o achtxx.o
+Subdirectory sys/vops/lz is up to date
+Subdirectory sys/vops/achtgen is up to date
+Subdirectory sys/vops is up to date
+Subdirectory sys/osb is up to date
+ranlib /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libvops.a
+Updated 49 files in libvops.a
+check file `libvops.a' into `lib$'
+-------------- LIBCUR ----------------
+check out file `libcur.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libcur.a'
+Subdirectory sys/gio/cursor is up to date
+Subdirectory sys/gio is up to date
+Library libcur.a is up to date
+check file `libcur.a' into `lib$'
+-------------- LIBSTG ----------------
+check out file `libstg.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libstg.a'
+Subdirectory sys/gio/stdgraph is up to date
+Subdirectory sys/gio is up to date
+Library libstg.a is up to date
+check file `libstg.a' into `lib$'
+-------------- LIBMAIN.O -------------
+Warning, mkpkg line 101: file `bin$libmain.o' not found
+check out file `zmain.c = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/unix/os/zmain.c'
+xc -c -I/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/include/ -Inolibc -w -/Wunused -/m32 zmain.c
+move `zmain.o' to `lib$libmain.o'
+delete file zmain.c
+-------------- LIBC ------------------
+check out file `libc.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libc.a'
+Subdirectory sys/libc is up to date
+Library libc.a is up to date
+check file `libc.a' into `lib$'
+-------------- IMFORT ----------------
+check out file `libimfort.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libimfort.a'
+Subdirectory sys/imfort/db is up to date
+Subdirectory sys/imfort is up to date
+Library libimfort.a is up to date
+check file `libimfort.a' into `lib$'
+-------------- LIBGKS ----------------
+check out file `libgks.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libgks.a'
+Subdirectory sys/gio/gks is up to date
+Subdirectory sys/gio is up to date
+Library libgks.a is up to date
+check file `libgks.a' into `lib$'
+-------------- LIBNCAR ---------------
+check out file `libncar.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libncar.a'
+Subdirectory sys/gio/ncarutil/sysint is up to date
+Subdirectory sys/gio/ncarutil/autograph is up to date
+Subdirectory sys/gio/ncarutil/conlib is up to date
+Subdirectory sys/gio/ncarutil is up to date
+Subdirectory sys/gio is up to date
+Library libncar.a is up to date
+check file `libncar.a' into `lib$'
+-------------- LIBSGI ----------------
+check out file `libsgi.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libsgi.a'
+Subdirectory sys/gio/sgikern is up to date
+Subdirectory sys/gio is up to date
+Library libsgi.a is up to date
+check file `libsgi.a' into `lib$'
+-------------- LIBIMD ----------------
+check out file `libimd.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libimd.a'
+Subdirectory sys/gio/imdkern is up to date
+Subdirectory sys/gio is up to date
+Library libimd.a is up to date
+check file `libimd.a' into `lib$'
+-------------- LIBDS ----------------
+check out file `libds.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libds.a'
+Subdirectory sys/pkg$images/tv/display/ is up to date
+Library libds.a is up to date
+check file `libds.a' into `lib$'
+-------------- LIBMEMDBG  ------------
+check out file `libmemdbg.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libmemdbg.a'
+Subdirectory sys/memdbg is up to date
+Library libmemdbg.a is up to date
+check file `libmemdbg.a' into `lib$'
+purge directory `lib$'
++
++
+====================== MATHLIBS =========================
++
++
+-------------- LIBBEV -------------------
+check out file `libbev.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libbev.a'
+Subdirectory math/bevington is up to date
+Library libbev.a is up to date
+check file `libbev.a' into `lib$'
+-------------- LIBCURFIT ----------------
+check out file `libcurfit.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libcurfit.a'
+Subdirectory math/curfit is up to date
+Library libcurfit.a is up to date
+check file `libcurfit.a' into `lib$'
+-------------- LIBDEBOOR ----------------
+check out file `libdeboor.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libdeboor.a'
+Subdirectory math/deboor is up to date
+Library libdeboor.a is up to date
+check file `libdeboor.a' into `lib$'
+-------------- LIBGSURFIT ---------------
+check out file `libgsurfit.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libgsurfit.a'
+Subdirectory math/gsurfit is up to date
+Library libgsurfit.a is up to date
+check file `libgsurfit.a' into `lib$'
+-------------- LIBIMINTERP --------------
+check out file `libiminterp.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libiminterp.a'
+Subdirectory math/iminterp is up to date
+Library libiminterp.a is up to date
+check file `libiminterp.a' into `lib$'
+-------------- LIBINTERP ----------------
+check out file `libinterp.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libinterp.a'
+Subdirectory math/interp is up to date
+Library libinterp.a is up to date
+check file `libinterp.a' into `lib$'
+-------------- LIBLLSQ ------------------
+check out file `libllsq.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libllsq.a'
+Subdirectory math/llsq is up to date
+Library libllsq.a is up to date
+check file `libllsq.a' into `lib$'
+-------------- LIBNLFIT -----------------
+check out file `libnlfit.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libnlfit.a'
+Subdirectory math/nlfit is up to date
+Library libnlfit.a is up to date
+check file `libnlfit.a' into `lib$'
+-------------- LIBSLALIB ----------------
+check out file `libslalib.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libslalib.a'
+Subdirectory math/slalib is up to date
+Library libslalib.a is up to date
+check file `libslalib.a' into `lib$'
+-------------- LIBSURFIT ----------------
+check out file `libsurfit.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libsurfit.a'
+Subdirectory math/surfit is up to date
+Library libsurfit.a is up to date
+check file `libsurfit.a' into `lib$'
+purge directory `lib$'
++
++
+====================== SYSEXE ===========================
++
++
+-------------- GIO ----------------
+Object x_stdgraph.o is up to date
+xc -Nz x_stdgraph.o -lstg
+move `x_stdgraph.e' to `bin$x_stdgraph.e'
+Object x_sgikern.o is up to date
+xc -Nz x_sgikern.o -lsgi
+move `x_sgikern.e' to `bin$x_sgikern.e'
+Object x_imdkern.o is up to date
+xc -Nz x_imdkern.o -limd -lds -lstg -o xx_imdkern.e
+move `xx_imdkern.e' to `bin$x_imdkern.e'
+-------------- KI  ----------------
+Object irafks.o is up to date
+xc -Nz irafks.o
+move `irafks.e' to `bin$irafks.e'
+-------------- TTY ----------------
+Object x_mkttydata.o is up to date
+xc -Nz x_mkttydata.o
+move `x_mkttydata.e' to `bin$x_mkttydata.e'
++
++
+====================== PACKAGES =========================
++
++
+!mkdir /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/bin >& /dev/null
+--------------------- CL --------------------------
+Library libpkg.a is up to date
+Object cl.o is up to date
+Object globals.o is up to date
+Object opcodes.o is up to date
+xc -Nz cl.o globals.o opcodes.o libpkg.a -lc -lcur -lds -lstg
+move `cl.e' to `bin$cl.e'
+--------------------- ECL -------------------------
+Library libpkg.a is up to date
+Object ecl.o is up to date
+Object globals.o is up to date
+Object opcodes.o is up to date
+xc -Nz ecl.o globals.o opcodes.o libpkg.a -lc -lcur -lds -lstg libreadline.a -/L/usr/lib32 -lncurses
+move `ecl.e' to `bin$ecl.e'
+--------------------- VOCL ------------------------
+Library libpkg.a is up to date
+Object vocl.o is up to date
+Object globals.o is up to date
+Object opcodes.o is up to date
+xc -Nz vocl.o globals.o opcodes.o libpkg.a -lc -lcur -lds -lstg libreadline.a -/L/usr/lib32 -lncurses
+move `vocl.e' to `bin$vocl.e'
+--------------------- SYSTEM ----------------------
+Subdirectory pkg/system/help/lroff is up to date
+Subdirectory pkg/system/help/xhelp is up to date
+Subdirectory pkg/system/help is up to date
+Library libpkg.a is up to date
+Object x_system.o is up to date
+xc -Nz x_system.o libpkg.a -o xx_system.e
+move `xx_system.e' to `bin$x_system.e'
+--------------------- SOFTOOLS --------------------
+Subdirectory pkg/softools/mkapropos is up to date
+Library libpkg.a is up to date
+Object x_softools.o is up to date
+xc -Nz x_softools.o libpkg.a -o xx_softools.e
+move `xx_softools.e' to `bin$x_softools.e'
+--------------------- XTOOLS ----------------------
+check out file `libxtools.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libxtools.a'
+Subdirectory pkg/xtools/ranges is up to date
+Subdirectory pkg/xtools/gtools is up to date
+Subdirectory pkg/xtools/icfit is up to date
+Subdirectory pkg/xtools/inlfit is up to date
+Subdirectory pkg/xtools/fixpix is up to date
+Subdirectory pkg/xtools/skywcs is up to date
+Subdirectory pkg/xtools/catquery is up to date
+Subdirectory pkg/xtools/mef is up to date
+Library libxtools.a is up to date
+check file `libxtools.a' into `lib$'
+purge directory `lib$'
+--------------------- NTBTABLES --------------------
+check out file `libntbtables.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libntbtables.a'
+Subdirectory pkg/ntbtables/selector/generic is up to date
+Subdirectory pkg/ntbtables/selector is up to date
+NOTE:  SPP FITSIO will be used for FITS tables.
+Subdirectory pkg/ntbtables/fitsio/fitssppb is up to date
+Subdirectory pkg/ntbtables/fitsio/unix is up to date
+Subdirectory pkg/ntbtables/fitsio is up to date
+Library libntbtables.a is up to date
+check file `libntbtables.a' into `lib$'
+purge directory `lib$'
+--------------------- DATAIO ----------------------
+Subdirectory pkg/dataio/lib is up to date
+Subdirectory pkg/dataio/export/generic is up to date
+Subdirectory pkg/dataio/export/bltins is up to date
+Subdirectory pkg/dataio/export is up to date
+Subdirectory pkg/dataio/import/generic is up to date
+Subdirectory pkg/dataio/import/bltins is up to date
+Subdirectory pkg/dataio/import is up to date
+Subdirectory pkg/dataio/imtext is up to date
+Subdirectory pkg/dataio/reblock is up to date
+Subdirectory pkg/dataio/fits is up to date
+Subdirectory pkg/dataio/bintext is up to date
+Subdirectory pkg/dataio/mtexamine is up to date
+Subdirectory pkg/dataio/cardimage is up to date
+Subdirectory pkg/dataio/t2d is up to date
+Library libpkg.a is up to date
+Object x_dataio.o is up to date
+xc -Nz x_dataio.o libpkg.a -lxtools -o xx_dataio.e
+move `xx_dataio.e' to `bin$x_dataio.e'
+--------------------- IMAGES ----------------------
+check out file `libds.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libds.a'
+Subdirectory pkg/images/tv/display is up to date
+Subdirectory pkg/images/tv/wcslab is up to date
+Library libds.a is up to date
+check file `libds.a' into `lib$'
+Subdirectory pkg/images/tv/imedit is up to date
+Subdirectory pkg/images/tv/imexamine is up to date
+Subdirectory pkg/images/tv/tvmark is up to date
+Subdirectory pkg/images/tv/wcslab is up to date
+Library libpkg.a is up to date
+Object x_tv.o is up to date
+xc -Nz x_tv.o libpkg.a -liminterp -lncar -lgks -lds -lxtools -lgsurfit -lnlfit -lcurfit -lllsq -liminterp -o xx_tv.e
+move `xx_tv.e' to `bin$x_tv.e'
+check out file `libimc.a = /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/lib/libimc.a'
+Subdirectory pkg/images/immatch/src/imcombine/src//generic is up to date
+Library libimc.a is up to date
+check file `libimc.a' into `lib$'
+Subdirectory pkg/images/imcoords/src is up to date
+Subdirectory pkg/images/imcoords is up to date
+Subdirectory pkg/images/imfilter/src is up to date
+Subdirectory pkg/images/imfilter is up to date
+Subdirectory pkg/images/imfit/src is up to date
+Subdirectory pkg/images/imfit is up to date
+Subdirectory pkg/images/imgeom/src/generic is up to date
+Subdirectory pkg/images/imgeom/src is up to date
+Subdirectory pkg/images/imgeom is up to date
+Subdirectory pkg/images/immatch/src/geometry is up to date
+Subdirectory pkg/images/immatch/src/imcombine is up to date
+Subdirectory pkg/images/immatch/src/linmatch is up to date
+Subdirectory pkg/images/immatch/src/listmatch is up to date
+Subdirectory pkg/images/immatch/src/psfmatch is up to date
+Subdirectory pkg/images/immatch/src/wcsmatch is up to date
+Subdirectory pkg/images/immatch/src/xregister is up to date
+Subdirectory pkg/images/immatch/src is up to date
+Subdirectory pkg/images/immatch is up to date
+Subdirectory pkg/images/imutil/src/generic is up to date
+Subdirectory pkg/images/imutil/src is up to date
+Subdirectory pkg/images/imutil is up to date
+Subdirectory pkg/images/lib is up to date
+Library libpkg.a is up to date
+Object x_images.o is up to date
+xc -Nz x_images.o libpkg.a -limc -lxtools -lcurfit -lsurfit -lgsurfit -liminterp -lnlfit -lslalib -lncar -lgks -o xx_images.e
+move `xx_images.e' to `bin$x_images.e'
+--------------------- LISTS -----------------------
+Library libpkg.a is up to date
+Object x_lists.o is up to date
+xc -Nz x_lists.o libpkg.a -lxtools -lds -o xx_lists.e
+move `xx_lists.e' to `bin$x_lists.e'
+--------------------- OBSOLETE --------------------
+Subdirectory pkg/obsolete/generic is up to date
+Subdirectory pkg/obsolete/fits is up to date
+Subdirectory pkg/obsolete/imcombine/generic is up to date
+Subdirectory pkg/obsolete/imcombine is up to date
+Library libpkg.a is up to date
+Object x_obsolete.o is up to date
+xc -Nz x_obsolete.o libpkg.a -lxtools -o xx_obsolete.e
+move `xx_obsolete.e' to `bin$x_obsolete.e'
+--------------------- PLOT ------------------------
+Subdirectory pkg/plot/crtpict is up to date
+Library libpkg.a is up to date
+Object x_plot.o is up to date
+xc -Nz x_plot.o libpkg.a -lncar -lgks -lxtools -liminterp -o xx_plot.e
+Object x_ncar.o is up to date
+xc -Nz x_ncar.o libpkg.a -lncar -lgks -lxtools -o xx_ncar.e
+move `xx_plot.e' to `bin$x_plot.e'
+move `xx_ncar.e' to `bin$x_ncar.e'
+--------------------- PROTO -----------------------
+Library libpkg.a is up to date
+Object x_color.o is up to date
+xc -Nz x_color.o libpkg.a -o xx_color.e
+Subdirectory pkg/proto/vol/src/im3dtran is up to date
+Subdirectory pkg/proto/vol/src/i2sun is up to date
+Library libpkg.a is up to date
+Object x_vol.o is up to date
+xc -Nz x_vol.o libpkg.a -lxtools -o xx_vol.e
+Subdirectory pkg/proto/masks is up to date
+Subdirectory pkg/proto/maskexpr is up to date
+Library libpkg.a is up to date
+Object x_proto.o is up to date
+xc -Nz x_proto.o libpkg.a -lxtools -liminterp -o xx_proto.e
+move `xx_color.e' to `bin$x_color.e'
+move `xx_vol.e' to `bin$x_vol.e'
+move `xx_proto.e' to `bin$x_proto.e'
+--------------------- UTILITIES -------------------
+Subdirectory pkg/utilities/nttools/threed/tscopy is up to date
+Subdirectory pkg/utilities/nttools/threed/txtable/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/txtable is up to date
+Subdirectory pkg/utilities/nttools/threed/tximage is up to date
+Subdirectory pkg/utilities/nttools/threed/titable/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/titable is up to date
+Subdirectory pkg/utilities/nttools/threed/tiimage/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/tiimage is up to date
+Subdirectory pkg/utilities/nttools/threed is up to date
+Subdirectory pkg/utilities/nttools/stxtools/od is up to date
+Subdirectory pkg/utilities/nttools/stxtools/sp_util is up to date
+Subdirectory pkg/utilities/nttools/stxtools/wcslab is up to date
+Subdirectory pkg/utilities/nttools/stxtools is up to date
+Subdirectory pkg/utilities/nttools/atools is up to date
+Subdirectory pkg/utilities/nttools/copyone is up to date
+Subdirectory pkg/utilities/nttools/gtedit is up to date
+Subdirectory pkg/utilities/nttools/imtab is up to date
+Subdirectory pkg/utilities/nttools/keyselect is up to date
+Subdirectory pkg/utilities/nttools/lib is up to date
+Subdirectory pkg/utilities/nttools/tcalc is up to date
+Subdirectory pkg/utilities/nttools/tchcol is up to date
+Subdirectory pkg/utilities/nttools/tchsize is up to date
+Subdirectory pkg/utilities/nttools/tcheck is up to date
+Subdirectory pkg/utilities/nttools/tcopy is up to date
+Subdirectory pkg/utilities/nttools/tcreate is up to date
+Subdirectory pkg/utilities/nttools/tdiffer is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/curses is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/forms is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/screen is up to date
+Subdirectory pkg/utilities/nttools/tedit/display is up to date
+Subdirectory pkg/utilities/nttools/tedit is up to date
+Subdirectory pkg/utilities/nttools/texpand is up to date
+Subdirectory pkg/utilities/nttools/thedit is up to date
+Subdirectory pkg/utilities/nttools/tinfo is up to date
+Subdirectory pkg/utilities/nttools/tintegrate is up to date
+Subdirectory pkg/utilities/nttools/tjoin is up to date
+Subdirectory pkg/utilities/nttools/tlinear is up to date
+Subdirectory pkg/utilities/nttools/tmatch is up to date
+Subdirectory pkg/utilities/nttools/tmerge is up to date
+Subdirectory pkg/utilities/nttools/tprint is up to date
+Subdirectory pkg/utilities/nttools/tproduct is up to date
+Subdirectory pkg/utilities/nttools/tproject is up to date
+Subdirectory pkg/utilities/nttools/tquery is up to date
+Subdirectory pkg/utilities/nttools/trebin is up to date
+Subdirectory pkg/utilities/nttools/tselect is up to date
+Subdirectory pkg/utilities/nttools/tsort is up to date
+Subdirectory pkg/utilities/nttools/tstat is up to date
+Subdirectory pkg/utilities/nttools/ttranspose is up to date
+Subdirectory pkg/utilities/nttools/tunits is up to date
+Subdirectory pkg/utilities/nttools/tupar is up to date
+Library libpkg.a is up to date
+Object x_nttools.o is up to date
+xc -Nz x_nttools.o libpkg.a -lxtools -lntbtables -o xx_nttools.e
+move `xx_nttools.e' to `bin$x_nttools.e'
+Subdirectory pkg/utilities/nttools/threed/tscopy is up to date
+Subdirectory pkg/utilities/nttools/threed/txtable/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/txtable is up to date
+Subdirectory pkg/utilities/nttools/threed/tximage is up to date
+Subdirectory pkg/utilities/nttools/threed/titable/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/titable is up to date
+Subdirectory pkg/utilities/nttools/threed/tiimage/generic is up to date
+Subdirectory pkg/utilities/nttools/threed/tiimage is up to date
+Subdirectory pkg/utilities/nttools/threed is up to date
+Subdirectory pkg/utilities/nttools/stxtools/od is up to date
+Subdirectory pkg/utilities/nttools/stxtools/sp_util is up to date
+Subdirectory pkg/utilities/nttools/stxtools/wcslab is up to date
+Subdirectory pkg/utilities/nttools/stxtools is up to date
+Subdirectory pkg/utilities/nttools/atools is up to date
+Subdirectory pkg/utilities/nttools/copyone is up to date
+Subdirectory pkg/utilities/nttools/gtedit is up to date
+Subdirectory pkg/utilities/nttools/imtab is up to date
+Subdirectory pkg/utilities/nttools/keyselect is up to date
+Subdirectory pkg/utilities/nttools/lib is up to date
+Subdirectory pkg/utilities/nttools/tcalc is up to date
+Subdirectory pkg/utilities/nttools/tchcol is up to date
+Subdirectory pkg/utilities/nttools/tchsize is up to date
+Subdirectory pkg/utilities/nttools/tcheck is up to date
+Subdirectory pkg/utilities/nttools/tcopy is up to date
+Subdirectory pkg/utilities/nttools/tcreate is up to date
+Subdirectory pkg/utilities/nttools/tdiffer is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/curses is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/forms is up to date
+Subdirectory pkg/utilities/nttools/tedit/display/screen is up to date
+Subdirectory pkg/utilities/nttools/tedit/display is up to date
+Subdirectory pkg/utilities/nttools/tedit is up to date
+Subdirectory pkg/utilities/nttools/texpand is up to date
+Subdirectory pkg/utilities/nttools/thedit is up to date
+Subdirectory pkg/utilities/nttools/tinfo is up to date
+Subdirectory pkg/utilities/nttools/tintegrate is up to date
+Subdirectory pkg/utilities/nttools/tjoin is up to date
+Subdirectory pkg/utilities/nttools/tlinear is up to date
+Subdirectory pkg/utilities/nttools/tmatch is up to date
+Subdirectory pkg/utilities/nttools/tmerge is up to date
+Subdirectory pkg/utilities/nttools/tprint is up to date
+Subdirectory pkg/utilities/nttools/tproduct is up to date
+Subdirectory pkg/utilities/nttools/tproject is up to date
+Subdirectory pkg/utilities/nttools/tquery is up to date
+Subdirectory pkg/utilities/nttools/trebin is up to date
+Subdirectory pkg/utilities/nttools/tselect is up to date
+Subdirectory pkg/utilities/nttools/tsort is up to date
+Subdirectory pkg/utilities/nttools/tstat is up to date
+Subdirectory pkg/utilities/nttools/ttranspose is up to date
+Subdirectory pkg/utilities/nttools/tunits is up to date
+Subdirectory pkg/utilities/nttools/tupar is up to date
+Library libpkg.a is up to date
+Object x_nttools.o is up to date
+xc -Nz x_nttools.o libpkg.a -lxtools -lntbtables -o xx_nttools.e
+Library libpkg.a is up to date
+Object x_utilities.o is up to date
+xc -Nz x_utilities.o libpkg.a -lxtools -lcurfit -lbev -lgsurfit -o xx_utilities.e
+move `xx_utilities.e' to `bin$x_utilities.e'
+purge directory `bin$'
++
++
+!touch unix/hlib/utime
+====================== (done) ===========================
+!date
+Tue Apr  3 11:30:58 CLST 2018

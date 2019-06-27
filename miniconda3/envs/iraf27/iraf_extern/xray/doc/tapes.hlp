@@ -1,0 +1,149 @@
+.help tapes May96 head-xray
+
+Information concerning available tape drives is stored in the IRAF file
+"dev$tapecap".  The following drives may be used by any HEAD IRAF user, 
+provided that the user has login privileges on the machine on which the 
+tape is mounted.
+
+.nf
+Tape Devices on the HEAD Public Tape Server, machine "reel":
+
+    format  iraf    physical devices                comments 
+            name 
+    ------  ------  ----------------------          ------------
+
+    HP DATs: mtn    /dev/rht0 /dev/nrht0            uncompressed
+                    /dev/rcht0 /dev/nrcht0          compressed
+
+             mtn1   /dev/rht1 /dev/nrht1            uncompressed
+                    /dev/rcht1 /dev/nrcht1          compressed
+
+             mtn2   /dev/rht2 /dev/nrht2            uncompressed
+                    /dev/rcht2 /dev/nrcht2          compressed
+
+    Exabyte: mto    /dev/rsx0 /dev/nrsx0
+                    /dev/rlsx0 /dev/nrlsx0          long inter-file marks
+
+             mto1   /dev/rsx1 /dev/nrsx1
+                    /dev/rlsx1 /dev/nrlsx1          long inter-file marks
+
+    1/4":    mtp    /dev/rst0 /dev/nrst0
+                    /dev/rst8 /dev/nrst8
+
+    9-trk:   mtq    /dev/rst1 /dev/nrst1             800 bpi
+                    /dev/rst9 /dev/nrst9            1600 bpi
+                    /dev/rst17 /dev/nrst17          6250 bpi
+
+On other machines, the iraf names and physical device names are the same, 
+with the addition of the "Solaris" DAT drive, "mtm":
+
+Solaris DAT: mtm    /dev/rmt/0 /dev/rmt/0n	    uncompressed
+                    /dev/rmt/0c /dev/rmt/0cn        compressed
+ 
+     HP DAT: mtn    /dev/rht0 /dev/nrht0            uncompressed
+                    /dev/rcht0 /dev/nrcht0          compressed
+
+    Exabyte: mto    /dev/rsx0 /dev/nrsx0
+                    /dev/rlsx0 /dev/nrlsx0          long inter-file marks
+
+       1/4": mtp    /dev/rst0 /dev/nrst0
+                    /dev/rst8 /dev/nrst8
+
+
+.fi
+
+.ih
+NOTES
+Versions 2.10 and later can handle a larger variety of tape drive types than
+earlier versions of IRAF.  Information concerning each available drive is
+stored in the file "dev$tapecap".  Inside IRAF, you may allocate across a
+network, but you must have user privileges on the machine with the tape drive
+so you wrest ownership of the drive from Unix.
+
+.ih
+UNIX TAPE ALLOCATION
+Before using a tape drive inside IRAF, check to see if it is in use using
+the "getlist" command and checking the ownership of the Unix tape name
+from the above table.  
+If you are using one of the tapedrives on "reel", and if it is owned by root, 
+it must be allocated in Unix using "getdev <Unix tape name>".  If getlist 
+shows that someone else owns the tape, you will not be able to use it until 
+they type "rlsdev <Unix tape name>".  If they are not currently logged in, 
+you will be able to type "rlsdev <Unix tape name> and then "getdev <Unix 
+tape name>".
+
+.ih
+IRAF TAPE ALLOCATION
+
+After getting read and/or write permission for the tape drive from Unix,
+Type "allocate <IRAF tape>" in IRAF.  The IRAF prompt should reappear, 
+indicating that the drive has been allocated.  
+
+When you are done, be sure to type "deallocate <IRAF tape>" to free the tape 
+drive for other users.  If you are on "reel", you must also type 
+"rlsdev <Unix tape name>".
+.ih
+EXAMPLE
+To read a FITS file from the dat drive on reel, mount the tape and
+type
+.nf
+reel-40: getlist
+mtn /dev/rht0 /dev/nrht0 /dev/rcht0 /dev/nrcht0
+mtn1 /dev/rht1 /dev/nrht1 /dev/rcht1 /dev/nrcht1
+mtn2 /dev/rht2 /dev/nrht2 /dev/rcht2 /dev/nrcht2
+mto /dev/rsx0 /dev/nrsx0 /dev/rlsx0 /dev/nrlsx0
+mto1 /dev/rsx1 /dev/nrsx1 /dev/rlsx1 /dev/nrlsx1
+mtp /dev/rst0 /dev/nrst0 /dev/rst8 /dev/nrst8
+mtq /dev/rst1 /dev/nrst1 /dev/rst9 /dev/nrst9
+mtr /dev/rsr0 /dev/sr0 
+
+crw-------  1 root      18,   1 Dec 13  1990 /dev/rst1
+crw-------  1 root      18,   5 Dec 13  1990 /dev/nrst1
+crw-------  1 root      18,   9 Dec 13  1990 /dev/rst9
+crw-------  1 root      18,  13 Apr  1 12:23 /dev/nrst9
+crw-------  1 ivan     109,   2 May 27 18:52 /dev/rht2
+crw-------  1 ivan     109,  18 Apr  5 17:13 /dev/rcht2
+crw-------  1 ivan     109,  66 May  6 14:16 /dev/nrht2
+crw-------  1 ivan     109,  82 Mar 29 19:18 /dev/nrcht2
+crw-------  1 root      18,   0 Dec  1 14:27 /dev/rst0
+brw-------  1 root      18,   0 Dec 13  1990 /dev/sr0
+crw-------  1 root      18,   4 Dec 13  1990 /dev/nrst0
+crw-------  1 root      18,   8 Feb 21  1992 /dev/rst8
+crw-------  1 root      18,  12 Feb 21  1992 /dev/nrst8
+crw-------  1 root      58,   0 Dec 13  1990 /dev/rsr0
+crw-------  1 root     108,   0 Jan 10 15:37 /dev/rsx0
+crw-------  1 root     108,   1 Apr 26 17:55 /dev/rsx1
+crw-------  1 root     108,  16 Oct  5  1993 /dev/rlsx0
+crw-------  1 root     108,  17 Mar 29 19:18 /dev/rlsx1
+crw-------  1 root     108,  64 Apr  4 15:52 /dev/nrsx0
+crw-------  1 root     108,  65 Mar 29 19:18 /dev/nrsx1
+crw-------  1 root     108,  80 Oct  5  1993 /dev/nrlsx0
+crw-------  1 root     108,  81 Mar 29 19:18 /dev/nrlsx1
+crw-------  1 root     109,   0 May 27 00:59 /dev/rht0
+crw-------  1 root     109,   1 May  5 12:54 /dev/rht1
+crw-------  1 root     109,  16 May 23 19:48 /dev/rcht0
+crw-------  1 root     109,  17 Mar 29 19:17 /dev/rcht1
+crw-------  1 root     109,  64 May 18 07:35 /dev/nrht0
+crw-------  1 root     109,  65 May 24 17:59 /dev/nrht1
+crw-------  1 root     109,  80 May 24 19:42 /dev/nrcht0
+crw-------  1 root     109,  81 Apr 11 21:40 /dev/nrcht1
+
+reel-41: getdev mtn
+You have the 'mtn'. Please 'rlsdev' it when done. 
+reel-42: cl
+cl> allocate mtn
+cl> dataio
+da> rfits mtn 1-5 data
+data0001
+data0002
+data0003
+data0004
+data0005
+...
+da> deallocate mtn
+da> logout
+reel-43: rlsdev mtn
+mtn released.
+.fi
+
+Report any problems to syshelp.

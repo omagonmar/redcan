@@ -1,0 +1,9 @@
+
+apply_bary - apply the barycenter time corrections to the time-sorted QPOE file
+ calc_bary - calculate the barycenter time corrections
+scc_to_utc - convert from ROSAT spacecraft clock time to UTC
+
+( Type help <topic> for info on any of the following: )
+
+using_timcor - description of ROSAT timing correction tasks
+         utc - ROSAT spacecraft clock to universal time data point description

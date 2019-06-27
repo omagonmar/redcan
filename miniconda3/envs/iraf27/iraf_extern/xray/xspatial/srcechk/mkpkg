@@ -1,0 +1,23 @@
+# $Header: /home/pros/xray/xspatial/srcechk/RCS/mkpkg,v 11.0 1997/11/06 16:33:36 prosb Exp $ 
+# $Log: mkpkg,v $
+# Revision 11.0  1997/11/06 16:33:36  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:56:21  prosb
+# General Release 2.4
+#
+#Revision 1.1  1994/10/24  16:20:24  prosb
+#Initial revision
+#
+#
+# Make the srcechk task.
+
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+
+libpkg.a:
+	srcechk.x 	<tbset.h>
+	;
+

@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+lib/wfpc2tools/__init__.py
+lib/wfpc2tools/cwdutil.py
+lib/wfpc2tools/opusutil.py
+lib/wfpc2tools/version.py
+lib/wfpc2tools/wfpc2cte.py
+lib/wfpc2tools/wfpc2destreak.py
+lib/wfpc2tools/wfpc2util.py
+lib/wfpc2tools.egg-info/PKG-INFO
+lib/wfpc2tools.egg-info/SOURCES.txt
+lib/wfpc2tools.egg-info/dependency_links.txt
+lib/wfpc2tools.egg-info/not-zip-safe
+lib/wfpc2tools.egg-info/requires.txt
+lib/wfpc2tools.egg-info/top_level.txt

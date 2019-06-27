@@ -1,0 +1,60 @@
+#$Header: /home/pros/xray/xplot/imcontour/RCS/mkpkg,v 11.0 1997/11/06 16:38:13 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:38:13  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:09:08  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:02:31  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:48:55  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:41:28  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:35:28  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  17:34:00  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:24:10  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/07/26  03:06:11  wendy
+#Initial revision
+#
+#
+# Make control package.
+ 
+$ifnewer (clevparse.yy, clevparse.x)
+     $ifeq (HOSTID, unix)
+       $echo "clevparse.x is out of date; rebuilding with XYACC:"
+       !(rm -f clevparse.x; xyacc clevparse.yy;sed "s/yyparse/clev_yyparse/g" < ytab.x > clevparse.x;rm -f ytab.x)
+     $else
+       $echo "clevparse.x is out of date; rebuild with XYACC"
+     $endif
+$endif
+
+$checkout libpkg.a ..
+$update libpkg.a
+$checkin libpkg.a ..
+$exit
+ 
+
+libpkg.a:
+	imcontour.x <gset.h> <imhdr.h> <ext.h> <mach.h> imcontour.h clevels.h
+	clevparse.x <error.h> <ctype.h> <lexnum.h> <finfo.h> clevparse.com clevparse.h
+	clevstore.x clevels.h clevels.com
+	imc_clevels.x <imhdr.h> <math.h> <mach.h> clevels.h imcontour.h
+	imc_contours.x <gset.h> imcontour.h clevels.h clevels.com
+	imc_pixgrid.x <gset.h> imcontour.h
+	imc_rddata.x <imset.h> <imhdr.h> <tbset.h> <error.h> <gset.h> imcontour.h <precess.h> <math.h>
+	imc_skymap.x <gset.h> <math.h> <mach.h> imcontour.h clevels.h
+	imc_legend.x <gset.h> <math.h> imcontour.h clevels.h clevels.com
+	imc_utils.x <gset.h> <math.h> <imhdr.h> <qpoe.h> <mach.h> imcontour.h clevels.h
+        imc_subs.x <math.h> <mach.h> imcontour.h 
+        ;

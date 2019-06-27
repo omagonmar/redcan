@@ -1,0 +1,1444 @@
+08FEB94 KMM               SQIID MANUAL
+================================================================================
+
+                         INTRODUCTION
+
+     The Simultaneous Quad-color Infrared Imaging Device (aka SQIID) is
+routinely available for general users at the 1.3 meter telescope (with a FOV of
+5.5 arcmin at a platescale of 1.36 arcsec/pixel at K) and the 4-meter with the
+new f/15 secondary (with a FOV of 1.8 arcmin at a platescale of 0.43
+arcsec/pixel at K).  Cold dichroics allow the four separate detectors within
+SQIID to image the classic infrared J, H, K, and L' windows simultaneously.
+Each detector is a Hughes 256 x 256 hybrid platinum silicide Schottky barrier
+diode array with 30 micron pixels (90% geometric and 100% optical fill factors).
+These new arrays have been developed, characterized, and identified under
+contract with Hughes as part of the Infrared R&D here at KPNO under the
+direction of Al Fowler.  Dark current is less than 2 e/sec, read noise is about
+60 electrons, and well capacity is a million electrons.  Detector quantum
+efficiencies are roughly 6.6% at J, 5.5% at H, 3.4% at K, and 1.5% at L'.  Since
+the optics for each channel are independently optimized over a relatively narrow
+bandpass, instrumental throughput is high and ghosting is minimized.  The
+separate channels are co-focused and co-aligned with a minimum overlap region of
+245 x 245 pixels common to all channels and are physically edge-masked to stop
+stray light from entering the readout.  The detectors are of high cosmetic
+quality: a uniformity specification of +/- 5% yields fewer than 20 "bad" pixels
+within the unmasked area of 245x245 pixels.  Consequently, the dark/sky
+subtracted raw data are useful in assessing data quality in near real-time.
+Details of the SQIID system are discussed by Ellis et al. 1992
+("The Simultaneous Quad-color Infrared Imaging Device (SQIID): A Leap Forward
+in Infrared Cameras for Astronomy" by T. Ellis, R. Drake, A. M. Fowler,
+I. Gatley, J. Heim, R. Luce, K. M. Merrill, R. Probst, & N. Buchholz, 1992, in
+Proceedings of SPIE, 1765, pp. 94-106.) the Fast InfraRed Electronics
+(FIRE) are discussed by Luce and Ellis (1992, Proc. SPIE v. 1684, pp xxx-xx),
+and detectors are discussed by Fowler et al. (1989, Proc. SPIE v. 1107,
+pp 22-30).  Since SQIID employs closed cycle refrigeration instead of liquid
+cryogens, observers are cautioned to prepare other reasons for taking night
+lunch at midnight!
+
+     Detector area, stability, uniformity, quantum efficiency, read noise and
+dark signal combine to make SQIID the system of choice for any observation whichrequires JHK imaging over large areas of the sky.  An option for simultaneous
+full-field polarimetry at J, H, and K is also available.  The polarimeter
+consists of a cooled wire-grid linear polarizer mounted in the darkslide wheel
+in SQIID and a warm achromatic halfwave plate mounted in the guider just in
+front of the instrument window, providing a combined efficiency of > 75%.  The
+SQIID guider assembly has diagonal mirrors, 01JAN94about 17.5 arcmin in RA on
+either side of the clear aperture, which feed two ports for mounting guider
+cameras.  An ISIT camera can be used for acquisition and guiding within a 3x3
+arcmin field of view.  (SQIID's FOV is 5.5 arcmin at the 1.3m and 1.8 arcmin
+at the 4m telescope.)
+
+     The FIRE (Fast InfraRed Electronics) system, originally developed at KPNO
+for SQIID, has evolved into the WILDFIRE system, which is now employed for all
+IR instrumentation at KPNO.  SQIID is controlled from a Sun computer by the
+WILDFIRE system, a transputer based system which communicates over optical
+fibers.  WILDFIRE supports channel-specific integration times, fast co-adding
+in place, movie mode, and data transfer directly to the Sun.
+
+     The WILDFIRE system uses transputers and transputer links to control and
+acquire data from SQIID.  A transputer is a single-chip mircocomputer with its
+own local memory and communication links, which can operate either by itself
+or in conjunction with other elements linked to form computing arrays and
+networks.  The WILDFIRE system consists of three main hardware components:  
+
+   The SQIID instrument control unit (inside the electronics box on SQIID)
+   contains five transputers which provide housekeeping data and control and
+   generate the sequences which operate each array.
+
+   The DSP unit (a VME based digital signal processor system located inside the
+   black Heurikon box in the computer room ) contains eight transputers which
+   provide the math processing needed to do coadding as the data is taken and
+   buffer space for finished data before it is transferred to the Sun computer.
+
+   The B016 unit (a programable dual-port memory and interface board located
+   inside the black Heurikon box in the computer room) interfaces the
+   transputers and the Sun and handles the formatting of data before it is
+   saved to disk.
+
+Communications between SQIID and the DSP take place over transputer links
+implemented on an optical fiber cable.  The B016 interconnects the transputer
+DSP to the Sun SparcStation computer via a VME to SBUS converter within the
+Heurikon box in the computer room. (No more GETPIX!)
+
+     The WILDFIRE user interface on the Sun is implemented within the TCL (tool
+command language) environment.  The data appear as IRAF images, produced
+(in IEEE 32-bit floating point format) via the IMFORT routines so that they
+can be manipulated and archived to tape inside IRAF.
+
+Details are available from the Instrument Scientist,  Michael Merrill.
+
+############# SQIID is available on the 1.3m and 4m telescopes #################
+
+Some useful numbers for determining SQIID performance:  26DEC91
+
+                     J        H        K       L'
+
+quantum efficiency   6.6%     5.5%     3.4%    1.5% (lab detector measure)
+background (varies)  6       18        18   3300    adu/sec/airmass 1.3m
+background (varies)  5       10         7.5 2080    adu/sec/airmass 4m
+
+gain                11.5     11.5     11.5    11.5  electrons/adu
+dark  slope          0.16     0.16     0.16    0.04 adu/sec
+                    <2       <2       <2      <1    electrons/sec
+read noise          53       54       56      40    electrons
+
+typical extinction   0.15     0.06     0.08         mag/airmass
+
+integration time     4.00     4.00     4.00    0.45 sec miminum
+delay time           3.00     3.385    3.770   1.00 sec 
+time between resets  7.00     7.385    7.770   1.45 sec minimum
+
+6.5 mag star      13000     8900     4400           peak pixel adu @ 1.3m
+                                                    (5sec 2.0 pixel FWHM)
+
+bright limit mag     6.0      5.6      4.9          20000 peak adu in 5 sec
+
+relative pointing (8W,4N)  (4W,1S)   (0,0)  (4W,1N) pixels on sky
+     platescale    1.0247   1.0036   1.000   0.9624 units/pixel relative scale
+1.3m platescale    1.395    1.366    1.361   1.310  arcsec/pixel NEW GUIDER
+  4m platescale    0.4437   0.4346   0.433   0.417  arcsec/pixel NEW GUIDER
+
+(NB: before 9/91   1.338    1.309    1.304   1.254  arcsec/pixel OLD GUIDER)
+
+typical color terms:  K = K(inst) + C(K)    : C(K)   = 15.17 (1 sec)
+                    H-K = H-K(inst) + C(H-K): C(H-K) =  1.06
+                    J-K = J-K(inst) + C(J-K): C(J-K) =  1.42
+
+
+================================================================================
+
+Performance summary at 1.3m:    (5.5 arcmin FOV)    26DEC91
+                     J        H        K       L'
+1.3m platescale    1.395    1.366    1.361   1.310  arcsec/pixel NEW GUIDER
+instrumental mag     8.5      8.8      9.9    12.84 adu: 0mag,1sec zeropoint=25 
+instrumental mag   -16.5    -16.2    -15.1   -12.16 adu: 0mag,1sec zeropoint=0
+instrumental mag   -19.1    -18.8    -17.8   -14.8  e  : 0mag,1sec zeropoint=0
+15 mag star         44.9     34.4     13.1     0.8  electrons/sec
+background (varies)  6       18       18    3300    adu/sec/airmass @1.3m
+background (varies) 70.     200.     200.  38000    electrons/sec/airmass @1.3m
+
+Assuming no penalty for background subtraction a 600 sec on source integration
+would have the following limiting magnitudes:
+
+point source        17.9     17.0     16.0    10.1  SNR=3, 10 sq-pixels area
+diffuse source      20.6     19.7     18.7    12.8  SNR=1, 1 sq-arcsec area
+
+Assuming a sqrt(2) subtraction penalty, performance would decrease by 0.38 mag
+(NB: Under normal circumstance, at L' we coadd 2 second integrations with 1
+second delay time.  The resultant 60% duty cycle means that for L', time on
+source is only 60% of the JHK integration time.)
+
+================================================================================
+
+Performance summary at 4m:      (1.8 arcmin FOV)    08DEC92
+                     J        H        K       L'
+4m platescale      0.4437   0.4346   0.433   0.417  arcsec/pixel NEW GUIDER
+instrumental mag     6.3      6.7      7.7    10.6  adu: 0mag,1sec zeropoint=25 
+instrumental mag   -18.7    -18.3    -17.3   -14.4  adu: 0mag,1sec zeropoint=0
+instrumental mag   -21.3    -21.0    -20.0   -17.1  e  : 0mag,1sec zeropoint=0
+15 mag star        331.     251.     100.      6.9  electrons/sec
+background (varies)  5       10        7.5  2080    adu/sec/airmass @4m
+background (varies) 60.     110       90.  23900    electrons/sec/airmass @4m
+
+Assuming no penalty for background subtraction a 600 sec on source integration
+would have the following limiting magnitudes:
+
+point source       20.1     19.5     18.6     12.7  SNR=3, 10 sq-pixels area
+diffuse source     21.6     21.0     20.1     14.2  SNR=1, 1 sq-arcsec area
+
+Assuming a sqrt(2) subtraction penalty, performance would decrease by 0.38 mag
+(NB: Under normal circumstance, at L' we coadd 2 second integrations with 1
+second delay time.  The resultant 60% duty cycle means that for L', time on
+source is only 60% of the JHK integration time.)
+
+================================================================================
+
+The four arrays are 256x256 PtSi, physically edge-masked to stop stray light
+from entering readout. The mask geometry, oriented as readout and displayed
+(N down and E to the left) is:
+
+                     J             H             K             L'
+active area    [1:256,1:256] [1:256,1:256]  [1:256,1:256]  [1:256,1:256]
+trim mask      [5:2,1:6]     [6:2,9:0]      [2:4,0:6]      [2:3,3:3]
+unmasked area  [6:254,2:250] [7:254,10:256] [2:252,1:249]  [3:253,4:253]
+
+Within the unmasked area of each of the JHK arrays there are less than a dozen
+out-of-spec (high dark|low efficiency|shorted|open) pixels (apart from small
+clusters of pixels in the upper-righthand corner where the bias leads are
+attached).
+
+The current operational characteristics of the system allow about 40,000 adu
+useful dynamic range under low background (integration time longer than 3 sec)
+and 20,000 adu under high background (integration time shorter than 1 sec).
+At the high-end of these ranges, the signal has rolled off about 10%.
+There are two independently set integration times: one for J, H, and K and one
+for L' (J <= H <= K; L' <= J).  Although the L band is active (we are able to
+co-add the data in real time when using the FIRE electronics with a system
+efficiency of better than 50% total integration time within the JHK time), we
+have not yet established the proper operating protocol for these observations.
+
+NOTE: The is a channel-dependent delay (see table above) between array reset
+(which establishes the bias on the detector) and the first read (which
+determines the bias value).  An integration time elapses between this first read
+and the second readout of the array.  Only the difference between these reads is
+passed to the user.  This means that at short integration times and high photon
+arrival rates, one needs to consider the full time from reset
+(delay + integration time) when deciding whether an object is bright enough 
+to be outside the linear response region. (e.g. 10,000 adu in an integration
+time of 5 sec is really 1.6 times larger, 16,000 adu, on the detector.)
+
+================================================================================
+
+FILTER INFORMATION:
+
+                     J        H        K       L'
+
+filter manufact.    Barr     Barr     Barr    Barr
+filter HPshort      1.131    1.535    2.027   3.520 micrometers
+filter midpoint     1.267    1.672    2.224   3.801 micrometers
+filter HPlong       1.402    1.809    2.421   4.122 micrometers
+filter FWHM         0.271    0.274    0.394   0.602 micrometers
+
+HKL data are from manufacturer's 77K tracings.  J data are estimated from 
+manufacturer's warm tracing by applying 1.63% shortward shift.  Dichoric
+transparency has not been applied.
+
+================================================================================
+
+GENERAL CONSIDERATIONS:
+
+   COMPUTER LAYOUT -  There are two user accessible computers at each telescope.
+        The functions of instrument control and data aquistion are performed by
+        the instrument computer (berry at the 1.3m) and data reduction and
+        analysis are performed primarily by the data reduction computer
+        (scarlet at the 1.3m).  Since the data areas of the discs are accessible
+        from either machine, one has considerable flexibility in data placement
+        data processing and archiving.  As described below, at the 1.3m full
+        access to the telescope control program TCP on the telescope computer is
+        routed through scarlet.
+
+        The login accounts are setup for "ir50inch" with password _________.
+        At login, you can select either the X (and saoimage) or Sunview (and
+        imtool) environment.
+         
+        At the 1.3m /data1 is on scarlet and /data2 is on berry.
+
+   TCP - The telescope control computer can be accessed from a window on either
+        machine at the 1.3m:
+
+          On scarlet, either select the TCP option from the menu, or select a
+          shelltool from the menu and type "tip tcp <return>" to connect to TCP.
+
+          From berry, select a shelltool from the menu, type "rlogin scarlet",
+          respond with the ir50inch password, then type "tip tcp <return>".
+
+        Upon connection, TCP should repond with an "*" prompt.
+
+        Disconnect from TCP by consequtively typing the two characters
+       "Shift ~" and "Control D" in the TCP window.  Connect and disconnect can
+        be done at any time without affecting TCP itself.  However, only one
+        connection can be made at a time.
+
+        "tstat <return>" will return TCP status information.  The line:
+           "pointing characteristics, focal position 2, SQIID: ..."
+        tells which pointing map is operative.
+
+        Communication between TCP and the WILDFIRE system (necessary to obtain
+        telescope header information WILDFIRE controlled telescope motions)
+        is only possible when the IR task is running within TCP.  If the IR task
+        is not running, open a connection to the TCP console in a free window
+        by typing: 
+           tip tcp-console <return>  (TCP will respond with "aqua>")  
+           ir <return>
+        If the TCP processor responds with a message of the form
+           "undefined word", type the following:
+              0 lf /user/ap <return>
+              ir <return>
+        When the "aqua>" prompt returns, disconnect from TCP-CONSOLE by
+        consequtively typing the two characters "Shift ~" and "Control D"
+        in the  TCP-CONSOLE window, then follow the TCP REBOOT procedure below.
+
+  TCP REBOOT - The telescope control computer at the 1.3m requires careful
+        attention following a TCP reboot.  If "sqiid" and "sqtv" are undefined,
+        then TCP has been re-booted.  If TCP has been rebooted type:
+            tcsetup <return>  (to initiate TCP)
+            tstat   <return>  (to get telescope status)
+
+        (NOTE: typing "tstat <return>" on TCP will report the current fpos,
+        and a lot more! The line:
+           "pointing characteristics, focal position 2, SQIID: ..."
+        tells which pointing map is operative.  If this line says anything
+        besides SQIID, then type:
+            fpos    <return>
+               2    <return>  (set instrument to 2 for SQIID)
+              z0    <return>  (to recover last saved z for instrument)
+
+        Finally, redefine "sqiid" and "sqtv" as noted above.
+
+        If you must use the finder to reaquire pointing, note that a star
+        at the center of the finder is within the FOV of SQIID.  Use "sqtv"
+        to offset the telescope to the TV and search for the star there.
+
+   CHANNEL INFORMATION - Data are always taken for all 4 channels.  You can
+        select which channels are actually saved by the system.
+
+   PICTURE ORIENTATION - Instrumental image orientation: N is down and E is left
+        on the instrument display window
+       (Within IRAF use: imcopy image[*,-*] image[*,*] to make N up and E left).
+
+   TV GUIDER - An ISIT TV is available for offset pointing.  At the 1.3m it is
+	located about 15.5 arcmin offaxis in RA with a field of view is about
+	3 arcmin.  When the left port is used a motion of 1020 east moves from
+	TV to SQIID and a motion of 1020 west moves from SQIID to the TV.  On
+	the Telescope Control Computer: 
+           Type sqiid to move from the TV to the SQIID position.
+           Type sqtv to move from the SQIID to the TV position.
+
+        The FORTH definition for moving from the TV to the SQIID position is:
+          : sqiid 1020. east  50. north ; (1.3m)
+          : sqiid  315. east  55. north ; (4.m) 
+        The FORTH definition for moving from the SQIID to the TV position is:
+          : sqtv  1020. west  50. south ; (1.3m)
+          : sqtv   315. west  55. south ; (4m)
+
+        [NOTE: these are relative motions.  Typing them twice moves the FOV
+        twice as far.  When you preset, all relative motions are lost.  When
+        you "preset" again, you return to the same point of view, SQIID or TV,
+        that was present when you last executed "z".
+
+        YOU SHOULD KEEP TRACK OF THESE DEFINITIONS.  Since for proper opration
+        of the pointing map you must "z" on the TV FOV and offset to the
+        SQIID FOV, all the IRAF header files will be giving RA and DEC info
+        which is in error by the offsets between the two positions.
+
+   POINTING - At the 1.3m, the pointing map works best when the pointing target
+        is within the FOV of the off-axis TV (the "sqtv" position).  You should
+        consistently mark your pointing (with "z") in that position; if you "z"
+        at the on-axis ("sqiid") position, you will incur a signicant (and
+        potentially large) offset in RA which is a function of the DEC to which 
+        you point!  Remember that when you preset to a new position, knowledge
+        of your prior relative motions (which appear as "errors" in the
+        pointing) from your previous preset position are forgotten.  When you
+        "preset" to a new position you do not need to return (via "sqtv") to
+        your starting point prior first.  When you "preset", the telescope will
+        attempt to point the targgget to the FOV (detector or offset TV)
+        corresponding to your most recent "z".
+
+   ENVIRONMENTAL LIGHTING - The detector response after exposure to intense
+        light is two-fold:
+        1) a time varying dark signal, which decays over about an hour.
+        2) a semi-permanent dark signal, which decays over days and can persist
+           until the detectors are cycled above ~70K.
+      The following precautions should be taken to limit this dark enhancement:
+        1) Close the instrumental cold dark-slide (handcrank on SQIID) whenever
+           the instrument is left unattended, whenever observations are
+           interrupted for extended periods of time, or when checking mirror
+           covers.
+        2) Whenever the instrumental cold dark-slide is open, keep the dome
+           lights OFF and avoid shining flashlights into the telescope mirrors.
+
+
+   RECORD KEEPING - Although telescope computer status information is supported
+        in the image headers, it is recommended that you also keep good notes.
+        Exposure time, number of coadds and filter/channel information, RA, DEC,        airmass, UT and sideral time are updated prior to the start of an
+        observation.
+
+   FOCUS - The channels share a common focus, so any channel can be used to
+        verify focus.  However, since the appearance of the near-focus image
+        is somewhat wavelength dependent, you should select one channel
+        (preferably J or H) and consistently use the same channel to check
+        focus.  The images at the 1.3m/4m are astigmatic, so the images vary
+        from \ to o to / as the focus moves towards larger absolute numbers.
+        This is also the direction you must correct the focus during the night
+        as the temperature decreases ( as temperature decreases, the images
+        elongate to /; you correct by going to larger negative numbers).  Since
+        the focus is temperature dependent, at the 1.3m we have installed a pair
+        of temperature sensors on the top support ring (top) and down by the
+        mirror cell (bottom).  Either temperature or their difference can be
+	displayed using the rotary switch on the readout (reads in degrees
+	Celsius).  Preliminary measurements suggest that the focus must be
+	drive n ~7 units more negative to compensate for each degree C
+	temperature decrease.  At the 1.3m, one should be able to easily focus
+	to +/- 5 units; once the temperature dependence has been established,
+	+/-2 units should be possible.  Focus summary:
+
+	   1.3m   4m 
+           +/-5   +/-20   (focus units) practical minimum focus increment
+	   +/-30  +/-100  (focus units) range from in-focus to detectable ring
+	   7/C            (focus units/degree C) focus change with temperature
+            /      /      image shape when focus value too high
+            \      \      image shape when focus value too low 
+
+   HOUR-ANGLE LIMITS - At the 1.3m telescope safe operation is inside the
+        envelope 5hr east to 6hr west.  NO POINTING UNDER THE POLE!
+
+   HOURS FOR SAFE OBSERVATION - Measurements have shown that at 15 minutes
+        after the start of astronomical twilight in the morning (and before
+        the start of astronomical twilight in the evening), the background at J
+        and H is doubling every 10 minutes.  
+
+   RELATIVE POINTING - The relative pointing of the four channels appears to
+        be constant at the sub-pixel level, independent of gravitational
+        load.  Thermal-cycling can cause shifts in the relative location of the
+        J channel between observing runs (change is <= one pixel).  The easiest
+        way to establish/monitor the relative pointing is by taking pictures of
+        globular clusters.  60-second exposures of the core of M3/M5/M15 have
+        proven to be useful in this regard.  The IRAF GEOMAP routine can be used
+        to convert ordered lists of star coordinates for each frame to the
+        appropriate offset, magnification, and rotation between channel pairs.
+        A second order fit appears to be sufficient.  The recommended parameters        for GEOMAP are:
+
+        input = "aug29jtok.geoco" Input data
+       output = "aug29jtok.geomap" Output database
+         xmin = -43.            Minimum x value        # to allow for offsets
+         xmax = 300.            Maximum x value        # to allow for offsets
+         ymin = -43.            Minimum y value        # to allow for offsets
+         ymax = 300.            Maximum y value        # to allow for offsets
+    (function = "polynomial")   Surface type
+     (xxorder = 2)              Order of x fit in x
+     (xyorder = 2)              Order of x fit in y
+     (xxterms = yes)            Include cross-terms in x fit?
+     (yxorder = 2)              Order of y fit in x
+     (yyorder = 2)              Order of y fit in y
+     (yxterms = yes)            Include cross-terms in y fit?
+      (reject = 0.)             Number of sigma for rejection
+    (calctype = "double")       Computation type (real,double)
+ (interactive = yes)            Fit surface interactively
+    (graphics = "stdgraph")     Default graphics device
+      (cursor = "")             Graphics cursor
+        
+   DARKS - The time-dependent dark is only ~1 electron/sec across most of the
+        array.  However, since the higher-order spatial feaures, such as the
+        wisps near the bottom edge, are brighter and will also scale with
+        integration time, darks corresponding to all integration times used
+        should be taken, whenever they will be needed for later processing.
+        In particular, darks should be taken at the integration time used for
+        flatfields.  For integrations times less than 180 sec, a sequence of 9
+        exposures should be sufficient.  For longer integration times, 7
+        exposures should be sufficient.  Since the dark current is so low, you
+        will be able to see transient events, such as those due to cosmic rays,
+        in the displays.  Darks should be taken in the afternoon and in the
+        morning.  To maximize the available disk space it makes sense to tape
+        these data before each nights' observing.
+
+   FLATFIELDS -  The system response is stable and is very flat across the
+        arrays, with a odd-even column modulation of +/- a few percent.  We have
+        placed a shroud around the telescope structure to limit off-axis direct
+        illumination.  Consequently, the flatfield for each channel should
+        be stable at the percent level under normal illumination and global
+        flatfields can be constructed which are viable for extended periods of
+        time.  Since direct illumination of the array is possible (remember that
+        the secondary mirror is undersized), observations near bright sources,
+        such as the moon, which have atypical illumination, should not be used
+        to determine global flatfields.  Observations during twilight will also
+        have illumination atypical of nighttime observations.
+
+   SKY FRAMES -  While the detectors are stable, the sky is not necessarily so.
+        Under good conditions, sky flux varies only with airmass and at a given
+        position, the sky can be stable over an hour or more.  Naturally sky
+        flux increases when you get near the moon.  When airglow is high and
+        variable, the sky at H can vary by a factor of two over the course of
+        an hour, while the sky at J varies by 40%.  Consequently it is prudent
+        to monitor the sky (use IMSTAT inside IRAF) to be sure that you have
+        sufficient data to perform sky subtraction on your targets.
+
+        CAUTION: One cannot expect to simply co-add observations of faint
+        surface brightness sources and allow the off-source portion of the
+        observations within the detector FOV to determine the presumably
+        constant level of the sky.  At some level, defects in the flatfield
+        (pupil ghosts, object ghosts, or whatever) dominate the accuracy of the
+        results.  This deficiency is typically overcome by subtracting
+        off-source observations of the sky, then flatfielding the differences.
+        This improves the accuracy of the detected signal by at least an order
+        of magnitude.
+
+        In the IR (even at JHK) observations of all but the brightest stars
+        (7 mag) are background limited so that typical diffuse targets (such as
+        galaxies) are seen at very low contrast in individual frames.  As noted
+        above, the sky background is constantly changing (slowly with airmass
+        and on slow to moderately rapid timescales with sky emission) so that
+        the contrast varies as a function of time.  Since observations are
+        ultimately limited by inadequacies in the flat-field, one cannot simply
+        co-add such observations and obtain a meaningful result; median
+        filtering such data merely selects the middle frame.  (For example, as
+        the contrast varies the illumination pattern on the array also varies
+        since the relative mix of radiation seen through the telescope optics
+        and that seen directly past the secondary changes.)
+
+        One must devote a comparable amount of time off-source, intermixed
+        throughout the on-source observations, to provide sky frames;
+        subtracting sky frames on a pixel by pixel basis reduces the contrast
+        problem and allows one to successfully co-add data taken over a long
+        interval of time.  When the targets are much smaller than the array,
+        one can accomplish this sky subtraction by moving the target around
+        the array and in effect taking the sky and source data at the same time. 
+   OBSERVING EFFICIENCY - There is a 16 sec overhead (on top of the integration
+        time; 3 sec of this is the delay_time discussed below) when using
+        MOVIE. The same 16 sec  overhead applies to a data cycle (between
+        hitting <return> after typing "go" and receiving a prompt back so you
+        can issue a new command.  The overhead is minimized when the
+        housekeeping readout is disabled.  Images are transfered directly to
+        the SUN as (unprotected) IRAF images.
+
+   COADDS - In addition to coadding at L, one can also coadd at JHK, subject to
+        the restriction that the number of coadds at JHK must be equal.  The
+        number of coadds at L' per JHK readout cycle should be carefully chosen
+        (using the "calc") to be appropriate for the JHK integration time.  The
+        total number of coadds at L' is the product of the requested number
+        at L' (the inner cycle) times the coadds at JHK (the number of repeats).
+        As always, the final image is the floating point result of dividing the
+        sum of the coadded frames by the total number of coadds.  Coadding at
+        JHK is useful, for example, when you are trying to accumulate signal to
+        noise on relatively bright sources (short integrations) without having
+        to deal with the individual frames.  Owing to the large difference in
+        instrumental magnitudes between JHK and L', calibration data at L' are
+        best obtained in such a fashion.
+
+        JHK  |       L'         |       L'         |       L'         |
+        INT  | INT coadd total  | INT coadd total  | INT coadd total  |
+        =====+==================+==================+==================+
+          5  |  2    1    2:40% |  3    0    0:0%  |  4    0    0:0%  |
+         10  |  2    2    4:40% |  3    1    3:33% |  4    1    4:40% |
+         30  |  2    8   16:53% |  3    6   18:60% |  4    5   20:67% |
+         60  |  2   16   32:53% |  3   12   36:60% |  4   10   40:67% |
+        120  |  2   33   66:55% |  3   26   78:65% |  4   21   84:70% |
+        180  |  2   50  100:56% |  3   39  117:65% |  4   32  128:71% |
+        300  |  2   84  168:56% |  3   66  198:66% |  4   54  216:72% |
+
+        J R++N++++++++++N        R = Reset
+        H  R++N++++++++++N       N = Non-descructive read
+        K   R++N++++++++++N
+        L'      RN+NRN+N
+
+   LOW NOISE READOUT - Since for integration times beyond order thirty seconds,
+        SQIID observations are background limited, the low noise multiple
+        readout techniques serve no useful purpose and are not implemented for
+        SQIID.
+
+   TILING MOSAICS - The common field of view of the 4 channels is 5.5 arcmin.
+        Observations on 300 arcsec centers allow 30 arcsec overlap ( 1.6 times
+        the FOV of IRIM!), which should be sufficient for spatial registration
+        anywhere near the Galactic plane.
+
+   DITHERING - Away from the frame boundary, the largest clump of intrinsically
+        bad pixels within the JHK channels is 2 pixels in extent.
+        Instrumental focus is about 2 pixels FWHM with nearly all the energy
+        within a radius of 4-6 pixels.  Consequently, dithering (repeated
+        obervations with small offsets) of 10-20 arcsec EW and/or NS should
+        allow both bad pixels and stellar images to be successfully removed by
+        median filtering.
+
+   POWER GLITCHES - Power glitches can shut the closed cycle coolers off.  When
+        this has occured, an alarm should sound inside the dome and stay on
+        until the closed cycle coolers have re-started.  The new Closed Cycle
+        Cooler Controller will attempt to automatically restart and rephase
+        the coolers after ordinary power glitches and most power outages.
+
+   GHOSTING - Each channel has its ghost, whose position is opposite the optic
+        axis from its parent bright star.  Only saturated stars are bright
+        enough to clearly show their ghost, which is out-of-focus, covering
+        about 25% of the chip.  The out-of-focus ghosts, which lie opposite the
+        optic axis from the primary, have the following characteristics:
+            J       H       K   
+            90     108      56  pixels diameter
+           5.5     6.3     5.5  difference in integrated flux in magnitudes
+        In addition, the J channel has an in-focus ghost located 32.75 pixels
+        west of its parent and 5.4 magnitudes fainter.
+
+   DETECTOR STATUS - Vactive == Voff, when the detectors are activated.
+
+   LINEARITY - The output from IR arrays is a not strictly a linear function of
+        the input signal: the pixels are biased to establish a potential well
+        where charge can accumulate; this potential well gradually weakens as
+        charge accumulates on the node capacitance, effectively changing
+        (decreasing) the gain of that pixel.  Since the total capacitance
+        (which determines system gain) is the sum of the distributed
+        (non-varying) capacitance of the system and the (variable) capacitance
+        at each detector node, the degree of non-linearity is a function of the
+        ratio of nodal to total capacitance.  As a direct consequence, pixel
+        response departs from linearity in a predictable fashion for
+        accummulated signals above a device-specific level.  Since key pixel
+        parameters such as quantum efficiency are very uniform, the linearity
+        appears to be a global property of the array rather than pixel specific.
+
+        In the following discussion, observed (output) values have been
+        corrected for the unseen charge collected during delay between biasing
+        the detectors and the first (non-destructive) read of the bias.  A
+        second (destructive) read is taken an integration time later.  Only the
+        difference between reads is output.  Correction is:
+
+           corr_observed = observed *
+                                (integration_time + delay_time)/integration_time
+
+        Model fitted function for delay-corrected relative error:
+
+           ym = a(1) * ( sqrt ( a(2)/(a(2) - a(3) * x ) ) - 1.0 )
+
+        where ym = relative error = (input - corr_observed)/corr_observed
+              x  = corr_observed (adu)
+
+           a(1) =  0.758420     (ratio of nodal to total capacitance)
+           a(2) =  3.12864      (initial voltage on array (intrinsic + bias)
+           a(3) =  2.20141E-05  (conversion between output voltage and adu)
+
+       A third order polynomial fit is also acceptable:
+
+           y3 = a(1) + a(2) * x + a(3) * x**2 + a(4) * x **3
+
+           a(1)          a(2)          a(3)         a(4)
+       -7.315174E-4   3.244635E-6  -1.93612E-11  5.514444E-16
+        2.745902E-4   7.239127E-8  3.385621E-12  4.183907E-17
+
+       chi sqr: 2.30E-7   ftest: 200170.   correlation: 0.99999
+        nr pts:     20.   std dev res: 4.39917E-4
+
+       A second order polynomial fit:
+
+           y2 = a(1) + a(2) * x + a(3) * x**2
+
+          a(1)          a(2)          a(3)     
+       0.001924786   2.361529E-6  2.467293E-11
+       6.233315E-4   9.157068E-8  1.829205E-12
+
+      chi sqr: 2.57E-6   ftest: 14155.8   correlation:  0.9997
+       nr pts:     20.   std dev res: 0.00151495
+
+         x(data)   y(data)   y3(calc)  y2(calc)
+         1653.69   0.00464   0.00458   0.0059   
+         1850.41   0.00492   0.00521   0.00638   
+         2047.33   0.00504   0.00583   0.00686   
+         2242.84   0.00577   0.00645   0.00735   
+         2631.49   0.00781   0.00768   0.00831   
+         3021.87   0.00875   0.00891   0.00929   
+         3409.94   0.01016   0.01013   0.01026   
+         3797.04   0.01154   0.01134   0.01125   
+         4183.14   0.01291   0.01254   0.01224   
+         4568.26   0.01426   0.01374   0.01323   
+         5527.13   0.01754   0.0167    0.01573   
+         6483.37   0.02027   0.01964   0.01827   
+         8383.07   0.02541   0.02543   0.02346   
+        15779.6    0.04702   0.04781   0.04533   
+        22858.1    0.06951   0.0699    0.0688   
+        29620.7    0.0929    0.09272   0.09352   
+        36073.4    0.11711   0.117     0.11922   
+        42179.6    0.14328   0.14306   0.14543   
+        47944.7    0.17111   0.1711    0.17186   
+        53355.5    0.20089   0.20103   0.19816   
+      
+      Relative Error output for model fitted function:
+
+    corr_obs relative_err corr_obs relative_err corr_obs relative_err
+
+       100   0.000267      16000   0.046672      40000   0.136290
+       200   0.000534      17000   0.049883      41000   0.140703
+       300   0.000802      18000   0.053132      42000   0.145182
+       400   0.001070      19000   0.056421      43000   0.149728
+       500   0.001338      20000   0.059751      44000   0.154344
+       600   0.001606      21000   0.063122      45000   0.159032
+       700   0.001875      22000   0.066534      46000   0.163792
+       800   0.002144      23000   0.069999      47000   0.168627
+       900   0.002413      24000   0.073489      48000   0.173538
+      1000   0.002682      25000   0.077033      49000   0.178529
+      2000   0.005393      26000   0.080622      50000   0.183601
+      3000   0.008134      27000   0.084259      51000   0.188756
+      4000   0.010904      28000   0.087943      52000   0.193997
+      5000   0.013704      29000   0.091676      53000   0.199325
+      6000   0.016535      30000   0.095458      54000   0.204744
+      7000   0.019397      31000   0.099292      55000   0.210256
+      8000   0.022292      32000   0.103177      56000   0.215864
+      9000   0.025218      33000   0.107116      57000   0.221570
+     10000   0.028179      34000   0.111110      58000   0.227378
+     11000   0.031172      35000   0.115159      59000   0.233290
+     12000   0.034201      36000   0.119265      60000   0.239310
+     13000   0.037264      37000   0.123430      61000   0.245441
+     14000   0.040363      38000   0.127655      62000   0.251686
+     15000   0.043499      39000   0.131941      63000   0.258050
+
+================================================================================
+
+        APPENDIX A: WILDFIRE CONTROL SYSTEM COMMAND SUMMARY
+
+The system parameters for an observation (such as integration time and image
+name) are determined by parameter files (which are selected by 'puse').  The
+basic observing words are 'ask', which queries and amends a pre-selected subset
+of parameters within the current parameter set, and 'go', which performs an
+observation using the current observing parameters and increments the numerical
+extension parameter to the image name.  Once begun, an observation will run to
+completion unless aborted via the 'abort' command.  Observing scripts have been
+written (e.g. do_standard) which intermix simple telescope motion instructions
+with observation commands ('go').  These can be interrupted (via pressing
+'<return>') at any time and will terminate after the current frame ('go') is
+completed.
+
+When WILDFIRE is operating, the WILDFIRE instrument control window responds to
+"tcl" commands.  Here is a summary of a number of "features" of the "tcl" based
+WILDFIRE control system software operating within the WILDFIRE instrument
+control window which might be unfamiliar:
+
+   The WILDFIRE "%" prompt is not always automatically issued when a task has
+   completed.  Try pressing <return> if no prompt is visible and nothing appears
+   to be happening.  The "%" prompt will appear if keyboard input is allowed.
+
+   The default values for queried entries are enclosed in square brackets "[]";
+   either press '<return>' to use the default or enter your response and press
+   '<return>'.
+
+   Some SQIID parameters expect 4 values (e.g., coadds).  In such cases, a
+   single value is expanded into 4 identical values.  As appropriate, you can
+   either enter the 4 (presumably different) values separated by whitespace, or
+   enter a single value followed by '<return>'.
+
+   The proper response for questions which prompt for "y" or "n" is "y", or "n".
+   "yes" and "no" are unacceptable (an answer other than "y" means no!).  
+
+WILDFIRE mode image names (Sun based IR systems) follow the naming convention:
+   
+     "base_name"//"XXX"//"channel_id" (e.g., n1t005_//001//j == n1t005_001j)
+    
+where "base_name" (controlled by filename) is user selected at the time of
+observation, the number "XXX" (controlled by next_pic) is a sequentially
+numbered 3-digit number (including leading zeroes as needed), and "channel_id"
+(j,h,k or l) is automatically appended.  "next_pic" is automatically incremented
+after each exposure until a new "next_pic" is declared.  It is recommended that
+you reset "next_pic" to 1 (or 0) each time you change "base_name".  If you
+set 'oldirafname = yes' when you read the data back from tape, the
+image names will be restored to their original names and will (hopefully) match
+your log sheets.  (Note: the old FIRE mode naming convention was
+"base_name"//"channel_id"//".XX" (e.g., n1t005_j.1))
+
+A useful subset (targeted at SQIID) of available WILDFIRE system commands
+follows.  A one line per command EXECUTIVE SUMMARY grouped by function is
+followed by more complete explication of each command.  Unless otherwise noted,
+these commands must be issued within the WILDFIRE instrument control window when
+WILDFIRE itself is operating (the WILDFIRE "%" prompt is present rather than
+the computer prompt, e.g. "<berry>").  Command arguments enclosed in square
+brackets [] are optional.  You will be prompted by the current values of
+necessary arguments when none are given.
+
+================================================================================
+
+                          SYSTEM LEVEL 
+
+! [commands]   -- execute the commands in 'csh' or run 'csh'
+cd             -- change directory to home directory
+cd dirname     -- dirname change directory to "dirname"
+ed [name]      -- invoke an editor on the procedure "name" and source result
+help [topic]   -- display cross-linked help on the IR user interface
+source program -- temporarily include tcl "program" within recognized system
+                        WILDFIRE RECOVERY 
+abort         -- controlled interruption and termination of an observation
+exit          -- exit the FIRE controller without deactivating the arrays
+hung          -- attempts to complete link protocol; invoked from CONSOLE window
+restart SQIID -- SQIID simple (warm) WILDFIRE recovery procedure
+startwf       -- generalized interactive WILDFIRE recovery procedure
+                            DETECTOR 
+activate      -- activate the detectors
+deactivate    -- deactivate the detectors
+setup sqiid   -- set up the default SQIID voltages and prompt for activation
+                          HOUSEKEEPING 
+longheaders [on|off] -- enable/disable house keeping information in the header
+status [screen] -- display status screen (stat|s|volt|v|temp|t|filters|f|tlist)
+tcp_on         -- enable link to TCP for telescope status info and offsetting
+tcp_off        -- disable link to TCP for telescope status info and offsetting
+                         IMAGE STORAGE 
+pixel_dir [dirname]  -- sets the saved image pixel file directory
+header_dir [dirname] -- sets the saved image header file directory
+newImdir [dirname]   -- sets the saved image header and pixel file directory
+checkdisk            -- checks for sufficient space within current directories
+                        PARAMETER FILES 
+eask             -- set query status (list|ask) for observing parameters
+lpar             -- list the names of the available parameter files
+ped              -- edit the entire current parameter file selected by puse
+plist            -- list all the parameters in the current parameter file
+ppar             -- list all the parameters in the current parameter file
+puse [filename]  -- load the named parameter file
+psave [filename] -- save the current parameter set as filename
+               ACCESSING INDIVIDUAL OBSERVING PARAMETERS 
+calc                  -- calculate L integration time or number of L coadds
+coadds [number(s)]    -- sets the number of coadds (4 values)
+?coadds               -- returns the number of coadds
+delay_time            -- another name for int_time (4 values)
+filename [fileName]   -- sets the IRAF image "fileName"
+?filter            -- lists the status of motor controlled instrument mechanisms
+int_time [time(s)]    -- sets the integration time in seconds (4 values)
+lnrs [number(s)]      -- sets the number of low noise reads per coadd
+?lnrs                 -- returns the number of low noise reads per coadd
+mode [channel] [mode] -- sets "channel" data collection to "mode" (stare|sep)
+?mode                 -- returns data collection mode of the DSP worker nodes
+nextpic [number(s)]   --  sets the picture index (4 values)
+nosave channel [0|1]  -- sets the image save flag for channel
+  save_l              -- saves the L channel images (nosave l 1)
+nosave_l              -- discards the L channel images (nosave l 0)
+pics [number]         -- sets number of pictures to be taken at each "go"
+set-time [time(s)]    -- sets the integration time in seconds (4 values)
+?settime              -- returns the current integration times
+?ucode                -- returns name of the currently down-loaded detector code
+                           OBSERVING 
+puse [file]    -- load the named parameter file
+ped            -- edit the entire current parameter file selected by puse
+ask            -- query/amend the "eask"-selected subset of parameters
+go             -- perform an observation, using the current observing parameters
+abort          -- controlled interruption and termination of an observation
+observe        -- perform an observation, querying parameters (== ask ; go)
+dark           -- sets the IRAF header imagetype keyword to "dark"
+object         -- sets the IRAF header imagetype keyword to "object"
+sky            -- sets the IRAF header imagetype keyword to "sky"
+standard       -- sets the IRAF header imagetype keyword to "standard"
+                         IMAGE DISPLAY 
+movie [channel] [number] -- take and display a movie from a given channel
+end <return>             -- terminates movie
+display [channel(s)]     -- selects channel (j h k l none) to be displayed
+zs z1 z2     -- set display zscale values z1 and z2 for the instrumental display
+zs 0 0       -- enables display auto-scaling for the instrumental display
+                  INTERACTIVE TELESCOPE CONTROL 
+east nn       -- move telescope FOV nn arc-seconds east
+west nn       -- move telescope FOV nn arc-seconds west 
+north nn      -- move telescope FOV nn arc-seconds north
+south nn      -- move telescope FOV nn arc-seconds south
+reset_offsets -- sets the telescope offset value in the IRAF header to 0,0
+sqiid         -- offset 1.3m telescope FOV from TV position to SQIID position
+sqtv          -- offset 1.3m telescope FOV from SQIID position to TV position
+tcp_on        -- enable link to TCP for telescope status info and offsetting
+tcp_off       -- disable link to TCP for telescope status info and offsetting
+toaa e n      -- TCP offset telescope e arcsec in RA & n in DEC: + N/E; - S/W
+toffset e n   -- offset telescope e arcsec in RA & n in DEC: + N/E; - S/W;
+                 then pause 3sec to let telescope settle
+                       TCL OBSERVING SCRIPTS
+?script        -- lists available tcl observing scripts for this instrument
+abort <return> -- quits the script immediately
+<return>       -- quits the script after the current line of the task
+do_standard    -- query&observe start and corners of enscribed square & return
+do_field       -- query&observe M x N (RA X DEC) spatial grid of single frames
+                  and return to start
+do_fld ewnum nsnum gridsep
+do_dither      -- query&observe M x N (RA X DEC) spatial grid of dithered pairs
+                  and return to start
+do_dthr ewnum nsnum gridsep dither
+do_pair        -- query&observe a pair of offset images & return to start
+pair esky nsky -- query&observe a pair of offset images & return to start
+pairnr esky nsky wobj -- query&observe a pair of offset images & stay at offset
+                   (wobj = 0 => obj sky; 1 => sky obj order)
+do_9raster     -- observe a 3 X 3 spatial grid of object and dithered offset sky
+                  data pairs in the sequence (obj sky sky obj).
+do_9rstr gridsep edither ndither esky nsky
+
+================================================================================
+             DISPLAY TASKS WITHIN THE IRAF SQIID PACKAGE
+idisplay [first_image] [imtool frame number]
+         -- display sequentially-named single channel images
+idispskysub [first_image] [imtool frame number]
+         -- display sequentially-named single channel sky-subtracted images
+idisp1pair [first_image] [imtool frame number]
+         -- companion to the tcl observing task "do_pair"
+            display  pair-wise sky-subtracted single channel frames
+idisp9pair [first_image] [imtool frame number]
+         -- companion to the tcl observing task "do_9raster"
+            display 3x3 grid of pair-wise sky-subtracted single channel frames
+show4 [first_image] [imtool frame number]
+         -- display sky-subtracted images from all 4 SQIID channels
+
+================================================================================
+
+                         SYSTEM LEVEL
+
+! [commands]   -- execute the commands in 'csh' or run 'csh' cd change
+                  directory to home directory
+cd dirname     -- change directory to "dirname"
+ed [name]      -- invoke an editor on the procedure "name" and source result
+help [topic]   -- display cross-linked help on the IR user interface
+source program -- temporarily include tcl program within recognized system (full
+                  path name required); need to source again after the WILDFIRE
+                  system is restarted.  For example to source the script
+                  "name.tcl", in the WILDFIRE instrument control window type:
+                      source /data2/ir50inch/tclSamples/name.tcl
+
+                      WILDFIRE RECOVERY
+
+exit    -- exit the FIRE controller without deactivating the arrays
+abort   -- controlled interruption and termination of an observation;
+           observation is lost, but system can then proceed normally
+hung    -- attempts to complete link protocol; used as part of a recovery
+           procedure when WILDFIRE is hung (WILDFIRE instrument control window
+           unresponsive and data collection stalled); Must be issued from
+           outside the WILDFIRE instrument control window (SHELL or CONSOLE
+           window).
+startwf -- generalized interactive WILDFIRE recovery procedure; Must be issued
+           from the WILDFIRE instrument control window when WILDFIRE itself is
+           not running (the computer prompt (e.g.. "<berry>") rather than the
+           WILDFIRE "%" prompt is present).
+restart SQIID -- simple (warm) WILDFIRE recovery procedure for use when it is
+           positively known that neither the DSP box in the computer room nor
+           the instrument power at the telescope have suffered a power
+           interruption; Must be issued from the WILDFIRE instrument control
+           window when WILDFIRE itself is not running (the computer prompt,
+           e.g. "<berry>", rather than the WILDFIRE "%" prompt is present).
+
+                          DETECTOR
+
+activate    -- activate the detectors
+deactivate  -- deactivate the detectors
+setup sqiid -- set up the default SQIID voltages and prompt for activation
+
+   [Note: You can erase residual memory in SQIID by deactivating and then
+    re-activating the detectors.  However, this should not be done
+    indiscriminately, since the dark current can be quite high (up to 10x) for
+    an hour after detector activation.]
+
+                       HOUSEKEEPING
+
+status [screen] -- display status screen (stat|s|volt|v|temp|t|filters|f|tlist)
+                   in the STATUS window; "stat" is the most general screen
+longheaders [on|off] -- enable/disable house keeping information in the header;
+                   since this takes a non-negligible time to generate, "off" is
+                   the default/preferred state
+tcp_on          -- enable link to TCP for telescope status info and offsetting
+tcp_off         -- disable link to TCP for telescope status info and offsetting
+
+                       IMAGE STORAGE
+
+pixel_dir [dirname]  -- sets the directory for the saved image pixel files to
+                        "dirname"; directories must exist; defaults to current
+                        directory if no argument
+header_dir [dirname] -- sets the directory for the saved image header files to
+                        "dirname"; directories must exist; defaults to current
+                        directory if no argument
+newImdir [dirname]   -- sets the directory for the saved image header files to
+                        "dirname" and the directory for pixel files to
+                        "dirname/pixels", creating these directories as required
+                        and changes the current directory to "dirname".
+
+checkdisk            -- checks whether there is sufficient space available for
+                        images within the current header dir and pixel imdir
+
+
+                       PARAMETER FILES
+
+   [Note: a parameter has two attributes, its value and flags indicating whether
+    the parameter and its value should be displayed and/or queried when the
+    "ask" or "observe" tasks are run.]
+
+eask             -- iterate through all the known parameters, allowing the user
+                    to specify which parameters are queried and which are
+                    displayed.  After each question an "l" signifies display and
+                    "la" signifies list and query.
+lpar             -- list the names of the available parameter files
+ped              -- edit the current parameter file selected by puse, asking all
+                    questions without regard to their query status (as set by
+                    "eask")
+plist            -- list all the parameters in the current parameter file
+ppar             -- list all the parameters in the current parameter file
+puse [filename]  -- load the named parameter file
+psave [filename] -- save the current parameter set (values and ask/display flags
+                    for questions) to the named parameter_file.
+
+                  ACCESSING INDIVIDUAL OBSERVING PARAMETERS
+
+calc                 -- calculate L integration time or number of L coadds for
+                        queried JHK integration time; WARNING: these integration
+                        times and coadds over-ride the current parameter set
+coadds [number(s)]   -- sets the number of coadds to do on next picture taken;
+                        when no argument given, prompts with current value;
+                        SQIID expects 4 values; 1 value is expanded to 4 values;
+                        the number of coadds at JHK must be equal; the total
+                        number of coadds at L is the product of the this number
+                        times the coadds at JHK
+?coadds              -- returns the number of coadds to do on next picture taken
+delay_time           -- another name for int_time
+filename [fileName]  -- sets the IRAF image "fileName".  The directory path
+                        (controlled by "header_dir") is not included in
+                        "fileName".  When no argument is given, prompts with
+                        current value.
+
+  WARNING: SAVED IMAGES WILL OVERWRITE EXISTING IMAGES IN THE SAME DIRECTORY IF
+  THE FULL FILENAMES CONFLICT!
+
+                        For SQIID, a "%d%s" or "%03d%s" can be inserted where
+                        the picture number should be placed.  The "%s" field,
+                        which formats to the channel_id(j|h|k|l), must follow
+                        the "%d" field, which formats to "nextpic" and is
+                        automatically incremented by 1 after each observation.
+                        If no "%d%" is given, one will be appended.
+                        If no "%s%" is given, one will be appended.
+                        If neither field is present, "%03d%s" will be appended.
+                        The format will be:
+                          "fileName"//"nextpic(channel)"//"channel_id"
+                        Example: both "filename n1t001_%03d%s" and
+                        "filename n1t_001_" will generate an IRAF j channel
+                        image (for nextpic = 2) of the form "n1t001_002j"
+                        followed by "n1t001_003j" on the next iteration.
+header_dir [dirname] -- sets the directory for the saved image header files to
+                        "dirname"; defaults to current directory if no argument
+pixel_dir [dirname]  -- sets the directory for the saved image pixel files to
+                        "dirname"; defaults to current directory if no argument
+?filter              -- lists the status of all motor controlled instrument
+                        mechanisms
+int_time [time(s)]   -- sets the integration time in seconds (to the millisec
+                        level); when no argument given, prompts with current
+                        value; SQIID expects 4 values; 1 value is expanded to 4
+                        values.  Note: 2 sec is a safe value for the L channel.
+lnrs [number(s)]     -- sets the number of low noise reads per coadd; when no
+                        argument given, prompts with current value; MUST BE SET
+                        TO 1 FOR PROPER SQIID OPERATION! (Low noise multiple
+                        readout is not implemented for SQIID.) SQIID expects 4
+                        values; 1 value is expanded to 4 values.
+?lnrs                -- returns the number of low noise reads per coadd
+mode [channel_id] [mode] -- sets "channel_id" (j h k l) channel data collection
+                        to "mode" (stare|sep); the available modes for SQIID are
+                        "stare", which is the normal observing mode, and "sep".
+                        "sep" generates the two individual non-destructive reads
+                        taken an "int_time" apart and "stare" generates only
+                        their difference.
+?mode                -- returns the data collection mode of the DSP worker nodes
+nextpic [number(s)]  -- sets the picture index to number; when no argument is
+                        given , prompts with current value; SQIID expects 4
+                        values; 1 value is expanded to 4 values
+nosave channel [0|1] -- sets the image save flag for channel
+                        (default == 0 == off == image for this channel is not
+                        saved to disk)
+  save_l             -- saves the L channel images (nosave l 1)
+nosave_l             -- discards the L channel images (nosave l 0)
+pics [number]        -- sets number of pictures to be taken at each "go"; when
+                        no argument given, prompts with current value; single
+                        value is expected
+set-time [time(s)]   -- sets the integration time in seconds (to the millisec
+                        level); when no argument given, prompts with current
+                        value; SQIID expects 4 values; 1 value is expanded to 4
+                        values.  Note: 2 sec is a safe value for the L channel.
+?settime             -- returns the current integration time
+?ucode               -- returns name of the currently down-loaded detector code
+
+                             OBSERVING
+
+puse [filename] -- load the named parameter file
+ped             -- prompt (and store any changes) to all the parameters within
+                   the current parameter_file (as selected by "puse"), asking
+                   all questions without regard to their query status (as set by
+                   "eask")
+ask             -- prompt (and store any changes) for the "eask"-selected subset
+                   of parameters within the current parameter set
+go              -- perform an observation, using the current observing
+                   parameters; "nextpic" is incremented after each "go"; 
+                   channel(s) selected using "display" will be displayed;
+                   channel(s) selected using "nosave" will be saved to disk;
+                   "abort <return>" interrupts and terminates to a safe state
+abort           -- controlled interruption and termination of an observation;
+                   the observation is lost, but system can then proceed normally
+observe         -- perform one observation using current parameter set,
+                   prompting for query parameters (== ask ; go); can interrupt
+                   by <Control C> prior to last query ("Do you want to abort")
+                   or by answering "n" to last query.
+
+                    IMAGE TYPE HEADER KEYWORD
+
+[NOTE: the following words the "imagetype" keyword in the image header so that 
+images can be sorted by type of observation by automated data-processing.  There
+is yet no IR equivalent of CCDPROC.]
+
+dark     -- sets the IRAF header imagetype keyword to "dark"
+object   -- sets the IRAF header imagetype keyword to "object"
+sky      -- sets the IRAF header imagetype keyword to "sky"
+standard -- sets the IRAF header imagetype keyword to "standard"
+
+                         IMAGE DISPLAY
+movie [channel] [number] -- take and display a movie from a given channel
+                    (prompts if none given) for the indicated number of frames
+                    (100000 if none given); "end <return>" terminates
+display [channel(s)] -- controls which channel (j h k l none) is displayed as it
+                    is saved; when no argument given, prompts with current
+                    value; if no channels are specified (either by erasing all
+                    the channel names at the prompt or executing "display none",
+                    then no channels will be displayed; auto-scales unless the
+                    "zs" command has been used to set min and max (on short 
+                    integrations only one channel should be selected)
+
+zs z1 z2         -- set zscale values z1 and z2 for the instrumental
+                    display.  If the values are both 0 (the default)
+                    auto-scaling is enabled.
+zs 0 0           -- enables auto-scaling for the instrumental display
+
+                    INTERACTIVE TELESCOPE CONTROL
+
+east nnn         -- move telescope FOV nnn arc-seconds east
+west nnn         -- move telescope FOV nnn arc-seconds west 
+north nnn        -- move telescope FOV nnn arc-seconds north
+south nnn        -- move telescope FOV nnn arc-seconds south
+toaa eee nnn     -- move telescope ee arcsecs in RA and nnn arcsecs in DEC:
+                    + for north/east; - for south/west
+
+toffset eee nnn  -- offset telescope eee arcsecs east in RA and nnn north arcsec
+                    in DEC with appropriate 3 second pause to allow telescope
+                    to settle: + for north/east; - for south/west
+sqiid            -- offset 1.3m telescope FOV from TV position to SQIID position
+sqtv             -- offset 1.3m telescope FOV from SQIID position to TV position
+tcp_on           -- enable link to TCP for telescope status info and offsetting
+tcp_off          -- disable link to TCP for telescope status info and offsetting
+
+                         OBSERVING SCRIPTS
+
+NOTE: if these TCL scripts are not found, you will need to "source" into the
+system using the full pathname for the script. For example to source the script
+"name", in the WILDFIRE instrument control window type:
+   source /data2/ir50inch/tclSamples/name.tcl
+
+<return>     -- quits the script after the current line of the task completes
+                (effectively after the observation is completed and saved at
+                the current position.)
+abort <return> -- quits the script immediately without saving any observation in
+               progress.
+?script     -- lists available tcl observing scripts for this instrument
+do_standard -- take 6 observations in a fixed spatial pattern using the
+               current parameter set.  Be sure to use "ask" or "ped" to
+               set-up before you use this routine.  The first is at the
+               current position, the next four are in a square centered on
+               the first position, and the last is at the initial position.
+               You are prompted for the side of the square in arcsec.
+               "<return>" quits the script after the current line of the task
+               completes (effectively after the observation is completed and
+               saved at the current position).  "abort <return>" quits the
+               script immediately without saving any observation in progress.
+
+do_field    -- observe a M x N (RA X DEC) spatial grid of positions, with
+               fixed separation EW and NS, using the current parameter set.
+               Returns to the starting point when complete.  The grid is
+               centered on the starting (current) position.  Prompts for the
+               number of grid positions E/W, the number N/S and the grid
+               separation in arcsec.  Observations begin at NE corner, then
+               proceed W a row a at a time.  Prompts for the number of
+               grid positions EW and NS and whether you want to change any of
+               the observing parameters.
+                                        1 2 3
+               A 3 X 3 grid looks like: 4 5 6
+                                        7 8 9
+               The command line version "do_fld" is suitable for easy repeat:
+
+                   do_fld ewnum nsnum gridsep
+
+do_dither   -- observe a M x N (RA X DEC) spatial grid of dithered pairs, with
+               fixed separation EW and NS, using the current parameter set.
+               Two frames, dithered EW are taken at each grid location.
+               Returns to the starting point when complete.  The grid is
+               centered on the starting (current) position.  Prompts for the
+               number of grid positions E/W, the number N/S, the grid separation
+               and the E/W dither in arcsec.  Observations begin at NE corner,
+               then proceed W a row a at a time.  Prompts for the number of
+               grid positions EW and NS and whether you want to change any of
+               the observing parameters.
+                                        01,02 03,04 05,06
+               A 3 X 3 grid looks like: 07,08 09,10 11,12
+                                        13,14 15,16 17,18
+               The command line version "do_fld" is suitable for easy repeat:
+
+                   do_dthr ewnum nsnum gridsep dither
+
+do_pair     -- takes a pair of spatially offset images and return to the first
+              position.  Prompts for the offset vector (two values) in arcsecs:
+                 vectors in RA and DEC order: + for north/east; - for south/west
+
+              The command line version "pair", suitable for easy repeat:
+
+                 pair esky nsky
+
+              The command line version "pairnr" takes a pair of spatially offset
+              images and remains at the offset position; it also sets the image
+              header keyword imagetype to "object" and "sky":
+
+                 pair esky nsky wobj  (wobj = 0 => obj sky; 1 => sky obj order)
+
+do_9raster  -- observe a 3 X 3 spatial grid of object and (dithered) offset sky
+               data pairs in the sequence (obj sky sky obj).  Sky position is
+               dithered between each sky frame so that objects in the sky field
+               are not position locked relative to the object frames.  Data
+               order minimizes telescope motions.  Prompts for grid separation,
+               sky offset vector (two values) and dither vector (two values) in
+               arcseconds:
+                 vectors in RA and DEC order: + for north/east; - for south/west
+                                        3 2 9
+               The 3X3 grid looks like: 4 1 8  with a dithered companion sky
+                                        5 6 7
+               The command line version "do_9rstr" is suitable for easy repeat:
+
+                  do_9rstr gridsep edither ndither esky nsky
+
+================================================================================
+
+             DISPLAY TASKS WITHIN THE IRAF SQIID PACKAGE
+
+These display tasks are useful companions to the tcl observing routines.  They
+are run from the IRAF gterm/xterm window when the "sqiid" package is loaded.
+You can run them from either the instrument control computer or the data
+reduction computer.  However, when using them from the instrument control
+computer, you should turn off the automatic display of acquired images
+(type "display none" in the Wildfire Instrument Control window) to avoid
+collisions between taks accessing the image display.
+
+idisplay [first_image] [imtool frame number]
+   display sequentially-named single-channel images
+   Task waits for frames to complete, checking access each "sleeptime".
+   Options include reporting imstats and calling imexam on image.
+   To quit, either answer "no" when queried "Do you want to continue" or
+   type <Control C>.
+
+  first_image = "S106fld_001"   First image in sequentially numbered images
+        frame = 1               Display frame #
+     (dostats = yes)            Do imstatistics on images?
+     (statsec = "[50:200,50:200]") Image section for calculating statistics
+  (lthreshold = INDEF)          Lower threshold for exclusion in statistics
+  (hthreshold = INDEF)          Upper threshold for exclusion in statistics
+      (imsave = no)             Save difference image?
+      (saveid = "dpr_")         String prepended to object name
+   (do_imexam = yes)            Use imexam on difference?
+   (sleeptime = 5)              Delay (sec) between image access checks
+      (maxpos = 100)            Maximum number of images to display
+    (ask_each = no)             Query each pair?
+      (orient = no)             Orient N up and E left?
+      (zscale = yes)            automatic zcale on each frame?
+      (ztrans = "linear")       intensity transform: log|linear|none
+          (z1 = 0.)             minimum intensity
+          (z2 = 1000.)          maximum intensity
+
+idispskysub [first_image] [imtool frame number]
+   display sequentially-named single channel sky-subtracted images
+   Task waits for frames to complete, checking access each "sleeptime".
+   Options include reporting imstats, calling imexam on difference image, and
+   saving difference image.
+   To quit, either answer "no" when queried "Do you want to continue" or
+   type <Control C>.
+
+  first_image = "S106fld_001"   First image in sequentially numbered images
+        frame = 1               Display frame #
+   (sky_image = "null")         Name or sequential number of sky frame to be
+                                subtracted from each image.  Either image name
+                                or ordinal number can be used.  "2" implies the
+                                image after the first one.  "null" == 2
+     (dostats = yes)            Do imstatistics on images?
+     (statsec = "[50:200,50:200]") Image section for calculating statistics
+  (lthreshold = INDEF)          Lower threshold for exclusion in statistics
+  (hthreshold = INDEF)          Upper threshold for exclusion in statistics
+   (do_imexam = yes)            Use imexam on difference?
+      (imsave = no)             Save difference image?
+      (saveid = "dpr_")         String prepended to object name
+   (do_imexam = yes)            Use imexam on difference?
+   (sleeptime = 5)              Delay (sec) between image access checks
+      (maxpos = 100)            Maximum number of images to display
+    (ask_each = no)             Query each pair?
+      (orient = no)             Orient N up and E left?
+      (zscale = yes)            automatic zcale on each frame?
+      (ztrans = "linear")       intensity transform: log|linear|none
+          (z1 = 0.)             minimum intensity
+          (z2 = 1000.)          maximum intensity
+
+idisp1pair [first_image] [imtool frame number]
+   companion to the tcl observing task "do_pair"
+   display  pair-wise sky-subtracted single channel frames
+   Pairwise subtract 1-2,3-4,5-6,7-8,...
+   Task waits for frames to complete, checking access each "sleeptime".
+   Options include reporting imstats, calling imexam on difference image, and
+   saving difference image.
+   To quit, either answer "no" when queried "Do you want to continue" or
+   type <Control C>.
+
+  first_image = "S106fld_001"   First image in sequentially numbered images
+        frame = 1               Display frame #
+     (dostats = yes)            Do imstatistics on images?
+     (statsec = "[50:200,50:200]") Image section for calculating statistics
+  (lthreshold = INDEF)          Lower threshold for exclusion in statistics
+  (hthreshold = INDEF)          Upper threshold for exclusion in statistics
+   (do_imexam = yes)            Use imexam on difference?
+      (imsave = no)             Save difference image?
+      (saveid = "dpr_")         String prepended to object name
+   (sleeptime = 5)              Delay (sec) between image access checks
+      (maxpos = 100)            Maximum number of images to display
+    (ask_each = no)             Query each pair?
+      (orient = no)             Orient N up and E left?
+      (zscale = yes)            automatic zcale on each frame?
+      (ztrans = "linear")       intensity transform: log|linear|none
+          (z1 = 0.)             minimum intensity
+          (z2 = 1000.)          maximum intensity
+
+idisp9pair [first_image] [imtool frame number]
+   companion to the tcl observing task "do_9raster"
+   display 3x3 grid of pair-wise sky-subtracted single channel frames
+   Pairwise subtract 1-2,4-3,5-6,8-7,...
+   Task waits for frames to complete, checking access each "sleeptime".
+   Options include reporting imstats, calling imexam on difference image, and
+   saving difference image.
+   To quit, either answer "no" when queried "Do you want to continue" or
+   type <Control C>.
+   [NOTE: Assumes stdimage=imt800 for proper operation]
+
+  first_image = "S106fld_001"   First image in sequentially numbered images
+        frame = 1               Display frame #
+     (dostats = yes)            Do imstatistics on images?
+     (statsec = "[50:200,50:200]") Image section for calculating statistics
+  (lthreshold = INDEF)          Lower threshold for exclusion in statistics
+  (hthreshold = INDEF)          Upper threshold for exclusion in statistics
+      (imsave = no)             Save difference image?
+      (saveid = "dpr_")         String prepended to object name
+   (sleeptime = 5)              Delay (sec) between image access checks
+      (maxpos = 100)            Maximum number of images to display
+    (ask_each = no)             Query each pair?
+      (orient = no)             Orient N up and E left?
+      (zscale = yes)            automatic zcale on each frame?
+      (ztrans = "linear")       intensity transform: log|linear|none
+          (z1 = 0.)             minimum intensity
+          (z2 = 1000.)          maximum intensity
+
+show4 [first_image] [imtool frame number]
+  display sky-subtracted images from all 4 SQIID channels
+
+  first_image =                 J channel image name
+        frame =                 Display frame #
+        (jsky = "null")         J sky frame (Null == no sky subtraction)
+      (orient = no)             Orient N up and E left?
+      (zscale = yes)            automatic zcale on each frame?
+      (ztrans = "linear")       intensity transform: log|linear|none
+          (z1 = 0.)             minimum intensity
+          (z2 = 1000.)          maximum intensity
+================================================================================
+
+                    APPENDIX B. SQIID package     
+
+NB: The SQIID package is not an officially released and supported IRAF package;
+all queries should be directed to KMM at NOAO (merrill@noao.edu; 602-325-9319).
+
+B.1 Getting and updating the SQIID package
+
+Current copies of the package are available from mira via ftp anonymous:
+
+   The sqiid IRAF package is contained within a tar file called "sqiid.tar"
+   within the ftp-anonymous area at mira.tuc.noao.edu.  You can retreive it by
+   typing:
+
+        ftp mira.tuc.noao.edu (aka 140.252.3.85)
+        logging in as "anonymous"
+        using your last name as password
+        cd pub/sqiid
+           type "ls" to see what's there
+           examine the "README" file for time of last update and other useful
+              information
+        get sqiid.tar
+           to get the tar file on your machine
+        bye
+
+
+   Restore the package using "tar sqiid.tar" within your IRAF login directory
+   and follow the "README" directions for installing the package within your
+   system.  Since the package consists entirely of IRAF cl procedures, no
+   recompiling is needed.  Documentation is in sqiid/DOC.
+
+While the 'sqiid' tasks are tailored to facilitate SQIID data reduction, they
+are suitable for other image data as well.
+
+You can determine the date of last modification of 'sqiid' tasks by typing:
+
+        head taskname.cl nl=1
+
+Contact KMM (merrill@noao.edu; 602-325-9319) when you have successfully
+retrieved the programs and if you have further questions.  When updating the
+sqiid package, remember that you may have to unlearn pre-existing sqiid
+package parameter sets on your system.
+
+
+B.2 SQIID package listing
+
+SQIID package tasks are shown below (type ?sqiid after the package is loaded):
+
+SQIID TASKS:
+cl> sqiid
+      chlist      getcoo      ircombine   show1       sqremap     xystd
+      cleanup     getlaps     linkalign   show4       sqsky       xytrace
+      closure     getmatch    linklaps    show9       sqtest      zget
+      colorlist   getoffsets  locate      sqdark      transmat    ztrace
+      compose     imclip      mergecom    sqflat      ukfit       
+      expandnim   imgraph     mkmask      sqfocus     unsqmos     
+      getalign    imlinfit    mkpathtbl   sqframe     xyadopt     
+      getcenters  imspace     nircombine  sqmos       xyget       
+      getcombine  invcoo      notchlist   sqproc      xylap       
+sq>
+
+SQIID MENU:
+
+        chlist - Generate list of images at fixed numerical offsets
+       cleanup - Delete SQIID package temporary _T* files and images
+     colorlist - Generate SQIID HKL channel offset lists from J channel lists
+        getcoo - Extract co-ordinates from IMTOOL coordinate list output file
+        imclip - Clip an image outside a stated intensity interval
+       imgraph - Produce intensity scatterplot for pixels in two images
+        invcoo - Offset and flip (invert) GETCOO coordinate lists
+      mergecom - Merge registration databases with common image into one
+        mkmask - Generate bad-pixel mask images
+    nircombine - Combine registration database into (masked) composite image
+         show1 - Display a SQIID channel in a single IMTOOL frame
+         show4 - Display all four SQIID channels in a single IMTOOL frame
+         show9 - Display 9 frames of 3x3 grid in a single IMTOOL frame
+        sqdark - Make a SQIID dark image
+        sqflat - Make a SQIID flatfield image
+       sqfocus - Make focus sequence into multi-channel focus strip 
+         sqmos - Make an IRMOSAIC image and initial registration database
+        sqproc - Process SQIID images
+         sqsky - Make a SQIID sky image
+       unsqmos - Copy SQMOS mosaic image into separate images
+       xyadopt - Create alternative channel registration database from a channel
+         xyget - Find common stars in images and create registration database
+         xylap - Create registration database for data grid from CENTER data 
+          zget - Find intensity offsets from overlaps in registration database
+SUBROUTINES:
+       closure - Find origin and minimum size for registration database
+     expandnim - Expand range string into a list of numbers
+    getcenters - Get nearest neighbor shifts from CENTER
+      linklaps - Link mosaic CENTER registration for row/col paths
+        locate - Locate image with respect to reference image list
+     mkpathtbl - Convert path position to grid position (ll corner)
+      transmat - Translate database from old to new format
+       xytrace - Link mosaic CENTER registration for arbitrary paths
+        ztrace - Trace ZGET intensity match paths to origin
+PROTOTYPES:
+       imspace - Determine number of SQIID images remaining in current imdir
+       sqremap - Update GEOMAP using image template from prior GEOMAP
+         xystd - Get star positions for photometry using imcursor
+OUTDATED TASKS:
+       compose - Generate composite image from an image database
+      getalign - Get nearest neighbor shifts via IMALIGN to template image
+    getcombine - Get nearest neighbor shifts via IMALIGN/CROSSCOR/CENTERS
+       getlaps - Get nearest neighbor shifts via CROSSCOR
+    getoffsets - Find relative intensity offsets within overlap regions
+      getmatch - Generate complete composite image database
+     linkalign - Link GETALIGN info in master registration database
+      imlinfit - Perform a least squares fit over time of images
+     ircombine - Combine registration database into (masked) composite
+
+
+B.3  Reporting problems 
+
+Program-related problems are most easily addressed if the appropriate info are
+included with the problem report:
+
+    copy of command line used to call the task 
+    lpar of the task in question ( lpar task_name >> errfile )
+    copies of the ascii files called by that task (type filenames >> errfile)
+    version of IRAF used (= cl.version)
+
+Send description of problem and appropriate collateral information
+to KMM (merrill@noao.edu; 602-325-9319).
+
+Note: unless it did not "compile" properly, the line number given in an IRAF
+script procedure error meesage just points past the end of the file.

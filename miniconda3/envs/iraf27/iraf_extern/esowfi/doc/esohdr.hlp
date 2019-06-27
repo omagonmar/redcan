@@ -1,0 +1,115 @@
+.help esohdr Oct99 esowfi
+.ih
+NAME
+esohdr -- translate ESO WFI raw headers for use with MSCRED
+.ih
+SYNOPSIS
+ESO WFI raw headers are modified for use with MSCRED.  This includes
+renaming all HIERARCH keywords, renaming the extension names, setting the
+observation type, setting all the geometry keywords, and setting a first
+astrometric solution.
+.ih
+USAGE	
+esohdr input
+.ih
+PARAMETERS
+.ls input
+List of raw ESO multiextension (MEF) files to be modified.  This task
+knows if a file has been previously modified so it is ok to include
+such files in a wildcard template.
+.le
+.ls querytype = yes
+The current headers do not contain an indication as to the type of
+observation (zero, dark flat, or object).  If this parameter is yes
+then a query will be made for the observation type.
+.le
+.ls namps = 1
+Number of amps per CCD.
+.le
+.ls ntransient = 2
+Number of bad transient columns.  This number of columns following the
+prescan will be excluded from the TRIMSEC keyword.  Note that DATASEC
+will still include the all CCD columns.
+.le
+.ls wcsdb = "esowfi$lib/wcs.db"
+Database file containing the world coordinate system (WCS) information.
+.le
+.ls redo = no
+Redo a previously modified header?  If no then only files without the
+ESOHDR keyword will be operated upon.  If yes then those files previously
+modified will be modified again.  This skips the step which transforms
+the HIERARCH keywords since these were removed the first time.  It also
+skips the RA keyword update.
+.le
+.ls obstype
+This is the parameter used to query for the observation type if \fIquerytype\fR
+is yes.  This parameter only allows a selection from a set of choices which
+may be abbreviated.  The value set for this parameter does not matter
+since it is queried.  However, if the parameter is specified explicitly
+on the command line then there will be no query and the value will be
+used for all files.
+.le
+.ih
+DESCRIPTION
+ESOHDR provides a header translation of raw WFI multiextension format (MEF)
+files so that the MSCRED task may be used.  The translation includes
+renaming the HIERARCH keywords, adding keywords used by MSCRED, and setting
+an initial astrometric solution.
+
+The task first checks for the keyword ESOHDR in the primary header to
+determine if the task has been run previously.  Depending on the \fIredo\fR
+parameter files with the keyword will be ignored or the translation will be
+done again excluding the steps of renaming the HIERARCH keywords and
+converting the RA keyword from degrees to hours.
+
+The HIERARCH convention keywords are converted to simple FITS keywords
+for access by IRAF and other software not supporting the HIERARCH format.
+The renaming consists of removing the first three words (HIERARCH,
+ESO, and the next word), concatenating the rest of the words, and
+truncating (if necessary) to 8 characters.  For example,
+
+.nf
+    "HIERARCH ESO INS FILT NAME" --> "FILTNAME"
+.fi
+
+IRAF supports an inheritance convention for merging the primary header
+keywords with the extension keywords.  This means IRAF tasks that operate
+on extensions will see a complete set of keywords automatically.  The
+ESOHDR task sets the INHERIT keyword to provide this feature.
+
+Next the observation type is queried if desired.  This is done because the
+current headers don't include information allowing the automatic
+identification of the observation type.  The observation type is
+set in the primary header keyword FRAMTYPE.
+
+Each extension is modified to provide the keywords used by MSCRED.
+The geometry of the readout -- the size, direction, location of
+overscan and prescan, etc. -- is determined from other information
+in the header.  Also the extension names are modified to a shorter
+and more convenient form.  The names are "im#" where # is the CCD
+number (1-8).
+
+In the last step the RA keyword, which is given in degrees in the
+raw ESO primary header, is converted to hours, which is what is
+expected by MSCRED.  This is only done once.  The RA and DEC keywords
+are then used to define the tangent point of the world coordinate system
+for the mosaic exposure.  The other terms of the linear WCS are
+set from an astrometric solution specified in a database file.  A
+default database file is provided.
+.ih
+EXAMPLES
+1. Set the headers for a set of raw ESO files.
+
+.nf
+    cl> esohdr *.fits
+.fi
+
+.ih
+REVISIONS
+.ls ESOHDR - V1 external package
+First release.
+.le
+.ih
+SEE ALSO
+mscred package documentation
+.endhelp

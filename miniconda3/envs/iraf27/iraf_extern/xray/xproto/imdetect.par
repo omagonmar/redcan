@@ -1,0 +1,90 @@
+#$Header: /home/pros/xray/xproto/RCS/imdetect.par,v 11.0 1997/11/06 16:40:53 prosb Exp $
+#$Log: imdetect.par,v $
+#Revision 11.0  1997/11/06 16:40:53  prosb
+#General Release 2.5
+#
+#Revision 1.2  1997/10/06 17:52:31  prosb
+#JCC(10/97) - change the prompt for subcells.
+#
+#Revision 1.1  1997/10/06 17:49:54  prosb
+#Initial revision  (move from xspatial to xproto)
+#
+#Revision 1.14  1997/07/09 20:34:19  prosb
+#JCC(7/9/97) - add snr_576_coeffs for rosat and max_src_num.
+#
+#Revision 1.12  1997/07/09 20:01:28  prosb
+#JCC(6/97) - set snr_coeff and snr_thresh_min same as hopr's snr_144_*
+#            limit detect_run (numcellsizes) to 1
+#
+#JCC(5/22/97) - set the default of prf_sigma larger than 0.0.
+#             - correct typo :  arc -> asec
+#
+# Revision 1.10  1997/05/22  18:37:10  prosb
+# JCC(5/22/97) - change  the default of prf_sigma larger than 0.0.
+#              - correct typo :  arc -> asec
+#
+# Revision 1.7  1997/05/21  19:07:23  prosb
+# JCC (5/21/97) - add units.
+#
+# JCC(3/25/97)- keep snr_64_* for rosat data
+#
+# Revision 1.6  1997/03/18  21:03:15  prosb
+# JCC(3/18/97)- remove double quote for pixelsize
+#
+# Revision 1.5  1997/03/03  20:25:36  prosb
+# JCC(3/25/97) - set default of xcellsize/y to 8; add snr_16_* and snr_64_*
+#
+# Revision 1.4  1997/02/21  21:59:58  prosb
+# JCC (2/21/97) - limit display to 3 instead of 5
+#
+# Revision 1.2  1997/02/10  21:57:07  prosb
+# JCC (2/10/97) - remove "backgroundfile"
+# JCC (11/15/96) - add "prf_sigma, energy & prf_table" for prf table 
+#
+# Revision 1.1  1996/11/15  17:01:43  prosb
+# JCC (11/4/96)-copied from /pros/xray/xlocal/imdetect.par. 
+#            -"xcenter/ycenter, xdetsize/ydetsize" have been removed.
+#
+# imdetect.par 
+#
+infile,s,a,"",,,"input qpoe or image file"
+#backgroundfile,s,a,"bkgd.imh",,,"input bkgd image file"
+outfile,s,a,"",,,"output (ruf) position table file"
+subcells,i,a,1,,,"number of subcells per detect cell in each dimension"
+xcellsize,i,a,24,,,"x detect cell size in pixels"
+ycellsize,i,a,24,,,"y detect cell size in pixels"
+fieldbkdens,r,a,.00100,,,"field background density in cts/arcmin**2"
+max_src_num,i,h,500,1,2000,"max number of detected sources"
+snrfactor,r,h,1.0,,,"snr_thresh reducing factor"
+numcellsizes,i,h,1,1,1,"number of different detect cell sizes to run"
+pixelsize,r,h,0.5,,,"image pixel size"
+blobsize,i,h,1024,,,"maximum blob size in pixels"
+boxxmax,i,h,3,,,"maximum x box"
+boxymax,i,h,3,,,"maximum y box"
+ctwtfactor,i,h,3,1,3,"count weight factor type"
+display,i,h,1,0,3,"display level (>=1 for display)"
+clobber,b,h,no,,,"OK to delete existing file?"
+maxblobs,i,h,100,,,"max number of active blobs"
+num_16_snr_coeffs,i,h,3,,,"number of snr coeff (area=16 asec**2)"
+snr_16_1_coeffs,r,h,1.5336,,,"first  snr coeff (area=16 asec**2)"
+snr_16_2_coeffs,r,h,0.22547,,,"second snr coeff (area=16 asec**2)"
+snr_16_3_coeffs,r,h,0.0138237,,,"third  snr coeff (area=16 asec**2)"
+snr_16_thresh_min,r,h,2.5,,,"minimum snr value (area=16 asec**2)"
+num_64_snr_coeffs,i,h,3,,,"number of snr coeff (area=64 asec**2)"
+snr_64_1_coeffs,r,h,1.5336,,,"first  snr coeff (area=64 asec**2)"
+snr_64_2_coeffs,r,h,0.22547,,,"second snr coeff (area=64 asec**2)"
+snr_64_3_coeffs,r,h,0.0138237,,,"third  snr coeff (area=64 asec**2)"
+snr_64_thresh_min,r,h,2.5,,,"minimum snr value (area=64 asec**2)"
+num_144_snr_coeffs,i,h,3,,,"number of snr coeff (area=144 asec**2)"
+snr_144_1_coeffs,r,h,1.5336,,,"first  snr coeff (area=144 asec**2)"
+snr_144_2_coeffs,r,h,0.22547,,,"second snr coeff (area=144 asec**2)"
+snr_144_3_coeffs,r,h,0.0138237,,,"third  snr coeff (area=144 asec**2)"
+snr_144_thresh_min,r,h,2.5,,,"minimum snr value (area=144 asec**2)"
+num_576_snr_coeffs,i,h,3,,,"number of snr coeff (area=144 asec**2)"
+snr_576_1_coeffs,r,h,1.6952,,,"first  snr coeff (area=144 asec**2)"
+snr_576_2_coeffs,r,h,0.30085,,,"second snr coeff (area=144 asec**2)"
+snr_576_3_coeffs,r,h,-0.0011031,,,"third  snr coeff (area=144 asec**2)"
+snr_576_thresh_min,r,h,2.5,,,"minimum snr value (area=144 asec**2)"
+prf_sigma,r,h,0.5,,,"prf sigma in asec (>0 get snr coeffs from par)"
+energy,r,h,0.0,,,"energy(KeV) (=0.0 default energy in prf_tab)"
+prf_table,s,h,"xspatialdata$prfcoeffs.tab",,,"   prf coefficient table"

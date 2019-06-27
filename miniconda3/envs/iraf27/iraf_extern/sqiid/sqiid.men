@@ -1,0 +1,46 @@
+	chlist - Generate list of images at fixed numerical offsets
+       cleanup - Delete SQIID package temporary _T* files and images
+     colorlist - Generate SQIID HKL channel offset lists from J channel lists
+        getcoo - Extract co-ordinates from IMTOOL coordinate list output file
+        imclip - Clip an image outside a stated intensity interval
+       imgraph - Produce intensity scatterplot for pixels in two images
+	invcoo - Offset and flip (invert) GETCOO coordinate lists
+      mergecom - Merge registration databases with common image into one
+	mkmask - Generate bad-pixel mask images
+    nircombine - Combine registration database into (masked) composite image
+	 show4 - Display all four SQIID channels in a single IMTOOL frame
+        sqdark - Make a SQIID dark image
+        sqflat - Make a SQIID flatfield image
+       sqfocus - Make focus sequence into multi-channel focus strip 
+	 sqmos - Make an IRMOSAIC image and initial registration database
+        sqproc - Process SQIID images
+         sqsky - Make a SQIID sky image
+       unsqmos - Copy SQMOS mosaic image into separate images
+       xyadopt - Create alternative channel registration database from a channel
+	 xyget - Find common stars in images and create registration database
+	 xylap - Create registration database for data grid from CENTER data 
+	  zget - Find intensity offsets from overlaps in registration database
+SUBROUTINES:
+       closure - Find origin and minimum size for registration database
+     expandnim - Expand range string into a list of numbers
+    getcenters - Get nearest neighbor shifts from CENTER
+      linklaps - Link mosaic CENTER registration for row/col paths
+        locate - Locate image with respect to reference image list
+     mkpathtbl - Convert path position to grid position (ll corner)
+      transmat - Translate database from old to new format
+       xytrace - Link mosaic CENTER registration for arbitrary paths
+        ztrace - Trace ZGET intensity match paths to origin
+PROTOTYPES:
+       imspace - Determine number of SQIID images remaining in current imdir
+       sqremap - Update GEOMAP using image template from prior GEOMAP
+	 xystd - Get star positions for photometry using imcursor
+OUTDATED TASKS:
+       compose - Generate composite image from an image database
+      getalign - Get nearest neighbor shifts via IMALIGN to template image
+    getcombine - Get nearest neighbor shifts via IMALIGN/CROSSCOR/CENTERS
+       getlaps - Get nearest neighbor shifts via CROSSCOR
+    getoffsets - Find relative intensity offsets within overlap regions
+      getmatch - Generate complete composite image database
+     linkalign - Link GETALIGN info in master registration database
+      imlinfit - Perform a least squares fit over time of images
+     ircombine - Combine registration database into (masked) composite

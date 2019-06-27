@@ -1,0 +1,86 @@
+.help tfield Feb2000 finder
+.ih
+NAME
+tfield -- extract a field and predict X,Y positions from GSC tables
+.ih
+USAGE
+tfield input output
+.ih
+PARAMETERS
+.ls input
+The input list of Guide Star Catalog tables.  These tables will
+typically have been read from the Hubble Space Telescope CD roms using
+the CDRFITS task.  The selection of the appropriate tables will have
+been done using the GSCFIND task.
+.le
+.ls output
+The collated output table with predicted X & Y coordinates for all
+of the sources within the boundaries of the field.
+.le
+.ls image = ""
+The name of an image that defines the desired field.  If \fIimage\fR is
+set to the NULL string (""), the right ascension, declination,
+coordinate equinox, and field width information will be taken from the
+\fIra\fR, \fIdec\fR, \fIequinox\fR, \fIdate_obs\fR and \fIwidth\fR parameters
+that follow.  If any of the required header keywords (RA, DEC, EQUINOX or
+DATE-OBS) is missing from the header, the value will also be read from the
+corresponding parameter.
+.le
+.ls catpars = ""
+.le
+.ls ra, dec, equinox = INDEF, date_obs
+The right ascension (in hours), declination (in degrees), and
+coordinate epoch of the reference point.  These are only used if an
+\fIimage\fR is not supplied, or if the corresponding keyword is not
+defined in the \fIimage\fR.
+.le
+.ls width
+The field width (in degrees).  If an \fIimage\fR is supplied, this will
+not be used, but rather the image's dimensions will be converted to a
+field width using the scale parameter.
+.le
+.ls xref = INDEF, yref = INDEF
+The X & Y coordinates of the reference point.  If \fIopaxis\fR = yes,
+\fIxref\fR and \fIyref\fR will be ignored.  (In this case, \fIxoffset\fR
+and \fIyoffset\fR enable the task to recover the field center from the
+known optical axis position.)  If either \fIxref\fR or \fIyref\fR is
+INDEF, the reference coordinates will be assumed to be the image
+center.
+.le
+.ls opaxis = yes
+Is the reference point on the optical axis?
+.le
+.ls del_ra = 0., del_dec = 0.
+The RA and Dec offsets of the optical axis from the field center.  These
+are needed to correctly predict coordinates near the poles.  Note that
+some observatories write the position of the optical axis into image
+headers, not the position of the field center, in which case
+\fIdel_ra\fR and \fIdel_dec\fR must be set to compensate.
+.le
+.ls north = "top", east = "left"
+The directions of North and East relative to the orientation of the field.
+The options are: "top", "left", "bottom", or "right".  The user will be
+prompted if the choices are not orthogonal.
+.le
+.ls rotate = 0.
+The position angle of the field orientation with respect to the sky,
+counter clockwise is positive.  The final orientation is a combination
+of the settings for \fIpangle\fR, \fInorth\fR, and \fIeast\fR.
+.le
+.ls scale
+The plate or image scale.  The units of \fIscale\fR are typically
+seconds of arc per pixel ("/pix) for use with digital imaging, or
+seconds of arc per millimeter ("/mm) for photographic plates.
+.le
+.ls edge = 0.
+The calculated field dimensions will be extended by this amount (in
+pixels or millimeters) to provide insurance for a badly centered field.
+.le
+.ih
+DESCRIPTION
+.ih
+EXAMPLES
+.ih
+SEE ALSO
+gscfind, tpeak
+.endhelp

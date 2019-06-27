@@ -1,0 +1,61 @@
+#$Header: /home/pros/xray/xspatial/detect/RCS/mkpkg,v 11.0 1997/11/06 16:32:36 prosb Exp $ 
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:32:36  prosb
+#General Release 2.5
+#
+#Revision 9.3  1997/09/26 20:16:05  prosb
+#JCC(9/97) - move imdetect to xproto.
+#
+#Revision 9.2  1996/11/15 17:10:45  prosb
+#*** empty log message ***
+#
+# JCC (11/1/96) - add a new task "imdetect"
+#
+# Make the detect package.
+
+$call   relink
+$exit
+
+update:
+        $call   relink
+        $call   install
+        ;
+
+relink:
+        $set    LIBS= "-lpros -ltbtables"
+        $set    SPATLIB= "../libspatial.a"
+        $update libpkg.a
+        $omake  x_detect.x
+        $link   x_detect.o libpkg.a $(SPATLIB) $(LIBS) -o xx_detect.e
+        ;
+#
+#jcc - add "libdet.a, libcolgen.a & libscan.a" for imdetect 
+#jcc    $set    LIBS= "-lscan -lpros -ltbtables"
+#jcc    $set    SPATLIB= "../libspatial.a"
+#jcc    $update libpkg.a
+#jcc    $update libdet.a
+#jcc    $update libcolgen.a
+#jcc    $omake  x_detect.x
+#jcc $link x_detect.o libdet.a libcolgen.a libpkg.a $(SPATLIB) $(LIBS) -o xx_detect.e
+#jcc    ;
+
+install:
+        $move xx_detect.e xraybin$x_detect.e
+        ;
+
+libpkg.a:
+        @bepos
+        @bkden
+        @lpeaks
+	@detmkreg
+        @fixvar
+        @ms
+	;
+
+#libdet.a:
+#       @imdetect
+#       ;
+#
+#libcolgen.a:
+#       @imdetect
+#       ;

@@ -1,0 +1,141 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/asteval-0.9.13-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/asteval/__init__.py",
+    "lib/python2.7/site-packages/asteval/__init__.pyc",
+    "lib/python2.7/site-packages/asteval/_version.py",
+    "lib/python2.7/site-packages/asteval/_version.pyc",
+    "lib/python2.7/site-packages/asteval/asteval.py",
+    "lib/python2.7/site-packages/asteval/asteval.pyc",
+    "lib/python2.7/site-packages/asteval/astutils.py",
+    "lib/python2.7/site-packages/asteval/astutils.pyc"
+  ],
+  "fn": "asteval-0.9.13-py27_0.tar.bz2",
+  "license": "BSD License",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/asteval-0.9.13-py27_0",
+    "type": 1
+  },
+  "md5": "640f442026e7155212ef4c0b99caefa9",
+  "name": "asteval",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/asteval-0.9.13-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "8d9337d3dba284c8932de68ab3c5ac0906221f5bc66eb49cce0a06b72a8c7c05",
+        "sha256_in_prefix": "8d9337d3dba284c8932de68ab3c5ac0906221f5bc66eb49cce0a06b72a8c7c05",
+        "size_in_bytes": 1329
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "9eb0a8b43a94f64ef2425771cfe58429a5d5527562f10fa39c80fe947815aa22",
+        "sha256_in_prefix": "9eb0a8b43a94f64ef2425771cfe58429a5d5527562f10fa39c80fe947815aa22",
+        "size_in_bytes": 514
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "3c0b946073e08cd848f274402a51795f2ea0168e56a431d26cc71788c0c1a1d6",
+        "sha256_in_prefix": "3c0b946073e08cd848f274402a51795f2ea0168e56a431d26cc71788c0c1a1d6",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval-0.9.13-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "47f06f07bef1cdd40f5c4790393e0a08716c935e752b1a4c2d56598d0e03e78b",
+        "sha256_in_prefix": "47f06f07bef1cdd40f5c4790393e0a08716c935e752b1a4c2d56598d0e03e78b",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b536abdd740f4e8d403f34cbe836cb9ea1597bb7bb3e7ed8a17cc3cc142cd116",
+        "sha256_in_prefix": "b536abdd740f4e8d403f34cbe836cb9ea1597bb7bb3e7ed8a17cc3cc142cd116",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "4e567f62dd61b433b0786f2c034e974294d4d248de67ae1f9bb1f8acac7ff050",
+        "sha256_in_prefix": "4e567f62dd61b433b0786f2c034e974294d4d248de67ae1f9bb1f8acac7ff050",
+        "size_in_bytes": 1165
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/_version.py",
+        "path_type": "hardlink",
+        "sha256": "93953d1384c2a711ec3be7675cee3f6dea67a63ed0abee6634e7a2d9a42540be",
+        "sha256_in_prefix": "93953d1384c2a711ec3be7675cee3f6dea67a63ed0abee6634e7a2d9a42540be",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/_version.pyc",
+        "path_type": "hardlink",
+        "sha256": "e794fa1b56e5b28e4ad0c936b30937c66c24f6a2935ff0dd92e0afac12b562d3",
+        "sha256_in_prefix": "e794fa1b56e5b28e4ad0c936b30937c66c24f6a2935ff0dd92e0afac12b562d3",
+        "size_in_bytes": 527
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/asteval.py",
+        "path_type": "hardlink",
+        "sha256": "70bbbff9baf8b2a9ae789a690f205df15556e051d11f911e7c6be93404065a36",
+        "sha256_in_prefix": "70bbbff9baf8b2a9ae789a690f205df15556e051d11f911e7c6be93404065a36",
+        "size_in_bytes": 35263
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/asteval.pyc",
+        "path_type": "hardlink",
+        "sha256": "4ae02e24de6b9193023437fdde3e5b398caef63f1991e9e81a8f8ff164d7af5f",
+        "sha256_in_prefix": "4ae02e24de6b9193023437fdde3e5b398caef63f1991e9e81a8f8ff164d7af5f",
+        "size_in_bytes": 33349
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/astutils.py",
+        "path_type": "hardlink",
+        "sha256": "89d8856fb76f8909f7654ed674cdc732508a42bb1a4ef242f8473317ff02fb95",
+        "sha256_in_prefix": "89d8856fb76f8909f7654ed674cdc732508a42bb1a4ef242f8473317ff02fb95",
+        "size_in_bytes": 15256
+      },
+      {
+        "_path": "lib/python2.7/site-packages/asteval/astutils.pyc",
+        "path_type": "hardlink",
+        "sha256": "2549ade1eaa4a57df29b76169db9e56ebc0528ae8a754f337448a24ecf4d4826",
+        "sha256_in_prefix": "2549ade1eaa4a57df29b76169db9e56ebc0528ae8a754f337448a24ecf4d4826",
+        "size_in_bytes": 21522
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 32539,
+  "subdir": "linux-64",
+  "timestamp": 1544173471402,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/asteval-0.9.13-py27_0.tar.bz2",
+  "version": "0.9.13"
+}

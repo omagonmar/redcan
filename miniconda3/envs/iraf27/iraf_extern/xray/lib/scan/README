@@ -1,0 +1,146 @@
+The scan library creates region masks in memory.  It lacks many of the
+features of the region library (rg) but is considerably faster.  The region
+shapes currently supported are: circles, rotatable rectangles, and points.
+One should make of much as the mask as possible within the scan library
+and then convert the mask to plio format with "sl_pl" or 
+The operations, identified by codes defined in "scset.h", are:
+
+ or (SCOR) - mask_pixel_val = mask_pixel_val || region_pixel_val
+	merge new region with existing regions.  All mask regions must
+	have the same value for this operation.  Used for making
+	complex shapes for a single value mask such as a shadow mask
+	for instument ribs.
+
+ add (SCAD) - mask_pixel_val = mask_pixel_val + region_pixel_val
+	Add value  in specified region to mask.  Used for building
+	up composite values such as for an exposure mask.
+
+ paint (SCPN) - mask_pixel_val = region_pixel_val
+	Paint the new region over any existing regions.  Creates
+	unambiguous regions such as for a binning or counting mask.
+
+Tasks that use this library should include the call:
+	call sl_reset()
+at the end to free up the large amounts of memory which may have been
+alloc'd.
+
+
+
+The following is a list of the user routines in the scan list library.
+
+
+pointer procedure sl_open: Initialize and return a scan list handle.
+
+ sl = procedure sl_open ( width, height )
+  int	  width		# i: width dimension of image area
+  int	  height	# i: height dimension of image area
+
+procedure sl_close: Free up space used by scan list image for reuse.
+
+ procedure sl_close ( sl )
+  pointer sl		# i: scan list structure pointer
+
+
+procedure sl_circle: Apply given circle to scan list.
+
+ sc_circle ( sl, xcen, ycen, radius, val, op )
+  pointer sl		# i: scan list structure pointer
+  real	  xcen, ycen	# i: coordinates of box center
+  real	  radius	# i: radius of circle (not inclusive)
+  int	  val		# i: value to associate with this region
+  int	  imwdth	# i: width dimension of image field
+  int	  imhght	# i: height dimension of image field
+  pointer scan[imhght]	# i: scan list array to which to atach region
+  int	  op		# i: code for kind of operation to perform
+
+
+procedure sl_point: Apply point or set of points to scan list.
+
+ sc_point ( sl, pt_x, pt_y, count, val, op )
+  pointer sl		# i: scan list structure pointer
+  int	  count		# i: number of points given
+  real	  pt_x[count]	# i: x coordinate(s) of point(s)
+  real	  pt_y[count]	# i: y coordinate(s) of point(s)
+  int	  val		# i: value to associate with this region
+  int	  op		# i: code for kind of operation to perform
+
+
+procedure sl_rotbox: Apply given rotated rectangle to scan list.
+
+ sl_rotbox ( sl, xcen, ycen, xwdth, yhght, angle, val, op )
+  pointer sl		# i: scan list structure pointer
+  real	  xcen, ycen	# i: coordinates of box center
+  real	  xwdth, yhght	# i: box width and height
+  real	  angle		# i: angle in degrees, rotation is counter clockwise
+  int	  val		# i: value to associate with this region
+  int	  op		# i: code for kind of apply operation to perform
+
+
+pointer procedure sl_pl: Create a pl handle from a scan list.
+  Note: Scan list is not altered or closed by this call.
+
+ pl = sl_pl ( sl )
+  pointer sl		# i: scan list structure pointer
+
+
+pointer procedure sl_pm: Create a pm handle from a scan list.
+  Note: Scan list is not altered or closed by this call.
+
+ pm = sl_pm ( im, sl )
+  pointer im		# i: open IRAF image handle
+  pointer sl		# i: scan list structure pointer
+
+
+procedure sl_disp: Draw a table to roughly show the regions in the scan list.
+
+ sl_disp ( sl, cols )
+  pointer sl		# i: scan list structure pointer
+  int	  cols		# i: number of columns in display terminal
+
+
+procedure sl_verify: Run a verify routine over entire scanlist, printing
+		     discovered anomolies.
+ Note: This checks for errors in the sl/sc library execution (presumably none)
+
+ sl_verify ( sl, homog )
+  pointer sl		# i: scan list structure pointer
+  int	homog		# i: flag if 1, all scans expected to have same val
+
+
+
+Example:
+
+pointer sl		# handle for scan list mask
+pointer sl_temp		# handle for temporary mask for oring complex regions
+pointer	pl		# handle for IRAF pixel list
+pointer	sl_open(), sl_pl()
+
+begin
+	# open scan list handle
+	sl = sl_open (60, 60)
+	# set up the region for the instrument
+	call sl_circle (sl, 30.0, 30.0, 20.0, 1, SCAD)
+	# add in a bad pixel
+	call sl_point (sl, 30.0, 30.0, 1, 3, SCAD)
+	# create a region for the ribs
+	sl_temp = sl_open (60, 60)
+	call sl_rotbox (sl_temp, 20.0, 20.0, 5.0, 45.0, 45.0, 3, SCOR)
+	call sl_rotbox (sl_temp, 40.0, 20.0, 5.0, 45.0, 135.0, 3, SCOR)
+	call sl_rotbox (sl_temp, 40.0, 40.0, 5.0, 45.0, 225.0, 3, SCOR)
+	call sl_rotbox (sl_temp, 20.0, 40.0, 5.0, 45.0, 315.0, 3, SCOR)
+	# display the ribs
+	call sl_disp (sl_temp, 80)
+	# add the ribs to the mask
+	call sl_apply (sl_temp, sl, SCAD)
+	call sl_close (sl_temp)
+	# verify integrity and display the mask
+	call sl_verify (sl, 0)
+	call sl_disp (sl, 80)
+	# create pl handle
+	pl = sl_pl (sl)
+	# close scan lists and return all space to system
+	call sl_close (sl)
+	call sl_reset()
+	# display pixel list mask
+	call rg_pldisp (pl, 80)
+end

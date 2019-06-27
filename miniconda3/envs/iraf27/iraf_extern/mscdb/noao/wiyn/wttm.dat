@@ -1,0 +1,22 @@
+imagetyp	obstype
+amp		imageid
+subset		filter
+
+'dome flat'	flat
+'sky flat'	flat
+'proj flat'	flat
+
+# Extension name translations to IMAGEID.
+im1     1
+
+# Default values for real-time display.
+
+det1    detsec  [1:2048,1:2500]
+
+dat1    datasec [1:2048,1:2500]
+
+bias1   biassec [2049:2111,1:2500]
+
+size1   rawsize "2111 2500"
+
+ccd1    ccdname "WTTM001"

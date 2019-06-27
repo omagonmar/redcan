@@ -1,0 +1,52 @@
+# Help directory for the  midir  package
+
+$doc = "midir$doc/"
+
+#Michelle specific tasks:
+mprepare       hlp = doc$mprepare.hlp, src=midir$mprepare.cl
+mbackground    hlp = doc$mbackground.hlp, src=midir$mbackground.cl # NOT RELEASED
+mview          hlp = doc$mview.hlp, src=midir$mview.cl
+mcheckheader   hlp = doc$mcheckheader.hlp, src=midir$mcheckheader.hlp
+
+#TReCS specific tasks:
+tprepare       hlp = doc$tprepare.hlp, src=midir$tprepare.cl
+tbackground    hlp = doc$tbackground.hlp, src=midir$tbackground.cl
+tview          hlp = doc$tview.hlp, src=midir$tview.cl
+tcheckstructure hlp = doc$tcheckstructure.hlp, src=midir$tcheckstructure.cl
+
+#Imaging tasks:
+mibackground   hlp = doc$mibackground.hlp, src=midir$mibackground.cl # NOT RELEASED
+miview         hlp = doc$miview.hlp, src=midir$miview.cl
+miflat         hlp = doc$miflat.hlp, src=midir$miflat.cl
+mibpm          hlp = doc$mibpm.hlp, src=midir$mibpm.cl	# NOT RELEASED
+mistack        hlp = doc$mistack.hlp, src=midir$mistack.cl
+miregister     hlp = doc$miregister.hlp, src=midir$miregister.cl
+mireduce       hlp = doc$mireduce.hlp, src=midir$mireduce.cl
+
+# Michelle polarimetry reductions
+mipsplit       hlp = doc$mipsplit.hlp, src=midir$mipsplit.cl
+mipstack       hlp = doc$mipstack.hlp, src=midir$mipstack.cl
+mipstokes      hlp = doc$mipstokes.hlp, src=midir$mipstokes.cl
+miptrans       hlp = doc$miptrans.hlp, src=midir$miptrans.cl
+mipsstk        hlp = doc$mipsstk.hlp, src=midir$mipsstk.cl
+
+#Spectroscopy tasks:
+msreduce      hlp = doc$msreduce.hlp, src=midir$msreduce.cl
+mstelluric    hlp = doc$mstelluric.hlp, src=midir$mstelluric.cl  
+msabsflux     hlp = doc$msabsflux.hlp, src=midir$msabsflux.cl
+msdefringe    hlp = doc$msdefringe.hlp, src=midir$msdefringe.cl
+msflatcor     hlp = doc$msflatcor.hlp, src=midir$msflatcor.cl
+msslice       hlp = doc$msslice.hlp, src=midir$msslice.cl
+
+midirinfo      hlp = doc$midirinfo.hlp
+midirexamples  hlp = doc$midirexamples.hlp
+
+# miutil sub package  (to be moved to midir eventually)  #NOT RELEASED
+$miutil = "./miutil/"					 #NOT RELEASED
+
+miutil	men = miutil$miutil.men,
+	hlp = miutil$miutil.men,
+	sys = miutil$miutil.hlp,
+	pkg = miutil$miutil.hd,
+	src = miutil$miutil.cl
+

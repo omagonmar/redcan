@@ -1,0 +1,3 @@
+# Mkpkg special file list for SUN/IRAF, Sun-3/OS-4.
+
+$set	XNO	= '& "$xc -cq -/$(MACH) &"'

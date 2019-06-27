@@ -1,0 +1,629 @@
+!mkpkg -p noao nrelink
+check out file `librv.a = bin/librv.a'
+warning: library `librv.a' not found
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao t_bcvcorr.x compbcv.x ranges.x juldate.x getimage.x clsimage.x t_listspec.x t_pix2wl.x t_wl2pix.x gettemp.x getspec.x getsky.x imgpar.x plotspec.x plotsum.x vcombine.x vhead.x writetemp.x replot.x legendre.x invert.x icsubcon.x contpars.x contsum.x apodize.x arc_w2p.x fourm.x smooth.x gsmooth.x matinv.x polfit.x bcv.f t_velset.x velsubs.x t_wlrange.x wlrange.x rebin.x wlcon.x loghead.x plotutil.x logtime.x fill.x zero.x median.x
+t_bcvcorr.x:
+   t_bcvcorr:
+   juldat:
+   jd2ut:
+   suncoords:
+compbcv.x:
+   compbcv:
+ranges.x:
+   decode_ranges:
+   get_next_number:
+   get_previous_number:
+   is_in_range:
+juldate.x:
+   juldate:
+   jd2hjd:
+   concrd:
+getimage.x:
+   getimage:
+clsimage.x:
+   close_image:
+t_listspec.x:
+   t_listspec:
+t_pix2wl.x:
+   t_pix2wl:
+t_wl2pix.x:
+   t_wl2pix:
+gettemp.x:
+   gettemp:
+getspec.x:
+   getspec:
+getsky.x:
+   getsky:
+imgpar.x:
+   imgbpar:
+   imgcpar:
+   imgipar:
+   imglpar:
+   imgspar:
+   imgrpar:
+   imgdpar:
+   imgdate:
+   imgdtim:
+   imgxpar:
+plotspec.x:
+   plotspec:
+plotsum.x:
+   plotsum:
+vcombine.x:
+   vcombine:
+vhead.x:
+   vwhead:
+   vrhead:
+   vthead:
+   qwhead:
+writetemp.x:
+   tmp_open:
+   tmp_close:
+   tmp_write_iraf:
+   tmp_put_image_line:
+   tmp_change_pix:
+   tmp_pix_lim:
+replot.x:
+   replot:
+   reploty:
+legendre.x:
+   fitlpo:
+   lpoly:
+   lpi:
+   polyc:
+   ibc:
+invert.x:
+   invert:
+icsubcon.x:
+   icsubcon:
+   icsubcony:
+   recover_icfit_pars:
+contpars.x:
+   cont_get_pars:
+   cont_parupdate:
+   cont_unlearn:
+   cont_show:
+   cont_colon:
+   cmd_interactive:
+   cmd_sample:
+   cmd_naverage:
+   cmd_cnfunc:
+   cmd_cn_order:
+   set_cn_order:
+   cmd_s_low_reject:
+   cmd_s_high_reject:
+   cmd_t_low_reject:
+   cmd_t_high_reject:
+   cmd_niterate:
+   cmd_grow:
+contsum.x:
+   csum_get_pars:
+   csum_parupdate:
+apodize.x:
+   apodize:
+arc_w2p.x:
+   w2p:
+   wpinit:
+fourm.x:
+   fourm:
+smooth.x:
+   smooth:
+gsmooth.x:
+   gsmooth:
+matinv.x:
+   matinv:
+polfit.x:
+   polfit:
+   determ:
+t_velset.x:
+   t_velset:
+   shiftimage:
+velsubs.x:
+   vels_get:
+   vels_put:
+   vels_timelog:
+   vels_imcopy:
+   vels_convert:
+t_wlrange.x:
+   t_wlrange:
+wlrange.x:
+   wlrange:
+rebin.x:
+   rebinl:
+   rebin:
+   cfit_mode:
+   resum:
+   pixel_parts:
+   reinterp:
+wlcon.x:
+   wcs_set:
+   wcs_pixshift:
+   wcs_getshift:
+   wcs_w2p:
+   wcs_l2p:
+   wcs_p2w:
+   wcs_p2l:
+loghead.x:
+   loghead:
+plotutil.x:
+   openplot:
+   closeplot:
+   rvscale:
+logtime.x:
+   logtime:
+fill.x:
+   filllist:
+   fillwav:
+   fillpix:
+zero.x:
+   zerolist:
+   zerowav:
+   zeropix:
+median.x:
+   median:
+bcv.f:
+   bcv:
+   sidtim:
+   pre:
+   geovel:
+   barvel:
+t_bcvcorr.f:
+   tbcvcr:
+   juldat:
+   jd2ut:
+   suncos:
+compbcv.f:
+   compbv:
+ranges.f:
+   decods:
+   getner:
+   getprr:
+   isinre:
+juldate.f:
+   juldae:
+   jd2hjd:
+   concrd:
+getimage.f:
+   getime:
+clsimage.f:
+   closee:
+t_listspec.f:
+   tlistc:
+t_pix2wl.f:
+   tpix2l:
+t_wl2pix.f:
+   twl2px:
+gettemp.f:
+   gettep:
+getspec.f:
+   getspc:
+getsky.f:
+   getsky:
+imgpar.f:
+   imgbpr:
+   imgcpr:
+   imgipr:
+   imglpr:
+   imgspr:
+   imgrpr:
+   imgdpr:
+   imgdae:
+   imgdtm:
+   imgxpr:
+plotspec.f:
+   plotsc:
+plotsum.f:
+   plotsm:
+vcombine.f:
+   vcombe:
+vhead.f:
+   vwhead:
+   vrhead:
+   vthead:
+   qwhead:
+writetemp.f:
+   tmpopn:
+   tmpcle:
+   tmpwrf:
+   tmppue:
+   tmpchx:
+   tmppim:
+replot.f:
+   replot:
+   reploy:
+legendre.f:
+   fitlpo:
+   lpoly:
+   lpi:
+   polyc:
+   ibc:
+invert.f:
+   invert:
+icsubcon.f:
+   icsubn:
+   icsuby:
+   recovs:
+contpars.f:
+   contgs:
+   contpe:
+   contun:
+   contsw:
+   contcn:
+   cmdine:
+   cmdsae:
+   cmdnae:
+   cmdcnc:
+   cmdcnr:
+   setcnr:
+   cmdslt:
+   cmdsht:
+   cmdtlt:
+   cmdtht:
+   cmdnie:
+   cmdgrw:
+contsum.f:
+   csumgs:
+   csumpe:
+apodize.f:
+   apodie:
+arc_w2p.f:
+   w2p:
+   wpinit:
+fourm.f:
+   fourm:
+smooth.f:
+   smooth:
+gsmooth.f:
+   gsmooh:
+matinv.f:
+   matinv:
+polfit.f:
+   polfit:
+   determ:
+t_velset.f:
+   tvelst:
+   shifte:
+velsubs.f:
+   velsgt:
+   velspt:
+   velstg:
+   velsiy:
+   velsct:
+t_wlrange.f:
+   twlrae:
+wlrange.f:
+   wlrane:
+rebin.f:
+   rebinl:
+   rebin:
+   cfitme:
+   resum:
+   pixels:
+   reintp:
+wlcon.f:
+   wcsset:
+   wcspit:
+   wcsget:
+   wcsw2p:
+   wcsl2p:
+   wcsp2w:
+   wcsp2l:
+loghead.f:
+   loghed:
+plotutil.f:
+   openpt:
+   closet:
+   rvscae:
+logtime.f:
+   logtie:
+fill.f:
+   filllt:
+   fillwv:
+   fillpx:
+zero.f:
+   zerolt:
+   zerowv:
+   zeropx:
+median.f:
+   median:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a t_bcvcorr.o compbcv.o ranges.o juldate.o getimage.o clsimage.o t_listspec.o t_pix2wl.o t_wl2pix.o gettemp.o getspec.o getsky.o imgpar.o plotspec.o plotsum.o vcombine.o vhead.o writetemp.o replot.o legendre.o invert.o icsubcon.o contpars.o contsum.o apodize.o arc_w2p.o fourm.o smooth.o gsmooth.o matinv.o polfit.o bcv.o t_velset.o velsubs.o t_wlrange.o wlrange.o rebin.o wlcon.o loghead.o plotutil.o logtime.o fill.o zero.o median.o
+ar: creating /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao t_xcsao.x t_pxcsao.x xcfit.x xcorfit.x xcplot.x xciplot.x xcorplot.x xcsplot.x xcfile.x pkfitp.x pkfitq.x pkfitc.x pknum.x pkwidth.x xcrslts.x xcarch.x xchead.x aspart.x buffers.x earlin.x correlate.x xcmin.x
+t_xcsao.x:
+   t_xcsao:
+t_pxcsao.x:
+   t_pxcsao:
+xcfit.x:
+   xcfit:
+   countemp:
+   setschop:
+   settchop:
+xcorfit.x:
+   xcorfit:
+   xcpower:
+xcplot.x:
+   xcplot:
+   rcompx:
+xciplot.x:
+   xciplot:
+xcorplot.x:
+   xcorplot:
+xcsplot.x:
+   xcsplot:
+xcfile.x:
+   xcfile:
+pkfitp.x:
+   pkfitp:
+   parabolapeak:
+pkfitq.x:
+   pkfitq:
+   quarticpeak:
+pkfitc.x:
+   pkfitc:
+   mfunk:
+pknum.x:
+   pknum:
+pkwidth.x:
+   pkwidth:
+xcrslts.x:
+   xcrslts:
+   xcrshead:
+xcarch.x:
+   xcarch:
+xchead.x:
+   xcwhead:
+   xcrhead:
+aspart.x:
+   aspartf:
+buffers.x:
+   rcvec:
+   crvec:
+   flip:
+   cflip:
+earlin.x:
+   earlin:
+   dsimul:
+correlate.x:
+   correl:
+   rmsfil:
+   rmsnorm:
+   flter:
+   flter2:
+   phband:
+xcmin.x:
+   xcmin:
+   mvprint:
+t_xcsao.f:
+   txcsao:
+t_pxcsao.f:
+   tpxcso:
+xcfit.f:
+   xcfit:
+   countp:
+   setscp:
+   settcp:
+xcorfit.f:
+   xcorft:
+   xcpowr:
+xcplot.f:
+   xcplot:
+   rcompx:
+xciplot.f:
+   xciplt:
+xcorplot.f:
+   xcorpt:
+xcsplot.f:
+   xcsplt:
+xcfile.f:
+   xcfile:
+pkfitp.f:
+   pkfitp:
+   parabk:
+pkfitq.f:
+   pkfitq:
+   quartk:
+pkfitc.f:
+   pkfitc:
+   mfunk:
+pknum.f:
+   pknum:
+pkwidth.f:
+   pkwidh:
+xcrslts.f:
+   xcrsls:
+   xcrshd:
+xcarch.f:
+   xcarch:
+xchead.f:
+   xcwhed:
+   xcrhed:
+aspart.f:
+   asparf:
+buffers.f:
+   rcvec:
+   crvec:
+   flip:
+   cflip:
+earlin.f:
+   earlin:
+   dsimul:
+correlate.f:
+   correl:
+   rmsfil:
+   rmsnom:
+   flter:
+   flter2:
+   phband:
+xcmin.f:
+   xcmin:
+   mvprit:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a t_xcsao.o t_pxcsao.o xcfit.o xcorfit.o xcplot.o xciplot.o xcorplot.o xcsplot.o xcfile.o pkfitp.o pkfitq.o pkfitc.o pknum.o pkwidth.o xcrslts.o xcarch.o xchead.o aspart.o buffers.o earlin.o correlate.o xcmin.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao t_pemsao.x t_emsao.x emfit.x emrslts.x emarch.x emplot.x emeplot.x emiplot.x emguess.x emsrch.x emlfit.x emvfit.x eminit.x emfind.x emmin.x emhead.x
+t_pemsao.x:
+   t_pemsao:
+t_emsao.x:
+   t_emsao:
+emfit.x:
+   emfit:
+emrslts.x:
+   emrslts:
+   emrshead:
+emarch.x:
+   emarch:
+emplot.x:
+   emplot:
+   emcursor:
+   rcompe:
+emeplot.x:
+   emeplot:
+emiplot.x:
+   emiplot:
+emguess.x:
+   emguess:
+emsrch.x:
+   emsrch:
+   gxyline:
+emlfit.x:
+   emlfit:
+   iscombo:
+emvfit.x:
+   emvfit:
+eminit.x:
+   eminit:
+emfind.x:
+   emfind:
+   isline:
+   linepar:
+emmin.x:
+   emmin:
+   solve2:
+   lineq:
+   tgauss:
+emhead.x:
+   emwhead:
+   emrhead:
+t_pemsao.f:
+   tpemso:
+t_emsao.f:
+   temsao:
+emfit.f:
+   emfit:
+emrslts.f:
+   emrsls:
+   emrshd:
+emarch.f:
+   emarch:
+emplot.f:
+   emplot:
+   emcurr:
+   rcompe:
+emeplot.f:
+   emeplt:
+emiplot.f:
+   emiplt:
+emguess.f:
+   emgues:
+emsrch.f:
+   emsrch:
+   gxylie:
+emlfit.f:
+   emlfit:
+   iscomo:
+emvfit.f:
+   emvfit:
+eminit.f:
+   eminit:
+emfind.f:
+   emfind:
+   isline:
+   linepr:
+emmin.f:
+   emmin:
+   solve2:
+   lineq:
+   tgauss:
+emhead.f:
+   emwhed:
+   emrhed:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a t_pemsao.o t_emsao.o emfit.o emrslts.o emarch.o emplot.o emeplot.o emiplot.o emguess.o emsrch.o emlfit.o emvfit.o eminit.o emfind.o emmin.o emhead.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao t_linespec.x mkgauss.x wtgauss.x
+t_linespec.x:
+   t_linespec:
+mkgauss.x:
+   mkgaus:
+wtgauss.x:
+   wtgaus:
+t_linespec.f:
+   tlinec:
+mkgauss.f:
+   mkgaus:
+wtgauss.f:
+   wtgaus:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a t_linespec.o mkgauss.o wtgauss.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao t_sumspec.x addspec.x
+t_sumspec.x:
+   t_sumspec:
+addspec.x:
+   addspec:
+   compinit:
+   imcpstr:
+   imcpsd:
+   imcpd:
+   renormalize:
+   mkfits:
+   addapnum:
+t_sumspec.f:
+   tsumsc:
+addspec.f:
+   addspc:
+   compit:
+   imcpsr:
+   imcpsd:
+   imcpd:
+   renore:
+   mkfits:
+   addapm:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a t_sumspec.o addspec.o
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao t_eqwidth.x eqplot.x eqwplot.x
+t_eqwidth.x:
+   t_eqwidth:
+   eq_bands:
+   eq_alloc:
+   eq_free:
+   eq_header:
+   eq_proc:
+   eq_flux:
+   eq_filter:
+eqplot.x:
+   eqplot:
+   eqcursor:
+eqwplot.x:
+   eqwplot:
+t_eqwidth.f:
+   teqwih:
+   eqbans:
+   eqallc:
+   eqfree:
+   eqhear:
+   eqproc:
+   eqflux:
+   eqfilr:
+eqplot.f:
+   eqplot:
+   eqcurr:
+eqwplot.f:
+   eqwplt:
+ar r /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/rvsao/bin/librv.a t_eqwidth.o eqplot.o eqwplot.o
+ranlib bin/librv.a
+Updated 90 files in librv.a
+check file `librv.a' into `bin'
+xc -c -w -/I/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf/include -p noao x_rvsao.x
+x_rvsao.x:
+   sys_runtask:
+x_rvsao.f:
+   sysruk:
+move `bin/librv.a' to `librv.a'
+xc -Nz -p noao -z x_rvsao.o librv.a -lsmw -lxtools -lcurfit -liminterp -lllsq -o xx_rvsao.e
+move `librv.a' to `bin/librv.a'
+delete file x_rvsao.o
+move `xx_rvsao.e' to `bin/x_rvsao.e'

@@ -1,0 +1,189 @@
+{
+  "build": "py27_1",
+  "build_number": 1,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "numpy",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stsci.stimage-0.2.2-py27_1",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7-nspkg.pth",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/namespace_packages.txt",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/stsci/stimage/__init__.py",
+    "lib/python2.7/site-packages/stsci/stimage/__init__.pyc",
+    "lib/python2.7/site-packages/stsci/stimage/_stimage.so",
+    "lib/python2.7/site-packages/stsci/stimage/test/__init__.py",
+    "lib/python2.7/site-packages/stsci/stimage/test/__init__.pyc",
+    "lib/python2.7/site-packages/stsci/stimage/test/test_geomap.py",
+    "lib/python2.7/site-packages/stsci/stimage/test/test_geomap.pyc",
+    "lib/python2.7/site-packages/stsci/stimage/test/test_xyxymatch.py",
+    "lib/python2.7/site-packages/stsci/stimage/test/test_xyxymatch.pyc",
+    "lib/python2.7/site-packages/stsci/stimage/version.py",
+    "lib/python2.7/site-packages/stsci/stimage/version.pyc"
+  ],
+  "fn": "stsci.stimage-0.2.2-py27_1.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stsci.stimage-0.2.2-py27_1",
+    "type": 1
+  },
+  "md5": "c7bf1c17e60f1de8813f5066b4467c36",
+  "name": "stsci.stimage",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stsci.stimage-0.2.2-py27_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7-nspkg.pth",
+        "path_type": "hardlink",
+        "sha256": "fc9b03b1454807574f3b84adc2c56f5b3be1a581534670c45abff3495645ad4f",
+        "sha256_in_prefix": "fc9b03b1454807574f3b84adc2c56f5b3be1a581534670c45abff3495645ad4f",
+        "size_in_bytes": 534
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "e7a22cf3ab9d01b083cf1bf3248f7125ca1d84165cf5db360898608106e3a8ca",
+        "sha256_in_prefix": "e7a22cf3ab9d01b083cf1bf3248f7125ca1d84165cf5db360898608106e3a8ca",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "4d30509735ae503e9a55075411bb606a6c214de13fde2133e8698697b7f64c35",
+        "sha256_in_prefix": "4d30509735ae503e9a55075411bb606a6c214de13fde2133e8698697b7f64c35",
+        "size_in_bytes": 1787
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/namespace_packages.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "ed257f55d8270dc467fd23d8804ab20ef40163d7eb4d1c34ab7485f2aeef8f58",
+        "sha256_in_prefix": "ed257f55d8270dc467fd23d8804ab20ef40163d7eb4d1c34ab7485f2aeef8f58",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci.stimage-0.2.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "sha256_in_prefix": "9000ecfcecf50c74c8b1bd97e841a849f7e4119d201873c95f8bcaec62e438ca",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d80215511949872bc5cf571d35f0ae0532ff9a56dc08774d7cb29b360c62b816",
+        "sha256_in_prefix": "d80215511949872bc5cf571d35f0ae0532ff9a56dc08774d7cb29b360c62b816",
+        "size_in_bytes": 24261
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "9fa7463b074b2769d440184277901c1e354b3c6966e406b9b7249ace0fed88ca",
+        "sha256_in_prefix": "9fa7463b074b2769d440184277901c1e354b3c6966e406b9b7249ace0fed88ca",
+        "size_in_bytes": 22811
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/_stimage.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.14/_dispatch/miniconda/conda-bld/stsci.stimage_1552592753710/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "bcadf9512d50685518ad0d8c3c8b02f1224084f56be1d2624ec21b44f822ccda",
+        "sha256_in_prefix": "21719f464941b8d52c36f872ee94a16f99ea0cf33c88e71f68c1dab5a1ad4dfc",
+        "size_in_bytes": 289160
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/test/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "8e81267b83796d503e3310465ff65453a847aae115bbd63c186f5e67c73d368f",
+        "sha256_in_prefix": "8e81267b83796d503e3310465ff65453a847aae115bbd63c186f5e67c73d368f",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/test/test_geomap.py",
+        "path_type": "hardlink",
+        "sha256": "b116d4e09415be3cfb0d47d942f26c9863422d6d220bcd7d6eaa28113151dc00",
+        "sha256_in_prefix": "b116d4e09415be3cfb0d47d942f26c9863422d6d220bcd7d6eaa28113151dc00",
+        "size_in_bytes": 1850
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/test/test_geomap.pyc",
+        "path_type": "hardlink",
+        "sha256": "40d2d0b2ead32cdd115c11a19343fc81d168017887b0cb015c8f1d02e0d83982",
+        "sha256_in_prefix": "40d2d0b2ead32cdd115c11a19343fc81d168017887b0cb015c8f1d02e0d83982",
+        "size_in_bytes": 295
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/test/test_xyxymatch.py",
+        "path_type": "hardlink",
+        "sha256": "c4f52c3e0b87f5db3aa97ee3d772d2121791937eab44c6461e4f676ff0ab23d8",
+        "sha256_in_prefix": "c4f52c3e0b87f5db3aa97ee3d772d2121791937eab44c6461e4f676ff0ab23d8",
+        "size_in_bytes": 2729
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/test/test_xyxymatch.pyc",
+        "path_type": "hardlink",
+        "sha256": "7501ff3dcccaf114a8ddb4f592fc7ff7001601a0ec79a5afc74b0460c49394e5",
+        "sha256_in_prefix": "7501ff3dcccaf114a8ddb4f592fc7ff7001601a0ec79a5afc74b0460c49394e5",
+        "size_in_bytes": 1862
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/version.py",
+        "path_type": "hardlink",
+        "sha256": "6a45de51793a5c581f531568793df906419ab3b56aeac1df14fe2c42a9c80bc3",
+        "sha256_in_prefix": "6a45de51793a5c581f531568793df906419ab3b56aeac1df14fe2c42a9c80bc3",
+        "size_in_bytes": 2801
+      },
+      {
+        "_path": "lib/python2.7/site-packages/stsci/stimage/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "81daa1107c84ff259a4379a8a86a2ae7b3344099ed95ad199d4f0286f2b8edc2",
+        "sha256_in_prefix": "81daa1107c84ff259a4379a8a86a2ae7b3344099ed95ad199d4f0286f2b8edc2",
+        "size_in_bytes": 2053
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 118717,
+  "subdir": "linux-64",
+  "timestamp": 1552593172243,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stsci.stimage-0.2.2-py27_1.tar.bz2",
+  "version": "0.2.2"
+}

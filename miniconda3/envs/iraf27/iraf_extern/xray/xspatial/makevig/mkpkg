@@ -1,0 +1,43 @@
+#$Header: /home/pros/xray/xspatial/makevig/RCS/mkpkg,v 11.0 1997/11/06 16:31:45 prosb Exp $
+#$Log: mkpkg,v $
+#Revision 11.0  1997/11/06 16:31:45  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:49:58  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:11:03  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:31:38  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:12:36  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:30:58  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:37:21  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:52:15  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/07/21  18:31:05  mo
+#Initial revision
+#
+#Revision 2.0  91/03/06  22:47:56  pros
+#General Release 1.0
+#
+# Make control package.
+ 
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+ 
+libpkg.a:
+        makevig.x       <plhead.h> <rosat.h> vign.h inst.h  <pmset.h>
+	vignsub.x       <ext.h> <qpoe.h> <einstein.h> <rosat.h> <math.h>
+	;

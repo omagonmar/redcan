@@ -1,0 +1,6 @@
+# Help directory for the XDEMO package
+
+$doc		= "./doc/"
+$src		= "./source/"
+
+revisions	hlp = Revisions

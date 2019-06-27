@@ -1,0 +1,291 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.1",
+    "calcos",
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "setuptools",
+    "stsci.tools"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/costools-1.2.3-py27_0",
+  "features": "",
+  "files": [
+    "bin/timefilter",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/scripts/timefilter",
+    "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/costools/__init__.py",
+    "lib/python2.7/site-packages/costools/__init__.pyc",
+    "lib/python2.7/site-packages/costools/costoolsutil.py",
+    "lib/python2.7/site-packages/costools/costoolsutil.pyc",
+    "lib/python2.7/site-packages/costools/pars/splittag.cfg",
+    "lib/python2.7/site-packages/costools/pars/splittag.cfgspc",
+    "lib/python2.7/site-packages/costools/pars/timefilter.cfg",
+    "lib/python2.7/site-packages/costools/pars/timefilter.cfgspc",
+    "lib/python2.7/site-packages/costools/pars/x1dcorr.cfg",
+    "lib/python2.7/site-packages/costools/pars/x1dcorr.cfgspc",
+    "lib/python2.7/site-packages/costools/saamodel.py",
+    "lib/python2.7/site-packages/costools/saamodel.pyc",
+    "lib/python2.7/site-packages/costools/splittag.help",
+    "lib/python2.7/site-packages/costools/splittag.py",
+    "lib/python2.7/site-packages/costools/splittag.pyc",
+    "lib/python2.7/site-packages/costools/timefilter.help",
+    "lib/python2.7/site-packages/costools/timefilter.py",
+    "lib/python2.7/site-packages/costools/timefilter.pyc",
+    "lib/python2.7/site-packages/costools/version.py",
+    "lib/python2.7/site-packages/costools/version.pyc",
+    "lib/python2.7/site-packages/costools/x1dcorr.help",
+    "lib/python2.7/site-packages/costools/x1dcorr.py",
+    "lib/python2.7/site-packages/costools/x1dcorr.pyc"
+  ],
+  "fn": "costools-1.2.3-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/costools-1.2.3-py27_0",
+    "type": 1
+  },
+  "md5": "ff5292ae4ddf19e80e252dea8b1e4bf8",
+  "name": "costools",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/costools-1.2.3-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/timefilter",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "8987951983b1f0c9c8641b2ac447212c1f7e581cd685867fd749cd46fd614dd7",
+        "sha256_in_prefix": "7b13e26b661cae643213ef7ab90927d7e8eff6822abab8347e24dc6443841a5a",
+        "size_in_bytes": 205
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "722b79473c0fed0359514039eb10934c53f9bb3585f41d5523f85297c2d00e25",
+        "sha256_in_prefix": "722b79473c0fed0359514039eb10934c53f9bb3585f41d5523f85297c2d00e25",
+        "size_in_bytes": 635
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "f7b29afbe292289e7630017168477e7583568e3905899ace05e474f171c7a7ac",
+        "sha256_in_prefix": "f7b29afbe292289e7630017168477e7583568e3905899ace05e474f171c7a7ac",
+        "size_in_bytes": 725
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "8df7b26533a15f2291a8b0ac43b64b767824b6cf1c16910d6e1286d8670099d2",
+        "sha256_in_prefix": "8df7b26533a15f2291a8b0ac43b64b767824b6cf1c16910d6e1286d8670099d2",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/scripts/timefilter",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "c282ab78ed88479ffba885f77559e3af7f854465d3a38ef41246364a81732396",
+        "sha256_in_prefix": "348cf65ec7f31481d790a76e2d3ec42e94d5caf47dc44fcdd38fe1ceaebc440b",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools-1.2.3-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ab1740a78c66685c30052330712d71569b358750b7f334c6f904beec0a8b681d",
+        "sha256_in_prefix": "ab1740a78c66685c30052330712d71569b358750b7f334c6f904beec0a8b681d",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "78b4daffd8a586a4e0768f528720d4f021176aaa5858e0458db95e936027d53d",
+        "sha256_in_prefix": "78b4daffd8a586a4e0768f528720d4f021176aaa5858e0458db95e936027d53d",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "cde6ffba8f948c69ab75bf88fa6de8fea117cc878e641f51595c1f4c72a1ddc4",
+        "sha256_in_prefix": "cde6ffba8f948c69ab75bf88fa6de8fea117cc878e641f51595c1f4c72a1ddc4",
+        "size_in_bytes": 590
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/costoolsutil.py",
+        "path_type": "hardlink",
+        "sha256": "a2e10154bb9e9120f0d0f2463888975ac754a3d67d32fb3d9d3bfd9dbc05d01b",
+        "sha256_in_prefix": "a2e10154bb9e9120f0d0f2463888975ac754a3d67d32fb3d9d3bfd9dbc05d01b",
+        "size_in_bytes": 4267
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/costoolsutil.pyc",
+        "path_type": "hardlink",
+        "sha256": "1893d548145e8c84421935a0c19ee4233845ab2335bb64b9d8f109b72511b156",
+        "sha256_in_prefix": "1893d548145e8c84421935a0c19ee4233845ab2335bb64b9d8f109b72511b156",
+        "size_in_bytes": 4080
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/pars/splittag.cfg",
+        "path_type": "hardlink",
+        "sha256": "afa75dfdef43524be3678a65628798f7b608d773649aa33c0bd671d18f6bf71f",
+        "sha256_in_prefix": "afa75dfdef43524be3678a65628798f7b608d773649aa33c0bd671d18f6bf71f",
+        "size_in_bytes": 137
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/pars/splittag.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "a1654506983080d246b376020bb60ba16be8c78c4c82e873935802f9dcc8d0fc",
+        "sha256_in_prefix": "a1654506983080d246b376020bb60ba16be8c78c4c82e873935802f9dcc8d0fc",
+        "size_in_bytes": 663
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/pars/timefilter.cfg",
+        "path_type": "hardlink",
+        "sha256": "85392d3303b5f8c3e3f56db0bbb42696496fef66b4b405812739d617c7a83918",
+        "sha256_in_prefix": "85392d3303b5f8c3e3f56db0bbb42696496fef66b4b405812739d617c7a83918",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/pars/timefilter.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "e4153fe7052aa2a4cfb38db1e863aad8d0c8a13999668ce927a1e7cf4ae79446",
+        "sha256_in_prefix": "e4153fe7052aa2a4cfb38db1e863aad8d0c8a13999668ce927a1e7cf4ae79446",
+        "size_in_bytes": 345
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/pars/x1dcorr.cfg",
+        "path_type": "hardlink",
+        "sha256": "ef3857a8ba1886629fc7795c8777cf4ce0ffc09f801ff64ce4942701d1b9043b",
+        "sha256_in_prefix": "ef3857a8ba1886629fc7795c8777cf4ce0ffc09f801ff64ce4942701d1b9043b",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/pars/x1dcorr.cfgspc",
+        "path_type": "hardlink",
+        "sha256": "f1d646968362090652e6130aaf335cb1530c759bbd45f66e6872269ba9e45afa",
+        "sha256_in_prefix": "f1d646968362090652e6130aaf335cb1530c759bbd45f66e6872269ba9e45afa",
+        "size_in_bytes": 636
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/saamodel.py",
+        "path_type": "hardlink",
+        "sha256": "cb538b0481d84de82fdf39187f9331f6b4ef6e57beac96abc0144e2a9033b6fc",
+        "sha256_in_prefix": "cb538b0481d84de82fdf39187f9331f6b4ef6e57beac96abc0144e2a9033b6fc",
+        "size_in_bytes": 21860
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/saamodel.pyc",
+        "path_type": "hardlink",
+        "sha256": "5ad44f16729d499d180d8bbfc92d7371ac93095a991d2b5220f2d17b96c8cc6d",
+        "sha256_in_prefix": "5ad44f16729d499d180d8bbfc92d7371ac93095a991d2b5220f2d17b96c8cc6d",
+        "size_in_bytes": 14557
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/splittag.help",
+        "path_type": "hardlink",
+        "sha256": "4fb85f5dfe15ae208e72135b69c9f4100d199e1b087dd56e0558def12f533409",
+        "sha256_in_prefix": "4fb85f5dfe15ae208e72135b69c9f4100d199e1b087dd56e0558def12f533409",
+        "size_in_bytes": 1936
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/splittag.py",
+        "path_type": "hardlink",
+        "sha256": "f376ad9abb6b149d84987165d5d5462fc9240148a4867e7bd167ee5c3109478b",
+        "sha256_in_prefix": "f376ad9abb6b149d84987165d5d5462fc9240148a4867e7bd167ee5c3109478b",
+        "size_in_bytes": 5698
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/splittag.pyc",
+        "path_type": "hardlink",
+        "sha256": "f511538e6fc9863f41cdbbd36f23184e31723849678574b3ca40e898c0a0bf0f",
+        "sha256_in_prefix": "f511538e6fc9863f41cdbbd36f23184e31723849678574b3ca40e898c0a0bf0f",
+        "size_in_bytes": 5674
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/timefilter.help",
+        "path_type": "hardlink",
+        "sha256": "d900b0ca94fc2dda0af014c6c3a6563f40c9e6ab5b248917c1c3b4e72e977699",
+        "sha256_in_prefix": "d900b0ca94fc2dda0af014c6c3a6563f40c9e6ab5b248917c1c3b4e72e977699",
+        "size_in_bytes": 4231
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/timefilter.py",
+        "path_type": "hardlink",
+        "sha256": "d062cf23cea812fdaa2d815fdeccaefb51d8123fcbf7c0ed28b300e9cf27c11f",
+        "sha256_in_prefix": "d062cf23cea812fdaa2d815fdeccaefb51d8123fcbf7c0ed28b300e9cf27c11f",
+        "size_in_bytes": 45505
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/timefilter.pyc",
+        "path_type": "hardlink",
+        "sha256": "a531fb406585cfd462b423b10454f9889fea96bab4cdc48448d005fd9ccd6de1",
+        "sha256_in_prefix": "a531fb406585cfd462b423b10454f9889fea96bab4cdc48448d005fd9ccd6de1",
+        "size_in_bytes": 36298
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/version.py",
+        "path_type": "hardlink",
+        "sha256": "047d9d68bbece36097f434b8bb21bfc1288b6fdc7574bca5d5d2219a6a23713e",
+        "sha256_in_prefix": "047d9d68bbece36097f434b8bb21bfc1288b6fdc7574bca5d5d2219a6a23713e",
+        "size_in_bytes": 2802
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "06063c646dabd892ec763b71800b531305c691cf3d302ea0d2febe9801bced24",
+        "sha256_in_prefix": "06063c646dabd892ec763b71800b531305c691cf3d302ea0d2febe9801bced24",
+        "size_in_bytes": 2093
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/x1dcorr.help",
+        "path_type": "hardlink",
+        "sha256": "53fc1d82dd4af28a8d402584f6d05d9722556ffeec2952df47d7ba0d2eb439ba",
+        "sha256_in_prefix": "53fc1d82dd4af28a8d402584f6d05d9722556ffeec2952df47d7ba0d2eb439ba",
+        "size_in_bytes": 1521
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/x1dcorr.py",
+        "path_type": "hardlink",
+        "sha256": "f4d3ad397c226707b2c2c0eee99252003661bc7882dd0fac97167e5b4fefbbb6",
+        "sha256_in_prefix": "f4d3ad397c226707b2c2c0eee99252003661bc7882dd0fac97167e5b4fefbbb6",
+        "size_in_bytes": 6884
+      },
+      {
+        "_path": "lib/python2.7/site-packages/costools/x1dcorr.pyc",
+        "path_type": "hardlink",
+        "sha256": "6b46e25bd8cf62abf3758165cc157fae19ff1c0423ba35992afc7e611da34d1a",
+        "sha256_in_prefix": "6b46e25bd8cf62abf3758165cc157fae19ff1c0423ba35992afc7e611da34d1a",
+        "size_in_bytes": 6556
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 43102,
+  "subdir": "linux-64",
+  "timestamp": 1559153605009,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/costools-1.2.3-py27_0.tar.bz2",
+  "version": "1.2.3"
+}

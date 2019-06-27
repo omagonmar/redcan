@@ -1,0 +1,106 @@
+#$Header: /home/pros/xray/lib/doc/RCS/dec_plhead.hlp,v 11.0 1997/11/06 16:22:27 prosb Exp $
+#$Log: dec_plhead.hlp,v $
+#Revision 11.0  1997/11/06 16:22:27  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:20  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:34:46  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:18:33  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  15:59:54  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:19:57  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:08:02  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:30  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:34:51  pros
+#General Release 1.0
+#
+.help dec_plhead Apr89 PROS_Library
+NAME
+.in 4
+dec_plhead - decode a PLIO header string
+.sp
+.in -4
+USAGE
+.in 4
+procedure dec_plhead(s, name, nlen, type, tlen, file, flen,
+			xdim, ydim, scale, regions, notes)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	s		string		plio header string
+	nlen		int		length of output name string
+	tlen		int		length of output type string
+	flen		int		length of output file string
+
+Output Arguments:
+	name		string		mask name or description
+	type		string		mask type (region, exposure, etc.)
+	file		string		reference file name, if any
+	xdim		int		x dimension of mask
+	ydim		int		y dimension of mask
+	scale		double		scale factor used to make the mask
+	regions		pointer		region summary pointer
+	notes		pointer		notes at the end of plhead string
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine dec_plhead decodes a string that has been stored, using
+pl_savef or pm_savef, as the string header of a plio file.  The information
+contained in the plio header is read using pl_loadf or pm_loadf, and then
+decoded using dec_plhead.
+
+The first input argument is the string that contains the encoded information,
+returned by pl_loadf or pm_loadf.
+It is usually declared to be of size SZ_PLHEAD (defined in xray/lib/plhead.h).
+The second argument is the length of the output name string (see below).
+The third input argument is the length of the output type string (see below).
+The fourth input argument is the length of the output file string (see below).
+
+The first output argument is the name of the plio file being created.  The next
+argument is the type of mask.  This can be any descriptive string such as
+"region", "exposure", "region/exposure" (the type of mask created by msk_open),
+etc.  The third argument describes any reference files used to create the mask,
+such as the reference image, or the input Einstein exposure map.  The fourth
+and fifth arguments describe the dimensions of the mask.  The sixth argument
+describes the scale factor used to make the mask.  If no scale factor was used,
+this argument will be 0.0.  A scale factor is used, for example, to convert
+real exposure values into 16-bit integer mask values in a plio exposure mask.
+The seventh output argument is the pointer to the region summary, as returned by
+rg_pmcreate or rg_pmcreate.  The final output argument is the pointer to the
+notes added to the end of the string manually by the user (using enc_plnote)
+after encoding the string.
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. An example will be provided when this routine is used in the PROS system.
+.in 8
+.nf
+.fi
+.sp
+.in -12
+BUGS
+.in 4
+.in -4
+.sp
+SEE ALSO
+.in4
+enc_plhead, disp_plhead.

@@ -1,0 +1,130 @@
+#$Header: /home/pros/xray/lib/doc/RCS/finalname.hlp,v 11.0 1997/11/06 16:22:46 prosb Exp $
+#$Log: finalname.hlp,v $
+#Revision 11.0  1997/11/06 16:22:46  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:30:45  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:35:29  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:19:15  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:00:39  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:20:32  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:09:15  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:41  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:35:19  pros
+#General Release 1.0
+#
+.help finalname Jan89 PROS_Library
+NAME
+.in 4
+finalname - rename a temp file to a named file
+.sp
+.in -4
+USAGE
+.in 4
+call finalname(temp, name)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments:
+	temp		str		temp output file name
+
+Output Arguments:
+	name		str		final output file name
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+Finalname attempts to delete the named file and rename the temp file
+to the named file.  If it fails during either the delete attempt or
+the rename attempt, it signals an error and indicates the name of the
+temp file, so that the user can take manual corrective action.
+If the temp file and the named file are the same, finalname takes no
+action.
+
+Finalname is used in conjunction with rootname and clobbername
+to process output file names.  It is important that rootname be
+called on the named file to insure that the named file has a complete
+extension.
+.fi
+.sp
+.in -4
+EXAMPLES
+.in 4
+ex. The following example shows how rootname, clobbername, and final name
+work together, and how rootname can be used with both input and outout files.
+.in 8
+.nf
+include <ext.h>
+char	imname[SZ_FNAME]	# input image
+char	iname[SZ_FNAME]		# input file
+char	oname[SZ_FNAME]		# output file name
+char	tname[SZ_FNAME]		# temp output file name
+int	fd			# output file handle
+bool	do_output		# write output file?
+bool	clobber			# clobber output file?
+bool	streq()			# string compare
+
+# get the image name
+call clgstr("image", imnane, SZ_FNAME)
+# make sure the user input an image file name
+call rootname("NONE", imname, "", SZ_FNAME)
+if( streq("NONE", imname) )
+	call error(1, "requires image file as input")
+
+# get the other input file name
+call clgstr("input", iname, SZ_FNAME)
+# it can be defaulted to the image root
+# IN_EXT should be defined in ext.h
+call rootname(imname, iname, IN_EXT, SZ_FNAME)
+# but there must be a file name
+if( streq("NONE", iname) )
+	call error(1, "requires foo-type file as input")
+
+# get the output file name
+call clgstr("output", oname, SZ_FNAME)
+# it can be defaulted to the image root
+# OUT_EXT should be defined in ext.h
+call rootname(imname, oname, OUT_EXT, SZ_FNAME)
+# there need not even be one
+if( streq("NONE", iname) )
+	do_output = NO
+else{
+	do_output = YES
+	# if we are to create an output, get the clobber flag
+	clobber = clgetb("clobber") 
+	# make sure we can clobber (abort if "no" and file exists)
+	# change output file name to a temp file, if necessary
+	# don't rename this until the end to protect the old file
+	call clobbername(oname, tname, clobber, SZ_FNAME)
+} 
+# create the output file (temp file)
+fd = open(tname, NEW_FILE, BINARY_FILE)
+...
+# finally, delete the old output and rename temp to output
+if( do_output == YES )
+    call finalname(tname, oname)
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in 4
+rootname, clobbername

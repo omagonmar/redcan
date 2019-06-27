@@ -1,0 +1,290 @@
+%\input skeleton.tex
+\def\version{Version 1.4 --- 1/18/90}
+\def\chapter{Spatial --- Contouring (dmw)}
+%\chapterhead{Spatial Contouring}
+\chapterhead{IV.~Spatial Contouring}
+\@{Overview}
+
+Contouring produces a line-graphics contour plot of an IRAF image (including X-ray
+QPOE file, *.qp), and has the capability to
+save masks of the contours so that counts inside the contours can be calculated.
+
+Although there is already an NOAO IRAF contour program, 
+we have different requirements on the user-input parameters
+and the display (such as ability for a coordinate-grid overlay), as
+well as the requirement to save masks.  Therefore,
+we will supply a contour program for the X-ray spatial package.
+
+\@{Contour Algorithms}
+
+$\ldots$.
+Negative contours should always be plotted as dashed lines.
+
+\@{Specification of Contour Levels}
+
+The user has the most control if it is possible to specify a list of
+levels at which contours should be drawn.  There is less typing if the
+contours are to be evenly spaced between a maximum and minimum value,
+and this method of input should be available to for
+both linear and logarithmic spacing.
+However, the most important feature is to allow individual levels to
+be chosen.
+
+\**Options for specifying levels
+
+\??Each level
+
+\??Increment, start, stop (or number of levels) - linear scaling
+
+\??Factor, start, stop (or number of levels) - log scaling
+
+\**Options for units of the levels specification
+
+\??Actual levels in the same units as the array.
+
+\??Levels expressed as a percentage of the peak value in the array.
+The program must first find the peak pixel value.
+
+\??Levels expressed as sigma values (see below).
+
+
+\@{Display}
+
+The user should be able to choose from the following:
+\item{(a).}Plot the contours, but with no box  (useful for `first
+looks' at terminal display)
+\item{(b).}Plot the contours, and box in pixel coordinates.
+\item{(c).}Plot the contours, and box in sky coordinates.  (See below.)
+
+Independently, the user should choose whether or not to label the
+contours, and have some control (at least two choices) over the
+thickness of lines.  In addition, there is a requirement that
+other information may be superimposed on the contour.  One such
+requirement
+is to be able to plot points at positions of sources as read in from
+a tables file.  As a lower priority, we may consider the ability to superimpose
+other contour plots, {\it i.e.}, the contour program should be able to
+loop around more than once without closing the graphics. (It would be
+up to the user to have regridded the images, if necessary, so that
+they
+have the same pixel size, center and roll.)
+
+
+\@{Counts inside contours}
+
+Users will wish to be able to calculate the number of counts inside
+any or all of the contours. A way this might be done is for the
+contours to be saved as masks which are subsequently applied to the
+image.  A tables file could be used to save header information, with
+columns of contour levels and contained counts.  The user would choose
+whether or not this calculation is to be performed as an input
+parameter to the contour task.
+
+\@{Calculation of Sigma Values}
+
+In general, it is probably sufficient to assume that a user has
+performed
+any desired background subtraction and vignetting corrections to the
+data
+before contours are requested. In that case, we will not allow any
+specification of background levels in the contour task.
+
+A user should be allowed to request contours at given sigma levels
+only if an error image exists.
+Then, the contour task will
+divide the data image by the error image, and contour the result at the
+levels specified for sigma.
+
+\@{Sky Coordinates}
+
+The contour task, and other linear plots of IRAF images (arrays),
+will provide the user with options to overlay a grid in pixel or sky ({\it
+i.e.},
+celestial, specified by RA, $\alpha$, and declination, $\delta$)
+coordinates.  Other options, such as galactic coordinates,
+may be added later.  The user should have the option of a full grid or
+just tics being plotted.
+
+The contour program should call PROS library SPP routines to plot the
+grid in user-selected coordinates, with user-selected grid spacing.
+
+*** Our projections will be confined to TANGENT projections ***.
+
+The IRAF image (array) to be contoured will need some form of the
+following header parameters:
+
+\vbox{
+\halign{
+\qquad\qquad # \hfil & : # \hfill \cr
+$X_t$, $Y_t$ & Pixel coordinate position of the tangent direction; real\cr
+& \qquad\qquad (may be outside image range) \cr
+$\alpha_t$, $\delta_t$ & RA and declination of the tangent direction; \cr
+& \qquad\qquad real or double; decimal degrees assumed\cr
+$\Delta X_p$, $\Delta Y_p$ & $X$ and $Y$ direction plate scales; real\cr
+& \qquad\qquad decimal degrees per pixel assumed \cr
+Roll angle, $\beta$ & Defined as positive, increasing in \cr
+& \qquad\qquad counterclockwise direction between $\delta=90.0$ and \cr
+& \qquad\qquad the positive $y$ axis. \cr
+}
+}
+
+Note that these header quantities correspond to FITS header keywords
+CRPIX1, CRPIX2, CRVAL1, CRVAL2, CRDELT1, CRDELT2, and CROTA2, and it
+is probably desirable that we should keep the same names and
+conventions for these quantities in our QPOE and IRAF image files.
+There should also be a header word to signify that the type of the tangent
+axis is celestial.  This means that CTYPE1 and CTYPE2 would be set to
+RA$---$TAN and DEC$--$TAN, respectively.  We will also have
+a setting for EQUINOX, but this will be read by the
+grid plotting software only to label the epoch of the grid somewhere
+on the plot output
+\footnote\dag{
+See the specification for spatial rotation for information on rotating
+data to a different epoch.
+}.
+
+The header words should be in decimal degrees, to correspond to
+standard FITS definitions.  However, the user-input, and labelling of
+the grid lines should use user-friendly coordinates.  Grid-line
+labelling should be in h m s, d m s.
+
+The contour program (and other linear plots of arrays) will allow the
+user a choice of:
+
+\halign{
+\qquad\qquad # \hfil & : # \hfill \cr
+Plot Grid & (yes or no; default yes) \cr
+Grid Type & (celestial or pixel - 2 choices initially; default celestial) \cr
+}
+
+If a celestial grid is chosen, the following parameters may be set:
+
+\halign{
+\qquad\qquad # \hfil & : # \hfill \cr
+$\alpha$ intervals & (default scaled to plot size) \cr
+$\delta$ intervals & (default scaled to plot size) \cr
+}
+
+Alternatively, we may have the user input be the number of grid lines
+for each dimension, in which case we will need code to convert these
+into grid intervals.
+
+The algorithm to plot the celestial grid works as follows:
+Step round each border pixel.  To find the $\alpha, \delta$ of a
+pixel of given $X,Y$, call routines:
+
+$$\alpha = f(X,Y ; X_t, Y_t, \beta, \alpha_t, \delta_t, \Delta X_p,
+\Delta Y_p) \qquad\qquad (1)$$
+$$\delta = f(X,Y ; X_t, Y_t, \beta, \alpha_t, \delta_t, \Delta X_p,
+\Delta Y_p) \qquad\qquad (2)$$
+
+Ask if an $\alpha$ or $\delta$ for a grid line, $\alpha_g, \delta_g$,
+lies between this pixel
+and the next.  If yes, use $\alpha_g$ or $\delta_g$ in the appropriate
+call of:
+
+$$X = f(Y, \alpha=\alpha_g ; X_t, Y_t, \beta, \alpha_t, \delta_t,
+\Delta X_p, \Delta Y_p) \qquad\qquad (3)$$
+$$Y = f(X, \delta=\delta_g ; X_t, Y_t, \beta, \alpha_t, \delta_t,
+\Delta X_p, \Delta Y_p) \qquad\qquad (4)$$
+
+Draw the line, $X=f(Y)$, or $Y=f(X)$.  You may input an array of
+values of $Y$ (or $X$) which linearly increase over your image, and
+you should solve for each to see if there is a corresponding $X$ (or
+$Y$) in the image region, or if the point should be dropped.  You may
+then make the routines return the corresponding arrays of $X$ (or
+$Y$). A cautionary note: the functions you will be
+plotting may be double valued ({\it e.g.}, in solving  $Y=f(X)$ you
+may find that an $X$ value gives two $Y$ values which both fall in
+your image).  It will be up to your routine to order them correctly so
+that a continuous line is plotted.
+Label the line at the border position (outside the
+plot).
+Go right round the border.  Can plot lines twice, or keep track of
+what has been plotted.  Going completely round ensures that both ends
+of the grid line will be labelled.
+
+There algorithm will not work completely at the north or south
+celestial
+poles. It will not be able to find the declination grid lines, which
+are now circles.   First, check to see if a pole falls in the array.  To do this,
+for every $X$ row call:
+
+$$Y = f(X, \delta=\pm 90 ; X_t, Y_t, \beta, \alpha_t, \delta_t, \Delta
+X_p, \Delta Y_p) \qquad\qquad (5)$$
+
+Then check if the $Y$ returned falls in the range of your
+image.
+If it does, then after the border pixel checking, do the same thing
+for a cross through the center of your array.
+
+
+Now for the solutions of equations (1) to (5).  These solutions are
+based on those in AIPS memo 27 by Eric Greisen, which is available from
+NRAO, and are as adapted by Phil Hodge to use the fortran `atan2' function.
+
+First, if $X$ or $Y$ values are on the right hand side, they should be converted
+to $X_r$ and $Y_r$.  To do this:
+
+\item{}First make $X_s, Y_s$, which are relative to the tangent direction and
+scaled to celestial coordinates:
+
+$$X_s = (X - X_t) \times \Delta X_p \qquad\qquad (6)$$
+$$Y_s = (Y - Y_t) \times \Delta Y_p \qquad\qquad (7)$$
+
+Now rotate, to give $X_r$, $Y_r$.
+
+$$X_r = X_s \cos \beta - Y_s \sin \beta \qquad\qquad (8)$$
+$$Y_r = Y_s \cos \beta + X_s \sin \beta \qquad\qquad (9)$$
+
+The solution of (1) uses (6),(7),(8) and (9), and is as follows:
+
+$$\alpha = \alpha_t + {\rm atan2} \left( X_r, \cos \delta_t - Y_r
+\sin \delta_r \right)$$
+
+The solution of (2) requires solving (1) first, and is as follows:
+
+$$\delta = {\rm atan2} \left( Y_r \cos \delta_t + \sin \delta_t,
+\sqrt{X_r^2 + \left[ \cos \delta_t - Y_r \sin \delta_t \right]^2} \right)$$
+
+The solution of (3) is a straight line:
+
+$$X_r = \tan(\alpha - \alpha_t) \left[ \cos \delta_t - Y_r \sin
+\delta_t \right]$$
+
+\item{}Use (6) -- (9) to substitute $X$ and $Y$ for $X_r$ and $Y_r$
+
+The solution of (4) (same as (5)) goes as
+follows. 
+\item{}First define $A$ and $B$:
+
+$$A \equiv \cos \beta$$
+
+$$B \equiv X_s \cos \delta_t + \sin \delta_t \sin \beta$$
+
+\item{}Then solve for $\alpha$, using (6) to convert $X$ to $X_s$:
+
+$$\alpha = \alpha_t + \arctan (B/A) + \arcsin \left[
+{\tan \delta \left( X_s \sin \delta_t - \cos \delta_t \sin \beta
+\right) \over
+\sqrt{A^2 + B^2}}
+\right] $$
+
+\item{}Solve for $Y_s$:
+
+$$Y_s = { \sin \delta \cos \delta_t \cos \beta
+- \cos \delta \sin \delta_t \cos (\alpha - \alpha_t) \cos \beta
+- \cos \delta \sin (\alpha - \alpha_t) \sin \beta
+\over \sin \delta \sin \delta_t + \cos \delta \cos \delta_t
+\cos (\alpha - \alpha_t)}$$
+
+\item{}Finally, use (6) to get $Y$ from $Y_s$:
+
+$$Y = (Y_s /\Delta Y_p) + Y_t$$
+\vfill\eject
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+.help midirexamples March2006 gemini.midir
+.ih
+NAME
+midirexamples - Print reduction examples to the screen
+.ih
+USAGE	
+midirexamples example
+.ih
+PARAMETERS
+.ls example  (im_mich|im_trecs|sp_mich|spectroscopy|polarimetry)
+Example script to print to the screen.
+.le
+.ih
+DESCRIPTION
+Five example scripts are provided for the MIDIR package.
+MIDIREXAMPLE prints these to the screen.
+The examples use real data and have been used for data reduction.
+The users will need to modify directory and image names for their own use.
+The example files are located in midir$doc.
+
+.nf
+    Example           File
+    ----------------------------------------------------------
+    im_michelle  GN-CAL20031109_im_michelle_example.cl
+    im_trecs     GS-2003B-SV-101-eng_im_trecs_example.cl
+    sp_mich      GN-ENG-MICHELLE_sp_midir_example.cl
+    spectroscopy GN-spectro_example.cl
+    polarimetry  GN-michpol_example.cl
+    ----------------------------------------------------------
+.fi
+
+.ih
+EXAMPLES
+1. Print the example of reduction of Michelle imaging data:
+.sp
+.nf
+    cl> midirexamples im_michelle
+.fi
+.sp
+2. Print the example of reduction of T-ReCS imaging data:
+.sp
+.nf
+    cl> midirexamples im_trecs
+.fi
+.ih
+BUGS AND LIMITATIONS
+.ih
+SEE ALSO
+midirinfo
+.endhelp

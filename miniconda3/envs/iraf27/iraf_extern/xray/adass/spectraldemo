@@ -1,0 +1,181 @@
+\O=NOAO/IRAF V2.8EXPORT dmw@cfa246.harvard.edu Mon 22:39:25 08-Jan-90
+\T=gterm34
+\G=gterm
+\n\{%8000
+                    PROS Spectral Fitting
+Tasks in the PROS XRAY spectral-fitting package will be demonstrated
+by fitting the Einstein IPC spectrum of the pulsar in the SNR CTB 109
+to 3 different models, and by fitting IPC and MPC data for QSO 3C 273
+jointly to a power-law model. \}\n
+cd\simdir\n
+\{%500
+        [First load the relevant packages.]\}\n
+noao\n
+proto\n
+#stplot\n
+xray\n
+delete\suparm$xryspec*\n
+xdataio\n
+xlocal\n
+einbb\n
+xspectral\n
+\{%500
+        [Now unlearn parameters for all tasks to be used.]\}\n
+unlearn\spkgpars\n
+unlearn\sfit\n
+unlearn\scounts_plot\n
+unlearn\ssearch_grid\n
+unlearn\sgrid_plot\n
+unlearn\sbal_plot\n
+unlearn\sqpspec\n
+unlearn\stprint\n
+unlearn\ssgraph\n
+unlearn\sdisplay\n
+unlearn\stvmark\n
+\{%500
+        [Delete files made in previous run of the demo.]\}\n
+delete\sdemosnr_o*\n
+delete\sdemosnr_p*\n
+delete\sdemosnr_c*\n
+delete\sdemosnr_b*\n
+delete\sdemosnr_r*\n
+delete\sdemosnr.q*\n
+delete\sdemo_*qso*\n
+delete\sdemo_*iqso*\n
+delete\sdemo_*mqso*\n
+delete\sdemo_pixcen*\n
+\{%500
+        [Now we are ready to begin.]\}\n
+\{%500
+        [Spectral Analysis for pulsar in CTB 109]\}\n
+copy\sxdata$snr.qp\sdemosnr.qp\n
+display\sxmag=2\symag=2\szrange-\szscale-\sz1=0\sz2=4\n
+demosnr.qp\n
+1\n
+print\s503\s513\s>\sdemo_pixcenter\n
+\{%500
+        [Choose on-source circle.]\}\n
+tvmark\s1\scoords=demo_pixcenter\smark=circle\sradii=24\scolor=206\n
+\{%500
+        [Choose background annulus.]\}\n
+tvmark\s1\scoords=demo_pixcenter\smark=circle\sradii=40\scolor=206\n
+\{%500
+        [Extract net counts.]\}\n
+qpspec\ssource="demosnr"\sreg="c\s503\s513\s24"\sbkgd="demosnr"\sbkgdre\
+    g="a\s503\s513\s24\s40"\stable="demosnr"\n
+\{%500
+        [Display net counts from table file.]\}\n
+tprint\s"demosnr_obs"\n
+\{%500
+        [Initialize a table for recording chi-squared values.]\}\n
+pkgpars.chisquare="demosnr_chi"\n
+\{%500
+        [Select channels 2-10 for fitting.]\}\n
+pkgpars.observed="demosnr[2-10]"\n
+\{%500
+        [Fit a power-law to CTB 109,]\}\n
+\{%500
+        [storing the model spectrum in the intermediate file.]\}\n
+fit\smodel="pow(0:10)*abs(19:24)"\sverbose+\sintermediate="demosnr_pow"\smo\
+    de="h"\stol=1.e-4\n
+counts_plot\splot_title="CTB\s109"\smode="h"\s\n
+q01+&\r\{%8000\}
+\{%500
+        [Fit a bremsstrahlung spectrum to CTB 109,]\}\n
+\{%500
+        [storing the model spectrum in the intermediate file.]\}\n
+fit\smodel="brems(0.3:10)*abs(19:24)"\sverbose+\sintermed\
+    iate="demosnr_brem"\smode="h"\stol=1.e-4\n
+counts_plot\splot_title="CTB\s109"\smode="h"\s\n
+q01+&\r\{%8000\}
+\{%500
+        [Fit a Raymond-Smith thermal spectrum to CTB 109,]\}\n
+\{%500
+        [using cosmic abundances with decrement 100%,]\}\n
+\{%500
+        [and storing the model spectrum in the intermediate file.]\}\n
+fit\smodel="ray(0.2:0.8,cosmic,100)*abs(19:23)"\sverbose+\sintermed\
+    iate="demosnr_ray"\smode="h"\stol=1.e-4\n
+counts_plot\splot_title="CTB\s109"\smode="h"\s\n
+q01+&\r\{%8000\}
+\{%500
+        [Examine the table with all the chisquared values.]\}\n
+tprint\s"demosnr_chi"\n
+\{%500
+        [Use sgraph to plot model spectrum for the best model.]\}\n
+sgraph\s"demosnr_pow_int\senergy\semitted"\sxlabel="log\senergy\s(keV)"\syla\
+    bel="log\sfd\s(keV/cm**2/s/keV)"\stitle="Best-fit\smodel:\sEmitted\sand\sI\
+    ncident\sSpectra"\n
+sgraph\s"demosnr_pow_int\senergy\sincident"\sappend+\n\{%500\}
+\{%8000
+        [Spectral Analysis for the QSO 3C 273]\}\n
+
+\{%500
+        [We will use net counts previously extracted by the
+         IPC and MPC standard pre-processing analysis.]\}\n
+\{%500
+        [Fitting a power-law with Galactic absorption to the IPC data.]\}\n
+copy\sxdata$iqso_obs.tab\sdemo_iqso_obs.tab\n
+copy\sxdata$mqso_obs.tab\sdemo_mqso_obs.tab\n
+pkgpars.observed="demo_iqso[2-10]"\n
+\{%500
+        [Examine the BAL histogram.]\}\n
+bal_plot\smode="h"\n
+q01+&\r\{%8000\}
+\{%500
+        [Perform the fit for the IPC data.]\}\n
+fit\smodel="pow(0:1)*abs(19:22)"\sverbose+\smode="h"\stol=1.e-4\n
+\{%500
+        [Display the spectrum and manipulate the graph.]\}\n
+counts_plot\splot_title="3C273\sIPC\sspectrum"\smode="h"\s\n
+?01+&\r\{%8000\}
+q01+&\r\{%8000\}
+p01+&\r\{%8000\}
+l01+&\r\{%8000\}
+l01+&\r\{%8000\}
+d01+&\r\{%8000\}
+s01+&\r\{%8000\}
+q01+&\r\{%8000\}
+\{%500
+        [Calculate chisquared values at grid points.]\}\n
+search_grid\sgrid="demo_iqso_grd"\sx_axis_param="index"\sx_param=0.3\sx_axis\
+    _steps=9\sy_axis_param="gal"\sy_param=1.\sy_axis_steps=9\sverbose+\smo\
+    de="h"\stol=1.e-4\n
+\{%500
+        [Display chisquared values as written in the tables file.]\}\n
+tprint\s"demo_iqso_grd"\n
+\{%500
+        [Header parameters of the same file.]\}\n
+tprint\s"demo_iqso_grd"\sprp+\sprd-\n
+\{%500
+        [Plot the confidence levels of the chisquared values.]\}\n
+grid_plot\sgrid="demo_iqso_grd"\splot_title="IPC\sspectrum\sof\sQSO\s3C\
+    273\s\s"\n
+q01+&\r\{%8000\}
+\{%500
+        [Fitting to the joint IPC and MPC data]\}\n
+fit\sobserved="demo_iqso[2-10];\sdemo_mqso[1-6]"\smo\
+    del="pow(0:1)*abs(19:22)"\sverbose+\smode="h"\stol=1.e-4\n
+\{%500
+       [Plot of joint-fit model and IPC and MPC data]\}\n
+counts_plot\splot_title="3C\s273"\smode="h"\s\n
++01+&\r\{%8000\}
+d01+&\r\{%8000\}
+-01+&\r\{%8000\}
+q01+&\r\{%8000\}
+\{%500
+        [Calculate chisquared values at grid points for joint data.]\}\n
+search_grid\sgrid="demo_qso_grd"\sx_axis_param="index"\sx_param=0.3\sx_axis\
+    _steps=9\sy_axis_param="gal"\sy_param=1.\sy_axis_steps=9\sverbose+\smo\
+    de="h"\stol=1.e-4\n
+\{%500
+        [Plot the confidence levels of the chisquared values.]\}\n
+grid_plot\sgrid="demo_qso_grd"\splot_title="QSO\s3C273\s:\sIPC\s&\sMPC"\n
+q01+&\r\{%8000\}
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n
+\sbye\n

@@ -1,0 +1,402 @@
+{
+  "build": "py27_2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy",
+    "ds9",
+    "numpy",
+    "python >=2.7,<2.8.0a0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/pyds9-1.9.0.dev145+gc1bf67a-py27_2",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/native_libs.txt",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/requires.txt",
+    "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/pyds9/__init__.py",
+    "lib/python2.7/site-packages/pyds9/__init__.pyc",
+    "lib/python2.7/site-packages/pyds9/_astropy_init.py",
+    "lib/python2.7/site-packages/pyds9/_astropy_init.pyc",
+    "lib/python2.7/site-packages/pyds9/_compiler.py",
+    "lib/python2.7/site-packages/pyds9/_compiler.pyc",
+    "lib/python2.7/site-packages/pyds9/_compiler.so",
+    "lib/python2.7/site-packages/pyds9/conftest.py",
+    "lib/python2.7/site-packages/pyds9/conftest.pyc",
+    "lib/python2.7/site-packages/pyds9/cython_version.py",
+    "lib/python2.7/site-packages/pyds9/cython_version.pyc",
+    "lib/python2.7/site-packages/pyds9/data/README.rst",
+    "lib/python2.7/site-packages/pyds9/extern/__init__.py",
+    "lib/python2.7/site-packages/pyds9/extern/__init__.pyc",
+    "lib/python2.7/site-packages/pyds9/libxpa.py",
+    "lib/python2.7/site-packages/pyds9/libxpa.pyc",
+    "lib/python2.7/site-packages/pyds9/libxpa.so",
+    "lib/python2.7/site-packages/pyds9/pyds9.py",
+    "lib/python2.7/site-packages/pyds9/pyds9.pyc",
+    "lib/python2.7/site-packages/pyds9/setup_package.py",
+    "lib/python2.7/site-packages/pyds9/setup_package.pyc",
+    "lib/python2.7/site-packages/pyds9/tests/__init__.py",
+    "lib/python2.7/site-packages/pyds9/tests/__init__.pyc",
+    "lib/python2.7/site-packages/pyds9/tests/data/test.fits",
+    "lib/python2.7/site-packages/pyds9/tests/data/test_3D.fits",
+    "lib/python2.7/site-packages/pyds9/tests/setup_package.py",
+    "lib/python2.7/site-packages/pyds9/tests/setup_package.pyc",
+    "lib/python2.7/site-packages/pyds9/tests/test_pyds9.py",
+    "lib/python2.7/site-packages/pyds9/tests/test_pyds9.pyc",
+    "lib/python2.7/site-packages/pyds9/utils/__init__.py",
+    "lib/python2.7/site-packages/pyds9/utils/__init__.pyc",
+    "lib/python2.7/site-packages/pyds9/version.py",
+    "lib/python2.7/site-packages/pyds9/version.pyc",
+    "lib/python2.7/site-packages/pyds9/xpa.py",
+    "lib/python2.7/site-packages/pyds9/xpa.pyc",
+    "lib/python2.7/site-packages/pyds9/xpans",
+    "lib/python2.7/site-packages/setuptools.pth"
+  ],
+  "fn": "pyds9-1.9.0.dev145+gc1bf67a-py27_2.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/pyds9-1.9.0.dev145+gc1bf67a-py27_2",
+    "type": 1
+  },
+  "md5": "253ad097ab2226859e3dfd367001289a",
+  "name": "pyds9",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/pyds9-1.9.0.dev145+gc1bf67a-py27_2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "64d053e53e4158738aa7be4f48f9f7c4e06c096d18b79854a40cea6f0e8acf44",
+        "sha256_in_prefix": "64d053e53e4158738aa7be4f48f9f7c4e06c096d18b79854a40cea6f0e8acf44",
+        "size_in_bytes": 406
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "9d084fb29df7610c19d3f4392637f3b6a380f487f97c8d37998039e1848fa227",
+        "sha256_in_prefix": "9d084fb29df7610c19d3f4392637f3b6a380f487f97c8d37998039e1848fa227",
+        "size_in_bytes": 10512
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "7aa1a74c7b4454c6307d7564d59f4c842f0ed8df30baa01baf4962b0b9ab931b",
+        "sha256_in_prefix": "7aa1a74c7b4454c6307d7564d59f4c842f0ed8df30baa01baf4962b0b9ab931b",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/native_libs.txt",
+        "path_type": "hardlink",
+        "sha256": "8e321697b251c394af511df62216726839a92e60d91668032e3fb5be5e1422c5",
+        "sha256_in_prefix": "8e321697b251c394af511df62216726839a92e60d91668032e3fb5be5e1422c5",
+        "size_in_bytes": 35
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "f989e24b28c37a65fc6e782ce73b9157f6795e96f5f41385cee1e93ce8cf457c",
+        "sha256_in_prefix": "f989e24b28c37a65fc6e782ce73b9157f6795e96f5f41385cee1e93ce8cf457c",
+        "size_in_bytes": 14
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9-1.9.dev211-py2.7-linux-x86_64.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "10312593939e4e23ac0ba8e685141cd108ee0fc7efa259503b652534047a4da7",
+        "sha256_in_prefix": "10312593939e4e23ac0ba8e685141cd108ee0fc7efa259503b652534047a4da7",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "68bb60fff14a5a81443d9d4a828d5c8d01b7e3f6aec26fe10283831b2981cd97",
+        "sha256_in_prefix": "68bb60fff14a5a81443d9d4a828d5c8d01b7e3f6aec26fe10283831b2981cd97",
+        "size_in_bytes": 702
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "57abb1276e671fc63e6ebe59d1855cceb3da8b56a10b4cb4d8b6a88600464413",
+        "sha256_in_prefix": "57abb1276e671fc63e6ebe59d1855cceb3da8b56a10b4cb4d8b6a88600464413",
+        "size_in_bytes": 562
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/_astropy_init.py",
+        "path_type": "hardlink",
+        "sha256": "4462b0531d7b709446e7d9e4944f67602a003213cf369e70a080cd9abd4e64ac",
+        "sha256_in_prefix": "4462b0531d7b709446e7d9e4944f67602a003213cf369e70a080cd9abd4e64ac",
+        "size_in_bytes": 5273
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/_astropy_init.pyc",
+        "path_type": "hardlink",
+        "sha256": "a56a5f426b106b5ee941dcd4fedfebe078f0f4554dcfb47c19a8795d415d6395",
+        "sha256_in_prefix": "a56a5f426b106b5ee941dcd4fedfebe078f0f4554dcfb47c19a8795d415d6395",
+        "size_in_bytes": 5253
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/_compiler.py",
+        "path_type": "hardlink",
+        "sha256": "eba261898e9b4e4ae5a288ada0836f0b7341ee7c7798bfd5c70298cf44f07a6d",
+        "sha256_in_prefix": "eba261898e9b4e4ae5a288ada0836f0b7341ee7c7798bfd5c70298cf44f07a6d",
+        "size_in_bytes": 285
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/_compiler.pyc",
+        "path_type": "hardlink",
+        "sha256": "88b2f9d02682c72400cea68d43a5c42be4f7b6722589d3063075b08ea6e78b4c",
+        "sha256_in_prefix": "88b2f9d02682c72400cea68d43a5c42be4f7b6722589d3063075b08ea6e78b4c",
+        "size_in_bytes": 623
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/_compiler.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/srv/jenkins/workspace/AstroConda/public_RHEL-6_py2.7_np1.11/_dispatch/miniconda/conda-bld/pyds9_1538401716416/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "cb94ed541cc64e13c7e6636b9b14af43f0323a2c70395e00277e656f8e824cd1",
+        "sha256_in_prefix": "c0161206c827efb24a9475e94b1a9cb6e366a730ae01119a14d26a004f065598",
+        "size_in_bytes": 17864
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "9fc5b1f04e9eef24e12d0f194563d769a3c61ac8bc8b751e70a772575aba0412",
+        "sha256_in_prefix": "9fc5b1f04e9eef24e12d0f194563d769a3c61ac8bc8b751e70a772575aba0412",
+        "size_in_bytes": 1818
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "e9079311dae8cc9837ffdb6a3a9cd5ae04d1f3ff151b9dcd28a7a5140dd6addb",
+        "sha256_in_prefix": "e9079311dae8cc9837ffdb6a3a9cd5ae04d1f3ff151b9dcd28a7a5140dd6addb",
+        "size_in_bytes": 1266
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/cython_version.py",
+        "path_type": "hardlink",
+        "sha256": "7490d237f01b93cc2316d2aff244d095fca7521202b2aea6290e723e533e669f",
+        "sha256_in_prefix": "7490d237f01b93cc2316d2aff244d095fca7521202b2aea6290e723e533e669f",
+        "size_in_bytes": 58
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/cython_version.pyc",
+        "path_type": "hardlink",
+        "sha256": "ee81eb480490bd960c28198b85cd43a546b437d4b59a81b268de43f61d326a1f",
+        "sha256_in_prefix": "ee81eb480490bd960c28198b85cd43a546b437d4b59a81b268de43f61d326a1f",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/data/README.rst",
+        "path_type": "hardlink",
+        "sha256": "b3f73f8d11a5ff3f6ae48baeb2239422ff2b3d076d904bf6f9f2a0dd992e1a6f",
+        "sha256_in_prefix": "b3f73f8d11a5ff3f6ae48baeb2239422ff2b3d076d904bf6f9f2a0dd992e1a6f",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/extern/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "556c17b90fe131e95546c45b1504eb94a11a8028bdaf2bb8587315d2468011b7",
+        "sha256_in_prefix": "556c17b90fe131e95546c45b1504eb94a11a8028bdaf2bb8587315d2468011b7",
+        "size_in_bytes": 397
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/extern/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "7e7b059d4a18a0510e3c072731cdf7dae21bc0ea69c5f1ad40ab4531a71d629a",
+        "sha256_in_prefix": "7e7b059d4a18a0510e3c072731cdf7dae21bc0ea69c5f1ad40ab4531a71d629a",
+        "size_in_bytes": 528
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/libxpa.py",
+        "path_type": "hardlink",
+        "sha256": "cafee68ec88eb4467ea4a26d619987a1b5b407e78e207ba1ea1e2ff1d1a5b9e8",
+        "sha256_in_prefix": "cafee68ec88eb4467ea4a26d619987a1b5b407e78e207ba1ea1e2ff1d1a5b9e8",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/libxpa.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd648de73555b5ab91660d3609e016e4d0a9b73deffc2fb8f15a2d0b384d612a",
+        "sha256_in_prefix": "dd648de73555b5ab91660d3609e016e4d0a9b73deffc2fb8f15a2d0b384d612a",
+        "size_in_bytes": 614
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/libxpa.so",
+        "path_type": "hardlink",
+        "sha256": "89d5ef3917c0093e489552a30dfe13f5f2eba29a15a8446037c0574ac71a7584",
+        "sha256_in_prefix": "89d5ef3917c0093e489552a30dfe13f5f2eba29a15a8446037c0574ac71a7584",
+        "size_in_bytes": 367024
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/pyds9.py",
+        "path_type": "hardlink",
+        "sha256": "26b6dcf68c7a535cee690bd17f7f35964f6e007cdb94cfc2b19de2cdd8313e94",
+        "sha256_in_prefix": "26b6dcf68c7a535cee690bd17f7f35964f6e007cdb94cfc2b19de2cdd8313e94",
+        "size_in_bytes": 36176
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/pyds9.pyc",
+        "path_type": "hardlink",
+        "sha256": "0cb43fd6111e2820e7d6fe0b021052430362e6baa50f3573aadf838e828adce6",
+        "sha256_in_prefix": "0cb43fd6111e2820e7d6fe0b021052430362e6baa50f3573aadf838e828adce6",
+        "size_in_bytes": 34728
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "c9f5a1bb584cb9a481e30931ca64536bcd20b3e10cb5861f895a0d55fc3b4807",
+        "sha256_in_prefix": "c9f5a1bb584cb9a481e30931ca64536bcd20b3e10cb5861f895a0d55fc3b4807",
+        "size_in_bytes": 5224
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "df538f25373a208f158d74b40cb2c6ff3a2324c000beff82cc469fa7cc774102",
+        "sha256_in_prefix": "df538f25373a208f158d74b40cb2c6ff3a2324c000beff82cc469fa7cc774102",
+        "size_in_bytes": 6304
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "sha256_in_prefix": "21c1ee488e2e5e7db9b2b8c024b4674fd94119246330b5157f08363230a36cff",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "b31f07b2333e6aba892863970f9e104504a56361b62e2c45ff22ec92f668127e",
+        "sha256_in_prefix": "b31f07b2333e6aba892863970f9e104504a56361b62e2c45ff22ec92f668127e",
+        "size_in_bytes": 251
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/data/test.fits",
+        "path_type": "hardlink",
+        "sha256": "ec45a7705105e304c7bdc013a378c47234054246594ceacbb6119f2c63bcc6a8",
+        "sha256_in_prefix": "ec45a7705105e304c7bdc013a378c47234054246594ceacbb6119f2c63bcc6a8",
+        "size_in_bytes": 5760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/data/test_3D.fits",
+        "path_type": "hardlink",
+        "sha256": "eddcec44f01345a91523165e0d500dd4192dfdcf715335a7f0323bb07fcc5b35",
+        "sha256_in_prefix": "eddcec44f01345a91523165e0d500dd4192dfdcf715335a7f0323bb07fcc5b35",
+        "size_in_bytes": 5760
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/setup_package.py",
+        "path_type": "hardlink",
+        "sha256": "932307008a5a35f7f4afe7b4f7fa72bde8e3b54d1aa5fa613d4993c8e69a08e3",
+        "sha256_in_prefix": "932307008a5a35f7f4afe7b4f7fa72bde8e3b54d1aa5fa613d4993c8e69a08e3",
+        "size_in_bytes": 160
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/setup_package.pyc",
+        "path_type": "hardlink",
+        "sha256": "54cc46cb7e6b8eddbece99d8e6e88523038a3081a15c0e234e65832672c7298e",
+        "sha256_in_prefix": "54cc46cb7e6b8eddbece99d8e6e88523038a3081a15c0e234e65832672c7298e",
+        "size_in_bytes": 558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/test_pyds9.py",
+        "path_type": "hardlink",
+        "sha256": "27f111738e8eac712f1b27f67cdff708a27e685d145664c640bb3e324f938dd5",
+        "sha256_in_prefix": "27f111738e8eac712f1b27f67cdff708a27e685d145664c640bb3e324f938dd5",
+        "size_in_bytes": 8747
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/tests/test_pyds9.pyc",
+        "path_type": "hardlink",
+        "sha256": "f8e47b77925e5a5faba95f4db25ef2bdd0cfb4204752dbd581c65ffc0f14be25",
+        "sha256_in_prefix": "f8e47b77925e5a5faba95f4db25ef2bdd0cfb4204752dbd581c65ffc0f14be25",
+        "size_in_bytes": 12368
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "31fbf1255c2ebd826b72b24058f3ba79f4844f91b5e168942cbb2807d6c4edc4",
+        "sha256_in_prefix": "31fbf1255c2ebd826b72b24058f3ba79f4844f91b5e168942cbb2807d6c4edc4",
+        "size_in_bytes": 199
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/utils/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "023b7be77f7d9f28301e5be4720e380aeb1d41ef4866b44355baab214e467183",
+        "sha256_in_prefix": "023b7be77f7d9f28301e5be4720e380aeb1d41ef4866b44355baab214e467183",
+        "size_in_bytes": 178
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/version.py",
+        "path_type": "hardlink",
+        "sha256": "4d20b36944d145b6f4928f89da18b7b9c639d79388c72891e966da2a158d0949",
+        "sha256_in_prefix": "4d20b36944d145b6f4928f89da18b7b9c639d79388c72891e966da2a158d0949",
+        "size_in_bytes": 7305
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "55b691ce807cd4db7628f0f00885a08186038b6e3fdc6ce8c135d7bc0ef2c97b",
+        "sha256_in_prefix": "55b691ce807cd4db7628f0f00885a08186038b6e3fdc6ce8c135d7bc0ef2c97b",
+        "size_in_bytes": 5973
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/xpa.py",
+        "path_type": "hardlink",
+        "sha256": "73e66fa486c3a2d51402292f212343c45ca8f8c9c4911e4ed5b932c110577c05",
+        "sha256_in_prefix": "73e66fa486c3a2d51402292f212343c45ca8f8c9c4911e4ed5b932c110577c05",
+        "size_in_bytes": 6242
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/xpa.pyc",
+        "path_type": "hardlink",
+        "sha256": "94edef94dba93c19f0ae694d514e83446523bfe02c0835a1cd54fb57a09f51a3",
+        "sha256_in_prefix": "94edef94dba93c19f0ae694d514e83446523bfe02c0835a1cd54fb57a09f51a3",
+        "size_in_bytes": 6071
+      },
+      {
+        "_path": "lib/python2.7/site-packages/pyds9/xpans",
+        "path_type": "hardlink",
+        "sha256": "dc384277e496e4d78f06994ab48a2b3a609d1fcdcb0ed8cff2e35fc6615dfe7c",
+        "sha256_in_prefix": "dc384277e496e4d78f06994ab48a2b3a609d1fcdcb0ed8cff2e35fc6615dfe7c",
+        "size_in_bytes": 408592
+      },
+      {
+        "_path": "lib/python2.7/site-packages/setuptools.pth",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4dc8bfb2a806d7992a779ea25871faf2738770046b90ed1564a66d7a694f3dab",
+        "sha256_in_prefix": "ba8ea53e107435912666fca2489648dbccbe8cdb59385b1ad03cbd6d9233efe4",
+        "size_in_bytes": 61
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 288294,
+  "subdir": "linux-64",
+  "timestamp": 1538401924118,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/pyds9-1.9.0.dev145+gc1bf67a-py27_2.tar.bz2",
+  "version": "1.9.0.dev145+gc1bf67a"
+}

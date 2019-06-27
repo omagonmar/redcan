@@ -1,0 +1,49 @@
+
+May 3, 1994
+David Van Stone
+
+This package is in transition; the old tasks qp_get and fits_get are
+being replaced by the improved tasks ecdinfo and ecd2pros.  We hope that
+if this transition works well, we can remove all obsolete files.  These
+obsolete files include:
+
+  _cp_wo_attr/*   : used to copy files; no longer needed
+		****NOTE**** The task _cp_wo_attr IS needed by ecd2pros
+	 	under versions of IRAF before IRAF 2.10.3.  Please
+	        don't delete before IRAF 2.10.3 is required for the 
+		release version of PROS.  Note also that when this
+	   	is deleted, the eincdrom task _ein_copy	will have to be 
+		updated to make calls to "copy" in place of "_cp_wo_attr".
+ 
+  _fits_find/*    : used in qp_get/fits_get to find FITS file on CD.
+                    replaced by ecdinfo.
+
+  _fitsnm_get/*   : used in qp_get/fits_get to convert a specifier to
+		    a FITS name.  Better version in ecdinfo.
+
+  _spec2root/*    : used in qp_get/fits_get to get a root name from a
+                    specifier.  New version in ecd2pros.
+
+  _qp_get_obs.cl  : (was qp_get)
+  _qp_get_obs.par
+  _fits_get_obs.cl : (was fits_get)
+  _fits_get_obs.par
+  doc/qp_get.hlp
+  doc/fits_get.hlp : no longer needed
+
+  eincdpar.par    : remove index files; only used in qp_get & fits_get
+
+  source/dataset2index.x:  used by qp_get/fits_get to convert datasets
+                    into indices; we no longer need to do so in ecdinfo,
+                    since datasets are referenced by datatype & instrument.
+
+  source/ecd_err.h:  remove errors < 300; only used by qp_get & fits_get
+
+  source/dataset.h:  remove EOSCAT_LINES_TO_SKIP and SZ_DATASET; not needed.
+
+  x_eincdrom.x:  remove references to cp_wo_attr, fits_find,
+		    fitsnm_get, and spec2root.  
+
+  
+
+This should be enough to remove all obsolete references to qp_get & fits_get.

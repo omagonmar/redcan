@@ -1,0 +1,566 @@
+
+1.  /pros/xray/xdataio/fits2qp/ftwcs.h				6/28/94	MC
+			       ft_nxtext.x
+Fix the problem converting 'rotated' FITS files
+to QPOE.  a)  CROTA structure variable was int not double
+b)  CROTA is stored as DEGREES in FITS - need to be radians
+for mwcs
+
+2.  /pros/xray/xdataio/fits2qp/fits2qp.h			6/30/94	MC
+				ftwcs.h
+			        ft_nxtext.x
+			        ft_ratfits.x
+				ft_addev.x
+   /pros/xray/xdataio/wcs.cards		
+	Updated FITS2QP to accept input BINTABLE WCS/CD
+rotation matrices as well as TCDLT and TCTOT keywords
+
+3.  /pros/xray/xdataio/qp2fits/qp2fits.x			6/30/94 MC
+    /pros/xray/xdataio/qp2fits.par			
+Modified qp2fits to accept paramter 'newwcs' to
+specify whether BINTABLE/EVENTS WCS to be specified
+with TCDLT/TCROT keywords or rotation matrix: TCDaa_bb
+
+4.  /pros/xray/lib/qpoe.h					6/30/94 MC
+    /pros/xray/lib/pros/parsewcs.x
+			qpwcs.x
+			xhead.x
+Added support for WCS/CD matrix (rather than TCDLT/TROT) 
+
+
+5.  /pros/xray/lib/zzsetenv.def					7/7/94  DVS
+    /pros/xray/xspatial/xspatial.cl
+    /pros/xray/xspatial/xspatial.men
+    /pros/xray/xspatial/xspatial.hd
+    /pros/xray/xspatial/mkpkg
+
+Added eintools subpackage under xspatial.
+
+
+6.  /pros/xray/xspectral/upspecrdf/upspecrdf.x			7/7/94 DS
+Added Einstein MPC case.
+
+
+7. /pros/xray/xlocal/einobsolete/doc/eos2tab.hlp               7/14/94 DVS
+   /pros/xray/xlocal/einobsolete/doc/img2fits.hlp
+   /pros/xray/xlocal/einobsolete/doc/sdfspec.hlp
+   /pros/xray/xlocal/einobsolete/doc/expmask.hlp
+   /pros/xray/xlocal/einobsolete/doc/img2qp.hlp 
+   /pros/xray/xlocal/einobsolete/doc/xpr2fits.hlp
+   /pros/xray/xlocal/einobsolete/doc/gzm2im.hlp
+   /pros/xray/xlocal/einobsolete/doc/mysdfspec.hlp
+   /pros/xray/xlocal/einobsolete/doc/xpr2qp.hlp
+
+Changed help files to reflect "einobsolete" package instead of "einbb".
+
+8. /pros/xray/xdataio/eincdrom/mkpkg			       7/15/94 DVS
+   /pros/xray/xdataio/eincdrom/tables/mkpkg
+
+Eincdrom now uses a libgentab.a library to manipulate tables.  This
+library consists of the routines in the "tables" subdirectory.
+
+9.  /pros/xray/ext.h						7/15/94 JD
+    /pros/xray/lib/pros/fnames.x		
+
+Added EXT_ANG and EXT_OBI extensions for evalvg.
+
+10. /pros/xray/xtiming/timcor/calc_bary/clcbary_subs.x		7/15/94 JD
+    /pros/xray/lib/bary.h
+
+Added the last 2 leap seconds (Jul 1 93, Jul-1-94) to the 
+data statement list of leap seconds.  Updated NLEAPS in
+bary.h from 17 to 19.  
+
+11. /pros/xray/xproto/evalvg/evalvg.x                           7/21/94 JCC
+    /pros/xray/xproto/evalvg/evalvg_subs.x
+    /pros/xray/xproto/evalvg/vghdrio.x
+    /pros/xray/xproto/evalvg/vgtabio.x
+    /pros/xray/xproto/evalvg/evalvg.h
+    /pros/xray/xproto/evalvg/mkpkg
+    /pros//xray/xproto/_evlvg.par
+    /pros/xray/xproto/evalvg.cl
+    /pros/xray/xproto/mkpkg
+    /pros/xray/xproto/x_xproto.x
+    /pros/xray/xproto/xproto.cl
+    /pros/xray/xproto/xproto.hd
+    /pros/xray/xproto/xproto.men
+    /pros/xray/xproto/doc/evalvg.hlp
+
+Add the new task EVALVG to xray.xproto. 
+
+12. /pros/xray/xdataio/_rdfrarc2pros.cl				7/25/94 JD
+
+Fixed stridx call when piecing together the mex.pl file name.
+Substituded 'x' for '.imh'+2.  Found that '.imh' was an 'or' search
+on each letter.
+
+13. /pros/xray/xdataio/eincdrom/data/slew_info.tab		7/26/94 DVS
+
+Revised slew table to have extension column filled with the character
+'d' instead of the space character ' '.  This works around the bug that
+stwfits and strfits will strip that space [leaving an empty string],
+causing ecdinfo to think the table is missing the extension column.
+
+14. /pros/xray/xspatial/imcnts/imcnts.x				7/27/94 JD
+Added debug>=5 statements to get some output to debug
+Ginevra's problem with the task.  Found it was the imaccess
+call in 'cnt_bstype'.  Didn't work at her site running
+IRAF 2.10.1 ... recompiled xspatial with -z and copied
+the exe to her site.
+
+15.  /pros/xray/xproto/qpcreate.cl				7/27/94 JD
+Fixed a missing quote, "NONE ---> "NONE"
+
+16. /pros/xray/xdataio/eincdrom/_specinfo/specinfo.x		8/1/94 DVS
+    /pros/xray/xdataio/eincdrom/ecdinfo/ecdinfo.x
+    /pros/xray/xdataio/eincdrom/ecdinfo/eci.x
+    /pros/xray/xdataio/eincdrom/ecdinfo/eci.h
+    /pros/xray/xdataio/eincdrom/ecdinfo/eci_tools.x
+    /pros/xray/xdataio/eincdrom/source/dataset.x
+    /pros/xray/xdataio/eincdrom/source/dataset.h
+    /pros/xray/xdataio/eincdrom/source/dataset2index.x
+    /pros/xray/xdataio/eincdrom/source/spectools.x
+    /pros/xray/xdataio/eincdrom/tables/gt_file.x
+    /pros/xray/xdataio/eincdrom/tables/gt_info.x
+
+Added code documentation to code involved in the tasks ecdinfo and
+_specinfo.
+
+17. /pros/xray/lib/qpoe.h					8/4/94 DVS
+    /pros/xray/lib/pros/tsi.x
+    /pros/xray/ximages/qplist/qplist.x
+
+Added capability to display Einstein Rev 1 TSI records in qplist.
+
+18. /pros/xray/ximages/doc/qplist.hlp				8/4/94 DVS
+
+Modified help file to mention that the "tsi" parameter will display
+Einstein as well as Rosat TSI records.
+
+19. /pros/xray/xdataio/xrfits.cl				8/4/94 DVS
+
+Fixed stdout display in XRFITS script: extra "with" removed.
+
+20. /pros/xray/xspectral/qpspec/qpspec.x			8/10/94 DVS
+    /pros/xray/xspectral/qpspec/init_qpoe.x
+    /pros/xray/xspectral/qpspec/get_inst_pars.x
+    /pros/xray/xspectral/qpspec/do_bal_histo.x
+    /pros/xray/xspectral/source/bal_histo.x
+    /pros/xray/xspectral/xspectral.hd
+
+  deleted: /pros/xray/xspectral/doc/bal_timing.hlp
+
+Modified task QPSPEC to use QPOE deffilt and on-line filtering when creating
+BAL histogram for Einstein IPC QPOE files.  Removed bal_time_warning
+routine (and hence bal_timing help file) since this code change makes
+the help file & warning message obsolete.   
+    
+21. /pros/xray/xspatial/imcnts/imcnts.x				8/12/94 JD
+
+Fixed imcnts to accept a "" for the background file and use the same 
+file that was specified for the source.  This was working when the input 
+was an image file, but not when the input was a qpoe with blocks and filters 
+(they were stripped) and the bk usually came up 0.
+
+Also changed the name buffers in the code (about 10 of them) that were 
+declared character arrays of SZ_PATHNAME, to pointer and memory allocated 
+space.  Space is freed when the task completes.  A no-op to the user, 
+but hopefully better code.  
+
+
+22.  /pros/xray/xspatial/xspatial.cl                            8/15/94 DVS
+     /pros/xray/xspatial/xspatial.hd
+     /pros/xray/xspatial/xspatial.men
+     /pros/xray/xspatial/mkpkg
+     /pros/xray/lib/zzsetenv.def
+     /pros/xray/xspatial/eintools/ [directory]
+
+Added eintools package under xspatial.  [It didn't make PROS 2.3.1 release,
+but it does have the same revisions number --22!-- as in the last Revisions
+file!]
+
+
+23.  /pros/xray/lib/regions/rgcreate.x				8/19/94 DS
+     /pros/xray/lib/regions/regprecheck.x
+     /pros/xray/lib/regions/regparse.yy
+     /pros/xray/lib/regions.h
+     /pros/xray/xspatial/improj/improj.x
+     /pros/xray/xlocal/source/qppower.x
+Corrected failure to handle WCS in improj and qppower.  In the process 
+did minor restructuring of the interface of tasks to the regions system 
+through rg_create() (for details see rgcreate.x).
+
+24. /pros/xray/xlocal/source/qppower.x				8/23/94  JD
+Updated QPPOWER to read the QPOE header and access ONTIME 
+through the structure.  This level of abstraction was added 
+to all tasks last fall, this one in xlocal was missed.  
+It was looking for "XS-ONTIME" which is outdated with RDF.
+
+25. *deleted* /pros/xray/xspatial/phadst <<< an empty directory 8/23/94  JD
+
+26. /pros/xray/xlocal/mpc/mpc.hd				9/6/94	KRM
+Added pointers to the help files for the external MPCTOOLS package which were
+installed in the /pros/xray/xlocal/mpc/doc directory.  These files include
+get_htrc.hlp, get_spec.hlp and using_mpctools.hlp.
+
+27. /pros/xray/xlocal/mpc/mpc_motd				9/6/94	KRM
+Added an advertisement about the MPCTOOLS package and a pointer to the related
+help files to the mpc message of the day.
+
+28. /pros/xray/xspatial/xspatial.hd				9/7/94  DVS
+    /pros/xray/xspatial/eintools/eintools.hd
+Fixed help database files to stop "bad file type `' in helpdir" errors in 
+mkhelpdb.  
+
+29. /pros/xray/xspatial/eintools/source/bkmap.x			9/8/94  DVS
+Changed "pirange" to "pi_range" to be consistent with other routines.
+(This removes the "Warning: identifier mapping not unique" when compiling.)
+
+30. /pros/xray/xspectral/qpspec/do_ds.x				9/8/94  DS
+Corrected error introduced with use of put_tbhead() in PROS 2.3:
+LIVETIME header parameter in the table files is restored to reflecting
+the gti's in the time-filtered input .qp file, instead of being just a
+copy of LIVETIME in the .qp file.
+
+31. /pros/xray/xspectral/upspecrdf/upspecrdf.x			9/9/94  DS
+Corrected handling of POISSERR keyword:  If it's not present in the 
+original file, it's reset ("F"), because pre-RDF _obs.tab files have 
+Gaussian error estimates.
+
+32. /pros/xray/xspatial/simevt					9/9/94  JD/KRM
+    /pros/xray/xspatial/srcechk
+    /pros/xray/xspatial/simtab.cl				
+    /pros/xray/xspatial/qpsim.cl
+Installed new task to create simulated event-list data (qpsim ) and
+task to create the input source list from a ascii list (simtab).  
+
+
+33. /pros/xray/xtiming/data/scc_to_utc.tab			9/16/94 JD
+Replaced table with new version we got from MPE that
+has times till 1994.
+
+34. /pros/xray/lib/pros/tsi.x					9/16/94 DVS
+    /pros/xray/lib/pros/miistruct.x
+    /pros/xray/lib/pros/xhead.x
+    /pros/xray/lib/qpoe.h
+    /pros/xray/lib/qpcreate/eventdef.x
+    /pros/xray/lib/qpcreate/a3dext.x
+    /pros/xray/lib/qpcreate/a3dev.x
+    /pros/xray/lib/qpcreate/qpcroundup.x
+    /pros/xray/lib/qpcreate/qpcreate_subs.x
+    /pros/xray/lib/qpcreate/evdisubs.x
+    /pros/xray/lib/qpcreate/qpfitsout.x
+    /pros/xray/lib/qpcreate/qpcreate.x
+    /pros/xray/lib/qpcreate/qpcsort.x
+    /pros/xray/ximages/qplintran/qplintran.x
+    /pros/xray/xlocal/source/isf2qp.x
+    /pros/xray/xlocal/source/mergexpr.x
+    /pros/xray/xlocal/source/qpmax.x
+    /pros/xray/xlocal/source/qppower.x
+    /pros/xray/xlocal/source/qpproj.x
+    /pros/xray/xtiming/fakesrc/fakesrc.x
+    /pros/xray/xdataio/qpappend/qpappend.x
+    /pros/xray/xdataio/fits2qp/ext.cards
+    /pros/xray/xdataio/fits2qp/fits2qp.par
+    /pros/xray/xdataio/fits2qp/mkpkg
+    /pros/xray/xdataio/fits2qp/ft_typedef.x
+    /pros/xray/xdataio/fits2qp/ft_standard.x
+    /pros/xray/xdataio/fits2qp/ft_savev.x
+    /pros/xray/xdataio/fits2qp/ft_ratfits.x
+    /pros/xray/xdataio/fits2qp/ft_nxtext.x
+    /pros/xray/xdataio/fits2qp/ft_mpe_event.x
+    /pros/xray/xdataio/fits2qp/ft_addparam.x
+    /pros/xray/xdataio/fits2qp/ft_addev.x
+    /pros/xray/xdataio/fits2qp/ft_addaux.x
+    /pros/xray/xdataio/fits2qp/fits2qp.com
+    /pros/xray/xdataio/fits2qp/fits2qp.h
+    /pros/xray/xdataio/fits2qp/fits2qp.x
+    /pros/xray/xdataio/fits2qp/ft_mii.x   <---- NEW FILE
+
+Modified FITS2QP in two ways:
+  * Now handles TSCAL/TZERO extension keywords in FITS files by applying
+    the scales/offsets to the appropriate columns, promoting types as
+    necessary.
+  * Allows the user to specify which columns in the event definition
+    should be considered 'x' and 'y' in the QPOE file.
+
+  These changes necessitated changes elsewhere throughout the PROS code
+  which made improper assumptions.  (For instance, auxiliary records &
+  event records might no longer have every column properly aligned,
+  since some column type might have been promoted.)
+
+35.     /pros/xray/xspatial/srcinten.cl				9/19/94 JD/JC
+Installed NEW task srcinten that computes the count rate of a source.
+
+36.	/pros/xray/lib/pros/tsi.x				9/21/94 DVS
+Modified disp_etsi to correctly display (and not bomb out) the inter-
+observatory gap in TSI records when given two IPC event QPOEs which have
+been QPAPPENDed together.
+
+37.     /pros/xray/xdataio/fits2qp/ft_nxtext.x			9/30/94 DVS
+Modified FITS2QP to only write out unknown header cards to QPOE if we are
+in the main header or the events header.
+
+38. /pros/xray/xspectral/qpspec/bn_routines.x			10/3/94 DS
+Corrected error in bn_off_axis():  Formerly used QP_CDELT1(shead) for 
+degrees per pixel for computing DS_MEAN_EVENT_OFFAXIS_ANGLE(ds); 
+corrected to use QP_INPXX(shead).
+
+39. 	/pros/xray/xdataio/_rarc2pros0.cl			10/5/94 DVS
+	/pros/xray/xdataio/_rdfarc2pros.cl
+	/pros/xray/xdataio/_rdfrall.cl
+	/pros/xray/xdataio/_rfits2pros0.cl
+	/pros/xray/xdataio/efits2qp.cl
+	/pros/xray/xinstall/cale_fits2qp.cl
+	/pros/xray/xinstall/calr_fits2qp.cl
+	/pros/xray/xinstall/fits2snr.cl
+	/pros/xray/xproto/qpcreate.cl
+Revised scripts to use new fits2qp parameters.
+
+40.     /pros/xray/xdataio/doc/fits2qp.hlp			10/21/94 DVS
+Revised FITS2QP help file.
+
+41.	/pros/xray/xdataio/fits2qp/ft_mii.x			2/16/95  DVS
+	/pros/xray/xdataio/fits2qp/ft_nxtext.x
+	/pros/xray/xdataio/fits2qp/ft_savev.x
+	/pros/xray/xdataio/fits2qp/ft_typedef.x
+	/pros/xray/xdataio/fits2qp/fits2qp.h
+Modified FITS2QP to correctly apply TSCAL/TZERO on extensions with
+columns which contain an array of values.  Also modified FITS2QP to
+not be so picky as to force the final index number to match the number
+of fields in an extension.  (I.e., if an extension has 8 columns, and
+TFIELD is set to 8, we can have "TUNIT5" as the final header card.)
+
+42.     /pros/xray/xdataio/doc/fits2qp.hlp			2/17/95 DVS
+Fixed minor typo in help file.
+
+43.     /pros/xray/xdataio/fits2qp/ft_typedef.x			2/23/95 DVS
+Fixed bug in ft_typedef.x which occured when a TSCAL/TZERO was 
+applied on an array of values.
+
+44.     /pros/xray/xproto/qpcalc/qpcalc.x			2/23/95 MC
+Changed ev_osize call to ev_size call now that DVS has 
+rationalized these algorithms in eventdefs.
+
+45.     /pros/xray/lib/qpcreate/qpclookup.x			2/23/95 MC
+Fixed this call to convert the 0, non-0 return from ev_lookuplist, 
+into simple NO/YES return - which is what tasks expected.
+(ev_lookuplist claimed to return NO/YES but doesn't really)
+
+46.     /pros/xray/lib/qpcreate/eventdef.x			2/23/95 MC
+Changed documentation on the ev_lookuplist routine to correctly 
+reflect that this routine returns a non-0 value for YES, 
+but NOT exactly =1.
+
+47.     /pros/xray/xproto/qpcreate.cl                           5/4/95 JCC
+Added new parameters (xkey, ykey) for updated FITS2QP
+
+48.     /pros/xray/xdataio/xwfits.cl                            5/4/95 JCC
+        /pros/xray/xinstall/calr_qp2fits.cl
+        /pros/xray/xdataio/_rarc2pros0.cl     
+        /pros/xray/xdataio/_rdfarc2pros.cl    
+        /pros/xray/xdataio/_rdffits2pros.cl   
+        /pros/xray/xdataio/_rdfrall.cl        
+        /pros/xray/xdataio/_rfits2pros0.cl    
+        /pros/xray/xdataio/xrfits.cl          
+        /pros/xray/xinstall/calr_fits2qp.cl   
+        /pros/xray/xinstall/fits2bin.cl       
+        /pros/xray/xinstall/fits2ein.cl       
+        /pros/xray/xinstall/fits2ephem.cl     
+        /pros/xray/xinstall/fits2snr.cl       
+        /pros/xray/xinstall/fits2spat.cl      
+        /pros/xray/xlocal/rvv2pros.cl        
+Updated with latest TABLES 1.3.3 parameters (strfite and stwfits) 
+
+49.	/pros/xray/xspatial/eintools/mkpkg		       5/10/95 JCC
+Added "$call install".
+
+50.     /pros/xray/xspatial/xspatial.cl                        5/16/95 JCC
+        /pros/xray/xspatial/doc/qpsim.hlp
+Removed SIMTAB from XSPATIAL.CL and updated the QPSIM help file 
+
+51.     /pros/xray/xspatial/qpsim.cl                           5/17/95 JCC
+Updated with new QPCREATE parameters.
+ 
+52.     /pros/xray/xdataio/rarc2pros.cl                        5/22/95 JCC
+        /pros/xray/xdataio/_rdffits2pros.cl
+        /pros/xray/xdataio/_rdfarc2pros.cl
+        /pros/xray/xdataio/doc/rarc2pros.hlp 
+Added PSPC light curve tables. 
+Updated to allow users to specify an output filename when autoname="no".
+Added the condition checking for "No FITS files found".
+Removed unnecessary "scan" that was used twice in one pipe line.
+Updated the help file for rarc2pros.
+
+53.     /pros/xray/xplot/pspc_hrcolor.cl                       5/23/95 JCC
+Updated to accept PSPCB or PSPCC as header keyword INSTRUME.
+
+54.     /pros/xray/lib/qpcreate/qpc_subs.x->qpc_subs_nouse.x   5/23/95 JCC
+It is not used in pros, renamed to ./lib/qpcreate/qpc_subs_nouse.x 
+
+55.     /pros/xray/xdataio/qpappend/qpc_subs.x                 5/26/95 JCC
+Converted QP_MJDRDAY from "integer" to "double" before calling 
+"fp_equald".  Also updated to use "pargi" instead of "pargd" 
+for QP_MJDRDAY output.
+
+56.	/pros/xray/xtiming/ksplot.cl			       6/5/95  JCC
+Updated with new IGI parameters. 
+
+57.     /pros/xray/xdataio/rarc2pros.cl                        6/8/95  JCC
+Fixed the problem described in hp14 : "wp*.fits should not be
+allowed in MPE REV0 FITS files".
+
+58.     /pros/xray/xdataio/_rdfarc2pros.cl                     6/12/95 JCC
+Updated to check whether both of the pixel file(*.pix) and the 
+output file exist before using imcopy to create *.pl for pspc.
+And no need to reproduce other tables after pl file created.
+
+59.	/pros/xray/xproto/doc/qpcreate.hlp		       6/12/95 JCC
+Added the description for new parameters xkey & ykey.
+
+60.	/pros/xray/xspatial/doc/srcinten.hlp		       6/13/95 JCC
+Updated with Frank's comments.
+	/pros/xray/xspatial/xspatial.cl
+Added the new task srcinten in the xspatial package.
+	/pros/xray/xspatial/srcinten.cl
+Added a few more messages when display>=2.
+	/pros/xray/xspatial/data/ccr.cd
+Changed the output column name.
+
+61.	/pros/xray/xinstall/calr_fits2qp.cl		       6/19/95 JCC
+        /pros/xray/xinstall/calr_qp2fits.cl
+Comment out the file rparlac_00b.fits/rparlac_00b.qp
+Delete the old imh files before calling strfits.
+
+62.     /pros/xray/xplot/newwcslab/dmip_wlsetup.x              6/23/95 JCC
+                              -->  dmip_wlsetup_nouse.x
+dmip_wlsetup.x not used.
+
+63:     /pros/xray/ximages/qplintran/qplintran.x               6/28/95 JCC
+display xdim/ydim when >=2 and use INDEFI for XDIM/YDIM. 
+        /pros/xray/ximages/doc/qplintran.hlp
+xdim/ydim should be described as integer type.
+        /pros/xray/ximages/qpshift.cl
+add xdim & ydim for qplintran.
+        /pros/xray/doc/qpmerge.hlp
+Fixed typos.
+
+Updated qpshift and qplintran to fix the problem in QPAPPEND
+when merging a shifted qpoe file. Now a shifted qpoe file
+can be either from QPSHIFT or from QPLINTRAN.  WCSQPEDIT
+(or QPHEDIT) is no longer needed to set AXLEN1 and AXLEN2
+back to the appropriate value.
+
+62.    /pros/xray/xplot/tvgrid.cl -->tvgrid_nouse.cl           7/5/95  JCC
+tvgrid.cl not used and renamed to tvgrid_nouse.cl.
+
+63.    /pros/xray/xspatial/srcinten.cl                         7/11/95   JCC
+       /pros/xray/xspatial/doc/srcinten.hlp
+Update example in SRCINTEN help file to show higher display level.
+
+64.    /pros/xray/xspatial/detect/doc/ldetect.hlp              7/11/95   JCC
+Description of region parameter says BKDEN radius is in arc-sec.
+It's actually in arc-min. (fap)
+
+65,    /pros/xray/xplot/newwcslab/wcslab.x                     7/95   JCC
+       /pros/xray/xplot/newwcslab/wlwcslab.x
+Replaced with latest IRAF2.10.4 routines.
+
+66.   /pros/xray/xdataio/fits2qp/ft_mwcs.x                     7/95   DVS
+Tried to fix the problem caused by iraf2.10.4/MWCS - 
+but still having bug. Good try !
+
+67.    /pros/xray/xdataio/qpappend/mkpkg                       8/3/95 JCC
+Copy qpcreate.x from /pros/xray/lib/qpcreate.x to qpappend/.
+and add the line qpcreate to mkpkg to recompile it. Otherwise
+VAX/VMS links qpc_isqpoe from wrong place (xray/lib/qpcisqpoe.x).
+The correct qpc_isqpoe used by qpappend should be from
+"xdataio/qpappend/qpc_subs.x".
+
+68.   /pros/xray/xspatial/srcechk/x_srcechk.x                  8/7/95 JCC
+Delete this file ( task  srcechk = t_srcechk ).
+"task srcechk" has been defined in /pros/xray/xspatial/x_xspatial.x/
+
+69.   /pros/xray/lib/vvms/timfilter.x
+      /pros/xray/lib/mkpkg.sf.VMS
+Copy /pros/xray/xtiming/timfilter/timfilter.x to ./xray/lib/vvms/. and
+modified it for VAX/VMS version.
+
+70.  /pros/xray/lib/qpcreate/uhead2qp.x				8/8/95 DVS
+ Added lines to set QP_INDEXX and QP_INDEXY to default values
+ of 'x' and 'y'. This allows programs which read from UHEADs
+ (such as xpr2qp) to have indices automatically set.  This is
+ necessary for QPOE creation.
+
+71.  /pros/xray/xinstall/calr_fits2qp.cl                       8/28/95 JCC
+     /pros/xray/xinstall/calr_qp2fits.cl
+Add rparlac_00b.fits/rparlac_00b.qp back to the scripts for pros2.4. 
+
+72. /pros/xray/xinstall/drep2cal.cl                            9/7/95 JCC
+Add more data files to copy.
+
+73. /pros/xray/xtiming/timcor/calc_bary/clcbary_subs.x         9/18/95 JCC
+    /pros/xray/xtiming/timcor/calc_bary/calc_bary.x
+    /pros/xray/xtiming/timcor/calc_bary/jdleap_init.x (new)
+The data "jdleap[NLEAPS]" are no longer hardwired in the codes.  
+Instead, it is stored in a new table "jdleap.tab". When adding 
+a leap second, no need to update the header file and to
+recompile the codes anymore. Just simply create another new 
+table "jdleap.tab" will make it work. Two new parameters:
+"jdleap[50] + NLEAPS" are passed to "ss_bar, ephem & a1utcf ".
+    /pros/xray/xtiming/timcor/calc_bary/mkpkg
+Add the new code "jdleap_init.x" to compile.
+    /pros/xray/lib/bary.h
+Remove NLEAPS and add new LEAPMAX (=50). It only affects
+the task "calc_bary".
+    /pros/xray/xtiming/timcor/calc_bary.cl
+Add a new parameter for jdleap.tab when calling _clc_bary 
+
+74.  /pros/xray/xinstall/fits2ephem.cl                         9/20/95 JCC
+Updated to add a new calibration file "jdleap.tab".
+
+75.  /pros/xray/xinstall/xinstall.men                          9/20/95 JCC
+Added the description for each task in xinstall.
+
+76.  /pros/xray/xspatial/qpsim.hlp 		               9/27/95 FAP 
+     /pros/xray/xspatial/xspatial.cl                           9/27/95 JCC 
+     /pros/xray/xspatial/doc/srcinten.hlp 
+Added to load the package xspectral.
+Arcminutes can't be used in the region descriptor.  It causes 
+a problem to tcreate when writing an output table.
+
+77.  /pros/xray/xdataio/rarc2pros.cl                           10/2/95 JCC
+     /pros/xray/xdataio/_rarc2pros0.cl
+rarc2pros - The msg "*fits not found" is limited to RDF data.
+_rarc2pros0 - when clob+, imdelete *.imh for wh*_events.mt 
+& wh*_quality.mt 
+
+78.  /pros/xray/xdataio/_rdffits2pros.cl                       10/3/95 JCC
+Added PSPC light curve tables.
+
+79.  /pros/xray/ximages/imcalc.x                                8/8/95 prosb
+Update and save it as revision 8.1.
+
+80. /pros/xray/doc/rosat_files.hlp (new)                       10/3/95 FAP
+    /pros/xray/doc/explain_xdata.hlp (updated)
+    /pros/xray/xdataio/doc/rfits2pros.hlp (updated)
+    /pros/xray/xdataio/doc/rarc2pros.hlp (updated)
+
+81. /pros/xray/xray_motd                                       10/18/95 JCC
+    /pros/xray/xray.men
+    /pros/xray/xray.hd
+    /pros/xray/doc/pros.hlp
+Added two new help files "rosat_files.hlp" and "wcsbug.hlp". 
+Also, made some other changes for the new release pros2.4.
+
+82.  /pros/xray/xinstall/drep2cal.cl                           10/17/95 JCC
+     /pros/xray/xinstall/fits2ephem.cl
+Remove "imcopy hri_qegeom.imh" from drep2cal.cl
+Create it from fits2ephem.cl
+
+83. /pros/xray/xdataio/qpappend/qpc_subs.x                     11/2/95 JCC
+Updated to fix the qpsim bug in iraf2.10.4.
+(QP_MJDRFRAC=MJDREFF,QP_CDELT1,QP_CDELT2)
+
+84. /pros/xray/xinstall/fits2spat.cl                           11/3/95 JCC
+Convert hdummy.fits to hdummy.qp

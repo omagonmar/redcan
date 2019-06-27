@@ -1,0 +1,6 @@
+s/^\*/C/
+s/^	/      /
+s/REAL\*8/DOUBLE PRECISION/g
+s/real\*8/DOUBLE PRECISION/g
+s/REAL\*4/REAL/g
+s/real\*4/REAL/g

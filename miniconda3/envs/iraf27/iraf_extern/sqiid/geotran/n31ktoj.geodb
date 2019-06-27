@@ -1,0 +1,26 @@
+# Fri 13:28:49 13-Mar-92
+begin	n31ktoj.geoco
+	output		n31ktoj.geodb
+	xrefmean	156.8566
+	yrefmean	149.3404
+	xmean		152.1012
+	ymean		148.0302
+	xshift		-5.121469
+	yshift		5.754364
+	xmag		0.97558
+	ymag		0.9794703
+	xrotation	1.662121
+	yrotation	1.488061
+	surface1	11
+			3.	3.
+			2.	2.
+			2.	2.
+			0.	0.
+			-43.	-43.
+			300.	300.
+			-43.	-43.
+			300.	300.
+			-5.121469	5.754364
+			0.9751695	-0.0253345
+			0.02840995	0.97914
+	surface2	0

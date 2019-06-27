@@ -1,0 +1,600 @@
+#$Header: /home/pros/xray/xplot/doc/RCS/imcontour.hlp,v 11.0 1997/11/06 16:38:17 prosb Exp $
+#$Log: imcontour.hlp,v $
+#Revision 11.0  1997/11/06 16:38:17  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:09:13  prosb
+#General Release 2.4
+#
+Revision 8.0  1994/06/27  17:02:40  prosb
+General Release 2.3.1
+
+Revision 7.1  94/06/01  11:10:15  janet
+jd - updated to examples.
+
+Revision 7.0  93/12/27  18:49:04  prosb
+General Release 2.3
+
+Revision 6.2  93/12/22  18:24:56  mo
+JD	 2.3 updates
+
+Revision 6.1  93/11/04  09:25:37  mo
+MC	11/4/93		Add references to ERRCREATE and EXPLAIN_ERRORS
+
+Revision 6.0  93/05/24  16:41:37  prosb
+General Release 2.2
+
+Revision 5.1  93/05/22  19:01:14  mo
+JD	update for task changes
+
+Revision 5.0  92/10/29  22:35:36  prosb
+General Release 2.1
+
+Revision 4.3  92/10/24  13:54:57  janet
+updated example (added labout-).
+
+Revision 4.2  92/10/24  12:47:27  janet
+udpated exammple.
+
+Revision 4.1  92/09/10  14:06:40  janet
+updated description to include more references to tvimcontour.
+
+Revision 4.0  92/04/27  15:10:40  prosb
+General Release 2.0:  April 1992
+
+Revision 1.4  92/04/24  14:26:18  janet
+*** empty log message ***
+
+Revision 1.3  92/04/24  11:43:07  janet
+updated for apr 92 release.
+
+Revision 1.2  92/01/15  14:28:07  janet
+updated help, added wcspars reference.
+
+Revision 1.1  91/09/16  09:43:17  janet
+Initial revision
+
+.help imcontour Dec93 xray.xplot
+.ih
+NAME
+imcontour -- Contour an image on a Sky or Pixel Grid using WCS
+.ih
+USAGE
+imcontour image units clevel map_type 
+.ih
+DESCRIPTION
+
+        \fIimcontour\fR graphs the contour plot of an image.  The 
+algorithm that determines the skymap is WCSLAB code developed at ST 
+that supports the world coordinate system (WCS) of images.  The task 
+will display full images (including non-square images), image sections, 
+and rotated images with accuracy.
+
+	Choice of Sky or Pixel map displays are available.  Other options 
+include syntax for specification of contour levels, independent scaling 
+along each axis, placement choice for labels, and grid or tic options for 
+marking the lines of ra/dec or pixels.  The graph can be displayed on one 
+of 3 devices; stdplot, stdgraph, or Image display (imdr|y|b|g|w), and a 
+list of source positions can be input and marked on the plot with the user's 
+choice of markers.
+
+	See FULL DESCRIPTION below for an extended description and hints
+important in running \fIimcontour\fR.  Also see the documentation for 
+\fIWLPARS\fR for a description of parameters available to customize 
+the SKY grid and labels.  If a User wants to display an image and overlay
+the contours, both steps are combined in task \fITvimcontour\fR.
+
+.ih
+PARAMETERS
+.ls image = ""          prompt = IRAF image filename
+
+The image filename.  This can be any valid IRAF image file, including
+X-ray QPOE files.  WCS Parameters are read from the header, but if they
+do not exist the task defaults to a Pixel Plot.
+.le
+.ls map_type = "sky"		prompt = Grid type (sky|pixel)
+
+Grid Type for Contour map.  Your Choices are:
+.nf
+
+        sky --- draws a scaled sky map with labeled  lines of RA
+                & DEC
+
+        pixel - draws a scaled grid with labeled pixels
+.fi
+.le
+.ls units = "peak"      prompt = Units (pixel|peak|sigma)
+
+The units in which to interpret the contour levels.  Your choices are:
+.nf
+
+        pixel - levels expressed as photon values
+
+        peak -- levels expressed as  a percentage  of  the peak.
+                The  peak   is the value   of  maximum number of
+                photons at a pixel position in the image.
+
+        sigma - levels  expressed in  photons  as  stored  in an
+                array that is  the result of  dividing the input
+                image by an associated error array.  If an error
+                array element has 0 stored the result is 0.
+		(see the task \fIerrcreate\fR for info on how
+		 to generate the error array)
+
+.fi
+.le
+.ls clevel = "log 5 100 5"         prompt = Contour Levels
+
+The contour levels at which to graph the image.  When display is set to 2,
+the list of computed levels is displayed.
+
+Syntax "min max steps" creates steps+1 contour levels from min to max
+inclusive.  Current maximum number of contour levels is defined as 100.
+
+Your choices are:
+.nf
+
+        (l1, l2, l3, l4) ------ list of levels
+                ex. (5.0, 10.5, 20.)
+
+        linear min max steps -- linear function - abbreviation 'lin'
+                                                  also accepted.
+                ex. linear 1 100 10
+
+        log min max steps ----- log function - if log 0 is specified
+                                it is replaced with log 1 and a Warning
+                                message is displayed.
+                ex. log 1 100 10
+
+        filename -------------- Ascii  file  name  with  contour
+                                levels  listed  in one  of the 3
+                                forms above.
+                ex. clevel.lis
+
+.fi
+* All numeric values are read as reals.  Decimal points, commas, and
+parenthesis are not required.  
+.le
+.ls error_image  = ""   prompt = IRAF error image filename
+
+The error image filename is optional.  This can be any valid IRAF image
+file, including X-ray QPOE file.  It must be the same size as the image
+file.  The image is divided by the square root of the error file and the
+result is contoured. If an error element has 0 stored then the result
+for the element is 0. 
+See the \fIhelp explain_errors\fR for information on how to generate
+an error image
+.le
+.ls (wlpars="") [pset]
+
+The name of the parameter set (pset) containing the labelling parameters
+which controls the detailed appearance of the sky plot. See 'help wlpars' 
+for a detailed description of the parameters.  If NULL ("") then the params 
+set in wlpars will be used.  The parameters are customized in one place 
+and used by both imcontour & tvimcontour along with other sky labelling 
+tasks.
+
+.le
+.ls (display = 2) [int]
+
+The range is 0-5.  The higher the number more verbose the display.  Will
+print a few header params with low value, higher value is for debugging.
+Display level 2 has a moderate number of useful prints that informs the
+user of progress and interpretation of parameters.
+.le
+.ls (scale = 0.) [real]
+
+Y axis Scale.  Units are arcseconds/mm when map_type = SKY, and
+pixels/mm when map_type = PIXEL.  If the default value 0.0 is input,
+then the scale is computed by the task based on the longest side of
+an image size.  Parameter xy_scale_ratio can be used to set a different 
+scale in X in relation to Y.
+.le
+.ls (xy_scale_ratio= 1.) [real]
+
+The x/y scale ratio.  The default value 1.0 sets both axes to the value
+indicated by the parameter scale.
+.le
+.ls (dotitle = yes) [boolean]
+
+\fIYes\fR labels the contour plot with a title.  The title consists on an
+image title as it appears in the input file header, and the name of the 
+plot file.  \fINo\fR skips this option.  This parameter is meant to aid 
+the user in preparing plots for publication.
+.le
+.ls (dolegend = yes) [boolean]
+
+\fIYes\fR labels the contour plot with a legend.  The legend consists of a
+field center and contour level display drawn along the right border.  \fINo\fR 
+indicates that no legend is plotted.  This option is meant to aid the
+user in preparing plots for publication.
+.le
+.ls (perim = yes) [boolean]
+
+Flag indicating whether to draw a perimeter around the contour plot or to
+use the entire windo for the image.  Set to \fINO\fR when displaying to imdr
+device (Saoimage, Imtool) so that tv display and contour will overlay.
+.le
+.ls (src_list = "none") [string]
+
+Optional Input Source List in table or Ascii format for marking source
+positions on the contour graph.  When display is 2, the list of positions
+and computed pixel positions are displayed.
+
+
+TABLE Format:  Name of a table file. Optional column names for right
+        ascension and declination. Ra/Dec Units in table are Degrees.
+
+.ls (racol = "ra") [string]
+
+Right Ascension Column Name in degrees for source table input.
+
+.le
+.ls (deccol = "dec") [string]
+
+Declination Column Name in degrees for source table input.
+
+.le
+.nf
+
+ASCII Format:  Input of 1 of 4 ascii list formats expected:
+
+1) A list of RA and DEC in 2 columns with colon delimeters:
+   (format: 2 columns - rh:rm:rss.s dh:dm:dss.s)
+
+        12:56:06.8    35:45:03.6
+        12:55:46.5    35:36:01.0
+
+2) A list of RA and DEC in 3 columns with colon delimeters:
+   (format: 3 columns - char_id rh:rm:rss.s dh:dm:dss.s)
+
+        src_1 12:56:06.8    35:45:03.6
+        src_2 12:55:46.5    35:36:01.0
+
+3) A list of RA and DEC in 6 columns with space delimters:
+   (format: 6 columns - rh rm rss.s dh dm dss.s)
+
+        12 56 06.8 35 45 03.6
+        12 55 46.5 35 36 1.0
+
+4) A list of RA and DEC in 7 columns with space delimters:
+   (format: 7 columns - char_id rh rm rss.s dh dm dss.s)
+
+        src_1 12 56 06.8 35 45 03.6
+        src_2 12 55 46.5 35 36 1.0
+.fi
+.le
+.ls (isystem = "") [string]
+
+   Input coordinate system for Source List above.  When default empty
+string is set the system of the input Image File is used.  This can be 
+overridden by specifying one of the systems below:
+.nf
+        [Equatorial] Jxxxx.xx
+                        -- FK5 system with Julian equinox.
+        [Equatorial] Bxxxx.xx[@xxxx.xx]
+                        -- FK4 system with Besselian equinox and
+                           optional Bessalian observation epoch.
+
+        Image_name      -- Pseudo system.  The sky system of the 
+                           specified image will be used for this 
+			   system.
+
+.fi
+.le
+.ls (src_mark = "+#")  [string]
+
+Source marker when src_list specified.  The following notation is
+interpreted:
+.nf
+        "<char>"        - mark source with specified character
+                          ex. "*" will mark sources with *'s
+        "#"             - mark source with a number
+                          ex. "#" will mark sources 1, 2, 3 ...
+        "<char>#"       - mark the source with a char and a number
+                          ex. "+#" will mark sources + 1, + 2, + 3 ...
+.fi
+.le
+.ls (pixgrid = "full") [string]
+
+Indicates Pixel grid choice.  Types available are:
+.nf
+
+        full - plot full grid
+        tics - plot tics marks along perimeter of plot
+        none - no grid or tics marks
+.fi
+.le
+.ls (pixlabels = "out") [string]
+
+Indicates where to place labels for a Pixel Plot in relation to contour 
+area.  Choices are:
+.nf
+
+        in --- label axes inside the contour area
+        out -- label axes outside the contour area
+        none - no labels on plot
+.fi
+.le
+.ls (pixel_lines = 10) [int]
+
+Used if map_type = "pixel" (see above param).
+Estimated number of graphed pixel lines on the map in X & Y independently.
+Task chooses evenly spaced intervals near the input value, thus the actual
+number may be more or less than the parameter.
+.le
+.ls (dolabel = yes)
+
+Used if map_type = "sky" (see above param).
+Indicates whether to label the sky coordinate grid with ra and dec.
+.le
+.ls (labout = yes)
+
+Used if map_type = "sky" (see above param).
+\fIYes\fR labels the graph with labels outside of the sky grid, \fINo\fR 
+labels the graph inside of the grid borders.
+the grid.
+.le
+.ls (usewcs = no)
+
+Use the world coordinate system specified by the  parameters  in
+the   wcspars   parameter  set  in  place  of  the  image  world
+coordinate system  or if image is "".
+.le
+.ls (graph_device = "stdgraph") [string]
+
+Display device for graphics.  "stdgraph", "stdplot", or "imd"+"r|y|b|g|w".
+Stdgraph plots to a users standard graphic device, Stdplot plots to the users
+standard printer, and imd plots to the Imtool window under Suntools or the
+Saoplot window under Xwindows. The letter suffix stands for the color of the
+graphics, r=red,y=yellow,b=blue,g=green,w=white.  For example "imdy" will plot
+in yellow to the image window.  Refer to task Tvimcontour to display an Image 
+with the contour overlayed in the image window.
+.le
+.ls (scale_device = "stdplot") [string]
+
+Scale device for the graph.  "stdgraph" or "stdplot".  Plot scale reflects
+measurement on scale_device.  Default is "stdplot".  If graph_device of
+"stdgraph" and scale_device of "stdplot" are chosen then the resulting plot
+will appear in a gterm window with plot attributes and scaling as would appear
+in a hardcopy (when graph_device=stdplot).
+.le
+.ls (fill = yes) [boolean]
+
+Indicates whether to interpolate the image to fit the display window when
+plotting to the Imtool/Saoimge window.
+.le
+.ls (gclose = yes) [boolean]
+
+\fINo\fR leaves task in graphics window - type 'q' to quit. \fIYes\fR closes
+the plot and returns prompt to the package.  Default is set to \fIYes\fR.
+Command ":.help" displays description of IRAF graphics commands available
+to user.
+.le
+.ls (cursor = "")
+
+Graphics cursor input
+.le
+.ih
+FULL DESCRIPTION
+
+        The user can choose contour units to be pixel, peak, or sigma.
+Pixel will interpret the contour values directly as photon counts in
+each image element, peak will apply the contour level specification as
+a percentage of the peak value in the image, and sigma will apply the
+levels to the array which is the result of dividing the Input Image by the
+Squareroot of the Error image.  (Errors are stored as the errors squared
+in PROS and can be generated with the \fIERRCREATE\fR task).  If an error 
+array element has 0 stored the result is 0.
+
+        The user also has a choice of Graph and Scale devices.  The option
+was added to handle differences in plots that were displayed in the graphics
+window and those that were output to the plotter.  With the extra option
+of scale_device the user can plot on the graphics window (graph_device=
+stdgraph, scale_device=stdplot) and see a plot that is identical to one
+that is directed to the plotter (graph_device=stdplot,graph_device=stdplot).
+
+        Along with the stdplot, and stdgraph device a 3rd device to output
+plots has been implemented called imd(r|y|b|g|w).  This device plots to the
+Imtool window under Suntools or the Saoplot window under Xwindows.  It
+is a convenient device to overlay contours onto the output of tv display.
+Both scale_device and graph_device should be set to the image window, but
+if either is set the other defaults to the same.  The last letter of the
+device specification denotes display color, thus r=red, y=yellow, b=blue,
+g=green, w=white.  Parameter \fIperim\fR should be set to \fIno\fR, and the
+contoured and displayed image must be the same size so that there is a 1:1
+scale in displays.  Task \fITvimcontour\fR will display and contour
+an image.
+
+        The task accepts an ascii list of sources in ra & dec and plots
+the specified source marker at their position on the graph.  The File
+format and Source Marker specification syntax is given above.  The image
+system for the positions defaults to that of the Input Image unless
+otherwise specified.
+
+        Memory restrictions make it inadvisable to contour an image of
+size greater that 512 x 512 pixels.  Methods of blocking are a) specify
+a block filter (ex. [block=32]) on a fullsize qpoe, b) run imsmooth on 
+the image with a blocking factor or c) running imcompress or blkavg on 
+the image prior to running this task.  
+
+        Also, to determine the peak of the image the input file is
+scanned and the maximum pixel is determined.  It is then scanned a second
+time to contour the image.  Thus, if one is running the task and time is
+a problem, this may be the reason.
+
+.ih
+EXAMPLES
+.nf
+
+--------------------------------------------------------------------
+note:
+-----
+Files rh110267_smo, and rp110590_smo used as examples in this section 
+were created by running imsmooth on the test qpoe files, they are 
+256x256 smoothed images:
+ 
+	imsmooth xdata$rh110267.qp[bl=32] 
+ 	imsmooth xdata$rp110590.qp[bl=64]
+
+--------------------------------------------------------------------
+
+Running Imcontour with the Defaults:
+------------------------------------
+
+cl> imcontour
+IRAF image filename: rh110267_smo
+Grid type (sky|pixel): sky
+Units (pixel|peak|sigma) (peak): 
+Contour Levels (log 5 100 5): 
+
+... Plots  Contour map of rh110267_smo at contour levels computed based on
+    the image peak at 75.7, 41.6, 22.8, 12.5, 6.8, 3.8.
+... if pixel were specified instead of sky for Grid type then an identical
+    plot with pixel labels will be displayed.
+--------------------------------------------------------------------
+
+Using an Error Image:
+---------------------
+
+cl> imcontour
+IRAF image filename: rp110590_smo
+Grid type (sky|pixel): sky
+Units (pixel|peak|sigma): sigma
+Contour Levels (log 5 100 5): log 2 80 10
+IRAF error image filename: rp110590_smo
+
+... Either the user has a prepared error image or the input file can be 
+    used.  Contours are values between 2 and 80 sigma on a log scale 
+    based on an array which is the result of dividing  the image by the 
+    sqrt of the error file (rp110590_smo / sqrt (rp110590_smo) )
+--------------------------------------------------------------------
+
+Plotting to SAOIMAGE or IMTOOL Windows:
+---------------------------------------
+
+... first open the Image Window, and load images/tv.
+
+tv> xdisplay rh110267_smo fill+ 
+
+xp>imcontour graph_device="imdr" perim- labout- 
+IRAF image filename: rh110267_smo 
+Grid type (sky|pixel): sky
+Units (pixel|peak|sigma) (peak): 
+Contour Levels (log 5 100 5): 
+
+... First displays the image, and then overlays the Contour Map.  
+Important hidden parameters to set are fill+ on the display task, and
+perim=no and the image device imd(r|y|b|g|w) for Imcontour. The letter
+suffix on the imd device indicate the contour line color by the letter 
+chosen.
+
+(Note! Task \fITVIMCONTOUR\fR will run the above task sequence automatically,
+       but the above sequence can be useful when the User wants to display,
+       and contour 2 different images.)
+
+--------------------------------------------------------------------
+Overlaying contours on an existing plot with different colors:
+--------------------------------------------------------------
+
+First run imcontour (example above) or use tvimcontour once to figure 
+out which contour levels should go with which color.  Once that's done:
+    
+cl> tvimcontour rh110267_smo sky pixel "75.0,45.0,25.0" gcolor="w"
+cl> imcontour rh110267_smo sky pixel "7.0,4.0" graph_device=imdB perim- labout-
+cl> gflush
+
+--------------------------------------------------------------------
+
+Marking Sources on the Plot:
+----------------------------
+
+... first create an ascii list of sources.  The following is an example:
+
+arlac.lis:	22 05 51.71 45 22 17.40
+		22 06 34.70 45 24 6.83
+		22 06 34.94 45 24 11.87
+		22 07 0.0   45 58 59.88
+		22 08 0.0   45 36 0.0
+		22 08 40.99 45 44 30.47
+		22 09 10.0  45 50 35.88
+
+can also use standard processing Src or Sky tables with ra/dec columns
+stored in degrees.
+
+xp>imcontour src_list="arlac.lis" src_mark="#"
+IRAF image filename: rh110267_smo
+Grid type (sky|pixel): sky
+Units (pixel|peak|sigma) (peak):
+Contour Levels (log 5 100 5): log 0.2 80 10
+
+... Displays an Imcontour Plot of rh110267_smo with sources overlayed
+and marked with digits 1 through 7.  By not specifying parameter isystem 
+the input coordinate system of the source list deafaults to that of the 
+input image.
+
+- another example with an image subsection:
+- - - - - - - - - - - - - - - - - - - - - - 
+
+xp>imcontour src_list="arlac.lis" src_mark="*#"
+IRAF image filename (rh110267_smo): rh110267_smo[50:100,110:160]
+Grid type (sky|pixel) (sky):
+Units (pixel|peak|sigma) (peak):
+Contour Levels (log 5 100 5): log 0.2 80 10
+
+... Displays an Imcontour Plot of the 50x50 subsection of rh110267_smo. 
+Only source 6 is visible in this region and is marked and labeled with 
+"* 6".   Accuracy of the plot is maintained even though a subsection 
+of the image is specified.
+
+--------------------------------------------------------------------
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+When inputing a value less than 1, such as .5, an input of "0.5" is
+accepted while ".5" is not.  This is an IRAF bug.
+
+Sometimes when dumping a detailed contour plot to the printer with the 
+'=' command, only part of the plot is printed.  A workaround is to run 
+imcontour with graph_device="stdplot".  The plot will go directly to the 
+printer and will be complete.
+
+When using graph_device="stdplot", the first plot sometimes doesn't
+get to the print queue.  Type 'gflush' in your IRAF window after
+imcontour runs and the plot will print.
+
+One can precess from 1950 to 2000 (coordinates in 1950, image in 2000) 
+but the reverse does not work properly (image in 1950 [i.e. an Einstein 
+image], coordinates in 2000).
+.ih
+SEE ALSO
+See the documentation on ERRCREATE(\fIhelp ERRCREATE\fR)
+for a description of the 'error' arrays and also the
+\fIhelp explain_errors\fR for a more complete discussion of errors
+in PROS.
+
+See the documentation on Wcspars (\fIhelp wcspars\fR)
+for a description of the WCS grid and labeling parameters available.
+
+See the documentation on Tvimcontour (\fIhelp tvimcontour\fR)
+for a description of the Tv display/contour overlay task.
+
+See the documentation on skypix (\fIhelp skypix\fR)
+for a description of a coordinate system conversion task.
+
+See the documentation on cursor mode (\fIhelp cursor\fR)
+for a description of the IRAF graphics user interface.
+
+See the documentation on Imsmooth (\fIhelp imsmooth\fR) 
+for a description of the Imsmooth task.
+
+See the documentation on Imcompress (\fIhelp imcompress\fR) 
+for a description of the Imcompress task.
+
+See the documentation on Qpoe filtering (\fIhelp qpoe\fR) 
+for a description of the spatial filter user interface.
+
+.endhelp
+

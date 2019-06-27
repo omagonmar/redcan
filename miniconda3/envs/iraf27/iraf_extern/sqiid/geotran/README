@@ -1,0 +1,19 @@
+Sample files needed to GEOTRAN images in one color to that of another color are
+included as follows:
+  files for GEOTRAN the raw (S up E left) JH to K: n10[jh]tok.geo[co|db]
+  files for GEOTRAN the raw (S up E left) HK to J: n10[hk]toj.geo[co|db]
+  files for GEOTRAN the raw (S up E left) JK to H: n10[jk]toh.geo[co|db]
+  files for GEOTRAN the oriented (N up E left) JH to K: n10[jh]toktr.geo[co|db]
+  files for GEOTRAN the oriented (N up E left) HK to J: n10[hk]tojtr.geo[co|db]
+  files for GEOTRAN the oriented (N up E left) JK to H: n10[jk]tohtr.geo[co|db]
+etc.
+
+Both (.geoco & .geodb) files are needed in the directory where images are
+GEOTRANed.
+
+Here's a table of files and the dates for which they should be valid:
+
+  n43    13mar92 - 01apr92
+  n31    10jan92 - 29jan92
+  n10    16oct91 - 26nov91
+  n1     20sep91 - 01oct91

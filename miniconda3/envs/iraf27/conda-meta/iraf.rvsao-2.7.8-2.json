@@ -1,0 +1,3736 @@
+{
+  "build": "2",
+  "build_number": 2,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "iraf !=2.16.1,>=2.16.UR"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/iraf.rvsao-2.7.8-2",
+  "features": "",
+  "files": [
+    "bin/.iraf.rvsao-post-link.sh",
+    "bin/.iraf.rvsao-pre-unlink.sh",
+    "bin/ac_config_iraf_pkg",
+    "bin/ac_update_extern_pkg",
+    "iraf_extern/rvsao/Doc/Readme",
+    "iraf_extern/rvsao/Doc/bcvcorr.hlp",
+    "iraf_extern/rvsao/Doc/bcvcorr.ps",
+    "iraf_extern/rvsao/Doc/contemp.hlp",
+    "iraf_extern/rvsao/Doc/contpars.hlp",
+    "iraf_extern/rvsao/Doc/contsum.hlp",
+    "iraf_extern/rvsao/Doc/emplot.hlp",
+    "iraf_extern/rvsao/Doc/emsao.hlp",
+    "iraf_extern/rvsao/Doc/eqwidth.hlp",
+    "iraf_extern/rvsao/Doc/hints",
+    "iraf_extern/rvsao/Doc/linespec.hlp",
+    "iraf_extern/rvsao/Doc/listspec.hlp",
+    "iraf_extern/rvsao/Doc/paspconf.sty",
+    "iraf_extern/rvsao/Doc/pemsao.hlp",
+    "iraf_extern/rvsao/Doc/pix2wl.hlp",
+    "iraf_extern/rvsao/Doc/pxcsao.hlp",
+    "iraf_extern/rvsao/Doc/qplot.hlp",
+    "iraf_extern/rvsao/Doc/qplotc.hlp",
+    "iraf_extern/rvsao/Doc/relearn.hlp",
+    "iraf_extern/rvsao/Doc/rvsao.files",
+    "iraf_extern/rvsao/Doc/skyplot.hlp",
+    "iraf_extern/rvsao/Doc/sumspec.hlp",
+    "iraf_extern/rvsao/Doc/temp",
+    "iraf_extern/rvsao/Doc/velset.hlp",
+    "iraf_extern/rvsao/Doc/wl2pix.hlp",
+    "iraf_extern/rvsao/Doc/wlrange.hlp",
+    "iraf_extern/rvsao/Doc/wlrange.hlp~",
+    "iraf_extern/rvsao/Doc/xcplot.hlp",
+    "iraf_extern/rvsao/Doc/xcsao.files",
+    "iraf_extern/rvsao/Doc/xcsao.hlp",
+    "iraf_extern/rvsao/Doc/xcsao.tex",
+    "iraf_extern/rvsao/Doc/zvel.hlp",
+    "iraf_extern/rvsao/Emsao/Readme",
+    "iraf_extern/rvsao/Emsao/ansum.com",
+    "iraf_extern/rvsao/Emsao/contin.com",
+    "iraf_extern/rvsao/Emsao/contin.h",
+    "iraf_extern/rvsao/Emsao/copyright",
+    "iraf_extern/rvsao/Emsao/emarch.x",
+    "iraf_extern/rvsao/Emsao/emeplot.x",
+    "iraf_extern/rvsao/Emsao/emeplot.x~",
+    "iraf_extern/rvsao/Emsao/emfind.x",
+    "iraf_extern/rvsao/Emsao/emfit.x",
+    "iraf_extern/rvsao/Emsao/emg.com",
+    "iraf_extern/rvsao/Emsao/emguess.x",
+    "iraf_extern/rvsao/Emsao/emhead.x",
+    "iraf_extern/rvsao/Emsao/eminit.x",
+    "iraf_extern/rvsao/Emsao/eminitx.x",
+    "iraf_extern/rvsao/Emsao/emiplot.x",
+    "iraf_extern/rvsao/Emsao/emlfit.x",
+    "iraf_extern/rvsao/Emsao/emlines.com",
+    "iraf_extern/rvsao/Emsao/emmin.x",
+    "iraf_extern/rvsao/Emsao/emp.com",
+    "iraf_extern/rvsao/Emsao/emplot.x",
+    "iraf_extern/rvsao/Emsao/emrslts.x",
+    "iraf_extern/rvsao/Emsao/emsrch.x",
+    "iraf_extern/rvsao/Emsao/emv.com",
+    "iraf_extern/rvsao/Emsao/emv.com~",
+    "iraf_extern/rvsao/Emsao/emv.h",
+    "iraf_extern/rvsao/Emsao/emvfit.x",
+    "iraf_extern/rvsao/Emsao/lineinfo.com",
+    "iraf_extern/rvsao/Emsao/mkpkg",
+    "iraf_extern/rvsao/Emsao/results.com",
+    "iraf_extern/rvsao/Emsao/rvsao.com",
+    "iraf_extern/rvsao/Emsao/rvsao.h",
+    "iraf_extern/rvsao/Emsao/t_emsao.x",
+    "iraf_extern/rvsao/Emsao/t_pemsao.x",
+    "iraf_extern/rvsao/Emsao/temp",
+    "iraf_extern/rvsao/Eqwidth/addmean.x",
+    "iraf_extern/rvsao/Eqwidth/contin.com",
+    "iraf_extern/rvsao/Eqwidth/contin.h",
+    "iraf_extern/rvsao/Eqwidth/emv.com",
+    "iraf_extern/rvsao/Eqwidth/emv.h",
+    "iraf_extern/rvsao/Eqwidth/eqplot.x",
+    "iraf_extern/rvsao/Eqwidth/eqw.com",
+    "iraf_extern/rvsao/Eqwidth/eqw.h",
+    "iraf_extern/rvsao/Eqwidth/eqwplot.x",
+    "iraf_extern/rvsao/Eqwidth/ha.bands",
+    "iraf_extern/rvsao/Eqwidth/hao3.bands",
+    "iraf_extern/rvsao/Eqwidth/mkpkg",
+    "iraf_extern/rvsao/Eqwidth/noise.x",
+    "iraf_extern/rvsao/Eqwidth/results.com",
+    "iraf_extern/rvsao/Eqwidth/rvsao.com",
+    "iraf_extern/rvsao/Eqwidth/rvsao.h",
+    "iraf_extern/rvsao/Eqwidth/t_eqwidth.x",
+    "iraf_extern/rvsao/Eqwidth/t_eqwidth1.x",
+    "iraf_extern/rvsao/INSTALL",
+    "iraf_extern/rvsao/Linespec/contin.com",
+    "iraf_extern/rvsao/Linespec/contin.h",
+    "iraf_extern/rvsao/Linespec/mkgauss.x",
+    "iraf_extern/rvsao/Linespec/mkpkg",
+    "iraf_extern/rvsao/Linespec/rvsao.com",
+    "iraf_extern/rvsao/Linespec/rvsao.h",
+    "iraf_extern/rvsao/Linespec/sum.com",
+    "iraf_extern/rvsao/Linespec/t_linespec.x",
+    "iraf_extern/rvsao/Linespec/wtgauss.x",
+    "iraf_extern/rvsao/NEWS",
+    "iraf_extern/rvsao/Readme",
+    "iraf_extern/rvsao/Scripts/emplot.cl",
+    "iraf_extern/rvsao/Scripts/qplot.cl",
+    "iraf_extern/rvsao/Scripts/qplotc.cl",
+    "iraf_extern/rvsao/Scripts/relearn.cl",
+    "iraf_extern/rvsao/Scripts/rvrelearn.cl",
+    "iraf_extern/rvsao/Scripts/setvel.cl",
+    "iraf_extern/rvsao/Scripts/skyplot.cl",
+    "iraf_extern/rvsao/Scripts/xcplot.cl",
+    "iraf_extern/rvsao/Scripts/zvel.cl",
+    "iraf_extern/rvsao/Shell/Old/bcvcorr",
+    "iraf_extern/rvsao/Shell/Old/emsao",
+    "iraf_extern/rvsao/Shell/Old/linespec",
+    "iraf_extern/rvsao/Shell/Old/sumspec",
+    "iraf_extern/rvsao/Shell/Old/xcsao",
+    "iraf_extern/rvsao/Shell/Readme",
+    "iraf_extern/rvsao/Shell/bcvcorr",
+    "iraf_extern/rvsao/Shell/contpars",
+    "iraf_extern/rvsao/Shell/contsum",
+    "iraf_extern/rvsao/Shell/emplot",
+    "iraf_extern/rvsao/Shell/emsao",
+    "iraf_extern/rvsao/Shell/eqwidth",
+    "iraf_extern/rvsao/Shell/ihelp",
+    "iraf_extern/rvsao/Shell/irafhelp",
+    "iraf_extern/rvsao/Shell/linespec",
+    "iraf_extern/rvsao/Shell/listspec",
+    "iraf_extern/rvsao/Shell/skyplot",
+    "iraf_extern/rvsao/Shell/sumspec",
+    "iraf_extern/rvsao/Shell/xcsao",
+    "iraf_extern/rvsao/Subpix/mkpkg",
+    "iraf_extern/rvsao/Subpix/pixshift.x",
+    "iraf_extern/rvsao/Subpix/t_subpix.x",
+    "iraf_extern/rvsao/Sumspec/addspec.x",
+    "iraf_extern/rvsao/Sumspec/contin.com",
+    "iraf_extern/rvsao/Sumspec/contin.h",
+    "iraf_extern/rvsao/Sumspec/mkpkg",
+    "iraf_extern/rvsao/Sumspec/rvsao.com",
+    "iraf_extern/rvsao/Sumspec/rvsao.h",
+    "iraf_extern/rvsao/Sumspec/sum.com",
+    "iraf_extern/rvsao/Sumspec/t_sumspec.x",
+    "iraf_extern/rvsao/ToDo",
+    "iraf_extern/rvsao/Util/Old/bcv1.x",
+    "iraf_extern/rvsao/Util/Old/funits.h",
+    "iraf_extern/rvsao/Util/Old/funits.x",
+    "iraf_extern/rvsao/Util/Old/icsubcon2.x",
+    "iraf_extern/rvsao/Util/Old/icsubcony.x",
+    "iraf_extern/rvsao/Util/Old/mwcs.h",
+    "iraf_extern/rvsao/Util/Old/shdr.x",
+    "iraf_extern/rvsao/Util/Old/shdr.x~",
+    "iraf_extern/rvsao/Util/Old/shdr0.x",
+    "iraf_extern/rvsao/Util/Old/shdr1.x~",
+    "iraf_extern/rvsao/Util/Old/t_bcvcorr0.x",
+    "iraf_extern/rvsao/Util/Old/t_bcvcorr1.x",
+    "iraf_extern/rvsao/Util/Old/t_sindex.x",
+    "iraf_extern/rvsao/Util/Old/units.h",
+    "iraf_extern/rvsao/Util/Old/units.x",
+    "iraf_extern/rvsao/Util/Old/units0.x",
+    "iraf_extern/rvsao/Util/Readme",
+    "iraf_extern/rvsao/Util/apodize.x",
+    "iraf_extern/rvsao/Util/arc_w2p.x",
+    "iraf_extern/rvsao/Util/bcv.f",
+    "iraf_extern/rvsao/Util/bcvcalc.f",
+    "iraf_extern/rvsao/Util/bcvel.c",
+    "iraf_extern/rvsao/Util/clsimage.x",
+    "iraf_extern/rvsao/Util/compbcv.x",
+    "iraf_extern/rvsao/Util/contin.com",
+    "iraf_extern/rvsao/Util/contin.h",
+    "iraf_extern/rvsao/Util/contpars.x",
+    "iraf_extern/rvsao/Util/contpars2.x",
+    "iraf_extern/rvsao/Util/contsum.x",
+    "iraf_extern/rvsao/Util/contsum1.x",
+    "iraf_extern/rvsao/Util/emv.com",
+    "iraf_extern/rvsao/Util/emv.h",
+    "iraf_extern/rvsao/Util/fill.x",
+    "iraf_extern/rvsao/Util/fourm.x",
+    "iraf_extern/rvsao/Util/getimage.x",
+    "iraf_extern/rvsao/Util/getsky.x",
+    "iraf_extern/rvsao/Util/getspec.x",
+    "iraf_extern/rvsao/Util/gettemp.x",
+    "iraf_extern/rvsao/Util/gsmooth.x",
+    "iraf_extern/rvsao/Util/icsubcon.x",
+    "iraf_extern/rvsao/Util/idbfind.x",
+    "iraf_extern/rvsao/Util/imgpar.x",
+    "iraf_extern/rvsao/Util/invert.x",
+    "iraf_extern/rvsao/Util/jdn.c",
+    "iraf_extern/rvsao/Util/juldate.x",
+    "iraf_extern/rvsao/Util/legendre.x",
+    "iraf_extern/rvsao/Util/loghead.x",
+    "iraf_extern/rvsao/Util/logtime.x",
+    "iraf_extern/rvsao/Util/matinv.x",
+    "iraf_extern/rvsao/Util/median.x",
+    "iraf_extern/rvsao/Util/mkpkg",
+    "iraf_extern/rvsao/Util/oldres.com",
+    "iraf_extern/rvsao/Util/planet.par",
+    "iraf_extern/rvsao/Util/plotspec.x",
+    "iraf_extern/rvsao/Util/plotsum.x",
+    "iraf_extern/rvsao/Util/plotutil.x",
+    "iraf_extern/rvsao/Util/polfit.x",
+    "iraf_extern/rvsao/Util/ranges.x",
+    "iraf_extern/rvsao/Util/rebin.x",
+    "iraf_extern/rvsao/Util/replot.x",
+    "iraf_extern/rvsao/Util/reploty.x",
+    "iraf_extern/rvsao/Util/results.com",
+    "iraf_extern/rvsao/Util/rvmwcs.com",
+    "iraf_extern/rvsao/Util/rvsao.com",
+    "iraf_extern/rvsao/Util/rvsao.h",
+    "iraf_extern/rvsao/Util/smooth.x",
+    "iraf_extern/rvsao/Util/splot.par",
+    "iraf_extern/rvsao/Util/subcon.x",
+    "iraf_extern/rvsao/Util/sum.com",
+    "iraf_extern/rvsao/Util/t_bcvcorr.x",
+    "iraf_extern/rvsao/Util/t_listspec.x",
+    "iraf_extern/rvsao/Util/t_pix2wl.x",
+    "iraf_extern/rvsao/Util/t_velset.x",
+    "iraf_extern/rvsao/Util/t_velshift.x",
+    "iraf_extern/rvsao/Util/t_wl2pix.x",
+    "iraf_extern/rvsao/Util/t_wlrange.x",
+    "iraf_extern/rvsao/Util/test",
+    "iraf_extern/rvsao/Util/vcombine.x",
+    "iraf_extern/rvsao/Util/velcon.x",
+    "iraf_extern/rvsao/Util/velsubs.x",
+    "iraf_extern/rvsao/Util/vhead.x",
+    "iraf_extern/rvsao/Util/wlcon.x",
+    "iraf_extern/rvsao/Util/wlrange.x",
+    "iraf_extern/rvsao/Util/writetemp.x",
+    "iraf_extern/rvsao/Util/zero.x",
+    "iraf_extern/rvsao/Xcsao/.xciplot.x.swp",
+    "iraf_extern/rvsao/Xcsao/Readme",
+    "iraf_extern/rvsao/Xcsao/ansum.com",
+    "iraf_extern/rvsao/Xcsao/aspart.x",
+    "iraf_extern/rvsao/Xcsao/buffers.x",
+    "iraf_extern/rvsao/Xcsao/contin.com",
+    "iraf_extern/rvsao/Xcsao/contin.h",
+    "iraf_extern/rvsao/Xcsao/corr.com",
+    "iraf_extern/rvsao/Xcsao/correlate.x",
+    "iraf_extern/rvsao/Xcsao/earlin.x",
+    "iraf_extern/rvsao/Xcsao/emv.com",
+    "iraf_extern/rvsao/Xcsao/emv.h",
+    "iraf_extern/rvsao/Xcsao/mkpkg",
+    "iraf_extern/rvsao/Xcsao/oldres.com",
+    "iraf_extern/rvsao/Xcsao/pkfitc.x",
+    "iraf_extern/rvsao/Xcsao/pkfitp.x",
+    "iraf_extern/rvsao/Xcsao/pkfitq.x",
+    "iraf_extern/rvsao/Xcsao/pknum.x",
+    "iraf_extern/rvsao/Xcsao/pkwidth.x",
+    "iraf_extern/rvsao/Xcsao/results.com",
+    "iraf_extern/rvsao/Xcsao/rvsao.com",
+    "iraf_extern/rvsao/Xcsao/rvsao.h",
+    "iraf_extern/rvsao/Xcsao/t_pxcsao.x",
+    "iraf_extern/rvsao/Xcsao/t_xcsao.x",
+    "iraf_extern/rvsao/Xcsao/xcarch.x",
+    "iraf_extern/rvsao/Xcsao/xcfile.x",
+    "iraf_extern/rvsao/Xcsao/xcfit.x",
+    "iraf_extern/rvsao/Xcsao/xcfit.x~",
+    "iraf_extern/rvsao/Xcsao/xchead.x",
+    "iraf_extern/rvsao/Xcsao/xciplot.x",
+    "iraf_extern/rvsao/Xcsao/xcmin.x",
+    "iraf_extern/rvsao/Xcsao/xcmin0.x",
+    "iraf_extern/rvsao/Xcsao/xcor.com",
+    "iraf_extern/rvsao/Xcsao/xcorf.com",
+    "iraf_extern/rvsao/Xcsao/xcorfit.x",
+    "iraf_extern/rvsao/Xcsao/xcorlist.x",
+    "iraf_extern/rvsao/Xcsao/xcorplot.x",
+    "iraf_extern/rvsao/Xcsao/xcplot.x",
+    "iraf_extern/rvsao/Xcsao/xcplot0.x",
+    "iraf_extern/rvsao/Xcsao/xcrslts.x",
+    "iraf_extern/rvsao/Xcsao/xcsplot.x",
+    "iraf_extern/rvsao/Xcsao/xcv.h",
+    "iraf_extern/rvsao/Xcsao/xplt.com",
+    "iraf_extern/rvsao/bcvcorr.par",
+    "iraf_extern/rvsao/bin",
+    "iraf_extern/rvsao/bin.linux/librv.a",
+    "iraf_extern/rvsao/bin.linux/x_rvsao.e",
+    "iraf_extern/rvsao/build_log",
+    "iraf_extern/rvsao/conda_build.sh",
+    "iraf_extern/rvsao/contpars.par",
+    "iraf_extern/rvsao/contsum.par",
+    "iraf_extern/rvsao/contsum2.par",
+    "iraf_extern/rvsao/contsum3.par",
+    "iraf_extern/rvsao/contsum4.par",
+    "iraf_extern/rvsao/contsum5.par",
+    "iraf_extern/rvsao/emsao.par",
+    "iraf_extern/rvsao/eqwidth.par",
+    "iraf_extern/rvsao/fasttemp",
+    "iraf_extern/rvsao/help_log",
+    "iraf_extern/rvsao/lib/O5577.dat",
+    "iraf_extern/rvsao/lib/OH8399.dat",
+    "iraf_extern/rvsao/lib/Old/brodie_hanes.bands",
+    "iraf_extern/rvsao/lib/Old/f2.abs.bands",
+    "iraf_extern/rvsao/lib/Old/f2.lisa.bands",
+    "iraf_extern/rvsao/lib/Old/faber_burstein.bands",
+    "iraf_extern/rvsao/lib/Old/sky.bands",
+    "iraf_extern/rvsao/lib/Readme",
+    "iraf_extern/rvsao/lib/ablines.dat",
+    "iraf_extern/rvsao/lib/ansum.com",
+    "iraf_extern/rvsao/lib/apropos.db",
+    "iraf_extern/rvsao/lib/atomic.line.list",
+    "iraf_extern/rvsao/lib/badgal.dat",
+    "iraf_extern/rvsao/lib/badgal0.dat",
+    "iraf_extern/rvsao/lib/badlines.dat",
+    "iraf_extern/rvsao/lib/badlines1.dat",
+    "iraf_extern/rvsao/lib/badlinesg.dat",
+    "iraf_extern/rvsao/lib/badlinesw.dat",
+    "iraf_extern/rvsao/lib/badsky.dat",
+    "iraf_extern/rvsao/lib/badskynao.dat",
+    "iraf_extern/rvsao/lib/badskynao1.dat",
+    "iraf_extern/rvsao/lib/badskynao2.dat",
+    "iraf_extern/rvsao/lib/badskyo.dat",
+    "iraf_extern/rvsao/lib/balmer.dat",
+    "iraf_extern/rvsao/lib/brodie_hanes.bands",
+    "iraf_extern/rvsao/lib/chmgh.line.list",
+    "iraf_extern/rvsao/lib/cn.line.list",
+    "iraf_extern/rvsao/lib/contin.com",
+    "iraf_extern/rvsao/lib/contin.h",
+    "iraf_extern/rvsao/lib/contin2.com",
+    "iraf_extern/rvsao/lib/emcomb-h.dat",
+    "iraf_extern/rvsao/lib/emcomb.dat",
+    "iraf_extern/rvsao/lib/emcomb0.dat",
+    "iraf_extern/rvsao/lib/emcomb2.dat",
+    "iraf_extern/rvsao/lib/emcombnoh.dat",
+    "iraf_extern/rvsao/lib/emcombnoh0.dat",
+    "iraf_extern/rvsao/lib/emhsrch.dat",
+    "iraf_extern/rvsao/lib/emiss.h",
+    "iraf_extern/rvsao/lib/emlines.dat",
+    "iraf_extern/rvsao/lib/emlines0.dat",
+    "iraf_extern/rvsao/lib/emlines2.dat",
+    "iraf_extern/rvsao/lib/emlineshe.dat",
+    "iraf_extern/rvsao/lib/emlineshe2.dat",
+    "iraf_extern/rvsao/lib/emqso.dat",
+    "iraf_extern/rvsao/lib/emqtemp.dat",
+    "iraf_extern/rvsao/lib/emsearch.dat",
+    "iraf_extern/rvsao/lib/emtemp.dat",
+    "iraf_extern/rvsao/lib/emtemp0.dat",
+    "iraf_extern/rvsao/lib/emtemphe.dat",
+    "iraf_extern/rvsao/lib/emtempv.dat",
+    "iraf_extern/rvsao/lib/emv.com",
+    "iraf_extern/rvsao/lib/emv.h",
+    "iraf_extern/rvsao/lib/f2.abs.bands",
+    "iraf_extern/rvsao/lib/f2.lisa.bands",
+    "iraf_extern/rvsao/lib/faber_burstein.bands",
+    "iraf_extern/rvsao/lib/femtemp.dat",
+    "iraf_extern/rvsao/lib/fquot.com",
+    "iraf_extern/rvsao/lib/hectosky.dat",
+    "iraf_extern/rvsao/lib/hectosky1.dat",
+    "iraf_extern/rvsao/lib/helpdb.mip",
+    "iraf_extern/rvsao/lib/helpdb2.mip",
+    "iraf_extern/rvsao/lib/heneartest.dat",
+    "iraf_extern/rvsao/lib/idhenear.dat",
+    "iraf_extern/rvsao/lib/index_table.rtf",
+    "iraf_extern/rvsao/lib/index_table.txt",
+    "iraf_extern/rvsao/lib/jph.bands",
+    "iraf_extern/rvsao/lib/jphactive.bands",
+    "iraf_extern/rvsao/lib/jphtest.bands",
+    "iraf_extern/rvsao/lib/librv.a",
+    "iraf_extern/rvsao/lib/mkosky.dat",
+    "iraf_extern/rvsao/lib/mkosky1.dat",
+    "iraf_extern/rvsao/lib/mkoskyall.dat",
+    "iraf_extern/rvsao/lib/mkoskycomb.dat",
+    "iraf_extern/rvsao/lib/mkoskymoh.dat",
+    "iraf_extern/rvsao/lib/mkpkg.inc",
+    "iraf_extern/rvsao/lib/mmtsky.dat",
+    "iraf_extern/rvsao/lib/noaotharw.dat",
+    "iraf_extern/rvsao/lib/oldres.com",
+    "iraf_extern/rvsao/lib/oldsky.dat",
+    "iraf_extern/rvsao/lib/oldskyall.dat",
+    "iraf_extern/rvsao/lib/pgreen.linelist",
+    "iraf_extern/rvsao/lib/readme.line.list",
+    "iraf_extern/rvsao/lib/redcomp.dat",
+    "iraf_extern/rvsao/lib/results.com",
+    "iraf_extern/rvsao/lib/root.hd",
+    "iraf_extern/rvsao/lib/root2.hd",
+    "iraf_extern/rvsao/lib/rootr2rvsao.hd",
+    "iraf_extern/rvsao/lib/rootrvsao.hd",
+    "iraf_extern/rvsao/lib/rvsao.com",
+    "iraf_extern/rvsao/lib/rvsao.h",
+    "iraf_extern/rvsao/lib/rvsao0.h",
+    "iraf_extern/rvsao/lib/searchO5577.dat",
+    "iraf_extern/rvsao/lib/searchOH8399.dat",
+    "iraf_extern/rvsao/lib/sky.bands",
+    "iraf_extern/rvsao/lib/skycomb.dat",
+    "iraf_extern/rvsao/lib/skycombha.dat",
+    "iraf_extern/rvsao/lib/skylines.dat",
+    "iraf_extern/rvsao/lib/skylinesha.dat",
+    "iraf_extern/rvsao/lib/skynao.dat",
+    "iraf_extern/rvsao/lib/skyolines.dat",
+    "iraf_extern/rvsao/lib/skysearch.dat",
+    "iraf_extern/rvsao/lib/skytemp.dat",
+    "iraf_extern/rvsao/lib/skytempha.dat",
+    "iraf_extern/rvsao/lib/sum.com",
+    "iraf_extern/rvsao/lib/wrcomb.dat",
+    "iraf_extern/rvsao/lib/wrlines.dat",
+    "iraf_extern/rvsao/lib/wrtemp.dat",
+    "iraf_extern/rvsao/lib/xcv.h",
+    "iraf_extern/rvsao/lib/zzsetenv.def",
+    "iraf_extern/rvsao/lib/zzsetenv2.def",
+    "iraf_extern/rvsao/lib/zzsetenv22.def",
+    "iraf_extern/rvsao/linespec.par",
+    "iraf_extern/rvsao/listspec.par",
+    "iraf_extern/rvsao/logfile",
+    "iraf_extern/rvsao/mkpkg",
+    "iraf_extern/rvsao/mkpkg.inc",
+    "iraf_extern/rvsao/numrec_list.txt",
+    "iraf_extern/rvsao/pemsao.par",
+    "iraf_extern/rvsao/pix2wl.par",
+    "iraf_extern/rvsao/pxcsao.par",
+    "iraf_extern/rvsao/r2rvsao.cl",
+    "iraf_extern/rvsao/r2rvsao.hd",
+    "iraf_extern/rvsao/r2rvsao.men",
+    "iraf_extern/rvsao/r2rvsao.msg",
+    "iraf_extern/rvsao/r2rvsao.par",
+    "iraf_extern/rvsao/rtest.cl",
+    "iraf_extern/rvsao/rtest.hd",
+    "iraf_extern/rvsao/rtest.men",
+    "iraf_extern/rvsao/rtest.msg",
+    "iraf_extern/rvsao/rtest.par",
+    "iraf_extern/rvsao/rvsao.cl",
+    "iraf_extern/rvsao/rvsao.hd",
+    "iraf_extern/rvsao/rvsao.men",
+    "iraf_extern/rvsao/rvsao.msg",
+    "iraf_extern/rvsao/rvsao.par",
+    "iraf_extern/rvsao/rvupdate.msg",
+    "iraf_extern/rvsao/spectemps",
+    "iraf_extern/rvsao/sumspec.par",
+    "iraf_extern/rvsao/templates/EA.fits",
+    "iraf_extern/rvsao/templates/Readme",
+    "iraf_extern/rvsao/templates/astartemp.fits",
+    "iraf_extern/rvsao/templates/ax1.fits",
+    "iraf_extern/rvsao/templates/eatemp.fits",
+    "iraf_extern/rvsao/templates/eltemp.fits",
+    "iraf_extern/rvsao/templates/f86btemp.fits",
+    "iraf_extern/rvsao/templates/f86btemp0.fits",
+    "iraf_extern/rvsao/templates/fabtemp97.fits",
+    "iraf_extern/rvsao/templates/fallstars.fits",
+    "iraf_extern/rvsao/templates/femtemp.fits",
+    "iraf_extern/rvsao/templates/femtemp97.fits",
+    "iraf_extern/rvsao/templates/femtemphe.fits",
+    "iraf_extern/rvsao/templates/fglotemp.fits",
+    "iraf_extern/rvsao/templates/fm32temp.fits",
+    "iraf_extern/rvsao/templates/fn4486btemp.fits",
+    "iraf_extern/rvsao/templates/fn5548temp.fits",
+    "iraf_extern/rvsao/templates/fn7331temp.fits",
+    "iraf_extern/rvsao/templates/fs2temp.fits",
+    "iraf_extern/rvsao/templates/fztemp97.fits",
+    "iraf_extern/rvsao/templates/habtemp0.fits",
+    "iraf_extern/rvsao/templates/habtemp90.fits",
+    "iraf_extern/rvsao/templates/hemtemp0.0.fits",
+    "iraf_extern/rvsao/templates/hemtemp0.5.fits",
+    "iraf_extern/rvsao/templates/hemtemp0.fits",
+    "iraf_extern/rvsao/templates/hkabstemp.fits",
+    "iraf_extern/rvsao/templates/m31_a_temp.fits",
+    "iraf_extern/rvsao/templates/m31_f_temp.fits",
+    "iraf_extern/rvsao/templates/m31_k_temp.fits",
+    "iraf_extern/rvsao/templates/mx1.fits",
+    "iraf_extern/rvsao/templates/sdss_qso.fits",
+    "iraf_extern/rvsao/templates/splot.par",
+    "iraf_extern/rvsao/templates/sptemp.fits",
+    "iraf_extern/rvsao/templates/sx1.fits",
+    "iraf_extern/rvsao/templates/ztemp.fits",
+    "iraf_extern/rvsao/ur_extern.pkg",
+    "iraf_extern/rvsao/ur_manifest",
+    "iraf_extern/rvsao/ur_mkpkg_cmd",
+    "iraf_extern/rvsao/ur_mkpkg_patterns",
+    "iraf_extern/rvsao/velset.par",
+    "iraf_extern/rvsao/wl2pix.par",
+    "iraf_extern/rvsao/wlrange.par",
+    "iraf_extern/rvsao/x_rvsao.x",
+    "iraf_extern/rvsao/xcsao.log",
+    "iraf_extern/rvsao/xcsao.par"
+  ],
+  "fn": "iraf.rvsao-2.7.8-2.tar.bz2",
+  "license": "SAO permissive license, Numerical Recipes",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/iraf.rvsao-2.7.8-2",
+    "type": 1
+  },
+  "md5": "0e5934e6dc978fed5cc3715d38fa805b",
+  "name": "iraf.rvsao",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/iraf.rvsao-2.7.8-2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/.iraf.rvsao-post-link.sh",
+        "path_type": "hardlink",
+        "sha256": "e37f1e0824d58387bf005d66ec44d5537891083921c4af5b3a68111ba405fec0",
+        "sha256_in_prefix": "e37f1e0824d58387bf005d66ec44d5537891083921c4af5b3a68111ba405fec0",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "bin/.iraf.rvsao-pre-unlink.sh",
+        "path_type": "hardlink",
+        "sha256": "4204265b61c43f7104197f17410d38b0447def3c443ff6bbe027520bf24aefdf",
+        "sha256_in_prefix": "4204265b61c43f7104197f17410d38b0447def3c443ff6bbe027520bf24aefdf",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "bin/ac_config_iraf_pkg",
+        "path_type": "hardlink",
+        "sha256": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "sha256_in_prefix": "722bc38d80ccd4d006b44748ed8c4b29d53d983c37e4cac46f343674d4099f26",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "bin/ac_update_extern_pkg",
+        "path_type": "hardlink",
+        "sha256": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "sha256_in_prefix": "9342815616648e9752cef956e524df63ce6d85c621875ee118d89999cc5fd05a",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/Readme",
+        "path_type": "hardlink",
+        "sha256": "b1d35ecbfe4c616d0d9dc3af0f85f4ec5fe77e8d81d8d11b60dea528651ba23c",
+        "sha256_in_prefix": "b1d35ecbfe4c616d0d9dc3af0f85f4ec5fe77e8d81d8d11b60dea528651ba23c",
+        "size_in_bytes": 778
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/bcvcorr.hlp",
+        "path_type": "hardlink",
+        "sha256": "c05b355564b516933204f4504cdcad9a275a4998ef067bdfea25a47da8b15232",
+        "sha256_in_prefix": "c05b355564b516933204f4504cdcad9a275a4998ef067bdfea25a47da8b15232",
+        "size_in_bytes": 5294
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/bcvcorr.ps",
+        "path_type": "hardlink",
+        "sha256": "6a1e72efb80c6986690a52da5f5fea0bb78c2529d72120ed69f3e859ce90e406",
+        "sha256_in_prefix": "6a1e72efb80c6986690a52da5f5fea0bb78c2529d72120ed69f3e859ce90e406",
+        "size_in_bytes": 13078
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/contemp.hlp",
+        "path_type": "hardlink",
+        "sha256": "caddf2b90d596c5d42f6e14304c489e1c930e45e5e40852cc5527836463f9d78",
+        "sha256_in_prefix": "caddf2b90d596c5d42f6e14304c489e1c930e45e5e40852cc5527836463f9d78",
+        "size_in_bytes": 1550
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/contpars.hlp",
+        "path_type": "hardlink",
+        "sha256": "4cc3d53d1e66601e8ef449b1f67960464071bfcd4c525ed63b802b7f814c0a9a",
+        "sha256_in_prefix": "4cc3d53d1e66601e8ef449b1f67960464071bfcd4c525ed63b802b7f814c0a9a",
+        "size_in_bytes": 1526
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/contsum.hlp",
+        "path_type": "hardlink",
+        "sha256": "46f66bc1186260466aec40d85589b84af3cbe42d12e0ce565c2a76a76c6a46f1",
+        "sha256_in_prefix": "46f66bc1186260466aec40d85589b84af3cbe42d12e0ce565c2a76a76c6a46f1",
+        "size_in_bytes": 1390
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/emplot.hlp",
+        "path_type": "hardlink",
+        "sha256": "015b0b33678e356d7ed4b2915f240309e11c39859128164c08fe9d19f0233a42",
+        "sha256_in_prefix": "015b0b33678e356d7ed4b2915f240309e11c39859128164c08fe9d19f0233a42",
+        "size_in_bytes": 2209
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/emsao.hlp",
+        "path_type": "hardlink",
+        "sha256": "4a0335d751b12a998fd59e8b774d2495cba6d8748521d5c49e51af1122444f25",
+        "sha256_in_prefix": "4a0335d751b12a998fd59e8b774d2495cba6d8748521d5c49e51af1122444f25",
+        "size_in_bytes": 18118
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/eqwidth.hlp",
+        "path_type": "hardlink",
+        "sha256": "761164725ff819465c2bfa33ea373342a0cf9a9fc879b55a1070fd91bd525694",
+        "sha256_in_prefix": "761164725ff819465c2bfa33ea373342a0cf9a9fc879b55a1070fd91bd525694",
+        "size_in_bytes": 10885
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/hints",
+        "path_type": "hardlink",
+        "sha256": "e0ec3390155eed74a090c67be290436279bd07fab5830cbaa16b9ef8ca2979cd",
+        "sha256_in_prefix": "e0ec3390155eed74a090c67be290436279bd07fab5830cbaa16b9ef8ca2979cd",
+        "size_in_bytes": 495
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/linespec.hlp",
+        "path_type": "hardlink",
+        "sha256": "314a8df91167420ac43b3c2fffec9ab984bc6d9db6076ce21613bba2f4cd74e5",
+        "sha256_in_prefix": "314a8df91167420ac43b3c2fffec9ab984bc6d9db6076ce21613bba2f4cd74e5",
+        "size_in_bytes": 4371
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/listspec.hlp",
+        "path_type": "hardlink",
+        "sha256": "ba8d31962fda923595bfaabae96806d756ff9c6ce76c0abf7b842595ff706999",
+        "sha256_in_prefix": "ba8d31962fda923595bfaabae96806d756ff9c6ce76c0abf7b842595ff706999",
+        "size_in_bytes": 4031
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/paspconf.sty",
+        "path_type": "hardlink",
+        "sha256": "4d8ad8cf772bb3ecfb04178c7a300e3e97b08f309b9c01fcf2b791d7fe058a0e",
+        "sha256_in_prefix": "4d8ad8cf772bb3ecfb04178c7a300e3e97b08f309b9c01fcf2b791d7fe058a0e",
+        "size_in_bytes": 8772
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/pemsao.hlp",
+        "path_type": "hardlink",
+        "sha256": "36d1cbaea7e3bd9933cc1fb27787f6df3a53a72e665fc4ea4482dbf16662fc3d",
+        "sha256_in_prefix": "36d1cbaea7e3bd9933cc1fb27787f6df3a53a72e665fc4ea4482dbf16662fc3d",
+        "size_in_bytes": 19125
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/pix2wl.hlp",
+        "path_type": "hardlink",
+        "sha256": "0c7ddac77f25400631bee794ed5465e10ae7e866c7f654259cde880819c556f0",
+        "sha256_in_prefix": "0c7ddac77f25400631bee794ed5465e10ae7e866c7f654259cde880819c556f0",
+        "size_in_bytes": 2674
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/pxcsao.hlp",
+        "path_type": "hardlink",
+        "sha256": "1cfdb7b19b6b25480abce4412889b37eac33c21b6f386621b45f6dd1cc006590",
+        "sha256_in_prefix": "1cfdb7b19b6b25480abce4412889b37eac33c21b6f386621b45f6dd1cc006590",
+        "size_in_bytes": 27263
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/qplot.hlp",
+        "path_type": "hardlink",
+        "sha256": "33ea3b4214fd48889c21568676970af577e1e13ccc17a86448d7bdedc0af51f3",
+        "sha256_in_prefix": "33ea3b4214fd48889c21568676970af577e1e13ccc17a86448d7bdedc0af51f3",
+        "size_in_bytes": 1636
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/qplotc.hlp",
+        "path_type": "hardlink",
+        "sha256": "22ae05865fa7b32ea76ff0eae34b5f2985825fc5b878bd1495314a0cd51f08e6",
+        "sha256_in_prefix": "22ae05865fa7b32ea76ff0eae34b5f2985825fc5b878bd1495314a0cd51f08e6",
+        "size_in_bytes": 3152
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/relearn.hlp",
+        "path_type": "hardlink",
+        "sha256": "0423624e495e11b5bee6bc58062324826ab8fd591ed232ae56f4ea736471a39c",
+        "sha256_in_prefix": "0423624e495e11b5bee6bc58062324826ab8fd591ed232ae56f4ea736471a39c",
+        "size_in_bytes": 513
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/rvsao.files",
+        "path_type": "hardlink",
+        "sha256": "0d466ba6edf190eb7164a4c070c3545d06fcee285a9c3200b1d273bbb013db0e",
+        "sha256_in_prefix": "0d466ba6edf190eb7164a4c070c3545d06fcee285a9c3200b1d273bbb013db0e",
+        "size_in_bytes": 4028
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/skyplot.hlp",
+        "path_type": "hardlink",
+        "sha256": "46b7ea91d70d7ca02c04ccf85ae2f46e60a818ed76f3b4ac7bd3d7b0b0a3ecd0",
+        "sha256_in_prefix": "46b7ea91d70d7ca02c04ccf85ae2f46e60a818ed76f3b4ac7bd3d7b0b0a3ecd0",
+        "size_in_bytes": 2310
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/sumspec.hlp",
+        "path_type": "hardlink",
+        "sha256": "b8d59fb42749c6ba3a30847c04776e0301efb2746d630312760433d269ba9fd7",
+        "sha256_in_prefix": "b8d59fb42749c6ba3a30847c04776e0301efb2746d630312760433d269ba9fd7",
+        "size_in_bytes": 10974
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/temp",
+        "path_type": "hardlink",
+        "sha256": "840a2b1a09ba36ce1ea3bb3a764307f48e956fedea527a37cad9b987004dd773",
+        "sha256_in_prefix": "840a2b1a09ba36ce1ea3bb3a764307f48e956fedea527a37cad9b987004dd773",
+        "size_in_bytes": 55
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/velset.hlp",
+        "path_type": "hardlink",
+        "sha256": "c03b616921bc19e8f39f5c99da2446d9d7b2ea0ba160ceba7a53bcf7eac74c9f",
+        "sha256_in_prefix": "c03b616921bc19e8f39f5c99da2446d9d7b2ea0ba160ceba7a53bcf7eac74c9f",
+        "size_in_bytes": 2369
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/wl2pix.hlp",
+        "path_type": "hardlink",
+        "sha256": "989bfeed47aac57137f8d6bc773efd2169d4deb54e94e0b1b05592819ab56ca2",
+        "sha256_in_prefix": "989bfeed47aac57137f8d6bc773efd2169d4deb54e94e0b1b05592819ab56ca2",
+        "size_in_bytes": 1900
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/wlrange.hlp",
+        "path_type": "hardlink",
+        "sha256": "3acec09e07218933e7b6253f5dc3e1334803db320ec44689b07d26410983fc5b",
+        "sha256_in_prefix": "3acec09e07218933e7b6253f5dc3e1334803db320ec44689b07d26410983fc5b",
+        "size_in_bytes": 5601
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/wlrange.hlp~",
+        "path_type": "hardlink",
+        "sha256": "b8d59fb42749c6ba3a30847c04776e0301efb2746d630312760433d269ba9fd7",
+        "sha256_in_prefix": "b8d59fb42749c6ba3a30847c04776e0301efb2746d630312760433d269ba9fd7",
+        "size_in_bytes": 10974
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/xcplot.hlp",
+        "path_type": "hardlink",
+        "sha256": "1582ad1e6fd5756b355bee3bb6bcef01a1934f24bb12b8fa4e39a0a420c04d31",
+        "sha256_in_prefix": "1582ad1e6fd5756b355bee3bb6bcef01a1934f24bb12b8fa4e39a0a420c04d31",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/xcsao.files",
+        "path_type": "hardlink",
+        "sha256": "7f08b85e5b2cea62240242480fb58d30810da669c9fa3d41fe31d4672035de87",
+        "sha256_in_prefix": "7f08b85e5b2cea62240242480fb58d30810da669c9fa3d41fe31d4672035de87",
+        "size_in_bytes": 2850
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/xcsao.hlp",
+        "path_type": "hardlink",
+        "sha256": "8f477cb5e41121ce61286a7a32080724c5e0e0afafe294432536e1723c77aa36",
+        "sha256_in_prefix": "8f477cb5e41121ce61286a7a32080724c5e0e0afafe294432536e1723c77aa36",
+        "size_in_bytes": 28566
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/xcsao.tex",
+        "path_type": "hardlink",
+        "sha256": "39020e3ce99be06aac34f9185bbd145ee8f7212716e4a5b19e219ae6c16ea99a",
+        "sha256_in_prefix": "39020e3ce99be06aac34f9185bbd145ee8f7212716e4a5b19e219ae6c16ea99a",
+        "size_in_bytes": 12214
+      },
+      {
+        "_path": "iraf_extern/rvsao/Doc/zvel.hlp",
+        "path_type": "hardlink",
+        "sha256": "718405265d736501bb208c4db54ec5f060cada5dcd85eb359c43e858d66e7c6b",
+        "sha256_in_prefix": "718405265d736501bb208c4db54ec5f060cada5dcd85eb359c43e858d66e7c6b",
+        "size_in_bytes": 1673
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/Readme",
+        "path_type": "hardlink",
+        "sha256": "bc52b0eed6a3ca73ba9d5b805d57e84816cd1a0d7c677f56dc9ce7e0ef8f698b",
+        "sha256_in_prefix": "bc52b0eed6a3ca73ba9d5b805d57e84816cd1a0d7c677f56dc9ce7e0ef8f698b",
+        "size_in_bytes": 1356
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/ansum.com",
+        "path_type": "softlink",
+        "sha256": "29e9f71a97aa2dc7e39b9f6098c1a052c6adb8bdb6f927b78c21dbcf95ed303e",
+        "size_in_bytes": 727
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/contin.com",
+        "path_type": "softlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/contin.h",
+        "path_type": "hardlink",
+        "sha256": "7ac620abadec6a2e8e14aa26561cac7d447e6a15831d7356dbaab4c89a37c423",
+        "sha256_in_prefix": "7ac620abadec6a2e8e14aa26561cac7d447e6a15831d7356dbaab4c89a37c423",
+        "size_in_bytes": 1605
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/copyright",
+        "path_type": "hardlink",
+        "sha256": "0d18b9c44db05c17ad227dab56c3b135b4ae654c3a026476c7a20f0fda5fbd2b",
+        "sha256_in_prefix": "0d18b9c44db05c17ad227dab56c3b135b4ae654c3a026476c7a20f0fda5fbd2b",
+        "size_in_bytes": 325
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emarch.x",
+        "path_type": "hardlink",
+        "sha256": "475ad6efa26cbbc9b291719cfc5839fbb51c3ca38e7140dd50d4a1112994bea2",
+        "sha256_in_prefix": "475ad6efa26cbbc9b291719cfc5839fbb51c3ca38e7140dd50d4a1112994bea2",
+        "size_in_bytes": 5575
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emeplot.x",
+        "path_type": "hardlink",
+        "sha256": "c23ad6e19ea3487255ebad457b782915c3141c1b3337799f12a31db00efb1bb5",
+        "sha256_in_prefix": "c23ad6e19ea3487255ebad457b782915c3141c1b3337799f12a31db00efb1bb5",
+        "size_in_bytes": 8661
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emeplot.x~",
+        "path_type": "hardlink",
+        "sha256": "b4248f0ddfb1928432155ffed07203fd18164d432313ab72b69d081cf0ae558c",
+        "sha256_in_prefix": "b4248f0ddfb1928432155ffed07203fd18164d432313ab72b69d081cf0ae558c",
+        "size_in_bytes": 7614
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emfind.x",
+        "path_type": "hardlink",
+        "sha256": "d4aed56e3f6c35dd9e4e95a43325017f99c25fc5b3c6565619da5466fb1eb9c2",
+        "sha256_in_prefix": "d4aed56e3f6c35dd9e4e95a43325017f99c25fc5b3c6565619da5466fb1eb9c2",
+        "size_in_bytes": 7522
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emfit.x",
+        "path_type": "hardlink",
+        "sha256": "849862739a0d2f33f85b94cf9ef44e575e80590e15cb329227b4874824be3e09",
+        "sha256_in_prefix": "849862739a0d2f33f85b94cf9ef44e575e80590e15cb329227b4874824be3e09",
+        "size_in_bytes": 15637
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emg.com",
+        "path_type": "hardlink",
+        "sha256": "0b6f5414bf0041968ac36ade466668dbc6bd5701aaffd9a38ae6a30846b9c3ed",
+        "sha256_in_prefix": "0b6f5414bf0041968ac36ade466668dbc6bd5701aaffd9a38ae6a30846b9c3ed",
+        "size_in_bytes": 356
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emguess.x",
+        "path_type": "hardlink",
+        "sha256": "7ce2414b53b352b429c968351acc60ec75e3460a322799fb9113fa6df5f16ed8",
+        "sha256_in_prefix": "7ce2414b53b352b429c968351acc60ec75e3460a322799fb9113fa6df5f16ed8",
+        "size_in_bytes": 3852
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emhead.x",
+        "path_type": "hardlink",
+        "sha256": "3a242005fa773cce545e4e58bc6ab6bd04d04eb084a526b470a1f143a39dc656",
+        "sha256_in_prefix": "3a242005fa773cce545e4e58bc6ab6bd04d04eb084a526b470a1f143a39dc656",
+        "size_in_bytes": 7618
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/eminit.x",
+        "path_type": "hardlink",
+        "sha256": "e3b2d0a2ee0e7027f572a3359b6b001376c34eb10c39c7afd628c1cf768cd51c",
+        "sha256_in_prefix": "e3b2d0a2ee0e7027f572a3359b6b001376c34eb10c39c7afd628c1cf768cd51c",
+        "size_in_bytes": 5553
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/eminitx.x",
+        "path_type": "hardlink",
+        "sha256": "fec547833650808c041a91b8487e9122ac48db87e4aa599c2def8253cdebf969",
+        "sha256_in_prefix": "fec547833650808c041a91b8487e9122ac48db87e4aa599c2def8253cdebf969",
+        "size_in_bytes": 4379
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emiplot.x",
+        "path_type": "hardlink",
+        "sha256": "9f1b5c5898b42a174ef795e3318826ea65f22da939c5c280cf2249aa20fe7a70",
+        "sha256_in_prefix": "9f1b5c5898b42a174ef795e3318826ea65f22da939c5c280cf2249aa20fe7a70",
+        "size_in_bytes": 9946
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emlfit.x",
+        "path_type": "hardlink",
+        "sha256": "1988f5d47cb86491aee9db015cad6c07569a4fab7b75c12eb05d08b6cca63892",
+        "sha256_in_prefix": "1988f5d47cb86491aee9db015cad6c07569a4fab7b75c12eb05d08b6cca63892",
+        "size_in_bytes": 12546
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emlines.com",
+        "path_type": "hardlink",
+        "sha256": "0f6d70471cc098199bba4db4f0685d605dbf8508b55cd26504840b253bde4b42",
+        "sha256_in_prefix": "0f6d70471cc098199bba4db4f0685d605dbf8508b55cd26504840b253bde4b42",
+        "size_in_bytes": 1064
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emmin.x",
+        "path_type": "hardlink",
+        "sha256": "2c8ad8dbe7faca245422a265177999008c986e68b3ae9703c2c51426317c3a56",
+        "sha256_in_prefix": "2c8ad8dbe7faca245422a265177999008c986e68b3ae9703c2c51426317c3a56",
+        "size_in_bytes": 12929
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emp.com",
+        "path_type": "hardlink",
+        "sha256": "da5ba9170b0b176f3d6973a6379214c2d76816c62fc96ec9344dcd35c54a735e",
+        "sha256_in_prefix": "da5ba9170b0b176f3d6973a6379214c2d76816c62fc96ec9344dcd35c54a735e",
+        "size_in_bytes": 411
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emplot.x",
+        "path_type": "hardlink",
+        "sha256": "a6557f2da2ed3b3fafeed91be526caa74b1996aa8a6caa38ca166d7475a3ba64",
+        "sha256_in_prefix": "a6557f2da2ed3b3fafeed91be526caa74b1996aa8a6caa38ca166d7475a3ba64",
+        "size_in_bytes": 34445
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emrslts.x",
+        "path_type": "hardlink",
+        "sha256": "7b119c84094af25066a20b6b028cf1f3646ff2b60d092762608857e8e523c773",
+        "sha256_in_prefix": "7b119c84094af25066a20b6b028cf1f3646ff2b60d092762608857e8e523c773",
+        "size_in_bytes": 35909
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emsrch.x",
+        "path_type": "hardlink",
+        "sha256": "5efa949ba01d018eee7cf584ca791ae34c553ab1442da00b7a1d4ca0202cbcaf",
+        "sha256_in_prefix": "5efa949ba01d018eee7cf584ca791ae34c553ab1442da00b7a1d4ca0202cbcaf",
+        "size_in_bytes": 9551
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emv.com",
+        "path_type": "softlink",
+        "sha256": "fbd5931ed65f8e9d6b1b265168d811716d1e5d98d03fac2370ce0bab0a8a8ffb",
+        "size_in_bytes": 4137
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emv.com~",
+        "path_type": "hardlink",
+        "sha256": "2359f5511882cb3ac0849e2806b95a9090f2461a79e19ce63a5c4b5e4937cc54",
+        "sha256_in_prefix": "2359f5511882cb3ac0849e2806b95a9090f2461a79e19ce63a5c4b5e4937cc54",
+        "size_in_bytes": 4292
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emv.h",
+        "path_type": "softlink",
+        "sha256": "ae54201ead567f5dbd42f43ec9291c73cbac5c18526ad78c1b0a8c258b3f21dc",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/emvfit.x",
+        "path_type": "hardlink",
+        "sha256": "b28cddaeb539d62944145b54cf882e0a8b0ffbabb9889614e9845aeb0d2d8ba7",
+        "sha256_in_prefix": "b28cddaeb539d62944145b54cf882e0a8b0ffbabb9889614e9845aeb0d2d8ba7",
+        "size_in_bytes": 9733
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/lineinfo.com",
+        "path_type": "hardlink",
+        "sha256": "0d5f0756eced4af4f73cae524c76f886d379910cd4128ea8617b53d626602314",
+        "sha256_in_prefix": "0d5f0756eced4af4f73cae524c76f886d379910cd4128ea8617b53d626602314",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "fbb1e508b7b410c041c9382503e023a533b477c8ee81522ccaace0ad8ebf56df",
+        "sha256_in_prefix": "fbb1e508b7b410c041c9382503e023a533b477c8ee81522ccaace0ad8ebf56df",
+        "size_in_bytes": 953
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/results.com",
+        "path_type": "softlink",
+        "sha256": "937f751e3ac6e6108dbdedc9b4cc0380b0b6ff7102370a04457013dd009d860c",
+        "size_in_bytes": 2676
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/rvsao.com",
+        "path_type": "softlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/rvsao.h",
+        "path_type": "softlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/t_emsao.x",
+        "path_type": "hardlink",
+        "sha256": "758f07d24b648ef265c4b35eb04df05214844b08e428d57185aab13966f5309f",
+        "sha256_in_prefix": "758f07d24b648ef265c4b35eb04df05214844b08e428d57185aab13966f5309f",
+        "size_in_bytes": 19696
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/t_pemsao.x",
+        "path_type": "hardlink",
+        "sha256": "c45d98108baf7eb23028250805670e95cb77a87e438a17ef551b97aace312062",
+        "sha256_in_prefix": "c45d98108baf7eb23028250805670e95cb77a87e438a17ef551b97aace312062",
+        "size_in_bytes": 18670
+      },
+      {
+        "_path": "iraf_extern/rvsao/Emsao/temp",
+        "path_type": "hardlink",
+        "sha256": "b29aa1226bd1104d37ab4bd19aa305ef94bc020a620450c743c6ffeff460ac7f",
+        "sha256_in_prefix": "b29aa1226bd1104d37ab4bd19aa305ef94bc020a620450c743c6ffeff460ac7f",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/addmean.x",
+        "path_type": "hardlink",
+        "sha256": "0b1771625ace323e0d1b710808a43f77fd0fba62106f43bc0b8588794ac72d06",
+        "sha256_in_prefix": "0b1771625ace323e0d1b710808a43f77fd0fba62106f43bc0b8588794ac72d06",
+        "size_in_bytes": 666
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/contin.com",
+        "path_type": "softlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/contin.h",
+        "path_type": "softlink",
+        "sha256": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/emv.com",
+        "path_type": "softlink",
+        "sha256": "fbd5931ed65f8e9d6b1b265168d811716d1e5d98d03fac2370ce0bab0a8a8ffb",
+        "size_in_bytes": 4137
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/emv.h",
+        "path_type": "softlink",
+        "sha256": "ae54201ead567f5dbd42f43ec9291c73cbac5c18526ad78c1b0a8c258b3f21dc",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/eqplot.x",
+        "path_type": "hardlink",
+        "sha256": "a0b0879124e494857e4e9457e693946c212deb71268263f15c9dd8a641928da8",
+        "sha256_in_prefix": "a0b0879124e494857e4e9457e693946c212deb71268263f15c9dd8a641928da8",
+        "size_in_bytes": 9150
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/eqw.com",
+        "path_type": "hardlink",
+        "sha256": "d820fa613a246d48d03523dd981d2d98117f652a6512b35591cc0bda038ea37d",
+        "sha256_in_prefix": "d820fa613a246d48d03523dd981d2d98117f652a6512b35591cc0bda038ea37d",
+        "size_in_bytes": 1104
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/eqw.h",
+        "path_type": "hardlink",
+        "sha256": "441fe87a9b40fc7e0aa0a4d2c8f53f0b0f33df94d8f23437cfe2da6b9cbaec81",
+        "sha256_in_prefix": "441fe87a9b40fc7e0aa0a4d2c8f53f0b0f33df94d8f23437cfe2da6b9cbaec81",
+        "size_in_bytes": 703
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/eqwplot.x",
+        "path_type": "hardlink",
+        "sha256": "e2ab39dc2566620156e851112031d6843c67335c7d7011873e8d8ee625c1ff38",
+        "sha256_in_prefix": "e2ab39dc2566620156e851112031d6843c67335c7d7011873e8d8ee625c1ff38",
+        "size_in_bytes": 3567
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/ha.bands",
+        "path_type": "hardlink",
+        "sha256": "4bdf5e041b3a9a588958d628e4b72a825096858257eb95034f531b0e848d16b5",
+        "sha256_in_prefix": "4bdf5e041b3a9a588958d628e4b72a825096858257eb95034f531b0e848d16b5",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/hao3.bands",
+        "path_type": "hardlink",
+        "sha256": "b6cae93289618d6d790a099a0b61d48a7b1a9d03b985643f14558dede625a6cc",
+        "sha256_in_prefix": "b6cae93289618d6d790a099a0b61d48a7b1a9d03b985643f14558dede625a6cc",
+        "size_in_bytes": 212
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "2a8bf6ef6a2d46213295a12c60c437faffa264f08772c864149f352448720821",
+        "sha256_in_prefix": "2a8bf6ef6a2d46213295a12c60c437faffa264f08772c864149f352448720821",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/noise.x",
+        "path_type": "hardlink",
+        "sha256": "86bcda1013e03c83c121ebdc0bbfa9c1ecfa2827cd2e4dee1d65dccb3356740b",
+        "sha256_in_prefix": "86bcda1013e03c83c121ebdc0bbfa9c1ecfa2827cd2e4dee1d65dccb3356740b",
+        "size_in_bytes": 458
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/results.com",
+        "path_type": "softlink",
+        "sha256": "937f751e3ac6e6108dbdedc9b4cc0380b0b6ff7102370a04457013dd009d860c",
+        "size_in_bytes": 2676
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/rvsao.com",
+        "path_type": "softlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/rvsao.h",
+        "path_type": "softlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/t_eqwidth.x",
+        "path_type": "hardlink",
+        "sha256": "de10fa953c33289dcd48bb1af4e8b9b5869e82a057d0c1a033a8459b15390683",
+        "sha256_in_prefix": "de10fa953c33289dcd48bb1af4e8b9b5869e82a057d0c1a033a8459b15390683",
+        "size_in_bytes": 44390
+      },
+      {
+        "_path": "iraf_extern/rvsao/Eqwidth/t_eqwidth1.x",
+        "path_type": "hardlink",
+        "sha256": "bb45703bedbe0d1abb454f2de92a967a0bc5804bae8a7f07d2a53a1cd9effb68",
+        "sha256_in_prefix": "bb45703bedbe0d1abb454f2de92a967a0bc5804bae8a7f07d2a53a1cd9effb68",
+        "size_in_bytes": 33004
+      },
+      {
+        "_path": "iraf_extern/rvsao/INSTALL",
+        "path_type": "hardlink",
+        "sha256": "469ad0138b7fb26f37731c54e75fbd752439ea2cd20499d95b118b6fb2f13de0",
+        "sha256_in_prefix": "469ad0138b7fb26f37731c54e75fbd752439ea2cd20499d95b118b6fb2f13de0",
+        "size_in_bytes": 3444
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/contin.com",
+        "path_type": "hardlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "sha256_in_prefix": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/contin.h",
+        "path_type": "softlink",
+        "sha256": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/mkgauss.x",
+        "path_type": "hardlink",
+        "sha256": "475970b3580b4ada5a9d85946a21f4c9a65ac7c24140390f5b52d3515414660e",
+        "sha256_in_prefix": "475970b3580b4ada5a9d85946a21f4c9a65ac7c24140390f5b52d3515414660e",
+        "size_in_bytes": 1778
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "530da98ad4695edc5d3a49015be5d34b8c3faf94d3c304e275efd668552ce550",
+        "sha256_in_prefix": "530da98ad4695edc5d3a49015be5d34b8c3faf94d3c304e275efd668552ce550",
+        "size_in_bytes": 664
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/rvsao.com",
+        "path_type": "softlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/rvsao.h",
+        "path_type": "softlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/sum.com",
+        "path_type": "softlink",
+        "sha256": "0b41ff7b943dbf84c748f664f96819dffbc76560f6d9cfd82f1877e0622cd96f",
+        "size_in_bytes": 1308
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/t_linespec.x",
+        "path_type": "hardlink",
+        "sha256": "d6da1c9cdb6daabd93036c64381b60ce7779d329dd502d7371eed1cd4571b461",
+        "sha256_in_prefix": "d6da1c9cdb6daabd93036c64381b60ce7779d329dd502d7371eed1cd4571b461",
+        "size_in_bytes": 11633
+      },
+      {
+        "_path": "iraf_extern/rvsao/Linespec/wtgauss.x",
+        "path_type": "hardlink",
+        "sha256": "499d1fbeaf4c93ca28cc66316ed0cac6d245f55bc4486b8a90e78f9eab129866",
+        "sha256_in_prefix": "499d1fbeaf4c93ca28cc66316ed0cac6d245f55bc4486b8a90e78f9eab129866",
+        "size_in_bytes": 2644
+      },
+      {
+        "_path": "iraf_extern/rvsao/NEWS",
+        "path_type": "hardlink",
+        "sha256": "dbb558aecebacd17b31946819b1f11909d28081721685e6a859ddd806c69840e",
+        "sha256_in_prefix": "dbb558aecebacd17b31946819b1f11909d28081721685e6a859ddd806c69840e",
+        "size_in_bytes": 31508
+      },
+      {
+        "_path": "iraf_extern/rvsao/Readme",
+        "path_type": "hardlink",
+        "sha256": "01e605eb75bec4eaacb6158330b58c555a8fd9471782a042c3ad1cd75c96bc65",
+        "sha256_in_prefix": "01e605eb75bec4eaacb6158330b58c555a8fd9471782a042c3ad1cd75c96bc65",
+        "size_in_bytes": 8227
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/emplot.cl",
+        "path_type": "hardlink",
+        "sha256": "ff63ee576f7aeb49edf9c4036477aeb0c28a9f4b24062bfdaa9de549d4803ae8",
+        "sha256_in_prefix": "ff63ee576f7aeb49edf9c4036477aeb0c28a9f4b24062bfdaa9de549d4803ae8",
+        "size_in_bytes": 1508
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/qplot.cl",
+        "path_type": "hardlink",
+        "sha256": "80db3e6a7418cbbde786057349fd01acbcf3f9ae517f48b126293a118d552726",
+        "sha256_in_prefix": "80db3e6a7418cbbde786057349fd01acbcf3f9ae517f48b126293a118d552726",
+        "size_in_bytes": 823
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/qplotc.cl",
+        "path_type": "hardlink",
+        "sha256": "8a13b299683d5ac48fb5cba71bcbc1a0c0d085f01a6b9d06d9c99a855b01a38c",
+        "sha256_in_prefix": "8a13b299683d5ac48fb5cba71bcbc1a0c0d085f01a6b9d06d9c99a855b01a38c",
+        "size_in_bytes": 1007
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/relearn.cl",
+        "path_type": "hardlink",
+        "sha256": "d01a43c394de157ce047acd66b15f19cf3fec6acef4b79027913604f93cce84a",
+        "sha256_in_prefix": "d01a43c394de157ce047acd66b15f19cf3fec6acef4b79027913604f93cce84a",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/rvrelearn.cl",
+        "path_type": "hardlink",
+        "sha256": "b9b7815e2e3828bb4fa411ce2d4fdb15602a979b64507638582f56d78ce81f41",
+        "sha256_in_prefix": "b9b7815e2e3828bb4fa411ce2d4fdb15602a979b64507638582f56d78ce81f41",
+        "size_in_bytes": 2171
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/setvel.cl",
+        "path_type": "hardlink",
+        "sha256": "e3d4286e532cc0384f29d0f921d41774655f98432cd797ead5bc67b43ae433df",
+        "sha256_in_prefix": "e3d4286e532cc0384f29d0f921d41774655f98432cd797ead5bc67b43ae433df",
+        "size_in_bytes": 1988
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/skyplot.cl",
+        "path_type": "hardlink",
+        "sha256": "f5a0523cee184f233bb7aa038a42aedb0add0117c6c0d9af3cc294c018c99d79",
+        "sha256_in_prefix": "f5a0523cee184f233bb7aa038a42aedb0add0117c6c0d9af3cc294c018c99d79",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/xcplot.cl",
+        "path_type": "hardlink",
+        "sha256": "2a9729a9291ec1cc8db0d8058f0ff0d9864c0edd9cd9999663ed146ea626aa74",
+        "sha256_in_prefix": "2a9729a9291ec1cc8db0d8058f0ff0d9864c0edd9cd9999663ed146ea626aa74",
+        "size_in_bytes": 919
+      },
+      {
+        "_path": "iraf_extern/rvsao/Scripts/zvel.cl",
+        "path_type": "hardlink",
+        "sha256": "0709d4cdcd4e96c5063ce024fbd4ec0152d23d07b5c77b6c2071a9c365ceb599",
+        "sha256_in_prefix": "0709d4cdcd4e96c5063ce024fbd4ec0152d23d07b5c77b6c2071a9c365ceb599",
+        "size_in_bytes": 3174
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/Old/bcvcorr",
+        "path_type": "hardlink",
+        "sha256": "6d883d09c3cdf9002a06254f54196869f6f6d5cd31caa8997c60802772671ba5",
+        "sha256_in_prefix": "6d883d09c3cdf9002a06254f54196869f6f6d5cd31caa8997c60802772671ba5",
+        "size_in_bytes": 1238
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/Old/emsao",
+        "path_type": "hardlink",
+        "sha256": "c36ad7d1cd82b76747ecd53e75416fcc14f8737169ab6dcef90023e7c976f496",
+        "sha256_in_prefix": "c36ad7d1cd82b76747ecd53e75416fcc14f8737169ab6dcef90023e7c976f496",
+        "size_in_bytes": 1234
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/Old/linespec",
+        "path_type": "hardlink",
+        "sha256": "b641ac14493246b9a92245774662fe1d57267d135fb787a1a492af3a39ed4aa3",
+        "sha256_in_prefix": "b641ac14493246b9a92245774662fe1d57267d135fb787a1a492af3a39ed4aa3",
+        "size_in_bytes": 1240
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/Old/sumspec",
+        "path_type": "hardlink",
+        "sha256": "25121f2e18c4db5530ae22ba36ef5e2a77dab997ab9622fc564f49e5ed08553b",
+        "sha256_in_prefix": "25121f2e18c4db5530ae22ba36ef5e2a77dab997ab9622fc564f49e5ed08553b",
+        "size_in_bytes": 1238
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/Old/xcsao",
+        "path_type": "hardlink",
+        "sha256": "12eec1772b0a69359a23018a542ac5a68b10660b066cd4b93250e029d584063a",
+        "sha256_in_prefix": "12eec1772b0a69359a23018a542ac5a68b10660b066cd4b93250e029d584063a",
+        "size_in_bytes": 1374
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/Readme",
+        "path_type": "hardlink",
+        "sha256": "05b8d7409946c82fb5d1465aabded6850715a99992f78077bf31411441d80a82",
+        "sha256_in_prefix": "05b8d7409946c82fb5d1465aabded6850715a99992f78077bf31411441d80a82",
+        "size_in_bytes": 1675
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/bcvcorr",
+        "path_type": "hardlink",
+        "sha256": "e825b2e8ba715881cb523254324ab500fb300358e08676f6d31a29926732cc7d",
+        "sha256_in_prefix": "e825b2e8ba715881cb523254324ab500fb300358e08676f6d31a29926732cc7d",
+        "size_in_bytes": 2496
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/contpars",
+        "path_type": "hardlink",
+        "sha256": "7470142c56f82177fae781cff496b2bc87ccbb0a73afed152c9c820f5adfbc4e",
+        "sha256_in_prefix": "7470142c56f82177fae781cff496b2bc87ccbb0a73afed152c9c820f5adfbc4e",
+        "size_in_bytes": 2229
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/contsum",
+        "path_type": "hardlink",
+        "sha256": "42cc83594eb4711a56696743ff869effe9fff3392081e134296871c0410d6c1a",
+        "sha256_in_prefix": "42cc83594eb4711a56696743ff869effe9fff3392081e134296871c0410d6c1a",
+        "size_in_bytes": 2210
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/emplot",
+        "path_type": "hardlink",
+        "sha256": "e1c6af4783842f93c1b000050d23ee4cdbb6ad685bc963477b389eb81651979d",
+        "sha256_in_prefix": "e1c6af4783842f93c1b000050d23ee4cdbb6ad685bc963477b389eb81651979d",
+        "size_in_bytes": 2506
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/emsao",
+        "path_type": "hardlink",
+        "sha256": "cb4d9c2108211db0f4136246b6b2142864899ac40ddb25622eea99531fde4a44",
+        "sha256_in_prefix": "cb4d9c2108211db0f4136246b6b2142864899ac40ddb25622eea99531fde4a44",
+        "size_in_bytes": 2460
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/eqwidth",
+        "path_type": "hardlink",
+        "sha256": "f30cddb709da4b84786a4d4d7ae31337be92ec65806d333bcff53e8a388b0dbf",
+        "sha256_in_prefix": "f30cddb709da4b84786a4d4d7ae31337be92ec65806d333bcff53e8a388b0dbf",
+        "size_in_bytes": 2472
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/ihelp",
+        "path_type": "hardlink",
+        "sha256": "fca7d483f20594a792a4a5b8c81a2976588c9c7e64f52bdeeabfca8c734ec9da",
+        "sha256_in_prefix": "fca7d483f20594a792a4a5b8c81a2976588c9c7e64f52bdeeabfca8c734ec9da",
+        "size_in_bytes": 1415
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/irafhelp",
+        "path_type": "hardlink",
+        "sha256": "1e208d42fadffddc67a2076b3e4738e812ec3fbb8b344bcb537ce1c33149eee7",
+        "sha256_in_prefix": "1e208d42fadffddc67a2076b3e4738e812ec3fbb8b344bcb537ce1c33149eee7",
+        "size_in_bytes": 1421
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/linespec",
+        "path_type": "hardlink",
+        "sha256": "b6327145d03b86ff4a0c8395d03a69223c85554b9204a0c8f4943ff69e1e3ac1",
+        "sha256_in_prefix": "b6327145d03b86ff4a0c8395d03a69223c85554b9204a0c8f4943ff69e1e3ac1",
+        "size_in_bytes": 2530
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/listspec",
+        "path_type": "hardlink",
+        "sha256": "63cd3a686ed8fec9cde27cea4b2089478767c14ce8cbbcb3997dc5cb1b861b0b",
+        "sha256_in_prefix": "63cd3a686ed8fec9cde27cea4b2089478767c14ce8cbbcb3997dc5cb1b861b0b",
+        "size_in_bytes": 2525
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/skyplot",
+        "path_type": "hardlink",
+        "sha256": "63e8eb145a9526ae9bd261ac50911925ccbdf844a9695247869447d03ffd0c5e",
+        "sha256_in_prefix": "63e8eb145a9526ae9bd261ac50911925ccbdf844a9695247869447d03ffd0c5e",
+        "size_in_bytes": 2487
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/sumspec",
+        "path_type": "hardlink",
+        "sha256": "5ff9795a4531f93e8bfe6b5499bd318975a1080dc6ad441d6f57085d8d5a4808",
+        "sha256_in_prefix": "5ff9795a4531f93e8bfe6b5499bd318975a1080dc6ad441d6f57085d8d5a4808",
+        "size_in_bytes": 2486
+      },
+      {
+        "_path": "iraf_extern/rvsao/Shell/xcsao",
+        "path_type": "hardlink",
+        "sha256": "d4d5823408c600c24608964be2184e5b90a215457f7ffd00ef47b645a6aec785",
+        "sha256_in_prefix": "d4d5823408c600c24608964be2184e5b90a215457f7ffd00ef47b645a6aec785",
+        "size_in_bytes": 2491
+      },
+      {
+        "_path": "iraf_extern/rvsao/Subpix/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "4f723408e5c0a71e50efb89fe06df81f92ba14a1cad6760155ecb1e0ad35b4eb",
+        "sha256_in_prefix": "4f723408e5c0a71e50efb89fe06df81f92ba14a1cad6760155ecb1e0ad35b4eb",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "iraf_extern/rvsao/Subpix/pixshift.x",
+        "path_type": "hardlink",
+        "sha256": "a71584a08559eb63f3a5f77b532d633225192b3853ac62ba4dce41e18bb0106d",
+        "sha256_in_prefix": "a71584a08559eb63f3a5f77b532d633225192b3853ac62ba4dce41e18bb0106d",
+        "size_in_bytes": 31460
+      },
+      {
+        "_path": "iraf_extern/rvsao/Subpix/t_subpix.x",
+        "path_type": "hardlink",
+        "sha256": "ee8e6d506a8ce720722ca1d0e1cc154c462493ceab7ed03510c535811888c437",
+        "sha256_in_prefix": "ee8e6d506a8ce720722ca1d0e1cc154c462493ceab7ed03510c535811888c437",
+        "size_in_bytes": 9109
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/addspec.x",
+        "path_type": "hardlink",
+        "sha256": "fad4018dfbe55220fc9b3e1d98b6b3b84f4d7bb672b850b97f91def7e4f590bc",
+        "sha256_in_prefix": "fad4018dfbe55220fc9b3e1d98b6b3b84f4d7bb672b850b97f91def7e4f590bc",
+        "size_in_bytes": 39243
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/contin.com",
+        "path_type": "softlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/contin.h",
+        "path_type": "softlink",
+        "sha256": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "994ae9b1494a96fb9047005e545828c4a54c8601ef21aabb8282db7df32e78b1",
+        "sha256_in_prefix": "994ae9b1494a96fb9047005e545828c4a54c8601ef21aabb8282db7df32e78b1",
+        "size_in_bytes": 757
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/rvsao.com",
+        "path_type": "softlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/rvsao.h",
+        "path_type": "softlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/sum.com",
+        "path_type": "softlink",
+        "sha256": "0b41ff7b943dbf84c748f664f96819dffbc76560f6d9cfd82f1877e0622cd96f",
+        "size_in_bytes": 1308
+      },
+      {
+        "_path": "iraf_extern/rvsao/Sumspec/t_sumspec.x",
+        "path_type": "hardlink",
+        "sha256": "c2204a8000e0e28b5ad7a0d51f3fb6e3667037dc051abf64c02ea3fea747d3a9",
+        "sha256_in_prefix": "c2204a8000e0e28b5ad7a0d51f3fb6e3667037dc051abf64c02ea3fea747d3a9",
+        "size_in_bytes": 12969
+      },
+      {
+        "_path": "iraf_extern/rvsao/ToDo",
+        "path_type": "hardlink",
+        "sha256": "b6cd3eaf55115f1ee7624fc45b6563307b6bb3f1b89ac84694582e8bdceb0846",
+        "sha256_in_prefix": "b6cd3eaf55115f1ee7624fc45b6563307b6bb3f1b89ac84694582e8bdceb0846",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/bcv1.x",
+        "path_type": "hardlink",
+        "sha256": "d3d9bd3c47bfe6a3f6ba2868512f2a1187b55d8d82cf56180951186943d58cff",
+        "sha256_in_prefix": "d3d9bd3c47bfe6a3f6ba2868512f2a1187b55d8d82cf56180951186943d58cff",
+        "size_in_bytes": 19959
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/funits.h",
+        "path_type": "hardlink",
+        "sha256": "b2cafa61b0aa9320eae6875bf7ce25cf0ccbe9ab7ad33f0416bf01d5be89ed00",
+        "sha256_in_prefix": "b2cafa61b0aa9320eae6875bf7ce25cf0ccbe9ab7ad33f0416bf01d5be89ed00",
+        "size_in_bytes": 1014
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/funits.x",
+        "path_type": "hardlink",
+        "sha256": "7212a735948cda812f7c46574a6f946894f955473dc4fead37555f66feb4ef9f",
+        "sha256_in_prefix": "7212a735948cda812f7c46574a6f946894f955473dc4fead37555f66feb4ef9f",
+        "size_in_bytes": 9853
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/icsubcon2.x",
+        "path_type": "hardlink",
+        "sha256": "60e056b6d35ec1562efcb5f5162c6079c066424e4712f4e883c608a36a1a92ee",
+        "sha256_in_prefix": "60e056b6d35ec1562efcb5f5162c6079c066424e4712f4e883c608a36a1a92ee",
+        "size_in_bytes": 15404
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/icsubcony.x",
+        "path_type": "hardlink",
+        "sha256": "1592401f54ce0f7f0e24084cf9af1b4b26cc7bb762141d689a514878ce2cfa62",
+        "sha256_in_prefix": "1592401f54ce0f7f0e24084cf9af1b4b26cc7bb762141d689a514878ce2cfa62",
+        "size_in_bytes": 6122
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/mwcs.h",
+        "path_type": "hardlink",
+        "sha256": "ef955ba625e5ffee8872550e05a4f25683cc14592645815258c824c07e9372f9",
+        "sha256_in_prefix": "ef955ba625e5ffee8872550e05a4f25683cc14592645815258c824c07e9372f9",
+        "size_in_bytes": 6977
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/shdr.x",
+        "path_type": "hardlink",
+        "sha256": "116a7ec95f78842230aa7a415d579118abaf6d17c0e9daac259611c4705609b4",
+        "sha256_in_prefix": "116a7ec95f78842230aa7a415d579118abaf6d17c0e9daac259611c4705609b4",
+        "size_in_bytes": 33018
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/shdr.x~",
+        "path_type": "hardlink",
+        "sha256": "732ec66868ad6787d3561d3c98d867905e15a1a1facbabfb5814b470cd87b28c",
+        "sha256_in_prefix": "732ec66868ad6787d3561d3c98d867905e15a1a1facbabfb5814b470cd87b28c",
+        "size_in_bytes": 32929
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/shdr0.x",
+        "path_type": "hardlink",
+        "sha256": "17bf5f721ab06f6b97f2a2dac0167145dbee13ef891e1bdf55b9ae99d14c4dbb",
+        "sha256_in_prefix": "17bf5f721ab06f6b97f2a2dac0167145dbee13ef891e1bdf55b9ae99d14c4dbb",
+        "size_in_bytes": 21536
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/shdr1.x~",
+        "path_type": "hardlink",
+        "sha256": "4325ac918397d9c64f8afc5e6cecfe9649cdc1284703c6a65fa8bf303f1bb782",
+        "sha256_in_prefix": "4325ac918397d9c64f8afc5e6cecfe9649cdc1284703c6a65fa8bf303f1bb782",
+        "size_in_bytes": 32568
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/t_bcvcorr0.x",
+        "path_type": "hardlink",
+        "sha256": "85c746de5a2d7b6bccc54ee18cc8768990576b561ac1c9c16b0fab10ffbc62e4",
+        "sha256_in_prefix": "85c746de5a2d7b6bccc54ee18cc8768990576b561ac1c9c16b0fab10ffbc62e4",
+        "size_in_bytes": 11095
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/t_bcvcorr1.x",
+        "path_type": "hardlink",
+        "sha256": "b0a1c7f7cd65dc2eeaa3d5933ef4ce1d3b7741229f023b084b524b85f90d70c7",
+        "sha256_in_prefix": "b0a1c7f7cd65dc2eeaa3d5933ef4ce1d3b7741229f023b084b524b85f90d70c7",
+        "size_in_bytes": 9246
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/t_sindex.x",
+        "path_type": "hardlink",
+        "sha256": "36cdc8d4b5ccf87b2fa691e15ce96d5a6e977b39c27dd5a97bf112a49023f616",
+        "sha256_in_prefix": "36cdc8d4b5ccf87b2fa691e15ce96d5a6e977b39c27dd5a97bf112a49023f616",
+        "size_in_bytes": 466
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/units.h",
+        "path_type": "hardlink",
+        "sha256": "71214df54602e45660733e74cc715cca4dd2d05f7757f0af4222f2a471a2d66f",
+        "sha256_in_prefix": "71214df54602e45660733e74cc715cca4dd2d05f7757f0af4222f2a471a2d66f",
+        "size_in_bytes": 1557
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/units.x",
+        "path_type": "hardlink",
+        "sha256": "8509d86b412d7fb1a2cdbe8df89691773dc8e893d426c4aff13580e9d605f2d7",
+        "sha256_in_prefix": "8509d86b412d7fb1a2cdbe8df89691773dc8e893d426c4aff13580e9d605f2d7",
+        "size_in_bytes": 10456
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Old/units0.x",
+        "path_type": "hardlink",
+        "sha256": "30b32aeb4c4970210abf5cd77f57a3d92ea81291a3222d64e87e095f31c8a893",
+        "sha256_in_prefix": "30b32aeb4c4970210abf5cd77f57a3d92ea81291a3222d64e87e095f31c8a893",
+        "size_in_bytes": 9889
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/Readme",
+        "path_type": "hardlink",
+        "sha256": "2efb07002e2ea1152c47b229660c38b22a181397d0a79d67bfb5644e5f87d963",
+        "sha256_in_prefix": "2efb07002e2ea1152c47b229660c38b22a181397d0a79d67bfb5644e5f87d963",
+        "size_in_bytes": 1769
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/apodize.x",
+        "path_type": "hardlink",
+        "sha256": "42eae3dd2249a79c06c09d31474ec809309625d41c4c7895fd644a0a71009db0",
+        "sha256_in_prefix": "42eae3dd2249a79c06c09d31474ec809309625d41c4c7895fd644a0a71009db0",
+        "size_in_bytes": 1939
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/arc_w2p.x",
+        "path_type": "hardlink",
+        "sha256": "3d6e7e76ec880aa2226aedd771457cba57bd3eacb4cb6ec5ab62b1717ab67a34",
+        "sha256_in_prefix": "3d6e7e76ec880aa2226aedd771457cba57bd3eacb4cb6ec5ab62b1717ab67a34",
+        "size_in_bytes": 1816
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/bcv.f",
+        "path_type": "hardlink",
+        "sha256": "f006da590a89b9acdfd55f6c021bb2f419479c4301459715a3020b5ac742b151",
+        "sha256_in_prefix": "f006da590a89b9acdfd55f6c021bb2f419479c4301459715a3020b5ac742b151",
+        "size_in_bytes": 21014
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/bcvcalc.f",
+        "path_type": "hardlink",
+        "sha256": "cdc07efc3a4dc8053e92b5b7aa99fa85d8fffcb64d8548e4a32dbaf1061dc232",
+        "sha256_in_prefix": "cdc07efc3a4dc8053e92b5b7aa99fa85d8fffcb64d8548e4a32dbaf1061dc232",
+        "size_in_bytes": 3465
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/bcvel.c",
+        "path_type": "hardlink",
+        "sha256": "17ce2f48675990f954d92907be604e879b24565155acd69c639a497b1fa2995e",
+        "sha256_in_prefix": "17ce2f48675990f954d92907be604e879b24565155acd69c639a497b1fa2995e",
+        "size_in_bytes": 7095
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/clsimage.x",
+        "path_type": "hardlink",
+        "sha256": "1a6533fb2646e1315610aea1e1e6af34beb3d9e4b381715ab5579a12254502fc",
+        "sha256_in_prefix": "1a6533fb2646e1315610aea1e1e6af34beb3d9e4b381715ab5579a12254502fc",
+        "size_in_bytes": 937
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/compbcv.x",
+        "path_type": "hardlink",
+        "sha256": "048e29b76c030e1d77faf4e70d62934c0e1743de19ff1ab0eae9f209dd8609ce",
+        "sha256_in_prefix": "048e29b76c030e1d77faf4e70d62934c0e1743de19ff1ab0eae9f209dd8609ce",
+        "size_in_bytes": 4793
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/contin.com",
+        "path_type": "softlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/contin.h",
+        "path_type": "softlink",
+        "sha256": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/contpars.x",
+        "path_type": "hardlink",
+        "sha256": "374ad8ebc0cdc9afc672c9671e5247f22316e8aa81aea7cc5043e0063c80db4c",
+        "sha256_in_prefix": "374ad8ebc0cdc9afc672c9671e5247f22316e8aa81aea7cc5043e0063c80db4c",
+        "size_in_bytes": 10866
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/contpars2.x",
+        "path_type": "hardlink",
+        "sha256": "932d6fe8f094fb11f8037224d58540c9f451d099823ee8141ba198ec38615be0",
+        "sha256_in_prefix": "932d6fe8f094fb11f8037224d58540c9f451d099823ee8141ba198ec38615be0",
+        "size_in_bytes": 11678
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/contsum.x",
+        "path_type": "hardlink",
+        "sha256": "7944c56a1d218d9cd7bd2179fa0b3391889d1d45a93992df2481064d7e603a2b",
+        "sha256_in_prefix": "7944c56a1d218d9cd7bd2179fa0b3391889d1d45a93992df2481064d7e603a2b",
+        "size_in_bytes": 3593
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/contsum1.x",
+        "path_type": "hardlink",
+        "sha256": "c51814634c893d6f57f7fce6e1fa53e5a0984f65e61922a685a34b7637460ba6",
+        "sha256_in_prefix": "c51814634c893d6f57f7fce6e1fa53e5a0984f65e61922a685a34b7637460ba6",
+        "size_in_bytes": 4899
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/emv.com",
+        "path_type": "softlink",
+        "sha256": "fbd5931ed65f8e9d6b1b265168d811716d1e5d98d03fac2370ce0bab0a8a8ffb",
+        "size_in_bytes": 4137
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/emv.h",
+        "path_type": "softlink",
+        "sha256": "ae54201ead567f5dbd42f43ec9291c73cbac5c18526ad78c1b0a8c258b3f21dc",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/fill.x",
+        "path_type": "hardlink",
+        "sha256": "fe7b0349964297365a5e596b2035977a1048a1f4a068222cea43cc911e2f6f60",
+        "sha256_in_prefix": "fe7b0349964297365a5e596b2035977a1048a1f4a068222cea43cc911e2f6f60",
+        "size_in_bytes": 5869
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/fourm.x",
+        "path_type": "hardlink",
+        "sha256": "d39043925bfe5f4c16c53681acd98ef18f7aeaf5d68e4075dfa99a4f1589289b",
+        "sha256_in_prefix": "d39043925bfe5f4c16c53681acd98ef18f7aeaf5d68e4075dfa99a4f1589289b",
+        "size_in_bytes": 405
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/getimage.x",
+        "path_type": "hardlink",
+        "sha256": "ae5635a09511e0f589a0272d2f5b9463b7cc0e926d96be0a62fbc859beb5f235",
+        "sha256_in_prefix": "ae5635a09511e0f589a0272d2f5b9463b7cc0e926d96be0a62fbc859beb5f235",
+        "size_in_bytes": 14536
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/getsky.x",
+        "path_type": "hardlink",
+        "sha256": "dab0ca33bd50f0dec45d513e1fe18b75e5bb4f05258206d26d3c7ac3a9a68974",
+        "sha256_in_prefix": "dab0ca33bd50f0dec45d513e1fe18b75e5bb4f05258206d26d3c7ac3a9a68974",
+        "size_in_bytes": 2442
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/getspec.x",
+        "path_type": "hardlink",
+        "sha256": "405f402158a8903df5b1cd82491554cc2a7a32e549f813877c1108a7c5512a51",
+        "sha256_in_prefix": "405f402158a8903df5b1cd82491554cc2a7a32e549f813877c1108a7c5512a51",
+        "size_in_bytes": 10390
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/gettemp.x",
+        "path_type": "hardlink",
+        "sha256": "b0233f0f2988455b76d99a0224441c4883a754210da9826803827f2bfdf3c655",
+        "sha256_in_prefix": "b0233f0f2988455b76d99a0224441c4883a754210da9826803827f2bfdf3c655",
+        "size_in_bytes": 6957
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/gsmooth.x",
+        "path_type": "hardlink",
+        "sha256": "6ebd11b358ba241cc80c44743b35cd2f0138e202f51190edf85824592afe5c3f",
+        "sha256_in_prefix": "6ebd11b358ba241cc80c44743b35cd2f0138e202f51190edf85824592afe5c3f",
+        "size_in_bytes": 2205
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/icsubcon.x",
+        "path_type": "hardlink",
+        "sha256": "6c96eb2a23669ffaa0e28621603eb5a28d737dc12103edc1a8d754a02a4e708b",
+        "sha256_in_prefix": "6c96eb2a23669ffaa0e28621603eb5a28d737dc12103edc1a8d754a02a4e708b",
+        "size_in_bytes": 15222
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/idbfind.x",
+        "path_type": "hardlink",
+        "sha256": "e99027c9c904b861b7d665f20ce594b9fa33935071c646646ccfb5cc1dba81fd",
+        "sha256_in_prefix": "e99027c9c904b861b7d665f20ce594b9fa33935071c646646ccfb5cc1dba81fd",
+        "size_in_bytes": 3644
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/imgpar.x",
+        "path_type": "hardlink",
+        "sha256": "1a4895c3b0a4165ba7e8889b94a6f7830ae19630eaea493ed7980b49f8c994e8",
+        "sha256_in_prefix": "1a4895c3b0a4165ba7e8889b94a6f7830ae19630eaea493ed7980b49f8c994e8",
+        "size_in_bytes": 11348
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/invert.x",
+        "path_type": "hardlink",
+        "sha256": "e9009283f50e83883c1b38fa084099642d52ac09858b041f9f6b93299bf1807a",
+        "sha256_in_prefix": "e9009283f50e83883c1b38fa084099642d52ac09858b041f9f6b93299bf1807a",
+        "size_in_bytes": 2668
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/jdn.c",
+        "path_type": "hardlink",
+        "sha256": "485fd1ac417feb5df62d7e1cef366a1a514d0169f63766c6387fe908868211f0",
+        "sha256_in_prefix": "485fd1ac417feb5df62d7e1cef366a1a514d0169f63766c6387fe908868211f0",
+        "size_in_bytes": 9390
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/juldate.x",
+        "path_type": "hardlink",
+        "sha256": "3a5c927579af806756142720f7c236304dc9db0212495b4d8e25de374d8a607d",
+        "sha256_in_prefix": "3a5c927579af806756142720f7c236304dc9db0212495b4d8e25de374d8a607d",
+        "size_in_bytes": 8499
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/legendre.x",
+        "path_type": "hardlink",
+        "sha256": "390036067c2437e3a12641fbde41df7b2b12ede80d2006982a99ca362abea57a",
+        "sha256_in_prefix": "390036067c2437e3a12641fbde41df7b2b12ede80d2006982a99ca362abea57a",
+        "size_in_bytes": 4269
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/loghead.x",
+        "path_type": "hardlink",
+        "sha256": "53270c6876d68993c2e85e5158b665930b93610d80be393607f600acd77dbdc6",
+        "sha256_in_prefix": "53270c6876d68993c2e85e5158b665930b93610d80be393607f600acd77dbdc6",
+        "size_in_bytes": 1274
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/logtime.x",
+        "path_type": "hardlink",
+        "sha256": "90e99fd357c24a4b08c4696c367f0e792828fc7f7148465c7b4dfe34c3a697e6",
+        "sha256_in_prefix": "90e99fd357c24a4b08c4696c367f0e792828fc7f7148465c7b4dfe34c3a697e6",
+        "size_in_bytes": 1019
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/matinv.x",
+        "path_type": "hardlink",
+        "sha256": "0ecd3a4ed5044dd3bcc21b31404fdce7afc39f85dc918b742edd57f3d06dd53a",
+        "sha256_in_prefix": "0ecd3a4ed5044dd3bcc21b31404fdce7afc39f85dc918b742edd57f3d06dd53a",
+        "size_in_bytes": 1934
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/median.x",
+        "path_type": "hardlink",
+        "sha256": "8d2acd95e9de698692c96349338bf3a994dc34e5f4a9dad62e9497d037b5184e",
+        "sha256_in_prefix": "8d2acd95e9de698692c96349338bf3a994dc34e5f4a9dad62e9497d037b5184e",
+        "size_in_bytes": 1155
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "ae1d95dc4404040a007b6a98203caa7b40ef379305b77757975834a3e9aeecd3",
+        "sha256_in_prefix": "ae1d95dc4404040a007b6a98203caa7b40ef379305b77757975834a3e9aeecd3",
+        "size_in_bytes": 2242
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/oldres.com",
+        "path_type": "softlink",
+        "sha256": "06278e0a3073bba351742c80b44d2e05e86e53151d1d80ab53605103d0424324",
+        "size_in_bytes": 328
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/planet.par",
+        "path_type": "hardlink",
+        "sha256": "98b3525c9e02519cf6ef2f6f5ee29c849ccf493a866d801f94b749722aa5154b",
+        "sha256_in_prefix": "98b3525c9e02519cf6ef2f6f5ee29c849ccf493a866d801f94b749722aa5154b",
+        "size_in_bytes": 1433
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/plotspec.x",
+        "path_type": "hardlink",
+        "sha256": "d032d54ce915406b9901ccd8cbb90509470256b1d4848d1492c9b1bd086d560c",
+        "sha256_in_prefix": "d032d54ce915406b9901ccd8cbb90509470256b1d4848d1492c9b1bd086d560c",
+        "size_in_bytes": 11872
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/plotsum.x",
+        "path_type": "hardlink",
+        "sha256": "66c29cefa24fdd3ea60bc74117fb46d352598eac0a7c5fdc8e232e80d594acd4",
+        "sha256_in_prefix": "66c29cefa24fdd3ea60bc74117fb46d352598eac0a7c5fdc8e232e80d594acd4",
+        "size_in_bytes": 10596
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/plotutil.x",
+        "path_type": "hardlink",
+        "sha256": "d8f7b972ea3878b1dc2af02f1b994fbeaa45bb1b3017ff492d22d5e8f3615c93",
+        "sha256_in_prefix": "d8f7b972ea3878b1dc2af02f1b994fbeaa45bb1b3017ff492d22d5e8f3615c93",
+        "size_in_bytes": 2363
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/polfit.x",
+        "path_type": "hardlink",
+        "sha256": "140c4a0b1775389bbdce2f3bde72d5bfd5439aa8e8e9eaa7457df27489051eb6",
+        "sha256_in_prefix": "140c4a0b1775389bbdce2f3bde72d5bfd5439aa8e8e9eaa7457df27489051eb6",
+        "size_in_bytes": 2807
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/ranges.x",
+        "path_type": "hardlink",
+        "sha256": "2d26aee9886ed56e35d5351803344730480a92b97ea8afb0a9e575813da1416e",
+        "sha256_in_prefix": "2d26aee9886ed56e35d5351803344730480a92b97ea8afb0a9e575813da1416e",
+        "size_in_bytes": 7154
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/rebin.x",
+        "path_type": "hardlink",
+        "sha256": "bcd3de66bbc55213b6ab693ab2b261984332facc63ec84b774c738a2f650a9cd",
+        "sha256_in_prefix": "bcd3de66bbc55213b6ab693ab2b261984332facc63ec84b774c738a2f650a9cd",
+        "size_in_bytes": 9513
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/replot.x",
+        "path_type": "hardlink",
+        "sha256": "6cd54ab0dd8a14cdab287ced36dfc2a5fba2816ef4bbde9c662f2430ff8f45e8",
+        "sha256_in_prefix": "6cd54ab0dd8a14cdab287ced36dfc2a5fba2816ef4bbde9c662f2430ff8f45e8",
+        "size_in_bytes": 2669
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/reploty.x",
+        "path_type": "hardlink",
+        "sha256": "7ad4d8abbe966afc432cb551feb46c8d8135c63815590b5b37fe1ce4654c1987",
+        "sha256_in_prefix": "7ad4d8abbe966afc432cb551feb46c8d8135c63815590b5b37fe1ce4654c1987",
+        "size_in_bytes": 1233
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/results.com",
+        "path_type": "softlink",
+        "sha256": "937f751e3ac6e6108dbdedc9b4cc0380b0b6ff7102370a04457013dd009d860c",
+        "size_in_bytes": 2676
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/rvmwcs.com",
+        "path_type": "hardlink",
+        "sha256": "3066cb1a6e0be0e90aff88361479a60bc21e2afce00cf21aa80e89ecf20bcda2",
+        "sha256_in_prefix": "3066cb1a6e0be0e90aff88361479a60bc21e2afce00cf21aa80e89ecf20bcda2",
+        "size_in_bytes": 329
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/rvsao.com",
+        "path_type": "softlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/rvsao.h",
+        "path_type": "softlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/smooth.x",
+        "path_type": "hardlink",
+        "sha256": "e6c9026e7c83a8b5095f3659f19d63b556b7363b22e74e5b9eccbd54bdd5aede",
+        "sha256_in_prefix": "e6c9026e7c83a8b5095f3659f19d63b556b7363b22e74e5b9eccbd54bdd5aede",
+        "size_in_bytes": 1047
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/splot.par",
+        "path_type": "hardlink",
+        "sha256": "17c0f7b1aae3da114a0b0388a34ecb146a21515136a78e7c31f8ec857e79b515",
+        "sha256_in_prefix": "17c0f7b1aae3da114a0b0388a34ecb146a21515136a78e7c31f8ec857e79b515",
+        "size_in_bytes": 3870
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/subcon.x",
+        "path_type": "hardlink",
+        "sha256": "792ff33fd26f65b796cca189d7f246467c401be9ee14733a1f35a8a1b53de205",
+        "sha256_in_prefix": "792ff33fd26f65b796cca189d7f246467c401be9ee14733a1f35a8a1b53de205",
+        "size_in_bytes": 1736
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/sum.com",
+        "path_type": "softlink",
+        "sha256": "0b41ff7b943dbf84c748f664f96819dffbc76560f6d9cfd82f1877e0622cd96f",
+        "size_in_bytes": 1308
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_bcvcorr.x",
+        "path_type": "hardlink",
+        "sha256": "183f671deadae978c50654db19939d40e0408e23ca3c0636191be6695abc0494",
+        "sha256_in_prefix": "183f671deadae978c50654db19939d40e0408e23ca3c0636191be6695abc0494",
+        "size_in_bytes": 27106
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_listspec.x",
+        "path_type": "hardlink",
+        "sha256": "2e52f73043f1c6b9972aebe8e9973adc5b7aee4b590f43546080f189a09ed849",
+        "sha256_in_prefix": "2e52f73043f1c6b9972aebe8e9973adc5b7aee4b590f43546080f189a09ed849",
+        "size_in_bytes": 11484
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_pix2wl.x",
+        "path_type": "hardlink",
+        "sha256": "83f95edb744c78626ffadaaa67961946377a1f5e3ca7efcbd43a20305981a68e",
+        "sha256_in_prefix": "83f95edb744c78626ffadaaa67961946377a1f5e3ca7efcbd43a20305981a68e",
+        "size_in_bytes": 3369
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_velset.x",
+        "path_type": "hardlink",
+        "sha256": "cf75c181e01971dade505129cf2f925df41f666c14899f859500799cdd4a32bc",
+        "sha256_in_prefix": "cf75c181e01971dade505129cf2f925df41f666c14899f859500799cdd4a32bc",
+        "size_in_bytes": 8313
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_velshift.x",
+        "path_type": "hardlink",
+        "sha256": "522ebfa14f3a664154f2a931fa99413bdce797f8ebf26ec7176ea6219c7888e2",
+        "sha256_in_prefix": "522ebfa14f3a664154f2a931fa99413bdce797f8ebf26ec7176ea6219c7888e2",
+        "size_in_bytes": 15928
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_wl2pix.x",
+        "path_type": "hardlink",
+        "sha256": "0cce165af8e07e6d9850ff13d2a58d1acc14a5e37d90b9dcd196d7ecb99abcef",
+        "sha256_in_prefix": "0cce165af8e07e6d9850ff13d2a58d1acc14a5e37d90b9dcd196d7ecb99abcef",
+        "size_in_bytes": 2513
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/t_wlrange.x",
+        "path_type": "hardlink",
+        "sha256": "93485e447f3537ff1881f33b424480dde7d0884238695cdc9c6f0dc1083102ca",
+        "sha256_in_prefix": "93485e447f3537ff1881f33b424480dde7d0884238695cdc9c6f0dc1083102ca",
+        "size_in_bytes": 2229
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/test",
+        "path_type": "hardlink",
+        "sha256": "444ee5968dbf63a599ffa7bf6b45e53f6c4a3f52eacf86227ca4dd5ae17baf77",
+        "sha256_in_prefix": "444ee5968dbf63a599ffa7bf6b45e53f6c4a3f52eacf86227ca4dd5ae17baf77",
+        "size_in_bytes": 2515
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/vcombine.x",
+        "path_type": "hardlink",
+        "sha256": "f07f0ab7273ede590ab6015ff34cd87242ed90f6b8bbb82f49003edd1da066ba",
+        "sha256_in_prefix": "f07f0ab7273ede590ab6015ff34cd87242ed90f6b8bbb82f49003edd1da066ba",
+        "size_in_bytes": 4072
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/velcon.x",
+        "path_type": "hardlink",
+        "sha256": "04d58fea1a22ed8e491f93f0e6bf70c3f05cebb7e0f444731bf26358d785951b",
+        "sha256_in_prefix": "04d58fea1a22ed8e491f93f0e6bf70c3f05cebb7e0f444731bf26358d785951b",
+        "size_in_bytes": 1215
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/velsubs.x",
+        "path_type": "hardlink",
+        "sha256": "6922babe62607f560d243b6c13171d2b141941b496b72c0661a63100d9a101b0",
+        "sha256_in_prefix": "6922babe62607f560d243b6c13171d2b141941b496b72c0661a63100d9a101b0",
+        "size_in_bytes": 7611
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/vhead.x",
+        "path_type": "hardlink",
+        "sha256": "fa40e7aa5851e9dbdadb62b3fdca3b0ff4b39bbf8306e8d282fc36df53f28ccb",
+        "sha256_in_prefix": "fa40e7aa5851e9dbdadb62b3fdca3b0ff4b39bbf8306e8d282fc36df53f28ccb",
+        "size_in_bytes": 11952
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/wlcon.x",
+        "path_type": "hardlink",
+        "sha256": "a15833253e707dd89985658c2d1125599d46c6935a98d312b8d222e5ac179504",
+        "sha256_in_prefix": "a15833253e707dd89985658c2d1125599d46c6935a98d312b8d222e5ac179504",
+        "size_in_bytes": 2939
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/wlrange.x",
+        "path_type": "hardlink",
+        "sha256": "7b8d1668c6c329d0b5b81c239cfb8171f5c5ff142789c864c1a3df7e3dc59367",
+        "sha256_in_prefix": "7b8d1668c6c329d0b5b81c239cfb8171f5c5ff142789c864c1a3df7e3dc59367",
+        "size_in_bytes": 7720
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/writetemp.x",
+        "path_type": "hardlink",
+        "sha256": "c16f4f0f2f5ab70e24407da5dfd7d8a1636f10203d9652d09db1a13d19d1e470",
+        "sha256_in_prefix": "c16f4f0f2f5ab70e24407da5dfd7d8a1636f10203d9652d09db1a13d19d1e470",
+        "size_in_bytes": 8306
+      },
+      {
+        "_path": "iraf_extern/rvsao/Util/zero.x",
+        "path_type": "hardlink",
+        "sha256": "f8bcdb44d4791ddd049ce353a46f988618153670588d43270901119fe2f13b2f",
+        "sha256_in_prefix": "f8bcdb44d4791ddd049ce353a46f988618153670588d43270901119fe2f13b2f",
+        "size_in_bytes": 4043
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/.xciplot.x.swp",
+        "path_type": "hardlink",
+        "sha256": "dae3f001f13b11fd9a76de5767deb97ebc679c4d5da37b3acd4a5e6d71169ebc",
+        "sha256_in_prefix": "dae3f001f13b11fd9a76de5767deb97ebc679c4d5da37b3acd4a5e6d71169ebc",
+        "size_in_bytes": 20480
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/Readme",
+        "path_type": "hardlink",
+        "sha256": "7f4abfd152175039fd51ce50d9486b05560c86203f9559091ba594f5eb4ad2cf",
+        "sha256_in_prefix": "7f4abfd152175039fd51ce50d9486b05560c86203f9559091ba594f5eb4ad2cf",
+        "size_in_bytes": 1367
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/ansum.com",
+        "path_type": "softlink",
+        "sha256": "29e9f71a97aa2dc7e39b9f6098c1a052c6adb8bdb6f927b78c21dbcf95ed303e",
+        "size_in_bytes": 727
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/aspart.x",
+        "path_type": "hardlink",
+        "sha256": "aab56cc7ccb4d8ecbad254f09ef97846fff8e77bda64211fd7940db436162d8b",
+        "sha256_in_prefix": "aab56cc7ccb4d8ecbad254f09ef97846fff8e77bda64211fd7940db436162d8b",
+        "size_in_bytes": 1867
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/buffers.x",
+        "path_type": "hardlink",
+        "sha256": "7692b0fef40f520f72d6eda3ee9939421083fc5ab1653fea254258752ba2c14f",
+        "sha256_in_prefix": "7692b0fef40f520f72d6eda3ee9939421083fc5ab1653fea254258752ba2c14f",
+        "size_in_bytes": 1488
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/contin.com",
+        "path_type": "softlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/contin.h",
+        "path_type": "softlink",
+        "sha256": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/corr.com",
+        "path_type": "hardlink",
+        "sha256": "16ec12120fca7b16c68d2a6b20bdd17c2c153577f5dfec3a7f84aa7b75246995",
+        "sha256_in_prefix": "16ec12120fca7b16c68d2a6b20bdd17c2c153577f5dfec3a7f84aa7b75246995",
+        "size_in_bytes": 939
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/correlate.x",
+        "path_type": "hardlink",
+        "sha256": "5c141a447584994da662b9a62ca2eaeff3c6747483b1a8bf64653fdbc3cf8f21",
+        "sha256_in_prefix": "5c141a447584994da662b9a62ca2eaeff3c6747483b1a8bf64653fdbc3cf8f21",
+        "size_in_bytes": 7770
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/earlin.x",
+        "path_type": "hardlink",
+        "sha256": "274b62a777e5e160b5f5215441ead13d2fa0f1c45f8dd791067534effaee7716",
+        "sha256_in_prefix": "274b62a777e5e160b5f5215441ead13d2fa0f1c45f8dd791067534effaee7716",
+        "size_in_bytes": 4552
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/emv.com",
+        "path_type": "softlink",
+        "sha256": "fbd5931ed65f8e9d6b1b265168d811716d1e5d98d03fac2370ce0bab0a8a8ffb",
+        "size_in_bytes": 4137
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/emv.h",
+        "path_type": "softlink",
+        "sha256": "ae54201ead567f5dbd42f43ec9291c73cbac5c18526ad78c1b0a8c258b3f21dc",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "9f578ee11a8402db15bee29b3cf6f2bd30f1b38783bfc027d0882c4bbd30cd28",
+        "sha256_in_prefix": "9f578ee11a8402db15bee29b3cf6f2bd30f1b38783bfc027d0882c4bbd30cd28",
+        "size_in_bytes": 1172
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/oldres.com",
+        "path_type": "softlink",
+        "sha256": "06278e0a3073bba351742c80b44d2e05e86e53151d1d80ab53605103d0424324",
+        "size_in_bytes": 328
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/pkfitc.x",
+        "path_type": "hardlink",
+        "sha256": "c3fa6211a1198f1133be83c00fe62307b8fb46098950b8d809be6cd961139f0e",
+        "sha256_in_prefix": "c3fa6211a1198f1133be83c00fe62307b8fb46098950b8d809be6cd961139f0e",
+        "size_in_bytes": 4261
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/pkfitp.x",
+        "path_type": "hardlink",
+        "sha256": "787196df416e7834b69ce872e86588ecc7124fb972d526287a51765e6bbdb71d",
+        "sha256_in_prefix": "787196df416e7834b69ce872e86588ecc7124fb972d526287a51765e6bbdb71d",
+        "size_in_bytes": 4786
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/pkfitq.x",
+        "path_type": "hardlink",
+        "sha256": "d2f9cd90131acf06cee40cd65b074ab24cd5bd8bd75b8d6a149130bcdf7de68e",
+        "sha256_in_prefix": "d2f9cd90131acf06cee40cd65b074ab24cd5bd8bd75b8d6a149130bcdf7de68e",
+        "size_in_bytes": 5649
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/pknum.x",
+        "path_type": "hardlink",
+        "sha256": "830b2a76db0950d98f6491c7e8b76dfc1aefee6c99207d39ce250403c43849e6",
+        "sha256_in_prefix": "830b2a76db0950d98f6491c7e8b76dfc1aefee6c99207d39ce250403c43849e6",
+        "size_in_bytes": 982
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/pkwidth.x",
+        "path_type": "hardlink",
+        "sha256": "443d707c65b5ef7df4a39d518d6a06c8ae6d3eb1daf4f7097a97e2b4da7df7ee",
+        "sha256_in_prefix": "443d707c65b5ef7df4a39d518d6a06c8ae6d3eb1daf4f7097a97e2b4da7df7ee",
+        "size_in_bytes": 4597
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/results.com",
+        "path_type": "softlink",
+        "sha256": "937f751e3ac6e6108dbdedc9b4cc0380b0b6ff7102370a04457013dd009d860c",
+        "size_in_bytes": 2676
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/rvsao.com",
+        "path_type": "softlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/rvsao.h",
+        "path_type": "softlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/t_pxcsao.x",
+        "path_type": "hardlink",
+        "sha256": "11892d3ee84e8efa7a01a98ba0e9878777a7be772871991c57c36b75b0d97552",
+        "sha256_in_prefix": "11892d3ee84e8efa7a01a98ba0e9878777a7be772871991c57c36b75b0d97552",
+        "size_in_bytes": 12241
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/t_xcsao.x",
+        "path_type": "hardlink",
+        "sha256": "7321e4e689215604cf89a4331fe19cab67c915d0b312c1eb0a64b543f2b8c2fb",
+        "sha256_in_prefix": "7321e4e689215604cf89a4331fe19cab67c915d0b312c1eb0a64b543f2b8c2fb",
+        "size_in_bytes": 15016
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcarch.x",
+        "path_type": "hardlink",
+        "sha256": "64f11c690cbcd05f6a1d11bf8c2b8066b1e58ea1410c3c70fca595ba661f5ed8",
+        "sha256_in_prefix": "64f11c690cbcd05f6a1d11bf8c2b8066b1e58ea1410c3c70fca595ba661f5ed8",
+        "size_in_bytes": 5243
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcfile.x",
+        "path_type": "hardlink",
+        "sha256": "ff29b6ef2b20b937f85565ac58cb684afc93bc49501b132fd8ed7a899b3ca52a",
+        "sha256_in_prefix": "ff29b6ef2b20b937f85565ac58cb684afc93bc49501b132fd8ed7a899b3ca52a",
+        "size_in_bytes": 4575
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcfit.x",
+        "path_type": "hardlink",
+        "sha256": "db78a2cc5f302c6705a06a300131be2e08ab4958c95b4e2d59dfd518d3636265",
+        "sha256_in_prefix": "db78a2cc5f302c6705a06a300131be2e08ab4958c95b4e2d59dfd518d3636265",
+        "size_in_bytes": 47972
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcfit.x~",
+        "path_type": "hardlink",
+        "sha256": "db78a2cc5f302c6705a06a300131be2e08ab4958c95b4e2d59dfd518d3636265",
+        "sha256_in_prefix": "db78a2cc5f302c6705a06a300131be2e08ab4958c95b4e2d59dfd518d3636265",
+        "size_in_bytes": 47972
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xchead.x",
+        "path_type": "hardlink",
+        "sha256": "2f1043aebd6aebef5bb3411f3bc82bbf34d4de51f8ce61e97c77e60314199404",
+        "sha256_in_prefix": "2f1043aebd6aebef5bb3411f3bc82bbf34d4de51f8ce61e97c77e60314199404",
+        "size_in_bytes": 9858
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xciplot.x",
+        "path_type": "hardlink",
+        "sha256": "88752328ed084707e5a5a6ff5c85fe878486783f70a0181450f7045a5d175023",
+        "sha256_in_prefix": "88752328ed084707e5a5a6ff5c85fe878486783f70a0181450f7045a5d175023",
+        "size_in_bytes": 11736
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcmin.x",
+        "path_type": "hardlink",
+        "sha256": "a1efd6fab8a76e832846c830f0a61177c05c7981a0d2bdf142bc99fbd54f35c4",
+        "sha256_in_prefix": "a1efd6fab8a76e832846c830f0a61177c05c7981a0d2bdf142bc99fbd54f35c4",
+        "size_in_bytes": 7086
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcmin0.x",
+        "path_type": "hardlink",
+        "sha256": "3575889ca7d9be6fb4ed054ff920cf37e9517b0761bf69de7e4cf5608fd499cc",
+        "sha256_in_prefix": "3575889ca7d9be6fb4ed054ff920cf37e9517b0761bf69de7e4cf5608fd499cc",
+        "size_in_bytes": 6678
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcor.com",
+        "path_type": "hardlink",
+        "sha256": "46c2aa6e21eaf9dcd9c710f77fec84a867354b7e2f92b2ad778c66eb9c90a2f0",
+        "sha256_in_prefix": "46c2aa6e21eaf9dcd9c710f77fec84a867354b7e2f92b2ad778c66eb9c90a2f0",
+        "size_in_bytes": 517
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcorf.com",
+        "path_type": "hardlink",
+        "sha256": "b0ac2bfc8b3b7a6b6ca10a3f08ee1318e85b7baeecaede629e24decf79c53c6c",
+        "sha256_in_prefix": "b0ac2bfc8b3b7a6b6ca10a3f08ee1318e85b7baeecaede629e24decf79c53c6c",
+        "size_in_bytes": 748
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcorfit.x",
+        "path_type": "hardlink",
+        "sha256": "085cc6a4904b931613cebf6a77fa9d74fc3a2c8c6a7650be7576fdcb0f2464c7",
+        "sha256_in_prefix": "085cc6a4904b931613cebf6a77fa9d74fc3a2c8c6a7650be7576fdcb0f2464c7",
+        "size_in_bytes": 16459
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcorlist.x",
+        "path_type": "hardlink",
+        "sha256": "533c88e13714fef3b604cd475ab3f02a4c7f43bf50a70f4890440aa4a991ca2f",
+        "sha256_in_prefix": "533c88e13714fef3b604cd475ab3f02a4c7f43bf50a70f4890440aa4a991ca2f",
+        "size_in_bytes": 1596
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcorplot.x",
+        "path_type": "hardlink",
+        "sha256": "06984b4b48c49be3d0501415e895c8b6922d0a0194361360a6effd700fee59ff",
+        "sha256_in_prefix": "06984b4b48c49be3d0501415e895c8b6922d0a0194361360a6effd700fee59ff",
+        "size_in_bytes": 3624
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcplot.x",
+        "path_type": "hardlink",
+        "sha256": "f6d3cdb28855ec8e866710ae48bb92366945d096d137436842f70fcca3afd5f5",
+        "sha256_in_prefix": "f6d3cdb28855ec8e866710ae48bb92366945d096d137436842f70fcca3afd5f5",
+        "size_in_bytes": 19051
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcplot0.x",
+        "path_type": "hardlink",
+        "sha256": "5c444a1651ad5a0dcac75c773446066f8ccaf7562dd7e35057ae740676d7ac81",
+        "sha256_in_prefix": "5c444a1651ad5a0dcac75c773446066f8ccaf7562dd7e35057ae740676d7ac81",
+        "size_in_bytes": 19006
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcrslts.x",
+        "path_type": "hardlink",
+        "sha256": "e838ce9620a93628d63054906afd948eaac9e3d3357a70b3e45bef0f2cc3fcfa",
+        "sha256_in_prefix": "e838ce9620a93628d63054906afd948eaac9e3d3357a70b3e45bef0f2cc3fcfa",
+        "size_in_bytes": 40622
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcsplot.x",
+        "path_type": "hardlink",
+        "sha256": "a1f4f5b8944a3c4c98da36139aa4c7ea76ba318c5f9fa74516495b27e9a1b5d1",
+        "sha256_in_prefix": "a1f4f5b8944a3c4c98da36139aa4c7ea76ba318c5f9fa74516495b27e9a1b5d1",
+        "size_in_bytes": 3848
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xcv.h",
+        "path_type": "hardlink",
+        "sha256": "5c21dc038c577768483a093ef6f3d031e45dd364d99db34ff55f9b0e7ccc5bae",
+        "sha256_in_prefix": "5c21dc038c577768483a093ef6f3d031e45dd364d99db34ff55f9b0e7ccc5bae",
+        "size_in_bytes": 1226
+      },
+      {
+        "_path": "iraf_extern/rvsao/Xcsao/xplt.com",
+        "path_type": "hardlink",
+        "sha256": "92553eb5656204a28ee72cb69cbcfdc75256bdc6fffb3fb85e37dbb484bba832",
+        "sha256_in_prefix": "92553eb5656204a28ee72cb69cbcfdc75256bdc6fffb3fb85e37dbb484bba832",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "iraf_extern/rvsao/bcvcorr.par",
+        "path_type": "hardlink",
+        "sha256": "7fe53b8c96e1c80a355976a612625bb7b94088c6e8ea61a2b1ae2fa8a714fe30",
+        "sha256_in_prefix": "7fe53b8c96e1c80a355976a612625bb7b94088c6e8ea61a2b1ae2fa8a714fe30",
+        "size_in_bytes": 2234
+      },
+      {
+        "_path": "iraf_extern/rvsao/bin",
+        "path_type": "softlink",
+        "size_in_bytes": 4096
+      },
+      {
+        "_path": "iraf_extern/rvsao/bin.linux/librv.a",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.rvsao_1553893057946/_h_env_pla",
+        "sha256": "d58cbeaa1585eb8103639be398ff6e856cb468ed035074c1a9e4dd3d538419e9",
+        "sha256_in_prefix": "69bcc73c965547f5cf1909bc79f38d639636c2453273a6511995cf0aff97ec0e",
+        "size_in_bytes": 2023534
+      },
+      {
+        "_path": "iraf_extern/rvsao/bin.linux/x_rvsao.e",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/rtfproc/anaconda2_4.2.0/conda-bld/iraf.rvsao_1553893057946/_h_env_pla",
+        "sha256": "b79299c4d289d76db8b1f7f1488c8c7d59a944085db0d9f550780501d5226812",
+        "sha256_in_prefix": "198752bb6037906b4c0bd81f615d694e8e0e18960d14c207fae222cfc75c6053",
+        "size_in_bytes": 8303381
+      },
+      {
+        "_path": "iraf_extern/rvsao/build_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "efd131ab3ca8a11f84fc79a5d31f5d6ff6041c93c5cb667c1229d9f662f289ce",
+        "sha256_in_prefix": "f4268eb72f8a2fa1970e25c7b81ff5cbcfc58ab33373bce9456359bf2c148ecf",
+        "size_in_bytes": 10068
+      },
+      {
+        "_path": "iraf_extern/rvsao/conda_build.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "6e4a612eadb71766ff257b5d68dee2ce9f774820d01d73e5ca7430129d500218",
+        "sha256_in_prefix": "4009607db75283c10f84beb0ea4da5a476ad5ec656a6a6673e89ad1efb484f74",
+        "size_in_bytes": 2392
+      },
+      {
+        "_path": "iraf_extern/rvsao/contpars.par",
+        "path_type": "hardlink",
+        "sha256": "602589b4c8593256a66c6a8746810efd548fb787a946c5440c3d0f7b80092fb6",
+        "sha256_in_prefix": "602589b4c8593256a66c6a8746810efd548fb787a946c5440c3d0f7b80092fb6",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "iraf_extern/rvsao/contsum.par",
+        "path_type": "hardlink",
+        "sha256": "702b8272e6e4159d5c4d5d96183e771678af82cc221f13396b9e2ee90151858a",
+        "sha256_in_prefix": "702b8272e6e4159d5c4d5d96183e771678af82cc221f13396b9e2ee90151858a",
+        "size_in_bytes": 839
+      },
+      {
+        "_path": "iraf_extern/rvsao/contsum2.par",
+        "path_type": "hardlink",
+        "sha256": "3a7d9c17dd722cc2e8396b50d5f9bf46e868ca3c424815d6d9f70457ff9eb9e9",
+        "sha256_in_prefix": "3a7d9c17dd722cc2e8396b50d5f9bf46e868ca3c424815d6d9f70457ff9eb9e9",
+        "size_in_bytes": 736
+      },
+      {
+        "_path": "iraf_extern/rvsao/contsum3.par",
+        "path_type": "hardlink",
+        "sha256": "78019abe227fb8bc907c36bfe376c908d70383c09a7c3fdc1fc610bf9d583b40",
+        "sha256_in_prefix": "78019abe227fb8bc907c36bfe376c908d70383c09a7c3fdc1fc610bf9d583b40",
+        "size_in_bytes": 735
+      },
+      {
+        "_path": "iraf_extern/rvsao/contsum4.par",
+        "path_type": "hardlink",
+        "sha256": "30bf3a7802c3cf990c1ce3795dd4e122446be9a57fdbc23e1d7349bdbb15d8eb",
+        "sha256_in_prefix": "30bf3a7802c3cf990c1ce3795dd4e122446be9a57fdbc23e1d7349bdbb15d8eb",
+        "size_in_bytes": 736
+      },
+      {
+        "_path": "iraf_extern/rvsao/contsum5.par",
+        "path_type": "hardlink",
+        "sha256": "abad96137c777b5f296501469cb59b220cd1a57118486840095c0beefe4dab56",
+        "sha256_in_prefix": "abad96137c777b5f296501469cb59b220cd1a57118486840095c0beefe4dab56",
+        "size_in_bytes": 735
+      },
+      {
+        "_path": "iraf_extern/rvsao/emsao.par",
+        "path_type": "hardlink",
+        "sha256": "a6b392621ae86fd5e2a5084b4429f9c0ff94344811b4e7bcbd7d7073813a6953",
+        "sha256_in_prefix": "a6b392621ae86fd5e2a5084b4429f9c0ff94344811b4e7bcbd7d7073813a6953",
+        "size_in_bytes": 3448
+      },
+      {
+        "_path": "iraf_extern/rvsao/eqwidth.par",
+        "path_type": "hardlink",
+        "sha256": "bc4e1436ddf02b140878ea472ef3eddc138a2ba1bff3558be90deb31810de3c6",
+        "sha256_in_prefix": "bc4e1436ddf02b140878ea472ef3eddc138a2ba1bff3558be90deb31810de3c6",
+        "size_in_bytes": 1857
+      },
+      {
+        "_path": "iraf_extern/rvsao/fasttemp",
+        "path_type": "hardlink",
+        "sha256": "d7db25b14f4fdc2104b8d7b80b8f47f7721fae89b440a2c3423d83175448b860",
+        "sha256_in_prefix": "d7db25b14f4fdc2104b8d7b80b8f47f7721fae89b440a2c3423d83175448b860",
+        "size_in_bytes": 182
+      },
+      {
+        "_path": "iraf_extern/rvsao/help_log",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "4148c06f1f85409b276686142f35eb9f01c60cb9ca38fbb60b1dc6cae556bc7c",
+        "sha256_in_prefix": "ffd21e1e260ba009f2c82a446a432de3872f3a43137dd3e5d229bcd466e7e06d",
+        "size_in_bytes": 932
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/O5577.dat",
+        "path_type": "hardlink",
+        "sha256": "41516056d7f5b2912fad725bc4e0e6c3b0b5bd30f0994b63a0862fd1a53805a6",
+        "sha256_in_prefix": "41516056d7f5b2912fad725bc4e0e6c3b0b5bd30f0994b63a0862fd1a53805a6",
+        "size_in_bytes": 31
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/OH8399.dat",
+        "path_type": "hardlink",
+        "sha256": "a0ce8abd90df6c110dfc925f5ba50eb5a5121ac1da8fa544617b71bf0fbb40eb",
+        "sha256_in_prefix": "a0ce8abd90df6c110dfc925f5ba50eb5a5121ac1da8fa544617b71bf0fbb40eb",
+        "size_in_bytes": 37
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/Old/brodie_hanes.bands",
+        "path_type": "hardlink",
+        "sha256": "476f34d81de1a6fd0ccda6254b7a89de725ec948b026fb772a849cd0300e08bd",
+        "sha256_in_prefix": "476f34d81de1a6fd0ccda6254b7a89de725ec948b026fb772a849cd0300e08bd",
+        "size_in_bytes": 752
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/Old/f2.abs.bands",
+        "path_type": "hardlink",
+        "sha256": "91f2596bb4f2e4512ad0ac061110a9593e83a050995c1aea45c06face0712414",
+        "sha256_in_prefix": "91f2596bb4f2e4512ad0ac061110a9593e83a050995c1aea45c06face0712414",
+        "size_in_bytes": 203
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/Old/f2.lisa.bands",
+        "path_type": "hardlink",
+        "sha256": "f1dd5eea6b78b9f818b3055bf19f2279925ffff5ee50dbdc9d63e27cffa0cd45",
+        "sha256_in_prefix": "f1dd5eea6b78b9f818b3055bf19f2279925ffff5ee50dbdc9d63e27cffa0cd45",
+        "size_in_bytes": 695
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/Old/faber_burstein.bands",
+        "path_type": "hardlink",
+        "sha256": "4ea6d0b09c6096cace5a9b83044e904f5ad496d71cc5fad3ce9dc208378de07b",
+        "sha256_in_prefix": "4ea6d0b09c6096cace5a9b83044e904f5ad496d71cc5fad3ce9dc208378de07b",
+        "size_in_bytes": 885
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/Old/sky.bands",
+        "path_type": "hardlink",
+        "sha256": "2970e83d02360c9c228ea3fe9309ac01af4f081814a000986e1a6c44d1323c9c",
+        "sha256_in_prefix": "2970e83d02360c9c228ea3fe9309ac01af4f081814a000986e1a6c44d1323c9c",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/Readme",
+        "path_type": "hardlink",
+        "sha256": "71d1799059704651c4a7dd5b78305899d97bd335dd4fd2196f172c7520790999",
+        "sha256_in_prefix": "71d1799059704651c4a7dd5b78305899d97bd335dd4fd2196f172c7520790999",
+        "size_in_bytes": 1645
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/ablines.dat",
+        "path_type": "hardlink",
+        "sha256": "4832b7484e83438b7a7a6190e0abeb5e95195d9fc290034a3a4dc6253a0d598d",
+        "sha256_in_prefix": "4832b7484e83438b7a7a6190e0abeb5e95195d9fc290034a3a4dc6253a0d598d",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/ansum.com",
+        "path_type": "hardlink",
+        "sha256": "29e9f71a97aa2dc7e39b9f6098c1a052c6adb8bdb6f927b78c21dbcf95ed303e",
+        "sha256_in_prefix": "29e9f71a97aa2dc7e39b9f6098c1a052c6adb8bdb6f927b78c21dbcf95ed303e",
+        "size_in_bytes": 727
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/apropos.db",
+        "path_type": "hardlink",
+        "sha256": "60fae59a20f98f35a6f036e88af94d640d7c9a43084873c8934f00a0a62e7e20",
+        "sha256_in_prefix": "60fae59a20f98f35a6f036e88af94d640d7c9a43084873c8934f00a0a62e7e20",
+        "size_in_bytes": 1781
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/atomic.line.list",
+        "path_type": "hardlink",
+        "sha256": "eed38f963b838bde0684609a4560f2dfa9c0660d8a9c964e11dbc145c17bbb24",
+        "sha256_in_prefix": "eed38f963b838bde0684609a4560f2dfa9c0660d8a9c964e11dbc145c17bbb24",
+        "size_in_bytes": 73243
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badgal.dat",
+        "path_type": "hardlink",
+        "sha256": "4b1525df01aeb0fecc091e8bff9efc65c02aa97897fb2930ca2cdd408278c915",
+        "sha256_in_prefix": "4b1525df01aeb0fecc091e8bff9efc65c02aa97897fb2930ca2cdd408278c915",
+        "size_in_bytes": 190
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badgal0.dat",
+        "path_type": "hardlink",
+        "sha256": "0055e2fa8048746ee30bff13cf101c8d2d49955b8c6d52a60f7cb96d2f13cb9a",
+        "sha256_in_prefix": "0055e2fa8048746ee30bff13cf101c8d2d49955b8c6d52a60f7cb96d2f13cb9a",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badlines.dat",
+        "path_type": "hardlink",
+        "sha256": "76f2e2f83818ac9686985c3797c0ad79f9835184c2f288b6a1a524888848691d",
+        "sha256_in_prefix": "76f2e2f83818ac9686985c3797c0ad79f9835184c2f288b6a1a524888848691d",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badlines1.dat",
+        "path_type": "hardlink",
+        "sha256": "8fa098023da13578adaaed20b06a2216a46bb6b329db8e1c023ef8beff251d14",
+        "sha256_in_prefix": "8fa098023da13578adaaed20b06a2216a46bb6b329db8e1c023ef8beff251d14",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badlinesg.dat",
+        "path_type": "hardlink",
+        "sha256": "227dc90a288f1d210cc0ff1d6064abb67740865f475bdd7abca7811cbc63ebef",
+        "sha256_in_prefix": "227dc90a288f1d210cc0ff1d6064abb67740865f475bdd7abca7811cbc63ebef",
+        "size_in_bytes": 156
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badlinesw.dat",
+        "path_type": "hardlink",
+        "sha256": "6e5f03f1f0f8e225054beba0f8b70dc9bdd5578b154016d9bae8e800b49e5f54",
+        "sha256_in_prefix": "6e5f03f1f0f8e225054beba0f8b70dc9bdd5578b154016d9bae8e800b49e5f54",
+        "size_in_bytes": 156
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badsky.dat",
+        "path_type": "hardlink",
+        "sha256": "76f2e2f83818ac9686985c3797c0ad79f9835184c2f288b6a1a524888848691d",
+        "sha256_in_prefix": "76f2e2f83818ac9686985c3797c0ad79f9835184c2f288b6a1a524888848691d",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badskynao.dat",
+        "path_type": "hardlink",
+        "sha256": "ac977e91828cbce7d0c3432b63ba23e538057a5b75bf9be4e72a20f36b6e70ec",
+        "sha256_in_prefix": "ac977e91828cbce7d0c3432b63ba23e538057a5b75bf9be4e72a20f36b6e70ec",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badskynao1.dat",
+        "path_type": "hardlink",
+        "sha256": "b688c6c82471783bcc930195707a8f5f906a1fcd5841d9cfbbb36e84ecc98ef5",
+        "sha256_in_prefix": "b688c6c82471783bcc930195707a8f5f906a1fcd5841d9cfbbb36e84ecc98ef5",
+        "size_in_bytes": 52
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badskynao2.dat",
+        "path_type": "hardlink",
+        "sha256": "7b962ac378bbcb894e611bab8ef4b1db61e98296383b2448edabd014db3454a1",
+        "sha256_in_prefix": "7b962ac378bbcb894e611bab8ef4b1db61e98296383b2448edabd014db3454a1",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/badskyo.dat",
+        "path_type": "hardlink",
+        "sha256": "f5ff3caf5b8be00cb0d400f4838071d112e2b1ee11a0bfd6d3ab8bff9c1c0f9c",
+        "sha256_in_prefix": "f5ff3caf5b8be00cb0d400f4838071d112e2b1ee11a0bfd6d3ab8bff9c1c0f9c",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/balmer.dat",
+        "path_type": "hardlink",
+        "sha256": "1a2502112c147dcd53747c6c18708115cc8a21d1a5b5a7a5eba87ef07c8535b3",
+        "sha256_in_prefix": "1a2502112c147dcd53747c6c18708115cc8a21d1a5b5a7a5eba87ef07c8535b3",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/brodie_hanes.bands",
+        "path_type": "hardlink",
+        "sha256": "1e5495fbd01f75c0f7c6c89cc215cfc33d933f5a1c2ee87a51f1d14135beff27",
+        "sha256_in_prefix": "1e5495fbd01f75c0f7c6c89cc215cfc33d933f5a1c2ee87a51f1d14135beff27",
+        "size_in_bytes": 501
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/chmgh.line.list",
+        "path_type": "hardlink",
+        "sha256": "a6b1457df77ac5f51442895a602c6c650b1f336de893e1fc5983fc593798737b",
+        "sha256_in_prefix": "a6b1457df77ac5f51442895a602c6c650b1f336de893e1fc5983fc593798737b",
+        "size_in_bytes": 30606
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/cn.line.list",
+        "path_type": "hardlink",
+        "sha256": "cbc2d570b16c56d420f5b4767462f6e4f63364ed524ab72cc2f9c0df13b7376e",
+        "sha256_in_prefix": "cbc2d570b16c56d420f5b4767462f6e4f63364ed524ab72cc2f9c0df13b7376e",
+        "size_in_bytes": 107142
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/contin.com",
+        "path_type": "hardlink",
+        "sha256": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "sha256_in_prefix": "afc61348ecd26253a3d605634a8f1de9712591bbd453787d0c33fb21ff1c3586",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/contin.h",
+        "path_type": "hardlink",
+        "sha256": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "sha256_in_prefix": "1274e66e8a78019963736df7d3ec5a8d372f1a928752b00e7ba1975cdf81b3dd",
+        "size_in_bytes": 1696
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/contin2.com",
+        "path_type": "hardlink",
+        "sha256": "487340be12d48916487ec11c0add911b4a0616dfc826f5015087bbaeb9fe6eee",
+        "sha256_in_prefix": "487340be12d48916487ec11c0add911b4a0616dfc826f5015087bbaeb9fe6eee",
+        "size_in_bytes": 1141
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emcomb-h.dat",
+        "path_type": "hardlink",
+        "sha256": "84942d79aa5c57c9cb6df171f76235edd4f2416a9a38bf0e2cbfbb8e3fac64f7",
+        "sha256_in_prefix": "84942d79aa5c57c9cb6df171f76235edd4f2416a9a38bf0e2cbfbb8e3fac64f7",
+        "size_in_bytes": 46
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emcomb.dat",
+        "path_type": "hardlink",
+        "sha256": "99bbe713f9c9e4c2059ba0d649e1d47ba4c00d5a6cccb2ebd5d753794b938a39",
+        "sha256_in_prefix": "99bbe713f9c9e4c2059ba0d649e1d47ba4c00d5a6cccb2ebd5d753794b938a39",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emcomb0.dat",
+        "path_type": "hardlink",
+        "sha256": "0a478af426973f6f3e5cb53d0fb65a0835305182e44e17c4251ab5f263592dba",
+        "sha256_in_prefix": "0a478af426973f6f3e5cb53d0fb65a0835305182e44e17c4251ab5f263592dba",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emcomb2.dat",
+        "path_type": "hardlink",
+        "sha256": "032e9c62348248b1cd2b723a63b4f1f3d12d9dc8e50974bc43b75529b48cfd3a",
+        "sha256_in_prefix": "032e9c62348248b1cd2b723a63b4f1f3d12d9dc8e50974bc43b75529b48cfd3a",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emcombnoh.dat",
+        "path_type": "hardlink",
+        "sha256": "b1a7333db737f8e489ec0816d1138d8f70bfd92fc8d0cdc25f95871a91794a71",
+        "sha256_in_prefix": "b1a7333db737f8e489ec0816d1138d8f70bfd92fc8d0cdc25f95871a91794a71",
+        "size_in_bytes": 97
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emcombnoh0.dat",
+        "path_type": "hardlink",
+        "sha256": "bc0924bb1550e4c78a5c7bac861b983933620b846fc4befeb656982f4eda4d15",
+        "sha256_in_prefix": "bc0924bb1550e4c78a5c7bac861b983933620b846fc4befeb656982f4eda4d15",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emhsrch.dat",
+        "path_type": "hardlink",
+        "sha256": "134f13cf9e4f8bcc6ec5409d488f11d3d5c317c62e95b0924759190421edaaa4",
+        "sha256_in_prefix": "134f13cf9e4f8bcc6ec5409d488f11d3d5c317c62e95b0924759190421edaaa4",
+        "size_in_bytes": 54
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emiss.h",
+        "path_type": "hardlink",
+        "sha256": "05f369a7a4be73abeec673e83f194e9089529d20200b61a72a62a5ed2d9dc746",
+        "sha256_in_prefix": "05f369a7a4be73abeec673e83f194e9089529d20200b61a72a62a5ed2d9dc746",
+        "size_in_bytes": 491
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emlines.dat",
+        "path_type": "hardlink",
+        "sha256": "360b7e0c9c94c551d7a5e0434296860ff70de0900d746a5a0ac67a08b258a53b",
+        "sha256_in_prefix": "360b7e0c9c94c551d7a5e0434296860ff70de0900d746a5a0ac67a08b258a53b",
+        "size_in_bytes": 769
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emlines0.dat",
+        "path_type": "hardlink",
+        "sha256": "c410c97a93264aa1ad43e9a5ac58a71f800c3cfcba7508224b844a1d1405e8f4",
+        "sha256_in_prefix": "c410c97a93264aa1ad43e9a5ac58a71f800c3cfcba7508224b844a1d1405e8f4",
+        "size_in_bytes": 352
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emlines2.dat",
+        "path_type": "hardlink",
+        "sha256": "931856aeed23e85fadc6dc081218a6a29c6b09b0fd83cf24aa09dabb6d0e9657",
+        "sha256_in_prefix": "931856aeed23e85fadc6dc081218a6a29c6b09b0fd83cf24aa09dabb6d0e9657",
+        "size_in_bytes": 374
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emlineshe.dat",
+        "path_type": "hardlink",
+        "sha256": "027b3908d7dc595a7912739985a7290d7b9103426e670556f8f9345897d76976",
+        "sha256_in_prefix": "027b3908d7dc595a7912739985a7290d7b9103426e670556f8f9345897d76976",
+        "size_in_bytes": 449
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emlineshe2.dat",
+        "path_type": "hardlink",
+        "sha256": "40041310a68d0e79c93b9e2fc4fed3155e008daae9b5f41f4adc0ba19372b973",
+        "sha256_in_prefix": "40041310a68d0e79c93b9e2fc4fed3155e008daae9b5f41f4adc0ba19372b973",
+        "size_in_bytes": 613
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emqso.dat",
+        "path_type": "hardlink",
+        "sha256": "8a0dd6ac3a1bc436c6213441938ba6ec03a28ecf1495139d885c192858eeeda5",
+        "sha256_in_prefix": "8a0dd6ac3a1bc436c6213441938ba6ec03a28ecf1495139d885c192858eeeda5",
+        "size_in_bytes": 477
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emqtemp.dat",
+        "path_type": "hardlink",
+        "sha256": "858e34a66947a5ef303abc6ff55dd7609a7ed2363b2b6e7331d67a1da68db7f9",
+        "sha256_in_prefix": "858e34a66947a5ef303abc6ff55dd7609a7ed2363b2b6e7331d67a1da68db7f9",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emsearch.dat",
+        "path_type": "hardlink",
+        "sha256": "3c463246c8b1ee299c261b681783d49578d2992689f3692dafae4fa9b87ec828",
+        "sha256_in_prefix": "3c463246c8b1ee299c261b681783d49578d2992689f3692dafae4fa9b87ec828",
+        "size_in_bytes": 216
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emtemp.dat",
+        "path_type": "hardlink",
+        "sha256": "b830e0471ae6f156bacf74f1fdc499be3b92b78379c403ff81af2b9091d95d58",
+        "sha256_in_prefix": "b830e0471ae6f156bacf74f1fdc499be3b92b78379c403ff81af2b9091d95d58",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emtemp0.dat",
+        "path_type": "hardlink",
+        "sha256": "6da4f6a630daa894a84ced6a16a340876bc937d84e4dd8cce9aee99243c1100d",
+        "sha256_in_prefix": "6da4f6a630daa894a84ced6a16a340876bc937d84e4dd8cce9aee99243c1100d",
+        "size_in_bytes": 253
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emtemphe.dat",
+        "path_type": "hardlink",
+        "sha256": "9b70f155d8b98f4c4b93abf797368258ab895ab04684940c08b81be3775c80ee",
+        "sha256_in_prefix": "9b70f155d8b98f4c4b93abf797368258ab895ab04684940c08b81be3775c80ee",
+        "size_in_bytes": 306
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emtempv.dat",
+        "path_type": "hardlink",
+        "sha256": "a93ec0adfafe5fcfb45cfac6db801a1e91f392b740d293344c1abeadef73eac0",
+        "sha256_in_prefix": "a93ec0adfafe5fcfb45cfac6db801a1e91f392b740d293344c1abeadef73eac0",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emv.com",
+        "path_type": "hardlink",
+        "sha256": "fbd5931ed65f8e9d6b1b265168d811716d1e5d98d03fac2370ce0bab0a8a8ffb",
+        "sha256_in_prefix": "fbd5931ed65f8e9d6b1b265168d811716d1e5d98d03fac2370ce0bab0a8a8ffb",
+        "size_in_bytes": 4137
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/emv.h",
+        "path_type": "hardlink",
+        "sha256": "ae54201ead567f5dbd42f43ec9291c73cbac5c18526ad78c1b0a8c258b3f21dc",
+        "sha256_in_prefix": "ae54201ead567f5dbd42f43ec9291c73cbac5c18526ad78c1b0a8c258b3f21dc",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/f2.abs.bands",
+        "path_type": "hardlink",
+        "sha256": "414b338952e48a513d47748f85432f2326e30046a8ae1b3839187f2a608b8315",
+        "sha256_in_prefix": "414b338952e48a513d47748f85432f2326e30046a8ae1b3839187f2a608b8315",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/f2.lisa.bands",
+        "path_type": "hardlink",
+        "sha256": "bf0ce98fa3eeafbcb1be12341759be5a73690bb3994a57d02fbf458b061e0042",
+        "sha256_in_prefix": "bf0ce98fa3eeafbcb1be12341759be5a73690bb3994a57d02fbf458b061e0042",
+        "size_in_bytes": 440
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/faber_burstein.bands",
+        "path_type": "hardlink",
+        "sha256": "31d527dc23f36685f8db9189dcd3498a79f3cfa32848201166bc04c34e50442a",
+        "sha256_in_prefix": "31d527dc23f36685f8db9189dcd3498a79f3cfa32848201166bc04c34e50442a",
+        "size_in_bytes": 580
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/femtemp.dat",
+        "path_type": "hardlink",
+        "sha256": "4868301c4880397f86be272da19c61c5e0a1e4979a04470695288dd5c17dc33b",
+        "sha256_in_prefix": "4868301c4880397f86be272da19c61c5e0a1e4979a04470695288dd5c17dc33b",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/fquot.com",
+        "path_type": "hardlink",
+        "sha256": "88b7b69879a4bc0b28299124ce6a2e4768a3098c34e087d49e32168853735be2",
+        "sha256_in_prefix": "88b7b69879a4bc0b28299124ce6a2e4768a3098c34e087d49e32168853735be2",
+        "size_in_bytes": 275
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/hectosky.dat",
+        "path_type": "hardlink",
+        "sha256": "4a35a9335c8df2b0eb10574be2519164a4e82160fbaec2f976c102a177f5e76d",
+        "sha256_in_prefix": "4a35a9335c8df2b0eb10574be2519164a4e82160fbaec2f976c102a177f5e76d",
+        "size_in_bytes": 138
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/hectosky1.dat",
+        "path_type": "hardlink",
+        "sha256": "f00cfe1a3001d24e189ee615df763a37642a9829b51688876234b5fd4458660c",
+        "sha256_in_prefix": "f00cfe1a3001d24e189ee615df763a37642a9829b51688876234b5fd4458660c",
+        "size_in_bytes": 142
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/helpdb.mip",
+        "path_type": "hardlink",
+        "sha256": "451ffd641d5c657ce27085c25e4c8c8fb6c869273a892b2661cf910351e360b4",
+        "sha256_in_prefix": "451ffd641d5c657ce27085c25e4c8c8fb6c869273a892b2661cf910351e360b4",
+        "size_in_bytes": 4222
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/helpdb2.mip",
+        "path_type": "hardlink",
+        "sha256": "3f0a8319970e3577a63d712e7eab608f1afa271a8b1ab6ff0fcfeab5fab68350",
+        "sha256_in_prefix": "3f0a8319970e3577a63d712e7eab608f1afa271a8b1ab6ff0fcfeab5fab68350",
+        "size_in_bytes": 3596
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/heneartest.dat",
+        "path_type": "hardlink",
+        "sha256": "3123aab6826d7f78af9aa01a072fd1e87babc83b0cb05e6b4fc79f3c8e534001",
+        "sha256_in_prefix": "3123aab6826d7f78af9aa01a072fd1e87babc83b0cb05e6b4fc79f3c8e534001",
+        "size_in_bytes": 274
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/idhenear.dat",
+        "path_type": "hardlink",
+        "sha256": "67974633f703e73713b666338eb082e1f1b0cfc82e5a9d591322d90ccb5750ad",
+        "sha256_in_prefix": "67974633f703e73713b666338eb082e1f1b0cfc82e5a9d591322d90ccb5750ad",
+        "size_in_bytes": 1982
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/index_table.rtf",
+        "path_type": "hardlink",
+        "sha256": "031a1cf395dfe43ef77128399f505db42a0ff281d6ddd9493f34fa32b4b5c91d",
+        "sha256_in_prefix": "031a1cf395dfe43ef77128399f505db42a0ff281d6ddd9493f34fa32b4b5c91d",
+        "size_in_bytes": 5316
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/index_table.txt",
+        "path_type": "hardlink",
+        "sha256": "5a9e37f29dc31dd952b3c7d6935ee1a2c28228be034f0bd554877e2e31adb90f",
+        "sha256_in_prefix": "5a9e37f29dc31dd952b3c7d6935ee1a2c28228be034f0bd554877e2e31adb90f",
+        "size_in_bytes": 1992
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/jph.bands",
+        "path_type": "hardlink",
+        "sha256": "7e27a81e2cc723742647a92b58d6b668a5792ed866ee76215dd785c8c83c0aa3",
+        "sha256_in_prefix": "7e27a81e2cc723742647a92b58d6b668a5792ed866ee76215dd785c8c83c0aa3",
+        "size_in_bytes": 2831
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/jphactive.bands",
+        "path_type": "hardlink",
+        "sha256": "402a827b29b8f814485965f52097070c0795040a3d97cd0720b6966a8db24d85",
+        "sha256_in_prefix": "402a827b29b8f814485965f52097070c0795040a3d97cd0720b6966a8db24d85",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/jphtest.bands",
+        "path_type": "hardlink",
+        "sha256": "fbcbbda5a88f59e35a611bdd84ec88f03b652c1f0f0a10d4c65f4c1ae8cf0af4",
+        "sha256_in_prefix": "fbcbbda5a88f59e35a611bdd84ec88f03b652c1f0f0a10d4c65f4c1ae8cf0af4",
+        "size_in_bytes": 472
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/librv.a",
+        "path_type": "softlink",
+        "sha256": "d58cbeaa1585eb8103639be398ff6e856cb468ed035074c1a9e4dd3d538419e9",
+        "size_in_bytes": 2023534
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mkosky.dat",
+        "path_type": "hardlink",
+        "sha256": "9c759601cff6ff55f3b972595e7836d845b538d0ba7f6a777bc5aca3934fafa0",
+        "sha256_in_prefix": "9c759601cff6ff55f3b972595e7836d845b538d0ba7f6a777bc5aca3934fafa0",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mkosky1.dat",
+        "path_type": "hardlink",
+        "sha256": "94d158b37886e44058aa29a69b2e6ac6d5d020deac7c0c1dbd568d326a9a80e2",
+        "sha256_in_prefix": "94d158b37886e44058aa29a69b2e6ac6d5d020deac7c0c1dbd568d326a9a80e2",
+        "size_in_bytes": 1060
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mkoskyall.dat",
+        "path_type": "hardlink",
+        "sha256": "fed35db15935bdf3733e675157375a20cc8a0b302bdb4c552121058e917cba6a",
+        "sha256_in_prefix": "fed35db15935bdf3733e675157375a20cc8a0b302bdb4c552121058e917cba6a",
+        "size_in_bytes": 1681
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mkoskycomb.dat",
+        "path_type": "hardlink",
+        "sha256": "e743760b11fe7df247ac68e16fdf46acbea8a73e262df145ffdf0fd287988352",
+        "sha256_in_prefix": "e743760b11fe7df247ac68e16fdf46acbea8a73e262df145ffdf0fd287988352",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mkoskymoh.dat",
+        "path_type": "hardlink",
+        "sha256": "0045be5f1e84805b91634055069bc9fb0679a6ff6995b129ea7d1d3f3e282607",
+        "sha256_in_prefix": "0045be5f1e84805b91634055069bc9fb0679a6ff6995b129ea7d1d3f3e282607",
+        "size_in_bytes": 312
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "58ca8da9311e304dea79b68caa9062f47ac16425edfc02bbe53fc1223ba9317d",
+        "sha256_in_prefix": "58ca8da9311e304dea79b68caa9062f47ac16425edfc02bbe53fc1223ba9317d",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/mmtsky.dat",
+        "path_type": "hardlink",
+        "sha256": "4279157a5e99ef7c81272881bd30cc1a45ad7be9e281a8059d2719504a77c018",
+        "sha256_in_prefix": "4279157a5e99ef7c81272881bd30cc1a45ad7be9e281a8059d2719504a77c018",
+        "size_in_bytes": 448
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/noaotharw.dat",
+        "path_type": "hardlink",
+        "sha256": "bbf1e4861383b6383b01300db4ad027c161f7e8c71420a4de27e70c8b55679e5",
+        "sha256_in_prefix": "bbf1e4861383b6383b01300db4ad027c161f7e8c71420a4de27e70c8b55679e5",
+        "size_in_bytes": 506683
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/oldres.com",
+        "path_type": "hardlink",
+        "sha256": "06278e0a3073bba351742c80b44d2e05e86e53151d1d80ab53605103d0424324",
+        "sha256_in_prefix": "06278e0a3073bba351742c80b44d2e05e86e53151d1d80ab53605103d0424324",
+        "size_in_bytes": 328
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/oldsky.dat",
+        "path_type": "hardlink",
+        "sha256": "c6cf1eaa882111e6d9d7379d4df0523bf99ead1b5f40b2d551f680278f57ad05",
+        "sha256_in_prefix": "c6cf1eaa882111e6d9d7379d4df0523bf99ead1b5f40b2d551f680278f57ad05",
+        "size_in_bytes": 150
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/oldskyall.dat",
+        "path_type": "hardlink",
+        "sha256": "d0fdc27bc28298e91d4493a13ebbf340fb7839f5e81d843dc956cbf13058bfc8",
+        "sha256_in_prefix": "d0fdc27bc28298e91d4493a13ebbf340fb7839f5e81d843dc956cbf13058bfc8",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/pgreen.linelist",
+        "path_type": "hardlink",
+        "sha256": "e8d2303cf5c5bb8d6ff4667d74d5a8731a08a446162ba8ce94fbe88139f6546a",
+        "sha256_in_prefix": "e8d2303cf5c5bb8d6ff4667d74d5a8731a08a446162ba8ce94fbe88139f6546a",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/readme.line.list",
+        "path_type": "hardlink",
+        "sha256": "362830a117878f69609e63c06c0c9857e5e21eeb3196be17a0acbe9c95a2478d",
+        "sha256_in_prefix": "362830a117878f69609e63c06c0c9857e5e21eeb3196be17a0acbe9c95a2478d",
+        "size_in_bytes": 5140
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/redcomp.dat",
+        "path_type": "hardlink",
+        "sha256": "ccc6098a0fdf47372ee789e5d22a94fff5c109cc54f9c32f959359d6631d6b8f",
+        "sha256_in_prefix": "ccc6098a0fdf47372ee789e5d22a94fff5c109cc54f9c32f959359d6631d6b8f",
+        "size_in_bytes": 1684
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/results.com",
+        "path_type": "hardlink",
+        "sha256": "937f751e3ac6e6108dbdedc9b4cc0380b0b6ff7102370a04457013dd009d860c",
+        "sha256_in_prefix": "937f751e3ac6e6108dbdedc9b4cc0380b0b6ff7102370a04457013dd009d860c",
+        "size_in_bytes": 2676
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/root.hd",
+        "path_type": "hardlink",
+        "sha256": "f756f8d74dcf57ec5e23f79f4c9c151f07f5a8dfde86cdcfab7de77ab2aaf906",
+        "sha256_in_prefix": "f756f8d74dcf57ec5e23f79f4c9c151f07f5a8dfde86cdcfab7de77ab2aaf906",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/root2.hd",
+        "path_type": "hardlink",
+        "sha256": "8dc5f67b373bb4de210dedbe11aa5fb0ca89b30b98e2a978c7cd3271342e86c0",
+        "sha256_in_prefix": "8dc5f67b373bb4de210dedbe11aa5fb0ca89b30b98e2a978c7cd3271342e86c0",
+        "size_in_bytes": 278
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/rootr2rvsao.hd",
+        "path_type": "hardlink",
+        "sha256": "ae3694ca1e9d0a7b35f055d24398464b6d9d21f8dbf8b005422a17f5df2792c7",
+        "sha256_in_prefix": "ae3694ca1e9d0a7b35f055d24398464b6d9d21f8dbf8b005422a17f5df2792c7",
+        "size_in_bytes": 299
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/rootrvsao.hd",
+        "path_type": "hardlink",
+        "sha256": "0cab3ac922688c49c9647b5a61800df853a5ab50f45fe41d94d3a19fcbd19ae4",
+        "sha256_in_prefix": "0cab3ac922688c49c9647b5a61800df853a5ab50f45fe41d94d3a19fcbd19ae4",
+        "size_in_bytes": 273
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/rvsao.com",
+        "path_type": "hardlink",
+        "sha256": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "sha256_in_prefix": "b57ae19ebdcb989cd3530a3e226e52e265b785b4022b370041a0332b786d0d19",
+        "size_in_bytes": 8646
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/rvsao.h",
+        "path_type": "hardlink",
+        "sha256": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "sha256_in_prefix": "6c8c26f5dd45e75424a7a890787734dbc31a2d368275e909b417642f1f5bf349",
+        "size_in_bytes": 7372
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/rvsao0.h",
+        "path_type": "hardlink",
+        "sha256": "99b19c50b91880b496f4f673860178e37e7ef6f9aa5116813834aea4e67b7759",
+        "sha256_in_prefix": "99b19c50b91880b496f4f673860178e37e7ef6f9aa5116813834aea4e67b7759",
+        "size_in_bytes": 6600
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/searchO5577.dat",
+        "path_type": "hardlink",
+        "sha256": "6f2a3e1175f76e62c3edef92064ccc83d13e49e7a16dd9b1c77cb5a4fd3c2391",
+        "sha256_in_prefix": "6f2a3e1175f76e62c3edef92064ccc83d13e49e7a16dd9b1c77cb5a4fd3c2391",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/searchOH8399.dat",
+        "path_type": "hardlink",
+        "sha256": "7ea595f24f94771c952b1ce14fa2066d4d5a913133cad39b26dd7b9390e25ba2",
+        "sha256_in_prefix": "7ea595f24f94771c952b1ce14fa2066d4d5a913133cad39b26dd7b9390e25ba2",
+        "size_in_bytes": 32
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/sky.bands",
+        "path_type": "hardlink",
+        "sha256": "4ba7d35eb2e44f9b0f30c4497e3171b8daad00de61142ef8f3767dc5641c2e3b",
+        "sha256_in_prefix": "4ba7d35eb2e44f9b0f30c4497e3171b8daad00de61142ef8f3767dc5641c2e3b",
+        "size_in_bytes": 169
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skycomb.dat",
+        "path_type": "hardlink",
+        "sha256": "002507dadb6e76f4e14a6bfa0d1a2427c0e26ba3c3517013d333d1f651614296",
+        "sha256_in_prefix": "002507dadb6e76f4e14a6bfa0d1a2427c0e26ba3c3517013d333d1f651614296",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skycombha.dat",
+        "path_type": "hardlink",
+        "sha256": "17804615373cf92ed068cbceb1db4b91b929abafaa27ee78158899da6424555e",
+        "sha256_in_prefix": "17804615373cf92ed068cbceb1db4b91b929abafaa27ee78158899da6424555e",
+        "size_in_bytes": 201
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skylines.dat",
+        "path_type": "hardlink",
+        "sha256": "c6cf1eaa882111e6d9d7379d4df0523bf99ead1b5f40b2d551f680278f57ad05",
+        "sha256_in_prefix": "c6cf1eaa882111e6d9d7379d4df0523bf99ead1b5f40b2d551f680278f57ad05",
+        "size_in_bytes": 150
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skylinesha.dat",
+        "path_type": "hardlink",
+        "sha256": "3fbc441237cfb47d7f5035549d564db0731727549a4df51c1f48cafa34c1f9c6",
+        "sha256_in_prefix": "3fbc441237cfb47d7f5035549d564db0731727549a4df51c1f48cafa34c1f9c6",
+        "size_in_bytes": 535
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skynao.dat",
+        "path_type": "hardlink",
+        "sha256": "71f368adf258f557a9eadbfadd5708e008924bbcc4f12f4882c5c8773fe07cc8",
+        "sha256_in_prefix": "71f368adf258f557a9eadbfadd5708e008924bbcc4f12f4882c5c8773fe07cc8",
+        "size_in_bytes": 187
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skyolines.dat",
+        "path_type": "hardlink",
+        "sha256": "bbbdf2e670c463279b6b81c8ea2a3d2c6b6ace3508dfb44672d4451e77f54cc3",
+        "sha256_in_prefix": "bbbdf2e670c463279b6b81c8ea2a3d2c6b6ace3508dfb44672d4451e77f54cc3",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skysearch.dat",
+        "path_type": "hardlink",
+        "sha256": "6f2a3e1175f76e62c3edef92064ccc83d13e49e7a16dd9b1c77cb5a4fd3c2391",
+        "sha256_in_prefix": "6f2a3e1175f76e62c3edef92064ccc83d13e49e7a16dd9b1c77cb5a4fd3c2391",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skytemp.dat",
+        "path_type": "hardlink",
+        "sha256": "37b54eec01d91363612d5c0fd70889826f2b02610c19706b1ab5eccc89e69a3f",
+        "sha256_in_prefix": "37b54eec01d91363612d5c0fd70889826f2b02610c19706b1ab5eccc89e69a3f",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/skytempha.dat",
+        "path_type": "hardlink",
+        "sha256": "09bce2fcfd552156fb55d42c31380bef4b4047fe6be880182fdb29ed5cfa4a98",
+        "sha256_in_prefix": "09bce2fcfd552156fb55d42c31380bef4b4047fe6be880182fdb29ed5cfa4a98",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/sum.com",
+        "path_type": "hardlink",
+        "sha256": "0b41ff7b943dbf84c748f664f96819dffbc76560f6d9cfd82f1877e0622cd96f",
+        "sha256_in_prefix": "0b41ff7b943dbf84c748f664f96819dffbc76560f6d9cfd82f1877e0622cd96f",
+        "size_in_bytes": 1308
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/wrcomb.dat",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/wrlines.dat",
+        "path_type": "hardlink",
+        "sha256": "8cc80c472b94973fd6296c16ae3767a307c240fd541f6f0255344e93768b1508",
+        "sha256_in_prefix": "8cc80c472b94973fd6296c16ae3767a307c240fd541f6f0255344e93768b1508",
+        "size_in_bytes": 124
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/wrtemp.dat",
+        "path_type": "hardlink",
+        "sha256": "74f57760d338bc5bf69b464418b4ed47242b7fa35f1a5bea214ae57970cae184",
+        "sha256_in_prefix": "74f57760d338bc5bf69b464418b4ed47242b7fa35f1a5bea214ae57970cae184",
+        "size_in_bytes": 347
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/xcv.h",
+        "path_type": "hardlink",
+        "sha256": "8786ab2cbaf254e2f99d31850fb8a4d7566357f3690d80eb2053f438220b5120",
+        "sha256_in_prefix": "8786ab2cbaf254e2f99d31850fb8a4d7566357f3690d80eb2053f438220b5120",
+        "size_in_bytes": 1315
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/zzsetenv.def",
+        "path_type": "hardlink",
+        "sha256": "8487fdacf968f2922eec8f0d719c509d0a91714a317de86a26226df4cbfd318d",
+        "sha256_in_prefix": "8487fdacf968f2922eec8f0d719c509d0a91714a317de86a26226df4cbfd318d",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/zzsetenv2.def",
+        "path_type": "hardlink",
+        "sha256": "673f6fd1e84948d76344e04b16e4f2f90c854448a482dc9c53c6bb393174e48e",
+        "sha256_in_prefix": "673f6fd1e84948d76344e04b16e4f2f90c854448a482dc9c53c6bb393174e48e",
+        "size_in_bytes": 141
+      },
+      {
+        "_path": "iraf_extern/rvsao/lib/zzsetenv22.def",
+        "path_type": "hardlink",
+        "sha256": "ab8fce79775871127d37919e989422206b7be2032e45e0786c51c4932f9ee2bd",
+        "sha256_in_prefix": "ab8fce79775871127d37919e989422206b7be2032e45e0786c51c4932f9ee2bd",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "iraf_extern/rvsao/linespec.par",
+        "path_type": "hardlink",
+        "sha256": "574069c602ebf56235e0fbb0d700f33962c779ecffd8c1b9addc51ef50f109a6",
+        "sha256_in_prefix": "574069c602ebf56235e0fbb0d700f33962c779ecffd8c1b9addc51ef50f109a6",
+        "size_in_bytes": 1420
+      },
+      {
+        "_path": "iraf_extern/rvsao/listspec.par",
+        "path_type": "hardlink",
+        "sha256": "63edaf8c079578d29ce907e9f1c2c803499986b1ffb037ee23048d9cd214144b",
+        "sha256_in_prefix": "63edaf8c079578d29ce907e9f1c2c803499986b1ffb037ee23048d9cd214144b",
+        "size_in_bytes": 1333
+      },
+      {
+        "_path": "iraf_extern/rvsao/logfile",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "iraf_extern/rvsao/mkpkg",
+        "path_type": "hardlink",
+        "sha256": "a6fd8c37e848cf539bce0b0dfac5be7ba476940a4d5d00060694242712c783d0",
+        "sha256_in_prefix": "a6fd8c37e848cf539bce0b0dfac5be7ba476940a4d5d00060694242712c783d0",
+        "size_in_bytes": 1040
+      },
+      {
+        "_path": "iraf_extern/rvsao/mkpkg.inc",
+        "path_type": "hardlink",
+        "sha256": "2311c05fbb1aafc1aab601591605e3f5df6e5d62e9defdd5f31bacf11513fab9",
+        "sha256_in_prefix": "2311c05fbb1aafc1aab601591605e3f5df6e5d62e9defdd5f31bacf11513fab9",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "iraf_extern/rvsao/numrec_list.txt",
+        "path_type": "hardlink",
+        "sha256": "23c496011c3eb2a46dd3b17825963e670d072f4a5cdd61f94f4da5467a2a1ada",
+        "sha256_in_prefix": "23c496011c3eb2a46dd3b17825963e670d072f4a5cdd61f94f4da5467a2a1ada",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "iraf_extern/rvsao/pemsao.par",
+        "path_type": "hardlink",
+        "sha256": "600f52dcb28358f6531f20123c10a08c032f164831e26365c990668e6d8e7814",
+        "sha256_in_prefix": "600f52dcb28358f6531f20123c10a08c032f164831e26365c990668e6d8e7814",
+        "size_in_bytes": 4382
+      },
+      {
+        "_path": "iraf_extern/rvsao/pix2wl.par",
+        "path_type": "hardlink",
+        "sha256": "b3f71e8825adad0c019448616fae969a34e5a12c5fca4d7f845a620e8bd31fc6",
+        "sha256_in_prefix": "b3f71e8825adad0c019448616fae969a34e5a12c5fca4d7f845a620e8bd31fc6",
+        "size_in_bytes": 741
+      },
+      {
+        "_path": "iraf_extern/rvsao/pxcsao.par",
+        "path_type": "hardlink",
+        "sha256": "a939e4985d9949027a9baf7eb268e4877683eaf2be94ba3b33fd837bd1969108",
+        "sha256_in_prefix": "a939e4985d9949027a9baf7eb268e4877683eaf2be94ba3b33fd837bd1969108",
+        "size_in_bytes": 5334
+      },
+      {
+        "_path": "iraf_extern/rvsao/r2rvsao.cl",
+        "path_type": "hardlink",
+        "sha256": "a20be08e129f787726083b0204d7c576bf38cd487ee54e55d74491d42de4910c",
+        "sha256_in_prefix": "a20be08e129f787726083b0204d7c576bf38cd487ee54e55d74491d42de4910c",
+        "size_in_bytes": 457
+      },
+      {
+        "_path": "iraf_extern/rvsao/r2rvsao.hd",
+        "path_type": "hardlink",
+        "sha256": "901591eda2a04317f70a0b02abc593d9928c1c606195d44a14fc99ee00956c9e",
+        "sha256_in_prefix": "901591eda2a04317f70a0b02abc593d9928c1c606195d44a14fc99ee00956c9e",
+        "size_in_bytes": 726
+      },
+      {
+        "_path": "iraf_extern/rvsao/r2rvsao.men",
+        "path_type": "softlink",
+        "sha256": "96073601134930f59659666083eb0f97ac91e92984a234cad29dda7f71016595",
+        "size_in_bytes": 1764
+      },
+      {
+        "_path": "iraf_extern/rvsao/r2rvsao.msg",
+        "path_type": "softlink",
+        "sha256": "bacca4f4277cec5533b4def798c8bcf4da4317b290343248b520342fd710a68b",
+        "size_in_bytes": 374
+      },
+      {
+        "_path": "iraf_extern/rvsao/r2rvsao.par",
+        "path_type": "softlink",
+        "sha256": "39820626772c85331cfcd868e0d2669c898736d745d88513bbe899f74e6b8cd8",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "iraf_extern/rvsao/rtest.cl",
+        "path_type": "softlink",
+        "sha256": "a43d3e24b64aa99cedbcf923daede981e5bad6f6f01dd6df08bc35ffe3df68a7",
+        "size_in_bytes": 952
+      },
+      {
+        "_path": "iraf_extern/rvsao/rtest.hd",
+        "path_type": "softlink",
+        "sha256": "b93ea5fa865c94b946f9e90ce7885a72ec39f44c17b51cee787959b8beb0078b",
+        "size_in_bytes": 1255
+      },
+      {
+        "_path": "iraf_extern/rvsao/rtest.men",
+        "path_type": "softlink",
+        "sha256": "96073601134930f59659666083eb0f97ac91e92984a234cad29dda7f71016595",
+        "size_in_bytes": 1764
+      },
+      {
+        "_path": "iraf_extern/rvsao/rtest.msg",
+        "path_type": "softlink",
+        "sha256": "bacca4f4277cec5533b4def798c8bcf4da4317b290343248b520342fd710a68b",
+        "size_in_bytes": 374
+      },
+      {
+        "_path": "iraf_extern/rvsao/rtest.par",
+        "path_type": "softlink",
+        "sha256": "39820626772c85331cfcd868e0d2669c898736d745d88513bbe899f74e6b8cd8",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "iraf_extern/rvsao/rvsao.cl",
+        "path_type": "hardlink",
+        "sha256": "a43d3e24b64aa99cedbcf923daede981e5bad6f6f01dd6df08bc35ffe3df68a7",
+        "sha256_in_prefix": "a43d3e24b64aa99cedbcf923daede981e5bad6f6f01dd6df08bc35ffe3df68a7",
+        "size_in_bytes": 952
+      },
+      {
+        "_path": "iraf_extern/rvsao/rvsao.hd",
+        "path_type": "hardlink",
+        "sha256": "b93ea5fa865c94b946f9e90ce7885a72ec39f44c17b51cee787959b8beb0078b",
+        "sha256_in_prefix": "b93ea5fa865c94b946f9e90ce7885a72ec39f44c17b51cee787959b8beb0078b",
+        "size_in_bytes": 1255
+      },
+      {
+        "_path": "iraf_extern/rvsao/rvsao.men",
+        "path_type": "hardlink",
+        "sha256": "96073601134930f59659666083eb0f97ac91e92984a234cad29dda7f71016595",
+        "sha256_in_prefix": "96073601134930f59659666083eb0f97ac91e92984a234cad29dda7f71016595",
+        "size_in_bytes": 1764
+      },
+      {
+        "_path": "iraf_extern/rvsao/rvsao.msg",
+        "path_type": "hardlink",
+        "sha256": "bacca4f4277cec5533b4def798c8bcf4da4317b290343248b520342fd710a68b",
+        "sha256_in_prefix": "bacca4f4277cec5533b4def798c8bcf4da4317b290343248b520342fd710a68b",
+        "size_in_bytes": 374
+      },
+      {
+        "_path": "iraf_extern/rvsao/rvsao.par",
+        "path_type": "hardlink",
+        "sha256": "39820626772c85331cfcd868e0d2669c898736d745d88513bbe899f74e6b8cd8",
+        "sha256_in_prefix": "39820626772c85331cfcd868e0d2669c898736d745d88513bbe899f74e6b8cd8",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "iraf_extern/rvsao/rvupdate.msg",
+        "path_type": "hardlink",
+        "sha256": "4184bf9544088514b7823dca3fa3494090d926f2723afcbabb110d756ff333fa",
+        "sha256_in_prefix": "4184bf9544088514b7823dca3fa3494090d926f2723afcbabb110d756ff333fa",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "iraf_extern/rvsao/spectemps",
+        "path_type": "hardlink",
+        "sha256": "d1a77fa86a3fca6c71c0c3bea4d2745dffd6c9d8cf58cd10c3479bce37ebeed8",
+        "sha256_in_prefix": "d1a77fa86a3fca6c71c0c3bea4d2745dffd6c9d8cf58cd10c3479bce37ebeed8",
+        "size_in_bytes": 81
+      },
+      {
+        "_path": "iraf_extern/rvsao/sumspec.par",
+        "path_type": "hardlink",
+        "sha256": "fd4b2ca0b6963c95bf9edf51172775238434822095a8fa3e0de3c77b7bd4ebb5",
+        "sha256_in_prefix": "fd4b2ca0b6963c95bf9edf51172775238434822095a8fa3e0de3c77b7bd4ebb5",
+        "size_in_bytes": 3425
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/EA.fits",
+        "path_type": "hardlink",
+        "sha256": "624e0857bf0d5c1899adee8b3be3d3003206609b6e705648f30501734684cafb",
+        "sha256_in_prefix": "624e0857bf0d5c1899adee8b3be3d3003206609b6e705648f30501734684cafb",
+        "size_in_bytes": 37440
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/Readme",
+        "path_type": "hardlink",
+        "sha256": "2562fb4d9b34476a2b4a4fad46173e5ef5646fcfc3036ae45676c590208f2768",
+        "sha256_in_prefix": "2562fb4d9b34476a2b4a4fad46173e5ef5646fcfc3036ae45676c590208f2768",
+        "size_in_bytes": 3003
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/astartemp.fits",
+        "path_type": "hardlink",
+        "sha256": "9c1bf1d102f556da91fdec8d3bee1eb3fdee5b93c4587d7e15c5ebc9a572aa25",
+        "sha256_in_prefix": "9c1bf1d102f556da91fdec8d3bee1eb3fdee5b93c4587d7e15c5ebc9a572aa25",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/ax1.fits",
+        "path_type": "hardlink",
+        "sha256": "f4a954a93ee95aa0ce3bb1ef219cb4b41c729bf158da42966e01674f4fc7f4b9",
+        "sha256_in_prefix": "f4a954a93ee95aa0ce3bb1ef219cb4b41c729bf158da42966e01674f4fc7f4b9",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/eatemp.fits",
+        "path_type": "hardlink",
+        "sha256": "fbf3c643692aa42c6be16f7295082ad9d44609460df9b8bdcf81a4f37862ddd8",
+        "sha256_in_prefix": "fbf3c643692aa42c6be16f7295082ad9d44609460df9b8bdcf81a4f37862ddd8",
+        "size_in_bytes": 37440
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/eltemp.fits",
+        "path_type": "hardlink",
+        "sha256": "2d307f9da9a93c3e3ed756584b86ed100915cd5633ebc4432e3cbbf855526a71",
+        "sha256_in_prefix": "2d307f9da9a93c3e3ed756584b86ed100915cd5633ebc4432e3cbbf855526a71",
+        "size_in_bytes": 37440
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/f86btemp.fits",
+        "path_type": "hardlink",
+        "sha256": "b07affeee97eee40f8408edbb9abd175021bd1c9999f24c563a66ad693a51864",
+        "sha256_in_prefix": "b07affeee97eee40f8408edbb9abd175021bd1c9999f24c563a66ad693a51864",
+        "size_in_bytes": 17280
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/f86btemp0.fits",
+        "path_type": "hardlink",
+        "sha256": "a0a39d2d83870fab1ffd332e1523940c5d649c4c811951fbdd6c1dfa8b835090",
+        "sha256_in_prefix": "a0a39d2d83870fab1ffd332e1523940c5d649c4c811951fbdd6c1dfa8b835090",
+        "size_in_bytes": 20160
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fabtemp97.fits",
+        "path_type": "hardlink",
+        "sha256": "26ae68a9facf9391c8892e86e6c31942cf4cf69965b1bd9ee4d74a1d20001838",
+        "sha256_in_prefix": "26ae68a9facf9391c8892e86e6c31942cf4cf69965b1bd9ee4d74a1d20001838",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fallstars.fits",
+        "path_type": "hardlink",
+        "sha256": "42773ce27407db1d16769002b17216c4255bc771dbb1570e38d8b1981d2c7a0a",
+        "sha256_in_prefix": "42773ce27407db1d16769002b17216c4255bc771dbb1570e38d8b1981d2c7a0a",
+        "size_in_bytes": 60480
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/femtemp.fits",
+        "path_type": "hardlink",
+        "sha256": "0ed2b24e2fd354585d9a4bea8ef00b087be0a6823e8f1713f23c939d0982b57e",
+        "sha256_in_prefix": "0ed2b24e2fd354585d9a4bea8ef00b087be0a6823e8f1713f23c939d0982b57e",
+        "size_in_bytes": 86400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/femtemp97.fits",
+        "path_type": "hardlink",
+        "sha256": "7299364f7fafa67eab4a4ef250ce24f3c243e7b578396f6c27f9d3da6a074b98",
+        "sha256_in_prefix": "7299364f7fafa67eab4a4ef250ce24f3c243e7b578396f6c27f9d3da6a074b98",
+        "size_in_bytes": 46080
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/femtemphe.fits",
+        "path_type": "hardlink",
+        "sha256": "7fe12a3a56c8fca8063652809c0a7a3bc6acac4f1e7bcb5c122e5c49a7bff78e",
+        "sha256_in_prefix": "7fe12a3a56c8fca8063652809c0a7a3bc6acac4f1e7bcb5c122e5c49a7bff78e",
+        "size_in_bytes": 86400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fglotemp.fits",
+        "path_type": "hardlink",
+        "sha256": "10f58a373a353bd25f636fa062cff753211db8bf58cd56a04d92c274f044f81b",
+        "sha256_in_prefix": "10f58a373a353bd25f636fa062cff753211db8bf58cd56a04d92c274f044f81b",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fm32temp.fits",
+        "path_type": "hardlink",
+        "sha256": "9a54d4717ab6d0c1ba5f0e862b5eb0ccc1d187841bdba6eeb89fbcabbff971b5",
+        "sha256_in_prefix": "9a54d4717ab6d0c1ba5f0e862b5eb0ccc1d187841bdba6eeb89fbcabbff971b5",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fn4486btemp.fits",
+        "path_type": "hardlink",
+        "sha256": "e55b4503645658fd56b5f87050b974975248371249e974dc57d5f8d5f7f655a2",
+        "sha256_in_prefix": "e55b4503645658fd56b5f87050b974975248371249e974dc57d5f8d5f7f655a2",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fn5548temp.fits",
+        "path_type": "hardlink",
+        "sha256": "619b0767a489b274c98444a19cd6380c22843221caeb93d7825aad00600991d6",
+        "sha256_in_prefix": "619b0767a489b274c98444a19cd6380c22843221caeb93d7825aad00600991d6",
+        "size_in_bytes": 25920
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fn7331temp.fits",
+        "path_type": "hardlink",
+        "sha256": "21113058980fb070223c8bfc26ede886893ad3281f22acc199f54e203a01af69",
+        "sha256_in_prefix": "21113058980fb070223c8bfc26ede886893ad3281f22acc199f54e203a01af69",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fs2temp.fits",
+        "path_type": "hardlink",
+        "sha256": "ee4ce22be48bc46622d9f3ab57d2d8340fb8485781873c20ba5413be535f6ebf",
+        "sha256_in_prefix": "ee4ce22be48bc46622d9f3ab57d2d8340fb8485781873c20ba5413be535f6ebf",
+        "size_in_bytes": 25920
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/fztemp97.fits",
+        "path_type": "hardlink",
+        "sha256": "30982ad8c6b78e319f414418efde133c4c6b3295f9dea3ffb8b31d1333cb23f1",
+        "sha256_in_prefix": "30982ad8c6b78e319f414418efde133c4c6b3295f9dea3ffb8b31d1333cb23f1",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/habtemp0.fits",
+        "path_type": "hardlink",
+        "sha256": "408e1b933d11684d74c62820ca8f86709e53372d0fcf6d66a3b1462089108199",
+        "sha256_in_prefix": "408e1b933d11684d74c62820ca8f86709e53372d0fcf6d66a3b1462089108199",
+        "size_in_bytes": 25920
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/habtemp90.fits",
+        "path_type": "hardlink",
+        "sha256": "fe498cf152109093007b5a1ae1c28204e101ca72d477be62ae779647c77610c1",
+        "sha256_in_prefix": "fe498cf152109093007b5a1ae1c28204e101ca72d477be62ae779647c77610c1",
+        "size_in_bytes": 25920
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/hemtemp0.0.fits",
+        "path_type": "hardlink",
+        "sha256": "be91368b476e0483d6ed7f2cf69a90e26482de50180e5e64d2296c4a0446c2a8",
+        "sha256_in_prefix": "be91368b476e0483d6ed7f2cf69a90e26482de50180e5e64d2296c4a0446c2a8",
+        "size_in_bytes": 66240
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/hemtemp0.5.fits",
+        "path_type": "hardlink",
+        "sha256": "d9343ecb4927e8e0b9c40f846b571af249ebc4f220f6791c5b4a282e2a2600ad",
+        "sha256_in_prefix": "d9343ecb4927e8e0b9c40f846b571af249ebc4f220f6791c5b4a282e2a2600ad",
+        "size_in_bytes": 66240
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/hemtemp0.fits",
+        "path_type": "hardlink",
+        "sha256": "8578f4bbccdc50714c97aab810823e878eef81bca10f9d4dd8cd00bb88026842",
+        "sha256_in_prefix": "8578f4bbccdc50714c97aab810823e878eef81bca10f9d4dd8cd00bb88026842",
+        "size_in_bytes": 72000
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/hkabstemp.fits",
+        "path_type": "hardlink",
+        "sha256": "5da2b60baeab210208ed69a75033649704728ce9c0cfb6b4363e6d5de1a851a5",
+        "sha256_in_prefix": "5da2b60baeab210208ed69a75033649704728ce9c0cfb6b4363e6d5de1a851a5",
+        "size_in_bytes": 167040
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/m31_a_temp.fits",
+        "path_type": "hardlink",
+        "sha256": "d7124e5846b002c27caa93ed005723ba013e50affefca6b9eee9e7714c3650f5",
+        "sha256_in_prefix": "d7124e5846b002c27caa93ed005723ba013e50affefca6b9eee9e7714c3650f5",
+        "size_in_bytes": 28800
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/m31_f_temp.fits",
+        "path_type": "hardlink",
+        "sha256": "b033b28608e08cfa15ab28e3d57c3268cc1051a1073b605a680f4bcea2b3cdc0",
+        "sha256_in_prefix": "b033b28608e08cfa15ab28e3d57c3268cc1051a1073b605a680f4bcea2b3cdc0",
+        "size_in_bytes": 34560
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/m31_k_temp.fits",
+        "path_type": "hardlink",
+        "sha256": "077a5b52983832c6fafcca6ffc219c6287ab00066e81e0a9d4bc49b63f8a9811",
+        "sha256_in_prefix": "077a5b52983832c6fafcca6ffc219c6287ab00066e81e0a9d4bc49b63f8a9811",
+        "size_in_bytes": 31680
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/mx1.fits",
+        "path_type": "hardlink",
+        "sha256": "1abfd191c92be507c473779b6e90b10616fd2319237fe9ee7577072595593bd5",
+        "sha256_in_prefix": "1abfd191c92be507c473779b6e90b10616fd2319237fe9ee7577072595593bd5",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/sdss_qso.fits",
+        "path_type": "hardlink",
+        "sha256": "93c9e3f2db2f55e910562579eefdb02139284a4c92cb1f717774b07b8462bce7",
+        "sha256_in_prefix": "93c9e3f2db2f55e910562579eefdb02139284a4c92cb1f717774b07b8462bce7",
+        "size_in_bytes": 34560
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/splot.par",
+        "path_type": "hardlink",
+        "sha256": "0532aca937277de8587b0bf6d63bd5d329a33bd4a3cb1e673598997201a2ca5a",
+        "sha256_in_prefix": "0532aca937277de8587b0bf6d63bd5d329a33bd4a3cb1e673598997201a2ca5a",
+        "size_in_bytes": 3813
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/sptemp.fits",
+        "path_type": "hardlink",
+        "sha256": "2ee0bef33219dedfc1c1d7562b1ab5a96e7f1f3d7fe3ac0a6874f8c9ffe4ef66",
+        "sha256_in_prefix": "2ee0bef33219dedfc1c1d7562b1ab5a96e7f1f3d7fe3ac0a6874f8c9ffe4ef66",
+        "size_in_bytes": 37440
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/sx1.fits",
+        "path_type": "hardlink",
+        "sha256": "78a7b841a794a9fdbb6a232bc330952d55f2b6ef4748f60999da6daddfffc76d",
+        "sha256_in_prefix": "78a7b841a794a9fdbb6a232bc330952d55f2b6ef4748f60999da6daddfffc76d",
+        "size_in_bytes": 14400
+      },
+      {
+        "_path": "iraf_extern/rvsao/templates/ztemp.fits",
+        "path_type": "hardlink",
+        "sha256": "a3ea5316d30241cfe8b605561bdaccca8e16e66a83454d51527ffcb2c19743de",
+        "sha256_in_prefix": "a3ea5316d30241cfe8b605561bdaccca8e16e66a83454d51527ffcb2c19743de",
+        "size_in_bytes": 11520
+      },
+      {
+        "_path": "iraf_extern/rvsao/ur_extern.pkg",
+        "path_type": "hardlink",
+        "sha256": "14b8cc001427431435d6a900523a76feb78ffe37ddfd957d610f35a0ec1f7d07",
+        "sha256_in_prefix": "14b8cc001427431435d6a900523a76feb78ffe37ddfd957d610f35a0ec1f7d07",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "iraf_extern/rvsao/ur_manifest",
+        "path_type": "hardlink",
+        "sha256": "43cb05a62884f94f4b09e8947d605f2db3b1b10d8544f59ce86c3875f13ac75b",
+        "sha256_in_prefix": "43cb05a62884f94f4b09e8947d605f2db3b1b10d8544f59ce86c3875f13ac75b",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "iraf_extern/rvsao/ur_mkpkg_cmd",
+        "path_type": "hardlink",
+        "sha256": "f3b3c79aef88ba951c5bc47c7959197810f854d66e4d8ecf0ff10540e8b3a35b",
+        "sha256_in_prefix": "f3b3c79aef88ba951c5bc47c7959197810f854d66e4d8ecf0ff10540e8b3a35b",
+        "size_in_bytes": 499
+      },
+      {
+        "_path": "iraf_extern/rvsao/ur_mkpkg_patterns",
+        "path_type": "hardlink",
+        "sha256": "8ae07a211835db93c7583a371b3cd1f7ac3db4b6616dfc5d9553a9abe4f1ce00",
+        "sha256_in_prefix": "8ae07a211835db93c7583a371b3cd1f7ac3db4b6616dfc5d9553a9abe4f1ce00",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "iraf_extern/rvsao/velset.par",
+        "path_type": "hardlink",
+        "sha256": "c7a146693a7810a1572d6510d3ef85c68db16cde2ee6a1305751908670940b29",
+        "sha256_in_prefix": "c7a146693a7810a1572d6510d3ef85c68db16cde2ee6a1305751908670940b29",
+        "size_in_bytes": 344
+      },
+      {
+        "_path": "iraf_extern/rvsao/wl2pix.par",
+        "path_type": "hardlink",
+        "sha256": "7cf1c56fd1c51eeed3ef9e6b52e121a2a05680bc58eb72efe24258b0a654d09d",
+        "sha256_in_prefix": "7cf1c56fd1c51eeed3ef9e6b52e121a2a05680bc58eb72efe24258b0a654d09d",
+        "size_in_bytes": 649
+      },
+      {
+        "_path": "iraf_extern/rvsao/wlrange.par",
+        "path_type": "hardlink",
+        "sha256": "56426c6ddc261b1a9c6fb5a71af9677aebd14ad730846f6003aa8024039aba14",
+        "sha256_in_prefix": "56426c6ddc261b1a9c6fb5a71af9677aebd14ad730846f6003aa8024039aba14",
+        "size_in_bytes": 1385
+      },
+      {
+        "_path": "iraf_extern/rvsao/x_rvsao.x",
+        "path_type": "hardlink",
+        "sha256": "acf5da2ff06b90c681c573f7c9cfc26c4749c66a23757e8556c03f107bba0d92",
+        "sha256_in_prefix": "acf5da2ff06b90c681c573f7c9cfc26c4749c66a23757e8556c03f107bba0d92",
+        "size_in_bytes": 275
+      },
+      {
+        "_path": "iraf_extern/rvsao/xcsao.log",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "iraf_extern/rvsao/xcsao.par",
+        "path_type": "hardlink",
+        "sha256": "4ac0b5deab50b9dd1c8e2f68e021440b4359da70efe7f9f6b94ceeb5965a6fef",
+        "sha256_in_prefix": "4ac0b5deab50b9dd1c8e2f68e021440b4359da70efe7f9f6b94ceeb5965a6fef",
+        "size_in_bytes": 4994
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 4361393,
+  "subdir": "linux-64",
+  "timestamp": 1553893143743,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/iraf.rvsao-2.7.8-2.tar.bz2",
+  "version": "2.7.8"
+}

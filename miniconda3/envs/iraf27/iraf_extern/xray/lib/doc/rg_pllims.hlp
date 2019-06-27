@@ -1,0 +1,155 @@
+#$Header: /home/pros/xray/lib/doc/RCS/rg_pllims.hlp,v 11.0 1997/11/06 16:23:17 prosb Exp $
+#$Log: rg_pllims.hlp,v $
+#Revision 11.0  1997/11/06 16:23:17  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:31:23  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:36:27  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:20:20  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:01:48  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:21:27  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:11:00  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:47:59  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:36:00  pros
+#General Release 1.0
+#
+.help rg_plvallims Jan89 REGIONS_Library
+NAME
+.in 4
+rg_pllims - get min amd max mask value and x and/or y coordinate limits
+.sp
+.in -4
+USAGE
+.in 4
+call rg_pllims (pl, vmin, vmax, xmin, xmax, ymin, ymax)
+.sp
+.in -4
+PARAMETERS
+.in 4
+.nf
+Input Arguments: (see description)
+	pl	pointer		handle to open pixel list
+	xmin	int		code or subsection specifier
+	xmax	int		optional subsection specifier
+	ymin	int		code or subsection specifier
+	ymax	int		optional subsection specifier
+
+Output Arguments: (see description)
+
+	vmin	int		min mask value
+	vmax	int		max mask value
+	xmin	int		min x coordinate of a non-zero mask pixel
+	xmax	int		max x coordinate of a non-zero mask pixel
+	ymin	int		min y coordinate of a non-zero mask pixel
+	ymax	int		max y coordinate of a non-zero mask pixel
+.fi
+.sp
+.in -4
+DESCRIPTION
+.in 4
+The subroutine rg_pllims returns the minimum and maximum mask values of
+a pl or pm mask within the returned x and y limits.  The x and y limits can
+be given or returned according to the following rules.
+
+If x1 is greater than 0, x1 and x2 are treated as a subsection specification
+within which to determine vmin and vmax (and ymin and ymax if y1 is given as
+0).  x2 must be equal to or greater than x1.  If x1 is 0, x2 is ignored and
+xmin and xmax are set to the minimum and maximum x coordinates of non-zero
+mask values (within a specified y subsection if one is given).  If x1 is -1,
+x2 is ignored and xmin and xmax are set to the physical x limits of the mask
+(1 and axlen[1]).
+
+If y1 is greater than 0, y1 and y2 are treated as a subsection specification
+within which to determine vmin and vmax (and xmin and xmax if x1 is given as
+0).  y2 must be equal to or greater than y1.  If y1 is 0, y2 is ignored and
+ymin and ymax are set to the minimum and maximum y coordinates of non-zero
+mask values (within a specified x subsection if one is given).  If y1 is -1,
+y2 is ignored and ymin and ymax are set to the physical x limits of the mask
+(1 and axlen[1]).
+.sp
+.in -4
+EXAMPLES
+.in 4
+This routine is used by rg_pldisp to determine the extent of mask to represent
+in the display and the range of values within that extent.
+.in 8
+.nf
+procedure rg_pldisp ( pl, cols, rows, x1, x2, y1, y2 )
+
+pointer pl		# i: handle for pl access
+int	cols		# i: number of columns in display
+int	rows		# i: number of rows to use for display
+int	x1, x2		# i: subsection specified or as per code in x1
+int	y1, y2		# i: subsection specified or as per code in y1
+
+long	v[PL_MAXDIM]	# l: array of axis starting indeces (MAXDIM=7)
+pointer	sp		# l: stack pointer
+pointer lbuf		# l: line buffer
+int	vmin, vmax	# l: lowest and highest region values in mask
+int	xmin, xmax	# l: actual range of x values to be used
+int	ymin, ymax	# l: actual range of y values to be used
+int	xinc, yinc	# l: subsample rates in x and y directions
+int	width, height	# l: pl width and height
+int	digits		# l: digits needed for highest region val
+int	i		# l: loop counter
+
+int	rg_digits()
+
+begin
+	# calculate display parameters
+	# move subsample input to locally usable variables
+	xmin = x1
+	xmax = x2
+	ymin = y1
+	ymax = y2
+	# determine mask limits (measured or assigned)
+	call rg_pllims (pl, vmin, vmax, xmin, xmax, ymin, ymax)
+	width = 1 + xmax - xmin
+	height = 1 + ymax - ymin
+	# get number of digits needed per table column
+	digits = rg_digits (vmax)
+	# compute subsampling rates
+	xinc = ((width * digits - 1) / (cols - LABELSZ)) + 1
+	yinc = ((height - 1) / rows) + 1
+	# allocate pixel list buffer for one row
+	call smark (sp)
+	call salloc (lbuf, width, TY_LONG)
+	# initialize axis starting values
+	call amovki (1, v, PL_MAXDIM)
+	v[1] = xmin
+	call printf("\n")
+	# loop through subsampled lines from top (screen scrolls up)
+	do i = ymax, ymin, -yinc {
+	    v[2] = i
+	    # get a line as a pixel list
+	    call pl_glpl (pl, v, Meml[lbuf], 27, width, 0)
+	    # represent that line as an ascii string to STDOUT
+	    call rg_lndisp (Meml[lbuf], width, i, xinc, digits, cols)
+	}
+	# add column numbers at the very bottom
+	call rg_lnlabel (xmin, xmax, xinc, digits, cols)
+	call sfree (sp)
+end
+.fi
+.sp
+.in -12
+BUGS
+.sp
+SEE ALSO
+.in4
+regions (a description of the ASCII region descriptor, in the spatial
+doc directory), rg_pldisp, rg_plvallims.

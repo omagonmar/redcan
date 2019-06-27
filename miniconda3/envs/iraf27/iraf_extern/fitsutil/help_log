@@ -1,0 +1,24 @@
+-- creating a new uparm directory
+Terminal types: xgterm,xterm,gterm,vt640,vt100,etc.
+Enter terminal type [default dumb]: A new LOGIN.CL file has been created in the current directory.
+You may wish to review and edit this file to change the defaults.
+You may also add additional customizations to loginuser.cl
+
+PATH: /fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/iraf_extern/fitsutil/
+
+Make helpdb for package fitsutil
+  1            root (fitsutil$lib/root.hd): 1 help modules
+  2    rootfitsutil (fitsutil$lib/rootfitsutil.hd): 1 help modules
+  3        fitsutil (fitsutil$fitsutil.hd): 16 help modules
+  0                 (_index): 3 help modules
+
+Total of 21 help modules in 3 packages, file size 3902 bytes
+
+Make apropos.db for package fitsutil
+  1            root (fitsutil$lib/root.hd): 1 help modules
+  2    rootfitsutil (fitsutil$lib/rootfitsutil.hd): 1 help modules
+  3        fitsutil (fitsutil$fitsutil.hd): 16 help modules
+
+ACCESS helpdb.mip: YES
+ACCESS apropos.db: YES
+

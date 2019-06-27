@@ -1,0 +1,30 @@
+#$Log: _specinfo.par,v $
+#Revision 11.0  1997/11/06 16:37:12  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:00:40  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:23:21  prosb
+#General Release 2.3.1
+#
+#Revision 1.1  94/05/06  16:53:37  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/RCS/_specinfo.par,v 11.0 1997/11/06 16:37:12 prosb Exp $
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+# parameter file for specinfo
+specifier,s,a,"",,,"FITS filename OR sequence number"
+is_valid,b,h,,,,"Is specifier valid?"
+is_fits,b,h,,,,"Is specifier a FITS file?"
+seq,i,h,,,,"Sequence number (if specifier isn't FITS)"
+inst,s,h,,,,"instrument [hri|ipc|unknown]"
+datatype,s,h,,,,"datatype [event|image|slew|unscreened|unknown]"
+is_list,b,h,,,,"Is specifier a list filename?"
+filename,s,h,,,,"filename (if specifier is a list)"
+display,i,h,1,0,5,"display level"
+

@@ -1,0 +1,14 @@
+vcheb44.dat was computed by L. Davis using taken taken on the ctio
+4m during July 1999.
+
+vpoly44.dat was computed by F. Valdes using the same data but a different
+fitting function.
+
+Old/	+
+vcheb44.dat -> Old/vcheb44.dat
+vpoly44.dat -> Old/vpoly.dat
+    Old WCS solution moved to OLD directory.  (1/6/01, Valdes)
+
+CAL0101/	+
+CAL0101/rcheb44.dat	+
+    Solution by L. Davis using 16ch data.

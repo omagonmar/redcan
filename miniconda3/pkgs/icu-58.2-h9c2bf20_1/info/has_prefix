@@ -1,0 +1,8 @@
+/opt/anaconda1anaconda2anaconda3 text bin/icu-config
+/opt/anaconda1anaconda2anaconda3 text lib/icu/58.2/Makefile.inc
+/opt/anaconda1anaconda2anaconda3 text lib/icu/58.2/pkgdata.inc
+/opt/anaconda1anaconda2anaconda3 text lib/pkgconfig/icu-i18n.pc
+/opt/anaconda1anaconda2anaconda3 text lib/pkgconfig/icu-io.pc
+/opt/anaconda1anaconda2anaconda3 text lib/pkgconfig/icu-uc.pc
+/tmp/build/80754af9/icu_1510861820315/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_ binary lib/libicutu.a
+/tmp/build/80754af9/icu_1510861820315/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_ binary lib/libicutu.so.58.2

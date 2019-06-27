@@ -1,0 +1,3 @@
+# Root help directory for the MEM0 package, vesion C.
+
+_mem0			pkg = mem0$lib/rootmem0.hd

@@ -1,0 +1,80 @@
+.help xspec_interface Mar94 xray
+.ih
+NAME
+xspec_interface -- how to convert data into XSPEC PHA files
+.ih
+DESCRIPTION
+
+Versions of XSPEC after 8.2 can fit data in either SF (Standard Format) 
+or FITS format.  Two files must be specified to fit data in XSPEC, and 
+both must be generated outside of XSPEC.  One file is the spectral table 
+file which contains the net counts and errors in each energy bin.  The 
+second file is the response matrix (actually the convolution of the 
+redistribution matrix and the effective area appropriate for the location 
+on the detector of the extracted source photons).
+
+
+In PROS 2.3 (released 1993 December) the output from qpspec was changed to 
+conform to the RDF FITS standards.  After extracting a spectrum with qpspec, 
+the data must be converted into pre-RDF format with the task downspecrdf.
+This task combines the 3 RDF spectral table files (extensions _obs.tab, 
+_soh.tab, _boh.tab) into a single pre-RDF spectral table file (extension 
+_prdf_obs.tab).  Then, outside of IRAF, the task proscon should be used
+to generate the SF format spectral table file (extension .pha) and SF format 
+response matrix (extension .rsp).  Proscon uses the source off-axis histogram 
+to generate a response matrix with the correct effective area for the source 
+position on the detector.
+
+Note: The output from the PROS 2.3 version of downspecrdf was not always 
+compatible with proscon.  An updated version of proscon is now available via 
+anonymous ftp from the GSFC node "legacy.gsfc.nasa.gov"  in the subdirectory
+
+.nf
+	/rosat/software/fortran/proscon/proscon_sun.tar.Z
+.fi
+
+For on-axis sources, the output from qpspec can be converted directly into 
+an OGIP fits format pha file with the tasks stsdas.stwfits and 
+ftools.caltools.stw2pha.  As of FTOOLS 2.8, however, there is not a way 
+generate a response matrix for an off-axis source.
+
+.ih
+SUMMARY
+
+To convert spectral table files into XSPEC PHA files execute the following 
+commands:
+
+.nf
+In iraf:
+
+	xs> qpspec
+	xs> downspecrdf
+
+Outside of iraf:
+
+	) proscon
+.fi
+.ih
+COMPARISON BETWEEN SPECTRAL MODELS IN XSPEC AND PROS
+
+Prior to XSPEC 8.4, the Fe abundance in the Raymond model was given relative 
+to the solar value and not the cosmic value as in PROS.  Direct comparisons 
+between PROS and XSPEC can be done by setting:
+
+.nf
+	XSPEC Fe abundance = 1.26 PROS Fe abundance
+.fi
+
+In versions of XSPEC starting with 8.4, the Fe abundance is measured relative 
+to the cosmic value.
+
+Galactic absorption in both XSPEC and PROS is approximated as a piecewise
+cubic polynomial.   Wabs in XSPEC and abs in PROS use identical
+energy boundaries and coefficients for the polynomials.  PROS calculates
+the absorption based on the central energy in each PI bin.  XSPEC performs 
+a different numerical approximation when there is an edge within a given 
+PI energy bin.  The difference between the two models is only noticeable in 
+soft, highly absorbed spectra around the carbon edge.  The difference is 
+only about 3% which is less than the 10% systematic errors in the PSPC 
+response matrix at the carbon edge.
+.endhelp

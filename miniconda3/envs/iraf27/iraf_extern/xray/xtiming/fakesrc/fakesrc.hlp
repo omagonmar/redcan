@@ -1,0 +1,122 @@
+#$Header: /home/pros/xray/xtiming/fakesrc/RCS/fakesrc.hlp,v 11.0 1997/11/06 16:44:21 prosb Exp $
+#$Log: fakesrc.hlp,v $
+#Revision 11.0  1997/11/06 16:44:21  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:33:27  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:39:24  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:00:35  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:56:28  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:48:22  prosb
+#General Release 2.1
+#
+#Revision 2.0  91/03/06  22:40:47  pros
+#General Release 1.0
+#
+.help fakesrc Jan90 xray.timing
+.ih
+NAME
+fakesrc - Create artificial data based on a pulse profile, and store as an
+.xpr file.
+.ih
+USAGE
+fakesrc
+.ih
+PARAMETERS
+.ls source_file (auto string) 			prompt = "pulse profile file name"
+Required input in a special pulse profile format: a text file, with numbers in
+two columns. The first column is the rate, in counts per time unit, and the
+second is the length of time that the pulse stays at that rate, in that block.
+If it later goes back, a seperate entry is required.  The program counts the
+entries, and the total pulse length.  The file will be named exactly as 
+entered. Also, this file will be requested twice. Enter identically both times.
+.le
+
+.ls qpoe (auto string)				prompt = "output file name"
+Name of qpoe file to which to output data.
+.le
+
+.ls length_of_acquisition (auto real)		prompt = "length of acquisition"
+The amount of time units of data to be generated.
+.le
+
+.ls sequence_number (auto int)			prompt = "sequence number to use"
+Sequence number to put in the header.
+.le
+
+.ls title (auto string)				prompt = "title of QPOE data"
+Title to put into QPOE header.
+.le
+
+.ls profile_file (hidden string)
+The name of the file in which to store data which can be binned to form a pulse
+profile.  This is included to test to see how accurately the program generates
+a given profile. If set to "NONE", it will not open such a file. This is the
+default.
+.le
+
+.ls display (hidden int)
+Output display level. 0 menas display virtually nothing, 5, everything.
+.le
+
+.ls clobber (hidden bool)
+Whether or not to destroy already existing files.
+.le
+
+.ls datarep (hidden int)
+This is a dummy variable. It is necessary for qpcreate, but should never be 
+actually used.
+.le
+
+.ls header (hidden string)
+Also a dummy variable. Nominally the name of the file containing header 
+information, since \fIfakesrc\fR creates its own header, this is ignored.
+.le
+
+.ls qp_internals (hidden boolean)
+Also qp_pagesize, qp_bucketlen, qp_blockfactor, qp_mkindex, qp_key, and 
+qp_debug: all qpcreate variables, for which the default values should be 
+generally fine for fakesrc.
+.le
+
+.ih
+DESCRIPTION
+\fIFakesrc\fR artificially creates sample data with which one can test other
+timing routines.  It expects a file containing a pulse profile of the data it
+must generate, and it outputs its data in QPOE format.
+
+
+
+.ih
+EXAMPLES
+
+.nf
+1.  Generate sample data for a near-delta function
+
+    ti>!cat > sample.rate
+    10.0     9.9
+    1000.0   0.1
+    ^D
+    ti>faksource
+    ti>
+
+.fi
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+.nf
+	TIMSORT	- for sorting the qpoe sile to time order
+	FOLD	- for binning all of the cycles into one
+	TIMPLOT	- for ploting the data
+.endhelp

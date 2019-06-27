@@ -1,0 +1,30 @@
+# $Header: /home/pros/xray/xtiming/RCS/vartst.par,v 11.0 1997/11/06 16:46:06 prosb Exp $
+# $Log: vartst.par,v $
+# Revision 11.0  1997/11/06 16:46:06  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:32:44  prosb
+# General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:37:58  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:04:41  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:55:15  prosb
+#General Release 2.2
+#
+#Revision 1.1  93/05/21  18:42:56  mo
+#Initial revision
+#
+#
+#  vartst .PAR 
+#  vartst task parameters
+#
+source_file,s,a,,,,"Input Source Timing File (root_sti.qp)"
+var_file,s,a,,,,"Root name for output files [root(_var.tab,_ig1,_ig2.cmd)]"
+bandwidth,r,h,95,90.0|95.0|99.0,,"cdf confidence band width"
+display,i,h,1,0,5,"Display Level"
+clobber,b,h,no,,,"Clobber"
+get_gintvs,b,h,yes,,,"Get good intvs from qpoe"

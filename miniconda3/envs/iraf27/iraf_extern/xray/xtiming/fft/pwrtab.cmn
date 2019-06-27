@@ -1,0 +1,22 @@
+pointer	tp
+real	freqmin
+real	freqmax
+int	binmin
+int	binmax
+real	cpowermin
+real	cpowermax
+real	npowermin
+real	npowermax
+pointer	bincolptr
+pointer	freqcolptr
+pointer	cpowercolptr
+pointer	npowercolptr
+int	xrctr
+pointer	source
+pointer	bkgd
+
+common /pwrtab/ tp, freqmin, freqmax, binmin, binmax,
+	                cpowermin, cpowermax, npowermin, npowermax,
+                        bincolptr, freqcolptr, 
+			cpowercolptr,npowercolptr,xrctr,source,bkgd
+		

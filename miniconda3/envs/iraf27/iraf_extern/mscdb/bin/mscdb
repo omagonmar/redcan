@@ -1,0 +1,4 @@
+# Create tar file excluding caldirs.
+
+cd ..
+tar cfX - bin/caldirs noao | compress > mscdb.tar.Z

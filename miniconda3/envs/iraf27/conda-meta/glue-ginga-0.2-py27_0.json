@@ -1,0 +1,302 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "astropy >=1.2",
+    "ginga >=2.6.1",
+    "glueviz >=0.10",
+    "numpy",
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/glue-ginga-0.2-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/entry_points.txt",
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/not-zip-safe",
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/requires.txt",
+    "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/glue_ginga/__init__.py",
+    "lib/python2.7/site-packages/glue_ginga/__init__.pyc",
+    "lib/python2.7/site-packages/glue_ginga/conftest.py",
+    "lib/python2.7/site-packages/glue_ginga/conftest.pyc",
+    "lib/python2.7/site-packages/glue_ginga/plugins/Glue.py",
+    "lib/python2.7/site-packages/glue_ginga/plugins/Glue.pyc",
+    "lib/python2.7/site-packages/glue_ginga/plugins/__init__.py",
+    "lib/python2.7/site-packages/glue_ginga/plugins/__init__.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/__init__.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/__init__.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/layer_artist.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/layer_artist.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/mouse_modes.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/mouse_modes.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/tests/__init__.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/tests/__init__.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/tests/test_viewer_widget.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/tests/test_viewer_widget.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/utils.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/utils.pyc",
+    "lib/python2.7/site-packages/glue_ginga/qt/viewer_widget.py",
+    "lib/python2.7/site-packages/glue_ginga/qt/viewer_widget.pyc",
+    "lib/python2.7/site-packages/glue_ginga/tests/__init__.py",
+    "lib/python2.7/site-packages/glue_ginga/tests/__init__.pyc",
+    "lib/python2.7/site-packages/glue_ginga/version.py",
+    "lib/python2.7/site-packages/glue_ginga/version.pyc"
+  ],
+  "fn": "glue-ginga-0.2-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/glue-ginga-0.2-py27_0",
+    "type": 1
+  },
+  "md5": "f9082123b619262831e68b8dba47901c",
+  "name": "glue-ginga",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/glue-ginga-0.2-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "05be9a911d3fcaaa5dab64f46157b52463cd64837724d74fa2da8ea35606f367",
+        "sha256_in_prefix": "05be9a911d3fcaaa5dab64f46157b52463cd64837724d74fa2da8ea35606f367",
+        "size_in_bytes": 326
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "f8414d3a0d9a191a4837b88a633babb96d362ccd556682014f8b6e9e3c535532",
+        "sha256_in_prefix": "f8414d3a0d9a191a4837b88a633babb96d362ccd556682014f8b6e9e3c535532",
+        "size_in_bytes": 625
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "d4d7d79650c8f3e05324e435b8f7c574e501b6d74241f290404c948f811a07c7",
+        "sha256_in_prefix": "d4d7d79650c8f3e05324e435b8f7c574e501b6d74241f290404c948f811a07c7",
+        "size_in_bytes": 39
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "90859afec683b5fff27657af08e344de1e9a78663b63e53160279ff54007d401",
+        "sha256_in_prefix": "90859afec683b5fff27657af08e344de1e9a78663b63e53160279ff54007d401",
+        "size_in_bytes": 31
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga-0.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "693e310b791aadd19a3bf24615769c240ff9fc1045eeb2b3cf7a16544707cdb7",
+        "sha256_in_prefix": "693e310b791aadd19a3bf24615769c240ff9fc1045eeb2b3cf7a16544707cdb7",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "97bd4296ecfa5c1a378f51d7a4488b780183a42c4c598d45cd31c4f203aa7897",
+        "sha256_in_prefix": "97bd4296ecfa5c1a378f51d7a4488b780183a42c4c598d45cd31c4f203aa7897",
+        "size_in_bytes": 322
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "f16d880a7f191a2c4c1eae67e94273f508ee45550ea120a5e7375f5ca03ba0a2",
+        "sha256_in_prefix": "f16d880a7f191a2c4c1eae67e94273f508ee45550ea120a5e7375f5ca03ba0a2",
+        "size_in_bytes": 719
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "d903b4d4ec4192b183abf7c2e7ab22742f10f8131e264c4f5d58ec5bda0f61da",
+        "sha256_in_prefix": "d903b4d4ec4192b183abf7c2e7ab22742f10f8131e264c4f5d58ec5bda0f61da",
+        "size_in_bytes": 297
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/conftest.pyc",
+        "path_type": "hardlink",
+        "sha256": "def193895cb726b6679a0cc4af19951cf0fcceb77a840275f6025327208b4bae",
+        "sha256_in_prefix": "def193895cb726b6679a0cc4af19951cf0fcceb77a840275f6025327208b4bae",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/plugins/Glue.py",
+        "path_type": "hardlink",
+        "sha256": "713f42f3fb4ad7b61828bb2499ed3b19d730da4263a9fa422c3adb6c74f2246c",
+        "sha256_in_prefix": "713f42f3fb4ad7b61828bb2499ed3b19d730da4263a9fa422c3adb6c74f2246c",
+        "size_in_bytes": 11903
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/plugins/Glue.pyc",
+        "path_type": "hardlink",
+        "sha256": "bc8a4fc07983952e999c552304f539d2a792f9512b36376d8b51b6d18d1d228b",
+        "sha256_in_prefix": "bc8a4fc07983952e999c552304f539d2a792f9512b36376d8b51b6d18d1d228b",
+        "size_in_bytes": 15558
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/plugins/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/plugins/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "ac9401f221dea3f051add668de69b329773696666c18d173103f4e742f1dc5ab",
+        "sha256_in_prefix": "ac9401f221dea3f051add668de69b329773696666c18d173103f4e742f1dc5ab",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "c132b99430285b65ba0ec695b2d4387f8d293e055556b9f8f59f1dbbb89794ed",
+        "sha256_in_prefix": "c132b99430285b65ba0ec695b2d4387f8d293e055556b9f8f59f1dbbb89794ed",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/layer_artist.py",
+        "path_type": "hardlink",
+        "sha256": "a51c579c00924f01c43ae33fd178b2697b060b770663df20527e6530d2490908",
+        "sha256_in_prefix": "a51c579c00924f01c43ae33fd178b2697b060b770663df20527e6530d2490908",
+        "size_in_bytes": 9105
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/layer_artist.pyc",
+        "path_type": "hardlink",
+        "sha256": "7724632f6837ada2e055f2e6f54b11c746371c4dd597a9d5d5d44fce80372336",
+        "sha256_in_prefix": "7724632f6837ada2e055f2e6f54b11c746371c4dd597a9d5d5d44fce80372336",
+        "size_in_bytes": 12828
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/mouse_modes.py",
+        "path_type": "hardlink",
+        "sha256": "aca57a60bdf3b9e6594d8887516a435a74cda4f3ca21060ce83d7b0101403791",
+        "sha256_in_prefix": "aca57a60bdf3b9e6594d8887516a435a74cda4f3ca21060ce83d7b0101403791",
+        "size_in_bytes": 18397
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/mouse_modes.pyc",
+        "path_type": "hardlink",
+        "sha256": "6b1f4a6d54b153d0b8cb474d26acbb24370efbf1031c17f132043bec41d56a0a",
+        "sha256_in_prefix": "6b1f4a6d54b153d0b8cb474d26acbb24370efbf1031c17f132043bec41d56a0a",
+        "size_in_bytes": 28245
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "586bca25ddc94680ee7f90f7e70c3d9e36c345d459bef74681e9fcbc954362b9",
+        "sha256_in_prefix": "586bca25ddc94680ee7f90f7e70c3d9e36c345d459bef74681e9fcbc954362b9",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/tests/test_viewer_widget.py",
+        "path_type": "hardlink",
+        "sha256": "0fd1844a96dc57ce5a13c9eaaf548ae5e35676b35bf55205a1ba1569a21db364",
+        "sha256_in_prefix": "0fd1844a96dc57ce5a13c9eaaf548ae5e35676b35bf55205a1ba1569a21db364",
+        "size_in_bytes": 316
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/tests/test_viewer_widget.pyc",
+        "path_type": "hardlink",
+        "sha256": "f9f1a1caefe39ff66c71c6d5d6b3c2d417f900d715e5eae68a34f546c4ee556e",
+        "sha256_in_prefix": "f9f1a1caefe39ff66c71c6d5d6b3c2d417f900d715e5eae68a34f546c4ee556e",
+        "size_in_bytes": 831
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/utils.py",
+        "path_type": "hardlink",
+        "sha256": "90d586322a9a823b02fe0cb6d05624155e81460296afe668b11954531fa57080",
+        "sha256_in_prefix": "90d586322a9a823b02fe0cb6d05624155e81460296afe668b11954531fa57080",
+        "size_in_bytes": 2121
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/utils.pyc",
+        "path_type": "hardlink",
+        "sha256": "87ef351dc53774c4776921b1dbe027ce68586d2ecf66dc3f39e1e08cd5e9cf86",
+        "sha256_in_prefix": "87ef351dc53774c4776921b1dbe027ce68586d2ecf66dc3f39e1e08cd5e9cf86",
+        "size_in_bytes": 2836
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/viewer_widget.py",
+        "path_type": "hardlink",
+        "sha256": "1adc69fdadafbbe77f59df5de7db89ac0765934067373baae21378d51b0ab608",
+        "sha256_in_prefix": "1adc69fdadafbbe77f59df5de7db89ac0765934067373baae21378d51b0ab608",
+        "size_in_bytes": 9518
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/qt/viewer_widget.pyc",
+        "path_type": "hardlink",
+        "sha256": "55c02196a3408d23a8a4b5b8bcc17b54374ed5664426b37d32c3cd808343b5e0",
+        "sha256_in_prefix": "55c02196a3408d23a8a4b5b8bcc17b54374ed5664426b37d32c3cd808343b5e0",
+        "size_in_bytes": 10792
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/tests/__init__.pyc",
+        "path_type": "hardlink",
+        "sha256": "10f1f228138b5c8bed74a988807a63d5bd82a35e1f3d1c36794ab8bca35a42c6",
+        "sha256_in_prefix": "10f1f228138b5c8bed74a988807a63d5bd82a35e1f3d1c36794ab8bca35a42c6",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/version.py",
+        "path_type": "hardlink",
+        "sha256": "332ba97e9d7c11565a704e13a7ba98a98a62984f1358926bfb3423ac1c082620",
+        "sha256_in_prefix": "332ba97e9d7c11565a704e13a7ba98a98a62984f1358926bfb3423ac1c082620",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python2.7/site-packages/glue_ginga/version.pyc",
+        "path_type": "hardlink",
+        "sha256": "533e0e9df635b982e79dbcbf311fb8c96abca5e43429a6a00a28d8b3059382f5",
+        "sha256_in_prefix": "533e0e9df635b982e79dbcbf311fb8c96abca5e43429a6a00a28d8b3059382f5",
+        "size_in_bytes": 191
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 32968,
+  "subdir": "linux-64",
+  "timestamp": 1510045665709,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/glue-ginga-0.2-py27_0.tar.bz2",
+  "version": "0.2"
+}

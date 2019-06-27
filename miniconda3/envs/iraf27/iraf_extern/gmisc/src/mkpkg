@@ -1,0 +1,33 @@
+# Make the GMISC package
+
+$call	relink
+$exit
+
+update:
+	$call	relink
+	$call	install
+	;
+
+relink:
+	$set	LIBS = "-lsmw -lxtools -liminterp"
+	$update	libpkg.a
+	$omake	x_gmisc.x
+	$link	x_gmisc.o libpkg.a $(LIBS) -o xx_gmisc.e
+	;
+
+install:
+	$move	xx_gmisc.e gmiscbin$x_gmisc.e
+	;
+
+
+libpkg.a:
+	@gdispcor
+	@gscombine
+	@gstandard
+
+	getcmd.x	<error.h> <ctotok.h> <lexnum.h>
+	nhedit.x	<ctype.h> <error.h> <evexpr.h> <imset.h> <lexnum.h>
+	t_ldisplay.x	<ctype.h> <error.h> <fset.h> <gset.h> <imhdr.h>\
+			<mwset.h> <pkg/gtools.h> <smw.h> <units.h>
+	t_skymask.x	<imhdr.h> <pmset.h>
+	;

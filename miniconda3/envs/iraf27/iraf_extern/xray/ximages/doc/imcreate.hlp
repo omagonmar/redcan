@@ -1,0 +1,141 @@
+#$Header: /home/pros/xray/ximages/doc/RCS/imcreate.hlp,v 11.0 1997/11/06 16:25:48 prosb Exp $
+#$Log: imcreate.hlp,v $
+#Revision 11.0  1997/11/06 16:25:48  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:33:10  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:43:04  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/08  11:27:35  prosb
+#Brought help file up to date.
+#
+#Revision 7.0  93/12/27  18:22:57  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:04:43  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:23:41  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:15:40  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:16:00  prosb
+#General Release 1.1
+#
+#Revision 2.1  91/07/09  15:14:26  bent
+#xray.ximages 7/9/91
+#
+#Revision 2.0  91/03/06  23:50:17  pros
+#General Release 1.0
+#
+.help imcreate Jun94 xray.ximages
+.ih
+NAME
+imcreate -- create an IRAF image from input data or a constant
+.ih
+USAGE
+imcreate output_image output_dims output_datatype input_value input_datatype input_header
+.ih
+DESCRIPTION
+\fIimcreate\fR creates an IRAF image of size specified by the
+\fIoutput_dims\fR parameter and type specified by the
+\fIoutput_datatype\fR parameter. The value(s) of the pixels in the new
+image is determined by the \fIinput_value\fR parameter. If the input
+value is a numeral, \fIimcreate\fR will create an image with that
+value as a constant.
+
+If the input value is the name of an accessible file, \fIimcreate\fR
+will use the contents of that file as the values for the image.  In
+this case, the user must be intimately aquainted with the structure of
+the input file.  In particular, one must know the size of the header
+to be skipped, and the dimensionlity and data type of the data itself.
+These parameters are related to the file size as:
+.nf
+
+	input file size = ((dim1*dim2*...*dimn) *
+		sizeof(input type)) + hsize * SZB_CHAR
+
+.fi
+where dim1, dim2, ... dimn are the dimensions of the output file as
+specified in the \fIoutput_dims\fR parameter, hsize is the header size
+in SPP chars as specfied in the \fIinput_headersize\fR parameter,
+sizeof(input_type) is the size of the input type in SPP chars, and
+SZB_CHAR is a constant defined in <mach.h> equal to the number of
+machine bytes per SPP char. When a file is used as input, the data
+type of the input file is prompted for.  It need not be the same data
+type as the output.
+.ih
+PARAMETERS
+.ls output_image = ""		prompt = name of output image file
+
+Name of the output image file to be created.
+.le
+.ls output_dims = ""		prompt = dimensions in output image file
+
+A string of the form "dim1 dim2 dim3 ... dimn" specifying the
+number of dimensions and length of each dimension of the output image.
+The maximum number of dimensions is currently 7.
+.le
+.ls output_datat = "r"		prompt = data type of output image file
+
+The data type of the output image.  May be one of the following: silrdx.
+.le
+.ls input_value = ""		prompt = name of input file or a pixel value
+
+The name of a binary input file, or a pixel value when making a constant
+image.
+.le
+.ls input_datatype = "r"	prompt = data type of input file
+
+The data type of the binary input file.  May be one of the following: silrdx.
+.le
+.ls input_headersize = 0	prompt = size of header of input file in
+.nf
+					 SPP char
+.fi
+
+The size of the header of the input file in SPP chars.  An SPP char is
+not necessarily (or usually) one machine byte in length.  The number of
+machine bytes in an SPP char is given in <mach.h> in the define'd value
+SZB_CHAR.  For example, on the Sun 3/60 the value of SZB_CHAR is 2.
+.le
+.ls (output_title = "") [string]
+
+An image title to go into the image header.
+.le
+.ls (clobber = no) [string]
+
+Boolean flag specifying whether or not the IRAF image file can be overwritten,
+if it already exists.
+.le
+.ih
+EXAMPLES
+1. Create a 515 x 512 x 3 double image named foo with constant value
+101.
+
+	ni> imcreate foo "512 512 3" d 101
+
+2. Create a 9 x 4 int image named foo using a binary file foo.bin that
+contains 36 real*4 values, and a header 10 bytes long (assume 2 bytes
+per SPP char).
+
+	ni> imcreate foo "9 4" i foo.bin r 5
+.ih
+TIME REQUIREMENTS
+The time required depends on the speed of the IRAF IMIO.
+.ih
+BUGS
+It is not possible to skip a number of machine bytes in the header
+which is not a multiple of SZB_CHAR.
+
+This task is very simple-minded.  It attempts to provide a simple way
+to import arbitrary array data into IRAF.  Becuase of this, the user
+must know quite a lot about the input file structure.
+.ih
+SEE ALSO
+.endhelp

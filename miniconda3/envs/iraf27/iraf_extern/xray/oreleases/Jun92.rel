@@ -1,0 +1,100 @@
+		2.0.1 PROS patch for Sun
+			June 23, 1992
+
+	You must re-run UPQPOE210 on all existing QPOE
+files to correct the error of invalid 'DEADTC' values
+that exists in Einstein data.  ( Running UPQPOE210 for PROS 2.0
+did NOT correct this specific bug. )  As noted in the PROS 2.0
+release notes, the DEADTC ( dead-time correction) values for
+Einstein were incorrect.  They were in fact the reciprocal of
+the values.  This has been corrected in PROS 2.0.1 and
+existing QPOE files can be fixed by running UPQPOE210.
+	You must also 'unlearn pkgpars' in XSPECTRAL to
+activate the new parameter settings.
+
+	Output from APPLY_BARY from PROS 2.0 did NOT Correctly
+update the GTI records and the DEFFILT records.  The symptom
+of this bug was that a 'display' or a 'qplist' of this
+file always showed a total of 0 events.  This bug has been fixed in
+PROS 2.0.1.
+
+	RFITS2PROS was failing to convert the EPHEMERIS
+files needed for timing analysis, due to a bad calling sequence.
+This has been corrected in PROS 2.0.1.
+
+	Support has been added for the latest Einstein CDROM
+release of IPC event lists.  A macro has been added to the system
+to describe that format.  It is called 'FULL'.
+
+	The patch consists of a TAR of the source files.  Although
+just a small number of files have changed, some of the changes
+involved libraries and therefore all libraries and executables
+must be remade, or replaced with our binary release.  All calibration
+data remain unchanged.
+
+Detailed notes of fixes follow
+--------------------------------------------------------------------
+1.  XSPATIAL/DETECT
+Fix snrmap.cl for typo in 'a' for 9" detect size
+
+2.  XTIMING/TIMCOR
+Fix defaults for EPHEM column names:
+	/pros/xray/xtimng/timcor/calc_bary.par
+
+3.  XTIMING/TIMCOR
+Fix apply_bary for 'new' qpoe files
+	/pros/xray/xtiming/timcor/apply_bary/*.x
+
+4.  Fix QPCREATE routines for no GTI case
+	/pros/xray/lib/pros/times.x
+	
+5.  Make fixes so Einstein DEADTC is NOT stored as LIVETC.
+	/pros/xray/lib/qpcreate/qpcreate.x
+	/pros/xray/lib/pros/xhead.x
+	/pros/xray/lib/pros/uhead2qp.x
+	/pros/xray/lib/pros/rhead2qp.x
+
+6.  XDATAIO
+Fix RFITS2PROS for new TABLES/STRFITS parameters- ephemeris files only.
+	(script)
+
+7.  XPLOT
+Fix TVLABEL.CL to check for LISTS package ( not STSDAS )
+
+8.  XDATAIO
+Correct error message in xray.xdataio.xdataio.cl
+
+9.  XSPECTRAL
+Fix using.spectral to default to PSPC instrument 2
+
+10.  XSPECTRAL
+Fix xspectral$pkgpars to default to PSPC channels "2:34"
+Fix xspectral$pkgpars for 'xspectraldata$ prefix to "not.yet.available"
+in fact change this name as well to not use extra 'dots'
+
+--------------- Einstein CDROMS ----------------------
+11.  XDATAIO
+Fix xdataio$qpoe.cards to recognise BARYTIME parameter for 
+Einstein CD's
+
+12.  XDATAIO
+Fix FITS2QP for correct boolean pattern match
+
+13.  QPOE
+Fix EVENTDEFS.X for correct 'FULL' event definition.
+
+14.  XDATAIO/EINBB
+Fix dg.x to do correct 6 byte conversion for Einstein start times
+and add LEAP SECOND corrections to UHEAD2QP.  ( Used only at SAO. )
+	/pros/xray/lib/pros/dg.x
+	/pros/xray/lib/qpcreate/uhead2qp.x
+
+15.  Updated coords.hlp. 
+
+---------------- INSTALL--------------------------
+16.  XINSTALL
+Fix install script to convert 'compmat' in xspectraldata$
+
+17.  XINSTALL
+Fix rp_fits2pros and rh_fits2pros to convert the ".so" file.
+

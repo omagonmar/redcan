@@ -1,0 +1,134 @@
+#$Header: /home/pros/xray/xspectral/doc/RCS/bal_plot.hlp,v 11.0 1997/11/06 16:41:09 prosb Exp $
+#$Log: bal_plot.hlp,v $
+#Revision 11.0  1997/11/06 16:41:09  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:28:09  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:28:46  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:52:48  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  18:09:24  mo
+#MC	fix prompt
+#
+#Revision 6.0  93/05/24  16:47:20  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:42:11  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  15:26:55  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.2  92/04/22  11:36:48  prosb
+#Changed date.
+#
+#Revision 3.1  92/03/20  10:44:23  prosb
+#*** empty log message ***
+#
+#Revision 3.0  91/08/02  01:56:14  prosb
+#General Release 1.1
+#
+#Revision 2.3  91/08/01  18:21:13  prosb
+#jso - updated for Aug91
+#
+#Revision 2.1  91/07/08  15:29:22  mo
+#MC	7/8/91		Updated with the new PROS package structure
+#
+#Revision 2.0  91/03/06  23:09:20  pros
+#General Release 1.0
+#
+.help bal_plot Apr92 xray.xspectral
+.ih
+NAME
+bal_plot -- plots the BAL histogram for the current dataset (Einstein
+IPC data only).
+.ih
+USAGE
+bal_plot
+.ih
+DESCRIPTION
+
+Plots the BAL histogram for the indicated dataset.  Note that a BAL
+histogram is only meaningful for Einstein IPC data.  Also, note that
+the task leaves you in "cursor input" mode.  Type a "?" to obtain a
+help menu in cursor input mode.  Type a "q" to exit back to the CL.
+.ih
+PARAMETERS
+.ls observed = ""             prompt = observed spectrum [root_bal.tab]
+
+This is a package wide parameter, found in the pkgpars parameter file.
+
+The file name normally defaults to the data set just analyzed and
+will be set automatically.  However, for doing BAL_PLOTS that have
+not just been analyzed, please enter just the main filename root
+(before the '_') and the task will generate the correct filename
+extensions.
+
+.le
+.ls dataset_numb = 1                 prompt = data set number
+
+If there is more then one dataset given in the observed prompt, this parameter
+will be queried to determine which of these to plot.
+.le
+.ls (pkgpars = "") [pset]
+
+The name of the file containing the xspectral package wide parameters.  If the
+name is null ("") then the parameters found for the pkgpars task will be used.
+.le
+.ls (plot_title = "BAL histogram") [string]
+
+The title of the plot.
+.le
+.ls (x_axis_title = "BAL") [string]
+
+The x axis label.
+.le
+.ls (y_axis_title = "percent") [string]
+
+The y axis label.
+.le
+.ls (listout = no) [boolean]
+
+A boolean flag which indicates whether a listing is preferred instead
+of a plot.
+.le
+.ls (device = "stdgraph") [string]
+
+The output graphics device.
+.le
+.ls (cursor = "") [*gcur]
+
+Graphics cursor input.
+.le
+.ih
+EXAMPLES
+The following example shows how to display the BAL histogram for one
+data set.
+.nf
+
+	xs> bal_plot
+	observed spectrum [root_obs.tab]: snr
+
+	[Type "q" to quit from graphics display.]
+
+.fi
+.ih
+TIME REQUIREMENTS
+
+This task normally executes in less than 10 seconds.
+.ih
+BUGS AND LIMITATIONS
+
+The _obs.tab file name must not begin with a numeral.  Beginning the
+file names of these files with a numeral causes the parser to attempt
+to process the numeral, resulting in an error.
+.ih
+SEE ALSO
+
+counts_plot, grid_plot, pkgpars
+.endhelp

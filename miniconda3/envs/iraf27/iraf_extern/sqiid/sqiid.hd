@@ -1,0 +1,36 @@
+# Help directory for the IRKMM package 
+
+$doc   = "/u2/merrill/myprog/doc/"
+ 
+    $cleanup	hlp =doc$cleanup.hlp,		src = cleanup.cl
+    imclip	hlp =doc$imclip.hlp,		src = imclip.cl
+    imlinfit	hlp =doc$imlinfit.hlp,		src = imlinfit.cl
+    chlist	hlp =doc$chlist.hlp,		src = chlist.cl
+    colorlist	hlp =doc$colorlist.hlp,		src = colorlist.cl
+    closure	hlp =doc$closure.hlp,		src = closure.cl
+    expandnim	hlp =doc$expandnim.hlp,		src = expandnim.cl
+    getcoo	hlp =doc$getcoo.hlp,		src = getcoo.cl
+    invcoo	hlp =doc$invcoo.hlp,		src = invcoo.cl
+    show4 	hlp =doc$show4.hlp,		src = show4.cl
+    sqdark	hlp =doc$sqdark.hlp,		src = sqdark.cl
+    sqflat	hlp =doc$sqflat.hlp,		src = sqflat.cl
+    sqfocus	hlp =doc$sqfocus.hlp,		src = sqfocus.cl  
+    sqproc	hlp =doc$sqproc.hlp,		src = sqproc.cl
+    sqsky 	hlp =doc$sqsky.hlp,		src = sqsky.cl
+    getalign	hlp =doc$getalign.hlp,		src = getalign.cl  
+    getcenters	hlp =doc$getcenters.hlp,	src = getcenters.cl
+    getcombine	hlp =doc$getcombine.hlp,	src = getcombine.cl  
+    getlaps	hlp =doc$getlaps.hlp,		src = getlaps.cl
+    getmatch	hlp =doc$getmatch.hlp,		src = getmatch.cl  
+    getoffsets	hlp =doc$getoffsets.hlp,	src = getoffsets.cl  
+    linkalign	hlp =doc$linkalign.hlp,		src = linkalign.cl  
+    linklaps	hlp =doc$linklaps.hlp,		src = linklaps.cl
+    ircombine	hlp =doc$ircombine.hlp,		src = ircombine.cl  
+    nircombine	hlp =doc$nircombine.hlp,	src = nircombine.cl  
+    compose	hlp =doc$compose.hlp,		src = compose.cl  
+    sqmos	hlp =doc$sqmos.hlp,		src = sqmos.cl  
+    xyget	hlp =doc$xyget.hlp,		src = xyget.cl  
+    xyadopt	hlp =doc$xyadopt.hlp,		src = xyadopt.cl  
+    zget	hlp =doc$zget.hlp,		src = zget.cl  
+    ztrace	hlp =doc$ztrace.hlp,		src = ztrace.cl  
+    mkpathtbl	hlp =doc$mkpathtbl.hlp,		src = mkpathtbl.cl

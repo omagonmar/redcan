@@ -1,0 +1,12 @@
+.help revisions Sep00 esowfi
+.nf
+
+esosetinst.cl	+
+../esowfi.cl
+../esowfi.men
+../esowfi.hd
+    1.	Remove the automatic setting of parameters from the package script.
+    2.  Added a new task to set the package parameters.
+    (9/11/00, Valdes)
+
+.endhelp

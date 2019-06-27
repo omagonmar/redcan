@@ -1,0 +1,90 @@
+{
+  "build": "py27_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/heapdict-1.0.0-py27_2",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/zip-safe",
+    "lib/python2.7/site-packages/heapdict.py",
+    "lib/python2.7/site-packages/heapdict.pyc"
+  ],
+  "fn": "heapdict-1.0.0-py27_2.tar.bz2",
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/heapdict-1.0.0-py27_2",
+    "type": 1
+  },
+  "md5": "00567523f3207ade781fc66da3a1b822",
+  "name": "heapdict",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/heapdict-1.0.0-py27_2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "6cd84a91b49bc37c3e6d46dac93d6a9c4a1b63c89ac037c1799846579d91545e",
+        "sha256_in_prefix": "6cd84a91b49bc37c3e6d46dac93d6a9c4a1b63c89ac037c1799846579d91545e",
+        "size_in_bytes": 2211
+      },
+      {
+        "_path": "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "a7dbe507f75acbd8e84d89b242f972ccc7228577770f16376935de3690269c4e",
+        "sha256_in_prefix": "a7dbe507f75acbd8e84d89b242f972ccc7228577770f16376935de3690269c4e",
+        "size_in_bytes": 231
+      },
+      {
+        "_path": "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4aa2165a4f7fb22d2518da04292232a8a0efa380840fbc116f393e407a7c455f",
+        "sha256_in_prefix": "4aa2165a4f7fb22d2518da04292232a8a0efa380840fbc116f393e407a7c455f",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python2.7/site-packages/heapdict-1.0.0-py2.7.egg-info/zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/heapdict.py",
+        "path_type": "hardlink",
+        "sha256": "7dd1550aef6f50040b72b85be390392e4e2a1dee30871b4023fedcef846b6aa3",
+        "sha256_in_prefix": "7dd1550aef6f50040b72b85be390392e4e2a1dee30871b4023fedcef846b6aa3",
+        "size_in_bytes": 2836
+      },
+      {
+        "_path": "lib/python2.7/site-packages/heapdict.pyc",
+        "path_type": "hardlink",
+        "sha256": "ac25e9393c642b8b1954ba3abef00dc6229602e7aec87eba7110d89c9c36cbcd",
+        "sha256_in_prefix": "ac25e9393c642b8b1954ba3abef00dc6229602e7aec87eba7110d89c9c36cbcd",
+        "size_in_bytes": 4654
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 7880,
+  "subdir": "linux-64",
+  "timestamp": 1518029695426,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/heapdict-1.0.0-py27_2.tar.bz2",
+  "version": "1.0.0"
+}

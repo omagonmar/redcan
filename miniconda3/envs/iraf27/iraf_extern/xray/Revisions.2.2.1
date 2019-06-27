@@ -1,0 +1,61 @@
+#$Header: /tmp_mnt/home/pros/xray/RCS/Revisions,v 5.48 93/06/24 17:32:19 janet Exp Locker: prosb $
+#$Log:	Revisions,v $
+# Revision 5.48  93/06/24  17:32:19  janet
+# jd updates
+# 
+# Revision 5.47  93/06/17  17:34:43  dennis
+# *** empty log message ***
+# 
+# Revision 5.46  93/06/15  15:41:35  dennis
+# *** empty log message ***
+# 
+# Revision 5.45  93/06/10  11:52:42  prosb
+# jso
+# 
+# Revision 5.44  93/05/27  17:22:12  janet
+# jd timing updates.
+# 
+
+1.  /pros/xray/xtiming/ltcurv.x					JD  5/27/93
+    /pros/xray/xtiming/fold.x
+    /pros/xray/xtiming/period.x
+    /pros/xray/xtiming/timlib/persubs.x
+    /pros/xray/xtiming/fft/input_bins.x
+
+Put tim_cktime call immediately after the qpoe open.  If the file is not
+in time-order the user will know right after the filename input (ltcurv, 
+fold, period).   FFT a step closer but not complete, would take restructuring
+of several routines. 
+
+2. /pros/xray/xspatial/doc/rosprf.hlp				JSO 6/10/93
+
+Corrected usage lines.
+
+3. /pros/xray/lib/scan/scpool.x					DS 6/15/93
+Removed pointer type declaration of procedures sc_freeedge() & sc_fillpool().
+
+4. /pros/xray/lib/pros/getplims.x				DS 6/17/93
+Changed reference to streq() to the correct type (bool, not int).
+
+5. /pros/xray/xtiming/timlib/fld_phots.x			JD 6/22/93
+Changed an && statement to 2 statements to accomodate the way the 
+DEC station evaluates these conditionals.  Also fixed bug reported 
+by M. Garcia by initializing the src and bkgd counts to 0 when 
+entering the routine (tim_srcbin, tim_bkbin).  An old value was being 
+remembered when the task was run >1 time. 
+
+6.  /pros/xray/xproto/source/qpmax.x				MC 7/2/93
+			     qpproj.x
+			     qppower.x
+Removed explicit pathnames!
+
+7.  /pros/xray/lib/qpcreate/qpcreate_subs.x
+Fixed logic to correctly update ONTIME when copying		MC 7/2/93
+into a QPOE file with no 'time' (therefore no deffilt)
+(also for correctly updating deffilt in apply_bary)
+
+8.  /pros/xray/lib/pros/xhead.x					MC 7/2/93
+Added new routine fix_pspc() to force correct
+ROSAT/PSPC sub-instrument setting.
+
+

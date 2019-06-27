@@ -1,0 +1,37 @@
+.help disppars Jun97 finder
+.ih
+NAME
+disppars -- finder package image display parameters
+.ih
+USAGE
+disppars
+.ih
+PARAMETERS
+.ls frame = 1
+The frame number for displaying the image.
+.le
+.ls imcur = ""
+Source for the image cursor.
+.le
+.ls marker = "circle"
+The marker type for catalog or object sources.
+.le
+.ls omarker = "plus"
+The marker type for simply overlaying coordinates.
+.le
+.ls goodcolor = "blue"
+The color of the marker for good (centered) sources.
+.le
+.ls badcolor = "red"
+The color of the marker for bad (uncentered or deleted) sources.
+.le
+.ls objcolor = "green"
+The color of the marker for the program objects.
+.le
+.ih
+DESCRIPTION
+DISPPARS provides the image display parameters for the TFINDER and
+DSSFINDER tasks.
+.ih
+SEE ALSO
+.endhelp

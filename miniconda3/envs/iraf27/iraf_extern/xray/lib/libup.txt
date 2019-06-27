@@ -1,0 +1,46 @@
+			PROS Library Update Request
+
+
+Source file:	
+
+PROS library:
+
+Programmers name:
+
+Date:
+
+Modification or Addition(pick one):
+
+Description of change:
+
+
+
+
+
+
+
+
+
+Programs affected:
+	< You should be able to name at least one - which prompted the
+		change.  Maybe you know it will affect a lot.          >
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+Librarian use only:
+Date entered:
+
+Date remade:
+
+Problems encountered:
+
+Librarian:
+------------------------------------------------------------------------
+

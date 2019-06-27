@@ -1,0 +1,179 @@
+#$Header: /home/pros/xray/xtiming/timcor/doc/RCS/calc_bary.hlp,v 11.0 1997/11/06 16:45:43 prosb Exp $ 
+#$Log: calc_bary.hlp,v $
+#Revision 11.0  1997/11/06 16:45:43  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:36:15  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:44:25  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/15  16:10:21  janet
+#jd - removed rev0 reference, changed to pre-rdf.
+#
+#Revision 7.0  93/12/27  19:05:29  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  18:24:04  mo
+#JD/MC	RDF updates
+#
+#Revision 6.0  93/05/24  17:01:08  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  23:07:31  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/22  10:01:46  janet
+#krm updates from fds.
+#
+#Revision 4.0  92/04/27  15:40:30  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.1  92/04/13  16:05:01  jmoran
+#Initial revision
+#	
+#
+.help calc_bary Apr92 xray.xtiming.timcor
+.ih
+NAME
+calc_bary -- calculates the barycenter corrections for the orbit data 
+.ih
+USAGE
+calc_bary input_table output_table RA DEC 
+.ih
+DESCRIPTION
+\fIcalc_bary\fR calculates the barycenter corrections for the ephemeris
+data and produces a table of corrected orbit times.  The input table file
+should contain all of the split orbit data from multiple observations in a 
+single table.  
+
+It has been found that duplicate records sometimes appear in the ephemeris
+file.  If duplicate records are detected, the record is only written once 
+to the correction table and a message is displayed.  
+
+The split orbit table file is produced by the task \fIRFITS2PROS\fR.
+The table is labelled with a "_eph.tab" extension.
+
+The output table contains four columns: 
+.nf
+	1) integer part of uncorrected orbit time UT time
+	2) real part of uncorrected orbit time in UT time
+	3) integer part of corrected orbit time UT time
+	4) real part of corrected orbit time in UT time
+
+.fi
+The output table is used as input to the task \fIapply_bary\fR.
+
+NOTE:   \fIcalc_bary\fR MUST be run before \fIapply_bary\fR
+
+.ih
+PARAMETERS
+.ls split_orb = ""		prompt = input split orbit table filename
+
+The input split orbit table file name.  
+.le
+.ls orb_corr = ""		prompt = output correction table filename
+
+The output table that will be used by the task \fIcalc_bary\fR
+.le
+.ls st_alp = "" 		prompt = input RA (hh:mm:ss.s)
+
+The RA of the source.
+.le
+.ls st_dec = ""			prompt = input DEC (dd:mm:ss.s)
+
+The DEC of the source.
+.le
+.ls  (ephem_fname = "xtimingdata$de200.tab") [string]
+
+The table name containing the ephemeris date for the barycenter corrections.
+.le
+.ls (day_col = "MJD_INT") [string]
+
+The date column name of the input table.
+.le
+.ls (sec_col = "MJD_FRAC") [string]
+
+The seconds column name of the input table.
+.le
+.ls (xsat_col = "SAT_X") [string]
+
+The x-position of the satellite column name of the input table.
+.le
+.ls (ysat_col = "SAT_Y") [string]
+
+The y-position of the satellite column name of the input table.
+.le
+.ls (zsat_col = "SAT_Z") [string]
+
+The z-position of the satellite column name of the input table.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file can be overwritten,
+if it already exists.
+.le
+.ls (display = 1) [int]
+
+The display level. A display level of 0 generates no display.  A display level
+of 1 generates a display of header information.
+.le
+.ih
+EXAMPLES
+
+1. Compute the correction table from ephemeris data.  Though the user 
+   does not have to know this explicitly, you will notice that the input
+   file is in pre-rdf format.  The file is first converted to RDF  
+   format, a new file (us_ephem.tab) is created, and then the correction 
+   table (us_cor.tab) is computed from this intermediate table. 
+
+.nf
+cl> xray
+xr> xtiming
+xt> timcor
+ti> calc_bary
+input ephemeris table: ../usarlac_eph.tab
+output correction root (_cor.tab): us
+input RA (hh:mm:ss.s): 22:07:16.8
+input DEC (dd:mm:ss.s): 45:42:0.0
+
+Converting Rev0 US format EPH file to RDF format ...
+Opening file: ../usarlac_eph.tab
+40 rows written to output table.
+Wrote to file: us_ephem.tab
+
+Computing Correction table ...
+Opening file: us_ephem.tab
+Wrote to Correction table: us_cor.tab
+.fi
+
+2. Compute correction table from ephemeris data.  Though the user does 
+   not have to know this explicitly, you will notice that the input file
+   is in RDF format.  No file conversion is performed before the 
+   correction table in computed. 
+
+.nf
+ti> calc_bary
+input ephemeris table: ../rdfarlac_eph.tab
+output correction root (_cor.tab): rdf
+input RA (hh:mm:ss.s): 22:07:16.8
+input DEC (dd:mm:ss.s): 45:42:0.0
+
+RDF input ... No conversion!!
+
+Computing Correction table ...
+Opening file: ../rdfarlac_eph.tab
+Wrote to Correction table: rdf_cor.tab
+.fi
+
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+Documentation on the apply barycenter task (\fIhelp apply_bary\fR) 
+for more information on the barycenter routines
+.endhelp
+

@@ -1,0 +1,82 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/docopt-0.6.2-py27_0",
+  "features": "",
+  "files": [
+    "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/PKG-INFO",
+    "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/SOURCES.txt",
+    "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/dependency_links.txt",
+    "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/top_level.txt",
+    "lib/python2.7/site-packages/docopt.py",
+    "lib/python2.7/site-packages/docopt.pyc"
+  ],
+  "fn": "docopt-0.6.2-py27_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/docopt-0.6.2-py27_0",
+    "type": 1
+  },
+  "md5": "dd56352afdf166bb91f8db4e5fda35d1",
+  "name": "docopt",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/docopt-0.6.2-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "fd7d31e84e7f48c0ee013ba13a7369db9c652a0acbb941d24e159cf7894cf6c8",
+        "sha256_in_prefix": "fd7d31e84e7f48c0ee013ba13a7369db9c652a0acbb941d24e159cf7894cf6c8",
+        "size_in_bytes": 21525
+      },
+      {
+        "_path": "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "c42ee9af9d4df8b6d6a4420d58b6599364fd3c35a45216cca2e84831530d178e",
+        "sha256_in_prefix": "c42ee9af9d4df8b6d6a4420d58b6599364fd3c35a45216cca2e84831530d178e",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python2.7/site-packages/docopt-0.6.2-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c40bcbdb2c1339d2dd7bcc314d5c9ed76f7d8fae5874addc339f7adf0372e525",
+        "sha256_in_prefix": "c40bcbdb2c1339d2dd7bcc314d5c9ed76f7d8fae5874addc339f7adf0372e525",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python2.7/site-packages/docopt.py",
+        "path_type": "hardlink",
+        "sha256": "44c650ebd833d852c8731fa3f0c5759506309622300e4c1954a540d78572cc54",
+        "sha256_in_prefix": "44c650ebd833d852c8731fa3f0c5759506309622300e4c1954a540d78572cc54",
+        "size_in_bytes": 19946
+      },
+      {
+        "_path": "lib/python2.7/site-packages/docopt.pyc",
+        "path_type": "hardlink",
+        "sha256": "1b72d3146e44af7dd7d7d9fce52ebe7033ae87ac02b29dbf9c983a23a3575f15",
+        "sha256_in_prefix": "1b72d3146e44af7dd7d7d9fce52ebe7033ae87ac02b29dbf9c983a23a3575f15",
+        "size_in_bytes": 23460
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 21651,
+  "subdir": "linux-64",
+  "timestamp": 1525269585638,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/docopt-0.6.2-py27_0.tar.bz2",
+  "version": "0.6.2"
+}

@@ -1,0 +1,276 @@
+#$Log: qp_get.hlp,v $
+#Revision 11.0  1997/11/06 16:36:41  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:01:07  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  15:24:10  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/03/02  14:30:05  prosb
+#Replaced ipc_qpoe_cards with ipcevt_fits_cards, to go with
+#recent changes to fits2qp.
+#
+#Revision 7.0  93/12/27  18:44:49  prosb
+#General Release 2.3
+#
+#Revision 6.5  93/10/04  12:16:49  dvs
+#Moved eincdrom to xdataio from einbb.
+#
+#Revision 6.4  93/09/30  12:25:38  prosb
+#Added help for new ipc_qpoe_cards parameter.
+#
+#Revision 6.3  93/08/23  11:32:27  prosb
+#(dvs) Changed qp_mkindex parameter to default to yes instead of no.
+#
+#Revision 6.2  93/07/29  16:51:01  prosb
+#(dvs) Made minor correction to qp_get documentation.
+#
+#Revision 6.1  93/07/28  10:58:24  prosb
+#qp_get not runs qpaddaux to convert tgr records into tsi records.
+#
+#Revision 6.0  93/05/24  17:12:34  prosb
+#General Release 2.2
+#
+#Revision 1.4  93/04/29  17:49:43  prosb
+#Checking in requested changes by Michael Garcia.
+#
+#Revision 1.3  93/04/28  10:20:22  prosb
+#Made corrections and minor changes to help file.
+#
+#Revision 1.2  93/04/18  17:52:09  prosb
+#Since we added datasets eoscat and hriimg, the prompt for
+#"dataset" became too long.  I opted to remove the description
+#of all the prompts.
+#
+#Revision 1.1  93/04/13  11:40:55  prosb
+#Initial revision
+#
+#$Header: /home/pros/xray/xdataio/eincdrom/doc/RCS/qp_get.hlp,v 11.0 1997/11/06 16:36:41 prosb Exp $
+.help qp_get Oct93 xray.xdataio.eincdrom
+.ih
+NAME
+qp_get -- Extract FITS event-list data from Einstein CD-ROMs and write out
+an IRAF qpoe file.  
+.ih
+USAGE
+qp_get dataset specifier qpoefile
+.ih
+DESCRIPTION
+\fIqp_get\fR finds the specified FITS file on the appropriate Einstein
+CD and converts it into a PROS qpoe file.  The user may specify the
+FITS file by name (such as H1734S03.XPA) or by sequence number (only for
+the pointed IPC and HRI datasets).  The conversion is performed by using the 
+task \fIfits2qp\fR, then by running \fIqpaddaux\fR to convert the tgr records 
+into tsi records (only for IPC and HRI event files).
+.ih
+PARAMETERS
+.ls dataset = "ipcevt"
+
+The dataset of the requested data.  Must be one of ipcevt, hrievt, or slew.
+
+.le
+.ls specifier		
+
+This specifies which data the user wishes to retrieve from the CDs.
+If it consists solely of digits, it is assumed to be a sequence
+number.  (Only the HRI and IPC datasets allow sequence numbers.)
+In this case, this task will reference a sequence number index file
+on the CD to find the associated FITS file name.
+
+Otherwise, the specifier is assumed to be a FITS file name.  This
+file name must match the name on the Einstein CD in order for this
+task to be able to find the file.
+.le
+.ls qpoefile = "."	
+
+The output qpoe file name.  If the null string
+is input, the name will consist of a root with a ".qp"
+extension.  If the specifier is a sequence number, the root consist
+of the first letter of the dataset followed by the sequence number.
+If the specifier is a file name, the root will be the same root as the
+file name.
+
+Similarly, if a "." is used, the name will consist of the root with a
+".qp" extension, but WITHOUT the PATH. i.e. the output file will be in the current
+working directory.
+.le
+.ls (eincdpar = "") [pset]
+
+The name of the file containing the eincdrom package wide parameters.  If
+the name is empty (""), then the parameters will be obtained from the
+eincdpar task.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the qpoe file can be
+overwritten, if it already exists.
+.le
+.ls (display = 1) [int]
+
+The display level.  A setting of 0 should output no display (besides warnings), while
+settings above 3 are only useful for debugging.
+
+.le
+.ls (naxes = 0) [int]
+
+The number of axes that the qpoe file will contain.  This should be 2
+for the current implementation.  This parameter is only used if the
+FITS file does not contain the NAXES parameter, either in the main
+FITS header or in one of the A3DTABLE headers.  For Einstein FITS
+files, this value is stored in the FITS file.
+
+For MPE ASCII FITS files, set naxes = 2
+.le
+.ls (axlen1 = 0) [int]
+
+The dimension of the first qpoe axis.  This parameter is only used if
+the FITS file does not contain the AXLEN1 parameter, either in the
+main FITS header or in one of the A3DTABLE headers.  For Einstein
+FITS files, this value is stored in the FITS file.
+
+.nf
+For MPE ASCII FITS files, this number will depend on the instrument:
+	PSPC: set axlen1 = 15360
+	HRI:  set axlen1 =  8192
+.fi
+.le
+.ls (axlen2 = 0) [int]
+
+The dimension of the second qpoe axis.  This parameter is only used if
+the FITS file does not contain the AXLEN2 parameter, either in the
+main FITS header or in one of the A3DTABLE headers.  For Einstein
+FITS files, this value is stored in the FITS file.
+
+.nf
+For MPE ASCII FITS files, this number will depend on the instrument:
+        PSPC: set axlen1 = 15360
+        HRI:  set axlen1 =  8192
+.fi
+.le
+.ls (mpe_ascii_fits = no) [string]
+
+If the input file is an MPE ASCII FITS table, set this boolean to
+"yes", else leave it as "no"
+.le
+.ls (events = "EVENTS") [string]
+
+The name of the A3DTABLE/BINTABLE in the FITs file containing the events.  This
+parameter is only used if the FITS file does not contain the EVENTS
+parameter.  For Einstein FITS files, this value is stored in the
+FITS file.  A table can also be specified as the event table by
+placing the AXLEN1, AXLEN2, and NAXES parameters in the parameter
+header for that table.  
+.le
+.ls (oldqpoename = yes) [boolean]
+
+Boolean flag to specify if the output file name should be generated
+automatically from the FITS keyword QPOENAME, overriding the
+output qpoe file name specified above by doing a RENAME at the
+end of the task.  In this case the OUTPUT filename above must
+be a 'dummy' name that will NOT conflict with the internal QPOENAME.
+.le
+.ls (fits_cards = "xdataio$fits.cards") [string]
+
+The name  of the fits parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (ipcevt_fits_cards = "xdataio$fitsipc.cards") [string]
+
+The name  of the fits parameter translation file specifically made for
+the ipcevt dataset.  This is internal to the task and not normally changed 
+by the user.
+.le
+.ls (qpoe_cards = "xdataio$qpoe.cards") [string]
+
+The name  of the qpoe parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (ext_cards = "xdataio$ext.cards") [string]
+
+The name  of the ext parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (wcs_cards = "xdataio$wcs.cards") [string]
+
+The name  of the wcs parameter translation file.  This is internal to the
+task and not normally changed by the user.
+.le
+.ls (qp_internals = yes) [boolean]
+
+Boolean flag controlling whether the internal qpoe parameters (see below)
+are prompted for, or whether they are defaulted to internally hardwired
+values.  This parameter is not usually changed by the user.  (Prompting
+is normally turned off during stand-alone debugging only.)
+.le
+.ls (qp_pagesize = 2048) [int]
+
+Page size for the qpoe file.  This parameter is internal to qpoe and
+should not normally be changed.
+.le
+.ls (qp_bucketlen = 4096) [int]
+
+Bucket length for the qpoe file.  This parameter is internal to qpoe
+and should not normally be changed.
+.le
+.ls (qp_blockfactor = 1) [int]
+
+Block factor for imio.
+.le
+.ls (qp_mkindex = yes) [boolean]
+
+Boolean flag that an index should be made for the qpoe file.  This
+parameter is internal to qpoe and should not normally be changed.
+.le
+.ls (qp_key = "") [int]
+
+Key on which to make the qpoe index.  This parameter is internal to
+qpoe and should not normally be changed.
+.le
+.ls (qp_debug = 0) [int]
+
+Debug level for qpoe internals.  This parameter is internal to qpoe
+and should not normally be changed.
+.le
+
+.ih
+EXAMPLES
+
+1. Use qp_get to retrieve the qpoe file for IPC sequence 2060.
+.nf
+ei> qp_get
+Dataset (hrievt|ipcevt|slew) (ipcevt): ipcevt
+FITS filename OR sequence number: 2060
+Qpoe file [root.qp] (.):
+
+Using FITS file ipcevt3$data/16h/i1641n39.xpa to create QPOE file.
+
+warning: card title exists and has different value.
+The existing card is being overwritten.
+Writing output QPOE file: ./i2060.qp
+
+
+.fi
+2. Use qp_get to retrieve the qpoe file for the SLEW survey FITS file s0336s42.f3d.
+.nf
+ei> qp_get
+Dataset (hrievt|ipcevt|slew) (ipcevt): slew
+FITS filename OR sequence number (2060): s0336s42.f3d
+Qpoe file [root.qp] (.):
+
+Using FITS file slewcd$data/03h/s0336s42.f3d to create QPOE file.
+
+Writing output QPOE file: ./s0336s42.qp
+.fi
+.ih
+TIME REQUIREMENTS
+This task typically takes ~10 seconds longer than the task \fIfits2qp\fR,
+which takes approximately 10 seconds on an SUN IPC to 
+convert a fits file containing 20,000 photons.  
+.ih
+SEE ALSO
+See \fIfits2qp\fR for details on how the FITS file is converted into a
+QPOE file.  See \fIqpaddaux\fR for details on how the tsi records are
+generated from the tgr records.
+.endhelp

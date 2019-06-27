@@ -1,0 +1,4 @@
+        ecdinfo - get information about a specific Einstein dataset
+       ecd2pros - copy/convert FITS files from Einstein CD-ROM archive
+       eincdpar - eincdrom package parameter pset
+    eindatademo - demonstration of Einstein IPC unscreened data

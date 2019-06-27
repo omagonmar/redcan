@@ -1,0 +1,126 @@
+# $Header: /home/pros/xray/xplot/doc/RCS/ximtool.hlp,v 11.0 1997/11/06 16:38:24 prosb Exp $
+# $Log: ximtool.hlp,v $
+# Revision 11.0  1997/11/06 16:38:24  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 19:09:28  prosb
+# General Release 2.4
+#
+#Revision 8.1  1995/11/03  23:16:02  prosb
+#updated with multiple image tool info
+#
+#Revision 8.0  1994/06/27  17:03:03  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:49:28  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  18:25:11  mo
+#MC	12/22/93	Fix non-SAO site device names
+#
+#Revision 6.0  93/05/24  16:42:03  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/01/27  14:07:02  mo
+#MC	1/28/92		Add note on how to kill 'old' saoimage.  Correct
+#			info on how to specify the device name.
+#
+#Revision 5.0  92/10/29  22:35:50  prosb
+#General Release 2.1
+#
+#Revision 1.1  92/06/26  16:42:20  mo
+#Initial revision
+#
+.help ximtool Jun92 xray.xplot
+.ih
+NAME
+ximtool -- Choose and bring up an X-windows display tool 
+           ( SAOIMAGE | XIMTOOL | SAOTNG )
+.ih
+USAGE
+ximtool  display_node 
+.ih
+DESCRIPTION
+
+        \fIXimtool\fR invokes the X-windows display tool ( choice of
+SAOIMAGE, XIMTOOL or SAOTNG ) in preparation for using the display/xdisplay 
+task in IRAF.
+The release version has reverted to using system pipes (/dev/imt1) as the
+default FIFO pipe for SAOimage and Ximtool, since personal pipes are no
+longer as necessary with the Ximtool available.
+.ih
+PARAMETERS
+.le
+.ls display_type = "ximtool"	
+	prompt = Display Type - saoimage/ximtool/saotng(ximtool)
+
+This is the user's choice of display tool.
+ 
+.le
+.ls (geometry = "516x704-2-2")   [string]
+
+This is the specification of the size and placement of the SAOIMAGE
+window.  The default corresponds to the .twmrc X-window default
+at SAO/HEAD.  
+.le
+.ls (pipename = "/dev/imt1") [string]
+
+The 'pipenam' must correspond to the 'imt1' path defined in graphcap in IRAF.
+This can be verified with 'page graphcap$ | match imt1'.  There will
+be multiple listings showing a path name containing '/dev/imt1'.
+This entire pathname should be entered as the value for 'pipename',
+including the 'imt1'.
+
+.le
+.ls (userpar1 = "")
+.le
+.ls (userpar2 = "")
+
+These are placeholders for any other command-line arguments the user
+wishes to supply.  Note: ximtool does not support command-line arguments.
+
+.le
+.ls (background = yes) [boolean]
+
+Run the XIMTOOL ( SAOIMAGE ) in the background so that
+IRAF is not blocked.
+.ih
+EXAMPLES
+.nf
+
+	cl> xray
+	xr> xplot
+	xp> show graphcap
+	graphcap = dev$graphcap
+	xp> ximtool 
+	Display Type - saoimage/ximtool/saotng (saotng): saoimage
+	using SAOimage
+	xterm -e saoimage -pros -idev /dev/imt1o  -odev /dev/imt1i  &
+	Attempting Display on: :0.0
+	[1] 20788
+	xp> xdisplay xdata$rp110590.qp[bl=30]
+
+.fi
+
+.ih
+REQUIREMENTS
+When invoked on a remote machine, all the image tools require the setting of 
+the DISPLAY environment variable.
+.ih
+BUGS
+.ih
+SAOIMAGE does not always terminate properly.  It's possible that
+the DISPLAY window will disappear, but the UNIX process will remain.
+If this happens XIMTOOL will give a message that 'saoimage is already
+running' with the specified device.  In this case, the 'old' saoimage
+process must be killed from the UNIX environment.  Try
+	ps -guwax | grep saoimage
+This should allow you to see the process and it's ID. Then use:
+	kill <id-no>
+to terminate this 'dead' process.
+SEE ALSO
+See the documentation on SAOIMAGE(\fI!man saoimage\fR) for a description
+of the SAOIMAGE Task.
+
+.endhelp
+

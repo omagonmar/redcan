@@ -1,0 +1,40 @@
+#$Header: /home/pros/xray/ximages/RCS/plcreate.par,v 11.0 1997/11/06 16:28:58 prosb Exp $
+#$Log: plcreate.par,v $
+#Revision 11.0  1997/11/06 16:28:58  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 18:32:36  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  14:42:02  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:25:37  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:03:41  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:26:03  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:14:10  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:15:25  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:24:02  pros
+#General Release 1.0
+#
+#
+#  Parameters for the plcreate task
+#
+region,s,a,"",,,"region descriptor"
+image,s,a,"",,,"reference image file or 2 dims for mask"
+mask,s,a,"",,,"output mask data file (root.pl)"
+display,i,h,2,0,2,"display level: >0 => header, >1 => mask"
+disp_mode,s,h,"zoom",,,"display: zoom, full, x1 x2 y1 y2"
+ncols,i,h,80,,,"number of columns in display"
+nrows,i,h,30,,,"number of rows in display"
+clobber,b,h,n,,,"delete old copy of output mask file"

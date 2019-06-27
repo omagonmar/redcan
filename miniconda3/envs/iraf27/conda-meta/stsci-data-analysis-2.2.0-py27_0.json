@@ -1,0 +1,47 @@
+{
+  "build": "py27_0",
+  "build_number": 0,
+  "channel": "http://ssb.stsci.edu/astroconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "asdf >=1.3.1",
+    "astroimtools >=0.1.1",
+    "astropy >=2.0.0",
+    "cubeviz >=0.0.2",
+    "glue-vispy-viewers >=0.9",
+    "glueviz >=0.12.0",
+    "gwcs >=0.8.0",
+    "imexam >=0.8.0",
+    "mosviz >=0.1.1",
+    "numpy",
+    "photutils >=0.4",
+    "python >=2.7,<2.8.0a0",
+    "specutils >=0.2.2",
+    "specviz >=0.4.4",
+    "spherical-geometry >=1.0.12",
+    "stginga >=0.2.1"
+  ],
+  "extracted_package_dir": "/home/dani/.conda/pkgs/stsci-data-analysis-2.2.0-py27_0",
+  "features": "",
+  "files": [],
+  "fn": "stsci-data-analysis-2.2.0-py27_0.tar.bz2",
+  "license": "BSD",
+  "link": {
+    "source": "/home/dani/.conda/pkgs/stsci-data-analysis-2.2.0-py27_0",
+    "type": 1
+  },
+  "md5": "2143a154557f1a502154aa8e63c40760",
+  "name": "stsci-data-analysis",
+  "package_tarball_full_path": "/home/dani/.conda/pkgs/stsci-data-analysis-2.2.0-py27_0.tar.bz2",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "size": 2356,
+  "subdir": "linux-64",
+  "timestamp": 1543274792317,
+  "track_features": "",
+  "url": "http://ssb.stsci.edu/astroconda/linux-64/stsci-data-analysis-2.2.0-py27_0.tar.bz2",
+  "version": "2.2.0"
+}

@@ -1,0 +1,8 @@
+# Root task entry for the GMISC package help tree.  Defines `gmisc'
+# as both a task and a package in the gmisc help database.
+
+gmisc		men  = gmisc$gmisc.men,
+		hlp  = gmisc$gmisc.men,
+		sys  = gmisc$gmisc.hlp,
+		pkg  = gmisc$gmisc.hd,
+		src  = gmisc$gmisc.cl

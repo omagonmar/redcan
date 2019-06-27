@@ -1,0 +1,299 @@
+%\input /pros/doc/scidoc/skeleton.tex
+\def\version{\it Rev. 1.0 - 3/12/86}
+\def\chapter{\it Timing Analysis: Periodogram analysis}
+%\chapterhead{Science Specifications for the PROS}
+%\chapterhead{Timing Analysis: Periodogram Analysis}
+\chapterhead{II.~Periodogram Analysis}
+
+\@{Overview}
+
+\noindent
+{\it Science Contact}:  R. Kelley (GSFC)
+
+\noindent
+{\it Function Purpose}:  Calculate Fourier transform and power spectrum of a
+time series with options to sum power spectra for sub-intervals of the
+time series and calculate power spectra of window functions.
+Determine significance of peaks in the power spectrum, or formal upper
+limits to sinusoidal modulation of the data.
+
+\@{Input Data}
+
+\item{}Plot/List file (see specification for `light curves').
+
+\@{Input Options}
+
+\item{}For summed FFT power spectra, user specifies the number of points per
+transform or total number of spectra to be summed.
+
+\@{Output Data}
+
+\item{}See `output display'
+
+\@{Output Display}
+
+\item{}Linear graphics of coherent or summed power spectra with
+user-specified confidence levels displayed.  Text output of
+significance of peaks in the power spectrum or upper limits to
+sinusoidal modulation.
+
+\@{Full Description}
+
+\**Introduction
+
+{\list
+
+The primary technique for searching for periodic signals is to employ the
+Fourier Transform.  The Fourier Transform of a time series X(t) is defined
+by:
+
+}
+
+$$X(f_{j}) = N^{-1/2}\sum_{i=0}^{N-1} X(t_{i})e^{-i2\pi f_{j}t_{i}} \qquad\qquad\qquad(1)$$
+
+{\list
+
+where $t_i = i \times b$ is the time of the $i$th time
+bin.
+
+$N$ is the total number of data points and $b$ is the
+length of each time bin ({\it e.g.}, in sec).
+
+The frequencies $f_j$ are given by
+$j/(Nb)$.
+
+There are 
+$N/2$ independent frequencies necessary to synthesize the time
+series of $N$ data points, so that $0 \leq j \leq N/2$.
+
+The frequency corresponding
+to $j = N/2$  ({\it i.e.},$f_j = 1/2b$) is called the Nyquist
+frequency and represents the
+highest frequency measurable in the data.  That is, the Nyquist frequency
+is half the sampling frequency, $1/b$.
+
+The most widely used algorithm for
+computing the Fourier transform is the Fast Fourier Transform (FFT).  The
+time required to compute the Fourier transform according to equation (1)
+scales as $N^2$, whereas the time to compute the FFT scales as $N(\ln N)$, and
+is thus of order $N$-times faster.  Generally, the length of the time series
+to be transformed (in bins) must be a factor of two, and the usual approach
+is to pad the data (with the mean value) out to the next power of two.
+Software codes for the FFT can be found in Brigham (1974), but assembly
+versions may be implemented for speed.  An FFT routine already exists
+in the XRAY.LIB at CfA.  There is also a disk-based FFT routine developed
+by Norm Brenner that allows one to transform \underbar{millions} of data points by
+swapping data in and out of the memory.  This code (FOR2D) is presently
+available on Einstein computers at CfA.
+
+In practice it is useful to be able to compute one single FFT over an interval
+of data (\underbar{coherent} transform), or to be able to split the data up into
+sub-intervals and compute an FFT for each one, and then add the power densities,
+$P_j = \mid X(f_j)\mid^2$, at each frequency (\underbar{summed} transform).  As will be
+discussed below, there are advantages to each one.  In addition, it is useful
+to be able to compute the power spectrum of the window function, which is
+defined as 1 for each bin in which there are data, and 0 where there is none.
+
+}
+
+\**Coherent Transforms
+
+{\list
+
+This is the simple case where N data points are Fourier transformed and the
+power density computed.  It will be necessary to be able to transform large
+numbers of data points ({\it e.g.}, $>10^6$), especially to search for weak and
+short period pulsars.  For white noise, the probability distribution of the
+power density function is an exponential function.  The probability of
+exceeding some power density, P, is therefore given by
+
+}
+
+$${\rm prob}(>P) = e^{-P/P_o}\qquad\qquad\qquad(2)$$
+
+{\list
+
+where $P_o$ is the mean power density.
+
+The expected number of power densities
+greater than some value of P is given by.
+
+}
+
+$$n(>P) = N_{f}e^{-P/P_o}\qquad\qquad\qquad(3)$$
+
+{\list
+
+where $N_{f}$ is the number of frequency bins ($N_f = {1 \over 2} \times$
+the number of data
+points for a coherent transform).  The significance of a peak in the power
+spectrum can thus be readily determined by looking at the $n(>P)$ distribution,
+and generating a listing of all frequencies for which the power density is
+greater than that for a chosen confidence level, C ({\it e.g.}, 0.99 for 99\%
+confidence). The value of the power density corresponding to the confidence
+level, C, is given by the solution of the expression:
+
+}
+
+$$[ 1 - e^{-P/P_o}]^{N_f} = C \qquad\qquad\qquad(4)$$
+
+{\list
+
+In the form of the definition of the Fourier transform given in equation (1),
+with a normalizing factor of $N^{-1/2}$, the mean power density of a time series
+consisting of white noise, with mean $\mu$ and variance equal to 
+$\mu^{1/2}$ (Poisson
+noise), is of course flat, and has a mean value also equal to $\mu$ but, since it
+is exponentially distributed, the variance is equal to $\mu$.
+
+The response to the signal $X(t) = \mu + a \sin \omega_pt$
+is given approximately by:
+
+}
+
+$$P = P_0 + {1 \over 4} a^2 N D_N(\omega - \omega_P) \qquad\qquad\qquad(5)$$
+
+{\list
+
+where $P_0$ is the mean power density, and the function $D_N$ is 1
+at $\omega = \omega_p$\footnote\dag{$\omega \equiv 2 \pi f$}.
+In the limit where
+$N \rightarrow \infty$, $D_N$ becomes a $\delta$-function.
+In the normalization given in equation (1), $P_0 = \mu$.  Note that for real
+data, $\mu$ would
+be the sum of a steady source component plus a background rate,
+$\mu_s + \mu_b$.
+
+An expression for the upper limit to the amplitude of a
+sinusoidal modulation can be obtained from equation (5): 
+
+}
+
+$$\epsilon = \left[ {4(P/P_o -1)\over N_c}\right]^{1/2}(1 +
+\mu_b/\mu_s)\qquad\qquad\qquad(6)$$
+
+{\list
+
+where $\epsilon = a/\mu_s$ is the pulsed fraction, $N_{c} = N\mu$ is the
+total number
+of counts in the time series, and $P/P_{0}$ is determined from equation (4).
+For many applications, $P/P_{0}$ turns out to be of order 10, and thus
+$\epsilon \sim 6/N_c^{1/2}$.
+However, equation (4) and (5) should be used for setting
+formal upper limits.
+
+}
+
+
+\**Summed Transforms
+
+{\list
+
+There are occasions when a summed transform is more useful than a coherent
+one.  For example, if a binary X-ray pulsar has an orbital period that is
+short compared to the duration of the observation, or if the pulse period
+is short compared to the light travel time across the orbit, the Doppler
+shifting of the pulsation frequency will be smeared out over an interval of
+frequencies, and, if the pulsar is weak, the pulsed signal may not show up
+significantly in a coherent transform.  Another example is the recently
+discovered quasi-periodic oscillations (QPO'S), where the oscillations are
+coherent only over a length of a few cycles.  By summing up the power spectra
+of many sub-intervals of data, the frequency bins are larger than for a single
+coherent transform and thus the signal power is not distributed over as many
+bins.  If $N_{t}$ is the number of power spectra summed, the summed power is
+defined as:
+
+}
+
+$$P_s(f_j) = \sum_{i=1}^{N_t} P_i(f_j)\qquad\qquad\qquad(7)$$
+
+{\list
+
+If $N_{t}$ is large (say $> 12$), then $P_s$ will be
+Gaussian distributed, with a mean power density of $N_t P_0$, and a variance
+of $N_t^{1/2}P_0$.  The significance of a peak in the power spectrum can
+then be determined in the usual way for data that are Gaussian distributed.
+For the general case (any value of $N_t$), the probability of 
+exceeding $P_s$ is given by
+
+}
+
+$${\rm prob}(>P_{s}) = e^{-\rho} \sum_{n=0}^{N_t - 1} \rho^n /n!\qquad\qquad\qquad(8)$$
+
+{\list
+
+where $\rho = P_s/P_0$.
+
+As with the coherent transform, the significance criterion is given by
+
+}
+
+$$\left[ 1 - {\rm prob}(>P_s)\right]^{N_f} = C$$
+
+{\list
+
+where again $N_{f}$ is the number of frequencies in each transform.  It should
+be pointed out that for a data set of given length, the sensitivity of a
+coherent FFT to a pulsation amplitude is more sensitive than a summed FFT
+by a factor of $N_{t}^{1/4}$, and thus coherent FFT's 
+should always be carried out first.
+
+Note that with regard to summed FFT's, the ability to sum power spectra
+according to intensity ({\it \`a la} QPO's), or some other quantities, will be
+necessary.
+
+}
+
+\**Gap Filling and Window Functions
+
+{\list
+
+Real data almost always have gaps that will have non-trivial effects on the
+shape of a power spectrum.  The simplest technique for handling gaps is to fill
+the gaps with the mean value of the time series.  Another technique might be to
+perform some kind of interpolation between the last datum before the gap and
+first after the gap.  However, the effects of such a technique are not as easy
+to recognize in power spectra as those from simple mean-filling, and in the
+end it does not really help to pull signals out of noise.  In any case, it will
+be important to display the power spectrum of the window function for all
+spectra, or at least have it available as an option.  This allows the user to
+decide whether a feature in a power spectrum is real or an artifact of how the
+data were taken.
+
+}
+
+\@{Summary}
+
+\item{}To conclude, the following software applications are needed:
+
+\item{1.} Coherent FFT power spectra of long intervals of data
+(up to several $\times 10^{6}$) points.
+
+\item{2.} Summed FFT power spectra, with the number of points per transform or total
+number of spectra to be summed a user specified option.
+
+\item{3.} Power spectra of window functions.
+
+\item{4.} Plots of the distributions of the (1) and (2).
+
+\item{5.} Plots of power spectra with specified confidence levels displayed.
+
+
+\@{References}
+
+{\list
+
+Bloomfield, P., ``Fourier Analysis of Time Series: An Introduction'', 1976,
+J. Wiley and Sons.
+
+Brigham, E.O., ``The Fast Fourier Transform'', 1974, Prentice-Hall, Inc.
+
+Groth, E.J., ``Probability Distributions Related to Power Spectra", 1975,
+Ap.J. Suppl., 29, 285.
+
+}
+
+\vfill\eject
+
+
+

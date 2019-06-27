@@ -1,0 +1,19 @@
+# $Header: /home/pros/xray/xspatial/eintools/RCS/_band2range.par,v 11.0 1997/11/06 16:30:51 prosb Exp $
+# $Log: _band2range.par,v $
+# Revision 11.0  1997/11/06 16:30:51  prosb
+# General Release 2.5
+#
+# Revision 9.0  1995/11/16 18:47:36  prosb
+# General Release 2.4
+#
+#Revision 8.1  1994/08/04  13:38:18  dvs
+#Added header & log at top
+#
+#
+# Copyright:    Property of Smithsonian Astrophysical Observatory
+#               1994.  You may do anything you like with this
+#               file except remove this copyright.
+#
+# parameter file for band2range
+band,s,a,,,,"input Einstein PI band"
+range,s,h,,,,"output Einstein PI range"

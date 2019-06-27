@@ -1,0 +1,57 @@
+# Keyword translations.
+imagetyp		obstype
+amp			imageid
+subset			filter
+
+# Translations for OBSTYPE keyword.
+'dome flat'		flat
+'sky flat'		flat
+'projector flat'	flat
+
+# Extension name translations to IMAGEID.
+im1			1
+im2			2
+im3			3
+im4			4
+im5			5
+im6			6
+im7			7
+im8			8
+
+# Default values for for real-time display.
+
+det1		detsec	   [1:2048,1:4096]
+det2		detsec	[2049:4096,1:4096]
+det3		detsec	[4097:6144,1:4096]
+det4		detsec	[6145:8192,1:4096]
+det5		detsec	   [1:2048,4097:8192]
+det6		detsec	[2049:4096,4097:8192]
+det7		detsec	[4097:6144,4097:8192]
+det8		detsec	[6145:8192,4097:8192]
+
+dat1		datasec	[65:2112,1:4096]
+dat2		datasec	[65:2112,1:4096]
+dat3		datasec	[65:2112,1:4096]
+dat4		datasec	[65:2112,1:4096]
+dat5		datasec	[25:2072,1:4096]
+dat6		datasec	[25:2072,1:4096]
+dat7		datasec	[25:2072,1:4096]
+dat8		datasec	[25:2072,1:4096]
+
+bias1		biassec	     [1:64,1:4096]
+bias2		biassec	     [1:64,1:4096]
+bias3		biassec	     [1:64,1:4096]
+bias4		biassec	     [1:64,1:4096]
+bias5		biassec	[2073:2136,1:4096]
+bias6		biassec	[2073:2136,1:4096]
+bias7		biassec	[2073:2136,1:4096]
+bias8		biassec	[2073:2136,1:4096]
+
+size1		rawsize "2136 4096"
+size2		rawsize "2136 4096"
+size3		rawsize "2136 4096"
+size4		rawsize "2136 4096"
+size5		rawsize "2136 4096"
+size6		rawsize "2136 4096"
+size7		rawsize "2136 4096"
+size8		rawsize "2136 4096"

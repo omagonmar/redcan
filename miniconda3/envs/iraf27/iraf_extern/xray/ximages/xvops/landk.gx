@@ -1,0 +1,48 @@
+#$Header: /tmp_mnt/home/pros/xray/ximages/xvops/RCS/landk.gx,v 8.0 94/06/27 14:46:43 prosb Rel $
+#$Log:	landk.gx,v $
+#Revision 8.0  94/06/27  14:46:43  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:27:53  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  16:08:41  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:28:04  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  14:32:13  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:18:19  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/06  23:34:05  pros
+#General Release 1.0
+#
+# LAND -- Vector logical and.  C[i], type INT, is set to 1 if A[i] and
+# B are non-zero, else C[i] is set to zero.
+
+procedure landk$t (a, b, c, npix)
+
+PIXEL	a[ARB], b
+int	c[ARB]
+int	npix
+int	i
+
+begin
+	do i = 1, npix
+	    $if ( datatype == x )
+		if ( ((real(a[i]) !=0) && (aimag(a[i]) !=0)) &&
+		     ((real(b)    !=0) && (aimag(b)    !=0)) )
+		    c[i] = 1
+		else
+		    c[i] = 0
+	    $else
+		if ( (a[i] !=0) && (b !=0))
+		    c[i] = 1
+		else
+		    c[i] = 0
+	    $endif
+end

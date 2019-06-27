@@ -1,0 +1,130 @@
+
+   Installation Instructions for the Level-0 MEM Analysis Package - Rev C
+   ----------------------------------------------------------------------
+
+The IRAF external package, MEM0, is being distributed separately from
+the IRAF V2.10 distribution.  This package is being made available for user
+testing on a user-beware basis. The installation instructions that follow
+assume that you have copied the tar format MEM0 archive onto your host
+machine.  The method you use to copy the file (or remotely access the tar
+file) is OS dependent and is not discussed in this document.  If your IRAF
+system has been stripped of the IRAF libraries (via 'mkpkg stripall') you
+will not be able to build the MEM0 executable as described here.  You must
+either reload the required libraries or request a binary distribution of MEM0
+for your operating system.  If you have any questions, please contact the
+IRAF HOTLINE (602-323-4160) or iraf site support at iraf@noao.edu (5355::iraf). 
+
+MEM0 was developed by Dr. Nailong Wu while a visiting scientist at NOAO.  It
+has been tested on several platforms and is believed to be stable.  Should
+you find any problems or have questions please contact Dr. Nailong Wu via
+email at nailong@stsci.edu. 
+
+
+[1] The package is distributed as a compressed tar archive; IRAF is distributed
+    with a tar reader.  The tar archive may be obtained by magnetic
+    tape or anonymous ftp.  For magnetic tape go to step [2] and when
+    reading the tar archive simply mount the tape and use the tape
+    device name for the archive name in step [4].  To obtain the package
+    via ftp (assuming a UNIX computer):
+
+	% ftp 140.252.1.1
+	login: anonymous
+	password: [your last name]
+	ftp> cd contrib
+	ftp> get mem0c.readme
+	ftp> binary
+	ftp> get mem0c.tar.Z
+	ftp> quit
+	% ls -l *mem0c*
+	   1 -rw-r--r--  1 fitz          709 Dec 10 10:04 mem0c.notes
+	   6 -rw-r--r--  1 fitz         5711 Dec 14 16:18 mem0c.readme
+	  60 -rw-r--r--  1 fitz        60451 Dec  9 16:34 mem0c.tar.Z
+	% uncompress mem0.tar
+
+    The mem0.readme file contains these instructions.  Special arrangements 
+    can be made for sites that don't have access to internet but could copy 
+    the uncompressed archive over SPAN.
+
+[2] Create a directory to contain the MEM0 external package files.  This
+    directory should be outside the IRAF directory tree and must be owned
+    by the IRAF account.  In the following examples, this root directory
+    is named usr1:[mem0] (VMS) or  /local/mem0/ (UNIX).  Make the appropriate 
+    file name substitutions for your site.
+
+[3] Log in as IRAF and edit the extern.pkg file in the hlib directory to
+    define the package to the CL.  From the IRAF account, outside the CL,
+    you can move to this directory with the commands:
+
+	$ set def irafhlib	# VMS example
+	% cd $hlib		# UNIX example
+
+    Define the environment variable mem0 to be the pathname to the mem0 root 
+    directory.  The '$' character must be escaped in the VMS pathname; UNIX 
+    pathnames must be terminated with a '/'.  Edit extern.pkg to include:
+
+	reset mem0      = usr\$1:[mem0]   	# VMS example
+	reset mem0      = /local/mem0/		# UNIX example
+
+	task  mem0.pkg = mem0$mem0.cl
+
+    Near the end of the hlib$extern.pkg file, update the definition of helpdb
+    so it includes the mem0 help database, copying the syntax already used
+    in the string.  Add this line before the line containing a closing quote:
+        
+                ,mem0$lib/helpdb.mip\
+
+    NOTE: In IRAF V2.8 the length of the helpdb string cannot exceede 160 
+    characters.  A helpdb string longer than 160 characters will cause the
+    CL startup process to fail.
+
+[4] Log into the CL from the IRAF account and unpack the archive file.  Change
+    directories to the MEM0 root directory created above and use 'rtar':
+
+	cl> cd mem0
+	cl> softools
+	cl> rtar -xrf <archive>  where <archive> is the host name of the
+				 archive file or the IRAF tape
+				 device for tape distributions.
+
+   On VMS systems, an error message will appear ("Copy 'bin.generic' to
+   './bin fails") which can be ignored.  Also on VMS systems, the four
+   bin.'mach' directories created by rtar under [newimred.bin] can be
+   deleted.  UNIX sites should leave the symbolic link 'bin' in the MEM0
+   root directory pointing to 'bin.generic' but can delete any of the 
+   bin.`mach' directories that won't be used.  The archive file can be
+   deleted once the package has been successfully installed.
+
+[5] When the archive has been unpacked, build the MEM0 package executable.  
+    The compilation and linking of the MEM0 package is done using the following 
+    command:
+
+	cl> mkpkg -p mem0 update >& mem0.spool &
+
+    NOTE: On systems that concurrently support different architectures
+    (e.g., Suns, Convex), you must configure the system for the desired
+    architecture before issuing the above command.  SUN/IRAF sites must
+    execute a pair of 'mkpkg' commands for each supported architecture type.
+    The Unix environment variable IRAFARCH must be set as well before
+    compiling.  For example:
+
+	# Assuming IRAFARCH is set to ffpa
+	cl> mkpkg -p mem0 ffpa
+	cl> mkpkg -p mem0 update >& mem0.ffpa &
+	cl> mkpkg -p mem0 f68881
+	# Now reset IRAFARCH to f68881 before continuing
+	cl> mkpkg -p mem0 update >& mem0.f68881 &
+
+    The spool file(s) should be reviewed upon completion to make sure there
+    were no errors.  
+
+[6] This version of the package contains new package parameters so you will
+    need to unlearn them by doing the following once it is built:
+
+	cl> delete uparm$mem0*.par
+	cl> delete uparm$clemem0.par
+
+    Note also that if the package was previously installed, you will need to
+    re-edit the hlib$extern.pkg file and remove the leading '$' from the
+    "task mem0.pkg = ..." definition.
+
+

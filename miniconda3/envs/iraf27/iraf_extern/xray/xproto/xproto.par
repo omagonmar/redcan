@@ -1,0 +1,74 @@
+#$Header: /home/pros/xray/xproto/RCS/xproto.par,v 11.2 1998/04/24 16:14:25 prosb Exp $
+#$Log: xproto.par,v $
+#Revision 11.2  1998/04/24 16:14:25  prosb
+#Patch Release 2.5.p1
+#
+#Revision 11.1  1998/02/25 18:39:40  prosb
+#JCC(2/25/98) - add 'motd' parameter.
+#
+#Revision 11.0  1997/11/06 16:40:53  prosb
+#General Release 2.5
+#
+#Revision 9.1  1997/10/08 05:10:59  prosb
+#Update version
+#
+#Revision 9.0  1995/11/16 19:26:31  prosb
+#General Release 2.4
+#
+#Revision 8.2  1995/10/10  07:45:42  wendy
+#Updating release date
+#
+#Revision 8.1  1995/08/07  17:42:05  wendy
+#release banner 2.4
+#
+#Revision 8.0  1994/06/27  17:25:50  prosb
+#General Release 2.3.1
+#
+#Revision 7.1  94/06/17  17:17:33  wendy
+#Updated for 2.3.1 release
+#
+#Revision 7.0  93/12/27  18:50:48  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/22  14:14:53  wendy
+#Changed version date
+#
+#Revision 6.0  93/05/24  16:43:29  prosb
+#General Release 2.2
+#
+#Revision 5.1  93/05/22  17:23:51  prosb
+#Update version
+#
+#Revision 5.0  92/10/29  22:39:30  prosb
+#General Release 2.1
+#
+#Revision 4.4  92/10/25  20:31:09  prosb
+#Update version
+#
+#Revision 4.3  92/10/25  01:07:32  prosb
+#Update version
+#
+#Revision 4.2  92/06/29  14:14:49  mo
+#Fix comment character
+#
+#Revision 4.1  92/06/26  15:46:44  prosb
+#Updated version
+
+#Revision 4.0  92/04/27  15:18:53  prosb
+#General Release 2.0:  April 1992
+
+#Revision 3.1  92/01/15  10:36:55  janet
+#,
+#
+#Revision 3.0  91/08/02  01:23:35  prosb
+#General Release 1.1
+#
+#Revision 1.1  91/07/24  09:12:18  mo
+#Initial revision
+#
+#Initial revision
+#
+
+#  Parameters for the xplot package
+version,s,h,"October, 1997"
+motd,b,h,"yes",,,"Type the welcome banner?"

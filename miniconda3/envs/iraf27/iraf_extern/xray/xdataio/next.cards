@@ -1,0 +1,46 @@
+#
+# Known FITS Extension Cards
+#
+##
+
+# Knowable types
+#
+#	TY_VOID
+#	TY_BOOL
+#	TY_SHORT
+#	TY_INT
+#	TY_LONG
+#	TY_REAL
+#	TY_DOUBLE
+#	TY_STR
+#	TY_GUESS
+#
+# A '.' in the Translation position indictes NO translation is to be done.
+#
+# Action Id numbers are application specific.
+#
+# Only the first four whitespace delimited fields are read.  Any other text
+# is ignored and my be used for comments.  Additionally any line that does not
+# start with an AlphaNumeric is considered to be a comment.
+
+
+# Card	Translation	Type		Action Id	Comments
+#
+XTENSION	.	TY_CHAR		1		extension type (A3D)
+NAXIS		.	TY_INT		2
+BITPIX		.	TY_INT		3
+NAXIS1		.	TY_INT		4		width of table in bytes
+NAXIS2		.	TY_INT		5		number of rows in table
+PCOUNT		.	TY_INT		6		useless parameter
+GCOUNT		.	TY_INT		7		useless parameter
+TFIELDS		.	TY_INT		8		number of columns
+EXTNAME		.	TY_CHAR		9		name of this table
+EXTVER		.	TY_INT		10		extension version
+HISTORY		.	TY_CHAR		14		history cards
+/TFORM?*/	.	TY_CHAR		21		data type
+/TTYPE?*/	.	TY_CHAR		22		column name
+/TUNIT?*/	.	TY_CHAR		23		physical units of field
+END		.	TY_VOID		999
+NAXLEN		.	TY_INT		2001		number of qpoe axes
+AXLEN1		.	TY_INT		2002		dim. of qpoe axis 1
+AXLEN2		.	TY_INT		2003		dim. of qpoe axis 2

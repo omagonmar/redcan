@@ -1,0 +1,93 @@
+       --- Release Notes for SAO/PROS Patch 2.5.p2 (Oct.99) ---
+       --------------------------------------------------------
+
+
+I) Setting up to use the XRAY package :
+
+    Required packages for Sun :
+      IRAF V2.11.2
+        (iraf.noao.edu)
+      TABLES 2.1
+        (stsci.edu)
+      PROS 2.5 and 2.5_p1
+        (sao-ftp.harvard.edu)
+
+    optional packages:
+      EUV (cea-ftp.cea.berkeley.edu)
+
+    >>> Users must rerun the "mkiraf" task and answer 'yes' to the  <<<
+    >>> 're-initialize uparm?' option before running.               <<<
+
+
+II) Summary of changes made in this release (PROS 2.5.p2) :
+
+   <package.task> - <description>
+
+   1. xspatial.offaxisprf - 
+          a new task (based on rosprf) that computes off-axis 
+          PRFs for the PSPC. 
+
+   2. xdataio.fits2qp, qp2fits and libpros -
+          updated to create qpoe and fits files to have the 
+          keywords '*DATE*' in the new format 'yyyy-mm-dd'
+
+   3. xtiming.timcor.apply_bary and xproto.evalvg -
+          updated to read in and write out the keywords '*DATE*' 
+          with the new format 'yyyy-mm-dd'
+
+   4. xspatial.qpsim -   (H&P#26)
+          Generate simulated events for a ROSAT HRI field. There was 
+          a problem with the 'rename' call.  It has been corrected.
+
+   5. xproto.wcsqpedit -  (H&P#26)
+          Edit the WCS parameters in a QPOE file.  The bug did not 
+          allow changing to negative declinations (CRVAL2).  It has 
+          been fixed.
+
+   6. LINUX port for the PROS_2.5.p1 release -  (H&P#25)
+          If you want to install PROS 2.5_p1 under linux, be sure to 
+          read the appropriate README file in the directory
+            "/pub/pros/pros_2.5_p1/linux_data_src/" from our anon ftp.
+
+
+III) Other Information
+
+  A. PROS User's Guide (PUG)  ( revised on 5 December 1996, see hp#20)
+        NB: an update is planned for spring 1998.
+
+    Latex and/or postscript files are available via anonymous ftp:
+        sao-ftp.harvard.edu; from subdirectory /pub/pros/PUG.
+    The WWW version can be accessed with URL:
+         http://hea-www.harvard.edu/PROS/pros.html
+
+  B. Cross-referencing information
+
+    We are continually trying to improve the cross-referencing information
+    in PROS.  We recommend using either "references" or "xapropos" to look
+    for information on given keywords, e.g., "references prf" or
+    "xapropos prf" (xapropos requires the CTIO package to be loaded).
+
+  C. Hints & Pointers
+
+    As the provider of the PROS software package ("xray" in IRAF), the
+    ROSAT Science Data Center (RSDC) at SAO distributes HINTS & POINTERS
+    to PROS Users via email.  When we find answers to often asked
+    questions, or when we have implemented new software solutions to
+    longstanding problems, we will send this information directly to our
+    users.  These messages will also be available via anonymous ftp*, but
+    to receive the email version, you should register with us. If your
+    username is the one associated with your site registration, you are
+    already registered for "HINTS & POINTERS", but we encourage other
+    users (even at the same sites) to register.
+
+    Mailings will be sent as the need arises, perhaps every month or so.
+    If you would like to suggest items for future issues of H&P or add
+    your name to our distribution list, please contact us at the following
+    address:
+
+    ***********************************************************************
+    Internet - rsdc@cfa.harvard.edu    RSDC    MS-3
+                                       Center for Astrophysics
+                                       60 Garden St. Cambridge MA 02138 USA
+                                       tel: (617) 495-7134  FAX: 495-7356
+    ***********************************************************************

@@ -1,0 +1,103 @@
+#$Header: /home/pros/RCS/dispbuf.gx,v 9.0 1995/11/16 18:27:24 prosb Rel $
+#$Log: dispbuf.gx,v $
+#Revision 9.0  1995/11/16  18:27:24  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  13:45:41  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  18:09:03  prosb
+#General Release 2.3
+#
+#Revision 6.0  93/05/24  15:44:13  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  21:16:22  prosb
+#General Release 2.1
+#
+#Revision 4.0  92/04/27  13:47:19  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  00:48:55  prosb
+#General Release 1.1
+#
+#Revision 2.0  91/03/07  00:06:45  pros
+#General Release 1.0
+#
+#
+# DISPBUF<SILRDX> -- display a two dimensional data buffer
+#
+procedure dispbufl(buf, ncols, nrows, flip)
+
+long	buf[ARB]		# i: array to display
+int	ncols			# i: number of columns
+int	nrows			# i: number of rows
+bool	flip			# i: flip display?
+
+long	pixval			# l: value of current pixel
+long	max			# l: max value in a pixel
+long	total			# l: total counts
+int	i,j			# l: loop counters
+int	mini			# l: min i loop value
+int	maxi			# l: max i loop value
+int	maxx			# l: x value where max is
+int	maxy			# l: y value where max is
+int	offset			# l: current pixel offset
+
+begin
+	total = 0
+	max = buf[1]
+	maxx = 1
+	maxy = 1
+	call printf("\n")
+	# determine flip limits
+	if( flip ){
+	    mini = nrows - 1
+	    maxi = -1
+	}
+	else{
+	    mini = 0
+	    maxi = nrows
+	}
+	# this loop is weird because of the 2 different ways it can be done
+	# top to bottom or bottom to top
+	for(i=mini; i!=maxi;){
+	    for(j=1; j<=ncols; j=j+1){
+		# determine offset into array 
+		offset = i*ncols+j
+		# get the value at that offset
+		pixval = buf[offset]
+		# display value at that offset 
+	    	call printf("%5d ")
+		call pargi(pixval)
+		# increment total 
+		total = total + pixval
+		# check for new max value 
+		if( pixval > max ){
+		    maxx = j
+		    maxy = i+1
+		    max = pixval
+		}
+	    }
+	    call printf("\n")
+	    # increment or decrement the i loop counter
+	    if( flip )
+		i = i-1
+	    else
+		i = i+1
+	}
+
+	# print total counts
+	call printf("\ntotal counts:\t\t\t%6d\n")
+	call pargi(total)
+	# and max value
+	call printf("max value at pixel (%d,%d):\t%6d\n")
+	call pargi(maxx)
+	call pargi(maxy)
+	call pargi(max)
+	if( flip )
+	    call printf("(pixel (1,1) is in lower left corner)\n")
+	else
+	    call printf("(pixel (1,1) is in upper left corner)\n")
+end
+

@@ -1,0 +1,96 @@
+.help pspc_hrcolor Dec93 xray.xplot
+.ih
+NAME
+pspc_hrcolor - compute an image which reflects the xray color of a
+PSPC observation.
+.ih    
+USAGE
+pspc_hrcolor qpoe block region_str out_file
+.ih    
+DESCRIPTION
+
+This task will use three PI bands to calculate an approximate PSPC
+xray color image.
+
+This shortcut algorithm for calculating the x-ray color images was
+provided by Carlo Izzo.  It separates the qpoe file into three pi
+bands, uses imsmooth to smooth each of these files with a 12 arcsec
+gaussian,  and then scales these to reflect the color in a full image.
+
+Three temporary files of the size of the final image will be created;
+therefore the output directory must have enough space for these.
+.ih    
+PARAMETERS
+.ls qpoe = ""       PSPC qpoe filename
+
+The qpoe filename for the PSPC observation.
+.le
+.ls block = 1       desired block factor
+
+The blocking factor at which you wish you image to be made.
+
+.le
+.ls region_str = ""  desired image subsection, e.g. [842:1353,842:1353]
+
+The region subsection of the blocked qpoe file that should be used for
+the color image.  The subsection coordinates must be relative to those
+of the blocked qpoe file, and the square brackets ([]) are required.
+.le
+.ls out_file = ""    output image filename
+
+The name of the output image file.
+.le
+.ls (red = "11:40")	red pi channels
+
+The range of PI values from the input QPOE file to use for red image 
+(allowed syntax explained in \fI help filter\fR
+.le
+.ls (green = "41:100")	green pi channels
+
+The range of PI values from the input QPOE file to use for green image 
+(allowed syntax explained in \fI help filter\fR
+.le
+.ls (blue = "101:240")	blue pi channels
+
+The range of PI values from the input QPOE file to use for blue image 
+(allowed syntax explained in \fI help filter\fR
+.le
+.ls (clobber = no)    OK to overwrite existing output file?
+
+Will only overwrite existing output image file if this is set to yes.
+.le
+.ls (display = 1 )  Display level
+
+Display level for information.  If it is zero there will be not
+printout, if it one there will be information on what the script is
+doing, and five will print out the lines for imcalc.
+.le
+.ih
+DETAILED DESCRIPTION
+
+The task pspc_hrcolor extracts three images from the qpoe file.  The
+images correspond to PI channels 11 to 40, 41 to 100, and 101 to 240.
+Each of these images is then smoothed with a 12 arcsec gaussian. Then
+the first image is scaled from 0 to 6, the second from 0 to 36, and
+the third from 0 to 216.  These images are then added together,
+resulting in an image that can run from 0 to 258.  This image is an
+approximation of the color of the PSPC x-ray image, with low values as
+soft (red on the color map created by the task) and high values
+(violet on the color map) as hard.
+.ih    
+EXAMPLES
+
+The following example will make a xray color image of the qpoe file
+xdata$rp110590.qp at block 7.
+
+	pspc_hrcolor xdata$rp110590.qp 7 "[842:1353,842:1353]" color.imh
+.ih
+TIME REQUIREMENTS
+
+Execution time is dependent upon the size of the size of the output
+image; this task runs imsmooth three times on files of that size.  A
+512x512 image takes about five minutes. 
+.ih    
+SEE ALSO
+The syntax to select the PI channels for each component of the color map
+is described in \fI help filter\fR.

@@ -1,0 +1,3 @@
+src/mscdisplay/src/gamma.x
+src/mscdisplay/src/imexam/iejimexam.x
+src/mscdisplay/src/oldimexam/iejimexam.x

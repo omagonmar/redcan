@@ -1,0 +1,12 @@
+#Header: 
+#Log:  
+# Make the matchsrc task.
+
+$checkout libpkg.a ../
+$update libpkg.a
+$checkin libpkg.a ../
+$exit
+										libpkg.a:
+	ms.x    	<tbset.h> <ext.h> <fset.h> "ms.h"
+	mssubs.x    	<tbset.h> <ext.h> <mach.h> "ms.h"
+	;

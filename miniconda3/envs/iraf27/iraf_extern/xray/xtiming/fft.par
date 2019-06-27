@@ -1,0 +1,69 @@
+#$Header: /home/pros/xray/xtiming/RCS/fft.par,v 11.0 1997/11/06 16:45:18 prosb Exp $
+#$Log: fft.par,v $
+#Revision 11.0  1997/11/06 16:45:18  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:32:19  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:37:11  prosb
+#General Release 2.3.1
+#
+#Revision 7.0  93/12/27  19:04:06  prosb
+#General Release 2.3
+#
+#Revision 6.1  93/12/17  10:31:22  mo
+#MC	12/17/93	Fix the begtime/endtime parameter names
+#
+#Revision 6.0  93/05/24  16:54:32  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  23:06:29  prosb
+#General Release 2.1
+#
+#Revision 4.2  92/10/23  10:05:20  mo
+#MC	10/24/92	Remove obsolete parameter
+#
+#Revision 4.1  92/09/04  11:11:40  mo
+#MC		9/4/92		Added 4 parameters to be set manually if
+#				not available in input lightcurve table file.
+#
+#Revision 4.0  92/04/27  15:29:55  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 3.0  91/08/02  01:59:50  prosb
+#General Release 1.1
+#
+#Revision 2.2  91/07/21  18:09:00  mo
+#MC	7/21/91		Update with new defaults for fft output table
+#
+#Revision 2.1  91/07/08  19:36:07  mo
+#MC	7/8/91		Make the fftcoeff hidden parameter default to yes
+#
+#Revision 2.0  91/03/06  22:31:54  pros
+#General Release 1.0
+#
+#  FFT.PAR 
+#
+#  periodogram analysis task parameters
+source_file,s,a,,,,"Input source file (table or time-sorted qpoe file)"
+background_file,s,a,"none",,,"Input background qpoe file"
+fft_file,s,a,".",,,"root name for output file [root_fft(ftp,pwr).tab]"
+column_name,s,a,"src",,,"Input table column heading"
+#bins_per_segment,i,a,0,0,,"Bins per segment for summed FFT ( 0 for coherent )"
+display,i,h,1,0,5,"Output display verbosity"
+clobber,b,h,"no",,,"OK to clobber existing output file?"
+fftcoeff,b,h,"yes",,,"Save the fft coefficient output?"
+expthresh,r,h,50.,0.0,100.0,"Min. percent of exp. time for inclusion"
+gap_fillmode,i,h,0,0,2,"Gap fill algorithm 0=none,1=interpolation,2=cons. fill"
+gap_fillconstant,r,h,,,,"Constant for filling empty bins"
+bins,i,a,0,0,,"Number of bins ( 0 for binsize )"
+bin_length,r,a,1.0,,,"Bin length in seconds"
+get_gintvs,b,h,y,,,"get good intervals from QPOE header?"
+power_threshold,r,h,-1.0,-1.0,,"Thresh to display norm power values (-1.0 for auto)"
+histogram_bin_size,r,h,.5,0.,,"Size of histogram bin for *_ftp.tab output"
+histogram_no_bins,i,h,40,1,,"Number of bins for histogram in *_ftp.tab"
+binlen,r,h,,0.0,,"Bin size for input table if not in header"
+srcarea,r,h,,0.0,,"Area of source data for input table if not in header"
+begtime,r,h,,0.0,,"Start time of data for input table if not in header"
+endtime,r,h,,0.0,,"End time of data for input table if not in header"

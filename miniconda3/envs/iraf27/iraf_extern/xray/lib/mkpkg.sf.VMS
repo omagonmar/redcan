@@ -1,0 +1,21 @@
+$set XFLAGS	= "-c -p tables -p xray"
+$set LFLAGS	= "-p tables -p xray"
+
+# Mkpkg special file list for VMS/IRAF.
+
+# All files needing special processing for the local host operating system,
+# e.g., to permit host dependent optimization or to work around compiler bugs,
+# should be listed here.
+
+# Files optimized for the local host system.
+# -----------------------------------------
+
+# (no such files at present for the VMS VAX/Fortran compiler).
+
+# Files requiring special compilation due to host compiler bugs.
+# -------------------------------------------------------------
+# When using VMS, the following file need to be updated.
+
+$special "xray$xtiming/timfilter/":
+        timfilter.x       xray$lib/vvms/timfilter.x
+        ;

@@ -1,0 +1,412 @@
+	RELEASE NOTES FOR SAO/PROS -- September 1990
+
+(NB: Some directory names refer explicitly to the SAO Unix LAN.)
+
+The September 1990 build of the PROS has been installed in the IRAF V2.9
+system and resides in the /iraf/xray directory.  The xray package is a
+"top level" package (at the same level as packages such as "image" and
+"noao") containing the sub-packages einstein, nimages, rosat, spatial,
+spectral, and timing.
+
+I) NEW PROS AND QPOE FEATURES
+
+Major work has been done on the format of QPOE files, including the
+following:
+
+Ia) WCS information added to the QPOE file
+
+WCS information has been added to the QPOE file and region filtering
+now accepts WCS syntax. See 'help region' for more info on the new
+region syntax.
+
+Ib) Named elements in the QPOE event record
+
+There has been a major change in the QPOE file structure in that we
+now maintain the names of each element in the event record in the qpoe
+file in the form of macros.  This allows PROS tasks to be run on files
+with essentially arbitrary event records and will be used to integrate
+Astro-D into PROS as well as future missions.
+
+The recognized names (and types) of the elements of the event structure are:
+
+name:		type:		description:
+x		short		x position in pixels
+y		short		y position in pixels
+pha		short		pulse height amplitude in channels
+pi		short		pulse invariant bin in channels
+time		double		photon arrival time
+dx		short		detector x position
+dy		short		detector y position
+region		short		region number (after qpcopy, etc.)
+
+The named elements can be anywhere in the event record, although
+alignment must be maintained.  (For example, a double must be on the
+0, 4, 8, 12, 16 ... short boundary, while an int must be on a 0, 2, 4,
+6, 8, ... short boundary.)  Several PROS tasks look up the offsets of
+these elements by name when manipulating these quantities.  For the
+time being, we require the data types of these elements to be
+maintained as above.  This restriction will eventually be lifted when
+code is placed into the PROS tasks to deal (efficiently) with named
+quantities of different data types.
+
+In tasks such as xpr2qp, img2qp, and toe2qp, that create qpoe files,
+event structure and the names of the elements within the event record
+are defined by a new "eventdef" parameter, which replaces the
+eventsize parameter.  The format of an eventdef extends the qpoe
+conventions, e.g.:
+
+	{s:x, s:y, s:pha, s:pi, d:time, s:dx, s:dy}
+
+defines a record with 6 short values and 1 double.  As shown, an
+element is defined by a single character defining the data type,
+followed by a colon, followed by the element name.  The accepted data
+types are:
+
+s		short
+i		int
+l		long
+r		real
+d		double
+x		complex
+
+The following aliases are recognized by tasks such as xpr2qp, qpcopy, etc:
+
+peewee		{s:x,s:y}
+small		{s:x,s:y,s:pha,s:pi}
+medium		{s:x,s:y,s:pha,s:pi,d:time}
+large		{s:x,s:y,s:pha,s:pi,d:time,s:dx,s:dy}
+region		{s:x,s:y,s:pha,s:pi,d:time,s:dx,s:dy,s:region}
+
+These aliases allow xpr2qp to create "large" qpoe files, etc. as before.
+
+Ic) QPDEFS no longer needed
+
+The QPDEFS file is no longer needed in order to access QPOE files.
+The default block factor for IMIO is now contained in the QPOE file
+itself, in a parameter called "defblock".  If the defblock parameter
+is missing, the default is taken to be 1 (not 8, as was previously the
+case).  This was the last part of QPDEFS that was required for normal
+manipulation of QPOE files.
+
+Of course, the QPDEFS file can still be used for user-defined macros,
+etc.  See /pros/xray/QPDEFS for examples of useful macros.
+
+Entries in QPDEFS will override entries in QPOE files.  Thus, if one
+sets the blockfactor to 2 in a QPDEF file:
+
+	set blockfactor 2
+
+the QPDEFS value will override the value placed in the QPOE file.  
+
+If you continue to use a QPDEFS file, please remember to rid that file
+of definitions of named event structure elements:
+
+		x, y, pi, pha, time,dx, dy
+
+Having these as definitions in the QPDEFS file will prevent tasks such
+as xpr2qp from entering them into a qpoe file, and will generate a
+"probable macro recursion" error.
+
+ 
+II) NEW TASKS AND PACKAGES
+
+1. RARR2FITS: A new task has been added to convert ROSAT array files to
+FITS image files. The standard ROSAT header information is added to the
+FITS header.  The files can be read into IRAF using rfits.
+
+2. TIMFILTER: A new task has been added to the TIMING package to 
+display the standard good time intervals in the qpoe file and output
+an ascii file of time filters that can be used in subsequent tasks to
+filter the qpoe file.
+
+III) MAJOR MODIFICATIONS TO EXISTING TASKS
+
+The following changes have been made to PROS by this change:
+
+1. QPDISP: A new hidden qpdisp parameter, "elements", takes a string
+of named event elements to display, e.g. "x y time" and will display
+only the named elements.  The null string defaults to all columns.  A
+new qpdisp parameter, "nodisp", is a boolean that determines whether to
+display the events.  It is used to suppress the screen display when a
+table is being created.  Note that the elements parameter also
+determines which event elements are placed in the table file.
+Finally, the qpdisp region parameter has been made a hidden variable,
+because it annoyed me.
+
+2. QPSORT: The sorttype for qpsort is a list of event elements on which
+to sort.  For example, sorttype="pha, dx"  will sort by pha, and will sort
+identically valued phas by detector x.  This ability to sort by any order
+of named event elements has been implemented in all tasks that sort qpoe
+files, such as xpr2qp, img2qp, toe2qp, and qprotate.
+
+3. QPSPEC: A new parameter, "binning", has been added to specify the named
+element on which to bin.  Normally, "pi" or "pha" will be specified.  The
+pi parameter has been removed from the task.
+
+4. <mumble>2QP and <mumble>2FITS tasks (e.g., xpr2qp, img2fits): These
+tasks use the eventdef prarameter instead of eventsize.  The sorttype
+parameter now accepts a list of named elements on which to sort (e.g.,
+"y x pha".  A default block factor of 1 is now written into each qpoe file.
+
+Several restrictions are currently in place:
+
+a. When performing qpcopy, qprotate, qpsort, etc., the output eventdef
+can be larger or smaller than the input eventdef, but must maintain
+the elements in the same order.  This has always been the case, when
+eventdefs were defined as "small", "medium", etc.  We hope to lift
+this restriction at some point.
+
+b. Tasks that read single photons events such as qpspec, fold, and
+ltcurv, assume the data type of the named element.  That is, qpspec
+assumes that it is binning a short data type (e.g., "pi" or "pha")
+while fold assumes that the "time" element is of type double. Again,
+we intend to remove this restriction at some point to make these tasks
+completely general.
+
+4. IMCONTOUR: A new device to output plots has been implemented called
+imd(r|y|b|g|w).  This device plots to the Imtool window under Suntools 
+or the Saoplot window under Xwindows.  It is a convenient device to 
+overlay contours onto the output of tv display. The last letter of the
+device specification denotes display color, thus r=red, y=yellow, 
+b=blue, g=green, w=white.  
+
+
+IV) EXISTING XRAY PACKAGES AND TASKS
+
+	The xray package contains the following sub-packages and tasks
+(* denotes a new task, + denotes major modifications to a task, and -
+denotes that the task has changed packages, $ denotes the task has a new name):
+
+package		tasks		description
+
+xray
+		+ qpdisp	display by column name
+		+ qpsort	sort by column name
+
+nimages		
+		+ imcompress	update wcs in new image header
+	        + imreplicate		     "
+
+spatial		
+		+ imcontour	add wcs, verify blocking and subsections
+				implement imd(r|y|b|g|w) graph device
+
+		+ makevig	add support to read reference image wcs for
+				correct parameters
+einstein
+		+ expmask	now allows output file to be either larger
+				or smaller than input file
+		+ gzm2im	will read Einstein GZOOM files either with
+				a UHEAD or a UDA header
+rosat		
+		+ toe2qp	rosat header updates
+		+ toe2fits		"
+		$ _tm2qp 	hidden task only for SAO internal use
+		$ _tm2fits 	hidden task only for SAO internal use
+		$ _prgmap 	hidden task only for SAO internal use
+		$ _degap	hidden task only for SAO internal use
+
+timing		
+		+ all tasks	all tables outputs have standard image header
+		+ fft		will do summed fft's as well as coherent fft's
+		* timfilter     display time intervals and create an
+			        ascii time filter file 
+
+				added gap filling algorithms
+
+spectral
+		+ fit		uses new binning algorithm
+				uses SPP simplex minimization
+		+ qpspec	bin by any int*2 element in the event record
+
+misc
+		* oqphead	convert old qpoe header to new qpoe format
+		
+There are help pages for all tasks.  In addition, there is help for
+spatial filtering ("help regions"), PROS/IRAF coordinates ("help
+coords"), QPOE filtering ("help qpoe") and PROS file name conventions
+("help extensions") in the xray package.
+
+V) Converting old QPOE files
+
+Old qpoe files (i.e., any qpoe file made before 8/9/90) must be converted
+to the new QPOE header format (containing the WCS information).  A task
+in misc called "oqphead" will convert an old qpoe file header to a new one.
+This task will also attempt to convert image files created from qpoe files.
+
+Old qpoe files (i.e., any qpoe file made before 8/9/90) must be converted
+to the new format.  A task in misc called "qpaddev" will convert an old
+qpoe file by adding the event definition and element names.  If the new
+PROS is used on old files without conversion, tasks such as qpcopy, qpdisp,
+qpspec, etc. that look up element names will not work.
+
+*** To use qpaddev, you must first edit your QPDEFS file and remove the
+definitions of "x", "y", "pha", "pi", "time", "dx", and "dy".   ***
+A "valid" QPDEFS file is in ~pros/xray/QPDEFS. 
+
+VI) SETTING UP TO USE THE XRAY PACKAGE
+
+	To run the xray package, users should use the default IRAF V2.9.
+(IRAF should have the Aug 1990 patch applied to it.  This is available
+from NOAO.)
+
+	The Unix environment variable "xrayversion" controls the version
+of the xray package that IRAF loads.  If "xrayversion" does not exist or
+is set to "old", then the currently installed xray package will be loaded.
+This is the generally recommended procedure for most users.
+
+	If, however, "xrayversion" is set to "new", the development build will
+be loaded.  Most users should use the currently installed xray package, as
+the new one is subject to development and may not work at any given moment.
+On the other hand, bugs are fixed in the development build, so if you need
+a bug fix, you might use the development version.
+
+	Users should reset the parameter values of all xray tasks to their
+initial defaults if they were using the Feb90 build.  See help on the iraf
+task "unlearn" for more information.
+
+VI) TEST DATA FILES
+
+	To gain some familiarity with the system, there are some Einstein
+data files available.  The directory xdata$ contains the necessary
+data files for the Einstein file "snr".
+
+	The -.mhdr, -.tgr, -.xpr, and -.img files are input to the xpr2qp 
+or img2qp task to produce an IRAF qpoe file.  The -.exp file is input to
+the expmask task to produce the corresponding exposure mask.
+
+VII) XTERM AND XIMAGE
+
+	It is now easier to set up the X (V10) equivalent of gterm.  Copy
+these lines into your loginuser.cl:
+
+	if ( envget("TERM") == "tek4015" )  {
+		print "resetting terminal to xterm with graphics"
+		reset terminal = xterm
+		reset stdgraph = xterm
+		stty xterm
+	} else {
+		print "resetting terminal to gterm"
+		stty	gterm			# set terminal protocol
+	}
+
+Copy the following alias into your .cshrc (or .uwmrc menu if you use it):
+
+alias xiraf "xterm =80x40+300+45 %745x625+290+20 -t -n iraf -e /iraf/Xstart&"
+
+Note: the xterm window is positioned by the last numbers in the =geometry
+(IRAF2.8 appears to require the 80x40).  The tektronix window is positioned
+and sized by the %geometry.
+
+To start up iraf, type xiraf (instead of cl) from your IRAF home directory.
+
+
+#	A new version of ximage that fully supports region filtering now
+# exists. This ximage has many new features and works with the IRAF tv.display
+# task.  To run ximage in this mode, execute:
+#
+#		ximage -pros
+#
+# and then use tv.display, as with imtool.  See Mike VanHilst for more
+# details and the new manual.
+
+VIII) KNOWN BUGS
+
+	The img2qp and xpr2qp tasks still have trouble with memory.
+If these tasks run and seem to take an extremely long time (>10 minutes
+for 100000 photons) or give strange error messages ("can't delete file"),
+try using a smaller sortsize buffer.
+
+IX) NEXT BUILD
+
+The next build will be in <blank> 1990.  In the next several months
+areas of focus will consist of the following:  
+
+	ROSAT    - 
+
+        Misc     - 
+
+	Spatial  - 
+
+	Spectral - 
+		 
+	Timing   - 
+		 
+
+The following message concerning qpoe sub-sections and masks was sent
+to iraf users on 2/6/90:
+
+	IMPORTANT MESSAGE TO ALL IRAF/PROS USERS:
+
+		QPOE SUB_SECTIONS AND MASKS
+
+One often wants to specify a sub-section of an image file or
+a qpoe file.  Image files support the sub-section facility, so
+that one specifies, for example:
+
+		foo.imh[400:599,400:599]
+
+to define a "logical" 200 x 200 image centered at 500,500.
+
+Until now, users have been advised to use the "rect="
+filter to define a similar sub-section of a qpoe file.  For example,
+
+		foo.qp[rect=(400:599,400:599)]
+
+defines a 200 x 200 qpoe centered at 500, 500.  This is especially
+useful when one is using a qpoe file as an image in tasks, such as
+imcnts, imcontour, and all PROS tasks that begin with "im".
+
+It is now clear that this advice is incorrect.  THE SAME SUB-SECTION
+CAPABILITIES WORK WITH QPOE FILES AS WORK WITH IMH FILES, IN TASKS THAT
+ACCEPT IMAGES AS INPUT.  Thus, one can specify:
+
+		foo.qp[400:599,400:599]
+
+the same as in the first example, and the section will mean the same thing
+to the task.
+
+This clears up much confusion concerning the use of masks in connection
+with sub-sections.  A mask that is made using the original image (with its
+physical dimensions) as a reference can be used for spatial filtering of a
+sub-section of that image.  This also works when a qpoe file is used with
+a sub-section, but it does not work when a qpoe file is used with a "rect="
+filter!  For example, suppose one uses plcreate to make a 1024 x 1024 mask
+consisting of a  circle centered at 512 512 of radius 50, called foo.pl.
+Suppose one has a qpoe file, foo.qp, and an imh file, foo.imh, such that
+the latter is a simple imcopy of the former (and thus has the same
+dimensionality and same number of photons as the former).  Then one can
+run a task such as imcnts on both files and get identical results, if
+one uses sub-sections, i.e.
+
+		imcnts foo.imh[400:599,400:599] foo.pl
+and
+		imcnts foo.qp[400:599,400:599] foo.pl
+		
+will give the same results.  However, the use of a "rect=", i.e.
+
+		imcnts foo.imh[rect=(400:599,400:599)] foo.pl
+
+does not give the same results.  In the latter case, the mask must be re-made
+so that it is centered on 100, of size 200, not centered on 512 of size 1024.
+That is, one must rescale the mask so that the center and dimensions fit
+the size of the rect.
+
+MORAL:  DO NOT USE "RECT=" FOR IMIO TASKS.  USE THE SECTION SPECIFICATION
+INSTEAD.  By doing this, one can (almost - see below) use the original
+mask with the section.
+
+Unfortunately, use of the "block=" filter in a qpoe file works the same
+as "rect=" and requires that one re-scale the mask.  That is, the center
+of a region as well as the region dimensions must be divided by the block
+size.  We hope that NOAO will allow blocked images and masks to work together
+without rescaling in a future release of IRAF.
+
+It is not clear when, if ever, a "rect=" specifier should be used.  For
+tasks which a qpoe specific (in the PROS, these begin with "qp"), one will
+usually filter photons through a mask, not using "rect=".  It is therefore
+recommended that one not use "rect=" at all, either to "im" tasks or "qp"
+tasks.  If we find cases in which "rect=" is useful, we will let you know.
+We welcome comments, suggestions, and especially, bug reports.
+
+These definitions are no longer needed and should be removed in any case.

@@ -1,0 +1,221 @@
+#$Header: /home/pros/xray/xtiming/doc/RCS/fftplot.hlp,v 11.0 1997/11/06 16:44:08 prosb Exp $
+#$Log: fftplot.hlp,v $
+#Revision 11.0  1997/11/06 16:44:08  prosb
+#General Release 2.5
+#
+#Revision 9.0  1995/11/16 19:32:59  prosb
+#General Release 2.4
+#
+#Revision 8.0  1994/06/27  17:38:31  prosb
+#General Release 2.3.1
+#
+#Revision 7.2  94/06/01  09:50:50  prosb
+#krm - updated last modified date.
+#
+#Revision 7.1  94/05/27  11:33:44  prosb
+#krm - changed file name in examples.
+#
+#Revision 7.0  93/12/27  18:59:55  prosb
+#General Release 2.3
+#
+#Revision 6.2  93/12/21  12:17:37  janet
+#*** empty log message ***
+#
+#Revision 6.1  93/12/08  14:28:22  janet
+#jd - Default plot change to normpower from power.
+#
+#Revision 6.0  93/05/24  16:55:39  prosb
+#General Release 2.2
+#
+#Revision 5.0  92/10/29  22:47:53  prosb
+#General Release 2.1
+#
+#Revision 4.1  92/10/21  17:31:55  janet
+#krm updates for fds.
+#
+#Revision 4.0  92/04/27  15:31:11  prosb
+#General Release 2.0:  April 1992
+#
+#Revision 1.3  92/04/24  12:06:44  janet
+#revised for apr 92 release.
+#
+#Revision 1.2  92/01/15  13:45:24  janet
+#help file for new task fftplot.
+#
+#
+.help fftplot May94 xray.xtiming
+.ih
+NAME
+fftplot - Graph a FFT Table
+.ih
+USAGE
+fftplot table
+.ih
+DESCRIPTION
+\fIFFTPLOT\fR graphs an output file created from running task 
+\fIFFT\fR.  FFTPLOT has default parameters set to plot a histogram 
+of 'Normpower vs. Frequency (Hz)'.  The input is the root_fft.tab file.  
+Further customizations effecting titles, axes labels and tics, 
+and plotting data subsets are available to the user.  The iraf 
+IGS plot commands are available to the user to further expand, zoom,
+and query the plot.
+
+.ih
+PARAMETERS
+.ls table =             prompt = Input Table File
+
+Table file to be plotted.
+.le
+.ls outplt =            prompt = Plot output file
+
+Filename of output plot.  Required when parameter hdcopy is \fIyes\fR.
+This file is left in the user's directory after termination of this
+task.  It can be reprinted using the STPLOT package SGIKERN task.
+.le
+.ls (column = "normpower")
+
+Column name of plot data.  The name must be input as it appears in the
+table.  The data corresponding to the column name is read from the
+table file and plotted.
+.le
+.ls (plot_type = "histo") [string]
+
+Type of plot, either \fIhisto\fR or \fIbar\fR.  If plot_type is
+"histo" a histogram of the column data will be plotted.  If the
+plot_type is "bar" the column data will be plotted as horizontal
+bars. Default is set to \fIhisto\fR.
+.le
+.ls (ecolumn = "") [string]
+
+Column name of error data to be plotted.  This is an option only if
+plot_type is "histo" and will appear as error bars on the graph.
+Ecolumn is the name of the error data associated with the column.
+The name must be input as it appears in the input table.
+.le
+.ls (plot_title = "Power Spectrum :") [string]
+
+Title for plot.
+.le
+.ls (x_title = "frequency (Hz)") [string]
+
+Title for X-axis.
+.le
+.ls (y_title = "") [string]
+
+Title for Y-axis.
+.le
+.ls (hdcopy = no) [boolean]
+
+\fIyes\fR prints a hardcopy of the plot to the printer and \fIno\fR
+displays the plot on the screen.  Default is set to \fIno\fR.
+.le
+.ls (gclose = no) [boolean]
+
+\fINo\fR leaves task in graphics window - type 'q' to quit.
+\fIYes\fR closes plot and returns to the cl.  Default is set to
+\fIno\fR.
+.le
+.ls (num_plots = 1) [int]
+
+Number of plot windows in which to display the data.  Data will be
+evenly divided among the specified number of windows.
+.le
+.ls (x_units = "freq") [string]
+
+X-axis label.  Default is \fIfreq\fR.  Header parameters must be present 
+for \fIfreq\fR to work.  x_units will default to \fIbin\fR if header 
+parameters are missing.
+.le
+.ls (x_tics = 4.) [real]
+
+Number of tic labels on x-axis.  This is the approximate number of tics and
+corresponding labels along the x-axis.  The task chooses evenly spaced round
+numbers for labels and thus the actual number of labels may not be exactly
+that which was chosen.
+.le
+.ls (y_tics = 4.) [real]
+
+Number of tic labels on y-axis.  This is the approximate number of tics and
+corresponding labels along the y-axis.  The task chooses evenly spaced round
+numbers for labels and thus the actual number of labels may not be exactly
+that which was chosen.
+.le
+.ls (label_size = 0.75) [real]
+
+Plotting Header and axis labels format size.  This is the size of the labels
+for the plot header and X & Y axis labels.  The format is set to a reasonable
+size.  Adjust this value by 1/10's to change the size of the labels.
+.le
+.ls (tlabel_size = 0.5) [real]
+
+Strip plot tic label format size.  This is the size of the labels
+on the axis tic marks.  Small adjustments to this value dramaticly affect
+the size.  This value should be decreased slightly (by 1/10's) when the
+number of plots is large and the labels run into adjoining plot windows.
+.le
+.ls (x_range = "auto") [string]
+
+Either \fIauto\fR which will plot entire file length or a \fIRange\fR
+consisting of a min and max.
+.le
+.ls (y_range = "auto") [string]
+
+Either \fIauto\fR which will plot all histogram values or a \fIRange\fR
+consisting of a min and max.
+.le
+.ls (clobber = no) [boolean]
+
+Boolean flag specifying whether or not the plot file can be overwritten if
+it already exists (i.e. postscript plot file).  Does not apply to window
+graphics.  Used when \fIhardcopy\fR equals \fIyes\fR.
+.le
+.ls (cursor = "") [string]
+
+Stores cursor commands taken in interactive graphics mode.
+.le
+.ih
+EXAMPLES
+1. Plot a histogram of the fourier transform ouput snr1net_fft.tab.
+.nf
+
+        xt> fftplot
+        Input Table File: sumd_fft
+
+.fi
+2. Make a hard copy snr1net_fft.plt of the plot.
+.nf
+
+	xt> fftplot.hdcopy=yes
+	xt> fftplot
+	Input Table File: sumd_fft
+	Plot output file: sumd_fft.plt
+
+	xt> fftplot.hdcopy=no
+
+.fi
+Note : This method sends a hardcopy to the default printer and it makes
+a disk file snr1net_fft.plt which may be printed with the STPLOT SGIKERN
+task.
+.nf
+.fi
+
+3. As in example 2 but in command line format.
+.nf
+
+	xt> fftplot "snr1net_fft" "snr1net_fft.plt" hdcopy+
+
+.fi	
+.ih
+TIME REQUIREMENTS
+.ih
+BUGS
+.ih
+SEE ALSO
+    Documentation on making a power table (help fft) 
+
+    Documentation on graphing timing tables (help timplot)
+
+    Documentation on graphics cursor commands (help cursors)
+
+.endhelp
+
