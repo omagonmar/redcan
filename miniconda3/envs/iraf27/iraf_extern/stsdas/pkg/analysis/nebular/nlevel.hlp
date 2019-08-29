@@ -1,3 +1,0 @@
-#  CL script for the analysis.nebular.nlevel task
-
-phelp ("nebular$doc/nlevel.hlp", fi+)

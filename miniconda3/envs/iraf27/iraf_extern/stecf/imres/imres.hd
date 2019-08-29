@@ -1,7 +1,0 @@
-# Help directory for the STECF imres package (Richard Hook)
-
-$doc = "stecf$imres/doc/"
-
-apomask      hlp=doc$apomask.hlp
-cplucy       hlp=doc$cpluxy.hlp
-seeing       hlp=doc$seeing.hlp

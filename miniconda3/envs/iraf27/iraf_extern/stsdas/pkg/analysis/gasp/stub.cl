@@ -1,1 +1,0 @@
-type gasp$getimage.stub

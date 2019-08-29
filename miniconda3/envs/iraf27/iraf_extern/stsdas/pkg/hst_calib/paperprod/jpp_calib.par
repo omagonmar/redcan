@@ -1,5 +1,0 @@
-root, f, a, "", , , 	Input root name
-prodext, f, a, "", , , 	Input file extension name
-igi_output, f, a, "", , ,	Output igi file name
-
-mode, s, h, "al"

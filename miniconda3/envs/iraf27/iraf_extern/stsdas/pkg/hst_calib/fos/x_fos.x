@@ -1,9 +1,0 @@
-task	aperlocy=t_ytamod,
-	apscale=ytascl,
-        bspec=bspec,
-        countspec=t_countspec,
-	deaccum=t_deaccum,
-	fitoffsety=yofit,
-        gimpcor=gmpfos,
-	unwrap=t_unwrap,
-	waveoffset=waveoffset

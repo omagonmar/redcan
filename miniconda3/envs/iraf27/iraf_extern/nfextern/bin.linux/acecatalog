@@ -1,6 +1,0 @@
-#!/bin/csh -f
-#
-# ACECATALOG -- Call the acecatalog task in the ACE package.
-
-set noglob
-${nfextern}bin${arch}/x_ace.e acecatalog $*

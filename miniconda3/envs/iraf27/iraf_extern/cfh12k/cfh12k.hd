@@ -1,9 +1,0 @@
-# Help directory for the CFH12K package.
-
-$doc = "./doc/"
-$src = "./src/"
-
-revisions	sys=src$Revisions
-
-hdrcfh12k	hlp=doc$hdrcfh12k.hlp,		src=src$hdrcfh12k.cl
-setcfh12k	hlp=doc$setcfh12k.hlp,		src=src$setcfh12k.cl

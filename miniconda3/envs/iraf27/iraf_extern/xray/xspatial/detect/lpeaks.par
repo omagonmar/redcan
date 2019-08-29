@@ -1,7 +1,0 @@
-#  Parameters for the lpeaks task
-#
-image,s,a,"",,,"Input Snrmap Image"
-rpos_tab,s,a,"",,,"Output Rough Positions Table"
-thresh,r,h,2.75,,,"SNR Threshold"
-display,i,h,2,,,"Display Level"
-clobber,b,h,no,,,"Clobber if file exists"

@@ -1,4 +1,0 @@
-# helio parameter file
-images,s,a,,,,Image names
-latitude,r,h,INDEF,,,Observatory latitude (degrees)
-longitude,r,h,INDEF,,,Observatory longitude (degrees)

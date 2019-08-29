@@ -1,4 +1,0 @@
-intable,s,a,"",,,"tables to be renamed"
-outtable,s,a,"",,,"new table names"
-verbose,b,h,yes,,,report each rename operation
-mode,s,h,"al",,,

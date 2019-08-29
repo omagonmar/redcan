@@ -1,3 +1,0 @@
-/*
-
-###  Proprietary source code removed  ###

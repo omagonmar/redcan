@@ -1,1 +1,0 @@
-task specpsf = spepsf

@@ -1,3 +1,0 @@
-# Create tar file caldirs.
-
-tar cf - -I noao/kpno/wiyn/caldir noao

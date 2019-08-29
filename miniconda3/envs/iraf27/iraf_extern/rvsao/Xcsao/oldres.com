@@ -1,1 +1,0 @@
-../lib/oldres.com

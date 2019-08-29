@@ -1,3 +1,0 @@
-obsmode, s, a,,,, character string specifying observing mode
-refdata,pset,h,,,, Reference data
-mode, s, h, 'a',,,

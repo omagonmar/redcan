@@ -1,6 +1,0 @@
-      xbox - Quick solution of mask alignment (using boxes) (ucsclris)
-    mshift - Quick solution of mask translation (ucsclris)
-      prep - Load the PREP package (ucsclris)
- maskalign - Take JLC-style input, derive alignment solution (superceded) (ucsclris)
-  mboxfind - Find box and star positions; putput in JLC form (superceded) (ucsclris)
-      qbox - An older script version of xbox (superceded) (ucsclris)

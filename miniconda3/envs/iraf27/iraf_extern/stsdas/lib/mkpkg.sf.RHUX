@@ -1,4 +1,0 @@
-# Mkpkg special file list for Red Hat Linux.
-
-$set LFLAGS = "$(LFLAGS)"
-

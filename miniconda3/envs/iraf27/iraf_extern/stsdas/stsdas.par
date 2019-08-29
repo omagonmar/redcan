@@ -1,4 +1,0 @@
-# Package parameters for the STSDAS package
-version,s,h,"V3.18.3"
-motd,b,h,yes,,,type the welcome banner?
-mode,s,h,"al"

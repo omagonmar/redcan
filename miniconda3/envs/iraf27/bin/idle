@@ -1,5 +1,0 @@
-#!/fs/computo52/other0/dani/Omaira/CanariCam/CCAM/miniconda3/envs/iraf27/bin/python2.7
-
-from idlelib.PyShell import main
-if __name__ == '__main__':
-    main()

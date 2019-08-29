@@ -1,5 +1,0 @@
-# Task parameters for the SPEARMAN task
-
-input,s,a,,,,"> Input file(s)"
-verbose,b,h,n,,,"> Full printout desired?"
-mode,s,h,"al",,,

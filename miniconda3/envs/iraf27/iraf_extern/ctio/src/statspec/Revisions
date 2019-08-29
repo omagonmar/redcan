@@ -1,3 +1,0 @@
-t_statspec.x
-	Changed IM_LEN macro imgeti() procedure, and removed
-	include of imhdr.h file (PG 11/apr/90).

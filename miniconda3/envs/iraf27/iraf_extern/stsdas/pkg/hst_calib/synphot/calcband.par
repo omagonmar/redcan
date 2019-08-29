@@ -1,5 +1,0 @@
-obsmode,s,a,,,, Instrument observation mode passband
-output,s,a,,,, Output table name
-wavetab,s,h," ",,, Wavelength table name
-refdata,pset,h,,,, Reference data
-mode,s,h,'a',,,

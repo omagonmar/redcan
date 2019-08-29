@@ -1,7 +1,0 @@
-bin/fgread.e
-bin/fgwrite.e
-bin/fpack
-bin/funpack
-bin/libmef.a
-bin/sum32
-bin/x_fitsutil.e

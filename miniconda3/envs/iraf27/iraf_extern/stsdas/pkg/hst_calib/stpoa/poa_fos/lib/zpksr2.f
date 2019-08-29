@@ -1,2 +1,0 @@
-
-###  Proprietary source code removed  ###

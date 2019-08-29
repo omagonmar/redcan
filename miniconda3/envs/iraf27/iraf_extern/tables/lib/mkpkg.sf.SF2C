@@ -1,4 +1,0 @@
-# Mkpkg special file list for Solaris/IRAF, Cygnus/Gnu/F2c.
-
-$special "tables$pkg/fitsio/strfits/":    rf_exit.x    tableslib$rf_exit.c     
-# Files requiring special compilation due to host compiler bugs.

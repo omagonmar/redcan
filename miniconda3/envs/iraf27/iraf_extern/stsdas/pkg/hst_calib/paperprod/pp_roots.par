@@ -1,4 +1,0 @@
-input, f, a, "", , ,		input file list name
-output, f, a, "", , ,		output file list name
-
-mode, s, h, "al"

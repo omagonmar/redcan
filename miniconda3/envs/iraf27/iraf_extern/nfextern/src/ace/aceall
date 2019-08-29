@@ -1,6 +1,0 @@
-#!/bin/csh -f
-#
-# ACEALL -- Call the aceall task in the ACE package.
-
-set noglob
-${nfextern}bin${arch}/x_ace.e aceall $*

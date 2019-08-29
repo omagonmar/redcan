@@ -1,5 +1,0 @@
-# Wiener filter noise parameters.
-#
-statistic,s,h,"independent","|independent|Poisson",,">noise statistical model"
-fnoise,r,h,INDEF,1.,,">frequency were to measure noise"
-mode,s,h,al

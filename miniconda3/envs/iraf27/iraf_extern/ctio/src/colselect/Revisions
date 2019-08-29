@@ -1,3 +1,0 @@
-t_colselect.x
-	Renamed procedures from co_* to col_*, in order to be consistent
-	with naming conventions (PG 27/Apr/92).

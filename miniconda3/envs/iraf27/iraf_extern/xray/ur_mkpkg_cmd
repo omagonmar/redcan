@@ -1,3 +1,0 @@
-# cd xray  # pre-IRAF-2.15
-mkpkg -p xray
-

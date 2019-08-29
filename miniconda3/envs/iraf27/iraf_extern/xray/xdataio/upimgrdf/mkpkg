@@ -1,8 +1,0 @@
-$checkout libpkg.a ../
-$update libpkg.a
-$checkin libpkg.a ../
-$exit
- 
-libpkg.a:
-        upimgrdf.x     <error.h>  <qpc.h> <error.h> <ext.h> <qpoe.h> <rosat.h> <einstein.h> 
-	;

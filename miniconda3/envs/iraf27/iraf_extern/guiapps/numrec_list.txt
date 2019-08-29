@@ -1,8 +1,0 @@
-spt/onedspec/deblend.x
-spt/sptdeblend.x
-xrv/deblend.x
-xrv/fftutil.x
-xrv/numrep.x
-xrv/rvcorrel.x
-xrv/rvdemo.x
-xrv/rvidlines/iddeblend.x

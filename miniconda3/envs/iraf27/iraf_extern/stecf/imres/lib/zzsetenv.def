@@ -1,7 +1,0 @@
-# Global environment definitions for the IMRES package.
-
-set	imreslib	= "imres$lib/"
-set     imressrc	= "imres$src/"
-set     imresbin	= "stecf$bin/"
-
-keep

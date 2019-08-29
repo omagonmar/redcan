@@ -1,6 +1,0 @@
-# Help directory for IRPROC.
-
-revisions	sys=../Revisions
-
-procexpr	hlp=procexpr.hlp
-proctool	hlp=proctool.hlp

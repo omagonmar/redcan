@@ -1,8 +1,0 @@
-pointer	tpowf
-pointer	histcolptr[3]
-int	prctr
-pointer	source
-pointer	bkgd
-
-common /ftptab/ tpowf, histcolptr, prctr, source, bkgd
-		

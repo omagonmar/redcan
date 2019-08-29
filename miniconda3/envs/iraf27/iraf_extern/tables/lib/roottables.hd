@@ -1,8 +1,0 @@
-# Root task entry for the tables package help tree.  Defines `tables' as both a
-# task and a package in the tables help database.
-
-tables		men  = tables$tables.men,
-		hlp  = tables$tables.men,
-		sys  = tables$tables.hlp,
-		pkg  = tables$tables.hd,
-		src  = tables$tables.cl

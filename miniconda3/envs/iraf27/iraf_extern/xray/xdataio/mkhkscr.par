@@ -1,7 +1,0 @@
-#
-instr,s,a,"",,,"Instrument: (hri|pspc)"
-qlmtab,s,a,"",,,"Input QLM table filename"
-flt_fname,s,a,"",,,"Output HK Screen"
-hklookup,s,h,"xdataiodata$tsiqlm.tab",,,"TSI/QLM lookup table"
-clobber,b,h,y,,,"delete old copy of output file"
-display,i,h,0,0,5,"0=no disp, 1=header"

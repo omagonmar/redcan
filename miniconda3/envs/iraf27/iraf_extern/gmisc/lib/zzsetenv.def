@@ -1,9 +1,0 @@
-# Global environment definitions for the GMISC packages.
-
-reset	gmiscbin		= "gmisc$bin(arch)/"
-reset	gmisclib		= "gmisc$lib/"
-reset	noaobin			= "noao$bin(arch)/"
-reset	noaolib			= "noao$lib/"
-reset	pkglibs			= "gmiscbin$,gmisclib$,noaobin$,noaolib$"
-
-keep

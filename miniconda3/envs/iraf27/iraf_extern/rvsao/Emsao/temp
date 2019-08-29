@@ -1,6 +1,0 @@
-	if (mspec != mspec0) {
-	    call close_image (specim, specsh)
-	    if (skyspec)
-		call close_image (skyim, skysh)
-	    go to nextspec_
-	    }

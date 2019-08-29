@@ -1,3 +1,0 @@
-image,f,a,"",,,Input image file
-members,s,a,"",,,Which group members to plot
-inclusive,b,h,no,,,Include non-group files?

@@ -1,7 +1,0 @@
-Building support libraries ....
-  (Using toplevel directory '/rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/' ....)
-    Building CFITSIO libs ....done
-results in /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/cfitsio/_spool
-build_readline = 0
-    Building VO client ....done
-results in /rtfproc/anaconda2_4.2.0/conda-bld/iraf_1522764379718/work/vendor/voclient/_spool

@@ -1,3 +1,0 @@
-# Root help directory for the ADCCDROM package.
-
-_adc			pkg = adccdrom$lib/rootadc.hd

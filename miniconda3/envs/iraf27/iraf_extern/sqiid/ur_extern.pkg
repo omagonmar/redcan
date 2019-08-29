@@ -1,5 +1,0 @@
-# ftp://iraf.noao.edu/iraf/v216/REPO
-reset sqiid = UR_VDIR
-task  sqiid.pkg = sqiid$sqiid.cl
-# sqiid contains ho help
-

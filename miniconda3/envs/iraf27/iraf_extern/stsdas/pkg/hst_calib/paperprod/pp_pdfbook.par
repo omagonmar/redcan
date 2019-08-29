@@ -1,5 +1,0 @@
-igi_output, f, a, "", , ,	Output igi script file name
-page, i, a, , , ,               Page number
-title, f, h, "", , ,            Title for bookmark
- 
-mode, s, h, "al"

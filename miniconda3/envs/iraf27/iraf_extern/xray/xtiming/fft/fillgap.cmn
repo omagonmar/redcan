@@ -1,9 +1,0 @@
-int	fillmode
-int	first_index
-int	last_index
-real	first_cts
-real	last_cts
-real	ctmean
-
-common /filgap/ fillmode,first_index,last_index,first_cts,last_cts,ctmean
-		

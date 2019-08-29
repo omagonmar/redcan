@@ -1,7 +1,0 @@
-# Help definitions for the package.
-
-esowfi		men = esowfi.men,
-		hlp = ..,
-		sys = package.hlp,
-		pkg = esowfi.hd,
-		src = esowfi.cl

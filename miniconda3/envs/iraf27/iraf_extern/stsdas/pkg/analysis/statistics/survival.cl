@@ -1,2 +1,0 @@
-# survival.cl
-phelp ("survival")

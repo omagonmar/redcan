@@ -1,9 +1,0 @@
-# _MSTKHIDE -- Image combine parameters
-
-obstype,s,h,"",,,Observation type selection expression (optional)
-detector,s,h,"",,,Detector ID expression (optional)
-group,s,h,"",,,Group ID expression (optional)
-delete,b,h,no,,,Delete input files after combining?
-outtype,s,h,"real","short|ushort|integer|long|real|double",,Output image pixel datatype
-outlimits,s,h,"",,,Output limits (x1 x2 y1 y2 ...)
-offsets,f,h,"none",,,Input image offsets

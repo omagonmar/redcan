@@ -1,8 +1,0 @@
-{
-  "libffi": "3.2",
-  "c_compiler": "gcc",
-  "xz": "5",
-  "glib": "2.56",
-  "VERBOSE_AT": "V=1",
-  "gstreamer": "1.12"
-}

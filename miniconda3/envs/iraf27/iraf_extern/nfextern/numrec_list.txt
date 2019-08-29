@@ -1,2 +1,0 @@
-src/msctools/mscdisplay/src/gamma.x
-src/msctools/mscdisplay/src/imexam/iejimexam.x

@@ -1,3 +1,0 @@
-impol/src/impollib.f
-specres/src/spelib.f
-specres/src/spepsf.f

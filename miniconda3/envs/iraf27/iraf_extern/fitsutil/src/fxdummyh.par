@@ -1,4 +1,0 @@
-# fdummyh parameters
-filename,f,a,,,,New FITS filename
-hdr_file,f,h,'',,,Header file
-mode,s,h,ql,,,

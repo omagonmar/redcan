@@ -1,9 +1,0 @@
-task    dopoff=t_dopoff,
-        obsum=t_obsum,
-	reflux=t_reflux,
-	spiralmap=t_spiralmap,
-	tacount=t_tacount,
-	waveoff=t_waveoff,
-	zwavefit=t_wavefit,
-	zwaveid=t_waveid,
-	zavgtemp=t_zavgtemp

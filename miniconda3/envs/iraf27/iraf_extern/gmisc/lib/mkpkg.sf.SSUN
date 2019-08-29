@@ -1,5 +1,0 @@
-# Mkpkg special file list for SUN/IRAF, Solaris
-
-$set	XNO	= '& "$xc -cq -/libmil -p gmisc &"'
-
-$special "$(gmisc)src/gstandard/":	t_standard.x	$(XNO) ;

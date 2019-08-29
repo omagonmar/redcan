@@ -1,5 +1,0 @@
-# ftp://iraf.noao.edu/iraf/v215/REPO
-reset mscdb = UR_VDIR
-task  mscdb.pkg = mscdb$mscdb.cl
-# No help database (see mscred instead)
-
