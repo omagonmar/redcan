@@ -3,7 +3,7 @@
 from numpy import *
 from scipy.interpolate import interp2d
 from scipy.ndimage import gaussian_filter as gf
-import pyfits as pf
+import astropy.io.fits as pf
 from scipy.ndimage import interpolation as interp
 
 class midir_stack:

@@ -15,7 +15,8 @@
 
 import sys
 from pyraf import *
-import pyfits
+#import pyfits
+import astropy.io.fits as pyfits
 import numpy
 from pyfits import getdata, getheader
 import SubStacking

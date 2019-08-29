@@ -26,7 +26,7 @@ print 'REDUCEMI COMMENT:  Log opened at '+time1
 import sys
 import sgmllib
 import pickle
-import pyfits
+import astropy.io.fits as pyfits
 from pylab import *
 from pyraf import *
 from numarray import *

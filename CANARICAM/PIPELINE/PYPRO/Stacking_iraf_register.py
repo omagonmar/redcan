@@ -18,7 +18,8 @@
 import sys
 from pyraf import *
 import shutil
-import pyfits
+#import pyfits
+import astropy.io.fits as pyfits
 import numpy
 from pyfits import getdata, getheader
 iraf.images(_doprint=0)

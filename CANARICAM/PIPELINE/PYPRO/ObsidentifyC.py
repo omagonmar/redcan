@@ -21,7 +21,9 @@
 
 import sys
 import os
-import pyfits
+
+#import pyfits
+import astropy.io.fits as pyfits
 
 ##
 #### Inputs:

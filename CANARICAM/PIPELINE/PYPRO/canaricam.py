@@ -8,6 +8,7 @@ from scipy.ndimage import gaussian_filter as gf
 #from spitzer import *
 #from spectools import *
 from pyraf import iraf
+import astropy.io.fits as pyfits
 import pyfits as pf
 import matplotlib as mpl
 import matplotlib.pyplot as plt
