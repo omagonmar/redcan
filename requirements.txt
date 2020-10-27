@@ -20,7 +20,7 @@ configparser==3.7.4
 contextlib2==0.5.5
 costools==1.2.3
 crds==7.2.4
-cryptography==2.7
+cryptography==3.2
 cycler==0.10.0
 Cython==0.29.13
 cytoolz==0.10.0
