@@ -90,7 +90,7 @@ pathlib2==2.3.4
 pexpect==4.7.0
 photutils==0.4.1
 pickleshare==0.7.5
-Pillow==6.1.0
+Pillow==9.0.1
 pkgconfig==1.4.0
 plotly==4.0.0
 pluggy==0.12.0
